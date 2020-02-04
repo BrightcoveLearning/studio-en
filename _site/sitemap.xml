@@ -41,13 +41,6 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/</loc>
-        <lastmod>2020-02-04</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://studio.support.brightcove.com/get-started/</loc>
         <lastmod>2020-02-04</lastmod>
         <changefreq>daily</changefreq>
@@ -56,6 +49,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/support/</loc>
+        <lastmod>2020-02-04</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/</loc>
         <lastmod>2020-02-04</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -77,6 +77,20 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/support/opening-case-with-brightcove-support.html</loc>
+        <lastmod>2020-02-04</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/media/replacing-video-source-file.html</loc>
+        <lastmod>2020-02-04</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/media/retranscoding-videos-using-media-module.html</loc>
         <lastmod>2020-02-04</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
