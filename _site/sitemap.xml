@@ -111,7 +111,7 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/</loc>
+        <loc>https://studio.support.brightcove.com/get-started/</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -125,7 +125,7 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/get-started/</loc>
+        <loc>https://studio.support.brightcove.com/</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -140,6 +140,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/assets/css/local.css</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/admin/managing-account-information.html</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -259,6 +266,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/basics/video-cloud-basics-determining-which-videos-have-most-views.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/basics/video-cloud-basics-editing-basic-video-properties.html</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
