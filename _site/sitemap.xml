@@ -34,6 +34,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/analytics/analytics-module-ui-glossary.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/admin/authenticating-studio-users-using-single-sign.html</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
@@ -111,6 +118,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/media/downloading-videos-video-cloud.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/media/exporting-video-data.html</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
@@ -132,7 +146,28 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/players/getting-started-players-module.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/analytics/how-search-videos-analytics-module.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/icons.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/support/</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -147,13 +182,6 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/get-started/</loc>
-        <lastmod>2020-02-06</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://studio.support.brightcove.com/support/</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
