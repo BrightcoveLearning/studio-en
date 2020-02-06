@@ -125,14 +125,14 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/</loc>
+        <loc>https://studio.support.brightcove.com/support/</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/support/</loc>
+        <loc>https://studio.support.brightcove.com/</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -216,6 +216,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/players/setting-player-properties.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/sitemap.xml</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
@@ -231,6 +238,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/media/styling-captions.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/players/styling-players.html</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -329,6 +343,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/basics/video-cloud-basics-organizing-videos-using-folders.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/basics/video-cloud-basics-publishing-playlist-web.html</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
