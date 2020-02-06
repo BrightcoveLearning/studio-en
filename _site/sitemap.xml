@@ -62,6 +62,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/players/configuring-google-analytics-event-tracking.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/players/configuring-player-controls.html</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
@@ -118,14 +125,14 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/support/</loc>
+        <loc>https://studio.support.brightcove.com/</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/</loc>
+        <loc>https://studio.support.brightcove.com/support/</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -230,6 +237,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/get-started/training-demand-video-cloud-basics.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/get-started/video-cloud-architecture-overview.html</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
@@ -252,6 +266,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/basics/video-cloud-basics-creating-player.html</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -287,6 +308,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/basics/video-cloud-basics-organizing-videos-using-folders.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/basics/video-cloud-basics-styling-player.html</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
