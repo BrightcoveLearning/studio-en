@@ -27,6 +27,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/media/adding-captions-videos-using-media-module.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/media/adding-chapters-video.html</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
@@ -111,6 +118,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/media/configuring-video-availability.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/media/creating-and-managing-playlists.html</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
@@ -119,6 +133,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/media/downloading-videos-video-cloud.html</loc>
+        <lastmod>2020-02-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/media/editing-video-properties-using-media-module.html</loc>
         <lastmod>2020-02-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
