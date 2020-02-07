@@ -48,6 +48,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/general/adding-facebook-button-brightcove-player.html</loc>
+        <lastmod>2020-02-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/analytics/analytics-module-ui-glossary.html</loc>
         <lastmod>2020-02-07</lastmod>
         <changefreq>daily</changefreq>
@@ -153,6 +160,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/admin/creating-custom-metadata-fields.html</loc>
+        <lastmod>2020-02-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/media/downloading-videos-video-cloud.html</loc>
         <lastmod>2020-02-07</lastmod>
         <changefreq>daily</changefreq>
@@ -251,14 +265,14 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/</loc>
+        <loc>https://studio.support.brightcove.com/support/</loc>
         <lastmod>2020-02-07</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/support/</loc>
+        <loc>https://studio.support.brightcove.com/</loc>
         <lastmod>2020-02-07</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
