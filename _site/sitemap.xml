@@ -153,6 +153,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/publish/embedding-brightcove-player-google-sites-page.html</loc>
+        <lastmod>2020-02-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/media/exporting-video-data.html</loc>
         <lastmod>2020-02-07</lastmod>
         <changefreq>daily</changefreq>
@@ -174,7 +181,21 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/media/getting-started-media-module.html</loc>
+        <lastmod>2020-02-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/players/getting-started-players-module.html</loc>
+        <lastmod>2020-02-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/get-started/getting-started-video-cloud-studio.html</loc>
         <lastmod>2020-02-07</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -195,14 +216,14 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/</loc>
+        <loc>https://studio.support.brightcove.com/get-started/</loc>
         <lastmod>2020-02-07</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/get-started/</loc>
+        <loc>https://studio.support.brightcove.com/</loc>
         <lastmod>2020-02-07</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -385,6 +406,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/get-started/training-demand-video-cloud-basics.html</loc>
+        <lastmod>2020-02-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/media/uploading-videos-using-upload-module.html</loc>
         <lastmod>2020-02-07</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
