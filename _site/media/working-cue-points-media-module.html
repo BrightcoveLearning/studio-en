@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Editing Video Properties using the Media Module</title>
+  <title>Working with Cue Points in the Media Module</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -88,7 +88,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item"><a href="/media/">Managing Videos</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Editing Video Properties using the Media Module</li>
+      <li class="breadcrumb-item active" aria-current="page">Working with Cue Points in the Media Module</li>
     </ol>
   </nav>
 </header>
@@ -580,136 +580,72 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
-  <h1>Editing Video Properties using the Media Module</h1>
-  <summary>In this topic you will learn how to edit video properties using the Media module.</summary>
+  <h1>Working with Cue Points in the Media Module</h1>
+  <summary>In this topic you will learn about cue points and how to add, edit and delete them using the Media module.</summary>
   <section class="bcls-section">
-    <p>To view and edit the properties for a video, open the Media module and click the video title link. The video properties page will open.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: To edit video properties for multiple videos at the same time, use the <a href="/node/15923">Quick Edit</a> feature.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-properties.png" /></figure>
-    <p>Buttons at the top of the video properties page provide the ability to:</p>
+    <p>A cue point is a marker at a precise time point in the duration of a video. You can use cue points to trigger mid-roll ads (that is, ads that occur during playback of the video content, like a commercial break) or to separate chapters or scenes in a long-form video.</p>
+    <p>There are two types of cue points, but both simply supply a string value to the <strong>type</strong> property of the cue point object. The appropriate value is helpful only if used in custom JavaScript while processing the cue point information.&nbsp;</p>
     <ul>
-      <li><a href="/node/15620">Capture new poster and thumbnail images</a></li>
-      <li><a href="/node/15095">Move the video to a folder</a> or <a href="/node/15152">add it to a playlist</a></li>
-      <li>Deactivate/activate videos</li>
-      <li><a href="/node/15473">Publish a video</a></li>
+      <li><strong>Ad</strong> - Assigns the string value of <strong>AD</strong> to the <strong>type</strong> property</li>
+      <li><strong>Code</strong> - Assigns the string value of <strong>CODE</strong> to the <strong>type</strong> property</li>
     </ul>
-    <p>If the video is activated, the <strong>Deactivate</strong> button can be used to deactivate the video. If the video is deactivated, the <strong>Activate</strong> button can be used to activate the video. Videos that are deactivated cannot be played in a Brightcove Player.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-deactivate-publish.png" /></figure>
-    <p>The preview player at the top of the page can be used to view the video.</p>
-    <p>The video properties are organized into the following sections:</p>
+    <p>Cue points can be added to videos using the Media module or by using the Catalog API. For more information on adding cue points using the Catalog API, see the developer document <a href="/node/18123">Implementing Cue Points Programmatically</a>.</p>
+    <p>This topic is organized into the following sections:</p>
     <ul>
-      <li><a href="#videoinfo">Video Information</a></li>
-      <li><a href="#videofiles">Video Files</a></li>
-      <li><a href="#mediasharing">Media Sharing</a></li>
-      <li><a href="#audiotracks">Audio Tracks</a></li>
-      <li><a href="#images">Images</a></li>
-      <li><a href="#videoviews">Video Views</a></li>
-      <li><a href="#customfields">Custom Fields</a></li>
-      <li><a href="#availability">Availability</a></li>
-      <li><a href="#texttracks">Text Tracks</a></li>
+      <li><a href="#add">Adding cue points</a></li>
+      <li><a href="#edit">Editing cue points</a></li>
+      <li><a href="#delete">Deleting cue points</a></li>
     </ul>
-    <p>To edit the video properties, click the <strong>Edit</strong> button in the section or double-click in the section.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="required">Required fields</h2>
-    <p>Your Video Cloud account may be configured with required metadata fields. If a video is inactive, you can freely edit and save its metadata without supplying all required metadata. Also, videos can't be activated until all required metadata has been entered. If a video is already active, you cannot save any edits in the section you are editing unless you supply all required metadata in that section or deactivate the video. For more information on working with required fields, see <a href="/node/15531">Setting Required Fields for Videos</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="videoinfo">Video Information</h2>
-    <p>The Video Information section can be used to view and edit basic video properties.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-information.png" /></figure>
-    <p>To edit the properties, click the <strong>Edit</strong> button or double-click in the section. The following properties can be edited:</p>
-    <ul>
-      <li><strong>Name</strong> - No more than 255 characters.</li>
-      <li><strong>ID</strong> - System assigned video ID (unique across all Video Cloud accounts).</li>
-      <li><strong>Short description</strong> - No more than 250 characters.</li>
-      <li><strong>Tags</strong> - One or more tags, separated by commas. You can use tags to add videos to smart playlists or to find videos using the CMS API.
+    <h2 id="add">Adding cue points</h2>
+    <p>To add cue points to a video, open the Media module and follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click the video title link to open the video properties page.</li>
+      <li>Use the preview player to play the video. Pause the video at the point where you want to add a cue point.</li>
+      <li>Click <strong>Add Cue Point</strong>.</li>
+      <li>If needed, adjust the <strong>Timecode (hh:mm:ss)</strong> values for the cue point. Note that the <strong>seconds</strong> field supports milliseconds after the decimal point.</li>
+      <li>Select the <strong>Type</strong> of cue point and then add the appropriate metadata.
         <ul>
-          <li>Tags can be up to 128 characters. If any tags have more than 128 characters, an error will be displayed when you attempt to save changes.</li>
-          <li>Tags can't contain commas. For example, a tag of "roof, attic + front yard" is not supported.</li>
-          <li>A video can have no more than a total of 1200 tags.</li>
-          <li>A tag differing only in case (lowercase, uppercase) is handled as an identical tag and the case will automatically match those of the original tag.</li>
-          <li>Issues with case sensitivity need to be handled externally to Video Cloud, for example, using JavaScript methods to modify the strings.</li>
-          <li>After entering a tag, press the <strong>comma</strong> key or <strong>enter</strong>. Tags that have been added will display in a colored box.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-tags-added.png" /></figure>
-          </li>
+          <li><strong>ad</strong> - An ad request will be made. When using ad cue points, the player should be <a href="/node/15897">configured for advertising</a>.</li>
+          <li><strong>code</strong> - Cue points will be handled programmatically. See the <a href="/node/18123">Implementing Cue Points Programmatically</a> developer document for more information.</li>
+        </ul>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15151-add-code-cue-point.png" /></figure>
+      </li>
+      <li>Enter a <strong>Name</strong> for the cue point. The name value can be accessed <a href="/node/18123">programmatically</a>.</li>
+      <li>Enter <strong>Metadata</strong> (for code cue points) or <strong>Key/Value Pairs</strong> (for ad cue points).
+        <ul>
+          <li><strong>Metadata</strong> - Optional metadata that is stored with the cue point. Metadata can be accessed <a href="/node/18123">programmatically</a>. One example of when you might want to use a code cue point and pass metadata is when you want to display different calls to action as the video is playing. See the <a href="/node/18177">Brightcove Player Sample: Cue Points Display CTA</a> for an example.</li>
+          <li><strong>Key/Value Pairs</strong> - Key/value pairs that can be passed to an ad request. A key-value pair is a set of two linked data items: a key, which is a unique identifier for some item of data, and the value, which is either the data that is identified or a pointer to the location of that data. Key/value pairs can be used to help provide more targeted advertisements. Whatever is entered here will be copied into the ad tag where the <code>{mediainfo.ad_keys}</code> macro is inserted. For more information, see <a href="/node/18080#Ad_macros_and_the_serverUrl">Advertising with the IMA3 Plugin</a>.</li>
         </ul>
       </li>
-      <li><strong>Reference ID</strong> - A unique ID assigned by a publisher to a video or playlist. Limited to no more than 150 characters. The reference ID is distinct from the video ID or playlist ID which are unique IDs generated by Video Cloud. The reference ID enables coordination between Video Cloud and other services such as a publisher's content management system. Note that you can't batch edit the reference ID as two videos can't have the same reference ID. Reference IDs must always be unique. Deleting a video will allow a previously assigned reference ID to be reused.</li>
-      <li><strong>Video Projection</strong> - Indicates how the video was recorded.
-        <ul>
-          <li><strong>Standard</strong> - Default. Regular video recording.</li>
-          <li><strong>360 Degree</strong> - Check to indicate the video is a 360 degree video. A 360 badge will appear in the video thumbnail in the Media module. For more information on working with 360 degree videos, see <a href="/node/16784">Working with 360° Videos</a>.</li>
-        </ul>
+    </ol>
+    <p>After cue points are added to a video, at runtime, the cue points are converted into HTML5 WebVTT cue elements. When this conversion takes place, some of the cue point data, like type and cue point time, are converted into the text track. The cue point time value will be mapped into the WebVTT cue <code>startTime</code> and <code>endTime</code> properties. See <a href="https://dev.w3.org/html5/webvtt/#the-vttcue-interface">this document</a> for more information on the VTTCue interface.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit">Editing cue points</h2>
+    <p>To edit cue points in a video, open the Media module and follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click the video title link to open the video properties page.</li>
+      <li>Click the cue point to edit in the timeline.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15151-select-cue-point.png" /></figure>
+        <p class="BCL-aside">Note: Once in edit mode, the <strong>Previous</strong> and <strong>Next</strong> buttons can be used to navigate to other cue points.</p>
       </li>
-      <li><strong>Enable offline playback</strong> - When checked, enables the video to be saved locally and viewed offline when using applications created using the device SDKs. This option will only appear if the account is enabled for offline playback.</li>
-      <li><strong>Related Link URL</strong> - A standard web URL beginning with http:// or https:// limited to 255 characters.</li>
-      <li><strong>Related Link Text</strong> - Related link text limited to 255 characters.</li>
-      <li><strong>Long Description</strong> - No more than 5000 characters.</li>
-      <li><strong>Advertising</strong>
-        <ul>
-          <li><strong>Free</strong> - Ads will not be shown when the video plays.</li>
-          <li><strong>Ad Supported</strong> - Ads may be shown when video plays.
-            <aside class="bcls-aside bcls-aside--information">Note: If your account is not enabled for advertising and you set the Advertising property to Ad Supported, you will receive an error when saving changes.</aside>
-          </li>
-        </ul>
+      <li>Edit the cue point properties and then click <strong>Save</strong>.</li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">Note: It is not possible to have multiple cue points with the same timecode.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="delete">Deleting cue points</h2>
+    <p>To delete cue points, open the Media module and follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click the video title link to open the video properties page.</li>
+      <li>Click the cue point to delete in the timeline.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15151-select-cue-point.png" /></figure>
       </li>
-      <li><strong>Ad Keys</strong> - Passed as part of the ad server URL. For example, to pass <code>section=blog</code> and <code>anotherKey=value1</code>, you would enter <code>section=blog&amp;anotherKey=value1</code>. See the <a href="https://support.google.com/dfp_premium/answer/1080597">DoubleClick for Publishers Help</a> for information on adding key-value pairs. When using ad keys, ad macros should be added to the ad server URL (configured as part of the <a href="/node/15897">player advertising properties</a>). Ad macros support variables in the server URL for which the IMA3 plugin will substitute appropriate values. For more information, see the <a href="/node/18080#adMacros">IMA3 developer documentation</a>.</li>
-      <li><strong>Folder</strong> - Folder the video is assigned to. See <a href="/node/15095">Organizing Videos Using Folders</a> for more information.</li>
-      <li><strong>Manual Playlists</strong> - Playlists that this video belongs to. For more information, see <a href="/node/15152">Creating and Managing Playlists</a>.</li>
-      <li><strong>Sharing</strong> - Indicates if the video has been shared to another account. For more information, see <a href="/node/18465">Media Sharing using the Media Module</a>.</li>
-    </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-information-edit.png" /></figure>
-    <p>Click <strong>Save</strong> to save changes.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="videofiles">Video Files</h2>
-    <p>The Video Files section displays the source file name, the transcoding technology that was used and details on the video renditions that were created. It also provides the ability to:</p>
-    <ul>
-      <li><a href="/node/15322">Replace the Video Source File</a></li>
-      <li><a href="/node/15921">Retranscode the Video</a></li>
-    </ul>
-    <p>In this example, Legacy transcoding was used (when the video was uploaded, a Legacy ingest profile was used). To download a rendition, right-click on the format link for the rendition.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-files.png" /></figure>
-    <p>In this example, <a href="/node/18476">Dynamic Delivery</a> transcoding was used (when the video was uploaded, a Dynamic Delivery or Context Aware Encoding ingest profile was used).</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-files-dd.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="mediasharing">Media Sharing</h2>
-    <p>If the video has been shared to an affiliate account, the Media Sharing section will be displayed and list the affiliates the video has been shared to. For more information on media sharing, see <a href="/node/18465">Media Sharing using the Media Module</a>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-media-sharing.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="audiotracks">Audio Tracks</h2>
-    <p>If the video was uploaded and transcoded using a Dynamic Delivery or Context Aware Encoding ingest profile, the Audio Tracks section will be displayed and contain information on the audio renditions that are available. For information on adding additional audio tracks to a video, see <a href="/node/18591">Adding Audio Tracks to Videos using the Media Module</a>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: The Audio Tracks section will not be displayed if the video was transcoded using a Legacy ingest profile.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-audio-tracks.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="images">Images</h2>
-    <p>The Images section displays the poster and thumbnail images for the video. Poster and thumbnail images are created automatically by taking a snapshot from the source video at the midway point. If you don't like the default images that were captured, you can <a href="/node/15620">capture new images</a> or <a href="/node/15519">upload other images</a> to use as the poster and thumbnail.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-images.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="videoviews">Video Views</h2>
-    <p>The Video Views section displays the number of video views for the past 30 days. Click the links to open the Performance or Engagement Reports for more information.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-views.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="customfields">Custom Fields</h2>
-    <p>The Custom Fields section can be used to view and edit the custom field for the video. To edit custom field values, click the <strong>Edit</strong> button or double-click in the section. An asterisk (*) next to the field name indicates that the field is required.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: For information on adding custom fields to an account, see <a href="/node/1050">Creating Custom Metadata Fields</a>.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-custom-fields.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="availability">Availability</h2>
-    <p>The Availability section displays the video availability settings. For more information on configuring the availability settings, see <a href="/node/15476">Configuring Video Availability</a>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-availability.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="texttracks">Text Tracks</h2>
-    <p>The text track section can be used to add text tracks to the video. For more information on configuring text tracks, see <a href="/node/15481">Adding Captions to Videos using the Media Module</a>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-text-tracks.png" /></figure>
+      <li>Click the Delete icon (<img alt="" src="/assets/images/media/node15151-delete-icon.png" />) next to the cue point properties.</li>
+      <li>Confirm the deletion.</li>
+    </ol>
   </section>
 </article>
 
@@ -728,7 +664,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 06 Feb 2020
+  Page last updated on 07 Feb 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
