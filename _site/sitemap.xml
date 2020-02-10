@@ -62,7 +62,21 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/analytics/analytics-report-reference.html</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/admin/authenticating-studio-users-using-single-sign.html</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/general/best-practices-video-creating-transcoding-and-uploading-workflow.html</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -153,6 +167,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/publish/creating-and-publishing-high-quality-screencasts.html</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/analytics/creating-custom-analytics-reports.html</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
@@ -196,6 +217,20 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/general/enabling-longer-videos-youtube.html</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/analytics/engagement-report-reference.html</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/analytics/exporting-data-analytics-module.html</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -475,6 +510,20 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/get-started/training-demand-introduction-video-cloud-analytics.html</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/get-started/training-demand-introduction-video-cloud.html</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/get-started/training-demand-video-cloud-basics.html</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
@@ -637,6 +686,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/media/working-cue-points-media-module.html</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/general/working-multiple-video-cloud-accounts.html</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

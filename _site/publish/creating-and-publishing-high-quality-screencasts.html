@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Creating Custom Metadata Fields</title>
+  <title>Creating and Publishing High Quality Screencasts</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -86,9 +86,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/admin/">Administering Accounts</a></li>
+      <li class="breadcrumb-item"><a href="/publish/">Publishing Videos</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Creating Custom Metadata Fields</li>
+      <li class="breadcrumb-item active" aria-current="page">Creating and Publishing High Quality Screencasts</li>
     </ol>
   </nav>
 </header>
@@ -580,127 +580,88 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
-  <h1>Creating Custom Metadata Fields</h1>
-  <summary>In this topic you will learn how to add custom metadata fields to your videos.</summary>
+  <h1>Creating and Publishing High Quality Screencasts</h1>
+  <summary>In this topic you will learn best practices and tips for creating and publishing high quality screencasts. You will also learn about the best settings to use when uploading your screencast to Video Cloud.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="731140813001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <p>Custom metadata can be used to add additional metadata fields to your videos. Custom fields are added as part of your account settings. After the custom fields have been added, the fields can be assigned values using the Media module.</p>
+    <h2 id="what">What is a screencast?</h2>
+    <p><i>Screencasts</i> are digital recordings of a computer screen, and can include elements such as audio narration, slide presentations or other media. Screencasts are a cost-effective way of providing engaging videos to train end users and customers. When creating a screencast, these five steps are usually followed:</p>
+    <ul>
+      <li><strong>Plan</strong> - what does audience need?,&nbsp; what do you want to cover?</li>
+      <li><strong>Organize Content</strong> - what systems will be used? Is there any existing content that can be used?</li>
+      <li><strong>Record</strong> - record the screencast</li>
+      <li><strong>Edit</strong> - edit the screencast, add titles, transitions, etc.</li>
+      <li><strong>Publish</strong> - make screencast available to viewers</li>
+    </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="newUI">Creating custom fields</h2>
-    <p>To create custom fields, follow these steps.</p>
-    <aside class="bcls-aside bcls-aside--information language-editable">Note that after you make any changes to custom fields, you may need to clear your browser cache and reload the page to see the changes.</aside>
-    <ol class="bcls-tasklist-restart">
-      <li class="language-editable">Login to Video Cloud Studio.</li>
-      <li class="language-editable">In the navigation header, click <strong>ADMIN</strong> and then <strong>Video Fields</strong>. Note that you must be an account administrator to access to the ADMIN menu.</li>
-      <li class="language-editable">The Video Fields page will display your custom fields and all the standard video metadata fields. Review the standard fields before creating any new custom fields. This will help you avoid creating custom fields when a standard field that can do the job already exists.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Video Fields page" src="/assets/images/admin/node1050-custom-fields-overview.png" /></figure>
-      </li>
-      <li class="language-editable">Click <strong>Add Custom Field</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Adding a field" src="/assets/images/admin/node1050-new-custom-field.png" /></figure>
-      </li>
-      <li class="language-editable">Enter a <strong>Display Name</strong>. This will appear as the label for the field in the Upload and Media modules. An<strong> Internal Name</strong> will automatically be created for the field based on the display name. The internal name is used when programmatically accessing the field using any of the Video Cloud APIs. The internal name can be changed but the internal name cannot include whitespace, double-byte characters or punctuation.
-        <p>Note that internal names never have spaces and are all lower-case. They are generally formed by making the display name lower case and replacing spaces with underscore characters.</p>
-        <p>For example, if you enter <code class="notranslate">My Field</code> as the display name, the internal name will be <code class="notranslate">my_field</code>.</p>
-        <aside class="bcls-aside bcls-aside--information">Note: There are some reserved words that <strong>must not</strong> be used as custom field internal names (the display name does not matter). See the <a href="#reserved">Reserved names</a> section for information.</aside>
-      </li>
-      <li class="language-editable">Select a <strong>Type</strong> for the field.
+    <h2 id="software">Screen capture software</h2>
+    <p>There are a variety of screen capturing tools available for both Windows and Mac platforms. Some of the more popular titles are:</p>
+    <ul>
+      <li><a href="https://www.techsmith.com/video-editor.html">Camtasia</a> (Windows and Mac)</li>
+      <li><a href="https://www.telestream.net/screenflow/">ScreenFlow</a> (Mac)</li>
+      <li><a href="https://www.adobe.com/products/captivate.html">Captivate</a> (Windows and Mac)</li>
+      <li><a href="https://www.ambrosiasw.com/utilities/snapzprox/">Snapz Pro X</a> (Mac)</li>
+    </ul>
+    <p>There are many websites that offer reviews of these products. Also, most vendors offer trial versions so you can download their software and see which one best meets your needs. We are often asked which software was used for our <a href="https://video.brightcovelearning.com">training videos</a>. These were created using Camtasia and are hosted on our <a href="https://www.brightcove.com/en/gallery">Brightcove Gallery</a> site.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="before">Before you get started</h2>
+    <p>Before you get started with your screencasts, here are a few things to consider.</p>
+    <ul>
+      <li><strong>Review video analytics</strong> - If you have existing videos, reviewing the analytics on those videos may be helpful in setting priorities (i.e. which videos need to be updated first). Video analytics may also help you gauge the viewing habits of your viewers. In general, a series of videos that are one to three minutes long will be better than one longer video.</li>
+      <li><strong>Locate any existing content</strong> - Check to see if there is any existing content that can be used in your screencast. For example, look for stock video that you might be able to use, code samples, logos, graphics, etc. Being able to reuse content will save you the trouble of having to develop new content just for your screencast.</li>
+      <li><strong>Become familiar with your screencasting software</strong> - Spend some time with the screencasting software you will be using. Make sure you understand how to set a recording region, recording quality and audio input. You should have a basic understanding of how your software works so you can avoid retakes due to a software setting being configured incorrectly.</li>
+      <li><strong>Write a script or have some notes</strong> - Think about writing a script for your screencast. This will allow you to put your thoughts on paper so you can send them to others for review. Having all of your thoughts down on paper should help reduce the need to edit your screencast. Keep in mind, when using a script, try to read the script in a casual manner so you don't sound like you are reading one. Even a set of notes with a list of high level topics will help ensure that you cover all of the important points.</li>
+      <li><strong>Create a screencast template</strong> - When you have decided on the screencasting software you will be using, create a template that includes a standard title, intro and closing and make it available to other team members. This will help ensure that all of your screencasts are consistent and adhere to any corporate branding requirements that you may have.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="tools">Useful tools</h2>
+    <p>Below is a set of useful tools and utilities that you may find useful as you edit and publish your screencasts:</p>
+    <ul>
+      <li><a href="https://mediainfo.sourceforge.net/en">MediaInfo</a> (Mac) and <a href="https://www.winhoros.de/docs/bitrate-viewer/">Bitrate Viewer</a> (Windows) - These tools provide detailed audio and video properties for a file.</li>
+      <li><a href="https://www.videolan.org/vlc/">VLC</a> - Useful for viewing the bit rate for a video while it is playing. We have used this to diagnose issues with videos pausing during playback. To view bit rate information:
         <ul>
-          <li class="language-editable"><strong>String</strong> - The user can type anything into the field up to 1024 single-byte characters (or 512 double-byte characters).</li>
-          <li class="language-editable"><strong>List</strong> - The user will select from a list of values. Lists can have no more than 150 possible values and each value in the list can be no more than 100 characters long.</li>
+          <li><strong>Mac:</strong> Window &gt; Media Information... &gt; Statistics</li>
+          <li><strong>Windows:</strong> Tools &gt; Media Information &gt; Statistics</li>
         </ul>
       </li>
-      <li class="language-editable">Enter a <strong>Description</strong>. The description field will appear as a hint in the Studio interface.</li>
-      <li class="language-editable">If the custom field will be required, check <strong>Make this Field Required</strong>.</li>
-      <li class="language-editable">If your field type is <strong>List</strong>, enter a comma-separated list of values and then click <strong>Add to List</strong>.
-        </p>
-        <aside class="bcls-aside bcls-aside--information">Notes:
-          <ol>
-            <li class="language-editable">The values must not contain quotation marks (example: Animals,Birds,Fish).</li>
-            <li class="language-editable">No value can contain a comma - all commas will be treated as separators of different values.</li>
-          </ol>
-        </aside>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Adding a field" src="/assets/images/admin/node1050-new-custom-field-added.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: If custom field values have less than three characters, you will <strong>not</strong> be able to search for videos based on that value either in Studio or using the CMS API. For example, if you want to create a boolean-like custom field, <code>isfeatureitem</code>, make the value list <code>true</code> and <code>false</code>, not <code>yes</code> and <code>no</code>; if you use the latter values, you will <strong>not</strong> be able to find videos using the search <code>isfeatureitem:no</code>.</aside>
-      </li>
-      <li class="language-editable">Click <strong>Save Field</strong> to save the changes. Click <strong>Save and Add Another</strong> to save the field and begin creating another field.</li>
-    </ol>
-    <p>Custom fields you create are available immediately&nbsp;and will be visible&nbsp;in the Media module.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node1050-media-module.png" /></figure>
-    <p>Up to 10 custom fields can be created. If you need more than 10 fields, click the <strong>Need more fields?</strong> link in the Video Fields page to contact Brightcove Customer Support with a request for more. Publishers are limited to 50 custom fields.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing list values</h2>
-    <p>You can add additional values to a List type custom field. Click the custom field name link, add the values and then click <strong>Add to List</strong>. When done, click <strong>Save Field</strong>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting list values</h2>
-    <p>You can add remove existing values from a List type custom field. Click the custom field name link, click the delete icon (<img alt="" src="/assets/images/admin/node1050-delete-icon.png" />) associated with the value and then click <strong>Save Field</strong>.</p>
-    <p>When a list value is removed, any videos that were previously assigned that value will keep the value. However, if a video with the deleted value is edited, the value will be cleared and a new value will have to be selected.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="remove">Removing custom fields from an account</h2>
-    <p>In order to remove a custom field from your account, you must <a href="https://support.brightcove.com/en/contact/create">contact Brightcove Support</a>. Note that if you have Brightcove Support delete custom fields, the modified date will change for any videos where a value was present.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="reserved">Reserved names</h2>
-    <p>There are some reserved words that <strong>must not</strong> be used as custom field internal names (the display name does not matter). One common name is <em>category</em>. If you use a reserved name as the internal name for a custom field, searches on that field will return no results. If you already have a custom field named that uses a reserved name, you should <a href="#remove">remove it</a> and replace it with a different name or contact Brightcove Support for guidance.</p>
-    <p>The following should not be used as internal custom field names.</p>
-    <table class="bcls-table">
-      <tbody class="bcls-table__body">
-        <tr>
-          <td width="215" align="center">category</td>
-          <td width="215" align="center">complete</td>
-          <td width="215" align="center">creationdate</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">dataimport</td>
-          <td align="center" class="notranslate">discriminator</td>
-          <td align="center" class="notranslate">displayname</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">displayname_analyzed</td>
-          <td align="center" class="notranslate">displayname_tokenized</td>
-          <td align="center" class="notranslate">enddate</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">itemstate</td>
-          <td align="center" class="notranslate">lastmodifieddate</td>
-          <td align="center" class="notranslate">mediaid</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">playable_now</td>
-          <td align="center" class="notranslate">playstotal</td>
-          <td align="center" class="notranslate">playstrailingweek</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">publisheddate</td>
-          <td align="center" class="notranslate">publisherid</td>
-          <td align="center" class="notranslate">referenceid</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">referenceid_analyzed</td>
-          <td align="center" class="notranslate">scheduled</td>
-          <td align="center" class="notranslate">searchtext</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">searchtext_analyzed</td>
-          <td align="center" class="notranslate">startdate</td>
-          <td align="center" class="notranslate">tag</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  <section class="bcls-section">
-    <h2 id="code">Programmatically accessing custom fields</h2>
-    <p>Custom fields can be accessed programmatically using one of the Video Cloud APIs. The following developer documents provide more information.</p>
-    <ul>
-      <li class="language-editable"><a href="/node/18085#displaytagsfields">Getting custom fields for a video in a player</a></li>
-      <li class="language-editable"><a href="https://docs.brightcove.com/cms-api/v1/doc/index.html#api-videoGroup-Get_Custom_Fields">Get a list of custom fields for an account</a></li>
-      <li class="language-editable"><a href="https://docs.brightcove.com/cms-api/v1/doc/index.html#api-videoGroup-Get_Video_by_ID_or_Reference_ID">Using the CMS API</a></li>
-      <li class="language-editable"><a href="https://docs.brightcove.com/playback-api/v1/doc/index.html">Using the Playback API</a></li>
+      <li><a href="https://www.reflectorapp.com">Reflector</a> (Mac &amp; Windows) - Allows you to AirPlay mirror an iOS device to your Mac or PC. This is useful when you want to capture the content of an iOS device in your screencast. Note that most screencasting software packages do provide the ability to capture from mobile devices.</li>
+      <li><a href="https://code.google.com/p/androidscreencast/">androidscreencast</a> (Mac &amp; Windows) - Allows you to display an Android device display on your Mac or PC. This is useful when you want to capture the display of a device in your screencast.</li>
     </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="tips">Tips when recording</h2>
+    <p>Below are some tips that may save you time when recording a screencast:</p>
+    <ul>
+      <li>Close Email and any type of IM clients</li>
+      <li>Mute your office and cell phones</li>
+      <li>Turn off tablets, etc. anything that makes noise</li>
+      <li>In your browser, make sure you hide any unneeded toolbars or browser extensions</li>
+      <li>Check to see if the date/time is being displayed on the screen</li>
+      <li>Do a short test recording to check the mic volume</li>
+      <li>Avoid showing a browser page that may be outdated quickly</li>
+      <li>If you are using screen recording software that lets you record a region, find a utility to size your browser window to whatever your recording size is</li>
+      <li>If you are using a script, it may be easier to record the audio first, and then go back and record the screen while the audio is playing</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="export">Export settings</h2>
+    <p>After you have recorded and edited your screencast, you need to export it. Most screencasting software offers a host of both predefined and custom settings that can be used for exporting your screencast. Export settings will vary depending on the complexity of the screencast content and the expected connection speeds of the audience. We have found that the following export settings provide a quality screencast:</p>
+    <ul>
+      <li><strong>Size</strong> - We recommend you export your screencast at the same settings you used when recording. For example, if your project was sized and recorded at a resolution of 1920 x 1080, export at that size to avoid having the screencast resized which can result in a loss of quality.</li>
+      <li><strong>Bit rate or Data rate</strong> - We have seen good quality exports when using settings between 300 kbps and 1200 kbps. A higher bit rate (1200 kbps) is recommended when your screencast includes a talking head and/or more complex animations. Keep in mind that this setting is usually a target bit rate and your bitrate will vary depending on content. Typically, the bitrate when showing just the screen will be a lot lower than when there is a talking head.</li>
+      <li><strong>Export Profile</strong> - For video settings, we recommend H.264 video encoding using the MAIN profile. Audio should use the AAC profile with a data rate of 96 kbps (128 if your audio track is more complicated than just voices).</li>
+    </ul>
+    <p>Again, the above settings are recommendations and you may need to alter your settings to provide a quality viewing experience to your viewers. If your video is pausing, or if you want to keep the bandwidth requirements lower, you can export at 15fps as this will help keep the bit rate low. The one exception to this is if your video also includes live action video.</p>
+    <p>We recommend that after exporting your video you use one of the <a href="#tools">useful tools</a> to check the video bit rate. Remember that the number of renditions created is based on the bit rate of your source file.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="transcode">Ingest profile</h2>
+    <p>The ingest profile you select in Video Cloud will have an effect on the quality of your published screencast. Keep in mind that creating more renditions is not always a good thing. Having multiple renditions with different sizes and bit rates may cause the end user to see a version of your screencast that is pixelated or has blurry text due to the video being resized. Preserving the resolution is key to delivering a legible and clear screencast.</p>
+    <p>The Dynamic Delivery profiles provided by default in the Upload module provide the option of creating an MP4 rendition. You should create MP4 renditions if you want viewers to be able to download videos. MP4 renditions may also be required to generate video captions. For example, our partner 3Play Media requires that videos have an MP4 rendition in order for captions to be generated.</p>
+    <div><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node10594-ingest-profile.png" /></div>
+    <p>Depending on your Video Cloud subscription, you may choose to create a custom ingest profile to remove some of the lower quality video renditions. For specifics on the standard ingest profiles, see the <a href="/node/18386">Standard Ingest Profiles for Dynamic Delivery and Context Aware Encoding</a> topic. For information on creating customized ingest profiles, see <a href="/node/16840">Creating Ingest Profiles for Dynamic Delivery</a>.</p>
   </section>
 </article>
 
