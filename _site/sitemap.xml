@@ -244,6 +244,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/analytics/faq-analytics-module.html</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/assets/js/feedback.js</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
@@ -307,14 +314,14 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/support/</loc>
+        <loc>https://studio.support.brightcove.com/</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/</loc>
+        <loc>https://studio.support.brightcove.com/support/</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -434,6 +441,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/media/replacing-video-source-file.html</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/general/resetting-your-studio-password.html</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -658,6 +672,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/basics/video-cloud-basics-uploading-videos.html</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/get-started/video-cloud-glossary2.html</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
