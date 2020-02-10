@@ -20,6 +20,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/publish/adding-application-id-player-embed-code.html</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/media/adding-audio-tracks-videos-using-media-module.html</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
@@ -307,6 +314,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/support/</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/get-started/</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
@@ -315,13 +329,6 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/</loc>
-        <lastmod>2020-02-10</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://studio.support.brightcove.com/support/</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -420,6 +427,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/analytics/performance-report-reference.html</loc>
+        <lastmod>2020-02-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-players-joomla.html</loc>
         <lastmod>2020-02-10</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
