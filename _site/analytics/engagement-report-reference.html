@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Creating Custom Metadata Fields</title>
+  <title>Engagement Report Reference</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -86,9 +86,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/admin/">Administering Accounts</a></li>
+      <li class="breadcrumb-item"><a href="/analytics/">Reviewing Analytics</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Creating Custom Metadata Fields</li>
+      <li class="breadcrumb-item active" aria-current="page">Engagement Report Reference</li>
     </ol>
   </nav>
 </header>
@@ -580,127 +580,87 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
-  <h1>Creating Custom Metadata Fields</h1>
-  <summary>In this topic you will learn how to add custom metadata fields to your videos.</summary>
+  <h1>Engagement Report Reference</h1>
+  <summary>In this topic you will learn about the Engagement report that is provided as part of the Analytics module.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="731140813001">&nbsp;</div>
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="2349078817001">&nbsp;</div>
     <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <p>Custom metadata can be used to add additional metadata fields to your videos. Custom fields are added as part of your account settings. After the custom fields have been added, the fields can be assigned values using the Media module.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="newUI">Creating custom fields</h2>
-    <p>To create custom fields, follow these steps.</p>
-    <aside class="bcls-aside bcls-aside--information language-editable">Note that after you make any changes to custom fields, you may need to clear your browser cache and reload the page to see the changes.</aside>
-    <ol class="bcls-tasklist-restart">
-      <li class="language-editable">Login to Video Cloud Studio.</li>
-      <li class="language-editable">In the navigation header, click <strong>ADMIN</strong> and then <strong>Video Fields</strong>. Note that you must be an account administrator to access to the ADMIN menu.</li>
-      <li class="language-editable">The Video Fields page will display your custom fields and all the standard video metadata fields. Review the standard fields before creating any new custom fields. This will help you avoid creating custom fields when a standard field that can do the job already exists.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Video Fields page" src="/assets/images/admin/node1050-custom-fields-overview.png" /></figure>
-      </li>
-      <li class="language-editable">Click <strong>Add Custom Field</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Adding a field" src="/assets/images/admin/node1050-new-custom-field.png" /></figure>
-      </li>
-      <li class="language-editable">Enter a <strong>Display Name</strong>. This will appear as the label for the field in the Upload and Media modules. An<strong> Internal Name</strong> will automatically be created for the field based on the display name. The internal name is used when programmatically accessing the field using any of the Video Cloud APIs. The internal name can be changed but the internal name cannot include whitespace, double-byte characters or punctuation.
-        <p>Note that internal names never have spaces and are all lower-case. They are generally formed by making the display name lower case and replacing spaces with underscore characters.</p>
-        <p>For example, if you enter <code class="notranslate">My Field</code> as the display name, the internal name will be <code class="notranslate">my_field</code>.</p>
-        <aside class="bcls-aside bcls-aside--information">Note: There are some reserved words that <strong>must not</strong> be used as custom field internal names (the display name does not matter). See the <a href="#reserved">Reserved names</a> section for information.</aside>
-      </li>
-      <li class="language-editable">Select a <strong>Type</strong> for the field.
-        <ul>
-          <li class="language-editable"><strong>String</strong> - The user can type anything into the field up to 1024 single-byte characters (or 512 double-byte characters).</li>
-          <li class="language-editable"><strong>List</strong> - The user will select from a list of values. Lists can have no more than 150 possible values and each value in the list can be no more than 100 characters long.</li>
-        </ul>
-      </li>
-      <li class="language-editable">Enter a <strong>Description</strong>. The description field will appear as a hint in the Studio interface.</li>
-      <li class="language-editable">If the custom field will be required, check <strong>Make this Field Required</strong>.</li>
-      <li class="language-editable">If your field type is <strong>List</strong>, enter a comma-separated list of values and then click <strong>Add to List</strong>.
-        </p>
-        <aside class="bcls-aside bcls-aside--information">Notes:
-          <ol>
-            <li class="language-editable">The values must not contain quotation marks (example: Animals,Birds,Fish).</li>
-            <li class="language-editable">No value can contain a comma - all commas will be treated as separators of different values.</li>
-          </ol>
-        </aside>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Adding a field" src="/assets/images/admin/node1050-new-custom-field-added.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: If custom field values have less than three characters, you will <strong>not</strong> be able to search for videos based on that value either in Studio or using the CMS API. For example, if you want to create a boolean-like custom field, <code>isfeatureitem</code>, make the value list <code>true</code> and <code>false</code>, not <code>yes</code> and <code>no</code>; if you use the latter values, you will <strong>not</strong> be able to find videos using the search <code>isfeatureitem:no</code>.</aside>
-      </li>
-      <li class="language-editable">Click <strong>Save Field</strong> to save the changes. Click <strong>Save and Add Another</strong> to save the field and begin creating another field.</li>
-    </ol>
-    <p>Custom fields you create are available immediately&nbsp;and will be visible&nbsp;in the Media module.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node1050-media-module.png" /></figure>
-    <p>Up to 10 custom fields can be created. If you need more than 10 fields, click the <strong>Need more fields?</strong> link in the Video Fields page to contact Brightcove Customer Support with a request for more. Publishers are limited to 50 custom fields.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing list values</h2>
-    <p>You can add additional values to a List type custom field. Click the custom field name link, add the values and then click <strong>Add to List</strong>. When done, click <strong>Save Field</strong>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting list values</h2>
-    <p>You can add remove existing values from a List type custom field. Click the custom field name link, click the delete icon (<img alt="" src="/assets/images/admin/node1050-delete-icon.png" />) associated with the value and then click <strong>Save Field</strong>.</p>
-    <p>When a list value is removed, any videos that were previously assigned that value will keep the value. However, if a video with the deleted value is edited, the value will be cleared and a new value will have to be selected.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="remove">Removing custom fields from an account</h2>
-    <p>In order to remove a custom field from your account, you must <a href="https://support.brightcove.com/en/contact/create">contact Brightcove Support</a>. Note that if you have Brightcove Support delete custom fields, the modified date will change for any videos where a value was present.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="reserved">Reserved names</h2>
-    <p>There are some reserved words that <strong>must not</strong> be used as custom field internal names (the display name does not matter). One common name is <em>category</em>. If you use a reserved name as the internal name for a custom field, searches on that field will return no results. If you already have a custom field named that uses a reserved name, you should <a href="#remove">remove it</a> and replace it with a different name or contact Brightcove Support for guidance.</p>
-    <p>The following should not be used as internal custom field names.</p>
-    <table class="bcls-table">
-      <tbody class="bcls-table__body">
-        <tr>
-          <td width="215" align="center">category</td>
-          <td width="215" align="center">complete</td>
-          <td width="215" align="center">creationdate</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">dataimport</td>
-          <td align="center" class="notranslate">discriminator</td>
-          <td align="center" class="notranslate">displayname</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">displayname_analyzed</td>
-          <td align="center" class="notranslate">displayname_tokenized</td>
-          <td align="center" class="notranslate">enddate</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">itemstate</td>
-          <td align="center" class="notranslate">lastmodifieddate</td>
-          <td align="center" class="notranslate">mediaid</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">playable_now</td>
-          <td align="center" class="notranslate">playstotal</td>
-          <td align="center" class="notranslate">playstrailingweek</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">publisheddate</td>
-          <td align="center" class="notranslate">publisherid</td>
-          <td align="center" class="notranslate">referenceid</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">referenceid_analyzed</td>
-          <td align="center" class="notranslate">scheduled</td>
-          <td align="center" class="notranslate">searchtext</td>
-        </tr>
-        <tr>
-          <td align="center" class="notranslate">searchtext_analyzed</td>
-          <td align="center" class="notranslate">startdate</td>
-          <td align="center" class="notranslate">tag</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  <section class="bcls-section">
-    <h2 id="code">Programmatically accessing custom fields</h2>
-    <p>Custom fields can be accessed programmatically using one of the Video Cloud APIs. The following developer documents provide more information.</p>
+    <p>To view the Engagement report, open the Analytics module and select <span style="BCL_command">Engagement</span> from the left side navigation. The report will display a graph showing total video engagement for the time period selected. The report switcher below the chart can be used to quickly switch to another report.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/node10105-report-switcher.png" /></figure>
+    <p>The dropdown list to the right of the report switcher can be used to select a report dimension. The following dimensions are available with the Engagement Report:</p>
     <ul>
-      <li class="language-editable"><a href="/node/18085#displaytagsfields">Getting custom fields for a video in a player</a></li>
-      <li class="language-editable"><a href="https://docs.brightcove.com/cms-api/v1/doc/index.html#api-videoGroup-Get_Custom_Fields">Get a list of custom fields for an account</a></li>
-      <li class="language-editable"><a href="https://docs.brightcove.com/cms-api/v1/doc/index.html#api-videoGroup-Get_Video_by_ID_or_Reference_ID">Using the CMS API</a></li>
-      <li class="language-editable"><a href="https://docs.brightcove.com/playback-api/v1/doc/index.html">Using the Playback API</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#player">Player</a></li>
+      <li><a href="#day">Day</a></li>
     </ul>
+    <p>The body of the page will display a list of videos sorted by engagement score. The bottom of the report has controls which let you select how many rows should be displayed and for navigating to other pages.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="engagement">Calculating Video Engagement</h2>
+    <p>Engagement is a measure of views, <strong>not</strong> viewers. In reporting the engagement data, we divide the video into 100 equal parts and count the views in each 100th. There is no distinction between one viewer watching a 100th part 5 times, and five viewers watching it 1 time.</p>
+    <p>The measurements are rounded in the Analytics UI for presentation. The numbers are a result of counting views by individuals and then normalizing those counts along a percentage of a video's timeline. The export API returns the result of this count. Since these are counted values, there is no simple way to estimate the significance of the value to a specific number of digits.</p>
+    <p>Note that engagement statistics for live streams are not reliable, because the duration of the video is not fixed.</p>
+    <p>It is possible for the engagement score to be greater than 100. Scrubbing and re-watching a video doesn't trigger new video_view events, but it does track video_engagement. For example, say we have a video in a single video player on a page somewhere. The following events show how the video engagement could vary widely:</p>
+    <ol class="bcls-tasklist">
+      <li>No watches yet. Engagement Score: 0.</li>
+      <li>A viewer loads the page and watches the video all the way through. Engagement Score: 100 (100 percent viewed / 1 view).</li>
+      <li>The same viewer scrubs back and watches it all the way through again (browser was not reloaded). Engagement Score: 200 (200 percent viewed / 1 view).</li>
+      <li>Another viewer loads the page and watches the entire video. Engagement Score: 150 (300 percent viewed / 2 views).</li>
+    </ol>
+    <p>For more details on how we calculate video engagement, watch the training video <a href="/node/18828">Calculating Video Engagement</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="recent_historical">Recent and historical data</h2>
+    <p>For 32 days, Brightcove keeps detailed analytics data for videos (views for each one-hundredth of the video duration). After that time, the analytics data is moved to historical data, and only views at the 1%, 25%, 50%, 75%, and 100% points are kept.</p>
+    <p>Exported reports from the Analytics module will include only views at the 1%, 25%, 50%, 75%, and 100% points, even for periods within the past 32 days. For more detailed engagement data within the past 32 days, the Analytics API must be used.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="details" class="bcls-sectionTitle">Engagement Report Details</h2>
+    <p>The first column that appears in the body of the report will vary based upon the report dimension that is selected (video name, player name, or day). All reports will display the following data:</p>
+    <ul>
+      <li><strong>Engagement Score</strong> - a calculation based on the views recorded for each 100th of the video</li>
+      <li><strong>Views at 1%</strong> - how many views were recorded at the 1% point of the video</li>
+      <li><strong>Views at 25%</strong> - how many views were recorded at the 25% point of the video</li>
+      <li><strong>Views at 50%</strong> - how many views were recorded at the 50% point of the video</li>
+      <li><strong>Views at 75%</strong> - how many views were recorded at the 75% point of the video</li>
+      <li><strong>Views at 100%</strong> - how many views were recorded at the 100% point of the video</li>
+    </ul>
+    <p>In all cases, views at x% means that this segment of the video was played back in the player.</p>
+    <p>Note that the <strong>Views at x%</strong> is not the same as a <strong>Video View</strong> in the Performance Report. A video view is counted when a video first starts playing back. The views at 1% is recorded when the first percent is watched. The difference here is that if the first percent is watched multiple times (if the video is set to auto-replay, for instance), the count increases, whereas a video view is counted when the video first starts playing back but is not counted on a replay (unless the user reloads the page or watches another video in the playlist, etc).</p>
+    <aside class="bcls-aside bcls-aside--information">Note: For a complete list of all analytics terms and definitions, see the <a href="/node/14203">Analytics Glossary</a>.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: Simultaneous report requests within the same account will execute in series. If the reports have large date ranges and many fields are selected, there may be a delay before all the results are returned. A good alternative is to schedule large reports.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="export">Exporting Report Data</h2>
+    <p>Report data can be downloaded as both comma separated values and Excel formats. Note that the export feature saves the data directly from an Analytics API call. The exported data is not manipulated the way the UI data is, and currently contains all of the underlying data in the report, not just the subset of fields the UI shows. Some of the differences between what is shown in the UI vs. the exported data:</p>
+    <ul>
+      <li>Different units (minutes vs seconds)</li>
+      <li>Rounding of numbers</li>
+      <li>The data export contains both the performance and engagement metrics regardless of where you are in the UI</li>
+    </ul>
+    <p>Having all of the data in the original format from the API allows you to manipulation the data in ways other than what is provided in the UI.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="export" src="/assets/images/analytics/node10105-export.png" /></figure>
+    <p>Note that the reports support print-friendly style sheets so printing a report or saving to PDF will generate a printer-friendly page.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="video" class="bcls-sectionTitle">Viewing Video Dimension Analytics</h2>
+    <p>When the <strong>Video</strong> dimension is selected, a graph will display the overall video engagement for the time period selected. The body of the report lists the video name, video ID, duration and the engagement details for each video.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Account Engagement  Report" src="/assets/images/analytics/node10105-engagement-report.png" /></figure>
+    <p>Clicking the link for any of the videos will display the video engagement for that video.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Video Engagement  Report" src="/assets/images/analytics/node10105-video-engagement.png" /></figure>
+    <p>The preview player is synchronized with the engagement graph and provides to ability to see in the video where any engagement spikes or drop-offs occur. By clicking on any point in the engagement graph, the player will play the corresponding point in the video.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Video Engagement in Player" src="/assets/images/analytics/node10105-engagement-in-player.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="player" class="bcls-sectionTitle">Viewing Player Dimension Analytics</h2>
+    <p>When the <strong>Player</strong> dimension is selected, a graph will display the overall video engagement for the time period selected. The body of the report lists the engagement details for each player.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Engagement by Player" src="/assets/images/analytics/node10105-player-engagement.png" /></figure>
+    <p>Clicking the link for any of the players will display the video engagement for that player.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="day" class="bcls-sectionTitle">Viewing Day Dimension Analytics</h2>
+    <p>When the <strong>Day</strong> dimension is selected, a graph will display the video engagement for the time period selected. The body of the report lists the engagement details for each day. In the body of the report, you can use the drop down list to view the video engagement by Video or Player.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Engagement by Day" src="/assets/images/analytics/node10105-day-engagement.png" /></figure>
   </section>
 </article>
 
