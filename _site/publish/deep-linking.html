@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Video Cloud Basics: Organizing Videos Using Folders</title>
+  <title>Deep Linking</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -86,9 +86,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/basics/">Basics</a></li>
+      <li class="breadcrumb-item"><a href="/publish/">Publishing Videos</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Video Cloud Basics: Organizing Videos Using Folders</li>
+      <li class="breadcrumb-item active" aria-current="page">Deep Linking</li>
     </ol>
   </nav>
 </header>
@@ -580,27 +580,47 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
-  <h1>Video Cloud Basics: Organizing Videos Using Folders</h1>
-  <summary>In this topic you will learn how to add videos to folders using the Media module.</summary>
+  <h1>Deep Linking</h1>
+  <summary>Deep linking is a feature that allows a user to start viewing a video from a specific time offset. This is a very useful feature for sharing a video like a newscast where the user may want people to view a certain segment of the program without having to watch everything that precedes it.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4172570294001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <h3>Steps</h3>
-    <ol class="bcls-tasklist-restart">
-      <li class="language-editable">Open the <strong>Media</strong> module.</li>
-      <li class="language-editable">In the side navigation panel, click the <strong>Create Folder</strong> link.</li>
-      <li>Enter a name for the folder and then press <strong>enter</strong>.</li>
-      <li>To add videos to a folder, select one or more videos.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/basics/node18851-select-videos.png" /></figure>
-      </li>
-      <li>Click <strong>More &gt; Move to Folder</strong>.</li>
-      <li>Click on a folder and then click <strong>Move</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/basics/node18851-select-folder.png" /></figure>
-      </li>
-    </ol>
-    <p>All folders will appear in the left navigation. The number after the folder name is the number of videos in the folder.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/basics/node18851-folder-list.png" /></figure>
-    <p>To remove videos from a folder, click on a folder, select one or more videos and then click <strong>Remove Videos &gt; Remove Videos from Folder</strong>.</p>
+    <h2 id="Overview">Overview</h2>
+    <p class="language-editable">You can implement deep linking with both the Standard (iframe) and Advanced (in-page) player implementations. For the Standard implementation you use a <code>t</code> query parameter:</p>
+    <pre class="line-numbers">
+<code class="language-html">&lt;iframe src="https://players.brightcove.net/1507807800001/
+    SJgrJZnuAz_default/index.html?videoId=5637008067001&amp;<span class="bcls-highlight">t=70s</span>"
+  allowfullscreen
+  webkitallowfullscreen
+  mozallowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+    <p class="language-editable">For the Advanced implementation use the attribute <code>data-start-time</code>:</p>
+    <pre class="line-numbers">
+<code class="language-html">&lt;video-js data-video-id="5637008067001"
+  data-account="1507807800001"
+  data-player="SJgrJZnuAz"
+  data-embed="default"
+  data-application-id
+  class="video-js"
+  controls
+  <span class="bcls-highlight">data-start-time="70"</span>&gt;&lt;/video-js&gt;
+&lt;script src="https://players.brightcove.net/1507807800001/SJgrJZnuAz_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Time_formats">Time formats</h2>
+    <p>Two possible time formats can be used for specifying the start time:</p>
+    <ul>
+      <li class="language-editable">Simple time in seconds: This is what used in the examples above, showing start the video <span class="notranslate">70</span> seconds in (translated into <span class="notranslate">1:10</span> in the video). You cannot use <strong>min:seconds</strong> format.</li>
+      <li class="language-editable">The <strong>hms</strong> format: Here the time can be indicated in hours/minutes/seconds. For instance, to start the video <span class="notranslate">1</span> hour, <span class="notranslate">1</span> minute and <span class="notranslate">1</span> second in use the <strong class="notranslate">1h1m1s</strong> syntax.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Social_media_use">Social media use</h2>
+    <p>Unfortunately, most social services do not allow deep linking as shown above. Instead, the services substitute a native player which does not support deep linking. As of July 2014 only one major social network, Twitter, supports direct inclusion of the Brightcove player in the social feed using an iframe, making deep linking possible.</p>
+    <p class="language-editable">For details about deep linking with Twitter, see the <a href="/node/18122">Social Media Plugin</a> document.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Known_issues">Known issues</h2>
+    <ul>
+      <li class="language-editable">The <code>data-start-time</code> attribute and <code>t</code> query parameter only work for players <span class="notranslate">v6.19.0+</span>.</li>
+    </ul>
   </section>
 </article>
 

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Video Cloud Basics: Organizing Videos Using Folders</title>
+  <title>Using Multiple Players on One Page</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -86,9 +86,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/basics/">Basics</a></li>
+      <li class="breadcrumb-item"><a href="/publish/">Publishing Videos</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Video Cloud Basics: Organizing Videos Using Folders</li>
+      <li class="breadcrumb-item active" aria-current="page">Using Multiple Players on One Page</li>
     </ol>
   </nav>
 </header>
@@ -580,27 +580,56 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
-  <h1>Video Cloud Basics: Organizing Videos Using Folders</h1>
-  <summary>In this topic you will learn how to add videos to folders using the Media module.</summary>
-  <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4172570294001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <h3>Steps</h3>
-    <ol class="bcls-tasklist-restart">
-      <li class="language-editable">Open the <strong>Media</strong> module.</li>
-      <li class="language-editable">In the side navigation panel, click the <strong>Create Folder</strong> link.</li>
-      <li>Enter a name for the folder and then press <strong>enter</strong>.</li>
-      <li>To add videos to a folder, select one or more videos.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/basics/node18851-select-videos.png" /></figure>
+  <h1>Using Multiple Players on One Page</h1>
+  <summary>In this topic, you will learn how to use multiple Brightcove Players on a single HTML page.</summary>
+  <section id="multipleplayers" class="bcls-section">
+    <h2>Multiple players</h2>
+    <p>If you are using multiple players on the same page, there is nothing special you need to do. For instance, it is perfectly acceptable to have the following players on the same page.</p>
+    <pre class="line-numbers">
+<code class="language-html">&lt;video-js data-video-id="4093372393001"
+  data-account="1507807800001"
+  data-player="ry3j6rsze"
+  data-embed="default"
+  data-application-id
+  class="video-js"
+  controls&gt;&lt;/video-js&gt;
+&lt;script src="https://players.brightcove.net/1507807800001/ry3j6rsze_default/index.min.js"&gt;&lt;/script&gt;
+
+&lt;video-js data-video-id="5076962725001"
+  data-account="1507807800001"
+  data-player="BkTGbgSq"
+  data-embed="default"
+  data-application-id
+  class="video-js"
+  controls&gt;&lt;/video-js&gt;
+&lt;script src="https://players.brightcove.net/1507807800001/BkTGbgSq_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
+    <p>&nbsp;</p>
+    <aside class="bcls-aside bcls-aside--information">Note: If you are a Brightcove Player customer, you will not use the <code>data-video-id</code> attribute to assign a video to your player. You would either assign the video in the <strong>Players</strong> module or using curl.</aside>
+    <aside class="bcls-aside bcls-aside--tip">You can use the <strong>Standard (iframe)</strong> code for multiple players on the same page also.</aside>
+  </section>
+  <section id="Special_considerations" class="bcls-section">
+    <h2>Special considerations</h2>
+    <p>Be aware of the following when placing multiple players on the same HTML page:</p>
+    <ul>
+      <li>You can use multiple instances of the same player on same page, using a single <strong>index.min.js</strong> file. We strongly recommend using one <strong>index.min.js</strong> file if possible, as this saves considerable amounts of page load time.</li>
+      <li>It can be very expensive bandwidth-wise to have multiple players on a page and have the <code>preload</code> set to <code>auto</code>. It is generally not recommended.</li>
+      <li>In Google Chrome, you cannot have the same video source in multiple players on the same page.</li>
+      <li>You cannot use multiple players on the same page that are from different accounts where both players use the player ID value of <code>default</code>. (As a reminder, in the Advanced player code the player ID is used in the <code>data-player</code> attribute.) The workaround is to duplicate one of the default players so it has a unique identifier.</li>
+      <li>If you're using IE11&nbsp;and have multiple instances of the same player on a page, you need to either be sure each player instance has a unique value for the <code>id</code> attribute&nbsp;or use no <code>id</code> attributes.</li>
+      <li>Mixing in-page players of different versions is not supported. It may work for similar versions, but can easily cause problems. Use iframes if you need to mix players of different versions. If the players are of the same version, it should be fine.</li>
+      <li>When mixing in-page players, the global bc will refer to the last player in the page.</li>
+      <li>There are known issues when attempting to use AMD module loaders like RequireJS and multiple in-page players. We don't have a workaround for this at the moment.</li>
+      <li>When embedding multiple 360 videos on a page with the advanced embed code, only the first video can have 360 interactivity. The workaround is to use the basic (iframe) embed to allow multiple 360 videos to have interactivity.</li>
+      <li>Mixing players with 360 videos and players with non-360 videos is not supported.</li>
+      <li>
+        <p>If multiple players have the same id on one page and specify different size inside <code>&lt;video&gt;</code> tag using <code>width</code> and <code>height</code> attributes, the player CSS from the last player is applied to all players.</p>
+        <p><strong>Workarounds</strong></p>
+        <ul>
+          <li>Use players with a different player ids if you want them to have different sizes or styling</li>
+          <li>Define a classes for the players that provide the player sizing using CSS, and add the classes to the video tags for the different players</li>
+        </ul>
       </li>
-      <li>Click <strong>More &gt; Move to Folder</strong>.</li>
-      <li>Click on a folder and then click <strong>Move</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/basics/node18851-select-folder.png" /></figure>
-      </li>
-    </ol>
-    <p>All folders will appear in the left navigation. The number after the folder name is the number of videos in the folder.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/basics/node18851-folder-list.png" /></figure>
-    <p>To remove videos from a folder, click on a folder, select one or more videos and then click <strong>Remove Videos &gt; Remove Videos from Folder</strong>.</p>
+    </ul>
   </section>
 </article>
 

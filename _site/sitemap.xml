@@ -223,6 +223,27 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/admin/creating-ingest-profiles-dynamic-delivery.html</loc>
+        <lastmod>2020-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/admin/creating-legacy-ingest-profiles.html</loc>
+        <lastmod>2020-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/publish/deep-linking.html</loc>
+        <lastmod>2020-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/media/downloading-videos-video-cloud.html</loc>
         <lastmod>2020-02-11</lastmod>
         <changefreq>daily</changefreq>
@@ -231,6 +252,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/publish/driving-video-views-through-email.html</loc>
+        <lastmod>2020-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/general/drm-output-protection-settings.html</loc>
         <lastmod>2020-02-11</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -405,6 +433,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/admin/ingest-profiles-best-practices.html</loc>
+        <lastmod>2020-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/media/introduction-playlists.html</loc>
         <lastmod>2020-02-11</lastmod>
         <changefreq>daily</changefreq>
@@ -490,6 +525,20 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/media/organizing-videos-using-folders.html</loc>
+        <lastmod>2020-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/general/overview-context-aware-encoding.html</loc>
+        <lastmod>2020-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/general/overview-dynamic-delivery.html</loc>
         <lastmod>2020-02-11</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -657,6 +706,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/general/tls-media-player-and-api-urls.html</loc>
+        <lastmod>2020-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/get-started/training-demand-introduction-video-cloud-analytics.html</loc>
         <lastmod>2020-02-11</lastmod>
         <changefreq>daily</changefreq>
@@ -686,6 +742,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/media/uploading-videos-using-upload-module.html</loc>
+        <lastmod>2020-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/publish/using-multiple-players-one-page.html</loc>
         <lastmod>2020-02-11</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
