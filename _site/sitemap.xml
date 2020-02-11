@@ -328,6 +328,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/get-started/getting-started-your-video-cloud-trial.html</loc>
+        <lastmod>2020-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/analytics/how-search-videos-analytics-module.html</loc>
         <lastmod>2020-02-11</lastmod>
         <changefreq>daily</changefreq>
@@ -356,13 +363,6 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/support/</loc>
-        <lastmod>2020-02-11</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://studio.support.brightcove.com/get-started/</loc>
         <lastmod>2020-02-11</lastmod>
         <changefreq>daily</changefreq>
@@ -371,6 +371,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/</loc>
+        <lastmod>2020-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/support/</loc>
         <lastmod>2020-02-11</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -560,6 +567,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/players/setting-player-properties.html</loc>
+        <lastmod>2020-02-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/players/setting-player-update-mode-and-version.html</loc>
         <lastmod>2020-02-11</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
