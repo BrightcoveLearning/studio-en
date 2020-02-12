@@ -1,0 +1,983 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- remember to remove the following line when the site is ready to go live -->
+  <!-- <meta name="robots" content="noindex" /> -->
+  <title>Overview: Digital Rights Management (DRM) in Video Cloud</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/assets/css/site/bc-icons.css"> -->
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/google-analytics.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/logo-bc-video-cloud.svg" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);" style="margin-right: 1rem;">
+  <option value="">Select a language</option>
+  <option value="en|en">English</option>
+  <option value="en|zh-TW">繁體中文</option>
+  <option value="en|fr">Français</option>
+  <option value="en|de">Deutsch</option>
+  <option value="en|ja">日本語</option>
+  <option value="en|ko">한국어</option>
+  <option value="en|es">Español</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+<select id="site_select" style="margin-right: 1rem;">
+  <option value="">Other Brightcove Documentation</option>
+  
+    
+      <option value="https://support.brightcove.com">Documentation Home</option>
+    
+  
+    
+      <option value="https://audience.support.brightcove.com">Brightcove Audience</option>
+    
+  
+    
+      <option value="https://beacon.support.brightcove.com">Brightcove Beacon</option>
+    
+  
+    
+      <option value="https://campaign.support.brightcove.com">Brightcove Campaign</option>
+    
+  
+    
+      <option value="https://gallery.support.brightcove.com">Gallery</option>
+    
+  
+    
+      <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+    
+  
+</select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?language=en_US"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/support.png" alt="support"> Contact Support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/status.png" alt="system status"> System Status</a></span>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/general/">General Information</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Overview: Digital Rights Management (DRM) in Video Cloud</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav">
+          
+            
+            <h5><a href="/">Home</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/getting-started/">Getting Started <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/getting-started/overview-zencoder.html">Overview</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/quick-start-zencoder.html">Quick Start</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/getting-api-key.html">Getting an API Key</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/output-settings.html">Output Settings</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/creating-multiple-outputs.html">Creating Multiple Outputs</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/general-information/">General Information <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/general-information/faq-basics.html">Basics</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-codecs-and-formats.html">Codecs And Formats</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-encoding.html">Encoding</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-file-transfers.html">File Transfers</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-zencoder-pricing.html">Zencoder Pricing</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-rate-limiting.html">Rate Limiting</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/supported-video-and-audio-formats-codecs-and-containers.html">Supported Video and Audio Formats</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/overview-context-aware-encoding.html">Overview: Context Aware Encoding</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/getting-notifications-when-videos-are-finished.html">Getting Notifications When Videos Are Finished</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/how-zencoder-saves-your-files-when-uploads-fail.html">How Zencoder Saves Files When Uploads Fail</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/using-zencoder-s3.html">Using Zencoder with S3</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/using-zencoder-azure.html">Using Zencoder with Google Cloud Storage</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/using-zencoder-google-cloud-platform.html">Using Zencoder with Google Cloud Storage</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/references/">References <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/references/reference.html">API Reference</a></li>
+                  
+                
+                  
+                    <li><a href="/references/known-issues.html">Known Issues</a></li>
+                  
+                
+                  
+                    <li><a href="/references/release-notes.html">Product Updates</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/encoding-settings/">Encoding Settings <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/general/">General Settings <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/general/encoding-settings-job.html">Job Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/general/encoding-settings-general-output-settings.html">General Output Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/general/cae-settings.html">CAE Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html">Conditional Outputs Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/general/encoding-settings-notifications.html">Notifications Settings</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/general-audio-video/">Audio/Video Settings <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-audio.html">Audio Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html">Audio Processing Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-video.html">Video Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html">Video Processing Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html">Broadcast Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html">Frame Rate Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html">Rate Control Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html">Resolution Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Segmented Streaming Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html">Transmuxing Settings</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/formats-codecs/">Formats and Codec Settings <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html">Format and Codecs Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-aac.html">AAC Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html">FLV Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html">HDR10 Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html">H.264 Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html">MP4 Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html">VP6 Settings</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/assets/">Media Asset Settings <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/assets/encoding-settings-captions.html">Captions Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/assets/encoding-settings-clips.html">Clips Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/assets/encoding-settings-thumbnails.html">Thumbnails Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/assets/encoding-settings-watermarks.html">Watermarks Settings</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/content-protection/">Content Protection Settings <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/content-protection/encoding-settings-encryption.html">Encryption Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/content-protection/encoding-settings-decryption.html">Decryption Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/content-protection/encoding-settings-drm.html">DRM Settings</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/sources-destinations/">Sources/Destination Settings <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html">S3 Settings</a></li>
+                        
+                        <li><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html">Aspera Settings</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/encoding-guides/">Encoding Guides <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/encoding-guides/advanced-audio-mapping-guide.html">Audio Mapping Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/as11-mxf.html">AS-11-mxf Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/avc-intra-guide.html">AVC-Intra Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/cae-guide.html">CAE Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/creating-mp4-and-hls-outputs-together.html">Transmuxing Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/dash-streaming-and-playlists.html">DASH Streaming and Playlists</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/h264-advanced-guide.html">H.264 Advanced Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/hdr10-video-output.html">HDR10 Video Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/hevch265-guide.html">HEVC/H.265 Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/highwinds-smil.html">Highwinds SMIL Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/html5-encoding.html">HTML5 Encoding</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">HLS Streaming and Playlists</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/http-live-streaming-using-fragmented-mp4.html">HLS using fragmented MP4</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/iosmobile-encoding.html">iOS/Mobile Encoding Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/microsoft-smooth-streaming.html">Microsoft Smooth Streaming</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/using-quality-based-encoding-modes-streaming-video.html">Quality-Based Encoding Modes for Streaming</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/vp6-advanced-guide.html">VP6 Advanced Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/vp9-guide.html">VP9 Guide</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/error-troubleshooting/">Errors/Troubleshooting <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/error-troubleshooting/problems.html">Common Problems</a></li>
+                  
+                
+                  
+                    <li><a href="/error-troubleshooting/region-outages.html">Region Outages</a></li>
+                  
+                
+                  
+                    <li><a href="/error-troubleshooting/when-should-i-retry-failed-jobs.html">When to Retry Failed Jobs</a></li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/error-troubleshooting/error-codes">Error Codes <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html">AkamaiNetStorageFileSizeError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-checksummismatcherror.html">ChecksumMismatchError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-dimensiontoosmallerror.html">DimensionTooSmallError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-downloadaccessdeniederror.html">DownloadAccessDeniedError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-downloadfailureerror.html">DownloadFailureError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-downloadtimeouterror.html">DownloadTimeoutError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-filenotfounderror.html">FileNotFoundError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">FilePermanentlyMovedError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">InaccurateDurationError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror.html">IncompatibleWithDynamicProfilesError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-inputfilenotfound.html">InputFileNotFound</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html">InvalidAccessKeyIdError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidaudiosettingserror.html">InvalidAudioSettingsError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidcodeccombinationerror.html">InvalidCodecCombinationError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invaliddownloadedfiletypeerror.html">InvalidDownloadedFileTypeError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidencryptionsettingserror.html">InvalidEncryptionSettingsError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidfilepatherror.html">InvalidFilePathError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidformatcodecerror.html">InvalidFormatCodecError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidframerateerror.html">InvalidFrameRateError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidusernameorpassworderror.html">InvalidUsernameOrPasswordError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidvideobitrateerror.html">InvalidVideoBitrateError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidvideosettingserror.html">InvalidVideoSettingsError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-nomediaerror.html">NoMediaError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-quicktimereferenceerror.html">QuicktimeReferenceError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-remoteserverproblemerror.html">RemoteServerProblemError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-rtmpauthfailederror.html">RTMPAuthFailedError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-rtmpmaxstreamsxidreached.html">RTMPMaxStreamsXIdReached</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-rtmpstreamnamealreadyinuse.html">RTMPStreamNameAlreadyInUse</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-s3bucketnotfounderror.html">S3BucketNotFoundError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-segmentingerror.html">SegmentingError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-skippedsourceerror.html">SkippedSourceError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-thumbnailerror.html">ThumbnailError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-transcodingerror.html">TranscodingError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteegroupurlerror.html">Transfer::InvalidGranteeGroupURLError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteeiderror.html">Transfer::InvalidGranteeIDError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-truncatedfileerror.html">TruncatedFileError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unabletocreatedynamicprofileserror.html">UnableToCreateDynamicProfilesError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpecteddownloadproblemerror.html">UnexpectedDownloadProblemError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedffmpegresult.html">UnexpectedFfmpegResult</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedmplayerresult.html">UnexpectedMplayerResult</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedprogenresult.html">UnexpectedProgenResult</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedresulterror.html">UnexpectedResultError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpecteduploadproblemerror.html">UnexpectedUploadProblemError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedx264result.html">UnexpectedX264Result</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unreadablefileerror.html">UnreadableFileError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedcodecerror.html">UnsupportedCodecError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedencodingerror.html">UnsupportedEncodingError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedencryptionerror.html">UnsupportedEncryptionError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedtranscodecombinationerror.html">UnsupportedTranscodeCombinationError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-uploadaccessdeniederror.html">UploadAccessDeniedError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-uploadfailureerror.html">UploadFailureError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-uploadservernotfounderror.html">UploadServerNotFoundError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-uploadtimeouterror.html">UploadTimeoutError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-workertimeouterror.html">WorkerTimeoutError</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/integration/">Integration <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/integration/faq-integration-libraries.html">Integration libraries</a></li>
+                  
+                
+                  
+                    <li><a href="/integration/100-integration-reliability.html">100% Integration Reliability</a></li>
+                  
+                
+                  
+                    <li><a href="/integration/test-jobs-and-integration-mode.html">Test Jobs and Integration Mode</a></li>
+                  
+                
+                  
+                    <li><a href="/integration/using-read-only-api-keys.html">Using Read-only API Keys</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<!-- search bar -->
+<div id="search_bar" class="search-bar">
+  <!-- TODO - cx value below must be changed for each site and new GCS instance set up-->
+  <!-- <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:6sd3di5mwuw"></script> -->
+  <div id="search_box" class="gcse-search"></div>
+</div>
+
+<article class="bcls-article">
+  <h1>Overview: Digital Rights Management (DRM) in Video Cloud</h1>
+  <summary>This topic provides an overview of using DRM in Video Cloud.</summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
+    <p>Digital Rights Management (DRM) prevents your videos from being played back except in clients that are granted permission to do so. Implementations of DRM vary, but the usual mechanism used is to encrypt the video and decrypt it only if the client has some kind of key to authorize playback.</p>
+    <p>Also see:</p>
+    <ul>
+      <li><a href="/node/18038">Ingesting content with DRM</a></li>
+      <li><a href="/node/18083">Configuring the Brightcove Player for DRM</a></li>
+      <li><a href="/node/18213">Content Security (DRM) with the Native Player SDKs</a></li>
+      <li><a href="/node/18488">DRM Output Protection Settings</a></li>
+    </ul>
+    <p>For additional content security mechanisms that can be set in either the player configuration or video properties, see:</p>
+    <ul>
+      <li><a href="/node/15616">Configuring Player Content Restrictions</a></li>
+      <li><a href="/node/15476">Configuring Video Availability</a></li>
+      <li><a href="/node/7857">Protecting Videos with HLS Encryption</a></li>
+    </ul>
+    &nbsp;
+    <aside class="bcls-aside bcls-aside--information">Brightcove currently does not support video-only or audio-only DRM playback.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Supported_DRM_types">Supported DRM types</h2>
+    <p>Video Cloud offers broad support for DRM:</p>
+    <ul>
+      <li>Comprehensive support for packaging, license serving and playback</li>
+      <li>Adaptive use of the appropriate DRM for a given device:
+        <ul>
+          <li>Video Cloud favors native device DRM to minimize dependency on plugins</li>
+          <li>Video Cloud leverages standards to reduce the number of renditions necessary to deliver a cross-platform solution</li>
+        </ul>
+      </li>
+    </ul>
+    <p>Brightcove supports the three most popular types of DRM for HTML5 video:</p>
+    <ul>
+      <li><a href="#fairplay">Apple FairPlay</a></li>
+      <li><a href="#widevine">Google Widevine Modular</a></li>
+      <li><a href="#playready">Microsoft PlayReady</a></li>
+    </ul>
+    <p>You can sign up for multiple DRM types to protect your content on all devices and platforms.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Summary_of_DRM_support">Summary of DRM support</h2>
+    <p>Support for DRM depends on the video format, as shown in the following table.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Browser</th>
+          <th>Minimum OS Version</th>
+          <th>DASH<br />
+            Widevine</th>
+          <th>DASH<br />
+            Playready</th>
+          <th>HLS<br />
+            FairPlay</th>
+          <th>HLS<br />
+            Widevine</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <th colspan="6">Web Player on Desktop Devices</th>
+        </tr>
+        <tr>
+          <td>Chrome 35+</td>
+          <td>Windows and MacOS versions supported by Chrome</td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+        </tr>
+        <tr>
+          <td>Firefox 47+</td>
+          <td>Windows and MacOS versions supported by Firefox</td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+        </tr>
+        <tr>
+          <td>Safari 8+</td>
+          <td>MacOS Sierra+</td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+        </tr>
+        <tr>
+          <td>Edge</td>
+          <td>Windows 10</td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /><sup><strong><a href="#note1-1">[1-1]</a></strong></sup></td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+        </tr>
+        <tr>
+          <td>IE 11</td>
+          <td>Windows 8.1</td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+        </tr>
+        <tr>
+          <th colspan="6">Web Player on Mobile Devices</th>
+        </tr>
+        <tr>
+          <td>Chrome<br />
+            last 3 major versions</td>
+          <td>Android 6+</td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+        </tr>
+        <tr>
+          <td>Safari</td>
+          <td>iOS 11.2+</td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+        </tr>
+        <tr>
+          <th colspan="6">Web Player on Set-Top Devices</th>
+        </tr>
+        <tr>
+          <td>Chrome</td>
+          <td>Android TV, Chromecast</td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+        </tr>
+        <tr>
+          <td>Chrome</td>
+          <td>Amazon Fire TV, Google TV, Roku</td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+        </tr>
+        <tr>
+          <td>Safari</td>
+          <td>Apple TV (via Airplay)</td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+        </tr>
+        <tr>
+          <th colspan="6">Android SDK (Native Player) on Mobile Devices</th>
+        </tr>
+        <tr>
+          <td>n/a</td>
+          <td>Android TV, Chromecast</td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+        </tr>
+        <tr>
+          <td>n/a</td>
+          <td>Amazon Fire TV, Google TV, Roku</td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+        </tr>
+        <tr>
+          <th colspan="6">iOS SDK (Native Player) on Mobile Devices</th>
+        </tr>
+        <tr>
+          <td>n/a</td>
+          <td>iOS 11.2+ (all devices)</td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+        </tr>
+        <tr>
+          <th colspan="6">tvOS SDK (Native Player) on Mobile Devices</th>
+        </tr>
+        <tr>
+          <td>n/a</td>
+          <td>tvOS (Apple TV)</td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+          <td><img alt="Yes" src="/assets/images/general/node18436-check16.png" /></td>
+          <td><img alt="No" src="/assets/images/general/node18436-x16.png" /></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Notes</h3>
+    <ul>
+      <li id="note1-1"><sup><strong>[1-1]</strong></sup> For the upcoming Chromium-based Edge:
+        <ul>
+          <li>Windows 10: will support both DASH/Widevine and DASH/Playready</li>
+          <li>MacOS: will support DASH/Widevine</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="DRM_support_details">DRM support details</h2>
+    <h3>Browsers</h3>
+    <p>DRM for browsers is for desktop or for mobile web (Chrome on Android 6+ devices; Safari on iOS 11.2+ devices). Brightcove uses MPEG-DASH and common encryption together with Widevine Modular, Apple Fairplay, and Microsoft PlayReady to provide DRM on the desktop - which type is used depends on the browser. This provides a single set of assets that can be played across different browsers while leveraging the native DRM that is available with modern browsers.</p>
+    <h3>iOS and Android applications</h3>
+    <p>The information below applies to apps built using the <a href="/node/18367">Brightcove Native Player SDKs</a>. Note that in addition to regular playback, the SDKs also support <a href="#Offline_Playback_with_DRM">offline playback with DRM</a>.</p>
+    <h4>iOS</h4>
+    <p>For iOS devices, the current Video Cloud DRM solution is <a href="https://docs.brightcove.com/ios-plugins/fairplay/index.html">HLS+Fairplay</a>.</p>
+    <p>Apple's FairPlay Streaming (FPS) technology provides a secure solution for delivering HTTP Live Streaming (HLS) video to Apple devices, including iPhone, iPad and Apple TV. It uses an established secure key protocol and minimizes the power consumption on mobile devices.</p>
+    <h4>Android</h4>
+    <p>For Android devices, the solution is MPEG-DASH + CENC (Widevine Modular).</p>
+    <p>Google Widevine offers a multi-platform, multi-format DRM and video optimization solution that content owners, internet video providers, retailers and video operators can use to deliver a branded, high quality entertainment offering to internet-connected entertainment platforms.</p>
+    <h5>DRM Security Levels with Android Devices</h5>
+    <p>Widevine implements a set of industry standards, including CENC encryption, licensing key exchange and adaptive streaming quality to manage video protection. Widevine supports multiple levels of streaming quality based on the security capabilities of the receiving device.</p>
+    <p>The levels of security are named L1, L2 and L3:</p>
+    <ul>
+      <li><strong>Level 1</strong> - Hightest security level
+        <ul>
+          <li>Clear keys are only visible by security processor</li>
+          <li>Protected video path. Clear video is not exposed.</li>
+        </ul>
+      </li>
+      <li><strong>Level 2</strong> - Less secure
+        <ul>
+          <li>Clear keys are only visible by security processor</li>
+          <li>No protected video path. Clear video is exposed.</li>
+        </ul>
+      </li>
+      <li><strong>Level 3</strong> - Lowest security level
+        <ul>
+          <li>Key processing done by main CPU</li>
+          <li>No protected video path. Clear video is exposed.</li>
+        </ul>
+      </li>
+    </ul>
+    <p>Android devices support either L1 or L3 security levels, based on the hardware and software configurations. Only devices that meet the L1 specification can stream HD or higher quality content from Widevine-secured servers. If your device is only L3 compliant, you will not be able to stream DRM-protected HD content.</p>
+    <p>For more details, see the following:</p>
+    <ul>
+      <li><a href="https://www.widevine.com/solutions/widevine-drm">Widevine's DRM solution document</a></li>
+      <li><a href="https://source.android.com/devices/drm.html">Android Digital Rights Management (DRM) document</a></li>
+      <li><a href="https://support.google.com/widevine/answer/6072714?hl=en">Determine Android device security level</a></li>
+    </ul>
+    <h4 id="Offline_Playback_with_DRM">Offline Playback with DRM</h4>
+    <p>Offline playback allows users to download content while they are connected, and then watch it when they are offline. To protect your content, the Native SDKs use the following:</p>
+    <ul>
+      <li>The Native SDK for Android uses Google Widevine</li>
+      <li>The Native SDK for iOS uses FairPlay Streaming</li>
+    </ul>
+    <p>For details, see the <a href="/node/16844">Overview of Offline Playback with the Native Player SDKs</a>.</p>
+    <h3>Other devices</h3>
+    <p>MPEG-DASH is supported by many devices, including Android TV and Chromecast. Videos packaged with DRM for the desktop browser can also be played on these devices.</p>
+    <p>Many consumer electronics devices support an older form of DRM - PlayReady over Smooth Streaming</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Signing_up_for_DRM">Signing up for DRM</h2>
+    <p>DRM requires an additional fee. Contact your Account Manager about bundling DRM protection so that you can secure your content wherever it plays.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="fairplay">Apple FairPlay</h2>
+    <p>FairPlay Streaming is a DRM system developed by Apple for video content in HLS format.</p>
+    <p>To enable your account for FairPlay, you will need to:</p>
+    <ol class="bcls-tasklist">
+      <li><a href="https://developer.apple.com/streaming/fps/">Obtain a FairPlay license from Apple</a></li>
+      <li>Contact Support to configure your Video Cloud account</li>
+    </ol>
+    <h3>Known issues</h3>
+    <ul>
+      <li>For Fairplay playback on mobile devices, and an external screen is used, the audio will play but the video is just a black image.
+        <p>For more information, see <a href="/node/18213">Content Security (DRM) with the Native Player SDKs</a></p>
+      </li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="widevine">Google Widevine Modular</h2>
+    <p>Widevine Modular is a system developed by Google to protect video content in MPEG DASH format.</p>
+    <p>By default, Video Cloud uses Brightcove's Widevine licensing server.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="playready">Microsoft PlayReady</h2>
+    <p>PlayReady is a DRM system developed by Microsoft. Playready comes in two forms:</p>
+    <ul>
+      <li><strong>Smooth PlayReady</strong> - Provides DRM protection for Smooth Streaming content</li>
+      <li><strong>PlayReady</strong> - Provides DRM protection for MPEG-DASH content</li>
+    </ul>
+    <p>Video Cloud uses Brightcove's PlayReady licensing server.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Configure_your_Video_Cloud_account">Configure your Video Cloud account</h2>
+    <p>DRM must be configured for your account by Brightcove Support and your Account Manager. Contact your Account Manager for details.</p>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 12 Feb 2020
+</div>
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Brightcove Support</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">System Status</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US">Contact Support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Training</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://support.brightcove.com/online-training-courses">Online Courses</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/register-training">Register for a course</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US" data-drupal-link-system-path="node/18330">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/https-fix.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/setDate.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/prism.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
+  
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  <script src="/assets/js/search.js"></script>
+  <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:gqomuefz6aq"></script>
+</body>
+
+</html>
