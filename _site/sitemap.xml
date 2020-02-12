@@ -440,7 +440,14 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/support/</loc>
+        <loc>https://studio.support.brightcove.com/</loc>
+        <lastmod>2020-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/analytics/</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -454,14 +461,14 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/</loc>
+        <loc>https://studio.support.brightcove.com/get-started/</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/get-started/</loc>
+        <loc>https://studio.support.brightcove.com/support/</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
