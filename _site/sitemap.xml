@@ -223,6 +223,13 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/general/creating-audio-only-renditions-low-bandwidth-delivery.html</loc>
+        <lastmod>2020-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/analytics/creating-custom-analytics-reports.html</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
@@ -259,6 +266,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/publish/deep-linking.html</loc>
+        <lastmod>2020-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/general/domains-and-ports-must-be-accessible-video-cloud.html</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -426,7 +440,7 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/</loc>
+        <loc>https://studio.support.brightcove.com/get-started/</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -440,7 +454,7 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/get-started/</loc>
+        <loc>https://studio.support.brightcove.com/</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -497,6 +511,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/admin/managing-api-authentication-credentials.html</loc>
+        <lastmod>2020-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/admin/managing-ingest-profiles.html</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
