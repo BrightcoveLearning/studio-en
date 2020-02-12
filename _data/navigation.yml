@@ -47,14 +47,56 @@
   name: General Information
   url: /general/
   docs:
-    - name: Getting Started with your Brightcove Engage Trial
-      url: /get-started/getting-started-brightcove-engage-trial.html
+    - name: Adding a Facebook Like Button to a Brightcove Player
+      url: /general/adding-facebook-button-brightcove-player.html
+    - name: 'Best Practices: Creating, Transcoding, and Uploading'
+      url: /general/best-practices-video-creating-transcoding-and-uploading-workflow.html
+    - name: Content Delivery Options
+      url: /general/content-delivery-options.html
+    - name: Creating Audio-Only Renditions
+      url: /general/creating-audio-only-renditions-low-bandwidth-delivery.html
+    - name: Domains and Ports that Must Be Accessible
+      url: /general/domains-and-ports-must-be-accessible-video-cloud.html
+    - name: DRM Output Protection Settings
+      url: /general/drm-output-protection-settings.html
+    - name: Enabling Longer Videos In YouTube
+      url: /general/enabling-longer-videos-youtube.html
+    - name: Making Your Video Content Indexable
+      url: /general/making-your-video-content-indexable.html
+    - name: Optimal Video Dimensions
+      url: /general/optimal-video-dimensions.html
+    - name: Overview of Context Aware Encoding
+      url: /general/overview-context-aware-encoding.html
+    - name: 'Overview: Digital Rights Management (DRM)'
+      url: /general/overview-digital-rights-management-drm-video-cloud.html
+    - name: Overview of Dynamic Delivery
+      url: /general/overview-dynamic-delivery.html
+    - name: Protecting Videos with HLS Encryption
+      url: /general/protecting-videos-hls-encryption.html
+    - name: Resetting Your Studio Password
+      url: /general/resetting-your-studio-password.html
+    - name: Sharing Videos to Twitter Player Cards
+      url: /general/sharing-videos-twitter-player-cards.html
+    - name: Studio System Requirements
+      url: /general/studio-system-requirements.html
+    - name: Supported Video and Audio Formats
+      url: /general/supported-video-and-audio-formats-codecs-and-containers.html
+    - name: TLS for Media, Player, and API URLs
+      url: /general/tls-media-player-and-api-urls.html
+    - name: Video Cloud Studio Cookies
+      url: /general/video-cloud-studio-cookies.html
+    - name: Video Source File Specs and Recommendations
+      url: /general/video-source-file-specifications-and-recommendations.html
+    - name: Working with 360° Videos
+      url: /general/working-360deg-videos.html
+    - name: Working with Multiple Video Cloud Accounts
+      url: /general/working-multiple-video-cloud-accounts.html
 - section: 
   name: Managing Videos
   url: /media/
   docs:
     - name: Uploading Videos
-      url: /videos/uploading-videos.html
+      url: /general/adding-facebook-button-brightcove-player.html
 - section: 
   name: Managing Players
   url: /players/
