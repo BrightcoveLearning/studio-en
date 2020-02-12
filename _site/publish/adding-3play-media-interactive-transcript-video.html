@@ -641,10 +641,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node18718-plugin-features.png" /></figure>
       </li>
       <li>Copy the embed code and paste it into your HTML page.
-        <div><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node18718-embed-code-js.png" /></div>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node18718-embed-code-js.png" /></figure>
       </li>
       <li>In the <strong>Style Settings</strong> section, copy the <strong>id</strong> text to the clipboard. This value will be added to the player embed code.
-        <div><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node18718-style-settings-js.png" /></div>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node18718-style-settings-js.png" /></figure>
       </li>
       <li>Edit the player embed code on your HTML page (from the Media module) by adding the <strong>id</strong> parameter to the <code>&lt;video&gt;</code> tag. Sample embed code is shown below.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node18718-embed-code-js-with-id.png" /></figure>
@@ -652,22 +652,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
     </ol>
     <p>CSS can then be used to style the transcript. For example, the CSS below will set the width of the transcript box, change the color of the current word and change the color of the text and font that are used in the transcript.</p>
-    <pre>&nbsp;
-
-</pre>
-    <p>&lt;style type="text/css"&gt;</p>
-    <p>.p3sdk-interactive-transcript{<br />
-      width: 640px;<br />
-      }<br />
-      .p3sdk-current-word{<br />
-      background:red !important;<br />
-      }<br />
-      .p3sdk-interactive-transcript-content p {<br />
-      color: orange !important;<br />
-      font-style: italic !important;<br />
-      font-size: 20px !important;<br />
-      }<br />
-      &lt;/style&gt;</p>
+    <pre>
+    &lt;style type="text/css"&gt;
+    .p3sdk-interactive-transcript{
+      width: 640px;
+      }
+      .p3sdk-current-word{
+      background:red !important;
+      }
+      .p3sdk-interactive-transcript-content p {
+      color: orange !important;
+      font-style: italic !important;
+      font-size: 20px !important;
+      }
+      &lt;/style&gt;
+    </pre>
     <p>Below is the sample transcript.</p>
     <style type="text/css">
 .p3sdk-interactive-transcript{
