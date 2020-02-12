@@ -8,6 +8,42 @@
     - name: Getting Started with your Brightcove Engage Trial
       url: /get-started/getting-started-brightcove-engage-trial.html
 - section: 
+  name: Learn the Basics
+  url: /basics/
+  docs:
+    - name: Activating and Deactivating a Video
+      url: /basics/video-cloud-basics-activating-and-deactivating-video.html
+    - name: Adding a User to a Video Cloud Account
+      url: /basics/video-cloud-basics-adding-user-video-cloud-account.html
+    - name: Capturing Video Poster & Thumbnail Images
+      url: /basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html
+    - name: Creating a Manual Playlist
+      url: /basics/video-cloud-basics-creating-manual-playlist.html
+    - name: Creating a Playlist Player
+      url: /basics/video-cloud-basics-creating-playlist-player.html
+    - name: Creating a Smart Playlist
+      url: /basics/video-cloud-basics-creating-smart-playlist.html
+    - name: Determining How Much of a Video is Being Watched
+      url: /basics/video-cloud-basics-determining-how-much-video-being-watched.html
+    - name: Determining Which Videos Have the Most Views
+      url: /basics/video-cloud-basics-determining-which-videos-have-most-views.html
+    - name: Editing Basic Video Properties
+      url: /basics/video-cloud-basics-editing-basic-video-properties.html
+    - name: Editing Video Properties for Multiple Videos
+      url: /basics/video-cloud-basics-editing-video-properties-multiple-videos.html
+    - name: Organizing Videos Using Folders
+      url: /basics/video-cloud-basics-organizing-videos-using-folders.html
+    - name: Publishing a Playlist to the Web
+      url: /basics/video-cloud-basics-publishing-playlist-web.html
+    - name: Publishing a Single Video to the Web
+      url: /basics/video-cloud-basics-publishing-single-video-web.html
+    - name: Styling a Player
+      url: /basics/video-cloud-basics-styling-player.html
+    - name: Uploading Video Poster & Thumbnail Images
+      url: /basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html
+    - name: Uploading Videos
+      url: /basics/video-cloud-basics-uploading-videos.html
+- section: 
   name: General Information
   url: /general/
   docs:
