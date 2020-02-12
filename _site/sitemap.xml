@@ -440,7 +440,7 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/get-started/</loc>
+        <loc>https://studio.support.brightcove.com/support/</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -461,14 +461,21 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/admin/</loc>
+        <loc>https://studio.support.brightcove.com/general/</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/support/</loc>
+        <loc>https://studio.support.brightcove.com/media/</loc>
+        <lastmod>2020-02-12</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/admin/</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -482,7 +489,7 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/general/</loc>
+        <loc>https://studio.support.brightcove.com/get-started/</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -853,7 +860,7 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/get-started/video-cloud-architecture-overview.html</loc>
+        <loc>https://studio.support.brightcove.com/general/video-cloud-architecture-overview.html</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -979,7 +986,7 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/get-started/video-cloud-glossary2.html</loc>
+        <loc>https://studio.support.brightcove.com/get-started/video-cloud-glossary.html</loc>
         <lastmod>2020-02-12</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
