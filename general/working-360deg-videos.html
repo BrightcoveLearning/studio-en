@@ -42,9 +42,9 @@ parent: General Information
     <p>When uploading your video, Brightcove recommends using an appropriate ingest profile for 360° videos:</p>
     <ul>
       <li><strong>Legacy</strong> - Brightcove recommends using the <code>single-bitrate-high (2 renditions)</code></li>
-      <li><strong>Dynamic Delivery</strong> - Brightcove recommends <a href="/node/16840">creating a custom profile</a> with a single 1080p rendition and at least one audio rendition</li>
+      <li><strong>Dynamic Delivery</strong> - Brightcove recommends <a href="/admin/creating-ingest-profiles-dynamic-delivery.html">creating a custom profile</a> with a single 1080p rendition and at least one audio rendition</li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: The <code>single-bitrate-high</code> profile was created for videos recorded up to 1080p. If your 360° video was recorded in 4K, you should create a custom ingest profile with higher dimensions. For information on creating custom ingest profiles, see <a href="/node/15628">Managing Ingest Profiles</a>. Some care should be taken as mobile devices sometimes have fixed bitrate and resolution limits. Some old mobile devices may fail to play 360° videos higher than 1080p.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: The <code>single-bitrate-high</code> profile was created for videos recorded up to 1080p. If your 360° video was recorded in 4K, you should create a custom ingest profile with higher dimensions. For information on creating custom ingest profiles, see <a href="/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a>. Some care should be taken as mobile devices sometimes have fixed bitrate and resolution limits. Some old mobile devices may fail to play 360° videos higher than 1080p.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="props">360° video properties</h2>
@@ -62,7 +62,7 @@ parent: General Information
       <li><a href="#sdk">Brightcove Native Player SDKs</a></li>
     </ul>
     <aside class="bcls-aside bcls-aside--information">Note: To use the latest version of the 360°/VR Plugin, you must be using Brightcove Player version 6.13.0 or later.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: In order for the 360°/VR plugin to render videos correctly on iOS devices, the <strong>Preload Video </strong><strong>Before Playback</strong> setting must be set to <strong>Yes</strong> as part of the <a href="/node/18510">player properties</a>.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: In order for the 360°/VR plugin to render videos correctly on iOS devices, the <strong>Preload Video </strong><strong>Before Playback</strong> setting must be set to <strong>Yes</strong> as part of the <a href="/players/configuring-player-playback-properties.html">player properties</a>.</aside>
     <div id="web" class="BCL-subsection">
       <h3>Publishing 360° videos to web pages</h3>
       <p>To play 360° videos in a Brightcove Player, the player requires the 360°/VR Video Plugin.</p>
