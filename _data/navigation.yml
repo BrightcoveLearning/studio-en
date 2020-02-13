@@ -147,8 +147,38 @@
   name: Managing Players
   url: /players/
   docs:
-    - name: Overview of Experience Templates
-      url: /experiences/overview-experience-templates.html
+    - name: Configuring Adobe Analytics Event Tracking
+      url: /players/configuring-adobe-analytics-event-tracking.html
+    - name: Configuring Google Analytics Event Tracking
+      url: /players/configuring-google-analytics-event-tracking.html
+    - name: Configuring Player Advertising using the Players Module
+      url: /players/configuring-player-advertising-using-players-module.html
+    - name: Configuring Player Content Restrictions
+      url: /players/configuring-player-content-restrictions.html
+    - name: Configuring Player Controls
+      url: /players/configuring-player-controls.html
+    - name: Configuring the Player Endscreen
+      url: /players/configuring-player-endscreen.html
+    - name: Configuring Player Localization
+      url: /players/configuring-player-localization.html
+    - name: Configuring Player Playback Properties
+      url: /players/configuring-player-playback-properties.html
+    - name: Configuring Player Plugins
+      url: /players/configuring-player-plugins.html
+    - name: Configuring the Social Properties for a Player
+      url: /players/configuring-social-properties-player.html
+    - name: Generating Player Embed Code
+      url: /players/generating-player-embed-code.html
+    - name: Getting Started with the Players Module
+      url: /players/getting-started-players-module.html
+    - name: Setting Player Information Properties
+      url: /players/setting-player-information-properties.html
+    - name: Setting Player Properties
+      url: /players/setting-player-properties.html
+    - name: Setting the Player Update Mode and Version
+      url: /players/setting-player-update-mode-and-version.html
+    - name: Styling Players
+      url: /players/styling-players.html
 - section: 
   name: Publishing Videos
   url: /publish/
