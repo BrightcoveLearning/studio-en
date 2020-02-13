@@ -283,8 +283,8 @@
   name: Release Notes
   url: /release-notes/
   docs:
-    - name: 2020
-      url: /release-notes/2020.html
+    - name: Video Cloud Studio Release Notes
+      url: /release-notes/video-cloud-studio-release-notes.html
 - section: 
   name: Support
   url: /support/
