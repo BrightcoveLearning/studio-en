@@ -95,8 +95,54 @@
   name: Managing Videos
   url: /media/
   docs:
+    - name: Adding Audio Tracks to Videos
+      url: /media/adding-audio-tracks-videos-using-media-module.html
+    - name: Adding Captions to Videos
+      url: /media/adding-captions-videos-using-media-module.html
+    - name: Adding Chapters to a Video
+      url: /media/adding-chapters-video.html
+    - name: Capturing Poster and Thumbnail Images
+      url: /media/capturing-poster-and-thumbnail-images.html
+    - name: Configuring Video Availability
+      url: /media/configuring-video-availability.html
+    - name: Creating and Managing Playlists
+      url: /media/creating-and-managing-playlists.html
+    - name: Downloading Videos from Video Cloud
+      url: /media/downloading-videos-video-cloud.html
+    - name: Editing Video Properties
+      url: /media/editing-video-properties-using-media-module.html
+    - name: Editing Properties using Quick Edit
+      url: /media/editing-video-properties-using-quick-edit.html
+    - name: Exporting Video Data
+      url: /media/exporting-video-data.html
+    - name: Getting Started with the Media Module
+      url: /media/getting-started-media-module.html
+    - name: How to Search for Videos and Playlists
+      url: /media/how-search-videos-and-playlists-media-module.html
+    - name: Increasing the Quality of Poster Images
+      url: /media/increasing-quality-poster-and-thumbnail-images.html
+    - name: Introduction to Playlists
+      url: /media/introduction-playlists.html
+    - name: Media Sharing
+      url: /media/media-sharing-using-media-module.html
+    - name: Organizing Videos Using Folders
+      url: /media/organizing-videos-using-folders.html
+    - name: Replacing a Video Source File
+      url: /media/replacing-video-source-file.html
+    - name: Retranscoding Videos
+      url: /media/retranscoding-videos-using-media-module.html
+    - name: Setting Required Fields for Videos
+      url: /media/setting-required-fields-videos.html
+    - name: Styling Captions
+      url: /media/styling-captions.html
+    - name: Uploading Poster and Thumbnail Images
+      url: /media/uploading-poster-and-thumbnail-images.html
     - name: Uploading Videos
-      url: /general/adding-facebook-button-brightcove-player.html
+      url: /media/uploading-videos-using-upload-module.html
+    - name: Working with Cue Points
+      url: /media/working-cue-points-media-module.html
+    - name: Working with Remote Asset Videos
+      url: /media/working-remote-asset-videos.html
 - section: 
   name: Managing Players
   url: /players/
