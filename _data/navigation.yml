@@ -47,9 +47,9 @@
   name: General Information
   url: /general/
   docs:
-    - name: Adding a Facebook Like Button to a Brightcove Player
+    - name: Adding a Facebook Like Button to a Player
       url: /general/adding-facebook-button-brightcove-player.html
-    - name: 'Best Practices: Creating, Transcoding, and Uploading'
+    - name: 'Best Practices: Transcoding and Uploading'
       url: /general/best-practices-video-creating-transcoding-and-uploading-workflow.html
     - name: Content Delivery Options
       url: /general/content-delivery-options.html
@@ -89,7 +89,7 @@
       url: /general/video-source-file-specifications-and-recommendations.html
     - name: Working with 360° Videos
       url: /general/working-360deg-videos.html
-    - name: Working with Multiple Video Cloud Accounts
+    - name: Working with Multiple Accounts
       url: /general/working-multiple-video-cloud-accounts.html
 - section: 
   name: Managing Videos
@@ -131,7 +131,7 @@
       url: /media/replacing-video-source-file.html
     - name: Retranscoding Videos
       url: /media/retranscoding-videos-using-media-module.html
-    - name: Setting Required Fields for Videos
+    - name: Setting Required Fields
       url: /media/setting-required-fields-videos.html
     - name: Styling Captions
       url: /media/styling-captions.html
@@ -151,7 +151,7 @@
       url: /players/configuring-adobe-analytics-event-tracking.html
     - name: Configuring Google Analytics Event Tracking
       url: /players/configuring-google-analytics-event-tracking.html
-    - name: Configuring Player Advertising using the Players Module
+    - name: Configuring Player Advertising
       url: /players/configuring-player-advertising-using-players-module.html
     - name: Configuring Player Content Restrictions
       url: /players/configuring-player-content-restrictions.html
@@ -165,7 +165,7 @@
       url: /players/configuring-player-playback-properties.html
     - name: Configuring Player Plugins
       url: /players/configuring-player-plugins.html
-    - name: Configuring the Social Properties for a Player
+    - name: Configuring the Social Properties
       url: /players/configuring-social-properties-player.html
     - name: Generating Player Embed Code
       url: /players/generating-player-embed-code.html
@@ -175,7 +175,7 @@
       url: /players/setting-player-information-properties.html
     - name: Setting Player Properties
       url: /players/setting-player-properties.html
-    - name: Setting the Player Update Mode and Version
+    - name: Setting the Player Update Mode
       url: /players/setting-player-update-mode-and-version.html
     - name: Styling Players
       url: /players/styling-players.html
@@ -183,13 +183,13 @@
   name: Publishing Videos
   url: /publish/
   docs:
-    - name: Adding a 3Play Media Interactive Transcript to a Video
+    - name: Adding a 3Play Media Interactive Transcript
       url: /publish/adding-3play-media-interactive-transcript-video.html
-    - name: Adding an Application ID to the Player Embed Code
+    - name: Adding an Application ID to the Embed Code
       url: /publish/adding-application-id-player-embed-code.html
-    - name: Adding a Brightcove Player to a Facebook Fan Page
+    - name: Adding a Player to a Facebook Fan Page
       url: /publish/adding-brightcove-player-facebook-fan-page.html
-    - name: Changing a Video in a Player Without Changing the Embed Code
+    - name: Changing a Video in a Player
       url: /publish/changing-video-player-without-changing-embed-code.html
     - name: Choosing the Correct Embed Code
       url: /publish/choosing-correct-embed-code.html
@@ -201,19 +201,19 @@
       url: /publish/driving-video-views-through-email.html
     - name: Dynamically Assigning Videos to a Player
       url: /publish/dynamically-assigning-videos-player.html
-    - name: Embedding a Brightcove Player on a Google Sites Page
+    - name: Embedding a Player on a Google Sites Page
       url: /publish/embedding-brightcove-player-google-sites-page.html
-    - name: Publishing a Brightcove Player in a Wordpress Page
+    - name: Publishing a Player in a Wordpress Page
       url: /publish/publishing-brightcove-player-wordpress-page.html
-    - name: Publishing Brightcove Players in Facebook Instant Articles
+    - name: Publishing Players in Facebook Instant Articles
       url: /publish/publishing-brightcove-players-facebook-instant-articles.html
-    - name: Publishing Brightcove Players in Joomla
+    - name: Publishing Players in Joomla
       url: /publish/publishing-brightcove-players-joomla.html
     - name: Publishing a Video to Email
       url: /publish/publishing-video-email.html
-    - name: Publishing Videos and Playlists with the Media Module
+    - name: Publishing Videos and Playlists
       url: /publish/publishing-videos-and-playlists-media-module.html
-    - name: 'Step-by-Step:  Using the Players Module to Create and Publish a Player'
+    - name: 'Step-by-Step:  Creating and Publishing a Player'
       url: /publish/step-step-using-players-module-create-and-publish-player.html
     - name: Using Multiple Players on One Page
       url: /publish/using-multiple-players-one-page.html
@@ -231,13 +231,13 @@
       url: /analytics/creating-custom-analytics-reports.html
     - name: Engagement Report Reference
       url: /analytics/engagement-report-reference.html
-    - name: Exporting Data from the Analytics Module
+    - name: Exporting Data
       url: /analytics/exporting-data-analytics-module.html
     - name: 'FAQ: Analytics Module'
       url: /analytics/faq-analytics-module.html
     - name: Getting Started with the Analytics Module
       url: /analytics/getting-started-analytics-module.html
-    - name: How to Search for Videos in the Analytics Module
+    - name: How to Search for Videos
       url: /analytics/how-search-videos-analytics-module.html
     - name: Managing Scheduled Reports
       url: /analytics/managing-scheduled-reports.html
@@ -249,7 +249,7 @@
   name: Administering Accounts
   url: /admin/
   docs:
-    - name: Authenticating Studio Users using Single Sign-On
+    - name: Authenticating Studio Users using SSO
       url: /admin/authenticating-studio-users-using-single-sign.html
     - name: Configuring Server-Side Ad Settings
       url: /admin/configuring-server-side-ad-settings.html
