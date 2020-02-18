@@ -5,8 +5,24 @@
   name: Getting Started
   url: /get-started/
   docs:
-    - name: Getting Started with your Brightcove Engage Trial
-      url: /get-started/getting-started-brightcove-engage-trial.html
+    - name: Getting Started with Video Cloud Studio
+      url: /get-started/getting-started-video-cloud-studio.html
+    - name: Getting Started with your Video Cloud Trial
+      url: /get-started/getting-started-your-video-cloud-trial.html
+    - name: Quick Start to Video Cloud
+      url: /get-started/quick-start-video-cloud.html
+    - name: 'Step-by-Step:  Video Cloud Studio Publishing Workflow'
+      url: /get-started/step-step-video-cloud-studio-publishing-workflow.html
+    - name: 'Training on Demand:  Introduction to Video Cloud Analytics'
+      url: /get-started/training-demand-introduction-video-cloud-analytics.html
+    - name: 'Training on Demand: Introduction to Video Cloud'
+      url: /get-started/training-demand-introduction-video-cloud.html
+    - name: 'Training on Demand: Video Cloud Basics'
+      url: /get-started/training-demand-video-cloud-basics.html
+    - name: Video Cloud Glossary
+      url: /get-started/video-cloud-glossary.html
+    - name: Video Cloud Studio Training Videos
+      url: /get-started/video-cloud-studio-training-videos.html
 - section: 
   name: Learn the Basics
   url: /basics/
@@ -213,6 +229,8 @@
       url: /publish/publishing-video-email.html
     - name: Publishing Videos and Playlists
       url: /publish/publishing-videos-and-playlists-media-module.html
+    - name: Publishing Videos to an In-Page Experience
+      url: /publish/publishing-videos-page-experience.html
     - name: 'Step-by-Step:  Creating and Publishing a Player'
       url: /publish/step-step-using-players-module-create-and-publish-player.html
     - name: Using Multiple Players on One Page
