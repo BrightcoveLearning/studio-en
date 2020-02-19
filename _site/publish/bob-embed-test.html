@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Publishing Videos</title>
+  <title>Choosing the Correct Embed Code</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -86,7 +86,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item active" aria-current="page">Publishing Videos</li>
+      <li class="breadcrumb-item"><a href="/publish/">Publishing Videos</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Choosing the Correct Embed Code</li>
     </ol>
   </nav>
 </header>
@@ -725,62 +727,50 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <div id="search_box" class="gcse-search"></div>
 </div>
 
-<article class="bcls-article">
-  <h1><i class="far fa-browser"></i>Publishing Videos</h1>
-  <summary>
-    <p>Learn different ways of publishing your videos.</p>
-  </summary>
-  <br/>
-  <a href="#videos">
-  <h4><i class="fas fa-film"></i>&nbsp;&nbsp;&nbsp;Related Videos</h4>
-  </a>
-  <section class="bcls-section">
-    <table width="100%" border="0">
-      <tbody>
-        <tr>
-          <th width="50%" scope="col"> <h2>General Information</h2></th>
-          <th width="1%" scope="col">&nbsp;</th>
-          <th width="49%" scope="col"> <h2>Advanced Features</h2></th>
-        </tr>
-        <tr>
-          <td valign="top"><ul>
-              <li><a href="/publish/adding-application-id-player-embed-code.html">Adding an Application ID to the Player Embed Code</a></li>
-              <li><a href="/publish/changing-video-player-without-changing-embed-code.html">Changing a Video in a Player Without Changing the Embed Code</a></li>
-              <li><a href="/publish/choosing-correct-embed-code.html">Choosing the Correct Embed Code</a></li>
-              <li><a href="/publish/deep-linking.html">Deep Linking</a></li>
-              <li><a href="/publish/driving-video-views-through-email.html">Driving Video Views Through Email</a></li>
-              <li><a href="/publish/publishing-video-email.html">Publishing a Video to Email</a></li>
-              <li><a href="/publish/publishing-videos-and-playlists-media-module.html">Publishing Videos and Playlists with the Media Module</a></li>
-              <li><a href="/publish/publishing-videos-page-experience.html">Publishing Videos to an In-Page Experience</a></li>
-              <li><a href="/publish/step-step-using-players-module-create-and-publish-player.html">Step-by-Step:  Using the Players Module to Create and Publish a Player</a></li>
-            </ul></td>
-          <td>&nbsp;</td>
-          <td valign="top"><ul>
-              <li><a href="/publish/adding-3play-media-interactive-transcript-video.html">Adding a 3Play Media Interactive Transcript to a Video</a></li>
-              <li><a href="/publish/adding-brightcove-player-facebook-fan-page.html">Adding a Brightcove Player to a Facebook Fan Page</a></li>
-              <li><a href="/publish/creating-and-publishing-high-quality-screencasts.html">Creating and Publishing High Quality Screencasts</a></li>
-              <li><a href="/publish/dynamically-assigning-videos-player.html">Dynamically Assigning Videos to a Player</a></li>
-              <li><a href="/publish/embedding-brightcove-player-google-sites-page.html">Embedding a Brightcove Player on a Google Sites Page</a></li>
-              <li><a href="/publish/publishing-brightcove-player-wordpress-page.html">Publishing a Brightcove Player in a Wordpress Page</a></li>
-              <li><a href="/publish/publishing-brightcove-players-facebook-instant-articles.html">Publishing Brightcove Players in Facebook Instant Articles</a></li>
-              <li><a href="/publish/publishing-brightcove-players-joomla.html">Publishing Brightcove Players in Joomla</a></li>
-              <li><a href="/publish/using-multiple-players-one-page.html">Using Multiple Players on One Page</a></li>
-              <li><a href="/publish/using-reference-ids.html">Using Reference IDs</a></li>
-            </ul></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  <section class="bcls-section">
-    <h2 id="videos">Related Videos</h2>
-    <div data-experience="599358c7e7588f000f8a6b5f" data-playlist-id="4365619157001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_599358c7e7588f000f8a6b5f/live.js"></script> 
-  </section>
-</article>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
 
+
+<div w3-include-html="bob-embed-code.html"></div> 
+
+<script>
+includeHTML();
+</script>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
       
     </div>
   </div>
@@ -869,6 +859,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/prism.js"></script>
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
+  
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
   
   <script src="/assets/js/sites_nav.js"></script>
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/bcls-utils.js"></script>
