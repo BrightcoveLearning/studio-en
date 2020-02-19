@@ -235,6 +235,8 @@
       url: /publish/step-step-using-players-module-create-and-publish-player.html
     - name: Using Multiple Players on One Page
       url: /publish/using-multiple-players-one-page.html
+    - name: Using Reference IDs
+      url: /publish/using-reference-ids.html
 - section: 
   name: Reviewing Analytics
   url: /analytics/

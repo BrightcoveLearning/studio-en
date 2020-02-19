@@ -440,34 +440,6 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/support/</loc>
-        <lastmod>2020-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://studio.support.brightcove.com/</loc>
-        <lastmod>2020-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://studio.support.brightcove.com/basics/</loc>
-        <lastmod>2020-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://studio.support.brightcove.com/general/</loc>
-        <lastmod>2020-02-19</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://studio.support.brightcove.com/media/</loc>
         <lastmod>2020-02-19</lastmod>
         <changefreq>daily</changefreq>
@@ -476,6 +448,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/players/</loc>
+        <lastmod>2020-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/general/</loc>
         <lastmod>2020-02-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -510,7 +489,28 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/basics/</loc>
+        <lastmod>2020-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/get-started/</loc>
+        <lastmod>2020-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/</loc>
+        <lastmod>2020-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/support/</loc>
         <lastmod>2020-02-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -875,6 +875,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/publish/using-multiple-players-one-page.html</loc>
+        <lastmod>2020-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/publish/using-reference-ids.html</loc>
         <lastmod>2020-02-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
