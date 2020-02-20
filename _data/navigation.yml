@@ -196,7 +196,7 @@
     - name: Styling Players
       url: /players/styling-players.html
 - section: 
-  name: Publishing Videos
+  name: 'Publishing Videos & Players'
   url: /publish/
   docs:
     - name: Adding a 3Play Media Interactive Transcript
