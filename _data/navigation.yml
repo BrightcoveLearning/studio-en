@@ -163,6 +163,8 @@
   name: Managing Players
   url: /players/
   docs:
+    - name: Configuring a Player Overlay
+      url: /players/configuring-player-overlay-using-overlay-plugin.html
     - name: Configuring Adobe Analytics Event Tracking
       url: /players/configuring-adobe-analytics-event-tracking.html
     - name: Configuring Google Analytics Event Tracking
