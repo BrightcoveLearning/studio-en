@@ -755,8 +755,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><strong>Profile Version</strong> - Indicates the type of transcoding that is used. Note that the types that appear are based upon how your Video Cloud account is configured:
         <ul>
           <li><strong>Legacy</strong> - Legacy transcoding is used</li>
-          <li><strong>Dynamic Delivery</strong> - Dynamic Delivery transcoding is used. For information on Dynamic Delivery, see <a href="/node/18476">Overview of Dynamic Delivery</a>.</li>
-          <li><strong>Context-Aware</strong>&nbsp;- Context-Aware transcoding is used. For information on Context Aware Encoding, see <a href="/node/18505">Overview of Context Aware Encoding</a>.</li>
+          <li><strong>Dynamic Delivery</strong> - Dynamic Delivery transcoding is used. For information on Dynamic Delivery, see <a href="/general/overview-dynamic-delivery.html">Overview of Dynamic Delivery</a>.</li>
+          <li><strong>Context-Aware</strong>&nbsp;- Context-Aware transcoding is used. For information on Context Aware Encoding, see <a href="/general/overview-context-aware-encoding.html">Overview of Context Aware Encoding</a>.</li>
         </ul>
       </li>
       <li><strong>Type</strong> - Type of ingest profile
@@ -788,7 +788,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="archivemasters">Archiving and distributing masters</h2>
-    <p>Ingest profiles can be configured to archive and distribute master (source) files. Archiving the master keeps a copy of the master file and provides the ability for the video to be re-transcoded in the future without the need to upload it again. Distributing the master enables the master to be pushed to the CDN and used as a playable rendition. The <strong>Standard VOD</strong> ingest profiles are configured to archive and not distribute the master. You may wish to change this behavior when creating a custom ingest profile. For additional information on archiving and distributing masters, see the <a href="/node/18035">Archiving Masters</a> document. For a list of all the fields that can be configured when creating ingest profiles, see the <a href="/node/18043">Ingest Profiles API Fields Reference</a> developer document.</p>
+    <p>Ingest profiles can be configured to archive and distribute master (source) files. Archiving the master keeps a copy of the master file and provides the ability for the video to be re-transcoded in the future without the need to upload it again. Distributing the master enables the master to be pushed to the CDN and used as a playable rendition. The <strong>Standard VOD</strong> ingest profiles are configured to archive and not distribute the master. You may wish to change this behavior when creating a custom ingest profile. For additional information on archiving and distributing masters, see the <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">Archiving Masters</a> document. For a list of all the fields that can be configured when creating ingest profiles, see the <a href="/node/18043">Ingest Profiles API Fields Reference</a> developer document.</p>
   </section>
   <section class="bcls-section">
     <h2 id="create">Creating a new ingest profile</h2>
@@ -828,7 +828,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="default">Selecting a default ingest profile</h2>
-    <p>A default ingest profile can be configured for when <a href="/media/uploading-videos-using-upload-module.html">videos are uploaded</a> and when <a href="/node/16672">clipping using the Social module</a>. The upload default profile is indicated with <img alt="" src="/assets/images/admin/node16840-upload-default-button.png" /> next to the profile name. The social clipping default profile is indicated with <img alt="" src="/assets/images/admin/node16840-social-clip-button.png" /> next to the profile name.</p>
+    <p>A default ingest profile can be configured for when <a href="/media/uploading-videos-using-upload-module.html">videos are uploaded</a> and when <a href="https://social.support.brightcove.com/general/creating-video-clip-using-brightcove-social.html">clipping using the Social module</a>. The upload default profile is indicated with <img alt="" src="/assets/images/admin/node16840-upload-default-button.png" /> next to the profile name. The social clipping default profile is indicated with <img alt="" src="/assets/images/admin/node16840-social-clip-button.png" /> next to the profile name.</p>
     <p>To select a default ingest profile for uploading/clipping:</p>
     <ol class="bcls-tasklist-restart">
       <li>Click the <strong>ADMIN</strong> link in the Studio header.</li>
