@@ -748,7 +748,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><strong>Ad</strong> - Assigns the string value of <strong>AD</strong> to the <strong>type</strong> property</li>
       <li><strong>Code</strong> - Assigns the string value of <strong>CODE</strong> to the <strong>type</strong> property</li>
     </ul>
-    <p>Cue points can be added to videos using the Media module or by using the Catalog API. For more information on adding cue points using the Catalog API, see the developer document <a href="/node/18123">Implementing Cue Points Programmatically</a>.</p>
+    <p>Cue points can be added to videos using the Media module or by using the Catalog API. For more information on adding cue points using the Catalog API, see the developer document <a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">Implementing Cue Points Programmatically</a>.</p>
     <p>This topic is organized into the following sections:</p>
     <ul>
       <li><a href="#add">Adding cue points</a></li>
@@ -767,15 +767,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Select the <strong>Type</strong> of cue point and then add the appropriate metadata.
         <ul>
           <li><strong>ad</strong> - An ad request will be made. When using ad cue points, the player should be <a href="/players/configuring-player-advertising-using-players-module.html">configured for advertising</a>.</li>
-          <li><strong>code</strong> - Cue points will be handled programmatically. See the <a href="/node/18123">Implementing Cue Points Programmatically</a> developer document for more information.</li>
+          <li><strong>code</strong> - Cue points will be handled programmatically. See the <a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">Implementing Cue Points Programmatically</a> developer document for more information.</li>
         </ul>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15151-add-code-cue-point.png" /></figure>
       </li>
-      <li>Enter a <strong>Name</strong> for the cue point. The name value can be accessed <a href="/node/18123">programmatically</a>.</li>
+      <li>Enter a <strong>Name</strong> for the cue point. The name value can be accessed <a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">programmatically</a>.</li>
       <li>Enter <strong>Metadata</strong> (for code cue points) or <strong>Key/Value Pairs</strong> (for ad cue points).
         <ul>
-          <li><strong>Metadata</strong> - Optional metadata that is stored with the cue point. Metadata can be accessed <a href="/node/18123">programmatically</a>. One example of when you might want to use a code cue point and pass metadata is when you want to display different calls to action as the video is playing. See the <a href="/node/18177">Brightcove Player Sample: Cue Points Display CTA</a> for an example.</li>
-          <li><strong>Key/Value Pairs</strong> - Key/value pairs that can be passed to an ad request. A key-value pair is a set of two linked data items: a key, which is a unique identifier for some item of data, and the value, which is either the data that is identified or a pointer to the location of that data. Key/value pairs can be used to help provide more targeted advertisements. Whatever is entered here will be copied into the ad tag where the <code>{mediainfo.ad_keys}</code> macro is inserted. For more information, see <a href="/node/18080#Ad_macros_and_the_serverUrl">Advertising with the IMA3 Plugin</a>.</li>
+          <li><strong>Metadata</strong> - Optional metadata that is stored with the cue point. Metadata can be accessed <a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">programmatically</a>. One example of when you might want to use a code cue point and pass metadata is when you want to display different calls to action as the video is playing. See the <a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-cue-points-display-cta.html">Brightcove Player Sample: Cue Points Display CTA</a> for an example.</li>
+          <li><strong>Key/Value Pairs</strong> - Key/value pairs that can be passed to an ad request. A key-value pair is a set of two linked data items: a key, which is a unique identifier for some item of data, and the value, which is either the data that is identified or a pointer to the location of that data. Key/value pairs can be used to help provide more targeted advertisements. Whatever is entered here will be copied into the ad tag where the <code>{mediainfo.ad_keys}</code> macro is inserted. For more information, see <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#Ad_macros_and_the_serverUrl">Advertising with the IMA3 Plugin</a>.</li>
         </ul>
       </li>
     </ol>

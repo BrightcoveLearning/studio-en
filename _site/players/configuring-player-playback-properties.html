@@ -762,7 +762,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="start">Auto-Play Video on Player Load</h2>
-    <p>The <strong>Auto-Play Video on Player Load</strong> setting controls whether the video will start playing when the player is loaded. This setting may function differently depending on the browser. For more detailed information, see <a href="/node/18602">Autoplay Considerations</a>.</p>
+    <p>The <strong>Auto-Play Video on Player Load</strong> setting controls whether the video will start playing when the player is loaded. This setting may function differently depending on the browser. For more detailed information, see <a href="https://player.support.brightcove.com/playback/autoplay-considerations.html">Autoplay Considerations</a>.</p>
   </section>
   <section class="bcls-section">
     <h2 id="muted">Play Muted</h2>
@@ -771,7 +771,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="preload">Preload Video Before Playback</h2>
     <p>The <strong>Preload Video Before Playback</strong> setting controls whether the player will preload video content before the user initiates playback.</p>
-    <aside class="bcls-aside bcls-aside--warning language-editable">Note: For more details, see the <a href="/node/18119#preload_details">preload details section</a> of the Available Options for the Advanced (in-page) Embed Code document.</aside>
+    <aside class="bcls-aside bcls-aside--warning language-editable">Note: For more details, see the <a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html#preload_details">preload details section</a> of the Available Options for the Advanced (in-page) Embed Code document.</aside>
     <p>The following options are available:</p>
     <ul>
       <li class="language-editable"><strong>Preload Video (fastest)</strong> - Indicates that the whole video file could be downloaded, even if the user does not eventually watch the video. On the positive side, if the viewer plays the video, it can start playing immediately. On the negative side, this option will increase bandwidth consumption as the preload/load happens even if the viewer does not play the video.</li>
@@ -782,7 +782,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <p>Notes:</p>
       <ul>
         <li class="language-editable">When using Server-Side Ad Insertion (SSAI), Brightcove recommends setting <code>preload=none</code>. If <code>preload</code> is set to <code>auto</code> or <code>metadata</code>, the first frames of the video stream will be requested, which counts the ad as delivered even if the user does not start playback.</li>
-        <li class="language-editable">The value for the preload setting in Studio will override the value of the <code>preload</code> attribute value in the <a href="/node/18119">Advanced (In-Page) Embed Code</a>.</li>
+        <li class="language-editable">The value for the preload setting in Studio will override the value of the <code>preload</code> attribute value in the <a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html">Advanced (In-Page) Embed Code</a>.</li>
       </ul>
     </aside>
   </section>
