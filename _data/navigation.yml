@@ -301,6 +301,10 @@
       url: /admin/managing-media-sharing-settings.html
     - name: Managing Profile Information
       url: /admin/managing-profile-information.html
+    - name: Standard Ingest Profiles for Dynamic Delivery and Context Aware Encoding
+      url: /admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html
+    - name: Standard Ingest Profiles for Legacy Transcoding
+      url: /admin/standard-ingest-profiles-legacy-transcoding.html
     - name: Managing Users
       url: /admin/managing-users.html
     - name: Viewing Billing Information
