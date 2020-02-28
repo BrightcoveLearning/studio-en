@@ -16,15 +16,15 @@
     - name: 'Step-by-Step:  Video Cloud Studio Publishing Workflow'
       url: /get-started/step-step-video-cloud-studio-publishing-workflow.html
     - name: 'Training on Demand:  Introduction to Video Cloud Analytics'
-      url: /get-started/training-demand-introduction-video-cloud-analytics.html
+      url: /training/training-demand-introduction-video-cloud-analytics.html
     - name: 'Training on Demand: Introduction to Video Cloud'
-      url: /get-started/training-demand-introduction-video-cloud.html
+      url: /training/training-demand-introduction-video-cloud.html
     - name: 'Training on Demand: Video Cloud Basics'
-      url: /get-started/training-demand-video-cloud-basics.html
+      url: /training/training-demand-video-cloud-basics.html
     - name: Video Cloud Glossary
       url: /get-started/video-cloud-glossary.html
     - name: Video Cloud Studio Training Videos
-      url: /get-started/video-cloud-studio-training-videos.html
+      url: /training/video-cloud-studio-training-videos.html
 - section: 
   name: Learn the Basics
   url: /basics/
@@ -309,6 +309,18 @@
       url: /admin/managing-users.html
     - name: Viewing Billing Information
       url: /admin/viewing-billing-information.html
+- section: 
+  name: Training
+  url: /training/
+  docs:
+    - name: 'Training on Demand: Introduction to Video Cloud'
+      url: /training/training-demand-introduction-video-cloud.html
+    - name: 'Training on Demand:  Introduction to Video Cloud Analytics'
+      url: /training/training-demand-introduction-video-cloud-analytics.html
+    - name: 'Training on Demand: Video Cloud Basics'
+      url: /training/training-demand-video-cloud-basics.html
+    - name: Video Cloud Studio Training Videos
+      url: /training/video-cloud-studio-training-videos.html
 - section: 
   name: Release Notes
   url: /release-notes/
