@@ -147,6 +147,8 @@
       url: /media/media-sharing-using-media-module.html
     - name: Organizing Videos Using Folders
       url: /media/organizing-videos-using-folders.html
+    - name: 'Overview: Adding Captions to a Video'
+      url: /media/overview-adding-captions-video.html
     - name: Replacing a Video Source File
       url: /media/replacing-video-source-file.html
     - name: Retranscoding Videos
