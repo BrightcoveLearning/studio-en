@@ -860,14 +860,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Players send data to the Data Collection API</li>
       <li><span id="1422467412848S" style="display: none;">&nbsp;</span>The Data Collection API does its best to write to the real-time database&nbsp;AND it writes the events to log storage</li>
       <li>A nightly batch system looks at the raw log events and builds historical data import files</li>
-      <li>The data import files are loaded into the historical database. This batch&nbsp;process is the reconciliation. When you make an API call, you can choose whether to see only reconciled data (most accurate) or to see both reconciled and unreconciled data by using the reconciled parameter. See the <a href="/node/17997#reconciled">Analytics API Overview</a> for more information.</li>
+      <li>The data import files are loaded into the historical database. This batch&nbsp;process is the reconciliation. When you make an API call, you can choose whether to see only reconciled data (most accurate) or to see both reconciled and unreconciled data by using the reconciled parameter. See the <a href="https://apis.support.brightcove.com/analytics/getting-started/overview-analytics-api-v1.html">Analytics API Overview</a> for more information.</li>
       <li>All historical data is reconciled; realtime data (available for 32 days) may or may not have been reconciled yet.</li>
     </ul>
   </section>
   <section class="bcls-section">
     <h2 id="18">18. Why do some metrics return a null value or have no value?</h2>
     <p>This will happen if a metric is not available for the time period you have requested. Some metrics have 2 - 3 days of latency, so if, for example, you asked for this data over the last 30 days (including today), these metrics may be null since the requested range includes days that do not yet have this data. To avoid this when requesting data, make sure that the range requested is outside of the latency period.</p>
-    <p>We have also added additional metrics and dimension combinations over time. So, for example, if you are running a multi-year report, some of the metrics may be blank, or partial, due to the fact that we did not track that metric for the entire reporting date range. For information on valid dates and dimension combinations, see the <a href="/node/17997#metrics">Analytics API Overview</a> document.</p>
+    <p>We have also added additional metrics and dimension combinations over time. So, for example, if you are running a multi-year report, some of the metrics may be blank, or partial, due to the fact that we did not track that metric for the entire reporting date range. For information on valid dates and dimension combinations, see the <a href="https://apis.support.brightcove.com/analytics/getting-started/overview-analytics-api-v1.html">Analytics API Overview</a> document.</p>
   </section>
   <section class="bcls-section">
     <h2 id="19">19. Why does destination domain data from 2013 not match other performance data?</h2>
@@ -875,7 +875,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="20">20. Are analytics for deleted videos included?</h2>
-    <p>The Analytics reports do include analytics for videos that have been deleted from your account. However, you cannot search for deleted videos in the Analytics module to see a report on a particular deleted video. To get such a report, you will need to know the video id for the deleted video and use the <a href="/node/18370">Analytics API</a> to generate the report. Note that if report data is exported, data for deleted videos may appear without displaying a video ID or name.</p>
+    <p>The Analytics reports do include analytics for videos that have been deleted from your account. However, you cannot search for deleted videos in the Analytics module to see a report on a particular deleted video. To get such a report, you will need to know the video id for the deleted video and use the <a href="https://apis.support.brightcove.com/analytics/">Analytics API</a> to generate the report. Note that if report data is exported, data for deleted videos may appear without displaying a video ID or name.</p>
   </section>
   <section class="bcls-section">
     <h2 id="21">21. Can I exclude employee views from analytics reports?</h2>
