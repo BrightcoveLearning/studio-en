@@ -315,6 +315,10 @@
   name: Training
   url: /training/
   docs:
+    - name: All Online Training Courses
+      url: /training/online-training-courses.html
+    - name: Register for Instructor-led Training
+      url: /training/register-training.html
     - name: 'Training on Demand: Introduction to Video Cloud'
       url: /training/training-demand-introduction-video-cloud.html
     - name: 'Training on Demand:  Introduction to Video Cloud Analytics'
