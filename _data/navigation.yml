@@ -105,6 +105,8 @@
       url: /general/supported-video-and-audio-formats-codecs-and-containers.html
     - name: TLS for Media, Player, and API URLs
       url: /general/tls-media-player-and-api-urls.html
+    - name: Video Cloud Architecture Overview
+      url: /general/video-cloud-architecture-overview.html
     - name: Video Cloud Studio Cookies
       url: /general/video-cloud-studio-cookies.html
     - name: Video Source File Specs and Recommendations
