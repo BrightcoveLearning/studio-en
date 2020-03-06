@@ -447,6 +447,20 @@
     </url>
     
     <url>
+        <loc>https://studio.support.brightcove.com/analytics/</loc>
+        <lastmod>2020-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/basics/</loc>
+        <lastmod>2020-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://studio.support.brightcove.com/general/</loc>
         <lastmod>2020-03-06</lastmod>
         <changefreq>daily</changefreq>
@@ -461,7 +475,42 @@
     </url>
     
     <url>
-        <loc>https://studio.support.brightcove.com/analytics/</loc>
+        <loc>https://studio.support.brightcove.com/training/</loc>
+        <lastmod>2020-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/admin/</loc>
+        <lastmod>2020-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/release-notes/</loc>
+        <lastmod>2020-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/publish/</loc>
+        <lastmod>2020-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/support/</loc>
+        <lastmod>2020-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/get-started/</loc>
         <lastmod>2020-03-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -476,55 +525,6 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/</loc>
-        <lastmod>2020-03-06</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://studio.support.brightcove.com/training/</loc>
-        <lastmod>2020-03-06</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://studio.support.brightcove.com/get-started/</loc>
-        <lastmod>2020-03-06</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://studio.support.brightcove.com/support/</loc>
-        <lastmod>2020-03-06</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://studio.support.brightcove.com/admin/</loc>
-        <lastmod>2020-03-06</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://studio.support.brightcove.com/publish/</loc>
-        <lastmod>2020-03-06</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://studio.support.brightcove.com/basics/</loc>
-        <lastmod>2020-03-06</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://studio.support.brightcove.com/release-notes/</loc>
         <lastmod>2020-03-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -1064,6 +1064,13 @@
     
     <url>
         <loc>https://studio.support.brightcove.com/basics/video-cloud-basics-uploading-videos.html</loc>
+        <lastmod>2020-03-06</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://studio.support.brightcove.com/basics/video-cloud-basics-viewing-brightcove-system-status-page.html</loc>
         <lastmod>2020-03-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
