@@ -13,13 +13,13 @@
       url: /get-started/navigating-brightcove-support-site.html
     - name: Quick Start to Video Cloud
       url: /get-started/quick-start-video-cloud.html
-    - name: 'Step-by-Step:  Video Cloud Studio Publishing Workflow'
+    - name: 'Step-by-Step:  Video Cloud Publishing Workflow'
       url: /get-started/step-step-video-cloud-studio-publishing-workflow.html
-    - name: 'Training on Demand:  Introduction to Video Cloud Analytics'
+    - name: 'Training:  Introduction to Video Cloud Analytics'
       url: /training/training-demand-introduction-video-cloud-analytics.html
-    - name: 'Training on Demand: Introduction to Video Cloud'
+    - name: 'Training: Introduction to Video Cloud'
       url: /training/training-demand-introduction-video-cloud.html
-    - name: 'Training on Demand: Video Cloud Basics'
+    - name: 'Training: Video Cloud Basics'
       url: /training/training-demand-video-cloud-basics.html
     - name: Video Cloud Glossary
       url: /get-started/video-cloud-glossary.html
@@ -43,7 +43,7 @@
       url: /basics/video-cloud-basics-creating-playlist-player.html
     - name: Creating a Smart Playlist
       url: /basics/video-cloud-basics-creating-smart-playlist.html
-    - name: Determining How Much of a Video is Being Watched
+    - name: Determining How Much of a Video is Watched
       url: /basics/video-cloud-basics-determining-how-much-video-being-watched.html
     - name: Determining Which Videos Have the Most Views
       url: /basics/video-cloud-basics-determining-which-videos-have-most-views.html
@@ -275,7 +275,7 @@
       url: /analytics/managing-scheduled-reports.html
     - name: Performance Report Reference
       url: /analytics/performance-report-reference.html
-    - name: Reviewing Player Event Data in Google Analytics
+    - name: Reviewing Player Events in Google Analytics
       url: /analytics/reviewing-player-event-data-google-analytics.html
 - section: 
   name: Administering Accounts
@@ -307,9 +307,9 @@
       url: /admin/managing-media-sharing-settings.html
     - name: Managing Profile Information
       url: /admin/managing-profile-information.html
-    - name: Standard Ingest Profiles for Dynamic Delivery and Context Aware Encoding
+    - name: 'Standard Ingest Profiles (DD & CAE)'
       url: /admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html
-    - name: Standard Ingest Profiles for Legacy Transcoding
+    - name: 'Standard Ingest Profiles (Legacy)'
       url: /admin/standard-ingest-profiles-legacy-transcoding.html
     - name: Managing Users
       url: /admin/managing-users.html
@@ -323,11 +323,11 @@
       url: /training/online-training-courses.html
     - name: Register for Instructor-led Training
       url: /training/register-training.html
-    - name: 'Training on Demand: Introduction to Video Cloud'
+    - name: 'Training: Introduction to Video Cloud'
       url: /training/training-demand-introduction-video-cloud.html
-    - name: 'Training on Demand:  Introduction to Video Cloud Analytics'
+    - name: 'Training:  Introduction to Video Cloud Analytics'
       url: /training/training-demand-introduction-video-cloud-analytics.html
-    - name: 'Training on Demand: Video Cloud Basics'
+    - name: 'Training: Video Cloud Basics'
       url: /training/training-demand-video-cloud-basics.html
     - name: Video Cloud Studio Training Videos
       url: /training/video-cloud-studio-training-videos.html
