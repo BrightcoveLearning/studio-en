@@ -90,6 +90,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/admin/configuring-language-settings.html",
+      "oldURL": "/configuring-language-settings"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/players/configuring-player-advertising-using-players-module.html",
       "oldURL": "/configuring-player-advertising-using-players-module"
   },
@@ -310,12 +315,37 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/training/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/basics/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/players/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/admin/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/release-notes/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/publish/",
       "oldURL": "/index"
   },
 
@@ -330,42 +360,17 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/basics/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/publish/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/release-notes/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/analytics/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/",
+      "newURL": "https://studio.support.brightcove.com/media/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/",
+      "newURL": "https://studio.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -787,6 +792,11 @@
   {
       "newURL": "https://studio.support.brightcove.com/media/working-cue-points-media-module.html",
       "oldURL": "/working-cue-points-media-module"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/working-multi-lingual-metadata.html",
+      "oldURL": "/working-multi-lingual-metadata"
   },
 
   {

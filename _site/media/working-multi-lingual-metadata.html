@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Managing Account Settings</title>
+  <title>Working with Multi-Lingual Metadata</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -121,9 +121,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/admin/">Administering Accounts</a></li>
+      <li class="breadcrumb-item"><a href="/media/">Managing Videos</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Managing Account Settings</li>
+      <li class="breadcrumb-item active" aria-current="page">Working with Multi-Lingual Metadata</li>
     </ol>
   </nav>
 </header>
@@ -831,113 +831,137 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
-  <h1>Managing Account Settings</h1>
-  <summary>This topic provides an overview of the Studio account settings options.</summary>
+  <h1>Working with Multi-Lingual Metadata</h1>
+  <summary>In this topic you will learn how to add multi-lingual metadata to videos.</summary>
   <section class="bcls-section">
-    <p>To access the Studio account settings, click the <strong>ADMIN</strong> link in the navigation header.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: You must be an account administrator to access the ADMIN menu.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: Your Studio version and account configuration will determine which ADMIN menu options are available.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node14055-account-settings-menu.png" /></figure>
-    <p>The following account settings are available:</p>
+    <p>To view and edit the properties for a video, open the Media module and click the video title link. The video properties page will open.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: To edit video properties for multiple videos at the same time, use the <a href="/media/editing-video-properties-using-quick-edit.html">Quick Edit</a> feature.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-properties.png" /></figure>
+    <p>Buttons at the top of the video properties page provide the ability to:</p>
     <ul>
-      <li><a href="#account_info">Account Information</a></li>
-      <li><a href="#users">User Management</a></li>
-      <li><a href="#account_settings">Account Settings</a></li>
-      <li><a href="#upload">Upload Settings</a></li>
-      <li><a href="#ingest">Ingest Profiles</a></li>
-      <li><a href="#fields">Video Fields</a></li>
-      <li><a href="#language">Language Settings</a></li>
-      <li><a href="#sharing">Media Sharing</a></li>
-      <li><a href="#ssads">Server-Side Ad Settings</a></li>
-      <li><a href="#player">Player Settings</a></li>
-      <li><a href="#live">Live Settings</a></li>
-      <li><a href="#api">API Authentication</a></li>
-      <li><a href="#billing">Billing</a></li>
+      <li><a href="/media/capturing-poster-and-thumbnail-images.html">Capture new poster and thumbnail images</a></li>
+      <li><a href="/media/organizing-videos-using-folders.html">Move the video to a folder</a> or <a href="/media/creating-and-managing-playlists.html">add it to a playlist</a></li>
+      <li>Deactivate/activate videos</li>
+      <li><a href="/publish/publishing-videos-and-playlists-media-module.html">Publish a video</a></li>
     </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="account_info">Account Information</h2>
-    <p>The Account Information option allows you to edit the account name and mailing address and can be used to clone accounts. For more information, see <a href="/admin/managing-account-information.html">Managing Account Information</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="users">User Management</h2>
-    <p>The User Management option allows you to manage the users who are authorized to use Studio. For more information on managing users, see <a href="/admin/managing-users.html">Managing Users</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="account_settings">Account Settings</h2>
-    <p>The Analytics Settings provide access to account-related settings. The <strong>Default Reporting Time Zone</strong> is used to calculate day boundaries for reporting data. Changing the reporting time zone setting only affects data going forward, and changes are not applied retroactively. If you change this setting, you may see a flat spot or a spike in your analytics data when looking at day boundaries where the change was applied. Updates to this setting may not take effect immediately and analytics data may continue to refer to the old setting until the system processes the changes.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node14055-account-settings.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="upload">Upload Settings</h2>
-    <p><strong>Default to Inactive</strong> - When checked, sets all uploaded videos to be inactive. This option is ignored if the user has access to the Media module. This could be used to let a set of users upload videos but they will remain inactive until someone else approves them and then makes them active.</p>
-    <p><strong>Required Fields</strong> - Select an option for how required fields are handled:</p>
+    <p>If the video is activated, the <strong>Deactivate</strong> button can be used to deactivate the video. If the video is deactivated, the <strong>Activate</strong> button can be used to activate the video. Videos that are deactivated cannot be played in a Brightcove Player.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-deactivate-publish.png" /></figure>
+    <p>The preview player at the top of the page can be used to view the video.</p>
+    <p>The video properties are organized into the following sections:</p>
     <ul>
-      <li><strong>Required for activation</strong> - Required fields must have values before the video can be activated.</li>
-      <li><strong>Required for upload</strong> - Required fields must have values before the video can be processed and uploaded using the Upload module.</li>
+      <li><a href="#videoinfo">Video Information</a></li>
+      <li><a href="#videofiles">Video Files</a></li>
+      <li><a href="#mediasharing">Media Sharing</a></li>
+      <li><a href="#audiotracks">Audio Tracks</a></li>
+      <li><a href="#images">Images</a></li>
+      <li><a href="#videoviews">Video Views</a></li>
+      <li><a href="#customfields">Custom Fields</a></li>
+      <li><a href="#availability">Availability</a></li>
+      <li><a href="#texttracks">Text Tracks</a></li>
     </ul>
-    <p><strong>Upload Additional Assets</strong> - When checked, allows poster and thumbnail images to be uploaded when videos are uploaded using the Upload module. The upload status dialog will display and provide the ability to select poster and thumbnail images to upload. For more information, see <a href="/media/uploading-videos-using-upload-module.html">Uploading Videos Using the Upload Module</a>.</p>
-    <p><strong>Default Image Dimensions</strong> - These values can be used to set default image sizes for poster and thumbnail images. By configuring sizes as part of the Upload Settings, you can avoid having to set image dimensions in your ingest profiles. When these values are configured and your ingest profiles have image sizes as well, Video Cloud will use the following process to determine what dimensions to use for various types of image ingests:</p>
-    <ol class="bcls-tasklist">
-      <li>When you upload a video using the Upload module, Video Cloud will first look to see if there are image dimensions defined in the selected ingest profile. If the ingest profile has image dimensions, those dimensions will be used. If not, Video Cloud will check for dimensions in the following order:
+    <p>To edit the video properties, click the <strong>Edit</strong> button in the section or double-click in the section.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="required">Required fields</h2>
+    <p>Your Video Cloud account may be configured with required metadata fields. If a video is inactive, you can freely edit and save its metadata without supplying all required metadata. Also, videos can't be activated until all required metadata has been entered. If a video is already active, you cannot save any edits in the section you are editing unless you supply all required metadata in that section or deactivate the video. For more information on working with required fields, see <a href="/media/setting-required-fields-videos.html">Setting Required Fields for Videos</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="videoinfo">Video Information</h2>
+    <p>The Video Information section can be used to view and edit basic video properties.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-information.png" /></figure>
+    <p>To edit the properties, click the <strong>Edit</strong> button or double-click in the section. The following properties can be edited:</p>
+    <ul>
+      <li><strong>Name</strong> - No more than 255 characters.</li>
+      <li><strong>ID</strong> - System assigned video ID (unique across all Video Cloud accounts).</li>
+      <li><strong>Short description</strong> - No more than 250 characters.</li>
+      <li><strong>Tags</strong> - One or more tags, separated by commas. You can use tags to add videos to smart playlists or to find videos using the CMS API.
         <ul>
-          <li>Use image dimensions specified in the default ingest profile for the account</li>
-          <li>Use image dimensions specified in the Upload settings</li>
-          <li>Use global default image dimensions specified by Video Cloud</li>
+          <li>Tags can be up to 128 characters. If any tags have more than 128 characters, an error will be displayed when you attempt to save changes.</li>
+          <li>Tags can't contain commas. For example, a tag of "roof, attic + front yard" is not supported.</li>
+          <li>A video can have no more than a total of 1200 tags.</li>
+          <li>A tag differing only in case (lowercase, uppercase) is handled as an identical tag and the case will automatically match those of the original tag.</li>
+          <li>Issues with case sensitivity need to be handled externally to Video Cloud, for example, using JavaScript methods to modify the strings.</li>
+          <li>After entering a tag, press the <strong>comma</strong> key or <strong>enter</strong>. Tags that have been added will display in a colored box.
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-tags-added.png" /></figure>
+          </li>
         </ul>
       </li>
-      <li>If you upload a poster or thumbnail image from the video details page, or capture an image from the video details page, the image dimensions specified as part of the default ingest profile for the account will be used. If the default ingest profile does not have image dimensions, Video Cloud will check for dimensions in the following order:
+      <li><strong>Reference ID</strong> - A unique ID assigned by a publisher to a video or playlist. Limited to no more than 150 characters. The reference ID is distinct from the video ID or playlist ID which are unique IDs generated by Video Cloud. The reference ID enables coordination between Video Cloud and other services such as a publisher's content management system. Note that you can't batch edit the reference ID as two videos can't have the same reference ID. Reference IDs must always be unique. Deleting a video will allow a previously assigned reference ID to be reused.</li>
+      <li><strong>Video Projection</strong> - Indicates how the video was recorded.
         <ul>
-          <li>Use image dimensions specified in the Upload settings</li>
-          <li>Use global default image dimensions specified by Video Cloud</li>
+          <li><strong>Standard</strong> - Default. Regular video recording.</li>
+          <li><strong>360 Degree</strong> - Check to indicate the video is a 360 degree video. A 360 badge will appear in the video thumbnail in the Media module. For more information on working with 360 degree videos, see <a href="/general/working-360deg-videos.html">Working with 360° Videos</a>.</li>
         </ul>
       </li>
-    </ol>
-    <p>If you want to always use the image dimensions specified as part of the Upload Settings, Brightcove recommends you set these values appropriately and then remove all image sizing from your ingest profiles.</p>
-    <p><strong>Upload Queueing</strong> - Select an option for how file uploads are handled:</p>
-    <ul>
-      <li><strong>Allow concurrent uploads </strong> - Multiple files are uploaded concurrently</li>
-      <li><strong>Upload one file at a time</strong> - Files are uploaded one at a time; this is recommended when large files are being uploaded</li>
+      <li><strong>Enable offline playback</strong> - When checked, enables the video to be saved locally and viewed offline when using applications created using the device SDKs. This option will only appear if the account is enabled for offline playback.</li>
+      <li><strong>Related Link URL</strong> - A standard web URL beginning with http:// or https:// limited to 255 characters.</li>
+      <li><strong>Related Link Text</strong> - Related link text limited to 255 characters.</li>
+      <li><strong>Long Description</strong> - No more than 5000 characters.</li>
+      <li><strong>Advertising</strong>
+        <ul>
+          <li><strong>Free</strong> - Ads will not be shown when the video plays.</li>
+          <li><strong>Ad Supported</strong> - Ads may be shown when video plays.
+            <aside class="bcls-aside bcls-aside--information">Note: If your account is not enabled for advertising and you set the Advertising property to Ad Supported, you will receive an error when saving changes.</aside>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Ad Keys</strong> - Passed as part of the ad server URL. For example, to pass <code>section=blog</code> and <code>anotherKey=value1</code>, you would enter <code>section=blog&amp;anotherKey=value1</code>. See the <a href="https://support.google.com/dfp_premium/answer/1080597">DoubleClick for Publishers Help</a> for information on adding key-value pairs. When using ad keys, ad macros should be added to the ad server URL (configured as part of the <a href="/players/configuring-player-advertising-using-players-module.html">player advertising properties</a>). Ad macros support variables in the server URL for which the IMA3 plugin will substitute appropriate values. For more information, see the <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#adMacros">IMA3 developer documentation</a>.</li>
+      <li><strong>Folder</strong> - Folder the video is assigned to. See <a href="/media/organizing-videos-using-folders.html">Organizing Videos Using Folders</a> for more information.</li>
+      <li><strong>Manual Playlists</strong> - Playlists that this video belongs to. For more information, see <a href="/media/creating-and-managing-playlists.html">Creating and Managing Playlists</a>.</li>
+      <li><strong>Sharing</strong> - Indicates if the video has been shared to another account. For more information, see <a href="/media/media-sharing-using-media-module.html">Media Sharing using the Media Module</a>.</li>
     </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node14055-upload-settings.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-information-edit.png" /></figure>
+    <p>Click <strong>Save</strong> to save changes.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="ingest">Ingest Profiles</h2>
-    <p>The Ingest Profiles option allows you to manage the ingest profiles your Video Cloud account. For more information on managing ingest profiles, see <a href="/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a>.</p>
+    <h2 id="videofiles">Video Files</h2>
+    <p>The Video Files section displays the source file name, the transcoding technology that was used and details on the video renditions that were created. It also provides the ability to:</p>
+    <ul>
+      <li><a href="/media/replacing-video-source-file.html">Replace the Video Source File</a></li>
+      <li><a href="/media/retranscoding-videos-using-media-module.html">Retranscode the Video</a></li>
+    </ul>
+    <p>In this example, Legacy transcoding was used (when the video was uploaded, a Legacy ingest profile was used). To download a rendition, right-click on the format link for the rendition.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-files.png" /></figure>
+    <p>In this example, <a href="/general/overview-dynamic-delivery.html">Dynamic Delivery</a> transcoding was used (when the video was uploaded, a Dynamic Delivery or Context Aware Encoding ingest profile was used).</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-files-dd.png" /></figure>
+      <aside class="bcls-aside bcls-aside--information">Note:  A DRM toggle switch may also appear in the section if the account has been enabled for DRM. For more information on DRM, see <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-content-drm.html">Ingesting content with DRM</a>.</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="fields">Video Fields</h2>
-    <p>The Video Fields option allows you to mark standard video fields as required and also allows you to view, create, and modify custom metadata fields for your account. For more information on configuring video fields, see <a href="/admin/creating-custom-metadata-fields.html">Creating Custom Metadata Fields</a>.</p>
+    <h2 id="mediasharing">Media Sharing</h2>
+    <p>If the video has been shared to an affiliate account, the Media Sharing section will be displayed and list the affiliates the video has been shared to. For more information on media sharing, see <a href="/media/media-sharing-using-media-module.html">Media Sharing using the Media Module</a>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-media-sharing.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="language">Language Settings</h2>
-    <p>The Language Settings is where you define a Primary Language and then add and manage additional metadata languages. For more information on configuring language settings, see <a href="/admin/configuring-language-settings.html">Configuring Language Settings</a>.</p>
+    <h2 id="audiotracks">Audio Tracks</h2>
+    <p>If the video was uploaded and transcoded using a Dynamic Delivery or Context Aware Encoding ingest profile, the Audio Tracks section will be displayed and contain information on the audio renditions that are available. For information on adding additional audio tracks to a video, see <a href="/media/adding-audio-tracks-videos-using-media-module.html">Adding Audio Tracks to Videos using the Media Module</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The Audio Tracks section will not be displayed if the video was transcoded using a Legacy ingest profile.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-audio-tracks.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="sharing">Media Sharing</h2>
-    <p>The Media Sharing option allows you to upload videos once and then share the videos to other Video Cloud accounts. For more information on media sharing, see <a href="/admin/managing-media-sharing-settings.html">Managing Media Sharing Settings</a>.</p>
+    <h2 id="images">Images</h2>
+    <p>The Images section displays the poster and thumbnail images for the video. Poster and thumbnail images are created automatically by taking a snapshot from the source video at the midway point. If you don't like the default images that were captured, you can <a href="/media/capturing-poster-and-thumbnail-images.html">capture new images</a> or <a href="/media/uploading-poster-and-thumbnail-images.html">upload other images</a> to use as the poster and thumbnail.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-images.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="ssads">Server-Side Ad Settings</h2>
-    <p>The Server-Side Ad Settings allow you to manage both Live and VOD server-side ad configurations. For more information, see <a href="/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>.</p>
+    <h2 id="videoviews">Video Views</h2>
+    <p>The Video Views section displays the number of video views for the past 30 days. Click the links to open the Performance or Engagement Reports for more information.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-views.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="player">Player Settings</h2>
-    <p><strong>Basic Authentication</strong> - Provides the option of using basic username and password authentication for access to the Player Management and Delivery System APIs. If this option is not enabled, <a href="/admin/managing-api-authentication-credentials.html">API authentication</a> must be used.</p>
-    <p><strong>Player Mapping</strong> - Provides the ability to create player mapping for use in the Directed Migration Tool. The Directed Migration Tool provides a way to specify that a Brightcove Player should be loaded instead of a Smart Player.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node14055-player-service-settings.png" /></figure>
+    <h2 id="customfields">Custom Fields</h2>
+    <p>The Custom Fields section can be used to view and edit the custom field for the video. To edit custom field values, click the <strong>Edit</strong> button or double-click in the section. An asterisk (*) next to the field name indicates that the field is required.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: For information on adding custom fields to an account, see <a href="/admin/creating-custom-metadata-fields.html">Creating Custom Metadata Fields</a>.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-custom-fields.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="live">Live Settings</h2>
-    <p>The Live Settings allow you to manage the settings for Brightcove Live. For more information, see <a href="https://live.support.brightcove.com/admin/managing-live-settings.html">Managing Live Settings</a>.</p>
+    <h2 id="availability">Availability</h2>
+    <p>The Availability section displays the video availability settings. For more information on configuring the availability settings, see <a href="/media/configuring-video-availability.html">Configuring Video Availability</a>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-availability.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="api">API Authentication</h2>
-    <p>The API Authentication option allows you to create and manage API credentials. For more information on managing API credentials, see <a href="/admin/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="billing">Billing</h2>
-    <p>The Billing option allows you to view billing information for the account. For more information on billing, see <a href="/admin/viewing-billing-information.html">Viewing Billing Information</a>.</p>
+    <h2 id="texttracks">Text Tracks</h2>
+    <p>The text track section can be used to add text tracks to the video. For more information on configuring text tracks, see <a href="/media/adding-captions-videos-using-media-module.html">Adding Captions to Videos using the Media Module</a>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-text-tracks.png" /></figure>
   </section>
 </article>
 
@@ -956,7 +980,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 19 Mar 2020
+  Page last updated on 07 Apr 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
