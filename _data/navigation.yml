@@ -167,6 +167,8 @@
       url: /media/uploading-videos-using-upload-module.html
     - name: Working with Cue Points
       url: /media/working-cue-points-media-module.html
+    - name: Working with Multi-Lingual Metadata
+      url: /media/working-multi-lingual-metadata.html
     - name: Working with Remote Asset Videos
       url: /media/working-remote-asset-videos.html
 - section: 
@@ -283,6 +285,8 @@
   docs:
     - name: Authenticating Studio Users using SSO
       url: /admin/authenticating-studio-users-using-single-sign.html
+    - name: Configuring Language Settings
+      url: /admin/configuring-language-settings.html
     - name: Configuring Server-Side Ad Settings
       url: /admin/configuring-server-side-ad-settings.html
     - name: Creating Custom Metadata Fields
