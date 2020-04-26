@@ -550,6 +550,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/search-test.html",
+      "oldURL": "/search-test"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/search.html",
       "oldURL": "/search"
   },
@@ -617,11 +622,6 @@
   {
       "newURL": "https://studio.support.brightcove.com/general/supported-video-and-audio-formats-codecs-and-containers.html",
       "oldURL": "/supported-video-and-audio-formats-codecs-and-containers"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/test-search.html",
-      "oldURL": "/test-search"
   },
 
   {
