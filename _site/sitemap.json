@@ -315,32 +315,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/basics/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/players/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/admin/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/release-notes/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -355,7 +335,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/get-started/",
+      "newURL": "https://studio.support.brightcove.com/media/",
       "oldURL": "/index"
   },
 
@@ -365,12 +345,32 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/",
+      "newURL": "https://studio.support.brightcove.com/basics/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/",
+      "newURL": "https://studio.support.brightcove.com/admin/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/players/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/training/",
       "oldURL": "/index"
   },
 
@@ -547,6 +547,11 @@
   {
       "newURL": "https://studio.support.brightcove.com/analytics/reviewing-player-event-data-google-analytics.html",
       "oldURL": "/reviewing-player-event-data-google-analytics"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/search-test.html",
+      "oldURL": "/search-test"
   },
 
   {
