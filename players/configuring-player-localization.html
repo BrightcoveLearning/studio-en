@@ -27,10 +27,14 @@ parent: Managing Videos
     <h2 id="support">Checking the language</h2>
     <p>To use the localized language, set the preferred language in the browser. The exact steps vary depending on browser and operating system. If the browser's preferred language is English, or a language not available, you will see the default, or English, text. Browsers do not have perfectly standardized locale detection, so it can be a bit complicated. Broadly, browsers look to determine the desired language in this order:</p>
     <ul>
-      <li class="language-editable">Check if the embedding page has a lang attribute on the &lt;html&gt; element</li>
+      <li class="language-editable">Check if the embedding page has a lang attribute on the <code>&lt;html&gt;</code> element</li>
       <li class="language-editable">Check browser specific locale configurations</li>
       <li class="language-editable">Fall back to English</li>
     </ul>
     <aside class="bcls-aside bcls-aside--information language-editable">Note: This technique will only work with the Advanced (in-page) code implementation. Since the Standard implementation loads in an iframe, the browser language setting does not flow into it.</aside>
+      <p>If you use the HTML attribute you do not have to set the preferred language as default in your browser or computer as the player will use the one on the <code>lang</code> attribute.</p>
+      <pre>&lt;html lang="es"&gt; </pre>
+      <p>Also, if you are using an iframe, keep in mind that you will need to add the query parameter to the player URL.</p>
+      <pre>//players.brightcove.net/6045682556001/Jr6qqMDSb_default/index.html?videoId=6054419564001&amp;language=es</pre>
   </section>
 </article>
