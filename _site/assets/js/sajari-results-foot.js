@@ -1,4 +1,5 @@
   var getUrlParam = function(e){var t = new RegExp("[?&]" + e.replace(/[\[\]]/g, "\\$&") + "(=([^&#]*)|&|#|$)"),a = t.exec(window.location.href);return a && a[2] ? decodeURIComponent(a[2].replace(/\+/g, " ")) : ""};
+  console.log('studio.support.brightcove.com');
   var searchInterface = sajari.init({
       mode: "inline",
       project: "1588255093746585379", // Set this to your project.
@@ -13,6 +14,7 @@
       maxSuggestions: 5, // Maximum number of suggestions to show.
       results: {"showImages": false }, // Configure the results.
       values: {"q.override": true, "resultsPerPage": "10","q": getUrlParam("q")}, // Set default values.
-      tabFilters: {defaultTab:"This Site",tabs:[{title:"This Site",filter:"domain=''"}, {title:"All Brightcove Documentation",filter:""}]}, // User selectable filters
+      
+      tabFilters: {defaultTab:"This Site",tabs:[{title:"This Site",filter:"domain='studio.support.brightcove.com'"}, {title:"All Brightcove Documentation",filter:""}]}, // User selectable filters
       styling: { theme: { colors: { brand: { primary: "#333" }}}}
   });
