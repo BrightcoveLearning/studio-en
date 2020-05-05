@@ -8,7 +8,7 @@
   if (lang === 'ja' || lang === 'ko' || lang === 'es' || lang === 'fr' || lang === 'de' || lang === 'zh-tw') {
     lang_prefix = lang + '.';
   }
-  site_domain = lang_prefix + '';
+  site_domain = lang_prefix + 'studio.support.brightcove.com';
   filter = "domain='" + site_domain +  "'";
   console.log('filter', filter);
   
