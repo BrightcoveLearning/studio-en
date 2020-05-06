@@ -12,7 +12,7 @@ var token =
     Talla.OptionDisplayName('Search Video Cloud Studio Docs'),
     Talla.OptionKnowledgeGroups(['a4dd2ad6-2027-4428-9b38-6b2719a69e91']),
     Talla.OptionWideBeacon(true),
-    Talla.OptionBeaconCTA("Search Video Cloud Studio Docs"),
+    Talla.OptionBeaconCTA("Have a question?"),
     Talla.OptionOpenIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
     Talla.OptionBotIcon('https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/search.png'),
     Talla.OptionAutodetectSession,
