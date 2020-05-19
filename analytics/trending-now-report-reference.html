@@ -1,0 +1,29 @@
+---
+title: Trending Now Report Reference
+parent: Reviewing Analytics
+---
+<article class="bcls-article">
+  <h1>Trending Now Report Reference</h1>
+  <summary>In this topic you will learn about the Trending Now report that is provided as part of the Analytics module.</summary>
+  <section class="bcls-section">
+         <aside class="bcls-aside bcls-aside--information">Note: This feature is only enabled for previous Ooyala customers who have migrated to a Video Cloud account.</aside>
+ 
+    <p>Analytics data is sent automatically by  Brightcove Players, including those provided by the Native Player SDKs. If you are <strong>not</strong> using a Brightcove Player to deliver Video Cloud videos, you need to instrument the player you are using to send the data to the Data Collector. See the <a href="https://apis.support.brightcove.com/data-collection/overview-data-collection-api-v2.html">Overview: Data Collection API</a> topic for more details.</p>
+    <p>To view the Trending Now report, open the Analytics module and select <span class="BCL_command"><strong>Trending Now</strong></span> from the left side navigation. The report will display a graph showing total number of concurrent viewers.</p>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/analytics/trending-now-report.png" /></figure>
+    <p>If your account is enabled for Brightcove Live, you will have the option to view the number of concurrent viewers for  all videos, VOD assets or live assets.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/analytics/trending-now-select-all-vod-live.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="details" class="BCL_conceptTitle">Performance Report Details</h2>
+    <p>The first column that appears in the body of the report will vary based upon the report dimension that is selected (video name, player name, country, device type, etc.). All reports will display the following data:</p>
+    <ul>
+      <li><strong>Video Views</strong> - The number of times a video started playing, recorded when the stream is started (does not include rewind or replay); it is not a measure of individual viewers</li>
+      <li><strong>Video Impressions</strong> - The number of times the video was loaded into a player and ready for interaction</li>
+      <li><strong>Play Rate</strong> - The percentage of users that played the video after it was loaded (Video Views divided by Video Impressions)</li>
+      <li><strong>Viewed Minutes</strong> - Total number of minutes the video was viewed</li>
+      <li><strong>Engagement Score</strong> - The average percent watched per video view (calculated by adding all the percentage watched divided by the number of Video Views)
+      </li>
+    </ul>
+  </section>
+</article>
