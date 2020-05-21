@@ -847,8 +847,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="captionsfile">Creating caption files</h2>
     <p>To add captions to a video, you first need to create a captions file. The Brightcove player supports Web Video Text Tracks Format (WebVTT), SRT and DFXP formats. The WebVTT file format (shown below) is plain text and contains time text data followed by the desired caption or subtitle text.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: SRT and DFXP captions are not supported for videos using Legacy transcoding. SRT and DFXP captions will be automatically converted to WebVTT for Dynamic Delivery accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The text of the captions must be encoded UTF-8 to display properly for double-byte languages such as Japanese and Korean.</aside>
+    <aside class="bcls-aside bcls-aside--information">
+      <p><strong>Notes</strong></p>
+      <ul>
+        <li>SRT and DFXP captions are not supported for videos using Legacy transcoding. SRT and DFXP captions will be automatically converted to WebVTT for Dynamic Delivery accounts.</li>
+        <li>The text of the captions must be encoded UTF-8 to display properly for double-byte languages such as Japanese and Korean.</li>
+        <li>Because the captions are displayed in HTML, any text inside <code>< ></code> brackets will be interpreted as a tag and not displayed.</li>
+      </ul>
+      </aside>
     <pre>
 WEBVTT
 00:00:00.000 --&gt; 00:00:07.080 align:middle line:90%
@@ -964,7 +970,7 @@ you can accomplish using it.
 
 <hr>
 <div class="last-updated">
-  Page last updated on 17 May 2020
+  Page last updated on 21 May 2020
 </div>
 
 
