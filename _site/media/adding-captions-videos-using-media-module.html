@@ -847,7 +847,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="captionsfile">Creating caption files</h2>
     <p>To add captions to a video, you first need to create a captions file. The Brightcove player supports Web Video Text Tracks Format (WebVTT), SRT and DFXP formats. The WebVTT file format (shown below) is plain text and contains time text data followed by the desired caption or subtitle text.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: SRT and DFXP captions are not supported for videos using Legacy transcoding.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: SRT and DFXP captions are not supported for videos using Legacy transcoding. SRT and DFXP captions will be automatically converted to WebVTT for Dynamic Delivery accounts.</aside>
     <aside class="bcls-aside bcls-aside--information">Note: The text of the captions must be encoded UTF-8 to display properly for double-byte languages such as Japanese and Korean.</aside>
     <pre>
 WEBVTT
@@ -902,7 +902,8 @@ you can accomplish using it.
         </ul>
       </li>
       <li>Enter the <strong>MIME Type</strong> for the text track file. Selecting <strong>default</strong> will display the captions when the video is played (Brightcove Players 6.x and newer).
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15481-caption-english.png" /></figure>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Edit Mime Type" src="/assets/images/media/node15481-caption-english.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information language-editable">Note that if you are uploading SRT or DFXP captions, you will not be able to edit the MIME Type.</aside>
       </li>
       <li>Check <strong>Default (Auto Display)</strong> to make the track the default. Most browsers will attempt to display the default text track first but language and accessibility settings may override the default setting.
         <aside class="bcls-aside bcls-aside--information">Note: The default setting does not work with IE11.</aside>
