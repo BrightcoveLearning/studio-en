@@ -57,8 +57,8 @@ parent: General Information
       <li class="language-editable"><a href="#beforerecord">Step 1: Before you Record</a></li>
       <li class="language-editable"><a href="#recording">Step 2: Recording</a></li>
       <li class="language-editable"><a href="#exporting">Step 3: Exporting</a></li>
-      <li class="language-editable"><a href="#transcoding">Step 4: Transcoding</a></li>
-      <li class="language-editable"><a href="#uploading">Step 5: Uploading</a></li>
+      <li class="language-editable"><a href="#uploading">Step 4: Uploading</a></li>
+      <li class="language-editable"><a href="#transcoding">Step 5: Transcoding</a></li>
     </ul>
   </section>
   <section class="bcls-section">
@@ -151,8 +151,21 @@ parent: General Information
       <p>For recommended specific instructions for exporting videos from tools like Apple Final Cut Pro X, Telestream ScreenFlow, Adobe Premiere Pro or Techsmith Camtasia Studio, refer to the detailed instructions provided by these software packages.</p>
       <!-- <p>For recommended specific instructions to export videos from Final Cut Pro 7 for MAC, and Camtasia Studio 7 for PC, see <a href="node/6297">Exporting High Quality Video Source Files with Popular Video Editing Programs</a>. If you're exporting from iMovie, and Snapz, consider the guiding principles listed above, as well as the Final Cut Pro 7 processes; the Final Cut Pro video and audio compression settings are identical to those for iMovie and Snapz.</p> --></div>
   </section>
+    <section class="bcls-section">
+    <h2 id="uploading">Step 4: Uploading</h2>
+    <div class="BCL_subsection">
+      <h3 class="BCL_subsectionTitle">How do I get the flexibility I need from my source file?</h3>
+      <p>Upload your video or videos using the Upload module in Video Cloud Studio. &nbsp;See&nbsp;<a href="/media/uploading-videos-using-upload-module.html">Uploading Videos Using the Upload Module</a>&nbsp;for more information.&nbsp;Alternatively, you can upload a batch of videos using the <a href="https://apis.support.brightcove.com/dynamic-ingest-legacy/getting-started/overview-dynamic-ingest-api-legacy-ingest.html">Dynamic Ingest API</a>.<br />
+        <!-- See <a href="node/571">H.264 Videos</a> for specifications on uploading this format. --></p>
+      <p>When you upload a video to the Video Cloud platform, Video Cloud stores it as a digital master. This digital master is the source for all renditions Video Cloud creates. The digital master is also the source if you should ever elect to <a href="/media/retranscoding-videos-using-media-module.html">retranscode your video</a> in order to change your transcode settings. <!-- For more on re-encoding videos see <a href="node/8927">Re-encoding Existing Videos</a>. At upload time, you can optionally choose <strong>Add H.264 source as a rendition</strong> to have a copy of this digital master available as the highest quality version rendition in addition to other renditions created by Video Cloud's transcoding engine. --></p>
+    </div>
+  </section>
   <section class="bcls-section">
-    <h2 id="transcoding">Step 4: Transcoding</h2>
+    <h2 id="transcoding">Step 5: Transcoding</h2>
+      <div class="BCL_subsection">
+      <h3 class="BCL_subsectionTitle">How long will it take to process my video?</h3>
+      <p>It can take up to three times the duration of the video for the transcoding process to complete.</p>
+    </div>
     <div class="BCL_subsection">
       <h3 class="BCL_subsectionTitle">What is my content, where is my audience watching it, and what is my audience watching it on?</h3>
       <p>If you want your videos to play beautifully across a range of screen sizes such as in the three screen strategy of publishing to desktop, mobile device, and wide monitor TVs, and if you want your videos to play smoothly across a range of connection speeds from dial-up, to cellular, to high speed cable, you must start with a video file that plays as optimally as possible in each of those environments. To assure that your video shows as beautifully as possible across the variety of the size and speed conditions of your viewers, Video Cloud creates a collection of video files, called multi-bitrate renditions, each of various sizes and qualities. When Video Cloud detects the resolution, bandwidth, and other conditions of the device requesting to play your video, it serves the best rendition of your video for that environment, be it a smaller and slower version to fit the constraints of a mobile device screen or low bandwidth connection, or be it a full-quality version that takes advantage of wide screen monitors with high speed, and high definition capabilities.</p>
@@ -170,15 +183,6 @@ parent: General Information
         <li class="language-editable">See <a href="/general/optimal-video-dimensions.html">Optimal Video Dimensions</a> for recommended video width and height for 16:9 and 4:3 aspect ratio sizing</li>
         <li class="language-editable">See <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/guides/rendition-settings-and-video-quality.html">Rendition Settings and Video Quality</a> about optimizing video quality and performance.</li>
       </ul>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="uploading">Step 5: Uploading</h2>
-    <div class="BCL_subsection">
-      <h3 class="BCL_subsectionTitle">How do I get the flexibility I need from my source file?</h3>
-      <p>Upload your video or videos using the Upload module in Video Cloud Studio. &nbsp;See&nbsp;<a href="/media/uploading-videos-using-upload-module.html">Uploading Videos Using the Upload Module</a>&nbsp;for more information.&nbsp;Alternatively, you can upload a batch of videos using the <a href="https://apis.support.brightcove.com/dynamic-ingest-legacy/getting-started/overview-dynamic-ingest-api-legacy-ingest.html">Dynamic Ingest API</a>.<br />
-        <!-- See <a href="node/571">H.264 Videos</a> for specifications on uploading this format. --></p>
-      <p>When you upload a video to the Video Cloud platform, Video Cloud stores it as a digital master. This digital master is the source for all renditions Video Cloud creates. The digital master is also the source if you should ever elect to re-encode your video in order to change your transcode settings. <!-- For more on re-encoding videos see <a href="node/8927">Re-encoding Existing Videos</a>. At upload time, you can optionally choose <strong>Add H.264 source as a rendition</strong> to have a copy of this digital master available as the highest quality version rendition in addition to other renditions created by Video Cloud's transcoding engine. --></p>
     </div>
   </section>
 </article>
