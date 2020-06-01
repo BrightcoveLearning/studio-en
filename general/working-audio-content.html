@@ -1,0 +1,46 @@
+---
+title: Working with Audio-Only Content
+parent: General Information
+---
+<link rel="stylesheet" href="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/general-information/audio-content/audio-content.css" />
+<article class="bcls-article">
+  <h1>Working with Audio-Only Content</h1>
+  <summary>In this topic you will learn about working with audio-only content in Video Cloud.</summary>
+  <section class="bcls-section">
+    <h2 id="Ingestion">Ingesting audio files</h2>
+    <p>Audio source files can be in MP3, M4A, or WAV format and are uploaded using the Upload module. Audio files can be added to your Video Cloud account using the <a href="https://studio.support.brightcove.com/media/uploading-videos-using-upload-module.html">Upload module</a>. Your source file can be in MP3, M4A, or WAV format. </p>
+    <h3>Selecting an Ingest Profile </h3>
+    <p>If your account is enabled for Dynamic Delivery, you do not need a custom ingest profile for audio-only content.    If your account is using the legacy ingest system, select an ingest profile that creates audio-only renditions. You can use the <code>audio-only </code> profile that is included in the <a href="https://apis.support.brightcove.com/ingest-profiles/references/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Standard Profiles</a> or you can create a <a href="/admin/creating-legacy-ingest-profiles.html">custom ingest profile</a>.</p>
+    <h3>Renditions</h3>
+    <p>The renditions that are created will be in MP4 and HLS formats, with an audio track only. Audio assets can be published and played in a Brightcove Player just like a video, as explained <a href="#Audio_Player">below</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: In order to maximize coverage of playback on multiple platforms/browsers, we recommend that audio files be transcoded into MP4 and HLS renditions with audio tracks only - <strong>you cannot specify MP3 as the output format</strong>.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Poster_and_thumbnail">Uploading poster and thumbnail images</h2>
+    <p>Poster and/or thumbnail images can be added to  audio files. The poster image will be displayed in the Brightcove Player during playback and the thumbnail image will be displayed in any playlists that the item is added to.</p>
+    <p>For information on uploading poster and thumbnail images, see <a href="/media/uploading-poster-and-thumbnail-images.html">Uploading Poster and Thumbnail Images</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Audio_player">Publishing audio files</h2>
+    <p>Audio files  will play in any Brightcove Player. During playback, the video screen will either be blank or display the poster image if you <a href="#Poster_and_thumbnail">added one</a>.</p>
+    <p>If you prefer to use a more minimal audio player without the video screen, you can create a player for that purpose. After creating the player, configure the size in the following manner:</p>
+    <ul>
+      <li>Use a fixed size</li>
+      <li>Use a custom aspect ratio</li>
+      <li>Set the height to 80px (the width can be whatever you like)</li>
+    </ul>
+    <figure> <img alt="player sizing" src="/assets/images/general/audio-player-sizing.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Sample_player">Creating a custom audio player</h2>
+    <p>It is also possible to create a custom audio player. A sample audio player is displayed below. For information on creating a custom audio player, see <a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-audio-player-simulated.html">Brightcove Player Sample: Audio Player Simulated</a>.</p>
+    <video-js id="audioOnly" data-video-id="4841158458001" data-account="1752604059001" data-player="rkgpS9K" data-embed="default" class="video-js" controls="" style="width: 480px; height: 80px;">&nbsp;</video-js>
+    <script src="//players.brightcove.net/1752604059001/rkgpS9K_default/index.min.js">
+        </script> 
+    <script>
+    videojs.getPlayer('audioOnly').ready(function() {
+      var myPlayer = this;
+      myPlayer.getChild('bigPlayButton').controlText('Play Audio');
+    });</script> 
+  </section>
+</article>
