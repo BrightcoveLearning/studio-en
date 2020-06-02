@@ -113,6 +113,8 @@
       url: /general/video-source-file-specifications-and-recommendations.html
     - name: Working with 360° Videos
       url: /general/working-360deg-videos.html
+    - name: Working with Audio-Only Content
+      url: /general/working-audio-content.html
     - name: Working with Multiple Accounts
       url: /general/working-multiple-video-cloud-accounts.html
 - section: 
