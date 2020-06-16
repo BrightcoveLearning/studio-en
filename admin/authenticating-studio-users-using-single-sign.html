@@ -52,14 +52,13 @@ parent: Administering Accounts
     <div class="bcls-answer">
       <p>No. Once a user is enabled for SSO, that is the only way they can authenticate into their account.</p>
     </div>
-    <h5 class="bcls-question">Does Brightcove support SAML v2.0 with both browser post based IDP-initiated SSO and SP-initiated SSO?</h5>
+    <h5 class="bcls-question">Does Brightcove support SAML v2.0 with SP-initiated SSO?</h5>
     <div class="bcls-answer">
       <p>Yes</p>
       <ul>
-        <li>IdP initiated login means you can add a signin button/link to your SSO IdP portal and login directly from there.</li>
-        <li>SP initiated login means you can type in your username/password into the signin.brightcove.com page and they you be redirected to your IdP to login (if you are not already signed in). Note the password field gets ignored on the VC login page - we only inspect the email address to see if the user is enabled for SSO.</li>
-        <li>Brightcove will also provide customers with a special direct domain login URL that will look like this:<br />
+        <li>SP-initiated login is supported via a special direct domain login URL that will look like this:<br />
           <code>https://signin.brightcove.com/login/ext/saml?behavior=xxxxxxxxx</code></li>
+        <li>It is also possible for users to go to the <code>signin.brightcove.com</code> page. When they type in username/password on the Brightcove signin page, they will be redirected to your IdP to login (if you are not already signed in). Note the password field gets ignored on the Brightcove login page - we only inspect the email address to see if the user is enabled for SSO.</li>
       </ul>
     </div>
     <h5 class="bcls-question">Does Brightcove support the use of RelayState parameter in SAMLRequest/SAMLResponse for direct access to video after SSO?</h5>
