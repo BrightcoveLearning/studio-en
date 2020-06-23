@@ -43,22 +43,67 @@ parent: Migrating from Ooyala
         </ul>
         <li>Enter the channel <strong>Schedule</strong> details.        </li>
         <ul>
-          <li><strong>Loop Playout Content</strong> - If <strong>On</strong>, </li>
+          <li><strong>Loop Playout Content</strong> - If <strong>On</strong>, the program will be played in a loop and the <strong>End Date/Time</strong> will be enabled. The program can still be modified at any time and the changes will be reflected in the current program and the loops to follow.</li>
           <li><strong>Enable Server Side Ad Insertion(SSAI)</strong> - </li>
-          <li><strong>Start Date/Time</strong> - </li>
-          <li><strong>End Date/Time</strong> - </li>
+          <li><strong>Start Date/Time</strong> - Time when the channel will start playing out. The start time for all assets will be calculated by adding their duration to this start time.</li>
+          <li><strong>End Date/Time</strong> - If no value is entered and <strong>Loop Playout Content</strong> is not selected, the stream will end once the playout is complete. If <strong>Loop Playout Content</strong> is selected and there is no <strong>End Date/Time</strong>, the playout will be streamed until the channel is stopped.</li>
         </ul>
       <li>Enter the channel <strong>Destination</strong> details.        </li>
         <ul>
-          <li><strong>Mobile &amp; Web</strong> - If checked, will optimize the display for mobile and web display</li>
-          <li><strong>Smart TV</strong> - If checked, will optimize the display for Smart TV display</li>
-          <li><strong>Output Region</strong> - </li>
-          <li><strong>RTMP</strong> - Select to output the stream to an RTMP URL and then enter the RTMP URL to use</li>
-          <li><strong>Brightcove Live Event</strong> - Select to output the stream to a Brightcove live event and then select a live event.</li>
+          <li><strong>Optimize Display for</strong> - Controls the bitrate and dimensions for the output
+            <ul>
+              <li><strong>Mobile &amp; Web</strong> - If checked, HD renditons</li>
+              <li><strong>Smart TV</strong> - If checked, full HD renditions</li>
+            </ul>
+          </li>
+          <li><strong>Output Region</strong> - The region where the channel will be created. Brightcove recommends selecting a region geographically closest to where the majority of your audience is expected. </li>
+          <li><strong>RTMP</strong> - Select to output the stream to an RTMP or RTP ingestion point</li>
+          <li><strong>Brightcove Live Event</strong> - Create or use a previously created Brightcove Live  Channel. When creating a new channel, the region of the channel will be optimized based upon the <strong>Output Region</strong> that was selected.</li>
           <li><strong>S3 Bucket </strong>- Select to output to an Amazon S3 bucket. Enter the bucket details</li>
         </ul>
         <li>Click <strong>Save</strong>.</li>
     </ol>
-<figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-new-channel.png" /></figure>
   </section>
+  <section class="bcls-section">
+    <h2 id="limitations">Limitations</h2>
+    <p>The following assumptions and limitations apply.</p>
+    <ol>
+      <li>Input specification of the cloud playout channel is Fixed for CODEC =&gt; AVC; FRAME RATE &lt;= 30fps ; BITRATE &lt;= 20 MBps</li>
+      <li>Cloud Playout channel shall be created only for the account enabled for dynamic packaging and assumes all the assets holds MP4 asset that can be used against the playlist of cloud playout channel.</li>
+      <li>Cloud Playout framework leverages playlist API and data model of Video cloud; hence implicit playlist created during the cloud playout channel provisioning will be visible in video cloud playlist module and any changes happens to playlist will be reflected in cloud playout channel as well. Also, video cloud user can delete the playlist without knowing if the playlist is used by the cloud playout channel.  (Product team shall provide a requirement to Video cloud to restrict the delete or make the implicit playlist used by cloud playout invisible in video cloud UI / API)</li>
+      <li>When the channel is restarted in between of the scheduled start time and end time, then the program will not be resumed from where it halt in previous session, instead the program will start from the first asset configured in the playlist.</li>
+      <li>There will be a delayed transition from invalid asset URL to the other, which means there will be black screen for more time than normal.</li>
+      <li>EPG Limitation :  EPG is generated on best effort / with closest to accuracy.
+      </li>
+      <li>EPG Limitation : When EPG is constructed from the playlist initially , there is probability of start time error as the CP takes some time to initiate the switching.</li>
+      <li>EPG Limitation : EPG may not be consistent for every retrieval when the below actions are performed, as its constructed dynamically based on the current information it holds. (some scenarios are reorder, add/delete of an assert in playlist, etc. )</li>
+      <li>EPG Limitation : If any malfunction happens in the switching , and switch time is not accurate.</li>
+      <li>EPG Limitation : There could be transit inaccuracy for the future EPG, say some cases like playlist switch, delete current active asset in playlist etc. Consumers should use polling to get the closest , best effort EPG at any time and proactive notification on the changes by the server.</li>
+      <li>If you are trying to fetch the current EPG for the channel for which scheduled end time is already elapsed and channel is in stopped state, then "EMPTY" EPG will be returned or HTTP Error.</li>
+      <li>Current EPG will be generated based on the scheduled start time and end time and its the difference between the end time and start time is greater than 14 days, then it generates only 14 days from the time time requested to end time or 14 days which ever is earlier.</li>
+      <li>You can also query EPG based on any start time and end time and it matches with the historic data and consolidates with futuristic EPG based on the playlist to frame it within the scheduled start time or end time &amp; max 14 days.</li>
+      <li>Ad insert block will be always enabled for ad avail blanking.</li>
+      <li>Ad insert only uses Splice insert mode and not time code based ingest.</li>
+      <li>To have more accuracy on historic EPG, you may need to use Asset duration greater than 2 mins.</li>
+      <li>Input Looper : if the asset URL is duplicated, then input looper rely on order for switching; if the order is changes during the course of the switching , then subsequent N+1 switch it attempt to create would rely on the order. </li>
+      <li>Input Looper : if the current active asset of media live channel is deleted from the playlist, then input looper does not know which one to pick as follow the current asset, hence it considers first asset in the playlist as follow.</li>
+      <li>Input Looper : input looper attempts to create schedule action based on various factors every one mins, if the asset duration is less than one min, then there is possibility of delayed switching and causes black screen for more time. ( Still not determined , how frequently the input looper can poll!! , may be 20 sec! considering Ad asset of minimum duration of 30 sec?.)</li>
+      <li>Full HD profile will be automatically selected when smart TV option is selected while CP channel creation; by default this profile supports both smart TV, Web and Desktops; if Web &amp; desktop is selected, then CP auto select the HD profile for CP channel creation.</li>
+      <li>Scheduled start Time of the created CP channel can be updated only when the channel is not in running state.</li>
+      <li>Scheduled end time can be updated at any time.</li>
+      <li>The preview image for the CP channel is created on best effort basis.</li>
+      <li>in case of backdoor recover process directly onto Medialive may cause discrepancies in configuration/state in cloud playout.</li>
+      <li>AD slate provisioned in BC live channel created by CP will be set to default and can be overwritten through API if different ad slate ID to be used during the CP "DRAFT" channel state. </li>
+      <li>Below default configuration shall be used while creating the BC live from CP.
+        <div data-hasbody="true" data-macro-name="info">
+          <div>
+            <pre>content encryption = none<br>DVR = false<br>Stream to social media = false<br>covert live 2 vod = false<br>Enable stream status notification = false<br>create recurring SEP = true.</pre>
+          </div>
+        </div>
+      </li>
+      <li>Non-English characters are not allowed for Cloud Playout channel name. Also limited set of special characters in  _ . : / = + - shall only be allowed.</li>
+      <li>If the video cloud account is configured for geo restriction to access the VOD output, then cloud playout channel for this account should be created in the same region where the content can be accessed based on the video cloud geo restriction policy.</li>
+    </ol>
+    <p>&nbsp;</p>
+      </section>
 </article>
