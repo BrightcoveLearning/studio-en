@@ -37,7 +37,7 @@ parent: Migrating from Ooyala
         <li>Click <strong>Create New</strong>.</li>
         <li>Enter the channel <strong>Identification</strong> details:        </li>
         <ul>
-          <li><strong>Name</strong> - Name for the channel</li>
+          <li><strong>Name</strong> - Name for the channel. The name must have English characters and the following special characters are allowed:   _ . : / = + - </li>
           <li><strong>Description</strong> - Channel description</li>
           <li><strong>Image URL</strong> - URL to an image file for the channel; meant to be a channel image that could be retrieved as part of the channel's metadata</li>
         </ul>
@@ -45,10 +45,10 @@ parent: Migrating from Ooyala
         <ul>
           <li><strong>Loop Playout Content</strong> - If <strong>On</strong>, the program will be played in a loop and the <strong>End Date/Time</strong> will be enabled. The program can still be modified at any time and the changes will be reflected in the current program and the loops to follow.</li>
           <li><strong>Enable Server Side Ad Insertion(SSAI)</strong> - </li>
-          <li><strong>Start Date/Time</strong> - Time when the channel will start playing out. The start time for all assets will be calculated by adding their duration to this start time.</li>
-          <li><strong>End Date/Time</strong> - If no value is entered and <strong>Loop Playout Content</strong> is not selected, the stream will end once the playout is complete. If <strong>Loop Playout Content</strong> is selected and there is no <strong>End Date/Time</strong>, the playout will be streamed until the channel is stopped.</li>
+          <li><strong>Start Date/Time</strong> - Time when the channel will start playing out. The start time for all assets will be calculated by adding their duration to this start time. This time can be updated only when the channel is not in running state.</li>
+          <li><strong>End Date/Time</strong> - If no value is entered and <strong>Loop Playout Content</strong> is not selected, the stream will end once the playout is complete. If <strong>Loop Playout Content</strong> is selected and there is no <strong>End Date/Time</strong>, the playout will be streamed until the channel is stopped. This time can be updated at any time.</li>
         </ul>
-      <li>Enter the channel <strong>Destination</strong> details.        </li>
+      <li>Enter the channel <strong>Destination</strong> details. Note that Cloud Playout  supports 2 outputs at the same time. For example, you can output HLS into an S3 Bucket and an RTMP feed to  a Brightcove Live Channel or a 3rd party ingestion point. </li>
         <ul>
           <li><strong>Optimize Display for</strong> - Controls the bitrate and dimensions for the output
             <ul>
@@ -59,26 +59,26 @@ parent: Migrating from Ooyala
           <li><strong>Output Region</strong> - The region where the channel will be created. Brightcove recommends selecting a region geographically closest to where the majority of your audience is expected. </li>
           <li><strong>RTMP</strong> - Select to output the stream to an RTMP or RTP ingestion point</li>
           <li><strong>Brightcove Live Event</strong> - Create or use a previously created Brightcove Live  Channel. When creating a new channel, the region of the channel will be optimized based upon the <strong>Output Region</strong> that was selected.</li>
-          <li><strong>S3 Bucket </strong>- Select to output to an Amazon S3 bucket. Enter the bucket details</li>
+          <li><strong>Amazon S3 Bucket </strong>- Select to push an HLS output to an Amazon S3 bucket. You will be required to enter Bucket Name, Region, Access Key and Secret Key.</li>
         </ul>
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-new-channel.png" /></figure>
+
         <li>Click <strong>Save</strong>.</li>
     </ol>
-  </section>
+  When a channel is created, a playlist will be created and visible in the Media module. Any changes to the playlist will be reflected in the Cloud Playout channel. Also, it is possible for users to delete the playlist without knowing that it is used by a Cloud Playout channel.</section>
   <section class="bcls-section">
     <h2 id="limitations">Limitations</h2>
     <p>The following assumptions and limitations apply.</p>
-    <ol>
-      <li>Input specification of the cloud playout channel is Fixed for CODEC =&gt; AVC; FRAME RATE &lt;= 30fps ; BITRATE &lt;= 20 MBps</li>
-      <li>Cloud Playout channel shall be created only for the account enabled for dynamic packaging and assumes all the assets holds MP4 asset that can be used against the playlist of cloud playout channel.</li>
-      <li>Cloud Playout framework leverages playlist API and data model of Video cloud; hence implicit playlist created during the cloud playout channel provisioning will be visible in video cloud playlist module and any changes happens to playlist will be reflected in cloud playout channel as well. Also, video cloud user can delete the playlist without knowing if the playlist is used by the cloud playout channel.  (Product team shall provide a requirement to Video cloud to restrict the delete or make the implicit playlist used by cloud playout invisible in video cloud UI / API)</li>
-      <li>When the channel is restarted in between of the scheduled start time and end time, then the program will not be resumed from where it halt in previous session, instead the program will start from the first asset configured in the playlist.</li>
+    <ul>
+      <li>The input specification of the Cloud Playout channel is fixed with the following settings:      </li>
+      <ul>
+        <li>CODEC - AVC</li>
+        <li>FRAME RATE &lt;= 30fps</li>
+        <li> BITRATE &lt;= 20 MBps</li>
+      </ul>
+      <li>The Cloud Playout channel shall be created only for the account enabled for dynamic packaging and assumes all the assets holds MP4 asset that can be used against the playlist of cloud playout channel.</li>
+      <li>When the channel is restarted between the start time and end time,  the program will not be resumed from where it halted in the previous session. Instead, the program will start from the first asset configured in the playlist.</li>
       <li>There will be a delayed transition from invalid asset URL to the other, which means there will be black screen for more time than normal.</li>
-      <li>EPG Limitation :  EPG is generated on best effort / with closest to accuracy.
-      </li>
-      <li>EPG Limitation : When EPG is constructed from the playlist initially , there is probability of start time error as the CP takes some time to initiate the switching.</li>
-      <li>EPG Limitation : EPG may not be consistent for every retrieval when the below actions are performed, as its constructed dynamically based on the current information it holds. (some scenarios are reorder, add/delete of an assert in playlist, etc. )</li>
-      <li>EPG Limitation : If any malfunction happens in the switching , and switch time is not accurate.</li>
-      <li>EPG Limitation : There could be transit inaccuracy for the future EPG, say some cases like playlist switch, delete current active asset in playlist etc. Consumers should use polling to get the closest , best effort EPG at any time and proactive notification on the changes by the server.</li>
       <li>If you are trying to fetch the current EPG for the channel for which scheduled end time is already elapsed and channel is in stopped state, then "EMPTY" EPG will be returned or HTTP Error.</li>
       <li>Current EPG will be generated based on the scheduled start time and end time and its the difference between the end time and start time is greater than 14 days, then it generates only 14 days from the time time requested to end time or 14 days which ever is earlier.</li>
       <li>You can also query EPG based on any start time and end time and it matches with the historic data and consolidates with futuristic EPG based on the playlist to frame it within the scheduled start time or end time &amp; max 14 days.</li>
@@ -88,9 +88,6 @@ parent: Migrating from Ooyala
       <li>Input Looper : if the asset URL is duplicated, then input looper rely on order for switching; if the order is changes during the course of the switching , then subsequent N+1 switch it attempt to create would rely on the order. </li>
       <li>Input Looper : if the current active asset of media live channel is deleted from the playlist, then input looper does not know which one to pick as follow the current asset, hence it considers first asset in the playlist as follow.</li>
       <li>Input Looper : input looper attempts to create schedule action based on various factors every one mins, if the asset duration is less than one min, then there is possibility of delayed switching and causes black screen for more time. ( Still not determined , how frequently the input looper can poll!! , may be 20 sec! considering Ad asset of minimum duration of 30 sec?.)</li>
-      <li>Full HD profile will be automatically selected when smart TV option is selected while CP channel creation; by default this profile supports both smart TV, Web and Desktops; if Web &amp; desktop is selected, then CP auto select the HD profile for CP channel creation.</li>
-      <li>Scheduled start Time of the created CP channel can be updated only when the channel is not in running state.</li>
-      <li>Scheduled end time can be updated at any time.</li>
       <li>The preview image for the CP channel is created on best effort basis.</li>
       <li>in case of backdoor recover process directly onto Medialive may cause discrepancies in configuration/state in cloud playout.</li>
       <li>AD slate provisioned in BC live channel created by CP will be set to default and can be overwritten through API if different ad slate ID to be used during the CP "DRAFT" channel state. </li>
@@ -101,9 +98,15 @@ parent: Migrating from Ooyala
           </div>
         </div>
       </li>
-      <li>Non-English characters are not allowed for Cloud Playout channel name. Also limited set of special characters in  _ . : / = + - shall only be allowed.</li>
-      <li>If the video cloud account is configured for geo restriction to access the VOD output, then cloud playout channel for this account should be created in the same region where the content can be accessed based on the video cloud geo restriction policy.</li>
-    </ol>
-    <p>&nbsp;</p>
-      </section>
+      <li>If the Video Cloud account is configured for geo-restriction, then Cloud Playout channel should be created in the same region where the content can be accessed based upon the Video Cloud geo-restriction policy.</li>
+    </ul>
+    <h3>Electronic Program Guide (EPG) Limitations</h3>
+    <ul>
+      <li>The EPG is generated on best effort / with closest to accuracy. </li>
+      <li>When EPG is initially constructed from the playlist, there may be a start time error as the CP takes some time to initiate the switching.</li>
+      <li>EPG may not be consistent for every retrieval when the below actions are performed as its constructed dynamically based on the current information it holds. (some scenarios are reorder, add/delete of an asset in a playlist, etc.).</li>
+      <li>If any malfunction happens in the switching , and switch time is not accurate.</li>
+      <li>There could be transit inaccuracy for the future EPG, say some cases like playlist switch, delete current active asset in playlist etc. Consumers should use polling to get the closest , best effort EPG at any time and proactive notification on the changes by the server.</li>
+    </ul>
+  </section>
 </article>
