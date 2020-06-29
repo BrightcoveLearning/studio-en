@@ -8,69 +8,72 @@ parent: Migrating from Ooyala
   <section class="bcls-section">
     <p>The  Cloud Playout module enables broadcasters and media publishers to create a collection of  VOD videos and  Live events and then stream it as a linear channel and leverage all the features provided by Brightcove Live.</p>
     <aside class="bcls-aside bcls-aside--information">Note: This feature is currently in Limited Availability. Contact your Brightcove Account Manager for more information.</aside>
-      <p>To access the Cloud Playout module, click Cloud Playout in the navigation menu. A list of all Cloud Playout channels that have been created will be displayed (if any).</p>
+    <p>To access the Cloud Playout module, click Cloud Playout in the navigation menu. A list of all Cloud Playout channels that have been created will be displayed (if any).</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-channel-list.png" /></figure>
-      <p>The page will display the following information:</p>
-      <ul>
-        <li><strong>Channel Name</strong> - Name for the channel</li>
-        <li><strong>Start Time</strong> - Start time for the channel</li>
-        <li><strong>End Time</strong> - End time for the channel</li>
-        <li><strong>Looping</strong> - Indicates whether the channel will loop</li>
-        <li><strong>Destination</strong> - Target destination for the channel</li>
-        <li><strong>Date Created</strong> - Date the channel was created</li>
-        <li><strong>Status</strong> - Channel status
-          <ul>
-            <li><strong>Draft</strong> - </li>
-            <li><strong>Scheduled</strong> - </li>
-            <li><strong>Running</strong> - </li>
-            <li><strong>Stopped</strong> - </li>
-            <li><strong>Error</strong> - </li>
-          </ul>
-        </li>
-      </ul>
+    <p>The page will display the following information:</p>
+    <ul>
+      <li><strong>Channel Name</strong> - Name for the channel</li>
+      <li><strong>Start Time</strong> - Start time for the channel</li>
+      <li><strong>End Time</strong> - End time for the channel</li>
+      <li><strong>Looping</strong> - Indicates whether the channel will loop</li>
+      <li><strong>Destination</strong> - Target destination for the channel</li>
+      <li><strong>Date Created</strong> - Date the channel was created</li>
+      <li><strong>Status</strong> - Channel status
+        <ul>
+          <li><strong>Draft</strong> - </li>
+          <li><strong>Scheduled</strong> - </li>
+          <li><strong>Starting</strong> - </li>
+          <li><strong>Running</strong> - </li>
+          <li><strong>Stopped</strong> - </li>
+          <li><strong>Error</strong> - </li>
+        </ul>
+      </li>
+    </ul>
   </section>
   <section class="bcls-section">
     <h2 id="channel">Creating a new channel</h2>
     <p>To create a new Cloud Playout channel, follow these steps. </p>
     <ol class="bcls-tasklist-restart" style="--s:1">
       <li>Click <strong>Cloud Playout</strong> in the navigation header.</li>
-        <li>Click <strong>Create New</strong>.</li>
-        <li>Enter the channel <strong>Identification</strong> details:        </li>
-        <ul>
-          <li><strong>Name</strong> - Name for the channel. The name must have English characters and the following special characters are allowed:   _ . : / = + - </li>
-          <li><strong>Description</strong> - Channel description</li>
-          <li><strong>Image URL</strong> - URL to an image file for the channel; meant to be a channel image that could be retrieved as part of the channel's metadata</li>
-        </ul>
-        <li>Enter the channel <strong>Schedule</strong> details.        </li>
-        <ul>
-          <li><strong>Loop Playout Content</strong> - If <strong>On</strong>, the program will be played in a loop and the <strong>End Date/Time</strong> will be enabled. The program can still be modified at any time and the changes will be reflected in the current program and the loops to follow.</li>
-          <li><strong>Enable Server Side Ad Insertion(SSAI)</strong> - </li>
-          <li><strong>Start Date/Time</strong> - Time when the channel will start playing out. The start time for all assets will be calculated by adding their duration to this start time. This time can be updated only when the channel is not in running state.</li>
-          <li><strong>End Date/Time</strong> - If no value is entered and <strong>Loop Playout Content</strong> is not selected, the stream will end once the playout is complete. If <strong>Loop Playout Content</strong> is selected and there is no <strong>End Date/Time</strong>, the playout will be streamed until the channel is stopped. This time can be updated at any time.</li>
-        </ul>
+      <li>Click <strong>Create New</strong>.</li>
+      <li>Enter the channel <strong>Identification</strong> details: </li>
+      <ul>
+        <li><strong>Name</strong> - Name for the channel. The name must have English characters and the following special characters are allowed:   _ . : / = + - </li>
+        <li><strong>Description</strong> - Channel description</li>
+        <li><strong>Image URL</strong> - URL to an image file for the channel; meant to be a channel image that could be retrieved as part of the channel's metadata</li>
+      </ul>
+      <li>Enter the channel <strong>Schedule</strong> details. </li>
+      <ul>
+        <li><strong>Loop Playout Content</strong> - If <strong>On</strong>, the program will be played in a loop and the <strong>End Date/Time</strong> will be enabled. The program can still be modified at any time and the changes will be reflected in the current program and the loops to follow.</li>
+        <li><strong>Enable Server Side Ad Insertion(SSAI)</strong> - </li>
+        <li><strong>Start Date/Time</strong> - Time when the channel will start playing out. The start time for all assets will be calculated by adding their duration to this start time. This time can be updated only when the channel is not in running state.</li>
+        <li><strong>End Date/Time</strong> - If no value is entered and <strong>Loop Playout Content</strong> is not selected, the stream will end once the playout is complete. If <strong>Loop Playout Content</strong> is selected and there is no <strong>End Date/Time</strong>, the playout will be streamed until the channel is stopped. This time can be updated at any time.</li>
+      </ul>
       <li>Enter the channel <strong>Destination</strong> details. Note that Cloud Playout  supports 2 outputs at the same time. For example, you can output HLS into an S3 Bucket and an RTMP feed to  a Brightcove Live Channel or a 3rd party ingestion point. </li>
-        <ul>
-          <li><strong>Optimize Display for</strong> - Controls the bitrate and dimensions for the output
-            <ul>
-              <li><strong>Mobile &amp; Web</strong> - If checked, HD renditons</li>
-              <li><strong>Smart TV</strong> - If checked, full HD renditions</li>
-            </ul>
-          </li>
-          <li><strong>Output Region</strong> - The region where the channel will be created. Brightcove recommends selecting a region geographically closest to where the majority of your audience is expected. </li>
-          <li><strong>RTMP</strong> - Select to output the stream to an RTMP or RTP ingestion point</li>
-          <li><strong>Brightcove Live Event</strong> - Create or use a previously created Brightcove Live  Channel. When creating a new channel, the region of the channel will be optimized based upon the <strong>Output Region</strong> that was selected.</li>
-          <li><strong>Amazon S3 Bucket </strong>- Select to push an HLS output to an Amazon S3 bucket. You will be required to enter Bucket Name, Region, Access Key and Secret Key.</li>
-        </ul>
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-new-channel.png" /></figure>
-
-        <li>Click <strong>Save</strong>.</li>
+      <ul>
+        <li><strong>Optimize Display for</strong> - Controls the bitrate and dimensions for the output
+          <ul>
+            <li><strong>Mobile &amp; Web</strong> - If checked, HD renditons</li>
+            <li><strong>Smart TV</strong> - If checked, full HD renditions</li>
+          </ul>
+        </li>
+        <li><strong>Output Region</strong> - The region where the channel will be created. Brightcove recommends selecting a region geographically closest to where the majority of your audience is expected. </li>
+        <li><strong>RTMP</strong> - Select to output the stream to an RTMP or RTP ingestion point</li>
+        <li><strong>Brightcove Live Event</strong> - Create or use a previously created Brightcove Live  Channel. When creating a new channel, the region of the channel will be optimized based upon the <strong>Output Region</strong> that was selected.</li>
+        <li><strong>Amazon S3 Bucket </strong>- Select to push an HLS output to an Amazon S3 bucket. You will be required to enter Bucket Name, Region, Access Key and Secret Key.</li>
+      </ul>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-new-channel.png" /></figure>
+      <li>Click <strong>Save</strong>.</li>
     </ol>
-  When a channel is created, a playlist will be created and visible in the Media module. Any changes to the playlist will be reflected in the Cloud Playout channel. Also, it is possible for users to delete the playlist without knowing that it is used by a Cloud Playout channel.</section>
+    <p>When a channel is created, a system-generated playlist will be created and visible in the Media module.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-playlist-created.png" /></figure>
+    <p>Any changes to the playlist will be reflected in the Cloud Playout channel. Also, it is possible for users to delete the playlist without knowing that it is used by a Cloud Playout channel.</p>
+  </section>
   <section class="bcls-section">
     <h2 id="limitations">Limitations</h2>
     <p>The following assumptions and limitations apply.</p>
     <ul>
-      <li>The input specification of the Cloud Playout channel is fixed with the following settings:      </li>
+      <li>The input specification of the Cloud Playout channel is fixed with the following settings: </li>
       <ul>
         <li>CODEC - AVC</li>
         <li>FRAME RATE &lt;= 30fps</li>
