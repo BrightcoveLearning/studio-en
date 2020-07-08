@@ -105,14 +105,20 @@ parent: General Information
   </section>
   <section class="bcls-section">
     <h2 id="ads">Enabling Server-Side Ads</h2>
-    <p>It is possible to configure a channel so that server-side ads are displayed using Brightcove's Server-Side Ad Insertion technology.</p>
+    <p>It is possible to configure a channel so that server-side ads are displayed using Brightcove's Server-Side Ad Insertion technology. Videos that will be played as ads must be uploaded to your Video Cloud account and be tagged with <code>cp-ad-holder</code>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-tag-video.png" /></figure>
     <aside class="bcls-aside bcls-aside--information">Note: When using ad insertion, the channel can only be output to a Brightcove Live Event.</aside>
     <p> To enable server-side ads, follow these steps.</p>
     <ol class="bcls-tasklist-restart" style="--s:1">
       <li>When creating a channel, set the <strong>Ad Insertion</strong> option to <strong>On</strong>.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-insertion-option.png" /></figure>
       </li>
-      <li></li>
+      <li>Click the checkbox next to the video after which you want an ad to play.</li>
+      <li>Click <strong>Insert Ads</strong> and select an <strong>ad duration</strong>. The list of ad durations is generated based upon the lengths of all the videos that are tagged <code>cp-ad-holder</code>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-insert-ads-button.png" /></figure>
+      </li>
+      <li>Click <strong>Ok</strong>.The ad with the selected length will be inserted into the program after the selected video.</li>
+      <li>Click <strong>Save</strong> to save the changes to the program.</li>
     </ol>
     <p>For complete information on Server-Side Ad Insertion, see the <a href="https://ssai.support.brightcove.com/getting-started/video-cloud-ssai-overview.html">Video Cloud SSAI Overview</a> topic.</p>
   </section>
