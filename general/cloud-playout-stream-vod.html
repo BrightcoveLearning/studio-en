@@ -84,6 +84,7 @@ parent: General Information
       <li>Click <strong>Add Videos</strong>.</li>
       <li>Click <strong>Save</strong>.</li>
     </ol>
+      <aside class="bcls-aside bcls-aside--information">Note: To change the order of the videos in a program, click on a video and drag it to a new position.</aside>
     <p>When videos are added to a channel, a system-generated playlist will be created and visible in the Media module.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-playlist-created.png" /></figure>
     <p>Any changes to the playlist will be reflected in the Cloud Playout channel. Also, it is possible for users to delete the playlist without knowing that it is used by a Cloud Playout channel.</p>
@@ -105,19 +106,35 @@ parent: General Information
   </section>
   <section class="bcls-section">
     <h2 id="ads">Enabling Server-Side Ads</h2>
-    <p>It is possible to configure a channel so that server-side ads are displayed using Brightcove's Server-Side Ad Insertion technology. Videos that will be played as ads must be uploaded to your Video Cloud account and be tagged with <code>cp-ad-holder</code>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-tag-video.png" /></figure>
+    <p>It is possible to configure a channel so that server-side ads are displayed using Brightcove's Server-Side Ad Insertion technology. </p>
     <aside class="bcls-aside bcls-aside--information">Note: When using ad insertion, the channel can only be output to a Brightcove Live Event.</aside>
-    <p> To enable server-side ads, follow these steps.</p>
+    <h3>Configuring Ad tags and fill slates</h3>
+    <p>Ensure that you have ad tags and fill slates configured as part of your account administration. For information on configuring ad tags, see <a href="/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>. Fill slates are content that can be served when there are gaps in a live stream ad break. For information on creating fill slates, see <a href="https://live.support.brightcove.com/admin/managing-live-settings.html">Managing Live Settings</a>.</p>
+    <h3>Creating placeholder ad break videos</h3>
+    <p>You need to upload &quot;placeholder&quot; videos that will be inserted into a program listing to indicate that an ad should be served and the length of the ad. To do this, follow these steps.</p>
     <ol class="bcls-tasklist-restart" style="--s:1">
-      <li>When creating a channel, set the <strong>Ad Insertion</strong> option to <strong>On</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-insertion-option.png" /></figure>
+      <li>You should create video source files that have a length of the ad break durations you want to have (i.e. 2 mins, 4 mins, etc.). The content of these videos doesn't matter as they will not actually be played.</li>
+      <li>Upload these videos to your account.</li>
+      <li>Using the Media module, edit the video properties for these videos and tag them with <code>cp-ad-holder</code>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-tag-video.png" /></figure>
       </li>
+    </ol>
+    <h3>Enabling Server-Side Ads for a channel</h3>
+    <p>When creating a channel, set the <strong>Ad Insertion</strong> option to <strong>On</strong>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-insertion-option.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Note: For existing channels, the Ad Insertion setting cannot be edited.</aside>
+    <h3>Inserting ad placeholders into a program</h3>
+    <p>You need to insert ad placeholders into the program listing where ads should be displayed. Follow these steps to insert ad placeholders.</p>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>Click a channel name to edit it.</li>
       <li>Click the checkbox next to the video after which you want an ad to play.</li>
-      <li>Click <strong>Insert Ads</strong> and select an <strong>ad duration</strong>. The list of ad durations is generated based upon the lengths of all the videos that are tagged <code>cp-ad-holder</code>.
+      <li>Click <strong>Insert Ads</strong> and select an <strong>ad duration</strong>. The list of ad durations is generated based upon the lengths of all the ad break you uploaded  that are tagged <code>cp-ad-holder</code>.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-insert-ads-button.png" /></figure>
       </li>
-      <li>Click <strong>Ok</strong>.The ad with the selected length will be inserted into the program after the selected video.</li>
+      <li>Click <strong>Ok</strong>. The ad with the selected length will be inserted into the program after the selected video.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-break-inserted.png" /></figure>
+          <aside class="bcls-aside bcls-aside--information">Note: The video that is inserted as a placeholder <strong>will not</strong> be played as part of the program. This video is only used to indicate where an ad request will be made and the ad length.</aside>
+      </li>
       <li>Click <strong>Save</strong> to save the changes to the program.</li>
     </ol>
     <p>For complete information on Server-Side Ad Insertion, see the <a href="https://ssai.support.brightcove.com/getting-started/video-cloud-ssai-overview.html">Video Cloud SSAI Overview</a> topic.</p>
@@ -162,8 +179,8 @@ parent: General Information
         <li>FRAME RATE &lt;= 30fps</li>
         <li> BITRATE &lt;= 20 MBps</li>
       </ul>
-      <li>The Cloud Playout channel shall be created only for the account enabled for dynamic packaging and assumes all the assets holds MP4 asset that can be used against the playlist of cloud playout channel.</li>
-      <li>When the channel is restarted between the start time and end time,  the program will not be resumed from where it halted in the previous session. Instead, the program will start from the first asset configured in the playlist.</li>
+      <li>The Cloud Playout channel shall be created only for the account enabled for dynamic packaging and assumes all the videos have an MP4 rendition that can be used against the playlist of cloud playout channel.</li>
+      <li>When the channel is restarted between the start time and end time,  the program will not be resumed from where it halted in the previous session. Instead, the program will start from the first video configured in the program.</li>
       <li>There will be a delayed transition from invalid asset URL to the other, which means there will be black screen for more time than normal.</li>
       <li>If you are trying to fetch the current EPG for the channel for which scheduled end time is already elapsed and channel is in stopped state, then "EMPTY" EPG will be returned or HTTP Error.</li>
       <li>Current EPG will be generated based on the scheduled start time and end time and its the difference between the end time and start time is greater than 14 days, then it generates only 14 days from the time time requested to end time or 14 days which ever is earlier.</li>
