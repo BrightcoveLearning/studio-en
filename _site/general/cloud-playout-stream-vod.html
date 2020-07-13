@@ -846,7 +846,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <article class="bcls-article">
   <summary>In this topic you will learn how to create a collection of VOD videos that can be streamed as a linear channel.</summary>
   <section class="bcls-section">
-    <p>The  Cloud Playout module enables broadcasters and media publishers to create a collection of  VOD videos and  Live events and then stream it as a linear channel and leverage all the features provided by Brightcove Live.</p>
+    <p>The  Cloud Playout module enables broadcasters and media publishers to create a collection of  VOD videos  and then stream it as a linear channel and leverage all the features provided by Brightcove Live.</p>
     <aside class="bcls-aside bcls-aside--information">Note: This feature is currently in Limited Availability. Contact your Brightcove Account Manager for more information.</aside>
     <p>To access the Cloud Playout module, click <strong>Cloud Playout</strong> in the navigation menu. A list of all Cloud Playout channels that have been created will be displayed (if any).</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-channel-list.png" /></figure>
@@ -855,19 +855,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><strong>Channel Name</strong> - Name of the channel</li>
       <li><strong>Start Time</strong> - Start time for the channel</li>
       <li><strong>End Time</strong> - End time for the channel</li>
-      <li><strong>Looping</strong> - Indicates whether the channel will loop</li>
+      <li><strong>Looping</strong> - Indicates whether the program will loop</li>
       <li><strong>Destination</strong> - Target destination for the channel</li>
       <li><strong>Date Created</strong> - Date the channel was created</li>
       <li><strong>Last Updated</strong> - Date the channel was last updated</li>
       <li><strong>Status</strong> - Channel status
         <ul>
           <li><strong>DRAFT</strong> - Channel has been created but not activated</li>
-          <li><strong>IDLE</strong> - Channel is activated but not scheduled to begin streaming</li>
           <li><strong>CREATING</strong> - Channel is in the process of being activated</li>
           <li><strong>SCHEDULED</strong> - Channel is active and ready to stream</li>
-          <li><strong>STARTING</strong> - Channel ready to begin streaming</li>
+          <li><strong>STARTING</strong> - Channel starting process to begin streaming</li>
           <li><strong>RUNNING</strong> - Channel is actively streaming</li>
           <li><strong>STOPPING</strong> - Channel streaming is stopping</li>
+          <li><strong>IDLE</strong> - Channel successfully ran and has been stopped</li>
           <li><strong>ERROR</strong> - An error occurred while creating or streaming the channel</li>
         </ul>
       </li>
@@ -888,11 +888,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Enter the channel <strong>Schedule</strong> details. </li>
       <ul>
         <li><strong>Loop Playout Content</strong> - If <strong>On</strong>, the program will be played in a loop and the <strong>End Date/Time</strong> will be enabled. The program can still be modified at any time and the changes will be reflected in the current program and the loops to follow.</li>
-        <li><strong>Ad Insertion</strong> - If on, allows ads to be displayed during channel playback. If this option is selected, you can only output to a <strong>Brightcove Live Event</strong>. See the <a href="#ads">Enabling Server-Side Ads</a> section below.</li>
+        <li><strong>Ad Insertion</strong> - If on, allows ads to be displayed during channel playback. If this option is selected, you can only output to a <strong>Brightcove Live Event</strong>or <strong>Amazon S3 Bucket</strong>. See the <a href="#ads">Enabling Server-Side Ads</a> section below.</li>
         <li><strong>Start Date/Time</strong> - Time when the channel will start playing out. The start time for all assets will be calculated by adding their duration to this start time. This time can be updated only when the channel is not in running state.</li>
         <li><strong>End Date/Time</strong> - If no value is entered and <strong>Loop Playout Content</strong> is not selected, the stream will end once the playout is complete. If <strong>Loop Playout Content</strong> is selected and there is no <strong>End Date/Time</strong>, the playout will be streamed until the channel is stopped. This time can be updated at any time.</li>
       </ul>
-      <li>Enter the channel <strong>Destination</strong> details. Note that Cloud Playout  supports 2 outputs at the same time. For example, you can output HLS into an S3 Bucket and an RTMP feed to  a Brightcove Live Channel or a 3rd party ingestion point. </li>
+      <li>Enter the channel <strong>Destination</strong> details. Cloud Playout  supports 2 outputs at the same time. For example, you can output HLS into an S3 Bucket and an RTMP feed to  a Brightcove Live Channel or a 3rd party ingestion point. Note that <strong>Brightcove Live Event</strong> and <strong>RTMP</strong> is not supported.</li>
       <ul>
         <li><strong>Optimize Display for</strong> - Controls the bitrate and dimensions for the output
           <ul>
@@ -904,7 +904,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <li><strong>Output to</strong> - Select an output method for the channel
           <ul>
             <li><strong>Brightcove Live Event</strong> - Create or use a previously created Brightcove Live  Channel. When creating a new channel, the region of the channel will be optimized based upon the <strong>Output Region</strong> that was selected.</li>
-            <li><strong>RTMP</strong> - Select to output the stream to an RTMP or RTP ingestion point</li>
+            <li><strong>RTMP</strong> - Select to output the stream to an RTMP or RTP ingestion point. RTP is not available for third party ingestion points, only when <strong>Ad Insertion</strong> and <strong>Brightcove Live Event</strong> is enabled.</li>
             <li><strong>Amazon S3 Bucket </strong>- Select to push an HLS output to an Amazon S3 bucket. You will be required to enter Bucket Name, Region, Access Key and Secret Key.</li>
           </ul>
         </li>
@@ -917,14 +917,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="add_videos">Adding videos to  a  channel</h2>
     <p>To add videos to a channel, follow these steps.</p>
     <ol class="bcls-tasklist-restart" style="--s:1">
-      <li>Click <strong>+ Add Videos</strong>. If you are on the channel list page, click the  channel name to open the channel settings page and then click <strong>+ Add Videos</strong>.</li>
+      <li>Click <strong>+ Add Videos</strong>. If you are on the channel list page, click the  channel name to open the channel settings page and then click <strong>+ Add Videos</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-add-videos.png" /></figure>
+      </li>
       <li>Click the checkbox next to the videos you want to add to the channel.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-select-videos.png" /></figure>
       </li>
       <li>Click <strong>Add Videos</strong>.</li>
       <li>Click <strong>Save</strong>.</li>
     </ol>
-      <aside class="bcls-aside bcls-aside--information">Note: To change the order of the videos in a program, click on a video and drag it to a new position.</aside>
+    <p>After videos have been added to a channel, click <strong>Activate</strong> to activate the channel. A channel must be activated before streaming can begin. See the <a href="#actions">Using channel actions</a> section below for more information.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: To change the order of the videos in a program, click on a video and drag it to a new position.</aside>
     <p>When videos are added to a channel, a system-generated playlist will be created and visible in the Media module.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-playlist-created.png" /></figure>
     <p>Any changes to the playlist will be reflected in the Cloud Playout channel. Also, it is possible for users to delete the playlist without knowing that it is used by a Cloud Playout channel.</p>
@@ -938,7 +941,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="actions">Using channel actions</h2>
     <p>Depending on the status of the channel, various channel action buttons will be available on the channel settings page. Access the channel action buttons by clicking on the channel name to view the channel settings. The following channel action buttons are available:</p>
     <ul>
-      <li><strong>Activate</strong> - Activating a channel makes it available for streaming. A channel can only be activated once videos have been added to a program.</li>
+      <li><strong>Activate</strong> - Activating a channel makes it available for streaming. Channels must have videos before they can be activated.</li>
       <li><strong>Play Now</strong> - Click <strong>Play Now</strong> to start  streaming the channel. This option is only available for channels that have an upcoming start time.</li>
       <li><strong>Stop Now</strong> - Click <strong>Stop Now</strong> to stop a streaming channel. This will stop the current live stream.</li>
     </ul>
@@ -951,14 +954,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h3>Configuring Ad tags and fill slates</h3>
     <p>Ensure that you have ad tags and fill slates configured as part of your account administration. For information on configuring ad tags, see <a href="/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>. Fill slates are content that can be served when there are gaps in a live stream ad break. For information on creating fill slates, see <a href="https://live.support.brightcove.com/admin/managing-live-settings.html">Managing Live Settings</a>.</p>
     <h3>Creating placeholder ad break videos</h3>
-    <p>You need to upload &quot;placeholder&quot; videos that will be inserted into a program listing to indicate that an ad should be served and the length of the ad. To do this, follow these steps.</p>
-    <ol class="bcls-tasklist-restart" style="--s:1">
-      <li>You should create video source files that have a length of the ad break durations you want to have (i.e. 2 mins, 4 mins, etc.). The content of these videos doesn't matter as they will not actually be played.</li>
-      <li>Upload these videos to your account.</li>
-      <li>Using the Media module, edit the video properties for these videos and tag them with <code>cp-ad-holder</code>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-tag-video.png" /></figure>
-      </li>
-    </ol>
+    <p>You need to indicate which videos should be used as &quot;placeholder&quot; videos. &quot;Placeholder&quot; videos are videos that will be inserted into a program listing to indicate that an ad should be served and the length of the ad. You may need to create/upload video source files that have video lengths equal to the ad break durations you want to have (i.e. 2 mins, 4 mins, etc.). The content of these videos doesn't matter as they will not actually be played as part of a program. </p>
+    <p>To mark a video as a &quot;placeholder&quot; video, use the Media module to edit the video properties for these videos and tag them with <code>cp-ad-holder</code>.
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-tag-video.png" /></figure>
+    </p>
     <h3>Enabling Server-Side Ads for a channel</h3>
     <p>When creating a channel, set the <strong>Ad Insertion</strong> option to <strong>On</strong>.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-insertion-option.png" /></figure>
@@ -967,13 +966,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>You need to insert ad placeholders into the program listing where ads should be displayed. Follow these steps to insert ad placeholders.</p>
     <ol class="bcls-tasklist-restart" style="--s:1">
       <li>Click a channel name to edit it.</li>
-      <li>Click the checkbox next to the video after which you want an ad to play.</li>
-      <li>Click <strong>Insert Ads</strong> and select an <strong>ad duration</strong>. The list of ad durations is generated based upon the lengths of all the ad break you uploaded  that are tagged <code>cp-ad-holder</code>.
+      <li>In the program listing, click the checkbox next to the video <strong>after</strong> which you want an ad to play.</li>
+      <li>Click <strong>Insert Ads</strong> and select an <strong>ad duration</strong>. The list of ad durations is generated based upon the lengths of all the ad break &quot;placeholder&quot; videos (tagged <code>cp-ad-holder</code>).
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-insert-ads-button.png" /></figure>
       </li>
       <li>Click <strong>Ok</strong>. The ad with the selected length will be inserted into the program after the selected video.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-break-inserted.png" /></figure>
-          <aside class="bcls-aside bcls-aside--information">Note: The video that is inserted as a placeholder <strong>will not</strong> be played as part of the program. This video is only used to indicate where an ad request will be made and the ad length.</aside>
+        <aside class="bcls-aside bcls-aside--information">Note: The video that is inserted as a &quot;placeholder&quot; <strong>will not</strong> be played as part of the program. This video is only used to indicate where an ad request will be made and the ad length.</aside>
       </li>
       <li>Click <strong>Save</strong> to save the changes to the program.</li>
     </ol>
