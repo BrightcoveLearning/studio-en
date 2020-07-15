@@ -888,7 +888,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </ul>
       <li>Enter the channel <strong>Schedule</strong> details. </li>
       <ul>
-        <li><strong>Loop Playout Content</strong> - If <strong>On</strong>, the program will be played in a loop and the <strong>End Date/Time</strong> will be enabled. The program can still be modified at any time and the changes will be reflected in the current program and the loops to follow.</li>
+        <li><strong>Loop Playout Content</strong> - If <strong>On</strong>, the program will be played in a loop and the <strong>End Date/Time</strong> will be enabled. The program can still be modified at any time and the changes will be reflected in the current program and the loops to follow. See the <a href="#looping">Creating a looping program</a> section below.</li>
         <li><strong>Ad Insertion</strong> - If on, allows ads to be displayed during channel playback. If this option is selected, you can only output to a <strong>Brightcove Live Event</strong>or <strong>Amazon S3 Bucket</strong>. See the <a href="#ads">Enabling Server-Side Ads</a> section below.</li>
         <li><strong>Start Date/Time</strong> - Time when the channel will start playing out. The start time for all assets will be calculated by adding their duration to this start time. This time can be updated only when the channel is not in running state.</li>
         <li><strong>End Date/Time</strong> - If no value is entered and <strong>Loop Playout Content</strong> is not selected, the stream will end once the playout is complete. If <strong>Loop Playout Content</strong> is selected and there is no <strong>End Date/Time</strong>, the playout will be streamed until the channel is stopped. This time can be updated at any time.</li>
@@ -937,6 +937,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="edit_delete">Editing and deleting a  channel</h2>
     <p>To edit a  Cloud Playout channel, click the  channel name and then click <strong>Edit</strong>. Make the appropriate edits and then click <strong>Update Channel</strong>. Note that the Destination properties cannot be edited once a channel has been created.</p>
     <p>To delete a  Cloud Playout channel, click the checkbox next to the channel name and then click <strong>Delete</strong>. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="looping">Creating a looping program</h2>
+    <p>To create a program that loops, when creating the channel, set the <strong>Loop Playout Content</strong> setting  to <strong>On</strong>. This will also require that you configure an <strong>End Date/Time</strong> for the channel. As videos are added to the program, the program listing will update to display the series of videos with associated start/end times to fill the entire channel time.</p>
+    <p>In the example below, three videos were added to the program and are set to loop.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-looping-example.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="actions">Using channel actions</h2>
