@@ -892,7 +892,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <li>There is no file size limit. Brightcove has tested with uploads as large as 100GB without any issues.</li>
         <li>When uploading large files, Brightcove recommends setting the <a href="/admin/managing-account-settings.html#upload">Upload Queueing</a> setting to <strong>Upload one file at a time</strong>.</li>
         <li>If you receive Studio timeout errors when uploading large files, try uploading the file to S3 or some other remote storage location and use the URL upload option in the Studio.</li>
-        <li>You can not use a Google Drive or YouTube URL, because they do not generate direct links to video files.</li>
+        <li>You can not use a YouTube URL, because they do not generate direct links to video files.</li>
+        <li>For Google Drive, see <a href="/media/uploading-videos-remote-urls.html">Uploading Videos Using Remote URLs</a>.</li>
         <li>When uploading from Dropbox, if the URL ends with "?dl=0", you may need to change it to "?dl=1" before the file will upload.</li>
         <li>Video file names (including the extension) must not exceed 120 single-byte (60 double-byte) characters. If it does, the video will be ingested successfully, but you will not be able to retranscode it later.</li>
       </ul>
