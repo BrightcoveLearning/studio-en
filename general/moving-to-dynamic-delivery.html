@@ -45,7 +45,16 @@ parent: General Information
       <dt>Can I migrate all of my videos over to Dynamic Delivery?</dt>
       <dd>For the most part, yes, and we recommend it. If you want to do that, <a href="https://supportportal.brightcove.com/s/login/?">open a Support case</a> and ask, and we will attempt to migrate all videos that are still on the legacy ingest system.
       <p>For details on how we will migrate your videos, see <a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-delivery.html#Back_catalog_migration">Back catalog migration</a>.</p>
+      <aside class="bcls-aside bcls-aside--information language-editable">Note that if your legacy videos are DRM-protected, we may not be able to migrate them unless we have a master. If not, and you have the source video, you can replace it using a Dynamic Delivery profile.</aside>
       </dd>
+      <dt>Does Dynamic Delivery support BYO CDN customers?</dt>
+      <dd>Dynamic Delivery allows customers to take advantage of their own CDN relationships, however all video assets must be managed by the Brightcove Origin.  Origin Serving is priced on expected cache miss (a cost to Brightcove).  Pricing for Origin Serving is already integrated into the Media Pricing Configurator and rates are listed on the “Rate Card Master” tab.
+        <aside class="bcls-aside bcls-aside--information language-editable">Note that a new CDN configuration will be needed for Dynamic Delivery.</aside>
+      </dd>
+      <dt>How will this impact my costs?</dt>
+      <dd>It depends on your setup. If you are using a Brightcove CDN, the impact to your costs should be negligible. If you are using a BYO CDN and using net storage, your storage costs at Brightcove will increase. Talk to your Account Manager for more information.</dd>
+      <dt>What if I want to migrate existing assets and support SSAI?</dt>
+      <dd>That can certainly be done. The migration will take a little longer, as the videos will need to be re-transcoded. See <a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-delivery.html#Back_catalog_migration">Back catalog migration</a>.</dd>
     </dl>
   </section>
 </article>
