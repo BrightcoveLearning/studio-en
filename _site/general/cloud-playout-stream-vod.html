@@ -912,7 +912,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <ul>
               <li><strong>Brightcove Live Event</strong> - Create or use a previously created Brightcove Live  Channel. When creating a new channel, the region of the channel will be optimized based upon the <strong>Output Region</strong> that was selected.</li>
               <li><strong>RTMP</strong> - Select to output the stream to an RTMP or RTP ingestion point. RTP is not available for third party ingestion points, only when <strong>Ad Insertion</strong> and <strong>Brightcove Live Event</strong> is enabled.</li>
-              <li><strong>Amazon S3 Bucket </strong>- Select to push an HLS output to an Amazon S3 bucket. You will be required to enter Bucket Name, Region, Access Key and Secret Key.</li>
+              <li><strong>Amazon S3 Bucket </strong>- Select to push an HLS output to an Amazon S3 bucket. You will be required to enter Bucket Name, Region, Access Key and Secret Key. The bucket should be public and writeable.</li>
             </ul>
           </li>
         </ul>
@@ -1026,7 +1026,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>While the channel is in a <strong>RUNNING</strong> state, it is possible to view channel output and analytics. Click on the channel on the <strong>Channels</strong> page to open the channel details. By default, the channel <strong>Output &amp; Analytics</strong> will be displayed.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/playout-channel-output.png" /></figure>
     <aside class="bcls-aside bcls-aside--information">Note: If Ad Insertion is enabled, the preview will not display.</aside>
-    <p>Click <strong>View in Brightcove Live</strong> to open the Live module Control Room page with the currently running program. The following analytics values will be displayed:</p>
+    <p>Click <strong>View in Brightcove Live</strong> to open the Live module Control Room page with the currently running program. The currently playing video in the program will be highlighted with a <strong>Playing Now</strong> banner.</p>
+    <p>The following analytics values will be displayed:</p>
     <ul>
       <li><strong>Network Out</strong> - Average bytes per second in the last minute</li>
       <li><strong>Speed vs Quality</strong> - Percent of the time that the system had to reduce the stream's quality to maintain speed in the last minute</li>
@@ -1039,15 +1040,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ul>
       <li> Your account must be enabled for Dynamic Delivery</li>
       <li>The Cloud Playout module is not yet integrated with user management. Everyone in the account will have access to the Cloud Playout module.</li>
-      <li>The input specification of the Cloud Playout channel is fixed with the following settings: </li>
-      <ul>
-        <li>CODEC - AVC</li>
-        <li>FRAME RATE &lt;= 30fps</li>
-        <li> BITRATE &lt;= 20 MBps</li>
-      </ul>
-      <li>The Cloud Playout channel shall be created only for the account enabled for dynamic packaging and assumes all the videos have an MP4 rendition that can be used against the playlist of cloud playout channel.</li>
+      <li>Cloud Playout requires your account be enabled for dynamic delivery  and assumes all the videos have an MP4 rendition.</li>
       <li>When the channel is restarted between the start time and end time,  the program will not be resumed from where it halted in the previous session. Instead, the program will start from the first video configured in the program.</li>
-      <li>There will be a delayed transition from invalid asset URL to the other, which means there will be black screen for more time than normal.</li>
       <li>If you are trying to fetch the current EPG for the channel for which scheduled end time is already elapsed and channel is in stopped state, then "EMPTY" EPG will be returned or HTTP Error.</li>
       <li>Current EPG will be generated based on the scheduled start time and end time and its the difference between the end time and start time is greater than 14 days, then it generates only 14 days from the time time requested to end time or 14 days which ever is earlier.</li>
       <li>You can also query EPG based on any start time and end time and it matches with the historic data and consolidates with futuristic EPG based on the playlist to frame it within the scheduled start time or end time &amp; max 14 days.</li>
