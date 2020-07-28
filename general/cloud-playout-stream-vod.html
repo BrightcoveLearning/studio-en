@@ -4,9 +4,9 @@ parent: General Information
 ---
 <h1>Using Cloud Playout to Stream VOD Videos</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn how to create a collection of VOD videos that can be streamed as a linear channel.</summary>
+  <summary>In this topic you will learn how  a collection of VOD videos can be streamed as a live linear channel.</summary>
   <section class="bcls-section">
-    <p>The  Cloud Playout module enables broadcasters and media publishers to create a collection of  VOD videos  and then stream it as a linear channel and leverage all the features provided by Brightcove Live.</p>
+    <p>The  Cloud Playout module enables broadcasters and media publishers to use a collection of VOD videos  and then stream them as a linear channel. The channel can be streamed to Brightcove Live, Amazon S3 or a specified RTMP URL.</p>
     <aside class="bcls-aside bcls-aside--information">Note: This feature is currently in Limited Availability. Contact your Brightcove Account Manager for more information.</aside>
     <p>To access the Cloud Playout module, click <strong>Cloud Playout</strong> in the navigation menu. A list of all Cloud Playout channels that have been created will be displayed (if any).</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-channel-list.png" /></figure>
@@ -123,6 +123,9 @@ parent: General Information
     <aside class="bcls-aside bcls-aside--information">Note: When using ad insertion, the channel can only be output to a Brightcove Live Event.</aside>
     <h3>Configuring Ad tags and fill slates</h3>
     <p>Ensure that you have ad tags and fill slates configured as part of your account administration. For information on configuring ad tags, see <a href="/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>. Fill slates are content that can be served when there are gaps in a live stream ad break. For information on creating fill slates, see <a href="https://live.support.brightcove.com/admin/managing-live-settings.html">Managing Live Settings</a>.</p>
+    <p>
+      <aside class="bcls-aside bcls-aside--information">Note: Cloud Playout will use the default ad slate configured as part of the <a href="https://live.support.brightcove.com/admin/managing-live-settings.html">Live Settings</a>.</aside>
+    </p>
     <h3>Creating placeholder ad break videos</h3>
     <p>You need to indicate which video(s) should be used as &quot;placeholder&quot; videos. &quot;Placeholder&quot; videos will be inserted into the program listing to indicate that an ad should be served and the length of the ad. This needs to be done because when using Server-Side Ad Insertion with Brightcove Live, the &quot;placeholder&quot; video will be replaced with ad content. If you do not insert an ad &quot;placeholder&quot; video, parts of the actual video will be replaced with ad content. If the ad duration is shorter than the ad returned, SSAI will show the ad slate. If the ad duration is longer than the ads returned, the ads will be displayed followed by the ad slate. </p>
     <p>You may need to create/upload video source files that have video lengths equal to the ad break durations you want to have (i.e. 2 mins, 4 mins, etc.). The content of these videos doesn't matter as they will not actually be played as part of a program. </p>
@@ -182,6 +185,7 @@ parent: General Information
     <p>While the channel is in a <strong>RUNNING</strong> state, it is possible to view channel output and analytics. Click on the channel on the <strong>Channels</strong> page to open the channel details. By default, the channel <strong>Output &amp; Analytics</strong> will be displayed.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/playout-channel-output.png" /></figure>
     <aside class="bcls-aside bcls-aside--information">Note: If Ad Insertion is enabled, the preview will not display.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: The preview image is updated every three seconds.</aside>
     <p>Click <strong>View in Brightcove Live</strong> to open the Live module Control Room page with the currently running program. The currently playing video in the program will be highlighted with a <strong>Playing Now</strong> banner.</p>
     <p>The following analytics values will be displayed:</p>
     <ul>
@@ -191,39 +195,19 @@ parent: General Information
     </ul>
   </section>
   <section class="bcls-section">
+    <h2 id="epg">Working with an electronic program guide</h2>
+    <p>An API is available to generate an electronic program guide for the Cloud Playout channel. For more information see xxxxx.</p>
+  </section>
+  <section class="bcls-section">
     <h2 id="limitations">Limitations</h2>
     <p>The following assumptions and limitations apply.</p>
     <ul>
-      <li> Your account must be enabled for Dynamic Delivery</li>
+      <li> Your account must be enabled for Dynamic Delivery and all videos must have an MP4 rendition.</li>
       <li>The Cloud Playout module is not yet integrated with user management. Everyone in the account will have access to the Cloud Playout module.</li>
-      <li>Cloud Playout requires your account be enabled for dynamic delivery  and assumes all the videos have an MP4 rendition.</li>
-      <li>When the channel is restarted between the start time and end time,  the program will not be resumed from where it halted in the previous session. Instead, the program will start from the first video configured in the program.</li>
-      <li>If you are trying to fetch the current EPG for the channel for which scheduled end time is already elapsed and channel is in stopped state, then "EMPTY" EPG will be returned or HTTP Error.</li>
-      <li>Current EPG will be generated based on the scheduled start time and end time and its the difference between the end time and start time is greater than 14 days, then it generates only 14 days from the time time requested to end time or 14 days which ever is earlier.</li>
-      <li>You can also query EPG based on any start time and end time and it matches with the historic data and consolidates with futuristic EPG based on the playlist to frame it within the scheduled start time or end time &amp; max 14 days.</li>
-      <li>Ad insert block will be always enabled for ad avail blanking.</li>
-      <li>Ad insert only uses Splice insert mode and not time code based ingest.</li>
-      <li>To have more accuracy on historic EPG, you may need to use Asset duration greater than 2 mins.</li>
-      <li>Input Looper : if the asset URL is duplicated, then input looper rely on order for switching; if the order is changes during the course of the switching , then subsequent N+1 switch it attempt to create would rely on the order. </li>
-      <li>Input Looper : if the current active asset of media live channel is deleted from the playlist, then input looper does not know which one to pick as follow the current asset, hence it considers first asset in the playlist as follow.</li>
-      <li>Input Looper : input looper attempts to create schedule action based on various factors every one mins, if the asset duration is less than one min, then there is possibility of delayed switching and causes black screen for more time. ( Still not determined , how frequently the input looper can poll!! , may be 20 sec! considering Ad asset of minimum duration of 30 sec?.)</li>
-      <li>The preview image for the CP channel is created on best effort basis.</li>
-      <li>in case of backdoor recover process directly onto Medialive may cause discrepancies in configuration/state in cloud playout.</li>
-      <li>AD slate provisioned in BC live channel created by CP will be set to default and can be overwritten through API if different ad slate ID to be used during the CP "DRAFT" channel state. </li>
-      <li>Below default configuration shall be used while creating the BC live from CP.
-        <div>
-          <pre>content encryption = none<br>DVR = false<br>Stream to social media = false<br>covert live 2 vod = false<br>Enable stream status notification = false<br>create recurring SEP = true.</pre>
-        </div>
-      </li>
-      <li>If the Video Cloud account is configured for geo-restriction, then Cloud Playout channel should be created in the same region where the content can be accessed based upon the Video Cloud geo-restriction policy.</li>
-    </ul>
-    <h3>Electronic Program Guide (EPG) Limitations</h3>
-    <ul>
-      <li>The EPG is generated on best effort / with closest to accuracy. </li>
-      <li>When EPG is initially constructed from the playlist, there may be a start time error as the CP takes some time to initiate the switching.</li>
-      <li>EPG may not be consistent for every retrieval when the below actions are performed as its constructed dynamically based on the current information it holds. (some scenarios are reorder, add/delete of an asset in a playlist, etc.).</li>
-      <li>If any malfunction happens in the switching , and switch time is not accurate.</li>
-      <li>There could be transit inaccuracy for the future EPG, say some cases like playlist switch, delete current active asset in playlist etc. Consumers should use polling to get the closest , best effort EPG at any time and proactive notification on the changes by the server.</li>
+      <li>To have more accuracy on the electronic program guide, Brightcove recommends using videos with at least a 2 minute duration.</li>
+      <!--<li><strong>Input Looper : if the asset URL is duplicated, then input looper rely on order for switching; if the order is changes during the course of the switching , then subsequent N+1 switch it attempt to create would rely on the order. </strong></li>-->
+      <li>If the Video Cloud account is configured for geo-restriction, then the channel <strong>Output Region</strong> should be created in a  region compatible with the Video Cloud geo-restriction policy.</li>
+      <li>For the best experience, Brightcove recommends using the Google Chrome browser. </li>
     </ul>
   </section>
 </article>
