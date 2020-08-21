@@ -3,7 +3,7 @@
   url: /index.html
 - section: 
   name: Getting Started
-  url: /get-started/
+  url: /get-started/index.html
   docs:
     - name: Getting Started with Video Cloud Studio
       url: /get-started/getting-started-video-cloud-studio.html
@@ -27,7 +27,7 @@
       url: /training/video-cloud-studio-training-videos.html
 - section: 
   name: Learn the Basics
-  url: /basics/
+  url: /basics/index.html
   docs:
     - name: Activating and Deactivating a Video
       url: /basics/video-cloud-basics-activating-and-deactivating-video.html
@@ -67,7 +67,7 @@
       url: /basics/video-cloud-basics-viewing-brightcove-system-status-page.html
 - section: 
   name: General Information
-  url: /general/
+  url: /general/index.html
   docs:
     - name: Adding a Facebook Like Button to a Player
       url: /general/adding-facebook-button-brightcove-player.html
@@ -119,7 +119,7 @@
       url: /general/working-multiple-video-cloud-accounts.html
 - section: 
   name: Managing Videos
-  url: /media/
+  url: /media/index.html
   docs:
     - name: Adding Audio Tracks to Videos
       url: /media/adding-audio-tracks-videos-using-media-module.html
@@ -177,7 +177,7 @@
       url: /media/working-remote-asset-videos.html
 - section: 
   name: Managing Players
-  url: /players/
+  url: /players/index.html
   docs:
     - name: Configuring a Player Overlay
       url: /players/configuring-player-overlay-using-overlay-plugin.html
@@ -215,7 +215,7 @@
       url: /players/styling-players.html
 - section: 
   name: 'Publishing Videos & Players'
-  url: /publish/
+  url: /publish/index.html
   docs:
     - name: Adding a 3Play Media Interactive Transcript
       url: /publish/adding-3play-media-interactive-transcript-video.html
@@ -257,7 +257,7 @@
       url: /publish/using-reference-ids.html
 - section: 
   name: Reviewing Analytics
-  url: /analytics/
+  url: /analytics/index.html
   docs:
     - name: Analytics Module UI Glossary
       url: /analytics/analytics-module-ui-glossary.html
@@ -285,7 +285,7 @@
       url: /analytics/reviewing-player-event-data-google-analytics.html
 - section: 
   name: Administering Accounts
-  url: /admin/
+  url: /admin/index.html
   docs:
     - name: Authenticating Studio Users using SSO
       url: /admin/authenticating-studio-users-using-single-sign.html
@@ -325,7 +325,7 @@
       url: /admin/viewing-billing-information.html
 - section: 
   name: Training
-  url: /training/
+  url: /training/index.html
   docs:
     - name: All Online Training Courses
       url: /training/online-training-courses.html
@@ -343,13 +343,13 @@
       url: /training/brightcove-university.html
 - section: 
   name: Release Notes
-  url: /release-notes/
+  url: /release-notes/index.html
   docs:
     - name: Video Cloud Studio Release Notes
       url: /release-notes/video-cloud-studio-release-notes.html
 - section: 
   name: Support
-  url: /support/
+  url: /support/index.html
   docs:
     - name: 'Brightcove Answers'
       url: '/support/brightcove-answer.html'
