@@ -900,7 +900,16 @@ brief overview of what
 00:00:14.940 --&gt; 00:00:17.490 align:middle line:90%
 you can accomplish using it.
 </pre>
-    <aside class="bcls-aside bcls-aside--information">Note: Caption file names should only include letters (upper or lower case), numbers, dashes (-) and underscores (_) .</aside>
+    <aside class="bcls-aside bcls-aside--information">Notes:
+      <ul>
+        <li>Caption file names should only include letters (upper or lower case), numbers, dashes (-) and underscores (_).</li>
+        <li>
+          We have seen cases where captions created by a third party start the captions with the time stamp:
+          <p>01:00:00.000</p>
+          <p>This will cause the captions to being <strong>one hour</strong> into the video. To ensure that the captions are correctly synced with the video, make sure that the time stamps begin with <strong>00:00:00.000</strong> and check all time stamps for the <strong>01</strong> hour offset.</p>
+        </li>
+      </ul>
+      </aside>
     <p>For more information on the WebVTT format, see <a href="http://dev.w3.org/html5/webvtt/">this link</a>. You should have a separate caption file for each language you need to support. While there are many third-party tools to help create captions files, Brightcove has several partners that provide transcription, captioning and translation services. For a complete list of Brightcove partners, visit the <a href="https://www.brightcove.com/en/partners">Partners</a> section of our website.</p>
   </section>
   <section class="bcls-section">
