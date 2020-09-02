@@ -1,7 +1,7 @@
-- section: 
+- section:
   name: Home
   url: /index.html
-- section: 
+- section:
   name: Getting Started
   url: /get-started/index.html
   docs:
@@ -25,7 +25,7 @@
       url: /get-started/video-cloud-glossary.html
     - name: Video Cloud Studio Training Videos
       url: /training/video-cloud-studio-training-videos.html
-- section: 
+- section:
   name: Learn the Basics
   url: /basics/index.html
   docs:
@@ -65,7 +65,7 @@
       url: /basics/video-cloud-basics-uploading-videos.html
     - name: Viewing the Brightcove System Status Page
       url: /basics/video-cloud-basics-viewing-brightcove-system-status-page.html
-- section: 
+- section:
   name: General Information
   url: /general/index.html
   docs:
@@ -117,7 +117,7 @@
       url: /general/working-audio-content.html
     - name: Working with Multiple Accounts
       url: /general/working-multiple-video-cloud-accounts.html
-- section: 
+- section:
   name: Managing Videos
   url: /media/index.html
   docs:
@@ -175,7 +175,7 @@
       url: /media/working-multi-lingual-metadata.html
     - name: Working with Remote Asset Videos
       url: /media/working-remote-asset-videos.html
-- section: 
+- section:
   name: Managing Players
   url: /players/index.html
   docs:
@@ -213,7 +213,7 @@
       url: /players/setting-player-update-mode-and-version.html
     - name: Styling Players
       url: /players/styling-players.html
-- section: 
+- section:
   name: 'Publishing Videos & Players'
   url: /publish/index.html
   docs:
@@ -255,7 +255,7 @@
       url: /publish/using-multiple-players-one-page.html
     - name: Using Reference IDs
       url: /publish/using-reference-ids.html
-- section: 
+- section:
   name: Reviewing Analytics
   url: /analytics/index.html
   docs:
@@ -283,7 +283,7 @@
       url: /analytics/performance-report-reference.html
     - name: Reviewing Player Events in Google Analytics
       url: /analytics/reviewing-player-event-data-google-analytics.html
-- section: 
+- section:
   name: Administering Accounts
   url: /admin/index.html
   docs:
@@ -321,9 +321,11 @@
       url: /admin/standard-ingest-profiles-legacy-transcoding.html
     - name: Managing Users
       url: /admin/managing-users.html
+    - name: Using the Directed Migration Tool
+      url: /admin/using-directed-migration-tool-migrate-brightcove-smart-players.html
     - name: Viewing Billing Information
       url: /admin/viewing-billing-information.html
-- section: 
+- section:
   name: Training
   url: /training/index.html
   docs:
@@ -341,13 +343,13 @@
       url: /training/video-cloud-studio-training-videos.html
     - name: Brightcove University Training Courses
       url: /training/brightcove-university.html
-- section: 
+- section:
   name: Release Notes
   url: /release-notes/index.html
   docs:
     - name: Video Cloud Studio Release Notes
       url: /release-notes/video-cloud-studio-release-notes.html
-- section: 
+- section:
   name: Support
   url: /support/index.html
   docs:
