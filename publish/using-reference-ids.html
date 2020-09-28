@@ -18,10 +18,10 @@ parent: 'Publishing Videos & Players'
     <p>By default, when you publish a video with a player in Video Cloud Studio, you will see that it uses the video ID. To use a reference ID, simply prepend the reference identifier with <code translate="No">ref:</code>.</p>
     <p>So, instead of using a video ID like this:</p>
     <pre class="line-numbers">
-<code class="language-html">&lt;video-js data-video-id="4746402489001"</code></pre>
+<code class="language-html" translate="No">&lt;video-js data-video-id="4746402489001"</code></pre>
     <p>You could use a reference ID like this:</p>
     <pre class="line-numbers">
-<code class="language-html">&lt;video-js data-video-id="ref:skivideo"</code></pre>
+<code class="language-html" translate="No">&lt;video-js data-video-id="ref:skivideo"</code></pre>
     <p>The same applies for a playlist ID. For details, see the examples below.</p>
     <aside class="bcls-aside bcls-aside--information">Note: Reference IDs <strong>must</strong> be unique across all videos in an account.</aside>
     <p>To insure uniqueness of reference ids, operations involving reference ids will lock the id for up to 30 seconds. That means that if remove a reference id from a video (or delete that video) and then try to use the reference id for another video immediately, the operation will fail with a 409 error. Please wait at least 30 seconds after getting this error before retrying the operation.</p>
@@ -51,7 +51,7 @@ parent: 'Publishing Videos & Players'
       <li>Change the <code translate="No">videoId</code> value to the appropriate reference ID, prepended with the <strong>ref:</strong> term.</li>
     </ol>
     <pre class="line-numbers">
-<code class="language-html">&lt;!doctype html&gt;
+<code class="language-html" translate="No">&lt;!doctype html&gt;
 &lt;html&gt;
 
 &lt;head&gt;
@@ -78,7 +78,7 @@ parent: 'Publishing Videos & Players'
       <li>Change the <code translate="No">data-video-id</code> value to the appropriate reference ID, prepended with the <strong>ref:</strong> term.</li>
     </ol>
     <pre class="line-numbers">
-<code class="language-html">&lt;!doctype html&gt;
+<code class="language-html" translate="No">&lt;!doctype html&gt;
 &lt;html&gt;
 
 &lt;head&gt;
@@ -113,7 +113,7 @@ parent: 'Publishing Videos & Players'
       <li>Change the <code translate="No">playlistId</code> value to the appropriate reference ID, prepended with the <strong>ref:</strong> term.</li>
     </ol>
     <pre class="line-numbers">
-<code class="language-html">&lt;!doctype html&gt;
+<code class="language-html" translate="No">&lt;!doctype html&gt;
 &lt;html&gt;
 
 &lt;head&gt;
@@ -140,7 +140,7 @@ parent: 'Publishing Videos & Players'
       <li>Change the <code translate="No">data-playlist-id</code> value to the appropriate reference ID, prepended with the <strong>ref:</strong> term.</li>
     </ol>
     <pre class="line-numbers">
-<code class="language-html">&lt;!doctype html&gt;
+<code class="language-html" translate="No">&lt;!doctype html&gt;
 &lt;html&gt;
 
 &lt;head&gt;

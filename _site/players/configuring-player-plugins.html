@@ -948,7 +948,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Plugin_code_location">Plugin code location</h2>
     <p>When a plugin, be it a Brightcove supplied plugin or a custom plugin you have built, is added to the player as shown above, or using the Player Management API, the plugin becomes part of the player code itself. The plugin code is retrieved from its storage location on the Internet and made part of the code for the specific player to which the plugin was added. To illustrate this further, when you use the Advanced (in-page) player implementation you see a <code translate="No">&lt;script&gt;</code> tag similar to the following:</p>
     <pre class="line-numbers">
-	<code class="language-html">&lt;script src="//players.brightcove.net/1507807800001/default_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
+	<code class="language-html" translate="No">&lt;script src="//players.brightcove.net/1507807800001/default_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
     <p>This is the code that defines your Brightcove Player. This file includes code for any of the plugins you have added to the player. The plugin code is also included in the Standard (iframe) player implementation.</p>
     <p>If you develop your own plugin and change the source code in its Internet storage location, be sure you re-publish your player as the new plugin code will NOT be part of the JavaScript file unless you do so.</p>
     <p>For information on creating plugins, see the <a href="https://player.support.brightcove.com/coding-topics/step-step-plugin-development.html">Step-by-Step: Plugin Development</a> developer document.</p>
@@ -970,7 +970,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 29 May 2020
+  Page last updated on 28 Sep 2020
 </div>
 
 

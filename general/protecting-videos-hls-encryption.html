@@ -25,7 +25,7 @@ parent: General Information
       <li>To add encryption to your HLS renditions for accounts enabled for <a href="/general/overview-dynamic-delivery.html">Dynamic Delivery</a>, simply submit a request to Brightcove Support to enable HLSe for the account. (For accounts already enabled for HLSe, if your account is enabled for Dynamic Delivery, encryption will continue to be applied to all HLS renditions.)</li>
       <li>To add encryption to your HLS renditions in accounts using the legacy ingest system (non-Dynamic Delivery), add the <code translate="No">encryption_method</code> and <code translate="No">encryption_key_rotation_period</code> fields to each of the HLS renditions defined in your ingestion profile:
         <pre class="line-numbers">
-<code class="language-json">{
+<code class="language-json" translate="No">{
   "media_type": "video",
   "reference_id": "ts0",
   "format": "ts",
