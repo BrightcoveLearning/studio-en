@@ -916,8 +916,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <p>Yes</p>
       <ul>
         <li>SP-initiated login is supported via a special direct domain login URL that will look like this:<br />
-          <code>https://signin.brightcove.com/login/ext/saml?behavior=xxxxxxxxx</code></li>
-        <li>It is also possible for users to go to the <code>signin.brightcove.com</code> page. When they type in username/password on the Brightcove signin page, they will be redirected to your IdP to login (if you are not already signed in). Note the password field gets ignored on the Brightcove login page - we only inspect the email address to see if the user is enabled for SSO.</li>
+          <code translate="No">https://signin.brightcove.com/login/ext/saml?behavior=xxxxxxxxx</code></li>
+        <li>It is also possible for users to go to the <code translate="No">signin.brightcove.com</code> page. When they type in username/password on the Brightcove signin page, they will be redirected to your IdP to login (if you are not already signed in). Note the password field gets ignored on the Brightcove login page - we only inspect the email address to see if the user is enabled for SSO.</li>
       </ul>
     </div>
     <h5 class="bcls-question">Does Brightcove support the use of RelayState parameter in SAMLRequest/SAMLResponse for direct access to video after SSO?</h5>

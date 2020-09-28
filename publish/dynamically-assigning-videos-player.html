@@ -20,13 +20,13 @@ parent: 'Publishing Videos & Players'
   </section>
   <section class="bcls-section">
     <h2 id="videourlparam">Passing the video ID as a URL parameter</h2>
-    <p>You can change the video source for a player by passing the video ID as a URL parameter using the form <code>?videoId=YOUR_VIDEO_ID</code>.</p>
+    <p>You can change the video source for a player by passing the video ID as a URL parameter using the form <code translate="No">?videoId=YOUR_VIDEO_ID</code>.</p>
     <pre class="line-numbers">
 <code class="language-html">http://players.brightcove.net/20318290001/f1d70e07-8480-4bbd-b4ef-747e9333a034_default/index.html<strong>?videoId=4292158104001</strong></code></pre>
   </section>
   <section class="bcls-section">
     <h2 id="refurlparam">Passing the reference ID as a URL parameter</h2>
-    <p>You can change the video source for a player by passing the reference ID as a URL parameter using the form <code>?videoId=ref:YOUR_VIDEO_REF_ID</code>.</p>
+    <p>You can change the video source for a player by passing the reference ID as a URL parameter using the form <code translate="No">?videoId=ref:YOUR_VIDEO_REF_ID</code>.</p>
     <pre class="line-numbers">
 <code class="language-html">http://players.brightcove.net/20318290001/f1d70e07-8480-4bbd-b4ef-747e9333a034_default/index.html<strong>?videoId=ref:1234</strong></code></pre>
   </section>
@@ -35,7 +35,7 @@ parent: 'Publishing Videos & Players'
     <p>You can assign a Video Cloud video to the player embed code directly using the video ID.</p>
     <div class="BCL-subsection">
       <h3>In-Page Embed Code</h3>
-      <p>Add the attribute <code>data-video-id="YOUR_VIDEO_ID"</code> to the <code>&lt;video&gt;</code> tag:</p>
+      <p>Add the attribute <code translate="No">data-video-id="YOUR_VIDEO_ID"</code> to the <code translate="No">&lt;video&gt;</code> tag:</p>
       <pre class="line-numbers">
 <code class="language-html">&lt;video-js   data-account="57838016001"
   data-player="6e44f16e-31e9-48b2-83b9-6edd71217540"
@@ -48,7 +48,7 @@ parent: 'Publishing Videos & Players'
     </div>
     <div class="BCL-subsection">
       <h3>iframe Embed Code</h3>
-      <p>Add <code>?videoId=YOUR_VIDEO_ID</code> to the end of the URL in the <code>src</code> attribute for the iframe:</p>
+      <p>Add <code translate="No">?videoId=YOUR_VIDEO_ID</code> to the end of the URL in the <code translate="No">src</code> attribute for the iframe:</p>
       <pre class="line-numbers">
 <code class="language-html">&lt;iframe src='//players.brightcove.net/57838016001/6e44f16e-31e9-48b2-83b9-6edd71217540_default/index.html<strong>?videoId=68143720001</strong>'
  allowfullscreen webkitallowfullscreen mozallowfullscreen&gt;&lt;/iframe&gt;</code></pre>
@@ -60,7 +60,7 @@ parent: 'Publishing Videos & Players'
     <aside class="bcls-aside bcls-aside--information">Note: When using a reference ID that has special characters, you must escape the special characters in the publishing code or issues may arise.</aside>
     <div class="BCL-subsection">
       <h3>In-Page Embed Code</h3>
-      <p>Add the attribute <code>data-video-id="ref:YOUR_VIDEO_REF_ID"</code> to the <code>&lt;video&gt;</code> tag:</p>
+      <p>Add the attribute <code translate="No">data-video-id="ref:YOUR_VIDEO_REF_ID"</code> to the <code translate="No">&lt;video&gt;</code> tag:</p>
       <pre class="line-numbers">
 <code class="language-html">&lt;video-js data-account="57838016001"
   data-player="6e44f16e-31e9-48b2-83b9-6edd71217540"
@@ -72,7 +72,7 @@ parent: 'Publishing Videos & Players'
     </div>
     <div class="BCL-subsection">
       <h3>iframe Embed Code</h3>
-      <p>Add <code>?videoId=ref:YOUR_VIDEO_REF_ID</code> to the end of the URL in the <code>src</code> attribute for the iframe:</p>
+      <p>Add <code translate="No">?videoId=ref:YOUR_VIDEO_REF_ID</code> to the end of the URL in the <code translate="No">src</code> attribute for the iframe:</p>
       <pre class="line-numbers">
 <code class="language-html">&lt;iframe src='//players.brightcove.net/57838016001/6e44f16e-31e9-48b2-83b9-6edd71217540_default/index.html<strong>?videoId=ref:68143720001</strong>'
  allowfullscreen webkitallowfullscreen mozallowfullscreen&gt;&lt;/iframe&gt;</code></pre>

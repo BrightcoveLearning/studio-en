@@ -20,10 +20,10 @@ parent: 'Publishing Videos & Players'
     <p>Give your video a reference ID and then change your embed code so that it refers to the video by reference ID and not by video ID.</p>
     <p>The embed code would change from this:</p>
     <pre>
-<code>&lt;iframe src="//players.brightcove.net/1486906377/default_default/index.html?<strong>videoId=5308260054001</strong>"   allowfullscreen  webkitallowfullscreen  mozallowfullscreen  width="640"  height="360"&gt;&lt;/iframe&gt;</code></pre>
+<code translate="No">&lt;iframe src="//players.brightcove.net/1486906377/default_default/index.html?<strong>videoId=5308260054001</strong>"   allowfullscreen  webkitallowfullscreen  mozallowfullscreen  width="640"  height="360"&gt;&lt;/iframe&gt;</code></pre>
     <p>To this:</p>
     <pre>
-<code>&lt;iframe src="//players.brightcove.net/1486906377/default_default/index.html?<strong>videoId=ref:frontpage</strong>"   allowfullscreen  webkitallowfullscreen  mozallowfullscreen  width="640"  height="360"&gt;&lt;/iframe&gt;</code></pre>
+<code translate="No">&lt;iframe src="//players.brightcove.net/1486906377/default_default/index.html?<strong>videoId=ref:frontpage</strong>"   allowfullscreen  webkitallowfullscreen  mozallowfullscreen  width="640"  height="360"&gt;&lt;/iframe&gt;</code></pre>
     <p>Now, whenever you need to change the video in the player, remove the <strong>frontpage</strong> reference ID from the video and assign it to the new video you want to appear in the player.</p>
   </section>
   <section class="bcls-section">

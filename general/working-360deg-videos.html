@@ -41,17 +41,17 @@ parent: General Information
     <p>Since only a small part of the video will be in the player at any one time, you want a very high quality rendition to be playing, with no chance of a lower quality rendition appearing. In essence, you are "zooming in" on part of the video and a poor quality rendition would yield a very poor quality viewing experience.</p>
     <p>When uploading your video, Brightcove recommends using an appropriate ingest profile for 360° videos:</p>
     <ul>
-      <li><strong>Legacy</strong> - Brightcove recommends using the <code>single-bitrate-high (2 renditions)</code></li>
+      <li><strong>Legacy</strong> - Brightcove recommends using the <code translate="No">single-bitrate-high (2 renditions)</code></li>
       <li><strong>Dynamic Delivery</strong> - Brightcove recommends <a href="/admin/creating-ingest-profiles-dynamic-delivery.html">creating a custom profile</a> with a single 1080p rendition and at least one audio rendition</li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: The <code>single-bitrate-high</code> profile was created for videos recorded up to 1080p. If your 360° video was recorded in 4K, you should create a custom ingest profile with higher dimensions. For information on creating custom ingest profiles, see <a href="/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a>. Some care should be taken as mobile devices sometimes have fixed bitrate and resolution limits. Some old mobile devices may fail to play 360° videos higher than 1080p.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: The <code translate="No">single-bitrate-high</code> profile was created for videos recorded up to 1080p. If your 360° video was recorded in 4K, you should create a custom ingest profile with higher dimensions. For information on creating custom ingest profiles, see <a href="/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a>. Some care should be taken as mobile devices sometimes have fixed bitrate and resolution limits. Some old mobile devices may fail to play 360° videos higher than 1080p.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="props">360° video properties</h2>
     <p>All Video Cloud videos have a set of properties that can be set using Video Cloud Studio or programmatically using the CMS API. Note that not all of the properties are exposed in Video Cloud Studio.</p>
     <aside class="bcls-aside bcls-aside--information">Note: For a list of all the video properties, see the <a href="https://apis.support.brightcove.com/cms/references/cms-api-video-fields-reference.html">CMS API Video Fields Reference</a> document.</aside>
     <p>To indicate that a video is a 360° video, use the Media module to edit the video properties and set the <strong>Video Projection</strong> property to <strong>360°</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: The CMS API can also be used to set the <strong><code>projection</code></strong> property to <strong>equirectangular</strong>. For more information, see <a href="https://apis.support.brightcove.com/cms/managing-videos/setting-360-degree-video-properties-cms-api.html">Setting 360° Video Properties with the CMS API</a> document.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: The CMS API can also be used to set the <strong><code translate="No">projection</code></strong> property to <strong>equirectangular</strong>. For more information, see <a href="https://apis.support.brightcove.com/cms/managing-videos/setting-360-degree-video-properties-cms-api.html">Setting 360° Video Properties with the CMS API</a> document.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="publish">Publishing 360° videos</h2>

@@ -87,7 +87,7 @@ parent: Managing Players
   </section>
   <section class="bcls-section">
     <h2 id="Plugin_code_location">Plugin code location</h2>
-    <p>When a plugin, be it a Brightcove supplied plugin or a custom plugin you have built, is added to the player as shown above, or using the Player Management API, the plugin becomes part of the player code itself. The plugin code is retrieved from its storage location on the Internet and made part of the code for the specific player to which the plugin was added. To illustrate this further, when you use the Advanced (in-page) player implementation you see a <code>&lt;script&gt;</code> tag similar to the following:</p>
+    <p>When a plugin, be it a Brightcove supplied plugin or a custom plugin you have built, is added to the player as shown above, or using the Player Management API, the plugin becomes part of the player code itself. The plugin code is retrieved from its storage location on the Internet and made part of the code for the specific player to which the plugin was added. To illustrate this further, when you use the Advanced (in-page) player implementation you see a <code translate="No">&lt;script&gt;</code> tag similar to the following:</p>
     <pre class="line-numbers">
 	<code class="language-html">&lt;script src="//players.brightcove.net/1507807800001/default_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
     <p>This is the code that defines your Brightcove Player. This file includes code for any of the plugins you have added to the player. The plugin code is also included in the Standard (iframe) player implementation.</p>

@@ -989,7 +989,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h3>Creating placeholder ad break videos</h3>
     <p>You need to indicate which video(s) should be used as &quot;placeholder&quot; videos. &quot;Placeholder&quot; videos will be inserted into the program listing to indicate that an ad should be served and the length of the ad. This needs to be done because when using Server-Side Ad Insertion with Brightcove Live, the &quot;placeholder&quot; video will be replaced with ad content. If you do not insert an ad &quot;placeholder&quot; video, parts of the actual video will be replaced with ad content. If the ad duration is shorter than the ad returned, SSAI will show the ad slate. If the ad duration is longer than the ads returned, the ads will be displayed followed by the ad slate. </p>
     <p>You may need to create/upload video source files that have video lengths equal to the ad break durations you want to have (i.e. 2 mins, 4 mins, etc.). The content of these videos doesn't matter as they will not actually be played as part of a program. </p>
-    <p>To mark a video as a &quot;placeholder&quot; video, use the Media module to edit the video properties for these videos and tag them with <code>cp-ad-holder</code>.
+    <p>To mark a video as a &quot;placeholder&quot; video, use the Media module to edit the video properties for these videos and tag them with <code translate="No">cp-ad-holder</code>.
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-tag-video.png" /></figure>
     </p>
     <h3>Enabling Server-Side Ads for a channel</h3>
@@ -1001,7 +1001,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ol class="bcls-tasklist-restart" style="--s:1">
       <li>Click a channel name to edit it.</li>
       <li>In the program listing, click the checkbox next to the video <strong>after</strong> which you want an ad to play.</li>
-      <li>Click <strong>Insert Ads</strong> and select an <strong>ad duration</strong>. The list of ad durations is generated based upon the lengths of all the ad break &quot;placeholder&quot; videos (tagged <code>cp-ad-holder</code>).
+      <li>Click <strong>Insert Ads</strong> and select an <strong>ad duration</strong>. The list of ad durations is generated based upon the lengths of all the ad break &quot;placeholder&quot; videos (tagged <code translate="No">cp-ad-holder</code>).
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-insert-ads-button.png" /></figure>
       </li>
       <li>Click <strong>Ok</strong>. The &quot;placeholder&quot; video with the selected length will be inserted into the program after the selected video.
