@@ -23,10 +23,10 @@ parent: Managing Players
     <h2 id="Overlay_plugin_options"><span class="notranslate">Overlay</span> plugin options</h2>
     <p>The plugin options are used to configure when the overlay appears, when it disappears, what will be displayed, and where it will be displayed. The following plugin options (formatted as JSON) are supported:</p>
     <ul>
-      <li class="language-editable"><code class="notranslate"><strong>start</strong></code> - Defines when to show an overlay. Value can be a string or number. If it is a number, the overlay will be displayed when that time (in seconds) in the video playback has passed. If the value is a string, it is interpreted as a Brightcove Player&nbsp;event name, like <code class="notranslate">play</code>, <code class="notranslate">pause</code> or <code class="notranslate">ended</code>. A list of all player events is located in the <a href="https://docs.brightcove.com/brightcove-player/current-release/Player.html#toc125__anchor">Player API</a>.</li>
-      <li class="language-editable"><code class="notranslate"><strong>end</strong></code> - Defines when to hide an overlay. Value can be a string or number. If it is a number, the overlay will be hidden when that time (in seconds) in the video playback has passed. If the value is a string, it is interpreted as a Brightcove Player&nbsp;event name, like <code class="notranslate">play</code>, <code class="notranslate">pause</code> or <code class="notranslate">ended</code>. A list of all player events is located in the <a href="https://docs.brightcove.com/brightcove-player/current-release/Player.html#toc125__anchor">Player API</a>.</li>
-      <li class="language-editable"><code class="notranslate"><strong>content</strong></code> - Defines what will be displayed as the overlay. The value can be a string or DOM object. You can pass in a string, an HTML element (image) or a DOM DocumentFragment.</li>
-      <li class="language-editable"><code class="notranslate"><strong>align</strong></code> - Defines where to show the overlay. The following values are supported: <code class="notranslate">top-left, top, top-right, right, bottom-right, bottom, bottom-left, left</code></li>
+      <li class="language-editable"><code translate="No"><strong>start</strong></code> - Defines when to show an overlay. Value can be a string or number. If it is a number, the overlay will be displayed when that time (in seconds) in the video playback has passed. If the value is a string, it is interpreted as a Brightcove Player&nbsp;event name, like <code translate="No">play</code>, <code translate="No">pause</code> or <code translate="No">ended</code>. A list of all player events is located in the <a href="https://docs.brightcove.com/brightcove-player/current-release/Player.html#toc125__anchor">Player API</a>.</li>
+      <li class="language-editable"><code translate="No"><strong>end</strong></code> - Defines when to hide an overlay. Value can be a string or number. If it is a number, the overlay will be hidden when that time (in seconds) in the video playback has passed. If the value is a string, it is interpreted as a Brightcove Player&nbsp;event name, like <code translate="No">play</code>, <code translate="No">pause</code> or <code translate="No">ended</code>. A list of all player events is located in the <a href="https://docs.brightcove.com/brightcove-player/current-release/Player.html#toc125__anchor">Player API</a>.</li>
+      <li class="language-editable"><code translate="No"><strong>content</strong></code> - Defines what will be displayed as the overlay. The value can be a string or DOM object. You can pass in a string, an HTML element (image) or a DOM DocumentFragment.</li>
+      <li class="language-editable"><code translate="No"><strong>align</strong></code> - Defines where to show the overlay. The following values are supported: <code translate="No">top-left, top, top-right, right, bottom-right, bottom, bottom-left, left</code></li>
     </ul>
     <p>The following sample options will display a Brightcove logo image starting at the 2 seconds point in the video and ending when the video passes the 6 second point:</p>
     <pre>
@@ -54,16 +54,16 @@ parent: Managing Players
       <li class="language-editable">For the <strong>Plugin Name</strong>, enter <strong class="notranslate">overlay</strong>.</li>
       <li class="language-editable">For the <strong>JavaScript URL</strong>, enter:
         <pre>
-<code class="notranslate">//players.brightcove.net/videojs-overlay/2/videojs-overlay.min.js</code></pre>
+<code translate="No">//players.brightcove.net/videojs-overlay/2/videojs-overlay.min.js</code></pre>
       </li>
       <li class="language-editable">For the <strong>CSS URL</strong>, enter:
         <pre>
-<code class="notranslate">//players.brightcove.net/videojs-overlay/2/videojs-overlay.css</code>
+<code translate="No">//players.brightcove.net/videojs-overlay/2/videojs-overlay.css</code>
 	</pre>
       </li>
       <li class="language-editable">Enter the <strong>Options(JSON)</strong>. The example below will display a clickable image at the bottom of the player starting at the 2 second mark and ending at the 6 second mark.
         <pre>
-<code class="notranslate">{
+<code translate="No">{
 	  "overlays": [
 	    {
 	      "start": 2,
