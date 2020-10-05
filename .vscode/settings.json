@@ -1,11 +1,5 @@
 {
   "workbench.colorCustomizations": {
-    "titleBar.activeForeground": "#BFC5FF",
-    "titleBar.activeBackground": "#000643",
-    "titleBar.inactiveForeground": "#A5AEFF",
-    "titleBar.inactiveBackground": "#00074F",
-    "statusBar.noFolderForeground": "#D0DEFC",
-    "statusBar.noFolderBackground": "#172443",
     "[ColorCode]": {
       "foreground": "#DEE6B3",
       "editor.foreground": "#E3F76E",
@@ -29,6 +23,12 @@
       "widget.shadow": "#452708",
       "focusBorder": "#452708"
     },
+    "titleBar.activeForeground": "#BFC5FF",
+    "titleBar.activeBackground": "#000643",
+    "titleBar.inactiveForeground": "#A5AEFF",
+    "titleBar.inactiveBackground": "#00074F",
+    "statusBar.noFolderForeground": "#D0DEFC",
+    "statusBar.noFolderBackground": "#172443",
     "terminal.background": "#22221B",
     "terminal.foreground": "#929181",
     "terminalCursor.background": "#929181",
