@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="Brightcove recommends that you use the following encoding specifications for video files that you upload to your media library.">
   
   <title>Video Source File Specifications and Recommendations</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -867,8 +867,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
+<h1>Video Source File Specifications and Recommendations</h1>
 <article class="bcls-article">
-  <h1>Video Source File Specifications and Recommendations</h1>
   <summary>Brightcove recommends that you use the following encoding specifications for video files that you upload to your media library.</summary>
   <section class="bcls-section">
     <h2 id="introduction">Introduction</h2>
@@ -884,6 +884,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><a href="#mobile">Encoding for mobile applications</a></li>
       <li><a href="#aspect">Maintaining aspect ratios</a></li>
     </ul>
+    <h3>HEVC (H.265) video</h3>
+    <p>High Efficiency Video Coding (<a href="https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding">HEVC</a>), also known as H.265, is a video compression standard, designed as a successor to the widely used <a href="https://en.wikipedia.org/wiki/Advanced_Video_Coding">Advanced Video Coding (AVC/H.264)</a>. In comparison to AVC, HEVC offers from 25% to 50% better data compression at the same level of video quality, or substantially improved video quality at the same bit rate.</p>
+    <p>The benefits of this improved compression include reduced bandwidth usage, enabling higher video quality at a lower bitrate, and reduced time to first frame (TTFF), all leading to increased end viewer satisfaction.</p>
+    <h4>Disadvantages of HEVC</h4>
+    <p>There is only one disadvantage: because it is a new technology, HEVC video is not yet widely supported by clients (meaning device + OS + browser/app). In addition, some clients are capable of switching between HEVC and AVC segments during playback, while others are not. See <a href="https://apis.support.brightcove.com/ingest-profiles/guides/hevc-video.html">HEVC Video</a> for more information.</p>
+    <h4>Availability</h4>
+    <p>HEVC support is a <strong><em>paid add-on</em></strong> for Video Cloud. If you are interested in HEVC support, contact your Account Manager.</p>
   </section>
   <section class="bcls-section">
     <h2 id="source_file_naming">Source file naming</h2>
