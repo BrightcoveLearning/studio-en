@@ -87,35 +87,64 @@ layout: staging
   </section>
   <section class="bcls-section">
     <h2 id="add_videos">Adding videos and live events to a channel</h2>
-    <p>After you create your channel, the screen will show the channel details:</p>
+    <p>After you create your channel, the screen will show the channel settings:</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/general/cloudplayout-channel-details.png" alt="Channel Details">
-      <figcaption class="bcls-caption--image">Channel Details</figcaption>
+      <img class="bcls-image" src="/assets/images/general/cloudplayout-channel-details.png" alt="Channel Settings">
+      <figcaption class="bcls-caption--image">Channel Settings</figcaption>
     </figure>
+    <p>You can edit details, but the main next step is to add videos and/or live events (if you enabled live inputs) to the channel.</p>
+    <h3>Add videos (VOD)</h3>
     <ol class="bcls-tasklist-restart" style="--s:1">
-      <li>Click <strong>+ Add Videos</strong>. If you are on the channel list page, click the  channel name to open the channel settings page and then click <strong>+ Add Videos</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-add-videos.png" /></figure>
+      <li>Click <strong>+ Add Videos</strong>. (If you are on the channel list page, click the  channel name to open the channel settings page and then click <strong>+ Add Videos</strong>).
       </li>
       <li>Click the checkbox next to the videos you want to add to the channel.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-select-videos.png" /></figure>
       </li>
       <li>Click <strong>Add Videos</strong>.</li>
       <li>Click <strong>Save</strong>.</li>
+      <li>
+        The program list for the channel will appear:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/general/cloudplayout-vod-program-list.png" alt="Program List">
+          <figcaption class="bcls-caption--image">Program List</figcaption>
+        </figure>
+        <p>Note that start and end times are automatically calculated from the video durations. You can drag and drop videos in the list to reorder them, and the start/end times will be automatically adjusted.</p>
+      </li>
     </ol>
-    <p>After videos have been added to a channel, click <strong>Activate</strong> to activate the channel. A channel must be activated before streaming can begin. See the <a href="#actions">Using channel actions</a> section below for more information.</p>
+    <h3>Add Live events</h3>
+    <ol class="bcls-tasklist">
+        <li>Click the <strong>+ Add Live Event</strong> button.</li>
+        <li>
+          In the Add Live Event dialog, enter the <strong>Name</strong>, <strong>Duration</strong>, and <strong>Description</strong> for the live event:
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/general/cloudplayout-add-live-event.png" alt="Add Live Event">
+            <figcaption class="bcls-caption--image">Add Live Event</figcaption>
+          </figure>
+          <p>Note that the minimum duration for a live event is 5 minutes, and the duration can be incremented or decremented in 5 minute intervals only.</p>
+        </li>
+        <li>
+          After you add live events, they will appear in the program list along with VOD items:
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/general/cloudplayout-live-event-program-list.png" alt="Program List">
+            <figcaption class="bcls-caption--image">Program List</figcaption>
+          </figure>
+        </li>
+        <li>You can drag live events to reorder the list just as you can videos. You can also use the <strong>Quick Edit</strong> button to modify the duration of a live event.</li>
+    </ol>
+    <p>After videos and live events have been added to a channel, click <strong>Activate</strong> to activate the channel. A channel must be activated before streaming can begin. See the <a href="#actions">Using channel actions</a> section below for more information.</p>
     <aside class="bcls-aside bcls-aside--information">Note: To change the order of the videos in a program, click on a video and drag it to a new position.</aside>
     <p>When videos are added to a channel, a system-generated playlist will be created and visible in the Media module.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-playlist-created.png" /></figure>
-    <p>Any changes to the playlist will be reflected in the Cloud Playout channel. Also, it is possible for users to delete the playlist without knowing that it is used by a Cloud Playout channel.</p>
+    <p>We strongly recommend that you make any changes to the channel in the Cloud Playout module, and <strong>do not</strong> edit the generated playlist in any way.</p>
   </section>
   <section class="bcls-section">
     <h2 id="edit_delete">Editing and deleting a  channel</h2>
     <p>To edit a  Cloud Playout channel, click the  channel name and then click <strong>Edit</strong>. Make the appropriate edits and then click <strong>Update Channel</strong>. Note that the Destination properties cannot be edited once a channel has been created.</p>
-    <p>To delete a  Cloud Playout channel, click the checkbox next to the channel name and then click <strong>Delete</strong>. </p>
+    <p>To delete a  Cloud Playout channel, click the checkbox next to the channel name and then click <strong>Delete</strong>.</p>
   </section>
   <section class="bcls-section">
     <h2 id="looping">Creating a looping program</h2>
-    <p>To create a program that loops, when creating the channel, set the <strong>Loop Playout Content</strong> setting  to <strong>On</strong>. This will also require that you configure an <strong>End Date/Time</strong> for the channel. As videos are added to the program, the program listing will update to display the series of videos with associated start/end times to fill the entire channel scheduled time.</p>
+    <p>To create a program that loops, when creating the channel, set the <strong>Loop Playout Content</strong> setting  to <strong>On</strong>. As videos are added to the program, the program listing will update to display the series of videos with associated start/end times to fill the entire channel scheduled time. When you change the duration of a live event, the duration of events that have already passed will remain unchanged, but any future plays of the event will use the new duration.</p>
     <p>In the example below, three videos were added to the program and are set to loop.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-looping-example.png" /></figure>
   </section>
@@ -132,16 +161,21 @@ layout: staging
   <section class="bcls-section">
     <h2 id="ads">Enabling Server-Side Ads</h2>
     <p>It is possible to configure a channel so that server-side ads are displayed using Brightcove's Server-Side Ad Insertion technology. </p>
-    <aside class="bcls-aside bcls-aside--information">Note: When using ad insertion, the channel can only be output to a Brightcove Live Event.</aside>
+    <aside class="bcls-aside bcls-aside--information">Notes: 
+      <ul>
+        <li>When using ad insertion, the channel can only be output to a Brightcove Live Event.</li>
+        <li>If you enable ad insertion, Live Inputs may not be used in the channel.</li>
+      </ul>
+      </aside>
     <h3>Configuring Ad tags and fill slates</h3>
     <p>Ensure that you have ad tags and fill slates configured as part of your account administration. For information on configuring ad tags, see <a href="/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>. Fill slates are content that can be served when there are gaps in a live stream ad break. For information on creating fill slates, see <a href="https://live.support.brightcove.com/admin/managing-live-settings.html">Managing Live Settings</a>.</p>
     <p>
       <aside class="bcls-aside bcls-aside--information">Note: Cloud Playout will use the default ad slate configured as part of the <a href="https://live.support.brightcove.com/admin/managing-live-settings.html">Live Settings</a>.</aside>
     </p>
     <h3>Creating placeholder ad break videos</h3>
-    <p>You need to indicate which video(s) should be used as &quot;placeholder&quot; videos. &quot;Placeholder&quot; videos will be inserted into the program listing to indicate that an ad should be served and the length of the ad. This needs to be done because when using Server-Side Ad Insertion with Brightcove Live, the &quot;placeholder&quot; video will be replaced with ad content. If you do not insert an ad &quot;placeholder&quot; video, parts of the actual video will be replaced with ad content. If the ad duration is shorter than the ad returned, SSAI will show the ad slate. If the ad duration is longer than the ads returned, the ads will be displayed followed by the ad slate. </p>
+    <p>You need to indicate which video(s) should be used as "placeholder" videos. "Placeholder" videos will be inserted into the program listing to indicate that an ad should be served and the length of the ad. This needs to be done because when using Server-Side Ad Insertion with Brightcove Live, the "placeholder" video will be replaced with ad content. If you do not insert an ad "placeholder" video, parts of the actual video will be replaced with ad content. If the ad duration is shorter than the ad returned, SSAI will show the ad slate. If the ad duration is longer than the ads returned, the ads will be displayed followed by the ad slate. </p>
     <p>You may need to create/upload video source files that have video lengths equal to the ad break durations you want to have (i.e. 2 mins, 4 mins, etc.). The content of these videos doesn't matter as they will not actually be played as part of a program. </p>
-    <p>To mark a video as a &quot;placeholder&quot; video, use the Media module to edit the video properties for these videos and tag them with <code translate="No">cp-ad-holder</code>.
+    <p>To mark a video as a "placeholder" video, use the Media module to edit the video properties for these videos and tag them with <code translate="No">cp-ad-holder</code>.
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-tag-video.png" /></figure>
     </p>
     <h3>Enabling Server-Side Ads for a channel</h3>
@@ -153,12 +187,12 @@ layout: staging
     <ol class="bcls-tasklist-restart" style="--s:1">
       <li>Click a channel name to edit it.</li>
       <li>In the program listing, click the checkbox next to the video <strong>after</strong> which you want an ad to play.</li>
-      <li>Click <strong>Insert Ads</strong> and select an <strong>ad duration</strong>. The list of ad durations is generated based upon the lengths of all the ad break &quot;placeholder&quot; videos (tagged <code translate="No">cp-ad-holder</code>).
+      <li>Click <strong>Insert Ads</strong> and select an <strong>ad duration</strong>. The list of ad durations is generated based upon the lengths of all the ad break "placeholder" videos (tagged <code translate="No">cp-ad-holder</code>).
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-insert-ads-button.png" /></figure>
       </li>
-      <li>Click <strong>Ok</strong>. The &quot;placeholder&quot; video with the selected length will be inserted into the program after the selected video.
+      <li>Click <strong>Ok</strong>. The "placeholder" video with the selected length will be inserted into the program after the selected video.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-ad-break-inserted.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: The video that is inserted as a &quot;placeholder&quot; <strong>will not</strong> be played as part of the program. This video is only used to indicate where an ad request will be made and the ad length.</aside>
+        <aside class="bcls-aside bcls-aside--information">Note: The video that is inserted as a "placeholder" <strong>will not</strong> be played as part of the program. This video is only used to indicate where an ad request will be made and the ad length.</aside>
       </li>
       <li>Click <strong>Save</strong> to save the changes to the program.</li>
     </ol>
