@@ -76,7 +76,7 @@ layout: staging
           <li><strong>Output to</strong> - Select an output method for the channel
             <ul>
               <li><strong>Brightcove Live Event</strong> - Create or use a previously created Brightcove Live  Channel. When creating a new channel, the region of the channel will be optimized based upon the <strong>Output Region</strong> that was selected.</li>
-              <li><strong>RTMP</strong> - Select to output the stream to an RTMP or RTP ingestion point. RTP is not available for third party ingestion points, only when <strong>Ad Insertion</strong> and <strong>Brightcove Live Event</strong> is enabled.</li>
+              <li><strong>RTMP</strong> - Select to output the stream to an RTMP or RTP ingestion point. RTP is not available for third party ingestion points, only when <strong>Ad Insertion</strong> and <strong>Brightcove Live Event</strong> is enabled. When selected, an <strong>RTMP URL</strong> field will appear - enter the RTMP input URL for your live streaming service.</li>
               <li><strong>Amazon S3 Bucket </strong>- Select to push an HLS output to an Amazon S3 bucket. You will be required to enter Bucket Name, Region, Access Key and Secret Key. The bucket should be public and writeable.</li>
             </ul>
           </li>
@@ -136,6 +136,15 @@ layout: staging
     <p>When videos are added to a channel, a system-generated playlist will be created and visible in the Media module.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/general/playout-playlist-created.png" /></figure>
     <p>We strongly recommend that you make any changes to the channel in the Cloud Playout module, and <strong>do not edit the generated playlist in any way</strong>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="getting_the_rtmp_ingest_point">Getting the RTMP ingest point</h2>
+    <p>For your live encoder, you will need the RTMP ingest point for your channel. You can find it in the <strong>:Channel Settings</strong>:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/general/cloudplayout-rtmp-ingest-point.png" alt="Ingest Point">
+      <figcaption class="bcls-caption--image">Ingest Point</figcaption>
+    </figure>
+    <p>Depending on the encoder you are using, you may need to enter both the RTMP ingest point and the stream name. The stream name for the channel is the <strong>Channel ID</strong>, which is also the last part of the Ingest Point address.</p>
   </section>
   <section class="bcls-section">
     <h2 id="edit_delete">Editing and deleting a  channel</h2>
@@ -232,7 +241,7 @@ layout: staging
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/cloudplayout-program-analytics.png" /></figure>
     <aside class="bcls-aside bcls-aside--information">Note: If Ad Insertion is enabled, the preview will not display.</aside>
     <aside class="bcls-aside bcls-aside--information">Note: The preview image is updated every three seconds.</aside>
-    <p>Click <strong>View in Brightcove Live</strong> to open the Live module Control Room page with the currently running program. The currently playing video in the program will be highlighted with a <strong>Playing Now</strong> banner. Also notice the <strong>Status</strong> notification in the upper right, and the <img src="/assets/images/general/cloudplayout-video-icon.png" alt="Live icon"> that will be gray as shown here during VOD segments, and either red or green (indicating that the live feed is unavailable or available) during live events.</p>
+    <p>Click <strong>View in Brightcove Live</strong> to open the Live module Control Room page with the currently running program. The currently playing video in the program will be highlighted with a <strong>Playing Now</strong> banner. Also notice the <strong>Status</strong> notification in the upper right, and the <img src="/assets/images/general/cloudplayout-video-icon.png" alt="Live icon"> that will be green if there is a live feed available. Otherwise it will be red if a live event is currently playing, or gray if VOD content is playing.</p>
     <p>The following analytics values will be displayed:</p>
     <ul>
       <li><strong>Network In</strong> - Average bytes per second in the last minute</li>
