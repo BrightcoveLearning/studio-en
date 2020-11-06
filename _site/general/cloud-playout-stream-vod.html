@@ -932,8 +932,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <ul>
           <li><strong>Optimize Display for</strong> - Controls the bitrate and dimensions for the output
             <ul>
-              <li><strong>Mobile &amp; Web</strong> - If checked, HD renditions</li>
-              <li><strong>Smart TV</strong> - If checked, full HD renditions</li>
+              <li><strong>Mobile &amp; Web</strong> - If checked, HD Output (RTMP or HLS single bitrate)</li>
+              <li><strong>Smart TV</strong> - If checked, full HD Output (RTMP or HLS single bitrate)</li>
             </ul>
           </li>
           <li><strong>Output Region</strong> - The region where the channel will be created. Brightcove recommends selecting a region geographically closest to where the majority of your audience is expected.</li>
@@ -1103,7 +1103,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="analytics">Viewing channel output and analytics</h2>
     <p>While the channel is in a <strong>RUNNING</strong> state, it is possible to view channel output and analytics. Click on the channel on the <strong>Channels</strong> page to open the channel details.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/cloudplayout-program-analytics.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Note: If Ad Insertion is enabled, the preview will not display.</aside>
     <aside class="bcls-aside bcls-aside--information">Note: The preview image is updated every three seconds.</aside>
     <p>Click <strong>View in Brightcove Live</strong> to open the Live module Control Room page with the currently running program. The currently playing video in the program will be highlighted with a <strong>Playing Now</strong> banner. Also notice the <strong>Status</strong> notification in the upper right, and the <img src="/assets/images/general/cloudplayout-video-icon.png" alt="Live icon"> that will be green if there is a live feed available. Otherwise it will be red if a live event is currently playing, or gray if VOD content is playing.</p>
     <p>The following analytics values will be displayed:</p>
