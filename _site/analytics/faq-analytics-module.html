@@ -963,9 +963,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ul>
       <li>Players send data to the Data Collection API</li>
       <li><span id="1422467412848S" style="display: none;">&nbsp;</span>The Data Collection API does its best to write to the real-time database&nbsp;AND it writes the events to log storage</li>
+      <li>As we collect additional data from CDNs and other sources, the analytics data is updated; this is the reconciliation process</li>
       <li>A nightly batch system looks at the raw log events and builds historical data import files</li>
-      <li>The data import files are loaded into the historical database. This batch&nbsp;process is the reconciliation. When you make an API call, you can choose whether to see only reconciled data (most accurate) or to see both reconciled and unreconciled data by using the reconciled parameter. See the <a href="https://apis.support.brightcove.com/analytics/getting-started/overview-analytics-api-v1.html">Analytics API Overview</a> for more information.</li>
-      <li>All historical data is reconciled; realtime data (available for 32 days) may or may not have been reconciled yet.</li>
+      <li>The data import files are loaded into the historical database. When you make an API call, you can choose whether to see only reconciled data (most accurate) or to see both reconciled and unreconciled data by using the reconciled parameter. See the <a href="https://apis.support.brightcove.com/analytics/getting-started/overview-analytics-api-v1.html">Analytics API Overview</a> for more information.</li>
+      <li>All historical data is reconciled; realtime data (available for 32 days) may or may not have been reconciled yet. If the time period you are getting data for ends more than 32 days ago, there is no need to use the <code translate="No">reconciled data, since the data will all be historical.</code></li>
     </ul>
   </section>
   <section class="bcls-section">
