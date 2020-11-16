@@ -917,8 +917,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <aside class="bcls-aside bcls-aside--information">Note: If the video source file you ingest into Video Cloud has embedded 608/708 captions, they will be ignored during the processing of the video, and <strong>not</strong> present in the video renditions. To have captions with your videos, you will need to add them through the <a href="https://studio.support.brightcove.com/media/adding-captions-videos-using-media-module.html">Media module</a>, the <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">Dynamic Ingest API</a>, or the <a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-add-webvtt-captions-text-tracks.html">CMS API (for remotely hosted captions)</a></aside>
     </section>
 
-    <section id="associate" class="bcls-section">
-    <h2>Associating captions with a video</h2>
+    <section class="bcls-section">
+    <h2 id="associate">Associating captions with a video</h2>
 
     <p>There are several ways to associate a captions file with a video:</p>
 
@@ -952,16 +952,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <aside class="bcls-aside bcls-aside--information">Note: Regardless of the method used to add caption files to a video, no more than 1000 text tracks may be added.</aside>
     </section>
 
-    <section id="remove" class="bcls-section">
-    <h2>Removing captions</h2>
+    <section class="bcls-section">
+    <h2 id="remove">Removing captions</h2>
 
     <p>Captions can be removed from videos using the Media module or via the CMS API. In Studio, open the Media module and edit the video properties. Edit the <strong>Text Tracks</strong> property as needed.</p>
 
     <p>Captions can also be removed using the <span translate="No">CMS API</span> by making an <a href="https://apis.support.brightcove.com/cms/references/reference.html#api-videoGroup-Update_Video">Update Video</a> request and submitting a request body with an empty <code translate="No">text_tracks</code> array (or an array from which the object associated with that set of captions has been removed).</p>
     </section>
 
-    <section id="styling" class="bcls-section">
-    <h2>Styling captions</h2>
+    <section class="bcls-section">
+    <h2 id="styling">Styling captions</h2>
 
     <p>Styling can be applied to WebVTT captions using CSS. See <a href="https://studio.support.brightcove.com/media/styling-captions.html">Styling Captions</a> for details.</p>
     </section>
