@@ -175,6 +175,22 @@
       url: /media/working-multi-lingual-metadata.html
     - name: Working with Remote Asset Videos
       url: /media/working-remote-asset-videos.html
+- section: 
+  name: Managing Cloud Playout Channels
+  url: /cloud-playout/index.html
+  docs:
+    - name: 'Overview: Cloud Playout'
+      url: /cloud-playout/cloud-playout-overview.html
+    - name: Creating a Cloud Playout Channel
+      url: /cloud-playout/cloud-playout-stream-vod.html
+    - name: Using Channel Actions
+      url: /cloud-playout/using-channel-actions.html
+    - name: Enabling Server-Side Ads (SSAI)
+      url: /cloud-playout/enabling-server-side-ads.html
+    - name: Generating the Channel Embed Code
+      url: /cloud-playout/generating-channel-embed-code.html
+    - name: Viewing Channel Output and Analytics
+      url: /cloud-playout/viewing-channel-output-and-analytics.html
 - section:
   name: Managing Players
   url: /players/index.html
