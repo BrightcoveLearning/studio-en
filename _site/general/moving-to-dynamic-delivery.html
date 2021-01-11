@@ -968,6 +968,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <dd>Dynamic Delivery allows customers to take advantage of their own CDN relationships, however all video assets must be managed by the Brightcove Origin.  Origin Serving is priced on expected cache miss (a cost to Brightcove).  Pricing for Origin Serving is already integrated into the Media Pricing Configurator and rates are listed on the “Rate Card Master” tab.
         <aside class="bcls-aside bcls-aside--information language-editable">Note that a new CDN configuration will be needed for Dynamic Delivery.</aside>
       </dd>
+      <dt>What will happen to my legacy ingest profiles?</dt>
+      <dd>All legacy ingest profiles (standard or custom) will be removed from the system and no longer appear in <strong class="bc-module">Upload</strong>, <strong class="bc-module">Admin</strong> or other parts of Studio, or when you get profiles for your account via the Ingest Profiles API. 
+      </dd>
       <dt>How will this impact my costs?</dt>
       <dd>It depends on your setup. If you are using a Brightcove CDN, the impact to your costs should be negligible. If you are using a BYO CDN and using net storage, your storage costs at Brightcove will increase. Talk to your Account Manager for more information.</dd>
       <dt>What if I want to migrate existing assets and support SSAI?</dt>
