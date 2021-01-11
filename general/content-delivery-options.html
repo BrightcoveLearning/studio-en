@@ -34,25 +34,13 @@ parent: General Information
     <h2 id="types">How is my media content delivered?</h2>
     <p>There are several types of content delivery mechanisms:</p>
     <ul>
-      <li><a href="#pd">Progressive download</a></li>
       <li><a href="#fms">Streaming</a></li>
+      <li><a href="#pd">Progressive download</a></li>
     </ul>
-    <section id="pd" class="bcls-subsection">
-      <h3>Progressive download (also called PD)</h3>
-      <p>When you deliver your content using progressive download, the file is served from a standard web server through an HTTP request, just like a normal web page or any other downloadable document. When the video is played, the video file is downloaded to the viewer's computer or device and stored in a temporary directory. The video will begin to play when enough of the file has has been downloaded to the computer/device. If the viewer wants to fast forward or skip to another part of the video, he/she will only be able to do so if that part of the video has already been downloaded and stored. In comparison to streaming video, there's really only one consistent benefit to progressive download—you don't need a streaming server to deliver the video. Progressive download video can be served from any normal web server.</p>
-      <p>Progressive download is fine for hobbyists or websites that have low traffic requirements, don't mind if their content is cached on the viewer's computer/device, and if you only need to deliver shorter length videos (under 10 minutes). Publishers who need advanced features and control over their video delivery, and/or those who need to display video to larger audiences (several hundred or more simultaneous viewers), need to track and report usage or viewing statistics for the video, or want to offer the best interactive playback experience, will need to stream their video. Streaming delivery also consumes less bandwidth than progressive delivery because only the portion of the video that is watched is actually delivered.</p>
-      <p>Progressive download key points:</p>
-      <ul>
-        <li>Limited seek and navigation capabilities</li>
-        <li>Viewers can access and re-purpose content</li>
-        <li>Does not effectively utilize Video Cloud’s dynamic delivery feature</li>
-        <li>Less secure and content can be easily copied</li>
-        <li>More bandwidth is used as all parts of the video are downloaded, not just the watched ones</li>
-      </ul>
-    </section>
     <section id="fms" class="bcls-subsection">
       <h3>Streaming (also called HLS or DASH)</h3>
-      <p>Streaming video on the other hand is delivered via a streaming server without the file ever being downloaded to the viewer’s computer/device. As soon as the viewer presses play, the video will start to play. If the user decides to forward or skip to some other part of the video, he/she can do it immediately and the video will continue to play from that point onwards. One of the advantages of streaming media is that bandwidth is only used for video that the viewer has watched, as only the watched portion of the video has been delivered. Nothing is kept on the client side; everything is on the server side.</p>
+      <p>Streaming video is delivered via a streaming server without the file ever being downloaded to the viewer’s computer/device. As soon as the viewer presses play, the video will start to play. If the user decides to forward or skip to some other part of the video, he/she can do it immediately and the video will continue to play from that point onwards. One of the advantages of streaming media is that bandwidth is only used for video that the viewer has watched, as only the watched portion of the video has been delivered. Nothing is kept on the client side; everything is on the server side.</p>
+      <aside class="bcls-aside bcls-aside--information language-editable">Note that in the age of HTML5 video players, all modern devices and browsers support streaming and will use it if available (rather than progressive download). This is a good thing, as it allows better management of buffering and saves bandwidth if you the viewer doesn't watch the entire video.</aside>
       <p>Streaming is useful in situations where you want or need to do the following:</p>
       <ul>
         <li>Deliver long files (10 minutes or longer) or high-bitrate files (high-definition)</li>
@@ -64,7 +52,7 @@ parent: General Information
       <p>Apple iOS devices support only Apple HTTP Live Streaming (HLS) and HTTP (progressive download) for delivery of video files. You need to ensure either that your videos have one or more available HLS renditions. The App Store rules call for the use of Apple HTTP Live Streaming for long form video content (greater than 5 Mb or 10 minutes).</p>
       <p>Streaming key points:</p>
       <ul>
-        <li>Video content is secured via temporary video link</li>
+        <li>Video content is secured via a temporary video link</li>
         <li>Advancing video is possible</li>
         <li>Effectively utilizes Video Cloud’s dynamic delivery feature</li>
         <li>Allows you to serve more steams with less bandwidth</li>
@@ -72,12 +60,26 @@ parent: General Information
       </ul>
       <p>In practice you will very rarely realize whether content has been streamed or progressively downloaded unless you look for some of the distinguished features as described above.</p>
     </section>
-    <section id="images" class="bcls-subsection">
-      <h3>How are image assets delivered?</h3>
-      <p>Regardless of whether you use streaming or progressive download for your video content, images delivered to end users in the Video Cloud player (thumbnails and video stills, for example) are delivered via HTTP download.</p>
-    </section>
+  <section id="pd" class="bcls-subsection">
+    <h3>Progressive download (also called PD)</h3>
+    <aside class="bcls-aside bcls-aside--information language-editable">Only very old browsers or devices still require progressive download. The main use of it now is to provide renditions that can be downloaded and saved by the user.</aside>
+    <p>When you deliver your content using progressive download, the file is served from a standard web server through an HTTP request, just like a normal web page or any other downloadable document. When the video is played, the video file is downloaded to the viewer's computer or device and stored in a temporary directory. The video will begin to play when enough of the file has has been downloaded to the computer/device. If the viewer wants to fast forward or skip to another part of the video, he/she will only be able to do so if that part of the video has already been downloaded and stored. In comparison to streaming video, there's really only one consistent benefit to progressive download—you don't need a streaming server to deliver the video. Progressive download video can be served from any normal web server.</p>
+    <p>Progressive download is fine for hobbyists or websites that have low traffic requirements, don't mind if their content is cached on the viewer's computer/device, and if you only need to deliver shorter length videos (under 10 minutes). Publishers who need advanced features and control over their video delivery, and/or those who need to display video to larger audiences (several hundred or more simultaneous viewers), need to track and report usage or viewing statistics for the video, or want to offer the best interactive playback experience, will need to stream their video. Streaming delivery also consumes less bandwidth than progressive delivery because only the portion of the video that is watched is actually delivered.</p>
+    <p>Progressive download key points:</p>
+    <ul>
+      <li>Limited seek and navigation capabilities</li>
+      <li>Viewers can access and re-purpose content</li>
+      <li>Does not effectively utilize Video Cloud’s dynamic delivery feature</li>
+      <li>Less secure and content can be easily copied</li>
+      <li>More bandwidth is used as all parts of the video are downloaded, not just the watched ones</li>
+    </ul>
   </section>
-  <section class="bcls-section">
+  <section id="images" class="bcls-subsection">
+    <h3>How are image assets delivered?</h3>
+    <p>Regardless of whether you use streaming or progressive download for your video content, images delivered to end users in the Video Cloud player (thumbnails and video stills, for example) are delivered via HTTP download.</p>
+  </section>
+</section>
+<section class="bcls-section">
     <h2 id="compare">Comparing content delivery: Brightcove-hosted video assets vs. BYO vs. remote assets</h2>
     <p>Video Cloud supports a few basic CDN configurations, depending on your CDN provider and setup. The choices are:</p>
     <ul>
