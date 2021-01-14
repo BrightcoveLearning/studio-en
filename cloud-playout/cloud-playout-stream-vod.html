@@ -41,7 +41,7 @@ parent: Cloud Playout
     <ol class="bcls-tasklist-restart" style="--s:1">
       <li>Click <strong>Cloud Playout</strong> in the navigation header.</li>
       <li>
-        Click <strong>Add New</strong>:
+        Click <img src="/assets/images/cloudplayout/cloudplayout-add-new.png" alt="add new" class="ui-image">:
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/cloudplayout/cloudplayout-new-channel-dialog.png" alt="New Channel">
           <figcaption class="bcls-caption--image">New Channel</figcaption>
@@ -162,9 +162,24 @@ parent: Cloud Playout
     </aside>
   </section>
   <section class="bcls-section">
-    <h2 id="edit_delete">Editing and deleting a  channel</h2>
-    <p>To edit a  Cloud Playout channel, click the  channel name and then click <strong>Edit</strong>. Make the appropriate edits and then click <strong>Update Channel</strong>. Note that the Destination properties cannot be edited once a channel has been created.</p>
-    <p>To delete a  Cloud Playout channel, click the checkbox next to the channel name and then click <strong>Delete</strong>.</p>
+    <h2 id="edit_delete">Editing a channel</h2>
+    <h3>For channels in DRAFT or SCHEDULED state</h3>
+    <p>To edit a draft or scheduled Cloud Playout channel:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click the channel name to open the channel details.</li>
+      <li>Click <img src="/assets/images/cloudplayout/cloudplayout-edit-button.png" class="ui-image" alt="edit button"></li>
+      <li>Make the appropriate edits in the dialog and then click <img src="/assets/images/cloudplayout/cloudplayout-update-channel.png" alt="update channel" class="ui-image"></li>
+  </ol>
+        <p>Note that the Destination properties cannot be edited once a channel has been created.</p>
+    <h3>For a running channel</h3>
+    <p>To edit a running channel: </p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click the channel name to open the channel details.</li>
+      <li>Click <img src="/assets/images/cloudplayout/cloudplayout-settings.png" alt="settings" class="ui-image"></li>
+      <li>Click <img src="/assets/images/cloudplayout/cloudplayout-edit-button.png" class="ui-image" alt="edit button"></li>
+      <li>The channel settings dialog will open - some options that can't be changed will not be available.</li>
+      <li>Make changes and click  <img src="/assets/images/cloudplayout/cloudplayout-update-channel.png" alt="update channel" class="ui-image"></li>
+  </ol>
   </section>
   <section class="bcls-section">
     <h2 id="looping">Creating a looping program</h2>
@@ -176,6 +191,11 @@ parent: Cloud Playout
   <section class="bcls-section">
     <h2 id="epg">Working with an electronic program guide</h2>
     <p>An API is available to generate an electronic program guide for the Cloud Playout channel. For more information see the <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">Overview: EPG API</a> topic.</p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="deleting_a_channel">Deleting a channel</h2>
+    <p>To delete a  Cloud Playout channel, click the checkbox next to the channel name and then click <strong>Delete</strong>.</p>
   </section>
   
   <section class="bcls-section">
