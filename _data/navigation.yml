@@ -195,6 +195,8 @@
   name: Managing Players
   url: /players/index.html
   docs:
+    - name: Adding Thumbnail Seeking
+      url: /players/adding-thumbnail-seeking-player.html
     - name: Configuring a Player Overlay
       url: /players/configuring-player-overlay-using-overlay-plugin.html
     - name: Configuring Adobe Analytics Event Tracking
