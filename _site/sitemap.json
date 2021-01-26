@@ -360,12 +360,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/analytics/",
+      "newURL": "https://studio.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
@@ -375,42 +370,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/media/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/admin/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/release-notes/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/publish/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/",
+      "newURL": "https://studio.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -420,7 +380,47 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/support/",
+      "newURL": "https://studio.support.brightcove.com/analytics/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/training/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/publish/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/release-notes/",
       "oldURL": "/index"
   },
 
@@ -495,12 +495,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/online-training-courses.html",
+      "newURL": "https://studio.support.brightcove.com/training/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/training/online-training-courses.html",
+      "newURL": "https://studio.support.brightcove.com/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
@@ -707,6 +707,11 @@
   {
       "newURL": "https://studio.support.brightcove.com/training/training-demand-video-cloud-basics.html",
       "oldURL": "/training-demand-video-cloud-basics"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/trending-now-report-reference.html",
+      "oldURL": "/trending-now-report-reference"
   },
 
   {
