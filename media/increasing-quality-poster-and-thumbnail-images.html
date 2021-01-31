@@ -41,19 +41,17 @@ parent: Managing Videos
         <li>In the Studio header, click the <strong>ADMIN</strong> link. Note that you must be a Video Cloud Studio user with the Administrator role to access the ADMIN menu.</li>
         <li>Click <strong>Ingest Profiles</strong>.</li>
         <li>Click on a <strong>Profile Name</strong>. The Profile Editor will display the profile definition.</li>
-        <li>The method to view the image sizes will vary based upon the <strong>Profile Version</strong> (i.e. Legacy, Dynamic Delivery or Context-Aware) that was clicked.
-          <ul>
-            <li>For <strong>Legacy</strong> profiles, scroll to the bottom of the Profile Editor window and search for <strong><code translate="No">"media_type": "image"</code></strong>. There should be two entries, one for the poster and one for the thumbnail.</li>
-            <li>For <strong>Dynamic Delivery</strong> and <strong>Context-Aware</strong> profiles, image sizes are listed in the <strong>Images</strong> section of the profile definition.</li>
-          </ul>
+        <!-- <li>The method to view the image sizes will vary based upon the <strong>Profile Version</strong> (i.e. Legacy, Dynamic Delivery or Context-Aware) that was clicked. -->
+            <!-- <li>For <strong>Legacy</strong> profiles, scroll to the bottom of the Profile Editor window and search for <strong><code translate="No">"media_type": "image"</code></strong>. There should be two entries, one for the poster and one for the thumbnail.</li> -->
+					<p>For <strong>Dynamic Delivery</strong> and <strong>Context-Aware</strong> profiles, image sizes are listed in the <strong>Images</strong> section of the profile definition.</p>
           <p>The following example is from a Dynamic Delivery Profile Version.</p>
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node16671-profile-editor.png" /></figure>
         </li>
         <li>Check the poster and image sizes. Remember, if any of your players are larger than the size of the poster, the image will be upscaled.</li>
       </ol>
-      <aside class="bcls-aside bcls-aside--information">Note: The image sizes for the standard ingest profiles are also documented in one of the following documents:
+      <aside class="bcls-aside bcls-aside--information">Note: The image sizes for the standard ingest profiles are also documented in one of the following document:
         <ul>
-          <li><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">Standard Ingest Profiles for Legacy Transcoding</a></li>
+          <!-- <li><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">Standard Ingest Profiles for Legacy Transcoding</a></li> -->
           <li><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Standard Ingest Profiles for Dynamic Delivery and Context Aware Encoding</a></li>
         </ul>
       </aside>
@@ -70,7 +68,7 @@ parent: Managing Videos
   <section class="bcls-section">
     <h2 id="resize">Automatic resizing</h2>
     <p>When you add custom poster and/or thumbnail images via Studio or the Dynamic Ingest API, by default Video Cloud will resize these to match the image sizes defined in the default Ingest Profile for the account.</p>
-    <h3>Override auto-resizing</h3>
+    <!-- <h3>Override auto-resizing</h3>
     <aside class="bcls-aside bcls-aside--information">Note: This option is only available when using a <strong>Legacy</strong> profile version.</aside>
     <p>If you want to override this behavior and have Video Cloud retain actual image dimensions, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
@@ -94,7 +92,7 @@ parent: Managing Videos
       </li>
       <li><a href="/admin/managing-ingest-profiles.html#default">Make this the default profile</a> for the account.</li>
     </ol>
-    <p>Now when you add custom images via Studio or Dynamic Ingest, they will have the original dimensions of the source images.</p>
+    <p>Now when you add custom images via Studio or Dynamic Ingest, they will have the original dimensions of the source images.</p> -->
   </section>
   <section class="bcls-section">
     <h2 id="existing">What about my existing videos?</h2>

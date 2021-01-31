@@ -36,11 +36,10 @@ parent: Administering Accounts
     </ul>
     <p>For specific details on the Brightcove supplied ingest profiles (profiles with a <strong>Type</strong> of <strong>Standard VOD</strong> or <strong>Standard Live</strong>), see one of the following documents:</p>
     <ul>
-      <li><strong>Legacy Profile Version</strong> - <a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">Standard Ingest Profiles for Legacy Transcoding</a></li>
       <li><strong>Dynamic Delivery or Context-Aware Profile Version</strong> - <a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Standard Ingest Profiles for Dynamic Delivery and Context Aware Encoding</a></li>
       <li><strong>Custom Live Types</strong> - <a href="https://live.support.brightcove.com/admin/standard-live-ingest-profiles.html">Standard Live Ingest Profiles</a></li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: When lower quality source content is uploaded and one of the standard profiles is selected, Video Cloud will only produce renditions that are equal to or lower in quality than the source. When creating your own custom profiles, you may want to use <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/guides/conditional-output.html">conditional output parameters</a> to prevent renditions from being generated if the source doesn't match the quality criteria you specify. This will prevent the dynamic ingest system from creating higher quality renditions when lower quality source files are uploaded.</aside>
+    <!-- <aside class="bcls-aside bcls-aside--information">Note: When lower quality source content is uploaded and one of the standard profiles is selected, Video Cloud will only produce renditions that are equal to or lower in quality than the source. When creating your own custom profiles, you may want to use <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/guides/conditional-output.html">conditional output parameters</a> to prevent renditions from being generated if the source doesn't match the quality criteria you specify. This will prevent the dynamic ingest system from creating higher quality renditions when lower quality source files are uploaded.</aside> -->
     <p>Using the Ingest Profiles administration page, you can:</p>
     <ul>
       <li><a href="#create">Create new ingest profiles</a></li>
@@ -50,10 +49,10 @@ parent: Administering Accounts
       <li><a href="#hide">Hide/Show ingest profiles</a></li>
     </ul>
   </section>
-  <section class="bcls-section">
+  <!-- <section class="bcls-section">
     <h2 id="archivemasters">Archiving and distributing masters</h2>
     <p>Ingest profiles can be configured to archive and distribute master (source) files. Archiving the master keeps a copy of the master file and provides the ability for the video to be re-transcoded in the future without the need to upload it again. Distributing the master enables the master to be pushed to the CDN and used as a playable rendition. The <strong>Standard VOD</strong> ingest profiles are configured to archive and not distribute the master. You may wish to change this behavior when creating a custom ingest profile. For additional information on archiving and distributing masters, see the <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">Archiving Masters</a> document. For a list of all the fields that can be configured when creating ingest profiles, see the <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/references/ingest-profiles-api-fields-reference-legacy-ingest.html">Ingest Profiles API Fields Reference</a> developer document.</p>
-  </section>
+  </section> -->
   <section class="bcls-section">
     <h2 id="create">Creating a new ingest profile</h2>
     <aside class="bcls-aside bcls-aside--information">Note: The ability to create and edit Ingest Profiles is available only to publishers with Enterprise and Professional accounts.</aside>
@@ -61,7 +60,7 @@ parent: Administering Accounts
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node15628-new-profile.png" /></figure>
     <p>The process to create a new ingest profile will vary based upon the type of profile being created. See one of the following documents for details on how to create a custom ingest profile:</p>
     <ul>
-      <li><a href="creating-legacy-ingest-profiles.html">Creating Legacy Ingest Profiles</a></li>
+      <!-- <li><a href="creating-legacy-ingest-profiles.html">Creating Legacy Ingest Profiles</a></li> -->
       <li><a href="creating-ingest-profiles-dynamic-delivery.html">Creating Ingest Profiles for Dynamic Delivery</a></li>
       <li><a href="creating-ingest-profiles-context-aware-encoding.html">Creating Ingest Profiles for Context Aware Encoding</a></li>
       <li><a href="https://live.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a></li>
@@ -103,7 +102,7 @@ parent: Administering Accounts
       </li>
     </ol>
     <aside class="bcls-aside bcls-aside--information">Note: When selecting a default ingest profile you should ensure that the profile is <a href="#hide">visible and not hidden</a>.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: Only Dynamic Delivery profiles can be set to be a social clipping default profile. Legacy and CAE profiles are not supported.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: Only Dynamic Delivery profiles can be set to be a social clipping default profile. CAE profiles are not supported.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="hide">Hiding and showing ingest profiles</h2>
