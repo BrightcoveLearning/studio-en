@@ -38,13 +38,8 @@ parent: General Information
     <h2 id="upload">Uploading 360° videos</h2>
     <p>360° video is filmed to be projected on the interior of a sphere. This means that the visible area of the video in the player is only a fraction of the entire video. The following screenshot gives you a rough idea of this concept. The area inside the red rectangle is what is visible in the player, but it is only a small part of the entire video.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="player view" src="/assets/images/general/node16784-player-view.png" /></figure>
-    <p>Since only a small part of the video will be in the player at any one time, you want a very high quality rendition to be playing, with no chance of a lower quality rendition appearing. In essence, you are "zooming in" on part of the video and a poor quality rendition would yield a very poor quality viewing experience.</p>
-    <p>When uploading your video, Brightcove recommends using an appropriate ingest profile for 360° videos:</p>
-    <ul>
-      <li><strong>Legacy</strong> - Brightcove recommends using the <code translate="No">single-bitrate-high (2 renditions)</code></li>
-      <li><strong>Dynamic Delivery</strong> - Brightcove recommends <a href="/admin/creating-ingest-profiles-dynamic-delivery.html">creating a custom profile</a> with a single 1080p rendition and at least one audio rendition</li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: The <code translate="No">single-bitrate-high</code> profile was created for videos recorded up to 1080p. If your 360° video was recorded in 4K, you should create a custom ingest profile with higher dimensions. For information on creating custom ingest profiles, see <a href="/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a>. Some care should be taken as mobile devices sometimes have fixed bitrate and resolution limits. Some old mobile devices may fail to play 360° videos higher than 1080p.</aside>
+    <p>Since only a small part of the video will be in the player at any one time, you want a very high quality rendition to be playing, with no chance of a lower quality rendition appearing. In essence, you are "zooming in" on part of the video and a poor quality rendition would yield a very poor quality viewing experience. When uploading your video, Brightcove recommends creating a custom Dynamic Delivery ingest profile with a single 1080p rendition and at least one audio rendition.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: For information on creating custom ingest profiles, see <a href="/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a>. Some care should be taken as mobile devices sometimes have fixed bitrate and resolution limits. Some old mobile devices may fail to play 360° videos higher than 1080p.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="props">360° video properties</h2>
