@@ -7,30 +7,42 @@ layout: staging
   <h1>Managing Playback Rights</h1>
   <summary>In this topic you will learn how to create playback rights.</summary>
   <section class="bcls-section">
-    <p>Media sharing allows publishers to upload videos once and then share the videos to other accounts. The accounts can be your own, corporate accounts or accounts of other publishers. The shared videos can then be used independently in the other Video Cloud accounts. The Media Sharing Settings are used to manage the sharing relationships between accounts.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Media sharing is available only for Video Cloud Enterprise customers. If you are interested in upgrading your Video Cloud account, please contact Brightcove for more information.</aside>
-    <p>Media sharing can also be implemented programmatically using the CMS API. For more information, see <a href="https://apis.support.brightcove.com/cms/managing-videos/media-sharing-cms-api.html">Media Sharing with the CMS API</a>.</p>
-    <p>This topic will use the following terminology:</p>
-    <ul>
-      <li><strong>Master</strong> - The account that created the original video. The Master owns the content and is responsible for setting up, managing and providing content to Affiliates.</li>
-      <li><strong>Affiliate</strong> - The account that is receiving the video. The Affiliate can accept content shared to it from a Master.</li>
-    </ul>
+    <p>Playback rights are used to restrict video playback. After playback rights have been created, they can be assigned to videos using the Media module to restrict where the video can be viewed.</p>
+    <p>To access the Playback Rights administration page, click the <strong>ADMIN</strong> link and then <strong>Playback Rights</strong>. A list of playback rights will appear.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: To access the Playback Rights page, you must be a Video Cloud Studio user with the Administrator role.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-list.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="enable">Enabling media sharing</h2>
-    <p>To enable media sharing, contact <a href="https://support.brightcove.com/contact/create">Brightcove Customer Support</a> and have them turn on media sharing for your account.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="add_affiliates">Adding affiliates</h2>
-    <p>To share videos to another Video Cloud account, an affiliate account must be added. An affiliate is an account you want to share videos to. To add an affiliate account, follow these steps:</p>
+    <h2 id="create">Creating playback rights</h2>
+    <p>To create playback rights, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
       <li>Log in to Video Cloud Studio as an Administrator.</li>
-      <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Media Sharing</strong>. Note that you must be an account administrator to access to the ADMIN menu.</li>
-      <li>The <strong>Manage Affiliates - Accounts I Share Videos With</strong> section will display a list of all the affiliate publishers with which you have established a media sharing relationship.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node18459-manage-affiliates.png" /></figure>
+      <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Playback Rights</strong>. Note that you must be an account administrator to access to the ADMIN menu.</li>
+      <li>Click <strong>New Playback Rights</strong>.</li>
+      <li>Enter a <strong>Playback Rights Name</strong> and click <strong>Save</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-create.png" /></figure>
       </li>
-      <li>To add a new affiliate, enter their Video Cloud account ID in the <strong>Account ID</strong> textbox and then click <strong>Add Affiliate</strong>.</li>
     </ol>
-    <p>The account will be added to the table with a <strong>Relationship Status</strong> of <strong>Pending</strong>. The affiliate account will receive a media sharing notification and be able to <a href="#accept_reject">accept or reject the relationship</a>. If the affiliate accepts the media sharing relationship, the <strong>Relationship Status</strong> will be <strong>Accepted</strong>.</p>
+    <p>Playback rights you create are available immediately&nbsp;and will be visible&nbsp;in the Media module.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-media-module.png" /></figure>
+    <p>&nbsp;</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit">Editing playback rights</h2>
+    <p>To edit playback rights, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Log in to Video Cloud Studio as an Administrator.</li>
+      <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Playback Rights</strong>.</li>
+      <li>Click on a playback right.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="disable">Enabling/Disabling playback rights</h2>
+    <p>Playback rights cannot be deleted, however, they can be deactivated so they can't be assigned in the Media module. To enable/disable playback rights, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Log in to Video Cloud Studio as an Administrator.</li>
+      <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Playback Rights</strong>.</li>
+      <li>Click <strong>Activate</strong> to activate a playback right or <strong>Deactivate</strong> to deactivate a playback right. Playback rights that are deactivated cannot be assigned to videos in the Media module.</li>
+    </ol>
   </section>
 </article>
