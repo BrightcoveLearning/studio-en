@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="In this topic you will learn how add bumpers (in-house ads) to VOD videos and live events in a Cloud Playout channel.">
   
-  <title>Adding Bumpers to Content</title>
+  <title>Adding Bumpers to Cloud Playout</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -140,7 +140,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item"><a href="/cloud-playout/">Cloud Playout</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Adding Bumpers to Content</li>
+      <li class="breadcrumb-item active" aria-current="page">Adding Bumpers to Cloud Playout</li>
     </ol>
   </nav>
 </header>
@@ -514,7 +514,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/cloud-playout/adding-bumpers-to-vod.html">Adding Bumpers to Content</a></li>
+                    <li><a href="/cloud-playout/adding-bumpers-to-vod.html">Adding Bumpers to Cloud Playout</a></li>
                   
                 
                   
@@ -921,7 +921,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Adding Bumpers to Content</h1>
+<h1>Adding Bumpers to Cloud Playout</h1>
 <article class="bcls-article">
   <summary>In this topic you will learn how add bumpers (in-house ads) to VOD videos and live events in a Cloud Playout channel.</summary>
   <section class="bcls-section">
@@ -929,15 +929,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>If you are not enabling Server-Side Ads (SSAI) for your channel, you may still want to include bumpers - pre- or post-roll short videos which might be in-house ads or some other kind of announcement or promotion. You might also use bumpers to create buffers for your live programming segments.</p>
     <p>There is nothing you need to do in the initial channel creation - the option to <span class="button-blue">Insert Bumpers</span> will appear automatically after the channel is created.</p>
     <aside class="bcls-aside bcls-aside--information language-editable">Note that you can <strong>not</strong> include bumpers if the the channel is enabled for SSAI.</aside>
+    <p>You can add multiple bumpers to the same video, and you can rearrange bumpers in the program order, just as you can videos. However, some care needs to be taken in doing this or you may end up with an inaccurate EPG. See <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html#epg_bumpers">The EPG and Bumpers</a> for full details.</p>
     <p>Bumpers will <strong>not</strong> appear in the <a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG</a> but the duration of the bumper will be added to the video before or after (depending on whether it is pre-roll or post-roll).</p>
   </section>
   <section class="bcls-section">
     <h2 id="Enabling_bumper_content">Enabling bumper content</h2>
-    <p>The bumpers can be any video in your account, but it must have one or both of the following tags:</p>
+    <p>The bumpers can be any video in your account, but it must have <strong>one of</strong> the following tags:</p>
     <ul>
       <li><code>cp-preroll-bumper</code></li>
       <li><code>cp-postroll-bumper</code></li>
     </ul>
+    <aside class="bcls-aside bcls-aside--warning language-editable">If you add both of these tags to the same video, it will still work as a bumper, but the <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">EPG</a> will be inaccurate.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="inserting-bumpers">Inserting bumpers</h2>
@@ -985,6 +987,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ul>
       <li><a href="/cloud-playout/cloud-playout-overview.html">Overview: Cloud Playout</a></li>
       <li><a href="/cloud-playout/cloud-playout-stream-vod.html">Creating a Cloud Playout Channel</a></li>
+      <li><a href="/cloud-playout/enabling-server-side-ads.html">Monetizing Cloud Playout</a></li>
       <li><a href="/cloud-playout/using-channel-actions.html">Using Channel Actions</a></li>
       <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">Viewing Channel Output and Analytics</a></li>
       <li><a href="/cloud-playout/generating-channel-embed-code.html">Generating the Channel Embed Code</a></li>
