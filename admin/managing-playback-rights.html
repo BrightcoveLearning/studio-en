@@ -11,7 +11,7 @@ layout: staging
     <p>To access the Playback Rights administration page, click the <strong>ADMIN</strong> link and then <strong>Playback Rights</strong>. A list of playback rights will appear.</p>
     <aside class="bcls-aside bcls-aside--information">Note: To access the Playback Rights page, you must be a Video Cloud Studio user with the Administrator role.</aside>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-list.png" /></figure>
-  Playback rights with a <strong>Status</strong> of <strong>Inactive</strong> cannot be assigned to videos in the Media module.</section>
+    Playback rights with a <strong>Status</strong> of <strong>Inactive</strong> cannot be assigned to videos in the Media module.</section>
   <section class="bcls-section">
     <h2 id="create">Creating playback rights</h2>
     <p>To create playback rights, follow these steps.</p>
@@ -23,9 +23,6 @@ layout: staging
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-create.png" /></figure>
       </li>
     </ol>
-    <p>Playback rights you create are available immediately&nbsp;and will be visible&nbsp;in the Media module.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-media-module.png" /></figure>
-    <p>&nbsp;</p>
   </section>
   <section class="bcls-section">
     <h2 id="edit">Editing playback rights</h2>
@@ -34,6 +31,7 @@ layout: staging
       <li>Log in to Video Cloud Studio as an Administrator.</li>
       <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Playback Rights</strong>.</li>
       <li>Click on a playback right.</li>
+      <li>Make required changes and click <strong>Save</strong>.</li>
     </ol>
   </section>
   <section class="bcls-section">
@@ -43,6 +41,26 @@ layout: staging
       <li>Log in to Video Cloud Studio as an Administrator.</li>
       <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Playback Rights</strong>.</li>
       <li>Click <strong>Activate</strong> to activate a playback right or <strong>Deactivate</strong> to deactivate a playback right. Playback rights that are deactivated cannot be assigned to videos in the Media module.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="zipcode">Assigning zip code restrictions</h2>
+    <p>To assign zip code restrictions to a playback right, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Log in to Video Cloud Studio as an Administrator.</li>
+      <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Playback Rights</strong>.</li>
+      <li>Click on a playback right.</li>
+      <li>In the left navigation, click <strong>Zip Code Restrictions</strong>.</li>
+      <li>Configure the <strong>Global Rule</strong> for zip codes.</li>
+      <li>Click <strong>Save</strong>.</li>
+    </ol>
+    <h3>Blacklisting zip codes</h3>
+    <p>Blacklisting can be used when you need to allow viewing in most areas but need to restrict viewing to some zip codes.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>For <strong>Global Rule</strong>, select the <strong>Allow all (default)</strong> option.</li>
+      <li>In the <strong>Blacklisted Zip Codes</strong> field, enter a list of zip codes that will be prevented from viewing the video. The zip codes should be prefixed with an uppercase, two letter country code  and hypen, for example, <strong>US-90045</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-blacklist.png" /></figure>
+      </li>
     </ol>
   </section>
 </article>
