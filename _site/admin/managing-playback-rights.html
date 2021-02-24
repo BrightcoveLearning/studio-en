@@ -916,7 +916,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>To access the Playback Rights administration page, click the <strong>ADMIN</strong> link and then <strong>Playback Rights</strong>. A list of playback rights will appear.</p>
     <aside class="bcls-aside bcls-aside--information">Note: To access the Playback Rights page, you must be a Video Cloud Studio user with the Administrator role.</aside>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-list.png" /></figure>
-  Playback rights with a <strong>Status</strong> of <strong>Inactive</strong> cannot be assigned to videos in the Media module.</section>
+    Playback rights with a <strong>Status</strong> of <strong>Inactive</strong> cannot be assigned to videos in the Media module.</section>
   <section class="bcls-section">
     <h2 id="create">Creating playback rights</h2>
     <p>To create playback rights, follow these steps.</p>
@@ -948,24 +948,38 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Click <strong>Activate</strong> to activate a playback right or <strong>Deactivate</strong> to deactivate a playback right. Playback rights that are deactivated cannot be assigned to videos in the Media module.</li>
     </ol>
   </section>
-    <section class="bcls-section">
-      <h2 id="zipcode">Assigning zip code restrictions</h2>
-      <p>To assign zip code restrictions to a playback right, follow these steps:</p>
-      <ol class="bcls-tasklist-restart">
-        <li>Log in to Video Cloud Studio as an Administrator.</li>
-        <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Playback Rights</strong>.</li>
-        <li>Click on a playback right.</li>
-        <li>In the left navigation, click <strong>Zip Code Restrictions</strong>.</li>
-        <li>Configure the <strong>Global Rule</strong> for zip codes.</li>
-        <li>Click <strong>Save</strong>.</li>
-      </ol>
-        <h3>Blacklisting zip codes</h3>
-      <p>Blacklisting can be used when you need to allow viewing in most areas but need to restrict viewing to some zip codes.</p>
-        <ol class="bcls-tasklist-restart">
-        <li>For <strong>Global Rule</strong>, select the <strong>Allow all (default)</strong> option.</li>
-        <li>In the <strong>Blacklisted Zip Codes</strong> field, enter a list of zip codes that will be prevented from viewing the video. The zip codes should be prefixed with an uppercase, two letter country code  and hypen, for example, <strong>US-90045</strong>.</li>
-            </ol>
-    </section>
+  <section class="bcls-section">
+    <h2 id="zipcode">Assigning zip code restrictions</h2>
+    <p>To assign zip code restrictions to a playback right, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Log in to Video Cloud Studio as an Administrator.</li>
+      <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Playback Rights</strong>.</li>
+      <li>Click on a playback right.</li>
+      <li>In the left navigation, click <strong>Zip Code Restrictions</strong>.</li>
+      <li>Configure the <strong>Global Rule</strong> for zip codes.</li>
+      <li>Click <strong>Save</strong>.</li>
+    </ol>
+    <h3>Blacklisting zip codes</h3>
+    <p>Blacklisting can be used when you need to allow viewing in most areas but need to restrict viewing to some zip codes.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>For <strong>Global Rule</strong>, select the <strong>Allow all (default)</strong> option.</li>
+      <li>In the <strong>Blacklisted Zip Codes</strong> field, enter a list of zip codes that will be prevented from viewing. The zip codes should be prefixed with an uppercase, two letter country code  and hyphen, for example, <strong>US-90045</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-blacklist.png" /></figure>
+      </li>
+      <li>Click <strong>Save</strong>.</li>
+    </ol>
+    <h3>Whitelisting zip codes</h3>
+    <p>Whitelisting can be used when you need to block viewing in most areas but need to allow viewing to some zip codes.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>For <strong>Global Rule</strong>, select the<strong> Block All </strong>option.</li>
+      <li>In the <strong>Whitelisted Zip Codes</strong> field, enter a list of zip codes that will be allowed to view. The zip codes should be prefixed with an uppercase, two letter country code  and hyphen, for example, <strong>US-90045</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-whitelist.png" /></figure>
+      </li>
+      <li>Click <strong>Save</strong>.</li>
+    </ol>
+    <h3>Uploading a zip code file</h3>
+    <p>It is also possible to upload a .csv file containing zip codes that can be blacklisted or whitelisted. Select the appropriate Global Rule and then click Upload CSV to browse and select a file to upload.</p>
+  </section>
 </article>
 
 <!-- complete bootstrap layout -->
@@ -983,7 +997,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 08 Feb 2021
+  Page last updated on 24 Feb 2021
 </div>
 
 
