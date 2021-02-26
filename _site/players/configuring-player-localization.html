@@ -139,7 +139,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/players/">Managing Videos</a></li>
+      <li class="breadcrumb-item"><a href="/players/">Managing Players</a></li>
       
       <li class="breadcrumb-item active" aria-current="page">Configuring Player Localization</li>
     </ol>
@@ -929,11 +929,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Click on a player to open the player properties.</li>
       <li>Click <strong>Player Information</strong> in the left navigation menu.</li>
       <li>In the <strong>Localization</strong> field, enter the two letter language code for the language and press enter. As you type, the language list will be filtered. You can also click on a value to select it.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18715-select-language.png" /></figure>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/node18715-select-language.png" /></figure>
         <aside class="bcls-aside bcls-aside--information">Note: The list of supported languages can be found on the <a href="https://github.com/videojs/video.js/tree/master/lang">Video.js language</a> page.</aside>
       </li>
       <li>Add additional languages as appropriate. If an invalid language code is entered, it will appear in red.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18715-language-list.png" /></figure>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/node18715-language-list.png" /></figure>
       </li>
       <li>Click <strong>Save</strong>.</li>
     </ol>
@@ -948,10 +948,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Fall back to English</li>
     </ul>
     <aside class="bcls-aside bcls-aside--information language-editable">Note: This technique will only work with the Advanced (in-page) code implementation. Since the Standard implementation loads in an iframe, the browser language setting does not flow into it.</aside>
-      <p>If you use the HTML attribute you do not have to set the preferred language as default in your browser or computer as the player will use the one on the <code translate="No">lang</code> attribute.</p>
-      <pre>&lt;html lang="es"&gt; </pre>
-      <p>Also, if you are using an iframe, keep in mind that you will need to add the query parameter to the player URL.</p>
-      <pre>//players.brightcove.net/6045682556001/Jr6qqMDSb_default/index.html?videoId=6054419564001&amp;language=es</pre>
+    <p>If you use the HTML attribute you do not have to set the preferred language as default in your browser or computer as the player will use the one on the <code translate="No">lang</code> attribute.</p>
+    <pre>&lt;html lang="es"&gt; </pre>
+    <p>Also, if you are using an iframe, keep in mind that you will need to add the query parameter to the player URL.</p>
+    <pre>//players.brightcove.net/6045682556001/Jr6qqMDSb_default/index.html?videoId=6054419564001&amp;language=es</pre>
   </section>
 </article>
 
