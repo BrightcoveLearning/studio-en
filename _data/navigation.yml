@@ -303,8 +303,8 @@
       url: /analytics/performance-report-reference.html
     - name: Reviewing Player Events in Google Analytics
       url: /analytics/reviewing-player-event-data-google-analytics.html
-    - name: Trending Now Report Reference
-      url: /analytics/trending-now-report-reference.html
+    # - name: Trending Now Report Reference
+    #   url: /analytics/trending-now-report-reference.html
 - section:
   name: Administering Accounts
   url: /admin/index.html
