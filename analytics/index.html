@@ -10,7 +10,7 @@ parent: Home
   <h4><i  class="bcls-icon" data-feather="film"></i>&nbsp;&nbsp;&nbsp;Related Videos</h4>
   </a>
   <section class="bcls-section">
-    <ul>
+    <ul class="bcls-topic-list">
       {% for item in site.data.navigation %}
       {% if item.name == page.title %}
             {% for entry in item.docs %}
