@@ -4,3 +4,4 @@
 .DS_Store
 _site/feed.xml
 support/.DS_Store
+.vscode/settings.json
