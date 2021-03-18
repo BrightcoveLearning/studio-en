@@ -927,7 +927,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ol>
     <p>The main Billing page will display.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Main billing page" src="/assets/images/admin/node16461-billing-main.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information language-editable">Note: If a <strong>Billing Account</strong> dropdown list appears at the top of the page, this indicates you have multiple contracts with Brightcove. Use the dropdown to select a contract to view billing details.</aside>
+    <aside class="bcls-aside bcls-aside--information language-editable">Notes: 
+			<ul>
+				<li>If a <strong>Billing Account</strong> dropdown list appears at the top of the page, this indicates you have multiple contracts with Brightcove. Use the dropdown to select a contract to view billing details.</li>
+				<li>If you have one or more Zencoder accounts as well as Video Cloud accounts, VOD Zencoder Minutes Used items may appear on your Video Cloud billing statement. The information is included as a convenience, just to give you a complete picture of your billing - these charges are not related to Video Cloud.</li>
+			</ul>
+			</aside>
     <h3>Expired accounts</h3>
     <p>If you have older, expired accounts, you can also select those from the <strong>Billing Account</strong> dropdown:</p>
     <figure class="bcls-figure">
@@ -942,7 +947,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <aside class="bcls-aside bcls-aside--information">Note: Billing information for the previous month will not be available until the 7th of the current month.</aside>
     <p>The Contract Overview section may display the following billing metrics.</p>
     <h3>Bandwidth</h3>
-    <p>The Bandwidth metric consists of 2 submetrics which are <strong>VOD</strong> Edge bandwith plus <strong>Live</strong> Edge bandwidth. It displays total bandwidth / contracted bandwidth. Total bandwidth includes video and player loads. The name for this metric name will match what you see in your billing invoice to track the bandwidth usage (i.e. it may not display as Bandwidth). If the bandwidth amount is over quota, the graphic will appear in red. The bar chart can be used to view the bandwidth <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <p>The Bandwidth metric consists of 2 submetrics which are <strong>VOD</strong> Edge bandwidth plus <strong>Live</strong> Edge bandwidth. It displays total bandwidth / contracted bandwidth. Total bandwidth includes video and player loads. The name for this metric name will match what you see in your billing invoice to track the bandwidth usage (i.e. it may not display as Bandwidth). If the bandwidth amount is over quota, the graphic will appear in red. The bar chart can be used to view the bandwidth <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
     <aside class="bcls-aside bcls-aside--information language-editable">Note: Bandwidth data is delayed by up to 3-5 days, though usually it is available sooner. The data is partly dependent on information from CDNs, so there may be delays on their side that are beyond our control.</aside>
     <h3><strong>Streams</strong></h3>
     <p>The Streams metric displays the total stream starts / contracted stream starts. This should match the number of video views in the Analytics module. If the number of stream starts is over quota, the graphic will appear in red. The bar chart can be used to view the streams (in thousands) <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
