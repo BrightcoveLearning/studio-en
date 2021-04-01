@@ -100,6 +100,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-add-content.html",
+      "oldURL": "/cloud-playout-add-content"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-overview.html",
       "oldURL": "/cloud-playout-overview"
   },
@@ -505,12 +510,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/online-training-courses.html",
+      "newURL": "https://studio.support.brightcove.com/training/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/training/online-training-courses.html",
+      "newURL": "https://studio.support.brightcove.com/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
