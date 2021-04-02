@@ -45,6 +45,7 @@ parent: Managing Videos
     <h2 id="Limitations">Limitations</h2>
     <ul>
       <li>The ingestion system does not allow concurrent jobs on the same video. Therefore, if you attempt to upload images while the video is being ingested or retranscoded, the image upload will fail.</li>
+      <li>If the video was ingested using a legacy profile,  the upload button will be enabled, but image upload will fail. The workaround is to <a href="/media/retranscoding-videos-using-media-module.html">retranscode</a> or <a href="/media/replacing-video-source-file.html">replace</a> the video using a Dynamic Delivery or Context Aware Encoding profile.</li>
     </ul>
   </section>
 </article>
