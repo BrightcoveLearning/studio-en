@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="/assets/css/local.css">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
 <script>
@@ -38,7 +38,7 @@
 
 <header>
   <div class="div-header">
-    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Video_Cloud_Logo.svg" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/SVG/COVE004_Brightcove_Video_Cloud_Logo_RGB_K.svg" alt="Brightcove"></a>
 <!-- GTranslate: https://gtranslate.io/ -->
 <select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
 
@@ -50,7 +50,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
 
-    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="support"> Contact Support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="system status"> System Status</a></span>
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><i data-feather="help-circle"></i> Contact Support</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><i data-feather="cloud"></i> System Status</a></span>
     <br>
     
   </div>
@@ -513,6 +513,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
+                    <li><a href="/cloud-playout/cloud-playout-add-content.html">Adding Content to a Cloud Playout Channel</a></li>
+                  
+                
+                  
                     <li><a href="/cloud-playout/using-channel-actions.html">Using Channel Actions</a></li>
                   
                 
@@ -922,8 +926,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
     <p>If you are not enabling Server-Side Ads (SSAI) for your channel, you may still want to include bumpers - pre- or post-roll short videos which might be in-house ads or some other kind of announcement or promotion. You might also use bumpers to create buffers for your live programming segments.</p>
-    <p>There is nothing you need to do in the initial channel creation - the option to <span class="button-blue">Insert Bumpers</span> will appear automatically after the channel is created.</p>
-    <aside class="bcls-aside bcls-aside--information language-editable">Note that you can <strong>not</strong> include bumpers if the the channel is enabled for SSAI.</aside>
+    <p>There is nothing you need to do in the initial channel creation - the option to <span class="button-blue">Insert Bumpers</span> will appear automatically after the channel is created. This applies to all channels, including those enabled for Live streams or SSAI</p>
     <p>You can add multiple bumpers to the same video, and you can rearrange bumpers in the program order, just as you can videos. However, some care needs to be taken in doing this or you may end up with an inaccurate EPG. See <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html#epg_bumpers">The EPG and Bumpers</a> for full details.</p>
     <p>Bumpers will <strong>not</strong> appear in the <a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG</a> but the duration of the bumper will be added to the video before or after (depending on whether it is pre-roll or post-roll).</p>
   </section>
@@ -931,10 +934,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Enabling_bumper_content">Enabling bumper content</h2>
     <p>The bumpers can be any video in your account, but it must have <strong>one of</strong> the following tags:</p>
     <ul>
-      <li><code>cp-preroll-bumper</code></li>
-      <li><code>cp-postroll-bumper</code></li>
+      <li><code translate="no">cp-preroll-bumper</code></li>
+      <li><code translate="no">cp-postroll-bumper</code></li>
     </ul>
-    <aside class="bcls-aside bcls-aside--warning language-editable">If you add both of these tags to the same video, it will still work as a bumper, but the <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">EPG</a> will be inaccurate.</aside>
+    <aside class="bcls-aside bcls-aside--warning language-editable">Potential problems:
+			<ul>
+				<li>If you add both of these tags to the same video, it will still work as a bumper, but the <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">EPG</a> will be inaccurate.</li>
+				<li>Similarly, for SSAI-enabled channels, ad placeholders are treated as post-roll ads. You should not have a pre-roll bumper followed by an ad placeholder, as this effectively creates a pre-roll<i data-feather="arrow-right"></i>post-roll sequence that will cause the EPG to be inaccurate.</li>
+			</ul>
+			</aside>
   </section>
   <section class="bcls-section">
     <h2 id="inserting-bumpers">Inserting bumpers</h2>
@@ -1007,7 +1015,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 17 Feb 2021
+  Page last updated on 02 Apr 2021
 </div>
 
 
