@@ -409,4 +409,16 @@ parent: General Information
     </table>
     <p>Please understand that specific IP addresses are not available, as they may change at any time without notice. In addition, as we add new features or modify existing features, this list may change.  </p>
   </section>
+	<section class="bcls-section">
+		<h2 id="content_security_policies">Content security policies</h2>
+		<p>Brightcove's current set of CSPs:</p>
+<pre><code translate="no">default-src 'self';
+	script-src 'self' players.brightcove.net vjs.zencdn.net;
+	connect-src 'self' players.brightcove.net edge.api.brightcove.com;
+	img-src 'self' players.brightcove.net *.boltdns.net;
+	style-src 'self' players.brightcove.net;
+	frame-src 'self' players.brightcove.net;
+	media-src 'self' *.brightcovecdn.com *.boltdns.net *.media.brightcove.com *.llnw.net *.llnwd.net *.akafms.net *.akamaihd.net;
+	prefetch-src 'self' *.boltdns.net;</code></pre>
+	</section>
 </article>
