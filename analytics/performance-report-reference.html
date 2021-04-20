@@ -142,7 +142,6 @@ parent: Reviewing Analytics
     </ul>
     <aside class="bcls-aside bcls-aside--information">Note: For a complete list of all analytics terms and definitions, see the <a href="/analytics/analytics-module-ui-glossary.html">Analytics Glossary</a>.</aside>
   </section>
-  
   <section class="bcls-section">
     <h2 id="video">Viewing video analytics</h2>
     <p>When the <strong>Video</strong> dimension is selected, a graph will display the number of video views per day for the time period selected. The body of the report lists the video name, video ID, duration and the performance details for each video.</p>
@@ -210,7 +209,45 @@ parent: Reviewing Analytics
     <p>When the <strong>Day</strong> dimension is selected, a graph will display the number of video views per day for the time period selected. The body of the report will display the performance data for each day. Only days which have data within the time period selected will be displayed.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Day  Performance" src="/assets/images/analytics/node10104-day-performance.png" /></figure>
   </section>
-    <section class="bcls-section">
+  <section class="bcls-section">
+    <h2 id="filter">Using filters</h2>
+    <p>Filters can be used to limit the data that appears in the report. To add a filter, follow these steps.</p>
+    <ol class="bcls-tasklist">
+      <li>Click the <strong>+ Add filters</strong> pill at the top of the report.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="add filter" src="/assets/images/analytics/node10104-add-filter.png" /></figure>
+      </li>
+      <li>The data can be filtered by <strong>tags</strong> and/or <strong>custom fields</strong>. Configure the filter criteria using the filter panel. The following example will apply the filter:
+        <ul>
+          <li>Tag = <strong>on demand training</strong> AND</li>
+          <li>Custom field <strong>Product</strong> = <strong>Video Cloud</strong> AND</li>
+          <li>Custom field <strong>Presenter</strong> = <strong>Bob</strong></li>
+        </ul>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Day  Performance" src="/assets/images/analytics/node10104-filter-panel.png" /></figure>
+      </li>
+      <li>Click <strong>Apply Filters</strong>.</li>
+    </ol>
+    <p>The applied filters will appear in pills at the top of the report. Each pill will display a filter type and up to two values. Up to three pills will be displayed.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Day  Performance" src="/assets/images/analytics/node10104-filter-pills.png" /></figure>
+    <p>Additional pills are collapsed into an overflow pill and, are displayed in a tooltip on hover.</p>
+    <p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Day  Performance" src="/assets/images/analytics/node10104-pill-hover.png" /></figure>
+    </p>
+    <p>To remove a filter, click a pill and clear the filter from the filter panel.</p>
+    <h3>Notes on using filters</h3>
+    <ul>
+      <li>&nbsp;Stream type is only available if   Brightcove Live is enabled on the account</li>
+      <li>The custom fields section will be disabled if the account is not enabled for custom fields</li>
+      <li>Filters can be added/removed by using the plus / minus buttons to the right of the filter type</li>
+      <li>Although filters appear to be applied, they are not applicable to all sections of the Analytics module
+        <ul>
+          <li>Tags and custom field filters are not applied when you have drilled into a specific video or player (the only exception being Player by Video or Day dimensions)</li>
+          <li>Engagement graph in the Engagement report</li>
+        </ul>
+      </li>
+      <li>Analytics data may take a bit longer to load when applying filters</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
     <h2 id="export" class="BCL_conceptTitle">Exporting report data</h2>
     <p>Report data can be downloaded as both comma separated values and Excel formats. Note that the export feature saves the data directly from an <span translate="No">Analytics API</span> call. The exported data is not manipulated the way the UI data is, and currently contains all of the underlying data in the report, not just the subset of fields the UI shows. Some of the differences between what is shown in the UI vs. the exported data:</p>
     <ul>
