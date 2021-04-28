@@ -938,6 +938,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Checking <strong>Allow Playback Right without token</strong> will allow playback requests to be made without a JSON Web Token (JWT).
         <aside class="bcls-aside bcls-aside--information">Note: Unchecking this option won't affect the restrictions set for that Playback Right, however, the playback request is going to require a valid JWT which is set programmatically at the player level.  For information, see the developer document <a href="https://apis.support.brightcove.com/playback-authorization/guides/using-pas-with-bcp.html">Using Playback Authorization DRM with the Brightcove Player</a>.</aside>
       </li>
+      <li>Check <strong>Use as default</strong> to make this the default playback right. This will apply the configured playback right restrictions to  uploaded videos.
+        <aside class="bcls-aside bcls-aside--information">Note: The default playback right is not assigned if a video is re-transcoded.</aside>
+      </li>
       <li>Click <strong>Save</strong>.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-create.png" /></figure>
       </li>
@@ -954,8 +957,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="edit">Editing playback rights</h2>
     <p>To edit playback rights, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Playback Rights</strong>.</li>
       <li>Click on a playback right.</li>
+      <li>Make required changes and click <strong>Save</strong>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="duplicate">Duplicating playback rights</h2>
+    <p>To duplicate a playback right, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on a playback right.</li>
+      <li>Click <strong>Duplicate</strong>.</li>
       <li>Make required changes and click <strong>Save</strong>.</li>
     </ol>
   </section>
@@ -963,7 +974,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="activate">Activating/Deactivating playback rights</h2>
     <p>Playback rights cannot be deleted, however, they can be deactivated so they can't be assigned to videos in the Media module. To activate/deactivate playback rights, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Playback Rights</strong>.</li>
       <li>Click on a playback right.</li>
       <li>Click <strong>Activate</strong> to activate a playback right or <strong>Deactivate</strong> to deactivate a playback right. Playback rights that are deactivated cannot be assigned to videos in the Media module.</li>
     </ol>
@@ -972,7 +982,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="geo">Assigning geographic restrictions</h2>
     <p>Geographic restrictions allow you to limit video playback based upon country, ZIP code and/or designated market area. To assign geographic restrictions to a playback right, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Playback Rights</strong>.</li>
       <li>Click on a playback right.</li>
       <li>In the left navigation, click <strong>Geographic Restrictions</strong>.</li>
     </ol>
@@ -981,7 +990,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><a href="#countries">Countries</a></li>
       <li><a href="#zip">ZIP Codes</a></li>
       <li><a href="#ip">IP Restrictions</a></li>
-      <li>Designated Market Area (DMA)</li>
+      <li><a href="#dma">Designated Market Area (DMA)</a></li>
     </ul>
     <h3 id="countries">Blacklisting countries</h3>
     <p>Blacklisting countries can be used to prevent  viewing in specific countries.</p>
@@ -1022,7 +1031,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="domain">Assigning domain restrictions</h2>
     <p>Domain restrictions allow you to limit video playback based upon domain. To assign domain restrictions to a playback right, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Playback Rights</strong>.</li>
       <li>Click on a playback right.</li>
       <li>In the left navigation, click <strong>Domain Restrictions</strong>.</li>
       <li>In the <strong>Blacklisted Domains</strong> field, enter the domains  that  will be prevented from viewing. </li>
@@ -1036,7 +1044,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="proxy">Assigning proxy restrictions</h2>
     <p>Proxy restrictions allow you to limit video playback based upon certain types of connections. To assign proxy restrictions to a playback right, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the navigation header, click <strong>ADMIN</strong> and then <strong>Playback Rights</strong>.</li>
       <li>Click on a playback right.</li>
       <li>In the left navigation, click <strong>Proxy Restrictions</strong>.</li>
       <li>Select the proxy types to block.
