@@ -90,6 +90,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/general/china-delivery-overview.html",
+      "oldURL": "/china-delivery-overview"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html",
       "oldURL": "/choosing-correct-embed-code"
   },
@@ -365,12 +370,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/support/",
+      "newURL": "https://studio.support.brightcove.com/analytics/",
       "oldURL": "/index"
   },
 
@@ -380,17 +380,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/general/",
+      "newURL": "https://studio.support.brightcove.com/publish/",
       "oldURL": "/index"
   },
 
@@ -400,7 +390,22 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/training/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/admin/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/",
       "oldURL": "/index"
   },
 
@@ -410,7 +415,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/basics/",
+      "newURL": "https://studio.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -420,12 +425,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/",
+      "newURL": "https://studio.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/",
+      "newURL": "https://studio.support.brightcove.com/basics/",
       "oldURL": "/index"
   },
 
@@ -505,12 +510,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/online-training-courses.html",
+      "newURL": "https://studio.support.brightcove.com/training/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/training/online-training-courses.html",
+      "newURL": "https://studio.support.brightcove.com/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
 
