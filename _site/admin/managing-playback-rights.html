@@ -927,8 +927,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>
       <aside class="bcls-aside bcls-aside--information">Note: To access the Playback Rights page, you must be a Video Cloud Studio user with the Administrator role.</aside>
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-list.png" /></figure>
-    Playback rights are assigned to videos in the <strong>Playback Restrictions</strong> section of the video properties page  in the Media module. </p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-assign.png" /></figure>
+      Playback rights are assigned to videos in the <strong>Playback Restrictions</strong> section of the video properties page  in the Media module. </p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-assign.png" /></figure>
     <p>Playback rights with a <strong>Status</strong> of <strong>Inactive</strong> cannot be assigned to videos in the Media module.</p>
   </section>
   <section class="bcls-section">
@@ -955,6 +955,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><a href="#geo">Geographic</a></li>
       <li><a href="#domain">Domain</a></li>
       <li><a href="#proxy">Proxy</a></li>
+      <li><a href="#date">Time</a></li>
     </ul>
   </section>
   <section class="bcls-section">
@@ -984,48 +985,63 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="geo">Assigning geographic restrictions</h2>
-    <p>Geographic restrictions allow you to limit video playback based upon country, ZIP code and/or designated market area. To assign geographic restrictions to a playback right, follow these steps:</p>
+    <p>Geographic restrictions allow you to limit video playback based upon country, ZIP code, IPs and designated market area. To assign geographic restrictions to a playback right, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
       <li>Click on a playback right.</li>
       <li>In the left navigation, click <strong>Geographic Restrictions</strong>.</li>
     </ol>
-    <p>By default, the <strong>Global rule</strong> will be set to <strong>Allow all</strong>. This means, by default, there are no geographic restrictions. Geographic restrictions can be added to prevent viewing based upon:</p>
+    <p>The <strong>Global rule</strong> can be set to <strong>Allow all</strong> or <strong>Block all</strong>.</p>
+    <ul>
+      <li><strong>Allow all</strong>
+        <ul>
+          <li>Used when you want to blacklist a small number of groups who will not have access</li>
+          <li>Select to allow viewing for all and then add  a list of blacklisted countries, zip codes, IPs and DMAs that are prevented from viewing</li>
+        </ul>
+      </li>
+      <li><strong>Block all</strong>
+        <ul>
+          <li>Used when you want to whitelist  a small number of groups who will have access</li>
+          <li>Select to block viewing for all and then add a list of whitelisted  countries, zip codes, IPs or DMAs that are allowed to view</li>
+        </ul>
+      </li>
+    </ul>
+    <p>Geographic restrictions can be added to allow/prevent viewing based upon:</p>
     <ul>
       <li><a href="#countries">Countries</a></li>
       <li><a href="#zip">ZIP Codes</a></li>
       <li><a href="#ip">IP Restrictions</a></li>
       <li><a href="#dma">Designated Market Area (DMA)</a></li>
     </ul>
-    <h3 id="countries">Blacklisting countries</h3>
-    <p>Blacklisting countries can be used to prevent  viewing in specific countries.</p>
+    <h3 id="countries">Restricting access to countries</h3>
+    <p>Country playback rights can be used to limit  viewing to specific countries.</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the <strong>Blacklisted Countries</strong> field, select the countries  that will be prevented from viewing. As you type, the selection list will be filtered.
+      <li>Select the countries  that will be prevented (blacklisted) or allowed (whitelisted) to view. As you type, the selection list will be filtered.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-countries.png" /></figure>
       </li>
       <li>Click <strong>Save</strong>.</li>
     </ol>
-    <h3 id="zip">Blacklisting zip codes</h3>
-    <p>Blacklisting zip codes can be used to prevent  viewing in specific zip codes.</p>
+    <h3 id="zip">Restricting access to zip codes</h3>
+    <p>Zip code playback rights can be used to limit  viewing to specific zip codes.</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the <strong>Blacklisted Zip Codes</strong> field, enter a list of zip codes that will be prevented from viewing. The zip codes should be prefixed with an uppercase, two letter country code  and hyphen, for example, <strong>US-90045</strong>.
+      <li>Enter a list of zip codes that will be prevented (blacklisted) or allowed (whitelisted) from viewing. The zip codes should be prefixed with an uppercase, two letter country code  and hyphen, for example, <strong>US-90045</strong>.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-zip.png" /></figure>
       </li>
     </ol>
-    <p>It is also possible to upload a .csv file containing blacklisted zip codes. Click <strong>Upload CSV</strong> to browse and select a file to upload.</p>
+    <p>It is also possible to upload a .csv file containing  zip codes. Click <strong>Upload CSV</strong> to browse and select a file to upload.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-upload-csv.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Note: Uploading a .csv file will replace the contents of the <strong>Blacklisted ZIP codes</strong> field.</aside>
-    <h3 id="ip">Blacklisting IPs</h3>
-    <p>Blacklisting IPs can be used to prevent  viewing based upon IP address.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Uploading a .csv file will replace the contents of the <strong> ZIP codes</strong> field.</aside>
+    <h3 id="ip">Restricting access to IPs</h3>
+    <p>IP playback rights can be used to limit viewing to an IP address range.</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the <strong>Blacklisted IPs</strong> field, enter a range of IP addresses  that will be prevented from viewing. <a href="http://tools.ietf.org/html/rfc4632">CIDR block notation</a> is also supported.
+      <li>Enter a range of IP addresses  that will be prevented (blacklisted) or allowed (whitelisted) from viewing. <a href="http://tools.ietf.org/html/rfc4632">CIDR block notation</a> is also supported.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-ip.png" /></figure>
       </li>
       <li>Click <strong>Save</strong>.</li>
     </ol>
-    <h3 id="dma">Blacklisting DMA</h3>
-    <p>A designated market area (DMA), also referred to as a media market, is a region of the United States that is used to define television and radio markets. Blacklisting DMAs can be used to prevent  viewing based upon DMA.</p>
+    <h3 id="dma">Restricting access to DMAs</h3>
+    <p>A designated market area (DMA), also referred to as a media market, is a region of the United States that is used to define television and radio markets. Playback rights can be used to limit viewing based upon DMAs.</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the <strong>Blacklisted DMAs</strong> field, enter DMA codes that  will be prevented from viewing.
+      <li>Enter a list of DMAs  that will be prevented (blacklisted) or allowed (whitelisted) from viewing
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-dma.png" /></figure>
       </li>
       <li>Click <strong>Save</strong>.</li>
@@ -1053,6 +1069,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Select the proxy types to block.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-proxy.png" /></figure>
       </li>
+      <li>Click <strong>Save</strong>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="date">Assigning time restrictions</h2>
+    <p>Time restrictions allow you to limit video playback based upon a specified start date. To assign time restrictions to a playback right, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on a playback right.</li>
+      <li>In the left navigation, click <strong>Time Restrictions</strong>.</li>
+      <li>Click the calendar control to select a <strong>Start Date</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/playback-rights-date.png" /></figure>
+      </li>
+      <li>(Optional) Click <strong>Add End Date</strong> to select an end date.</li>
       <li>Click <strong>Save</strong>.</li>
     </ol>
   </section>
