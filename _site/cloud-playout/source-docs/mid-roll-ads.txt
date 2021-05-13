@@ -1,0 +1,53 @@
+SSAI: Mid-Roll Ad Insertion (Import VoD cue points)
+Created by Madanmohan Balasubramanian
+Last updated about 7 hours ago4 min read9 people viewed9 people viewed
+Requirement for Cloud Playout is to import cue-points on VoD assets that are being added to a Cloud Playout channel and to insert Ad markers for specific duration so that the downstream service (Ex: BC Live) can replace the Ad markers with actual SSAI Ads. 
+
+Feature applicable only for Ad Enabled (SSAI) Cloud Playout channels. 
+
+The import feature can be enabled or disabled on channel settings and this can be turned on/off during any state of the channel.
+
+We will use only cue-point type Ad (Key/Value Pair) to provision the Mid-Roll Ads. Cloud Playout will consider only the cue-point’s timestamp to insert the mid-roll, the key/value metadata and other details will be ignored.
+
+Consider default 30 Sec Ad duration. (Can be overridden on channel settings; minimum 30 seconds and maximum 10 minutes Ad slot duration can be provisioned). 
+
+Pre roll (Cue-point on 00:00:00 timestamp) and post roll (Cue-point on timestamp >= asset’s duration) cue-points on VoD asset will be skipped and user should use Cloud Playout to provision those. (Just to avoid duplicate ads)
+
+Cue-points on ad-placeholder assets (cp-ad-holder) and bumper (cp-preroll-bumper and cp-postroll-bumper) assets will be excluded. Import is applicable only for VoD assets.
+
+Start/End time & asset duration on UI & EPG  reflect the imported mid-roll Ad duration time.
+
+Mid-roll import can be enabled/disabled on channel settings irrespective of channel states.
+
+Note A: When a channel has mid-roll import option disabled and asset A is currently playing and it has mid-roll cue-points, and if the mid-roll import option is turned ON now on channel settings - the Ad slots in the current playing asset will not be honoured for the current iteration. However subsequent assets' mid-rolls will be imported.
+
+Note B: When a channel has mid-roll import option enabled and asset A is currently playing and it has mid-roll cue-points, and if the mid-roll import option is turned off now - the Ad slots in the current playing asset will be honoured on a best effort basis. Some Ad slots which are so nearly located to the playtime of the current playing asset might still play Ads. 
+
+Mid-roll Ad slot duration can be changed on channel settings irrespective of channel states. 
+
+Note: That modified duration will not be applicable for the currently playing Ad slot. Subsequent Ad slots (within the same asset and subsequent assets) will be honoured with the modified Ad slot duration.
+
+Note:  When Cloud Playout is currently playing an Ad (mid-roll or post-roll) and if user attempts to use Play Now option to skip to another asset, the Ad will still continue to play until the programmed Ad slot duration. During this time, the asset that is attempted to Play Now will be overwritten with the Ad for the remaining Ad slot duration. So, we recommend to wait for the completion of Ad, and then user can make the Play Now switch.
+
+
+
+Figures
+Enable/disable Mid-Roll cue points while creating the channel. Also same can be done at any state once the channel is created.
+
+
+ 
+
+Assets with valid Mid-Roll cue points has a green dotted icon next to the video title. 
+
+
+On DRAFT state; imported mid-roll details pops up on mouse hover
+
+
+On RUNNING state; imported mid-roll details pops up on mouse click
+
+
+On a running channel, Edit Program
+
+
+Mid-Roll cue points editable on RUNNING state
+
