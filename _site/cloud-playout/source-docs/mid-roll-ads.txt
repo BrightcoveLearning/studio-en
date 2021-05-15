@@ -1,6 +1,4 @@
 SSAI: Mid-Roll Ad Insertion (Import VoD cue points)
-Created by Madanmohan Balasubramanian
-Last updated about 7 hours ago4 min read9 people viewed9 people viewed
 Requirement for Cloud Playout is to import cue-points on VoD assets that are being added to a Cloud Playout channel and to insert Ad markers for specific duration so that the downstream service (Ex: BC Live) can replace the Ad markers with actual SSAI Ads. 
 
 Feature applicable only for Ad Enabled (SSAI) Cloud Playout channels. 
