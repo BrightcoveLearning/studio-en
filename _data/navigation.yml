@@ -191,6 +191,8 @@
       url: /cloud-playout/adding-bumpers-to-vod.html
     - name: Monetizing Cloud Playout
       url: /cloud-playout/enabling-server-side-ads.html
+    # - name: Adding Mid-Roll Ads to a Channel
+    #   url: /cloud-playout/mid-roll-ad-insertion.html
     - name: Generating the Channel Embed Code
       url: /cloud-playout/generating-channel-embed-code.html
     - name: Viewing Channel Output and Analytics
