@@ -385,7 +385,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/",
+      "newURL": "https://studio.support.brightcove.com/publish/",
       "oldURL": "/index"
   },
 
@@ -395,7 +395,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -405,12 +410,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/training/",
+      "newURL": "https://studio.support.brightcove.com/players/",
       "oldURL": "/index"
   },
 
@@ -425,17 +425,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/",
+      "newURL": "https://studio.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/social/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -450,7 +445,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/",
+      "newURL": "https://studio.support.brightcove.com/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/training/",
       "oldURL": "/index"
   },
 
@@ -727,11 +727,6 @@
   {
       "newURL": "https://studio.support.brightcove.com/social/social-api-error-reference.html",
       "oldURL": "/social-api-error-reference"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/social/social-training-videos.html",
-      "oldURL": "/social-training-videos"
   },
 
   {
