@@ -903,6 +903,16 @@
       
         <url>
           
+            <loc>https://studio.support.brightcove.com/cloud-playout/mid-roll-ad-insertion.html</loc>
+          
+            <lastmod>2021-05-19</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
             <loc>https://studio.support.brightcove.com/cloud-playout/generating-channel-embed-code.html</loc>
           
             <lastmod>2021-05-19</lastmod>
