@@ -1,7 +1,6 @@
 ---
 title: "Configuring a Playlist Endscreen Using the playlist-endscreen Plugin"
 parent: Managing Players
-layout: staging
 ---
 <article class="bcls-article">
   <h1>Configuring a Playlist Endscreen Using the playlist-endscreen Plugin</h1>
@@ -24,17 +23,13 @@ layout: staging
       <li>Click <strong>Add a Plugin &gt; Brightcove Plugin</strong>.</li>
       <li>For the <strong>Brightcove Plugin</strong>, select <strong translate="No">playlist-endscreen</strong>.</li>
       <li>The playlist to display is configured by adding the playlist ID to the <strong>Options(JSON)</strong>. The example shows how to configure the Options(JSON) to pass the playlist ID to display.
-        <pre>
-<code translate="No">{
-	  "options": [
-	    {
-          playlistId": 1234567001
-	    }
-	  ]
+        <pre><code translate="No">
+{
+  &quot;playlistId": 1234567001
 }</code></pre>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/node16311-overlay-plugin.png" /></figure>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/playlist-endscreen-settings.png" /></figure>
       </li>
-      <li>Click <strong>Save</strong> and <strong>Publish</strong> the player. Note that it may take up to 5 minutes for the changes to appear in published players.</li>
+      <li>Click <strong>Save</strong> and  then <strong>Publish</strong> the player. Note that it may take up to 5 minutes for the changes to appear in published players.</li>
     </ol>
   </section>
 </article>
