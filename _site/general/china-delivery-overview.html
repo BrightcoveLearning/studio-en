@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="In this topic, you will get a high-level overview about Brightcove's China Delivery feature.">
   
@@ -12,6 +11,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">  
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
@@ -981,9 +981,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <article class="bcls-article">
   <summary>In this topic, you will get a high-level overview about Brightcove's China Delivery feature.</summary>
 
-  <br/>
-  <aside class="bcls-aside bcls-aside--tip">This feature is available for a specific set of customers with access to the Limited Availability phase of China Delivery.</aside>
-
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
 
@@ -1032,22 +1029,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Limitations">Limitations</h2>
     <p>The following are known limitations with China Delivery:</p>
-    <h3>Limited Availability (LA) - January 2021</h3> 
+
+    <h3>Current Limitations</h3> 
     <ul>
-      <li>Player configuration requires editing JSON and/or usage of the Player Management API. A “one-click” Player configuration via the Studio is intended for the future.</li>
-      <li>The Brightcove Native SDKs (iOS & Android) will be supported shortly after release</li>
+      <li>Player configuration requires editing JSON and/or usage of the Player Management API; A “one-click” Player configuration via the Studio is intended for the future</li>
+      <li>The Brightcove Native Android SDK with support for China Delivery will be available in early Q3 2021</li>
     </ul>
 
-    <h3>General Availability (GA) - Targeted for Q2 2021</h3>
+    <h3>Unsupported Features:</h3>
     <ul>
-      <li>Live Streaming is not supported</li>
-      <li>Dynamic Delivery Rules are not supported</li>
-      <li>Integrations requiring 3rd-party server access are not supported, including:
-        <ul>
-          <li>DRM</li>
-          <li>Advertising (CSAI + SSAI)</li>
-        </ul>
-      </li>
+      <li>Brightcove Live Streaming and Cloud Playout are not supported</li>
+      <li>Dynamic Delivery Rules and Static URLs are not supported</li>
+    </ul>
+      
+    <p>Player and SDK plugins can be used as normal but external services may be unreachable from within China, and Brightcove cannot provide support for them. These include:</p>
+    <ul>
+      <li>DRM</li>
+      <li>Advertising (CSAI + SSAI)</li>
+      <li>Third-party Analytics services</li>
     </ul>
     
   </section>

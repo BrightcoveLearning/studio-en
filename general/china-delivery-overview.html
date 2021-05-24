@@ -2,15 +2,11 @@
 title: "Overview: China Delivery"
 description: "In this topic, you will get a high-level overview about Brightcove's China Delivery feature."
 parent: General Information
-layout: staging
 --- 
 
 <h1>{{ page.title }}</h1>
 <article class="bcls-article">
   <summary>{{ page.description }}</summary>
-
-  <br/>
-  <aside class="bcls-aside bcls-aside--tip">This feature is available for a specific set of customers with access to the Limited Availability phase of China Delivery.</aside>
 
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
@@ -60,22 +56,24 @@ layout: staging
   <section class="bcls-section">
     <h2 id="Limitations">Limitations</h2>
     <p>The following are known limitations with China Delivery:</p>
-    <h3>Limited Availability (LA) - January 2021</h3> 
+
+    <h3>Current Limitations</h3> 
     <ul>
-      <li>Player configuration requires editing JSON and/or usage of the Player Management API. A “one-click” Player configuration via the Studio is intended for the future.</li>
-      <li>The Brightcove Native SDKs (iOS & Android) will be supported shortly after release</li>
+      <li>Player configuration requires editing JSON and/or usage of the Player Management API; A “one-click” Player configuration via the Studio is intended for the future</li>
+      <li>The Brightcove Native Android SDK with support for China Delivery will be available in early Q3 2021</li>
     </ul>
 
-    <h3>General Availability (GA) - Targeted for Q2 2021</h3>
+    <h3>Unsupported Features:</h3>
     <ul>
-      <li>Live Streaming is not supported</li>
-      <li>Dynamic Delivery Rules are not supported</li>
-      <li>Integrations requiring 3rd-party server access are not supported, including:
-        <ul>
-          <li>DRM</li>
-          <li>Advertising (CSAI + SSAI)</li>
-        </ul>
-      </li>
+      <li>Brightcove Live Streaming and Cloud Playout are not supported</li>
+      <li>Dynamic Delivery Rules and Static URLs are not supported</li>
+    </ul>
+      
+    <p>Player and SDK plugins can be used as normal but external services may be unreachable from within China, and Brightcove cannot provide support for them. These include:</p>
+    <ul>
+      <li>DRM</li>
+      <li>Advertising (CSAI + SSAI)</li>
+      <li>Third-party Analytics services</li>
     </ul>
     
   </section>
