@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will find the latest information on changes and enhancements to Video Cloud Studio and Brightcove Player Studio.">
+  <meta name="description" content="In this topic, you will learn about the Audience API. The Audience API allows you to retrieve viewing event and lead data.">
   
-  <title>Video Cloud Studio Release Notes</title>
+  <title>Overview: Audience API</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -59,9 +59,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/release-notes/">Managing Videos</a></li>
+      <li class="breadcrumb-item"><a href="/audience/develop/">Developers</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Video Cloud Studio Release Notes</li>
+      <li class="breadcrumb-item active" aria-current="page">Overview: Audience API</li>
     </ol>
   </nav>
 </header>
@@ -982,278 +982,356 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
 <article class="bcls-article">
-<h1>Video Cloud Studio Release Notes</h1>
-<summary>In this topic, you will find the latest information on changes and enhancements to Video Cloud Studio and Brightcove Player Studio.</summary>
-<section class="bcls-section">
-<p>Release notes are also available for:</p>
-<ul>
-  <li><a href="https://player.support.brightcove.com/release-notes/index.html">Brightcove Player</a></li>
-  <li><a href="https://sdks.support.brightcove.com/developer-support/questions/release-notes-brightcove-native-sdks.html">Native Player SDKs</a></li>
-</ul>
-<p>&nbsp;</p>
-<h2>China Delivery</h2>
-<h4>25 May 2021</h4>
-<p>To help you reach a vast new market and significantly grow your e-commerce opportunity, Brightcove is excited to introduce the ability to deliver video into China through a partnership with global e-commerce giant Alibaba. For details, see the <a href="/general/china-delivery-overview.html">Overview: China Delivery</a> document.</p>
-<hr />
-<h2>Playlist Endscreen Plugin</h2>
-<h4>20 May 2021</h4>
-<p>The Players module now provides a playlist-endscreen plugin which can be used to display a playlist on the the player endscreen. See <a href="/players/configuring-playlist-endscreen-using-plugin.html">Configuring a Playlist Endscreen Using the playlist-endscreen Plugin</a> for details.</p>
-<hr />
-<h2>Cloud Playout</h2>
-<h4>19 May 2021</h4>
-<p>Cloud Playout now supports mid-roll ad insertion for VOD assets. See <a href="/cloud-playout/mid-roll-ad-insertion.html">Adding Mid-Roll Ads to a channel</a> for details.</p>
-<hr />
-<h2>Playback Rights</h2>
-<h4>4 May 2021</h4>
-<p>Playback Rights provide another method of controlling video playback. Videos can be restricted based upon geography, domain and proxies. See  <a href="/admin/managing-playback-rights.html">Managing Playback Rights</a> for details.</p>
-<hr />
-<h2>Analytics Filters</h2>
-<h4>16 Apr 2021</h4>
-<p>The Performance and Engagement reports in the Analytics module now support report filters. See the <a href="/analytics/performance-report-reference.html">Performance Report</a> or <a href="/analytics/engagement-report-reference.html">Engagement Report</a> documentation for details.</p>
-<hr />
-<h2>Main Navigation Rebranding</h2>
-<h4>30 Mar 2021</h4>
-<p>The main navigation used in Video Cloud Studio has been updated to correspond to the updated Brightcove branding.</p>
-<hr />
-<h2>Playlists can be added to Cloud Playout Channels</h2>
-<h4>29 Mar 2021</h4>
-<p>Playlists can now be added to Cloud Playout channels in addition to individual videos. See <a href="/cloud-playout/cloud-playout-add-content.html">Adding Content to a Cloud Playout Channel</a></p>
-<hr />
-<h2>Admin Module Rebranding</h2>
-<h4>16 Mar 2021</h4>
-<p>The navigation used in the Admin module has been updated to correspond to the updated Brightcove branding.</p>
-<hr />
-<h2>Players Module Rebranding</h2>
-<h4>25 Feb 2021</h4>
-<p>The colors and fonts used in the Players module have been updated to correspond to the updated Brightcove branding.</p>
-<hr />
-<h2>Bumpers in Cloud Playout</h2>
-<h4>19 Feb 2021</h4>
-<p>Bumpers can now be added to Cloud Playout channels. See <a href="/cloud-playout/adding-bumpers-to-vod.html">Adding Bumpers to Cloud Playout</a>.</p>
-<hr />
-<h2>Cloud Playout</h2>
-<h4>6 Feb 2021</h4>
-<p>Cloud Playout released. See <a href="/cloud-playout/cloud-playout-overview.html">Overview: Cloud Playout</a>.</p>
-<hr />
-<h2>Live Zoom Integrations</h2>
-<h4>4 Feb 2021</h4>
-<p>It is now possible to integrate a Zoom meeting with Brightcove Live.</p>
-<p><a href="https://live.support.brightcove.com/live-module/zoom-live-integration.html">Learn more</a></p>
-<hr />
-<h2>Dashboard, Media &amp; Analytics Rebranding</h2>
-<h4>3 Feb 2021</h4>
-<p>The colors and fonts used in the Dashboard, Media and Analytics modules have been updated to correspond to the updated Brightcove branding.</p>
-<hr />
-<h2>Live Multi-Language</h2>
-<h4>2 Feb 2021</h4>
-<p>Add multiple audio languages, descriptive or ambient audio experience tracks to be available for live playback.</p>
-<p><a href="https://live.support.brightcove.com/general/multi-language-audio.html">Learn more</a></p>
-<hr />
-<h2>Thumbnail Seeking</h2>
-<h4>20 Jan 2021</h4>
-<p>The Players module module now supports the ability to display video thumbnails as a viewer hovers over the player progress bar. For more information, see <a href="/players/adding-thumbnail-seeking-player.html">Adding Thumbnail Seeking to a  Brightcove Player</a>.</p>
-<hr />
-<h2>Categorization Panel</h2>
-<h4>1 Dec 2020</h4>
-<p>The Video Properties page in the Media module now has a Categorization section. The Tag, Folder, and Manual Playlist properties have been moved from the Video Information section to this new section.</p>
-<p><a href="https://studio.support.brightcove.com/media/editing-video-properties-using-media-module.html#categorization">Learn more</a></p>
-<hr />
-<h2>Pardot Integration</h2>
-<h4>1 Jul 2020</h4>
-<p>The Audience module can now be integrated with Salesforce Pardot to identify viewers.</p>
-<p><a href="https://audience.support.brightcove.com/integrations/salesforce/integrating-video-cloud-salesforce.html#pardot">Learn more</a></p>
-<hr />
-<h2>Performance Report</h2>
-<h4>14 Apr 2020</h4>
-<p>The Performance Report now provides the ability to view data for all videos, VOD videos or live videos.</p>
-<p><a href="/analytics/performance-report-reference.html">Learn more</a></p>
-<hr />
-<h2>Live DRM</h2>
-<h4>16 Oct 2019</h4>
-<p>Create live streams with protected content for DRM-enabled events.</p>
-<p><a href="https://live.support.brightcove.com/general/live-drm.html">Learn more</a></p>
-<hr />
-<h2>Creating Video Clips</h2>
-<h4>27 Sep 2019</h4>
-<p>Live streams are now available for 7 days for creating video clips from the Live module.</p>
-<p><a href="https://live.support.brightcove.com/live-module/creating-video-clip-using-live-module.html">Learn more</a></p>
-<hr />
-<h2>Playback Rate in Players Module</h2>
-<h4>1 Aug 2019</h4>
-<p>The Players module now provides the ability to display a playback rate menu in the player. This allows a viewer to select the video playback speed.</p>
-<p><a href="/players/configuring-player-controls.html#rates">Learn more</a></p>
-<hr />
-<h2>Google Analytics Event Tracking</h2>
-<h4>11 Jul 2019</h4>
-<p>The Players module now provides the ability to easily integrate Brightcove Players with Google Analytics. This allows player events and custom dimension data to be sent to a Google Analytics account for reporting purposes.</p>
-<p><a href="/players/configuring-google-analytics-event-tracking.html">Learn more</a></p>
-<hr />
-<h2>Adobe Analytics Event Tracking</h2>
-<h4>11 Jul 2019</h4>
-<p>The Players module now provides the ability to easily integrate Brightcove Players with Adobe Analytics. This allows event tracking data to be sent to an Adobe Analytics account for reporting purposes.</p>
-<p><a href="/players/configuring-adobe-analytics-event-tracking.html">Learn more</a></p>
-<hr />
-<h2>Live Event Monitoring</h2>
-<h4>14 Jun 2019</h4>
-<p>The Live module now provides the ability to monitor live events while an event is in progress and for up to 1 hour after the event ends.</p>
-<p><a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#monitor">Learn more</a></p>
-<hr />
-<h2>Live Event Analytics Dashboard</h2>
-<h4>14 Jun 2019</h4>
-<p>The Live module now provides reports on live streaming event or channel performance. Information including real-time concurrent viewers and aggregated post-event data about the viewers stream time, geography, and devices is available.</p>
-<p><a href="https://live.support.brightcove.com/live-module/reviewing-live-analytics.html">Learn more</a></p>
-<hr />
-<h2>Updates to Media Module UI</h2>
-<h4>22 May 2019</h4>
-<p>The layout of the button bar in the Media module has been modified to provide a more responsive experience for smaller screen sizes.</p>
-<hr />
-<h2>Updates to Players Module UI</h2>
-<h4>9 May 2019</h4>
-<p>Several changes have been made to the Players module UI:</p>
-<ul>
-  <li>The player controls now include an option for a vertical volume slider</li>
-  <li>Google+ is no longer an option in social sharing</li>
-  <li>The embed code dialog includes a Copy button to easily copy the player embed code</li>
-  <li>The player embed code formatting has been improved</li>
-</ul>
-<hr />
-<h2>Connecting Live Events to Social Media</h2>
-<h4>30 Apr 2019</h4>
-<p>The Live module has added support to connect a live event to a social event that was scheduled in the Social module. For information, see <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#social">Creating and Managing Live Events using the Live Module</a>.</p>
-<hr />
-<h2>Live to Facebook</h2>
-<h4>25 Apr 2019</h4>
-<p>The Social module has added support for scheduling and streaming live events to Facebook. For information, see <a href="https://live.support.brightcove.com/live-module/publishing-live-event-facebook.html">Publishing a Live Event to Facebook</a>.</p>
-<hr />
-<h2>Live Module Support for RTMPS Outputs</h2>
-<h4>16 Apr 2019</h4>
-<p>The Live module has added support for RTMPS outputs. RTMP outputs allow the live stream to be sent to other RTMP entry points, for example, sending the live to stream to Facebook or YouTube. Facebook specifically requires RTMPS URLs. For information, see <a href="https://live.support.brightcove.com/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html">Using Live RTMP Outputs to Stream to Facebook and YouTube</a>.</p>
-<hr />
-<h2>New Server-Side Ad Settings Option in Admin UI</h2>
-<h4>1 Apr 2019</h4>
-<p>A new Server-Side Ad Settings option has been added to the Admin UI which can be used to manage Live and VOD server-side ad configurations. For information, see <a href="/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>.</p>
-<hr />
-<h2>Audience Module HubSpot Connections</h2>
-<h4>28 Mar 2019</h4>
-<p>The Audience module now provides the ability to integrate with HubSpot using the High Volume (Client-Side API) method. For information, see <a href="https://audience.support.brightcove.com/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html">Integrating Video Cloud with HubSpot Using the Client-Side APIs</a>.</p>
-<hr />
-<h2>Ability to Change Primary User for Account</h2>
-<h4>14 Mar 2019</h4>
-<p>It is now possible to select a different primary user for an account. For information, see <a href="/admin/managing-users.html">Managing Users</a>.</p>
-<hr />
-<h2>Ability to Edit Account Information</h2>
-<h4>14 Mar 2019</h4>
-<p>It is now possible to edit your account information to change the account name and mailing address. For information, see <a href="/admin/managing-account-information.html">Managing Account Information</a>.</p>
-<hr />
-<h2>Updates to Players Module Plugins UI</h2>
-<h4>1 Feb 2019</h4>
-<p>The Players module now provides the ability to easily configure a Brightcove Player with a set of Brightcove provided plugins. For information, see <a href="/players/configuring-player-plugins.html">Configuring Player Plugins</a>.</p>
-<hr />
-<h2>Additional Input and Output Options in Live Module</h2>
-<h4>30 Jan 2019</h4>
-<p>The Live module has added support for both RTP and SRT input formats (in addition to RTMP). Support for RTMP outputs has also been added. RTMP outputs allow the live stream to be sent to other RTMP entry points. This can be used to send the live to stream to Facebook or YouTube for example. For information, see <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</p>
-<hr />
-<h2>Player Localization in Players Module</h2>
-<h4>23 Jan 2019</h4>
-<p>The Players module now supports player localization allowing the player interface elements to appear in various languages. If player localization is not configured, the inter/players/configuring-player-localization.html/players/configuring-player-localization.htmlface will display in English. For information, see <a href="/players/configuring-player-localization.html">Configuring Player Localization</a>.</p>
-<hr />
-<h2>Ability to Export Video Metadata from the Media Module</h2>
-<h4>13 Dec 2018</h4>
-<p>The Media module now provides the ability to export video metadata to a .csv file. For information, see <a href="/media/exporting-video-data.html">Exporting Video Data</a>.</p>
-<hr />
-<h2>Created and Updated By User in the Media Module</h2>
-<h4>13 Dec 2018</h4>
-<p>The Media module now provides the ability to see who created and last updated videos in your account. For information, see <a href="/media/getting-started-media-module.html">Getting Started with the Media Module</a>.</p>
-<hr />
-<h2>Updates to Media Module UI</h2>
-<h4>6 Dec 2018</h4>
-<p>Several new features have been added to the Media module UI:</p>
-<ul>
-  <li>The side navigation panel can now resized by clicking and dragging it</li>
-  <li>The video listing page now supports horizontal scrolling</li>
-</ul>
-<hr />
-<h2>Updates to Players Module</h2>
-<h4>30 Nov 2018</h4>
-<p>Several new features have been added to the Players module UI:</p>
-<ul>
-  <li>When adding a logo overlay, a Logo URL can now be added. This will open a new browser tab when the overlay is clicked.</li>
-  <li>When using a playlist player, the playlist can now be hidden. This is useful when you want to play a series of videos without having the playlist be displayed.</li>
-  <li>A JSON editor is now available for editing the player configuration.</li>
-</ul>
-<p>For information on all the player properties, see <a href="/players/setting-player-properties.html">Setting Player Properties</a>.</p>
-<h2>Updated API Authentication UI</h2>
-<h4>14 Nov 2018</h4>
-<p>The API Authentication page has been redesigned. For information, see <a href="/admin/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a>.</p>
-<hr />
-<h2>Updated Billing UI</h2>
-<h4>8 Nov 2018</h4>
-<p>The Billing page has been redesigned. For information, see <a href="/admin/viewing-billing-information.html">Viewing Billing Information</a>.</p>
-<hr />
-<h2>Last Login Added to User Administration</h2>
-<h4>1 Nov 2018</h4>
-<p>A Last Login field has been added to the Manage Users page. This field will display the last date and time a user logged into Video Cloud Studio. For information, see <a href="/admin/managing-users.html">Managing Users</a>.</p>
-<hr />
-<h2>Players Module Updated UI</h2>
-<h4>3 Oct 2018</h4>
-<p>A new player editor (the player details page) is now available. Access to the legacy UI will be available until March 2019. The legacy editor must be used when editing version 5.x players. For information, see <a href="/players/setting-player-properties.html">Setting Player Properties</a>.</p>
-<hr />
-<h2>Redesigned Live Module</h2>
-<h4>17 Jul 2018</h4>
-<p>The Live module has been redesigned with a more robust backend and simplified UI. For information, see <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</p>
-<hr />
-<h2>Social Module Clipping Enhancements</h2>
-<h4>22 Jun 2018</h4>
-<p>It is now possible to set a Social clipping default ingest profile. For information, see <a href="/admin/managing-ingest-profiles.html#default">Managing Ingest Profiles</a>.</p>
-<p>It is now possible to create Social clips from videos with DRM applied that were transcoded using a Dynamic Delivery ingest profile.</p>
-<hr />
-<h2>Create New Folders when Uploading Videos</h2>
-<h4>29 May 2018</h4>
-<p>The Upload module now provides the ability to create new folders for videos that are being uploaded. For information, see <a href="/media/uploading-videos-using-upload-module.html#defaultprops">Uploading Videos Using the Upload Module</a>.</p>
-<hr />
-<h2>Offline Playback Video Property</h2>
-<h4>24 May 2018</h4>
-<p>An offline playback video property has been added in the Upload and Media modules. When checked, enables the video to be saved locally and viewed offline when using applications created using the device SDKs. This option will only appear if the account is enabled for offline playback.</p>
-<hr />
-<h2>Export Gallery Leads Option</h2>
-<h4>15 May 2018</h4>
-<p>The Audience module now provides an Export Gallery Leads option which can be used to export data captured in lead forms used in Gallery experiences. For information, see <a href="https://gallery.support.brightcove.com/experiences/portal/exporting-gallery-lead-data.html">Exporting Gallery Lead Data</a>.</p>
-<hr />
-<h2>Required Fields when Uploading Videos</h2>
-<h4>14 May 2018</h4>
-<p>The Upload module can now be configured so that all required fields must have values before videos can be uploaded. For information, see <a href="/admin/managing-account-settings.html#upload">Managing Account Settings</a>.</p>
-<hr />
-<h2>Multiple Audio Track Support in the Media Module</h2>
-<h4>1 May 2018</h4>
-<p>The Media module now provides the ability to upload additional audio tracks for videos that were transcoded using Dynamic Delivery or Context Aware Encoding. For information, see <a href="/media/adding-audio-tracks-videos-using-media-module.html">Adding Audio Tracks to Videos using the Media Module</a>.</p>
-<hr />
-<h2>Players Module Updated UI - Beta</h2>
-<h4>12 Mar 2018</h4>
-<p>A new player editor (the player details page) is now available as on opt-in beta. Publishers will see a button on the current player details page that says "Switch to Beta Editor". When clicked, a modal will pop up explaining what the new player editor is and how feedback can be submitted. Both the new and old version of the UI can be used. The switch is user specific so you will not be impacting the UI for all users in the account when you choose to opt-in. Note that the ability to manage player plugins is not yet available in the new UI.</p>
-<hr />
-<h2>Dynamic Delivery Download Renditions</h2>
-<h4>8 Mar 2018</h4>
-<p>The Media module now provides links to download video renditions that were transcoded using Dynamic Delivery. For information, see <a href="/media/downloading-videos-video-cloud.html">Downloading Videos from Video Cloud</a>.</p>
-<hr />
-<h2>Updated Context Aware Profile Editor</h2>
-<h4>22 Feb 2018</h4>
-<p>The Context Aware Profile Editor interface has been improved to allow for finer grained control over profile settings. For information, see <a href="/admin/creating-ingest-profiles-context-aware-encoding.html">Creating Ingest Profiles for Context Aware Encoding</a>.</p>
-<hr />
-<h2>Audience Module Video Activity Option</h2>
-<h4>21 Feb 2018</h4>
-<p>When using Audience Tracking, SSO or custom integrations, the Audience module now allows you to select a video and then view activity for that video. For information, see <a href="https://audience.support.brightcove.com/general/viewing-video-activity.html">Viewing Video Activity</a>.</p>
-<hr />
-<h2>Billing &amp; Reports Page Updated</h2>
-<h4>15 Feb 2018</h4>
-<p>The layout of the Billing &amp; Reports page has been updated. For information, see <a href="/admin/viewing-billing-information.html">Viewing Billing Information</a>.</p>
-<hr />
-<h2>Audience Module Manage Data Option</h2>
-<h4>14 Feb 2018</h4>
-<p>The Audience module now provides a manage viewer data option that can be used to search for a user and then either remove that user or export that user's data. For information, see <a href="https://audience.support.brightcove.com/admin/managing-viewer-data.html">Managing Viewer Data</a>.</p>
-<hr />
-<h2>Social Module Captions Support</h2>
-<h4>19 Jan 2018</h4>
-<p>The Social module now supports the ability to publish captions to YouTube and Facebook. For information, see <a href="https://social.support.brightcove.com/general/publishing-videos-social-media-platforms.html">Publishing Videos to Social Media Platforms</a>.</p>
+  <h1>Overview: Audience API</h1>
+  <summary>In this topic, you will learn about the Audience API. The Audience API allows you to retrieve viewing event and lead data.</summary>
+  <section class="bcls-section">
+    <h2 id="api-reference">API reference</h2>
+    <p>Also see the <a href="/develop/reference.html">API Reference</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Base_URL">Base URL</h2>
+    <p>The base URL for the Audience API is:</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">https://audience.api.brightcove.com/v1</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Account_path">Account path</h2>
+    <p>In all cases, requests will be made for a specific Video Cloud Account. You will always need to add the term “accounts” followed by your account ID to the base URL:</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">https://audience.api.brightcove.com/v1/accounts/{account_id} </code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Authentication">Authentication</h2>
+    <p>The Audience API uses the Brightcove <a href="https://apis.support.brightcove.com/oauth/getting-started/overview-oauth-api-v4.html">OAuth Service</a> to authenticate calls.</p>
+    <p>You will first need to obtain client credentials (a <code translate="No">client_id</code> and <code translate="No">client_secret</code>). This is a one-time operation that can be performed using the <a href="https://studio.support.brightcove.com/admin/managing-api-authentication-credentials.html">OAuth Credentials UI</a>. You will need permissions for Audience/Read operations:</p>
+    <figure class="bcls-figure"><img class="bcls-image" alt="Required Permissions" src="/assets/images/audience/develop/operations.png" />
+      <figcaption class="bcls-caption--image">Required Permissions</figcaption>
+    </figure>
+    <p>You can get client credentials directly from the Brightcove OAuth Service using <a href="https://apis.support.brightcove.com/oauth/guides/oauth-create-client-credentials-using-curl.html">cURL</a> or <a href="https://apis.support.brightcove.com/oauth/guides/oauth-create-client-credentials-using-postman.html">Postman</a>.</p>
+    <p>You will also need an <code translate="No">access_token</code>, which is obtained using the <code translate="No">client_id</code> and <code translate="No">client_secret</code> and passed in an Authorization header with your API request:</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">Authorization: Bearer <em>{access_token}</em></code></pre>
+    <p>The <code translate="No">access_token</code> expires after five minutes, so you must obtain one for each request, or check to make sure that your token is still valid. See <a href="https://apis.support.brightcove.com/oauth/guides/getting-access-tokens.html">Getting Access Tokens</a> for a detailed explanation of how to get access tokens, including code samples.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Error_handling">Error handling</h2>
+    <p>If an error occurs, the API will respond with one of the following status codes and a corresponding error code in the response body:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Status Code</th>
+          <th>Error Code</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>400</td>
+          <td>BAD_REQUEST_ERROR</td>
+          <td>Query parameters are invalid</td>
+        </tr>
+        <tr>
+          <td>401</td>
+          <td>UNAUTHORIZED_ERROR</td>
+          <td>The access token is either absent, has expired, or is invalid</td>
+        </tr>
+        <tr>
+          <td>404</td>
+          <td>RESOURCE_NOT_FOUND</td>
+          <td>The URL does not exist</td>
+        </tr>
+        <tr>
+          <td>429</td>
+          <td>REQUEST_THROTTLED_ERROR</td>
+          <td>The user has exceeded the rate limiting policy</td>
+        </tr>
+        <tr>
+          <td>500</td>
+          <td>INTERNAL_ERROR</td>
+          <td>An internal error has occurred</td>
+        </tr>
+        <tr>
+          <td>504</td>
+          <td>GATEWAY_TIMEOUT_ERROR</td>
+          <td>The server timed out while fulfilling your request</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Below is a sample response body for an error:</p>
+    <pre class="line-numbers">
+<code class="language-json" translate="No">[
+   {
+    "error_code": "UNAUTHORIZED_ERROR",
+    "message": "Permission denied"
+   }
+]</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Parameters">Parameters</h2>
+    <p>There are several parameters you can add to requests to limit and filter the data retrieved. These apply to all the request types described in the sections that follow.</p>
+    <h3 id="Filtering_results">Filtering results</h3>
+    <p>You can filter the results using the <code translate="No">where</code> parameter. The syntax for filters is:</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">where=field1==value1;field2==value2</code></pre>
+    <p>For example:</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">where=video_id==123456789;video_name==test</code></pre>
+    <p>Commas are treated as logical ORs and semicolons as logical ANDs. For example, <code translate="No">where=video_id==1234,5678;video_name=test</code> is interpreted as "where video_id = 1234 OR 5678, AND video_name = test".</p>
+    <h3>Selecting fields to return</h3>
+    <p>A list of fields may be specified in the request to limit the results to that subset of fields. The syntax for fields is:</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">fields=field1,field4</code></pre>
+    <p>For example:</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">fields=video_id,video_name</code></pre>
+    <p>The fields that you can filter and sort on are detailed for each request type in the sections that follow.</p>
+    <h3 id="Date_ranges">Date ranges</h3>
+    <p>Date ranges can be specified in <code translate="No">from</code> and <code translate="No">to</code> parameters and are applied to the date that the view event was last updated (the updated_at field). Date ranges can be indicated in the following formats:</p>
+    <ul>
+      <li>The text value <code translate="No">now</code> which represents the current time</li>
+      <li>Epoch time values in milliseconds, such as <code translate="No">1377047323000</code></li>
+      <li>Dates expressed in ISO 8601 standard international date format: <code translate="No">YYYY-MM-DD</code> format, such as <code translate="No">2013-09-12</code>. For dates expressed in this format:
+        <ul>
+          <li>Any date range specified will be interpreted in UTC</li>
+          <li>The time for the date give will be interpreted as midnight ( <code translate="No">00:00:00</code>) on the date specified</li>
+        </ul>
+      </li>
+      <li>Relative dates: you can express either of the <code translate="No">to</code> and <code translate="No">from</code> values relative to the other one in <code translate="No">d</code> (days), <code translate="No">h</code> (hours), <code translate="No">m</code> (minutes), or <code translate="No">s</code> (sec). For example:
+        <ul>
+          <li><code class="language-http" translate="No">from=2015-01-01&amp;to=31d</code></li>
+          <li><code class="language-http" translate="No">from=-48h&amp;to=now</code></li>
+          <li><code class="language-http" translate="No">from=-2d&amp;to=now</code> (will give the same results as the previous example)</li>
+          <li><code class="language-http" translate="No">from=-365d&amp;to=2015-12-31</code></li>
+          <li><code class="language-http" translate="No">from=-10m&amp;to=now</code></li>
+        </ul>
+      </li>
+    </ul>
+    <h3 id="Paging_results">Paging results</h3>
+    <p>The <code translate="No">limit</code> is the number of items to return (default: 25; maximum: 100). <code translate="No">offset</code> is the number of items to skip (default: 0). You can use <code translate="No">limit</code> and <code translate="No">offset</code> together to create an app that pages through the results. Each includes the <code translate="No">limit</code>, <code translate="No">offset</code>, and <code translate="No">count.</code>, which you can use to set up iteration over total results. For example, in JavaScript, you could get the total iterations required like this:</p>
+    <pre class="line-numbers">
+<code class="language-javascript" translate="No">// response is the JSON-parsed response from the first request
+var totalRequests = Math.ceil(response.count / response.limit)</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Retrieving_view_events">Retrieving view events</h2>
+    <p>To retrieve view events in an account, perform a <code translate="No">GET</code> request to the view_events resource:</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">https://audience.api.brightcove.com/v1/accounts/{account_id}/view_events</code></pre>
+    <aside class="bcls-aside bcls-aside--warning">Only view events that have been <em>processed</em> will appear in the response.</aside>
+    <p>Here is sample request in cURL</p>
+    <pre class="line-numbers">
+<code class="language-bash" translate="No">curl -i https://audience.api.brightcove.com/v1/accounts/{account_id}/view_events?where=video_id==123&amp;from=-5d&amp;to=now&amp;sort=-created_at \
+  -H "Authorization: Bearer {token}"</code></pre>
+    <p>The response will look like this:</p>
+    <pre class="line-numbers">
+<code class="language-json" translate="No">{
+    "count": 27,
+    "limit": 25,
+    "offset": 0,
+    "result": [
+        {
+            "created_at": "2016-04-25T18:30:21.651Z",
+            "page_url": "http://players.brightcove.net/1486906377/V1s6NOwRx_default/index.html?videoId=4842718056001",
+            "player_id": "V1s6NOwRx",
+            "time_watched": 2,
+            "updated_at": "2016-04-25T18:30:21.651Z",
+            "video_id": "4842718056001",
+            "video_name": "Horses Heading to the Track",
+            "watched": 19
+        },
+        {
+            "created_at": "2016-04-25T18:31:55.071Z",
+            "page_url": "http://players.brightcove.net/1486906377/BkgFuzyhg_default/index.html?videoId=4842718056001",
+            "player_id": "BkgFuzyhg",
+            "time_watched": 15,
+            "updated_at": "2016-04-25T18:32:00.879Z",
+            "video_id": "4842718056001",
+            "video_name": "Horses Heading to the Track",
+            "watched": 99
+        }, ...
+    }
+]</code></pre>
+    <h3 id="fieldsForViewEvents">Fields for filtering and selection</h3>
+    <p>All the <a href="#Parameters">parameters</a> can be used with <code translate="No">view_event</code> requests.</p>
+    <p>Here is sample request in cURL using the parameters:</p>
+    <pre class="line-numbers">
+<code class="language-bash" translate="No">curl -i https://audience.api.brightcove.com/v1/accounts/{account_id}/view_events?where=video_id==123&amp;from=-5d&amp;to=now&amp;sort=-created_at \
+  -H "Authorization: Bearer {token}"</code></pre>
+    <p>The following fields are supported for <code translate="No">view_event</code> requests when filtering with a <code translate="No">where</code> clause or when selecting during a <code translate="No">fields</code> clause:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>video_id</td>
+          <td>Brightcove video ID</td>
+        </tr>
+        <tr>
+          <td>video_name</td>
+          <td>Brightcove video name</td>
+        </tr>
+        <tr>
+          <td>tracking_id</td>
+          <td>Custom tracking ID</td>
+        </tr>
+        <tr>
+          <td>external_id</td>
+          <td>The Marketo, Eloqua or custom GUID</td>
+        </tr>
+        <tr>
+          <td>player_id</td>
+          <td>The ID of the Brightcove player that created the view event</td>
+        </tr>
+        <tr>
+          <td>page_url</td>
+          <td>The URL of the page where the view event was created</td>
+        </tr>
+        <tr>
+          <td>watched</td>
+          <td>Percent watched</td>
+        </tr>
+        <tr>
+          <td>time_watched</td>
+          <td>Seconds of the video watched</td>
+        </tr>
+        <tr>
+          <td>created_at</td>
+          <td>Creation date</td>
+        </tr>
+        <tr>
+          <td>updated_at</td>
+          <td>Last updated date</td>
+        </tr>
+        <tr>
+          <td>is_synced</td>
+          <td>A boolean denoting whether or not the view event has been synchronized</td>
+        </tr>
+        <tr>
+          <td>event_1</td>
+          <td rowspan="3">Custom events</td>
+        </tr>
+        <tr>
+          <td>event_2</td>
+        </tr>
+        <tr>
+          <td>event_3</td>
+        </tr>
+        <tr>
+          <td>metric_1</td>
+          <td rowspan="3">Custom metrics</td>
+        </tr>
+        <tr>
+          <td>metric_2</td>
+        </tr>
+        <tr>
+          <td>metric_3</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Retrieving_Leads">Retrieving leads</h2>
+    <p>To retrieve view events in an account, perform a <code translate="No">GET</code> request to the <code translate="No">view_events</code> resource:</p>
+    <pre class="line-numbers">
+<code class="language-http" translate="No">https://audience.api.brightcove.com/v1/accounts/{account_id}/leads</code></pre>
+    <p>Sample response:</p>
+    <pre class="line-numbers">
+<code class="language-json" translate="No">{
+    "count": 2,
+    "limit": 25,
+    "offset": 0,
+    "result": [
+        {
+            "created_at": "2016-06-30T12:57:11.283Z",
+            "email_address": "bbailey@brightcove.com",
+            "first_name": "Bob",
+            "last_name": "Bailey",
+            "page_url": "http://players.brightcove.net/1486906377/Hk4TBqzL_default/index.html?videoId=4997275041001",
+            "player_id": "Hk4TBqzL",
+            "video_id": "4997275041001"
+        },
+        {
+            "created_at": "2016-06-30T12:57:33.301Z",
+            "email_address": "rcrooks@brightcove.com",
+            "first_name": "Robert",
+            "last_name": "Crooks",
+            "page_url": "http://players.brightcove.net/1486906377/Hk4TBqzL_default/index.html?videoId=4997275041001",
+            "player_id": "Hk4TBqzL",
+            "video_id": "4997275041001"
+        }
+    ]
+}</code></pre>
+    <h3 id="fieldsForLeads">Fields for filtering and selection</h3>
+    <p>All the <a href="#Parameters">parameters</a> can be used with <code translate="No">leads</code> requests.</p>
+    <p>Here is sample request in cURL using the parameters:</p>
+    <pre class="line-numbers">
+<code class="language-bash" translate="No">curl -i https://audience.api.brightcove.com/v1/accounts/{account_id}/leads?where=video_id==123&amp;from=-5d&amp;to=now&amp;sort=-created_at \
+  -H "Authorization: Bearer {token}"</code></pre>
+    <p>The following fields are supported for <code translate="No">leads</code> requests when filtering with a <code translate="No">where</code> clause or when selecting during a <code translate="No">fields</code> clause:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>video_id</td>
+          <td>Brightcove video ID</td>
+        </tr>
+        <tr>
+          <td>external_id</td>
+          <td>The Marketo, Eloqua or custom GUID</td>
+        </tr>
+        <tr>
+          <td>player_id</td>
+          <td>The ID of the Brightcove player that created the view event</td>
+        </tr>
+        <tr>
+          <td>page_url</td>
+          <td>The URL of the page where the view event was created</td>
+        </tr>
+        <tr>
+          <td>created_at</td>
+          <td>Creation date</td>
+        </tr>
+        <tr>
+          <td>email_address</td>
+          <td>The email address of the lead</td>
+        </tr>
+        <tr>
+          <td>first_name</td>
+          <td>The first name of the lead if provided</td>
+        </tr>
+        <tr>
+          <td>last_name</td>
+          <td>The last name of the lead if provided</td>
+        </tr>
+        <tr>
+          <td>business_phone</td>
+          <td>The phone number of the lead if provided</td>
+        </tr>
+        <tr>
+          <td>country</td>
+          <td>The country of the lead if provided</td>
+        </tr>
+        <tr>
+          <td>company_name</td>
+          <td>The company of the lead if provided</td>
+        </tr>
+        <tr>
+          <td>industry</td>
+          <td>The industry that the lead belongs to if provided</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>
 
 <!-- complete bootstrap layout -->
     </div>
