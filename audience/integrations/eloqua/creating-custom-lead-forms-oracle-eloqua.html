@@ -73,45 +73,6 @@ body {
 }
   </pre>
     </div>
-    <div class="BCL-subsection">
-      <h3>Advanced form styling example</h3>
-      <p>This example uses JavaScript to change the background color of the form to black and does some basic field formatting. The form will appear as follows:</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/audience/integrations/eloqua/node16109-adv-styling.png" /></figure>
-      <p>For this styling, add the following JavaScript to the bottom of the form HTML.</p>
-      <pre>
-
-&lt;script&gt;
-  var _50fields = document.getElementsByClassName('_50 field-style'),
-      _50leftFields = document.getElementsByClassName('_50_left field-style'),
-      labels = document.getElementsByClassName('label-position top'),
-      eForm = document.querySelector('form.elq-form'),
-      submitButton = document.getElementsByClassName('submit-button')[0],
-      titleLable = document.querySelector('label.label'),
-      firstName = document.getElementsByName('firstName')[0],
-      lastName = document.getElementsByName('lastName')[0],
-      emailAddress = document.getElementsByName('emailAddress')[0],
-      i;
-
-  for (i = 0; i &lt; _50fields.length; i++)
-     {_50fields[i].className = '_100 field-style'; }
-
-  for (i = 0; i &lt; _50leftFields.length; i++)
-     { _50leftFields[i].className = '_100 field-style'; }
-
-  for (i = 0; i &lt; labels.length; i++)
-     { labels[i].setAttribute('style', 'display:none;'); }
-
-  eForm.parentNode.setAttribute('style', 'background-color:#333;height:12em;text-align:center;padding:0% 20%;');
-  titleLable.setAttribute('style', 'display:none;');
-  submitButton.setAttribute('style', 'height:2em;background-color:#337d87;color:#fff;border:none;border-radius:.3em;padding:.3em .5em;font-size:1em;');
-  firstName.setAttribute('style', 'margin:.5em;height:2em;width:80%;padding-left:.5em;font-size:1em;border:none;border-radius:.3em;');
-  firstName.setAttribute('placeholder', 'First Name');
-  lastName.setAttribute('style', 'margin:.5em;height:2em;width:80%;padding-left:.5em;font-size:1em;border:none;border-radius:.3em;');
-  lastName.setAttribute('placeholder', 'Last Name');
-  emailAddress.setAttribute('style', 'margin:.5em;height:2em;width:80%;padding-left:.5em;font-size:1em;border:none;border-radius:.3em;');
-  emailAddress.setAttribute('placeholder', 'Email');
-&lt;/script&gt;</pre>
-    </div>
   </section>
   <section class="bcls-section">
     <h2 id="leadform">Creating a custom lead form in the Audience module</h2>
