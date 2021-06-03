@@ -1,0 +1,97 @@
+  name: Getting Started
+  url: /get-started/index.html
+  docs:
+    - name: Getting Started with Audience
+      url: /get-started/getting-started-audience-module.html
+    - name: Audience Training Videos
+      url: /get-started/audience-training-videos.html
+  name: General Information
+  url: /general/index.html
+  docs:
+    - name: Audience Fields and Data Definitions
+      url: /general/audience-fields-and-data-definitions.html
+    - name: Configuring Audience Settings
+      url: /general/configuring-audience-settings.html
+    - name: Creating an Audience-enabled Player
+      url: /general/creating-audience-enabled-player.html
+    - name: Creating an Audience Lead Form
+      url: /general/creating-audience-lead-form.html
+    - name: How Audience Identifies Viewers
+      url: /general/how-audience-module-identifies-viewers.html
+    - name: Publishing a Video to Email
+      url: /general/publishing-video-email-using-audience-module.html
+    - name: Using Custom Metrics and Events
+      url: /general/using-custom-metrics-and-events.html
+    - name: Viewing Player Events
+      url: /general/viewing-player-events-audience-module.html
+    - name: Viewing Video Activity
+      url: /general/viewing-video-activity.html
+    - name: Viewing Viewer Profile Information
+      url: /general/viewing-viewer-profile-information.html
+    - name: Working with UTM Fields
+      url: /general/working-utm-fields-audience-module.html
+  name: Integrations
+  url: /integrations/index.html
+  docs:
+    - name: Eloqua
+      url: /integrations/eloqua/index.html
+      docs:
+        - name: Creating Custom Lead Forms
+          url: /integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html
+        - name: Eloqua Integration Testing Guide
+          url: /integrations/eloqua/eloqua-integration-testing-guide.html
+        - name: Embedding a Video on a Landing Page
+          url: /integrations/eloqua/embedding-video-cloud-video-eloqua-landing-page.html
+        - name: Integrating with Oracle Eloqua
+          url: /integrations/eloqua/integrating-video-cloud-oracle-eloqua.html
+    - name: HubSpot
+      url: /integrations/hubspot/index.html
+      docs:
+        - name: Creating Custom Lead Forms
+          url: /integrations/hubspot/creating-custom-lead-forms-hubspot.html
+        - name: HubSpot REST API Testing Guide
+          url: /integrations/hubspot/hubspot-rest-api-integration-testing-guide.html
+        - name: 'Integrating with HubSpot (Client-Side APIs)'
+          url: /integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html
+        - name: 'Integrating with HubSpot (REST APIs)'
+          url: /integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html
+    - name: Marketo
+      url: /integrations/marketo/index.html
+      docs:
+        - name: Creating Custom Lead Forms
+          url: /integrations/marketo/creating-custom-lead-forms-marketo.html
+        - name: 'Integrating with Marketo (Munchkin)'
+          url: /integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html
+        - name: 'Integrating with Marketo (REST APIs)'
+          url: /integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html
+        - name: Marketo REST Integration Testing Guide
+          url: /integrations/marketo/marketo-rest-integration-testing-guide.html
+    - name: Non-MAP
+      url: /integrations/non-map/index.html
+      docs:
+        - name: Creating Custom Integrations
+          url: /integrations/non-map/creating-custom-integrations-audience-module.html
+        - name: Integrating with Single Sign-On
+          url: /integrations/non-map/integrating-audience-single-sign.html
+        - name: Using Audience to Track Viewers
+          url: /integrations/non-map/using-audience-module-track-viewers.html
+    - name: Salesforce
+      url: /integrations/salesforce/index.html
+      docs:
+        - name: Creating Custom Lead Forms
+          url: /integrations/salesforce/creating-custom-lead-forms-salesforce.html
+        - name: Creating Salesforce Object for Pardot
+          url: /integrations/salesforce/creating-custom-lead-forms-salesforce.html
+        - name: Integrating with Salesforce
+          url: /integrations/salesforce/integrating-video-cloud-salesforce.html
+  name: Administering Audience
+  url: /admin/index.html
+  docs:
+    - name: Exporting Data from Audience
+      url: /admin/exporting-audience-data-audience-module.html
+    - name: Exporting Gallery Lead Data
+      url: /admin/exporting-gallery-lead-data.html
+    - name: Managing Viewer Data
+      url: /admin/managing-viewer-data.html
+    - name: Troubleshooting Audience Issues
+      url: /admin/troubleshooting-audience-issues.html
