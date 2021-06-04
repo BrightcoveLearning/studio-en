@@ -284,7 +284,31 @@
     - name: Using Reference IDs
       url: /publish/using-reference-ids.html
 - section:
-  name: Audience
+  name: Social Sharing
+  url: /social/index.html
+  docs:
+    - name: Creating Publishing Destinations
+      url: /social/creating-social-media-publishing-destinations.html
+    - name: Creating a Video Clip
+      url: /social/creating-video-clip-using-brightcove-social.html
+    - name: Getting Started with Social
+      url: /social/getting-started-brightcove-social.html
+    - name: Publishing Videos to Social Media
+      url: /social/publishing-videos-social-media-platforms.html
+    - name: Reviewing Social Analytics
+      url: /social/reviewing-social-analytics.html
+    - name: Reviewing Social Engagement Analytics
+      url: /social/reviewing-social-engagement-analytics.html
+    - name: Reviewing Social Views Analytics
+      url: /social/reviewing-social-views-analytics.html
+    - name: Setting the Privacy Status for a Video
+      url: /social/setting-privacy-status-video.html
+    - name: Using Auto Sync
+      url: /social/using-auto-sync-synchronize-videos-social-media-accounts.html
+    - name: Viewing Published Videos
+      url: /social/viewing-videos-published-social-media.html
+- section:
+  name: Marketing Automation
   url: /audience/index.html
   docs:
   - name: Getting Started
@@ -384,30 +408,6 @@
         url: /audience/admin/managing-viewer-data.html
       - name: Troubleshooting Audience Issues
         url: /audience/admin/troubleshooting-audience-issues.html
-- section:
-  name: Social Sharing
-  url: /social/index.html
-  docs:
-    - name: Creating Publishing Destinations
-      url: /social/creating-social-media-publishing-destinations.html
-    - name: Creating a Video Clip
-      url: /social/creating-video-clip-using-brightcove-social.html
-    - name: Getting Started with Social
-      url: /social/getting-started-brightcove-social.html
-    - name: Publishing Videos to Social Media
-      url: /social/publishing-videos-social-media-platforms.html
-    - name: Reviewing Social Analytics
-      url: /social/reviewing-social-analytics.html
-    - name: Reviewing Social Engagement Analytics
-      url: /social/reviewing-social-engagement-analytics.html
-    - name: Reviewing Social Views Analytics
-      url: /social/reviewing-social-views-analytics.html
-    - name: Setting the Privacy Status for a Video
-      url: /social/setting-privacy-status-video.html
-    - name: Using Auto Sync
-      url: /social/using-auto-sync-synchronize-videos-social-media-accounts.html
-    - name: Viewing Published Videos
-      url: /social/viewing-videos-published-social-media.html
 - section:
   name: Reviewing Analytics
   url: /analytics/index.html
