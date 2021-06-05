@@ -394,7 +394,7 @@
           - name: Creating Custom Lead Forms
             url: /audience/integrations/salesforce/creating-custom-lead-forms-salesforce.html
           - name: Creating Salesforce Object for Pardot
-            url: /audience/integrations/salesforce/creating-custom-lead-forms-salesforce.html
+            url: /audience/integrations/salesforce/creating-salesforce-object-pardot.html
           - name: Integrating with Salesforce
             url: /audience/integrations/salesforce/integrating-video-cloud-salesforce.html
   - name: Administering Audience
