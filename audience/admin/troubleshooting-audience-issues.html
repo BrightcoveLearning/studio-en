@@ -27,7 +27,7 @@ parent: Administering Audience
     <h3>Why is my lead form not displaying?</h3>
     <p>If your lead form is not displaying, first ensure all the criteria for showing a lead form have been met. Note that criteria that depend on multiple videos being watched will not work across page refreshes. They are meant for use cases where the next video is automatically queued in the same player.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Confirm that the Audience plugin has been added to the player. For information, see <a href="/general/creating-audience-enabled-player.html">Creating an Audience-enabled Player</a>.</li>
+      <li>Confirm that the Audience plugin has been added to the player. For information, see <a href="/audience/general/creating-audience-enabled-player.html">Creating an Audience-enabled Player</a>.</li>
       <li>Confirm that the integration has been correctly set up and is sent to the plugin.</li>
       <li>Confirm that the lead form has been added to that player. The response to the call the plugin makes for its config should contain lead form display information under the leadForm property if a lead form has been added to the player.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="leadform debug" src="/assets/images/audience/admin/node18487-leadform-debug.png" /></figure>
@@ -62,7 +62,7 @@ parent: Administering Audience
     <p>If view events are not listed, Audience may have not been setup with a Audience-enabled player. Using a browser with developer tools enabled, visit a page that contains the problematic video and ensure that certain HTTP calls are made by the Audience plugin.</p>
     <p>When the player loads, the plugin should make a call to the Audience config endpoint to obtain parameters that determine the behavior of the plugin based on the integration:</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="plugin config" src="/assets/images/audience/admin/node18487-debug-config.png" /></figure>
-    <p>If this call is missing from the network traffic, it means the player has not been assigned an integration. For information on how to do this, see <a href="/general/creating-audience-enabled-player.html">Creating an Audience-enabled Player</a>.</p>
+    <p>If this call is missing from the network traffic, it means the player has not been assigned an integration. For information on how to do this, see <a href="/audience/general/creating-audience-enabled-player.html">Creating an Audience-enabled Player</a>.</p>
     <p>This call is made using JSONP. If the JSONP response is an empty object, then it is possible the embed code is incorrect and specifies the wrong account ID. An empty object will be returned from this endpoint if the config request fails to include both account and player URL parameters or if the specified account could not be retrieved from the Audience-specific database (most likely the wrong account was specified in the URL/embed code and it was not found in the database).</p>
     <pre>
 /**/ typeof jsonpCallback_78754666587 === 'function' &amp;&amp; jsonpCallback_78754666587({});</pre>
@@ -72,7 +72,7 @@ parent: Administering Audience
   <section class="bcls-section">
     <h2 id="connection">Connection issues</h2>
     <h3>The Audience module says that it can’t setup an Eloqua integration</h3>
-    <p>Check the<a href="/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html#requirements"> requirements for Eloqua</a>. If you are using the IP whitelist security feature, Audience won’t be able to communicate with Eloqua unless you whitelist the specified IP addresses to allow Audience - Eloqua traffic. Contact <a href="https://supportportal.brightcove.com/s/login/?language=en_US/create">Brightcove Support</a> for more information.</p>
+    <p>Check the<a href="/audience/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html#requirements"> requirements for Eloqua</a>. If you are using the IP whitelist security feature, Audience won’t be able to communicate with Eloqua unless you whitelist the specified IP addresses to allow Audience - Eloqua traffic. Contact <a href="https://supportportal.brightcove.com/s/login/?language=en_US/create">Brightcove Support</a> for more information.</p>
     <h3>Audience says that my Marketo REST custom activity is missing fields, but when I look in Marketo, I can see that all fields exist</h3>
     <p>There are a few things to check:</p>
     <ol class="bcls-tasklist-restart">
