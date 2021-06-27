@@ -151,14 +151,40 @@ parent: Cloud Playout
     <h4>Solution 1</h4>
     <p>You could use the width and height fields to resize the image to fit the size of the video screen. The disadvantage of this is that resizing an image degrades the image quality, and will make the logo itself smaller:</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/" alt="Solution 1">
+      <img class="bcls-image" src="/assets/images/cloud-playout/overlay-solution-1.png" alt="Solution 1">
       <figcaption class="bcls-caption--image">Solution 1</figcaption>
     </figure>
     <h4>Solution 2</h4>
-    <p>If you move the logo to the upper-left corner, at least that will be assured visibility, though the overlay in lower-left corner will still be hidden:</p>
+    <p>If you move the logo to the upper-left corner, at least that will be assured visibility, but may not have a desirable placement:</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/" alt="Solution 2">
+      <img class="bcls-image" src="/assets/images/cloud-playout/overlay-solution-2.png" alt="Solution 2">
       <figcaption class="bcls-caption--image">Solution 2</figcaption>
     </figure>
+    <h4>Solution 3</h4>
+    <p>The <strong>ideal solution</strong> is to size your overlay to exactly match the resolution of the video (and check <strong>Use Original</strong> for the sizing):</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/cloud-playout/overlay-solution-3.png" alt="Solution 3">
+      <figcaption class="bcls-caption--image">Solution 3</figcaption>
+    </figure>
+    <h5>Notes</h5>
+    <ol>
+      <li>The image is overlaid before creation of individual output encodes (with their different resolutions and video quality). This means that if the underlying video is scaled for a particular output encode, then the image is similarly scaled.</li>
+      <li>The overlay image is inserted in all outputs, i.e, the overlays will also be visible on preview images seen on Cloud Playout UI. </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Related_topics">Related topics</h2>
+    <ul>
+      <li><a href="/cloud-playout/cloud-playout-overview.html">Overview: Cloud Playout</a></li>
+      <li><a href="/cloud-playout/cloud-playout-stream-vod.html">Creating a Cloud Playout Channel</a></li>
+      <li><a href="/cloud-playout/adding-bumpers-to-vod.html">Adding Bumpers to Cloud Playout</a></li>
+      <li><a href="/cloud-playout/enabling-server-side-ads.html">Monetizing Cloud Playout</a></li>
+      <li><a href="/cloud-playout/using-channel-actions.html">Using Channel Actions</a></li>
+      <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">Viewing Channel Output and Analytics</a></li>
+      <li><a href="/cloud-playout/generating-channel-embed-code.html">Generating the Channel Embed Code</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">Overview: EPG API</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG API Reference</a></li>
+      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-channels.html">Channel API Reference</a></li>
+    </ul>
   </section>
 </article>
