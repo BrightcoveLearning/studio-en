@@ -1233,7 +1233,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>When using the Brightcove Player, HLS playback is not supported on IE8 or IE9. These devices will fall back to MP4.</li>
       <li>HLSe is supported in the <a href="https://sdks.support.brightcove.com/getting-started/brightcove-native-player-sdks.html">Android SDK</a> and will be supported on older versions with the VisualOn component. HLSe should also work on 4.x with the HTML5 player. For more information on the support of HLSe on Android devices, see <a href="http://developer.android.com/guide/appendix/media-formats.html">Android Supported Media Formats</a>.</li>
       <li>For HTML5 players, HLSe support is completely determined by the underlying OS/device.</li>
-      <li>If you elect to terminate Video Cloud HLS encryption, newly uploaded videos will not be protected; however, previously encrypted HLS renditions will fail to play, and will require retranscoding to play.</li>
+      <li>If you elect to terminate Video Cloud HLS encryption, encryption will be removed from all videos in the account - no re-transcoding is required.</li>
       <li>Currently, HLSe content is not supported with offline playback using the Brightcove Native SDK for Android, iOS or tvOS.</li>
     </ul>
   </section>
