@@ -1457,7 +1457,7 @@
       
     
       <url>
-        <loc>https://studio.support.brightcove.com/audience/index.html</loc>
+        <loc>https://studio.support.brightcove.com/campaign/index.html</loc>
         <lastmod>2021-07-13</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -1465,7 +1465,7 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/audience/get-started/index.html</loc>
+            <loc>https://studio.support.brightcove.com/campaign/get-started/index.html</loc>
           
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1474,7 +1474,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/get-started/getting-started-audience-module.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/get-started/getting-started-audience-module.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1484,7 +1484,7 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/audience/general/index.html</loc>
+            <loc>https://studio.support.brightcove.com/campaign/general/index.html</loc>
           
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1493,7 +1493,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/general/audience-fields-and-data-definitions.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/general/audience-fields-and-data-definitions.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1502,7 +1502,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/general/configuring-audience-settings.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/general/configuring-audience-settings.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1511,7 +1511,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/general/creating-audience-enabled-player.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/general/creating-audience-enabled-player.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1520,7 +1520,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/general/creating-audience-lead-form.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/general/creating-audience-lead-form.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1529,7 +1529,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/general/how-audience-module-identifies-viewers.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/general/how-audience-module-identifies-viewers.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1538,7 +1538,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/general/publishing-video-email-using-audience-module.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/general/publishing-video-email-using-audience-module.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1547,7 +1547,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/general/using-custom-metrics-and-events.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/general/using-custom-metrics-and-events.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1556,7 +1556,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/general/viewing-player-events-audience-module.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/general/viewing-player-events-audience-module.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1565,7 +1565,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/general/viewing-video-activity.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/general/viewing-video-activity.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1574,7 +1574,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/general/viewing-viewer-profile-information.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/general/viewing-viewer-profile-information.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1583,7 +1583,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/general/working-utm-fields-audience-module.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/general/working-utm-fields-audience-module.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1593,7 +1593,7 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/audience/integrations/index.html</loc>
+            <loc>https://studio.support.brightcove.com/campaign/integrations/index.html</loc>
           
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1602,7 +1602,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/integrations/eloqua/index.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/integrations/eloqua/index.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1611,7 +1611,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/integrations/hubspot/index.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/integrations/hubspot/index.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1620,7 +1620,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/integrations/marketo/index.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/integrations/marketo/index.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1629,7 +1629,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/integrations/non-map/index.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/integrations/non-map/index.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1638,7 +1638,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/integrations/salesforce/index.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/integrations/salesforce/index.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1648,7 +1648,7 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/audience/admin/index.html</loc>
+            <loc>https://studio.support.brightcove.com/campaign/admin/index.html</loc>
           
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1657,7 +1657,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/admin/exporting-audience-data-audience-module.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/admin/exporting-audience-data-audience-module.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1666,7 +1666,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/admin/exporting-gallery-lead-data.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/admin/exporting-gallery-lead-data.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1675,7 +1675,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/admin/managing-viewer-data.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/admin/managing-viewer-data.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>
@@ -1684,7 +1684,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/audience/admin/troubleshooting-audience-issues.html</loc>
+              <loc>https://studio.support.brightcove.com/campaign/admin/troubleshooting-audience-issues.html</loc>
             
             <lastmod>2021-07-13</lastmod>
             <changefreq>daily</changefreq>

@@ -311,103 +311,103 @@
       url: /social/viewing-videos-published-social-media.html
 - section:
   name: Marketing Automation
-  url: /audience/index.html
+  url: /campaign/index.html
   docs:
   - name: Getting Started
-    url: /audience/get-started/index.html
+    url: /campaign/get-started/index.html
     docs:
       - name: Getting Started with Audience
-        url: /audience/get-started/getting-started-audience-module.html
+        url: /campaign/get-started/getting-started-audience-module.html
   - name: General Information
-    url: /audience/general/index.html
+    url: /campaign/general/index.html
     docs:
       - name: Audience Fields and Data Definitions
-        url: /audience/general/audience-fields-and-data-definitions.html
+        url: /campaign/general/audience-fields-and-data-definitions.html
       - name: Configuring Audience Settings
-        url: /audience/general/configuring-audience-settings.html
+        url: /campaign/general/configuring-audience-settings.html
       - name: Creating an Audience-enabled Player
-        url: /audience/general/creating-audience-enabled-player.html
+        url: /campaign/general/creating-audience-enabled-player.html
       - name: Creating an Audience Lead Form
-        url: /audience/general/creating-audience-lead-form.html
+        url: /campaign/general/creating-audience-lead-form.html
       - name: How Audience Identifies Viewers
-        url: /audience/general/how-audience-module-identifies-viewers.html
+        url: /campaign/general/how-audience-module-identifies-viewers.html
       - name: Publishing a Video to Email
-        url: /audience/general/publishing-video-email-using-audience-module.html
+        url: /campaign/general/publishing-video-email-using-audience-module.html
       - name: Using Custom Metrics and Events
-        url: /audience/general/using-custom-metrics-and-events.html
+        url: /campaign/general/using-custom-metrics-and-events.html
       - name: Viewing Player Events
-        url: /audience/general/viewing-player-events-audience-module.html
+        url: /campaign/general/viewing-player-events-audience-module.html
       - name: Viewing Video Activity
-        url: /audience/general/viewing-video-activity.html
+        url: /campaign/general/viewing-video-activity.html
       - name: Viewing Viewer Profile Information
-        url: /audience/general/viewing-viewer-profile-information.html
+        url: /campaign/general/viewing-viewer-profile-information.html
       - name: Working with UTM Fields
-        url: /audience/general/working-utm-fields-audience-module.html
+        url: /campaign/general/working-utm-fields-audience-module.html
   - name: Integrations
-    url: /audience/integrations/index.html
+    url: /campaign/integrations/index.html
     docs:
       - name: Eloqua
-        url: /audience/integrations/eloqua/index.html
+        url: /campaign/integrations/eloqua/index.html
         docs:
           - name: Creating Custom Lead Forms
-            url: /audience/integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html
+            url: /campaign/integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html
           - name: Eloqua Integration Testing Guide
-            url: /audience/integrations/eloqua/eloqua-integration-testing-guide.html
+            url: /campaign/integrations/eloqua/eloqua-integration-testing-guide.html
           - name: Embedding a Video on a Landing Page
-            url: /audience/integrations/eloqua/embedding-video-cloud-video-eloqua-landing-page.html
+            url: /campaign/integrations/eloqua/embedding-video-cloud-video-eloqua-landing-page.html
           - name: Integrating with Oracle Eloqua
-            url: /audience/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html
+            url: /campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html
       - name: HubSpot
-        url: /audience/integrations/hubspot/index.html
+        url: /campaign/integrations/hubspot/index.html
         docs:
           - name: Creating Custom Lead Forms
-            url: /audience/integrations/hubspot/creating-custom-lead-forms-hubspot.html
+            url: /campaign/integrations/hubspot/creating-custom-lead-forms-hubspot.html
           - name: HubSpot REST API Testing Guide
-            url: /audience/integrations/hubspot/hubspot-rest-api-integration-testing-guide.html
+            url: /campaign/integrations/hubspot/hubspot-rest-api-integration-testing-guide.html
           - name: 'Integrating with HubSpot (Client-Side APIs)'
-            url: /audience/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html
+            url: /campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html
           - name: 'Integrating with HubSpot (REST APIs)'
-            url: /audience/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html
+            url: /campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html
       - name: Marketo
-        url: /audience/integrations/marketo/index.html
+        url: /campaign/integrations/marketo/index.html
         docs:
           - name: Creating Custom Lead Forms
-            url: /audience/integrations/marketo/creating-custom-lead-forms-marketo.html
+            url: /campaign/integrations/marketo/creating-custom-lead-forms-marketo.html
           - name: 'Integrating with Marketo (Munchkin)'
-            url: /audience/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html
+            url: /campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html
           - name: 'Integrating with Marketo (REST APIs)'
-            url: /audience/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html
+            url: /campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html
           - name: Marketo REST Integration Testing Guide
-            url: /audience/integrations/marketo/marketo-rest-integration-testing-guide.html
+            url: /campaign/integrations/marketo/marketo-rest-integration-testing-guide.html
       - name: Non-MAP
-        url: /audience/integrations/non-map/index.html
+        url: /campaign/integrations/non-map/index.html
         docs:
           - name: Creating Custom Integrations
-            url: /audience/integrations/non-map/creating-custom-integrations-audience-module.html
+            url: /campaign/integrations/non-map/creating-custom-integrations-audience-module.html
           - name: Integrating with Single Sign-On
-            url: /audience/integrations/non-map/integrating-audience-single-sign.html
+            url: /campaign/integrations/non-map/integrating-audience-single-sign.html
           - name: Using Audience to Track Viewers
-            url: /audience/integrations/non-map/using-audience-module-track-viewers.html
+            url: /campaign/integrations/non-map/using-audience-module-track-viewers.html
       - name: Salesforce
-        url: /audience/integrations/salesforce/index.html
+        url: /campaign/integrations/salesforce/index.html
         docs:
           - name: Creating Custom Lead Forms
-            url: /audience/integrations/salesforce/creating-custom-lead-forms-salesforce.html
+            url: /campaign/integrations/salesforce/creating-custom-lead-forms-salesforce.html
           - name: Creating Salesforce Object for Pardot
-            url: /audience/integrations/salesforce/creating-salesforce-object-pardot.html
+            url: /campaign/integrations/salesforce/creating-salesforce-object-pardot.html
           - name: Integrating with Salesforce
-            url: /audience/integrations/salesforce/integrating-video-cloud-salesforce.html
+            url: /campaign/integrations/salesforce/integrating-video-cloud-salesforce.html
   - name: Administering Audience
-    url: /audience/admin/index.html
+    url: /campaign/admin/index.html
     docs:
       - name: Exporting Data from Audience
-        url: /audience/admin/exporting-audience-data-audience-module.html
+        url: /campaign/admin/exporting-audience-data-audience-module.html
       - name: Exporting Gallery Lead Data
-        url: /audience/admin/exporting-gallery-lead-data.html
+        url: /campaign/admin/exporting-gallery-lead-data.html
       - name: Managing Viewer Data
-        url: /audience/admin/managing-viewer-data.html
+        url: /campaign/admin/managing-viewer-data.html
       - name: Troubleshooting Audience Issues
-        url: /audience/admin/troubleshooting-audience-issues.html
+        url: /campaign/admin/troubleshooting-audience-issues.html
 - section:
   name: Reviewing Analytics
   url: /analytics/index.html
