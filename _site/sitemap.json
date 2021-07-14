@@ -60,16 +60,6 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/general/audience-faq.html",
-      "oldURL": "/audience-faq"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/general/audience-fields-and-data-definitions.html",
-      "oldURL": "/audience-fields-and-data-definitions"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/admin/authenticating-studio-users-using-single-sign.html",
       "oldURL": "/authenticating-studio-users-using-single-sign"
   },
@@ -87,6 +77,16 @@
   {
       "newURL": "https://studio.support.brightcove.com/analytics/calculating-video-engagement-score.html",
       "oldURL": "/calculating-video-engagement-score"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/general/campaign-faq.html",
+      "oldURL": "/campaign-faq"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/general/campaign-fields-and-data-definitions.html",
+      "oldURL": "/campaign-fields-and-data-definitions"
   },
 
   {
@@ -120,12 +120,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
@@ -135,8 +135,8 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/general/configuring-audience-settings.html",
-      "oldURL": "/configuring-audience-settings"
+      "newURL": "https://studio.support.brightcove.com/campaign/general/configuring-campaign-settings.html",
+      "oldURL": "/configuring-campaign-settings"
   },
 
   {
@@ -230,18 +230,18 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/general/creating-audience-enabled-player.html",
-      "oldURL": "/creating-audience-enabled-player"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/general/creating-audience-lead-form.html",
-      "oldURL": "/creating-audience-lead-form"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/general/creating-audio-only-renditions-low-bandwidth-delivery.html",
       "oldURL": "/creating-audio-only-renditions-low-bandwidth-delivery"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/general/creating-campaign-enabled-player.html",
+      "oldURL": "/creating-campaign-enabled-player"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/general/creating-campaign-lead-form.html",
+      "oldURL": "/creating-campaign-lead-form"
   },
 
   {
@@ -380,8 +380,8 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/admin/exporting-audience-data-audience-module.html",
-      "oldURL": "/exporting-audience-data-audience-module"
+      "newURL": "https://studio.support.brightcove.com/campaign/admin/exporting-campaign-data-campaign-module.html",
+      "oldURL": "/exporting-campaign-data-campaign-module"
   },
 
   {
@@ -450,8 +450,8 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/general/how-audience-module-identifies-viewers.html",
-      "oldURL": "/how-audience-module-identifies-viewers"
+      "newURL": "https://studio.support.brightcove.com/campaign/general/how-campaign-module-identifies-viewers.html",
+      "oldURL": "/how-campaign-module-identifies-viewers"
   },
 
   {
@@ -480,7 +480,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/",
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/",
       "oldURL": "/index"
   },
 
@@ -540,7 +540,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/",
+      "newURL": "https://studio.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -580,7 +580,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/support/",
+      "newURL": "https://studio.support.brightcove.com/media/",
       "oldURL": "/index"
   },
 
@@ -805,8 +805,8 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/general/publishing-video-email-using-audience-module.html",
-      "oldURL": "/publishing-video-email-using-audience-module"
+      "newURL": "https://studio.support.brightcove.com/campaign/general/publishing-video-email-using-campaign-module.html",
+      "oldURL": "/publishing-video-email-using-campaign-module"
   },
 
   {
@@ -1010,8 +1010,8 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/admin/troubleshooting-audience-issues.html",
-      "oldURL": "/troubleshooting-audience-issues"
+      "newURL": "https://studio.support.brightcove.com/campaign/admin/troubleshooting-campaign-issues.html",
+      "oldURL": "/troubleshooting-campaign-issues"
   },
 
   {
@@ -1200,8 +1200,8 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/general/viewing-player-events-audience-module.html",
-      "oldURL": "/viewing-player-events-audience-module"
+      "newURL": "https://studio.support.brightcove.com/campaign/general/viewing-player-events-campaign-module.html",
+      "oldURL": "/viewing-player-events-campaign-module"
   },
 
   {
@@ -1250,8 +1250,8 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/general/working-utm-fields-audience-module.html",
-      "oldURL": "/working-utm-fields-audience-module"
+      "newURL": "https://studio.support.brightcove.com/campaign/general/working-utm-fields-campaign-module.html",
+      "oldURL": "/working-utm-fields-campaign-module"
   },
 ]
 
