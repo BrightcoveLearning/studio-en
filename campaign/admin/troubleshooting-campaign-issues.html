@@ -27,7 +27,7 @@ parent: Administering Campaign
     <h3>Why is my lead form not displaying?</h3>
     <p>If your lead form is not displaying, first ensure all the criteria for showing a lead form have been met. Note that criteria that depend on multiple videos being watched will not work across page refreshes. They are meant for use cases where the next video is automatically queued in the same player.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Confirm that the Campaign plugin has been added to the player. For information, see <a href="/campaign/general/creating-campaign-enabled-player.html">Creating an Campaign-enabled Player</a>.</li>
+      <li>Confirm that the Campaign plugin has been added to the player. For information, see <a href="/campaign/general/creating-campaign-enabled-player.html">Creating a Campaign-enabled Player</a>.</li>
       <li>Confirm that the integration has been correctly set up and is sent to the plugin.</li>
       <li>Confirm that the lead form has been added to that player. The response to the call the plugin makes for its config should contain lead form display information under the leadForm property if a lead form has been added to the player.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="leadform debug" src="/assets/images/campaign/admin/node18487-leadform-debug.png" /></figure>
@@ -54,7 +54,7 @@ parent: Administering Campaign
     <h3>Marketo REST view events fail to sync with the error Activity type id ‘000000’ not found</h3>
     <p>This happens when the custom Marketo activity associated with the integration has been deleted. When a Marketo REST integration is created, we fetch the activity, store its ID, and use that ID to sync events. The solution (assuming a new Brightcove Video View activity has been created) is to disconnect and re-create the integration to pick up the ID of the new activity.</p>
     <h3>View Events not Syncing</h3>
-    <p>When the integration is correctly set up with a MAP, viewing data from an Campaign-enabled player should populate the <strong>All Recent Activity</strong> page and view events corresponding to a known lead in the respective MAP should eventually sync to the tool.</p>
+    <p>When the integration is correctly set up with a MAP, viewing data from a Campaign-enabled player should populate the <strong>All Recent Activity</strong> page and view events corresponding to a known lead in the respective MAP should eventually sync to the tool.</p>
     <p>First, ensure view data is being displayed on the <strong>All Recent Activity</strong> page:</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="viewer activity" src="/assets/images/campaign/admin/node18487-viewer-activity.png" /></figure>
     <p>If view events are listed but are not in the MAP, the user may have authorized Campaign with their MAP as a user that doesn’t have sufficient permissions to import view data into the MAP via the API or the integration is not correctly configured. The Campaign homepage lists the status of recent view event sync operations. Feedback should be available there to indicate why view events are not syncing to the MAP.</p>
@@ -62,7 +62,7 @@ parent: Administering Campaign
     <p>If view events are not listed, Campaign may have not been setup with a Campaign-enabled player. Using a browser with developer tools enabled, visit a page that contains the problematic video and ensure that certain HTTP calls are made by the Campaign plugin.</p>
     <p>When the player loads, the plugin should make a call to the Campaign config endpoint to obtain parameters that determine the behavior of the plugin based on the integration:</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="plugin config" src="/assets/images/campaign/admin/node18487-debug-config.png" /></figure>
-    <p>If this call is missing from the network traffic, it means the player has not been assigned an integration. For information on how to do this, see <a href="/campaign/general/creating-campaign-enabled-player.html">Creating an Campaign-enabled Player</a>.</p>
+    <p>If this call is missing from the network traffic, it means the player has not been assigned an integration. For information on how to do this, see <a href="/campaign/general/creating-campaign-enabled-player.html">Creating a Campaign-enabled Player</a>.</p>
     <p>This call is made using JSONP. If the JSONP response is an empty object, then it is possible the embed code is incorrect and specifies the wrong account ID. An empty object will be returned from this endpoint if the config request fails to include both account and player URL parameters or if the specified account could not be retrieved from the Campaign-specific database (most likely the wrong account was specified in the URL/embed code and it was not found in the database).</p>
     <pre>
 /**/ typeof jsonpCallback_78754666587 === 'function' &amp;&amp; jsonpCallback_78754666587({});</pre>
