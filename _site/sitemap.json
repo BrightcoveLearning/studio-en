@@ -120,12 +120,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
@@ -250,8 +250,8 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/creating-custom-integrations-audience-module.html",
-      "oldURL": "/creating-custom-integrations-audience-module"
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html",
+      "oldURL": "/creating-custom-integrations-campaign-module"
   },
 
   {
@@ -480,12 +480,27 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/",
+      "newURL": "https://studio.support.brightcove.com/publish/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/",
+      "newURL": "https://studio.support.brightcove.com/training/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/eloqua/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/",
       "oldURL": "/index"
   },
 
@@ -495,17 +510,37 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/admin/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/campaign/integrations/marketo/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/get-started/",
+      "newURL": "https://studio.support.brightcove.com/players/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/basics/",
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/hubspot/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/",
       "oldURL": "/index"
   },
 
@@ -520,12 +555,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/hubspot/",
+      "newURL": "https://studio.support.brightcove.com/campaign/admin/",
       "oldURL": "/index"
   },
 
@@ -535,42 +565,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/eloqua/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/players/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/admin/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/publish/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/get-started/",
+      "newURL": "https://studio.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -580,27 +575,32 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/campaign/develop/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/",
+      "newURL": "https://studio.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/",
+      "newURL": "https://studio.support.brightcove.com/media/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/",
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/basics/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -610,8 +610,8 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/integrating-audience-single-sign.html",
-      "oldURL": "/integrating-audience-single-sign"
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/integrating-campaign-single-sign.html",
+      "oldURL": "/integrating-campaign-single-sign"
   },
 
   {
@@ -840,22 +840,22 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/develop/reference.html",
-      "oldURL": "/reference"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/social/reference.html",
       "oldURL": "/reference"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/register-training.html",
-      "oldURL": "/register-training"
+      "newURL": "https://studio.support.brightcove.com/campaign/develop/reference.html",
+      "oldURL": "/reference"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/training/register-training.html",
+      "oldURL": "/register-training"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/register-training.html",
       "oldURL": "/register-training"
   },
 
@@ -1030,13 +1030,13 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/using-audience-module-track-viewers.html",
-      "oldURL": "/using-audience-module-track-viewers"
+      "newURL": "https://studio.support.brightcove.com/social/using-auto-sync-synchronize-videos-social-media-accounts.html",
+      "oldURL": "/using-auto-sync-synchronize-videos-social-media-accounts"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/using-auto-sync-synchronize-videos-social-media-accounts.html",
-      "oldURL": "/using-auto-sync-synchronize-videos-social-media-accounts"
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/using-campaign-module-track-viewers.html",
+      "oldURL": "/using-campaign-module-track-viewers"
   },
 
   {
