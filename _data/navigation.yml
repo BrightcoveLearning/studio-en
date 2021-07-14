@@ -418,6 +418,13 @@
         url: /campaign/admin/managing-viewer-data.html
       - name: Troubleshooting Campaign Issues
         url: /campaign/admin/troubleshooting-campaign-issues.html
+  - name: Developers
+    url: /campaign/develop/index.html
+    docs:
+      - name: 'Overview: Audience API'
+        url: /campaign/develop/overview-audience-api.html
+      - name: Audience API Reference
+        url: /campaign/develop/reference.html
 - section:
   name: Reviewing Analytics
   url: /analytics/index.html
