@@ -318,6 +318,12 @@
     docs:
       - name: Getting Started with Campaign
         url: /campaign/get-started/getting-started-campaign-module.html
+      - name: Creating a Campaign-enabled Player
+        url: /campaign/general/creating-campaign-enabled-player.html
+      - name: Overview of Video Content Types
+        url: /campaign/get-started/overview-video-content-types.html
+      - name: Using the Chrome Extension
+        url: /campaign/get-started/using-hud.html
   - name: General Information
     url: /campaign/general/index.html
     docs:
@@ -331,6 +337,8 @@
         url: /campaign/general/creating-campaign-lead-form.html
       - name: How Campaign Identifies Viewers
         url: /campaign/general/how-campaign-module-identifies-viewers.html
+      - name: How Video Benchmark Score is Calculated
+        url: /campaign/general/how-vbs-calculated.html
       - name: Overview of Video Content Types
         url: /campaign/general/overview-video-content-types.html
       - name: Publishing a Video to Email

@@ -1481,6 +1481,33 @@
             <priority>0.5</priority>
           </url>
         
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/campaign/general/creating-campaign-enabled-player.html</loc>
+            
+            <lastmod>2021-07-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/campaign/get-started/overview-video-content-types.html</loc>
+            
+            <lastmod>2021-07-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/campaign/get-started/using-hud.html</loc>
+            
+            <lastmod>2021-07-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
       
         <url>
           
@@ -1530,6 +1557,15 @@
           <url>
             
               <loc>https://studio.support.brightcove.com/campaign/general/how-campaign-module-identifies-viewers.html</loc>
+            
+            <lastmod>2021-07-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/campaign/general/how-vbs-calculated.html</loc>
             
             <lastmod>2021-07-14</lastmod>
             <changefreq>daily</changefreq>
