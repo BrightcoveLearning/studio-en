@@ -331,6 +331,8 @@
         url: /campaign/general/creating-campaign-lead-form.html
       - name: How Campaign Identifies Viewers
         url: /campaign/general/how-campaign-module-identifies-viewers.html
+      - name: Overview of Video Content Types
+        url: /campaign/general/overview-video-content-types.html
       - name: Publishing a Video to Email
         url: /campaign/general/publishing-video-email-using-campaign-module.html
       - name: Using Custom Metrics and Events
