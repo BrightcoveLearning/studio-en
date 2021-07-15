@@ -76,7 +76,7 @@ data-embed="default"   class="video-js" controls&gt;&lt;/video-js&gt;
 &lt;script src="https://players.brightcove.net/1486906377/7dccc39d-0e2d-4b27-bea9-af44b2166148_default/index.min.js"&gt;&lt;/script&gt;
 </pre>
     <h3>Oracle Eloqua</h3>
-    <p>Eloqua has stated they do not process (basically ignore) do not track requests and will return an Eloqua GUID regardless. Currently, Campaign isn’t handling this in any special way, i.e. not using the Eloqua JavaScript API when Campaign sees DNT. Eloqua also has support for a strict mode which satisfies EU privacy requirements. When this is enabled for an Eloqua account, end users are not tracked unless they opt-in via a form. The cookies dropped in both cases are documented in the Oracle document <a href="https://community.oracle.com/community/topliners/do-it/blog/2013/08/14/what-cookies-get-dropped-when-you-browse-to-an-eloqua-tracked-page">What cookies get dropped when you browse to an Eloqua tracked page</a>.</p>
+    <p>Eloqua has stated they do not process (basically ignore) do not track requests and will return an Eloqua GUID regardless. Currently, Campaign isn’t handling this in any special way, i.e. not using the Eloqua JavaScript API when Campaign sees DNT. Eloqua also has support for a strict mode which satisfies EU privacy requirements. When this is enabled for an Eloqua account, end users are not tracked unless they opt-in via a form.</p>
     <h3>Marketo</h3>
     <p>Marketo supports DNT but leaves it up to the customer to turn it on/off for their particular account. For more information, see the Marketo document <a href="https://docs.marketo.com/pages/releaseview.action?pageId=6095047">Edit "Do Not Track" Browser Support Settings</a>.</p>
     <h3>HubSpot</h3>
