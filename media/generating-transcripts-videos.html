@@ -8,11 +8,37 @@ layout: staging
   <h1>Generating Transcripts for Videos</h1>
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-    <p>The Upload and Media modules both provide the ability to automatically generate video transcripts. The generated transcript is saved as a WEBVTT file and can be used to </p>
+    <p>The Upload and Media modules both provide the ability to automatically generate video transcripts. The generated transcript is saved as a WEBVTT file and can be used to display video captions.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="upload">Generating transcripts when uploading</h2>
+    <p>The Upload module provides the option to generate a transcript file when a video is uploaded. To generate a transcript file during upload, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click <strong>Upload</strong> in the navigation header to open the Upload module.</li>
+      <li>Enable the <strong>Auto transcribing</strong> option, the <strong>Automatic transcribing settings </strong>dialog will open.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/transcript-settings.png" /></figure>
+      </li>
+      <li>Select the <strong>Language</strong> spoken in the video. If a <strong>Language</strong> is not selected, the video language is auto-detected. Selecting a language will improve the transcript generation time and may improve overall accuracy.</li>
+      <li>Select a <strong>Label</strong>. The label is typically set to the language used in the video. The label will be displayed in the CC dropdown in the video player and will be used by viewers to select the captions to be displayed.</li>
+      <li>Click <strong>Done</strong>.</li>
+    </ol>
     <p>&nbsp;</p>
   </section>
   <section class="bcls-section">
-    <h2 id="add">Generating transcripts when uploading</h2>
-    <p>The table below outlines the video data fields that are exported. For more information on the video data fields, see the <a href="https://apis.support.brightcove.com/cms/references/cms-api-video-fields-reference.html">CMS API Video Fields Reference</a>.</p>
+    <h2 id="existing">Generating transcripts for existing videos</h2>
+    <p>&nbsp;</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="download">Downloading transcript files</h2>
+    <p>Chances are the transcript generation process will not be perfect and you may need to edit things like names used in the video or  punctuation. The Media module provides the ability to download a transcript file. To download a transcript file, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click <strong>Media</strong> in the navigation header to open the Media module.</li>
+      <li>Click the link for the video you want to edit.</li>
+      <li>Locate the <strong>Text Tracks</strong> section and click <strong>Edit</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/transcript-edit-text-track.png" /></figure>
+      </li>
+      <li>Click the download icon (<img class="bcls-image--no-border" alt="" src="/assets/images/media/icon-download.png" />) in the <strong>Actions</strong> column to download the transcript.</li>
+    </ol>
+    <p>The transcript file can be edited using any text editor. Once the changes are made, delete the existing text track file by clicking on the delete icon (<img class="bcls-image--no-border" alt="" src="/assets/images/media/icon-red-delete.png" />) in the <strong>Actions</strong> column. The edited file can then be uploaded. For information on how to upload a new text tracks file, see <a href="adding-captions-videos-using-media-module.html#texttrack">Configuring the text track properties</a>.</p>
   </section>
 </article>
