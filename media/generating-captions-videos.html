@@ -8,7 +8,13 @@ layout: staging
   <h1>Automatically Generating Captions for Videos</h1>
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-    <p>The Upload and Media modules both provide the ability to automatically generate video captions. The generated caption file is then saved as a WEBVTT file and can be used to display  captions during video playback.</p>
+    <p>Video Cloud Studio provides the ability to automatically generate video captions for newly uploaded or existing videos. After the caption files are generated, they are automatically configured as part of the video's text tracks properties. Captions  will appear immediatly during video playback. If you would like to review the captions before they appear, there are two options:</p>
+    <ul>
+      <li><strong>Deactivate the video</strong> - Videos that are deactivated will not play. Review the captions and when they are approved, activate the video.</li>
+      <li><strong>Change the text tracks Kind property</strong> - Edit the text tracks property for the video and set the <strong>Kind</strong> to <strong>metadata</strong>. Text tracks with a <strong>Kind</strong> of <strong>metadata</strong> are not displayed to the user. Review the captions and when they are approved, set the <strong>Kind</strong> back to <strong>captions</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/transcript-text-track-kind.png" /></figure>
+      </li>
+    </ul>
     <p>If you are using a third-party to generate caption files, see <a href="adding-captions-videos-using-media-module.html">Adding Captions to Videos using the Media Module</a> for information on how to associate caption files with videos.</p>
   </section>
   <section class="bcls-section">
@@ -23,18 +29,29 @@ layout: staging
       <li>Select a <strong>Label</strong>. The label is typically set to the language used in the video. The label will be displayed in the CC dropdown in the video player and will be used by viewers to select the captions to be displayed.</li>
       <li>Click <strong>Done</strong>.</li>
     </ol>
+    <aside class="bcls-aside bcls-aside--information">Note: The <strong>Auto transcribing</strong> option is also available when you choose to replace the video source file.</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="existing">Generating captions for existing videos</h2>
+    <h2 id="existing">Generating captions for an existing video</h2>
     <p>The Media module provides the option to generate  caption files for existing videos in your account. To generate a caption file for an existing video, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
       <li>Click <strong>Media</strong> in the navigation header to open the Media module.</li>
       <li>Click the link for the video you want to edit.</li>
-      <li>Locate the <strong>Video Files</strong> section and click<strong> Replace Source File</strong>.</li>
-      <li>The <strong>Upload</strong> module will open in another tab.</li>
-      <li>Enable the <strong>Auto transcribing</strong> option and re-upload the source file.</li>
+      <li>Locate the <strong>Text Tracks</strong> section and click XXXXX</li>
+      <li></li>
+      <li></li>
     </ol>
-    <p>&nbsp;</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="multiple">Generating captions for multiple videos</h2>
+    <p>The Media module provides the option to generate  caption files for multiple videos using the Quick Edit feature. To generate a caption files for multiple videos, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click <strong>Media</strong> in the navigation header to open the Media module.</li>
+      <li>Select the checkbox next to the videos  you want to generate captions for.</li>
+      <li>Click <strong>More</strong> &gt; <strong>Quick Edit</strong>.</li>
+      <li></li>
+      <li></li>
+    </ol>
   </section>
   <section class="bcls-section">
     <h2 id="download">Downloading caption files</h2>
