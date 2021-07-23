@@ -1455,6 +1455,16 @@
         </url>
         
       
+        <url>
+          
+            <loc>https://apis.support.brightcove.com/social/index.html</loc>
+          
+            <lastmod>2021-07-23</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
     
       <url>
         <loc>https://studio.support.brightcove.com/campaign/index.html</loc>
@@ -1739,30 +1749,12 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/campaign/develop/index.html</loc>
+            <loc>https://apis.support.brightcove.com/audience/index.html</loc>
           
             <lastmod>2021-07-23</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
-        
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/campaign/develop/overview-audience-api.html</loc>
-            
-            <lastmod>2021-07-23</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/campaign/develop/reference.html</loc>
-            
-            <lastmod>2021-07-23</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
         
       
     
