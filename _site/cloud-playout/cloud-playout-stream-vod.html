@@ -1223,13 +1223,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <li><strong>STOPPING</strong> - Channel streaming is stopping</li>
           <li><strong>IDLE</strong> - Channel successfully ran and has been stopped</li>
           <li><strong>DELETING</strong> - Channel is being deleted</li>
-          <li><strong>ERROR</strong> - An error occurred while creating or streaming the channel</li>
+          <li><strong>ERROR</strong> - An error occurred while creating or activating the channel</li>
         </ul>
       </li>
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="channel">Creating a  channel</h2>
+    <h2 id="channel">Creating a channel</h2>
     <p>To create a new Cloud Playout channel, follow these steps. </p>
     <ol class="bcls-tasklist-restart" style="--s:1">
       <li>Click <strong>Cloud Playout</strong> in the navigation header.</li>
@@ -1295,6 +1295,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="getting_the_rtmp_ingest_point">Getting the RTMP ingest point</h2>
+    <aside class="bcls-aside bcls-aside--information language-editable">This section only applies if you are including live events in your channel.</aside>
     <p>For your live encoder, you will need the RTMP ingest point for your channel. You can find it in the <strong>:Channel Settings</strong>:</p>
     <figure class="bcls-figure">
       <img class="bcls-image" src="/assets/images/cloud-playout/cloudplayout-rtmp-ingest-point.png" alt="Ingest Point">
