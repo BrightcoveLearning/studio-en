@@ -1330,6 +1330,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ul>
     <p>One possible scenario is to create video landing pages with a URL that’s been uniquely generated for tracking purposes. The Campaign module will then use the URL parameter to look up the user server-side and sync viewing data.</p>
     <p>In order for the player/plugin to read the URL parameters, the Advanced Embed (in-page) publishing code should be used. The Standard Embed (iframe) publishing code will not work as the plugin will be running inside of an iframe and therefore is unable to access the parent page URL which has the parameter.</p>
+      <h4>Note on unknown viewers</h4>
+    <p> When a player loads, Campaign will immediately try to look the viewer up via the cookie based GUID. If they come up as unknown, that response is cached for at least a week. Even if the viewer fills out a form, any reloads of the page are still going to return an unknown viewer status because of the Campaign caching layer.</p>
   </section>
 </article>
 
