@@ -120,12 +120,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
@@ -335,6 +335,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/dynamic-overlays.html",
+      "oldURL": "/dynamic-overlays"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/publish/dynamically-assigning-videos-player.html",
       "oldURL": "/dynamically-assigning-videos-player"
   },
@@ -490,7 +495,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/hubspot/",
+      "newURL": "https://studio.support.brightcove.com/social/",
       "oldURL": "/index"
   },
 
@@ -525,11 +530,6 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/publish/",
       "oldURL": "/index"
   },
@@ -551,6 +551,11 @@
 
   {
       "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/hubspot/",
       "oldURL": "/index"
   },
 
