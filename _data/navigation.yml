@@ -189,8 +189,8 @@
       url: /cloud-playout/cloud-playout-add-content.html
     - name: Adding Static Image Overlays
       url: /cloud-playout/static-image-overlays.html
-    # - name: Adding Dynamic Overlays
-    #   url: /cloud-playout/dynamic-overlays.html
+    - name: Adding Dynamic Overlays
+      url: /cloud-playout/dynamic-overlays.html
     - name: Using Channel Actions
       url: /cloud-playout/using-channel-actions.html
     - name: Adding Bumpers to Cloud Playout
