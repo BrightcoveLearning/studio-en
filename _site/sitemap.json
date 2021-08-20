@@ -495,7 +495,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/hubspot/",
+      "newURL": "https://studio.support.brightcove.com/social/",
       "oldURL": "/index"
   },
 
@@ -530,11 +530,6 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/publish/",
       "oldURL": "/index"
   },
@@ -556,6 +551,11 @@
 
   {
       "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/hubspot/",
       "oldURL": "/index"
   },
 
@@ -1242,6 +1242,11 @@
   {
       "newURL": "https://studio.support.brightcove.com/media/working-cue-points-media-module.html",
       "oldURL": "/working-cue-points-media-module"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/working-multi-lingual-metadata.html",
+      "oldURL": "/working-multi-lingual-metadata"
   },
 
   {
