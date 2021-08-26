@@ -495,7 +495,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/",
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/hubspot/",
       "oldURL": "/index"
   },
 
@@ -530,6 +530,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/social/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/publish/",
       "oldURL": "/index"
   },
@@ -551,11 +556,6 @@
 
   {
       "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/hubspot/",
       "oldURL": "/index"
   },
 
@@ -812,6 +812,16 @@
   {
       "newURL": "https://studio.support.brightcove.com/publish/publishing-brightcove-players-joomla.html",
       "oldURL": "/publishing-brightcove-players-joomla"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/social/publishing-live-event-facebook.html",
+      "oldURL": "/publishing-live-event-facebook"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/social/publishing-live-event-youtube.html",
+      "oldURL": "/publishing-live-event-youtube"
   },
 
   {

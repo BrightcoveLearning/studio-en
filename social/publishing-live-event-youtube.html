@@ -1,0 +1,129 @@
+---
+title: Publishing a Live Event to YouTube
+parent: Live Module
+---
+<article class="bcls-article">
+  <h1>Publishing a Live Event to YouTube</h1>
+  <summary>In this topic you will learn how to publish a live event to YouTube using Brightcove Social.</summary>
+  <section class="bcls-section">
+    <p>The Brightcove Live to Social Media feature can be used to schedule and then broadcast a live event to YouTube all from within the Social module. To do this, the following tasks will be completed:</p>
+    <ul>
+      <li><a href="#schedule">Schedule a YouTube live event</a></li>
+      <li><a href="#live_event">Create a live event and assign it to scheduled social event</a></li>
+      <li><a href="#preview">Preview and broadcast the live stream</a></li>
+      <li><a href="#end">End the live stream</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="schedule">Scheduling a YouTube Live event</h2>
+    <p>Scheduling a YouTube live event in advance allows you to publicize the event to your YouTube&nbsp;audience before the event begins. Before a live event can be scheduled, a publishing destination for the YouTube site you are going to stream the event to must be created. For information on creating publishing destinations, see <a href="https://studio.support.brightcove.com/social/creating-social-media-publishing-destinations.html">Creating Social Media Publishing Destinations</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">To create a Live stream on YouTube, you need to <a href="https://support.google.com/youtube/answer/9227509?hl=en&ref_topic=9257984"> verify your account</a>&nbsp;then enable Live streaming for your account, this step may take up to 24 hrs to activate.</aside>
+    <p>To schedule an upcoming YouTube live video, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the Social module.</li>
+      <li>From the <strong>Published</strong> page, click <strong>Create Live Event</strong>.</li>
+      <li>Select the destination the event will be streamed to and then click <strong>Continue</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" height="731" src="/assets/images/social/live-yt-0.png" /></figure>
+      </li>
+      <li>On the Schedule a Live Event page, optionally, enter a <strong>Title</strong>,&nbsp;<strong>Description</strong> and select a <strong>YouTube Category</strong>. These values will appear in your YouTube post and set the live stream.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" src="/assets/images/social/live-yt-1.png" /></figure>
+      </li>
+      <li>In the <strong>SCHEDULE</strong> section, use the calendar and clock controls to set the <strong>Event Date &amp; Time</strong> for the event.</li>
+      <li>Select the appropriate <strong>Time Zone</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" height="130" src="/assets/images/social/live-yt-2.png" /></figure>
+      </li>
+      <li>In the <strong>LIVE SETTINGS</strong> section, configure the <strong>YouTube Live Video Settings</strong> as appropriate.
+        <ul>
+          <li><strong>Enable or Disable DVR</strong> - If Enable, your viewers will be able to pause, rewind, and continue during the event. Once a viewer resumes playing, the event will continue from where they hit pause.</li>
+          <li><strong>Visibility</strong> - This option allows you to select the Privacy Settings of your Live video.</li>
+          <li><strong>License</strong> - This option allows you to select the License and Rights Ownership of the video.</li>
+        </ul>
+        <figure class="bcls-figure"><img alt="" class="bcls-image--no-border" width="750" height="400" src="/assets/images/social/live-yt-3.png" /></figure>
+      </li>
+      <li>Click the <strong>Add Custom Image</strong> link at the top of the page.</li>
+      <li>Click <strong>Select Image</strong> to browse and select an image or drag and drop an image to use. This image will appear in the YouTube post announcing the live event. The preview image will update to display the new image.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="750" src="/assets/images/social/live-yt-4.png" /></figure>
+      </li>
+      <li>Click <strong>Ok, Got It</strong>.</li>
+      <li>Click <strong>Schedule Event</strong> to schedule the event in YouTube.</li>
+      <li>Click the <strong>View on YouTube</strong> link at the top of the page to view the post on YouTube.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="600" height="400" src="/assets/images/social/live-yt-5.png" /></figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="live_event">Creating a Live event</h2>
+    <p>Before you can start streaming a live event, a live event must be created using the Live module. Live events created in the Live module will be available to broadcast using the Social module.</p>
+    <p>When creating an event in the Live module, keep the following points in mind:</p>
+    <ul>
+      <li>If you create a recurring event, you can create the event ahead of time and activate it when you are ready to start streaming to YouTube.</li>
+      <li>If you create a regular event (non-recurring), the live event must be started within 30 minutes of the event being created. If you are using a regular event, it should be created right before you are ready to go live on YouTube.</li>
+    </ul>
+    <p>For detailed information on creating live events using the Live module, see <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</p>
+    <p>To create a new live event, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the Live module.</li>
+      <li>Click <strong>Create Event</strong>. The Create Live Event page will open.</li>
+      <li>Enter the <strong>Event Name</strong> and any required fields.</li>
+      <li>For the <strong>Streaming to Social Media</strong> option, select <strong>Allowed</strong>.</li>
+      <li>Select a <strong>Live Ingest Profile</strong>.</li>
+      <li>Click <strong>ADVANCED OPTIONS</strong> and select the <strong>Region</strong> closest to where your encoder is located.</li>
+      <li>If you wish to create a recurring event, select the <strong>Create this as a recurring event using a Static Entry Point (SEP)</strong> option.</li>
+      <li>Click <strong>Create Event</strong>. The Control Room page will open and display a <strong>Streaming Endpoint (RTMP URL)</strong> and <strong>Stream Name</strong> which we will be used by your encoder.</li>
+      <li>To connect a live event to a scheduled social event using the Live module, click <strong>Connect to Social Media</strong> in the left navigation. Note that the live event can also be assigned using the <a href="#social_assign">Social module</a>.</li>
+      <li>Click on an event and then click <strong>Connect</strong>.
+        <div><img class="bcls-image--no-border" alt="" src="" /></div>
+      </li>
+      <li>Click the Control Room link in the left navigation to return to the control room.</li>
+    </ol>
+    <p>The <strong>Streaming Endpoint (RTMP URL)</strong> and <strong>Stream Name</strong> values will be used by your encoder. Start the live stream and confirm it appears in the Control Room.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="social_assign">Assigning a live event to a scheduled social event</h2>
+    <p>If the live event wasn't assigned to a scheduled event using the Live module, the live event to use must be selected in the Social module. To assign a live event to a scheduled event using the Social module, follow these steps.</p>
+    <aside class="bcls-aside bcls-aside--information"> These steps are only required if the live event was not assigned in the Live module.</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>Return to the Social module and edit the scheduled event.</li>
+      <li>Click the <strong>Connect Video Source</strong> link at the top of the page.</li>
+      <li>Select the live event from the <strong>Select Video Source</strong> dropdown list.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="400" height="200" src="/assets/images/social/live-yt-6.png" /></figure>
+      </li>
+      <li>Click <strong>Connect Source</strong>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="preview">Previewing and broadcasting the live stream</h2>
+    <p>Before previewing the event in the Social module, the live event should be started and should be visible in the Live module.</p>
+    <p>To preview and broadcast the live stream, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>If the event was assigned using the Live module, return to the Social module and edit the scheduled event.</li>
+      <li>Confirm the stream preview appears. This is a preview from the Live module.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="500" height="300" src="/assets/images/social/live-yt-7.png" /></figure>
+      </li>
+      <li>Click the <strong>Preview Live Stream </strong>link at the top of the page and then click <strong>Preview</strong>. Click the <strong>Play</strong> button to preview the YouTube live stream. This is the stream that YouTube will broadcast so confirm it is as expected.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="600" height="350" src="/assets/images/social/live-yt-8.png" /></figure>
+      </li>
+      <li>To broadcast the live stream to YouTube, click the <strong>Broadcast to Viewers</strong> link and then click <strong>Broadcast Stream</strong>. The preview will update to show the number of viewers.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" src="/assets/images/social/live-yt-9.png" /></figure>
+      </li>
+    </ol>
+    <p>Click the <strong>View on YouTube</strong> link under the player to view the YouTube player.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="600" height="400" src="/assets/images/social/live-yt-10.png" /></figure>
+    <p>The live stream will be viewable on your YouTube page.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/live-yt-11.png" /></figure>
+    <p>As YouTube comments are added by viewers, they can be viewed inside of the Social module by clicking on the <strong>Comment Feed</strong> tab.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="end">Ending the live stream</h2>
+    <p>To end the live stream, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Return to the Social module and edit your scheduled event.</li>
+      <li>Click the <strong>End Social Live Event</strong> link at the top of the page and then click <strong>End Live Event</strong>.</li>
+      <li>Return to the Live module to end the event and make sure to stop your encoder.</li>
+      <li>If you were using a recurring event, return to the Live module and deactivate the event.</li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information"> Make sure the encoder is closed and stopped when the live stream is complete. Leaving a connection open between any encoder and Brightcove, even when no data is being sent, may result in unexpected connection charges.</aside>
+    <p>Completed events will appear in the Social module on the Published page. Clicking the delete icon (<img alt="" src="https://img.brightcove.com/node18749-delete-icon.png" /> ) will remove the event from YouTube.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="850" height="70" src="/assets/images/social/live-yt-12.png" /></figure>
+  </section>
+</article>
