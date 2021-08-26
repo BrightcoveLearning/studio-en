@@ -1240,7 +1240,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14456-upload-file.png" /></figure>
       </li>
       <li><strong>File selection dialog</strong> - Click <strong>Browse for Videos</strong> to open a file selection dialog and then browse and select files to upload.</li>
-      <li><strong>Remote URL</strong> - Click <strong>Enter URL</strong> to specify the location of the source file. Source files may reside on a public Dropbox folder or Amazon S3 storage location. Click<strong> Process Video </strong>when finished.
+      <li>
+        <!-- <strong>Remote URL</strong> - Click <strong>Enter URL</strong> to specify the location of the source file. Source files may reside on a public Dropbox folder or Amazon S3 storage location. Click<strong> Process Video </strong>when finished. -->
+        <strong>Remote URL</strong> - Click <strong>Enter URL</strong> to specify the location of the source file. Source files may reside on a public Amazon S3 storage location. Click<strong> Process Video </strong>when finished.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14456-url-to-ingest.png" /></figure>
       </li>
     </ul>
@@ -1251,7 +1253,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <li>If you receive Studio timeout errors when uploading large files, try uploading the file to S3 or some other remote storage location and use the URL upload option in the Studio.</li>
         <li>YouTube URLs cannot be used as they do not generate direct links to video files.</li>
         <li>For information on uploading files from Google Drive, see <a href="/media/uploading-videos-remote-urls.html">Uploading Videos Using Remote URLs</a>.</li>
-        <li>When uploading from Dropbox, if the URL ends with "?dl=0", you may need to change it to "?dl=1" before the file will upload.</li>
+        <!-- <li>When uploading from Dropbox, if the URL ends with "?dl=0", you may need to change it to "?dl=1" before the file will upload.</li> -->
         <li>Video file names (including the extension) must not exceed 120 single-byte (60 double-byte) characters. If it does, the video will be ingested successfully, but you will not be able to retranscode it later.</li>
       </ul>
     </aside>
