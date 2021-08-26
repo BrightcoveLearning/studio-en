@@ -297,6 +297,10 @@
       url: /social/creating-video-clip-using-brightcove-social.html
     - name: Getting Started with Social
       url: /social/getting-started-brightcove-social.html
+    - name: Publishing a Live Event to Facebook
+      url: /social/publishing-live-event-facebook.html
+    - name: Publishing a Live Event to YouTube
+      url: /social/publishing-live-event-youtube.html
     - name: Publishing Videos to Social Media
       url: /social/publishing-videos-social-media-platforms.html
     - name: Reviewing Social Analytics
