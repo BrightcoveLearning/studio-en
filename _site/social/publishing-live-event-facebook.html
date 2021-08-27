@@ -1236,17 +1236,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>On the Schedule a Live Event page, optionally, enter a <strong>Title</strong> and <strong>Status Message</strong>. These values will appear in the Facebook post announcing the live stream.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/live-fb-title-status.png" /></figure>
       </li>
-      <li>In the <strong>SCHEDULE</strong> section, use the calendar and clock controls to set the <strong>Event Date &amp; Time</strong> for the event.</li>
+      <li>In the <strong>Schedule</strong> section, use the calendar and clock controls to set the <strong>Event Date &amp; Time</strong> for the event.</li>
       <li>Select the appropriate <strong>Time Zone</strong>.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/live-fb-schedule.png" /></figure>
       </li>
-      <li>In the <strong>LIVE SETTINGS</strong> section, configure the <strong>Facebook Live Video Settings</strong> as appropriate.
+      <li>In the <strong>Live Settings</strong> section, configure the <strong>Facebook Live Video Settings</strong> as appropriate.
         <ul>
           <li><strong>Allow embedding</strong> - If checked, video can be embedded on third-party sites</li>
         </ul>
         <figure class="bcls-figure"><img alt="" class="bcls-image--no-border" src="/assets/images/social/live-fb-live-settings.png" /></figure>
       </li>
-      <li>Configure the <strong>TARGET</strong> and <strong>RIGHTS</strong> sections as needed. Note that the RIGHTS section will only appear if the connected account has access to the <a href="https://www.facebook.com/facebookmedia/blog/introducing-rights-manager">Facebook Rights Manager</a>.</li>
+      <li>Configure the <strong>Target</strong> and <strong>Rights</strong> sections as needed. Note that the Rights section will only appear if the connected account has access to the <a href="https://www.facebook.com/facebookmedia/blog/introducing-rights-manager">Facebook Rights Manager</a>.</li>
       <li>Click the <strong>Add Custom Image</strong> link at the top of the page.</li>
       <li>Click <strong>Select Image</strong> to browse and select an image or drag and drop an image to use. This image will appear in the Facebook post announcing the live event. The preview image will update to display the new image.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/live-fb-new-image.png" /></figure>
@@ -1266,7 +1266,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>If you create a recurring event, you can create the event ahead of time and activate it when you are ready to start streaming to Facebook.</li>
       <li>If you create a regular event (non-recurring), the live event must be started within 30 minutes of the event being created. If you are using a regular event, it should be created right before you are ready to go live on Facebook.</li>
     </ul>
-    <p>For detailed information on creating live events using the Live module, see <a href="/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</p>
+    <p>For detailed information on creating live events using the Live module, see <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</p>
     <p>To create a new live event, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
       <li>Open the Live module.</li>
@@ -1274,9 +1274,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Enter the <strong>Event Name</strong> and any required fields.</li>
       <li>For the <strong>Streaming to Social Media</strong> option, select <strong>Allowed</strong>.</li>
       <li>Select a <strong>Live Ingest Profile</strong>.</li>
-      <li>Click <strong>ADVANCED OPTIONS</strong> and select the <strong>Region</strong> closest to where your encoder is located.</li>
-      <li>If you wish to create a recurring event, select the <strong>Create this as a recurring event using a Static Entry Point (SEP)</strong> option.</li>
-      <li>Click <strong>Create Event</strong>. The Control Room page will open and display a <strong>Streaming Endpoint (RTMP URL)</strong> and <strong>Stream Name</strong> which we will be used by your encoder.</li>
+      <li>Click <strong>Stream Options</strong> and select the <strong>Region</strong> closest to where your encoder is located.</li>
+      <li>If you wish to create a recurring event, in the <strong>Advanced Options</strong> section, select the <strong>Create this as a recurring event using a Static Entry Point (SEP)</strong> option.</li>
+      <li>Click <strong>Create Event</strong>. The Control Room page will open and display a <strong>Streaming Endpoint (RTMP URL)</strong> and <strong>Stream Name</strong> which  will be used by your encoder.</li>
       <li>To connect a live event to a scheduled social event using the Live module, click <strong>Connect to Social Media</strong> in the left navigation. Note that the live event can also be assigned using the <a href="#social_assign">Social module</a>.</li>
       <li>Click on an event and then click <strong>Connect</strong>.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/live-fb-connect-social-media.png" /></figure>
@@ -1290,7 +1290,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>If the live event wasn't assigned to a scheduled event using the Live module, the live event to use must be selected in the Social module. To assign a live event to a scheduled event using the Social module, follow these steps.</p>
     <aside class="bcls-aside bcls-aside--information">Note: These steps are only required if the live event was not assigned in the Live module.</aside>
     <ol class="bcls-tasklist-restart">
-      <li>Return to the Social module and edit the scheduled event.</li>
+      <li>Return to the Social module and edit the scheduled event. The scheduled event will appear on the Published page with a status of <strong>Live Scheduled</strong>.</li>
       <li>Click the <strong>Connect Video Source</strong> link at the top of the page.</li>
       <li>Select the live event from the <strong>Select Video Source</strong> dropdown list.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/live-fb-select-video-source.png" /></figure>
@@ -1304,8 +1304,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>To preview and broadcast the live stream, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
       <li>If the event was assigned using the Live module, return to the Social module and edit the scheduled event.</li>
-      <li>Confirm the stream preview appears. This is a preview from the Live module.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/live-fb-live-module-preview.png" /></figure>
+      <li>Confirm the stream preview appears. This is a preview from the Social module.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/live-fb-social-module-preview.png" /></figure>
       </li>
       <li>Click the <strong>Preview Live Stream </strong>link at the top of the page and then click <strong>Preview</strong>. Click the <strong>Play</strong> button to preview the Facebook live stream. This is the stream that Facebook will broadcast so confirm it is as expected.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/social/live-fb-preview-fb-stream.png" /></figure>
