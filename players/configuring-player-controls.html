@@ -50,7 +50,8 @@ parent: Managing Players
     <h2 id="quality">Quality Selector</h2>
     <p>Enabling the <strong> Quality Selector</strong> provides the ability to manually select a different rendition as the video is playing. A gear icon
       will appear in the bottom right corner of the player. </p>
-    <aside class="bcls-aside bcls-aside--information">Note: The quality selector requires Brightcove Player version 5.17.0 or newer and may not work with all browsers. </aside>
+    <aside class="bcls-aside bcls-aside--information">Note: The quality selector requires Brightcove Player version 5.17.0 or newer and may not work with all browsers.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: Apple does not allow controlling the playback quality on iOS or desktop as it uses adaptive bitrate streaming to adjust the quality level automatically based on bandwidth, connection speed, screen size, etc.</aside>
     <p>When the Quality Selector is enabled, two options for the <strong>Quality Selector Label</strong> are enabled: </p>
     <ul>
       <li><strong>Show Resolution (e.g., 720p)</strong> - Renditions will be
@@ -186,7 +187,6 @@ parent: Managing Players
       </tbody>
     </table>
     <aside class="bcls-aside bcls-aside--information language-editable">Note that picture-in-picture functionality works differently in Firefox than other browsers. In Firefox, it must be enabled in the browser itself, rather than the player.</aside>
-
     <p>You can turn off this functionality in Studio using the <strong>JSON Editor</strong> option from the <strong>PLAYERS</strong> module. To do this add the configuration option <code translate="No">"picture_in_picture_control": false,</code> as shown here: </p>
     <figure class="bcls-figure"> <img
         class="bcls-image--no-border"
