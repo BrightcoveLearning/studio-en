@@ -1,0 +1,92 @@
+---
+title: High-bandwidth Digital Content Protection (HDCP)
+description: In this topic, you will learn about using HDCP-protected content to block streaming on unauthorized devices, with a standard definition fallback for devices that do not support HDCP.
+parent: General Information
+layout: staging
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+  <section class="bcls-section">
+    <h2 id="What_is_HDCP">What is HDCP?</h2>
+    <p>High-bandwidth Digital Content Protection (HDCP) is a form of digital copy protection used to protect audio and video signals from being copied on unauthorized devices. To make a device HDCP compatable, the manufacturer must obtain a license from the Intel subsidiary, Digital Content Protection LLC, and pay an annual fee. There are three types of security rules: </p>
+    <ul>
+      <li>Data traveling through HDCP-enabled cabling is encrypted to stay hidden from cyber criminals</li>
+      <li>Digital devices that have been compromised have their keys taken away, so the device can no longer get data</li>
+      <li>Authentication prevents data and content from being sent to devices that don’t have a license</li>
+    </ul>
+    <p>For details, see the Wikipedia page about <a href="https://en.wikipedia.org/wiki/High-bandwidth_Digital_Content_Protection">High-bandwidth Digital Content Protection</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="How_does_Brightcove_protect_your_content_using_HDCP">How does Brightcove protect your content using HDCP?</h2>
+    <p>Because HDCP support is not found on every device, Brightcove has implemented a system that prevents playback on HDCP-enabled devices, and provides a fallback with Standard Definintion (SD) renditions for other devices.</p>
+    <p>To accomplish this, we use multiple keys that unlock different renditions. The player uses a DRM keychain for multiple keys and switches as needed. Here are the steps:</p>
+    <ol class="bcls-tasklist">
+      <li>The player makes a request to the Playback API for video content.</li>
+      <li>If the player finds HDCP-protected video data, then it will check the device.</li>
+      <li>For HDCP-enabled devices, the player will use the associated DRM key and play the encrypted video.</li>
+      <li>For non-HDCP-enabled devices, the player will use the DRM key for unrestricted SD video renditions.</li>
+      <li>Each key is set to unlock multiple renditions, allowing Brightcove to continue to deliver the best rendition for the device being used.</li>
+    </ol>
+    
+  </section>
+  <section class="bcls-section">
+    <h2 id="Which_players_can_I_use">Which players can I use?</h2>
+    <p>This feature is supported with Brightcove Player (web) as well as the Native SDK players (android, iOS, tvOS).</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="How_do_I_enable_my_account">How do I enable my account?</h2>
+    <p>This feature is a paid add-on. To enable your account, contact your account manager.</p>
+  </section>
+
+
+  <!-- <section class="bcls-section">
+    <h2 id="features">Supported Features</h2>
+    <p>In addition to utilizing the AES specification for encrypting electronic data, Video Cloud HLS encryption further protects content in the following manner:</p>
+    <ul>
+      <li>Each segment file is encrypted</li>
+      <li>The HLS manifest (.m3u8 file) delivered by Video Cloud contains links to the keys for each segment</li>
+      <li>By default, keys are rotated every 10 minutes; you can specify the <code translate="No">encryption_key_rotation_period</code> in custom ingest profiles.</li>
+      <li>To add encryption to your HLS renditions for accounts enabled for <a href="/general/overview-dynamic-delivery.html">Dynamic Delivery</a>, simply submit a request to Brightcove Support to enable HLSe for the account. (For accounts already enabled for HLSe, if your account is enabled for Dynamic Delivery, encryption will continue to be applied to all HLS renditions.)</li>
+      <li>To add encryption to your HLS renditions in accounts using the legacy ingest system (non-Dynamic Delivery), add the <code translate="No">encryption_method</code> and <code translate="No">encryption_key_rotation_period</code> fields to each of the HLS renditions defined in your ingestion profile:
+        <pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "media_type": "video",
+  "reference_id": "ts0",
+  "format": "ts",
+  "type": "segmented",
+  "audio_codec": "aac",
+  "audio_bitrate": 64,
+  "video_codec": "h264",
+  <span class="bcls-highlight">"encryption_method": "aes-128",</span>
+  <span class="bcls-highlight">"encryption_key_rotation_period": 10,</span>
+  "video_bitrate": 450,
+  "decoder_bitrate_cap": 771,
+  "decoder_buffer_size": 1028,
+  "keyframe_rate": 0.5,
+  "max_frame_rate": 30,
+  "width": 480,
+  "height": 270,
+  "h264_profile": "baseline"
+</code></pre>
+      </li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">Note: Video encryption is not by itself a strong form of content protection. If content security is critical for your organization, you should employ <a href="https://player.support.brightcove.com/content-protection/overview-content-protection.html">DRM protection</a>. Contact your Account Manager for details about bundling HLS encryption and DRM protection so that you can secure your content wherever it plays.</aside>
+  </section> -->
+  
+  <section class="bcls-section">
+    <h2 id="limitations">Limitations</h2>
+    <!-- <ul>
+      <li>HLS encryption applies to all non-DRM HLS renditions in your account. If you have promotional or other videos you want to deliver without encryption, you can upload them to a different Video Cloud account without HLS encryption enabled.</li>
+      <li>For videos ingested using the legacy ingest system, Video Cloud does not support encrypting HLS renditions uploaded to Video Cloud before the implementation of HLS encryption. Previously uploaded HLS content remains unencrypted. You must <a href="/media/retranscoding-videos-using-media-module.html">retranscode videos</a> uploaded before HLS encryption to protect them. This does <strong>not</strong> apply to videos ingested using the Dynamic Delivery system.</li>
+      <li>Video Cloud does not show an indicator to identify HLS encrypted videos in the Media module.</li>
+      <li>If a user plays an HLS encrypted video on an Apple device and then attempts to replay it after the TTL has expired, playback will fail to start, and will not provide an alert message to the user.</li>
+      <li>When using the Brightcove Player, HLS playback is not supported on IE8 or IE9. These devices will fall back to MP4.</li>
+      <li>HLSe is supported in the <a href="https://sdks.support.brightcove.com/getting-started/brightcove-native-player-sdks.html">Android SDK</a> and will be supported on older versions with the VisualOn component. HLSe should also work on 4.x with the HTML5 player. For more information on the support of HLSe on Android devices, see <a href="http://developer.android.com/guide/appendix/media-formats.html">Android Supported Media Formats</a>.</li>
+      <li>For HTML5 players, HLSe support is completely determined by the underlying OS/device.</li>
+      <li>If you elect to terminate Video Cloud HLS encryption, encryption will be removed from all videos in the account - no re-transcoding is required.</li>
+      <li>Currently, HLSe content is not supported with offline playback using the Brightcove Native SDK for Android, iOS or tvOS.</li>
+    </ul> -->
+  </section>
+</article>
