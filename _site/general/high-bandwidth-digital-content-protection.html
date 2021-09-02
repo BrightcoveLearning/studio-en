@@ -1225,15 +1225,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="How_does_Brightcove_protect_your_content_using_HDCP">How does Brightcove protect your content using HDCP?</h2>
-    <p>Because HDCP support is not found on every device, Brightcove has implemented a system that prevents playback on HDCP-enabled devices, and provides a fallback with Standard Definintion (SD) renditions for other devices.</p>
-    <p>To accomplish this, we use multiple keys that unlock different renditions. The player uses a DRM keychain for multiple keys and switches as needed. Here are the steps:</p>
+    <p>Content owners may want to protect their content with DRM and force HDCP for specific hardware setups. For devices that don't support HDCP, Brightcove will provide a fallback experience using lower quality SD renditions.</p>
+    <p>To accomplish this, we use multiple keys that unlock different renditions. The player uses a DRM keychain for multiple keys and switches as needed. There will be three keys for each protection type instead of just one. So, there will be one key for each: audio, SD, and HD.</p>
+    <h3>Steps</h3>
     <ol class="bcls-tasklist">
+      <li>Enable your account for HDCP fallback.</li>
       <li>The player makes a request to the Playback API for video content.</li>
       <li>If the player finds HDCP-protected video data, then it will check the device.</li>
-      <li>For HDCP-enabled devices, the player will use the associated DRM key and play the encrypted video.</li>
-      <li>For non-HDCP-enabled devices, the player will use the DRM key for unrestricted SD video renditions.</li>
-      <li>Each key is set to unlock multiple renditions, allowing Brightcove to continue to deliver the best rendition for the device being used.</li>
+      <li>For HDCP-enabled devices, the player will use the associated DRM key and play the encrypted HD renditions.</li>
+      <li>For hardware that is not HDCP compliant, playback will use SD renditions with a lower level of protection.</li>
     </ol>
+    <h3>Notes:</h3>
+    <ul>
+      <li>All renditions will be protected with DRM</li>
+      <li>Each key is set to unlock multiple renditions, allowing Brightcove to continue to deliver the best rendition for the device being used</li>
+    </ul>
     
   </section>
   <section class="bcls-section">
