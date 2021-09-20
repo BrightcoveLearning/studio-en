@@ -37,85 +37,87 @@ parent: Managing Videos
       </li>
       <li>Enter a <strong>Playlist Name</strong> using the following guidelines.
         <ul>
-          <li><strong>Playlist name</strong> is limited to 100 characters</li>
+          <li><strong>Playlist name</strong> is limited to 255 characters</li>
           <li>Illegal character: /</li>
         </ul>
       </li>
       <li>Click to select a <strong>Playlist type</strong>.</li>
-      <li>Click <strong>Create playlist</strong>.</li>
+      <li>Click <strong>Create playlist</strong>. The panel will close and reopen. For smart playlists, configure the <a href="#smart-props">smart playlist parameters</a>.</li>
+      <li>Click the <strong>Overview</strong> tab.</li>
+      <li>Configure the overview settings as needed.
+        <ul>
+          <li><strong>Name</strong> - playlist name</li>
+          <li><strong>Reference ID</strong> - A unique ID assigned by a publisher to a playlist</li>
+          <li><strong>Description</strong> - Playlist description</li>
+          <li><strong>Show Playlist in Sidebar</strong> - If checked, the playlist will appear in the sidebar
+            <aside class="bcls-aside bcls-aside--information">Note: A maximum of 100 playlists can appear in the sidebar.</aside>
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15152-new-smart-playlist-overview.png" /></figure>
+          </li>
+        </ul>
+      </li>
     </ol>
-    <div class="BCL-subsection">
-      <h3>Working with Smart playlists</h3>
-      <p>If you are creating a Smart playlist, the following settings can also be configured.</p>
-      <h4>Smart settings</h4>
-      <p>Click the <strong>Smart</strong> tab to access the smart settings.</p>
-      <ul>
-        <li><strong>Play Order</strong> - Controls the order in which videos in the playlist are played. The following options are available.
-          <table class="bcls-table">
-            <thead class="bcls-table__head">
-              <tr>
-                <th width="35%">Play Order</th>
-                <th width="65%">Description</th>
-              </tr>
-            </thead>
-            <tbody class="bcls-table__body">
-              <tr>
-                <td>Activated Date (Oldest First)</td>
-                <td>Based on the date the video was activated, oldest videos first</td>
-              </tr>
-              <tr>
-                <td>Activated Date (Newest First)</td>
-                <td>Based on the date the video was activated, newest videos first</td>
-              </tr>
-              <tr>
-                <td>Video Name (A - Z)</td>
-                <td>Alphabetical by video name</td>
-              </tr>
-              <tr>
-                <td>Total Plays</td>
-                <td>Based on the total video plays</td>
-              </tr>
-              <tr>
-                <td>Trailing Week Plays</td>
-                <td>Based on the trailing week total video plays. Note that the trailing week plays data maintained in the video metadata may be up to 2 days old so the videos you get may not match what you see if you look at video views over the past 7 days in the Analytics module.</td>
-              </tr>
-              <tr>
-                <td>Start Date (Oldest First)</td>
-                <td>Based on the date the video was scheduled to start, oldest videos first. If a video does not have a start date specified, then it will not appear in a playlist ordered by start date. Note: Video scheduling is available only to Video Cloud Enterprise accounts.</td>
-              </tr>
-              <tr>
-                <td>Start Date (Newest First)</td>
-                <td>Based on the date the video was scheduled to start, newest videos first. If a video does not have a start date specified, then it will not appear in a playlist ordered by start date. Note: Video scheduling is available only to Video Cloud Enterprise accounts.</td>
-              </tr>
-            </tbody>
-          </table>
-        </li>
-        <li><strong>Limit Number of Videos</strong> - Enter the maximum number of videos that should be in the playlist.</li>
-        <li><strong>Parameters</strong> - Used to define which videos that will appear in the playlist. Currently, only <strong>Tags</strong> are supported.
-          <ul>
-            <li><strong>Tags</strong> - Tags are used to define the videos that will appear in the playlist. The <strong>Tags</strong> dropdown provides these options:
-              <ul>
-                <li><strong>Match any</strong> - Include videos that have one or more of the tags listed</li>
-                <li><strong>Match all</strong> - Require that all the videos in the playlist have all the tags that are listed</li>
-              </ul>
-              <p>In the  text field, enter one or more tags (separated by commas) that will be used to define the playlist.</p>
-              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15152-new-smart-playlist1.png" /></figure>
-              <p>Click <strong>Apply</strong> to save the changes. </p>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h4>Overview settings</h4>
-      <p>Click the <strong>Overview</strong> tab to access the overview settings.</p>
-      <ul>
-        <li><strong>Name</strong> - playlist name</li>
-        <li><strong>Reference ID</strong> - A unique ID assigned by a publisher to a playlist</li>
-        <li><strong>Description</strong> - Playlist description</li>
-        <li><strong>Show Playlist in Sidebar</strong> - If checked, playlist will appear in the sidebar
-          <aside class="bcls-aside bcls-aside--information">Note: A maximum of 100 playlists can appear in the sidebar.</aside>
-        </li>
-      </ul>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15152-new-smart-playlist-overview.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="smart-props">Configuring smart playlist parameters</h2>
+    <p>If you are creating a Smart playlist, the following settings can also be configured.</p>
+    <h4>Smart settings</h4>
+    <p>Click the <strong>Smart</strong> tab to access the smart settings.</p>
+    <ul>
+      <li><strong>Play Order</strong> - Controls the order in which videos in the playlist are played. The following options are available.
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th width="35%">Play Order</th>
+              <th width="65%">Description</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td>Activated Date (Oldest First)</td>
+              <td>Based on the date the video was activated, oldest videos first</td>
+            </tr>
+            <tr>
+              <td>Activated Date (Newest First)</td>
+              <td>Based on the date the video was activated, newest videos first</td>
+            </tr>
+            <tr>
+              <td>Video Name (A - Z)</td>
+              <td>Alphabetical by video name</td>
+            </tr>
+            <tr>
+              <td>Total Plays</td>
+              <td>Based on the total video plays</td>
+            </tr>
+            <tr>
+              <td>Trailing Week Plays</td>
+              <td>Based on the trailing week total video plays. Note that the trailing week plays data maintained in the video metadata may be up to 2 days old so the videos you get may not match what you see if you look at video views over the past 7 days in the Analytics module.</td>
+            </tr>
+            <tr>
+              <td>Start Date (Oldest First)</td>
+              <td>Based on the date the video was scheduled to start, oldest videos first. If a video does not have a start date specified, then it will not appear in a playlist ordered by start date. Note: Video scheduling is available only to Video Cloud Enterprise accounts.</td>
+            </tr>
+            <tr>
+              <td>Start Date (Newest First)</td>
+              <td>Based on the date the video was scheduled to start, newest videos first. If a video does not have a start date specified, then it will not appear in a playlist ordered by start date. Note: Video scheduling is available only to Video Cloud Enterprise accounts.</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li><strong>Limit Number of Videos</strong> - Enter the maximum number of videos that should be in the playlist.</li>
+      <li><strong>Parameters</strong> - Used to define which videos that will appear in the playlist. Currently, only <strong>Tags</strong> are supported.
+        <ul>
+          <li><strong>Tags</strong> - Tags are used to define the videos that will appear in the playlist. The <strong>Tags</strong> dropdown provides these options:
+            <ul>
+              <li><strong>Match any</strong> - Include videos that have one or more of the tags listed</li>
+              <li><strong>Match all</strong> - Require that all the videos in the playlist have all the tags that are listed</li>
+            </ul>
+            <p>In the  text field, enter one or more tags (separated by commas) that will be used to define the playlist.</p>
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15152-new-smart-playlist1.png" /></figure>
+            <p>Click <strong>Apply</strong> to save the changes. </p>
+          </li>
+        </ul>
+      </li>
+    </ul>
     </div>
   </section>
   <section class="bcls-section">
@@ -168,7 +170,6 @@ parent: Managing Videos
       <li>If the playlist is not displayed in the sidebar, click the <strong>All playlists</strong> heading in the side navigation, locate the playlist and click the playlist name link and then click <strong>Edit Settings</strong>.</li>
       <li>Edit the playlist settings and then click <strong>Save</strong>.</li>
     </ol>
-    <aside class="bcls-aside bcls-aside--information">Note that you may <strong>not</strong> convert a manual playlist to a smart playlist or vice-versa.</aside>
     <p>If the playlist is displayed in the side navigation panel, you can click on the playlist and then click the down arrow next to the playlist and click<strong> Edit Settings</strong>.</p>
   </section>
   <section class="bcls-section">
