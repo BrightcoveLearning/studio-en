@@ -1261,6 +1261,36 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="How_do_I_enable_my_account">How do I enable my account?</h2>
     <p>This feature is available for any account that is enabled for DRM protection. For details, see the <a href="/general/overview-digital-rights-management-drm-video-cloud.html#Signing_up_for_DRM">Overview: Digital Rights Management (DRM)</a> document.</p>
   </section>
+
+  <section class="bcls-section">
+    <h2 id="DRM_and_HDCP_options">DRM and HDCP options</h2>
+    <p>This table shows how different HDCP levels function across different license types:</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">HDCP levels</caption>
+      <thead class="bcls-table__head">
+          <tr>
+            <th>DRM</th>
+            <th>HDCP level</th>       
+            <th>Description</th>                  
+          </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+          <tr>
+            <td rowspan="3">FairPlay</td>
+            <td>Not required</td>    
+            <td>HDCP is not enforced.</td>                   
+          </tr>
+          <tr>
+            <td>Type 0 required</td>    
+            <td>HDCP type 0 content streams is enforced. This allows the stream to be transmitted by the HDCP repeater to all HDCP devices.</td>                   
+          </tr>
+          <tr>
+            <td>Type 1 required</td>    
+            <td>HDCP content type 1 (HDCP version 2.2 or later) is enforced. Streams may not be transmitted by the HDCP repeater to HDCP 1.x-compliant devices or HDCP2.0-compliant repeaters.</td>                   
+          </tr>            
+      </tbody>
+    </table>
+  </section>
   
   <!-- <section class="bcls-section">
     <h2 id="limitations">Limitations</h2>
