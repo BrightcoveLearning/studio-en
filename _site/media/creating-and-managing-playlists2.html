@@ -1230,11 +1230,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>There are two types of playlists:</p>
     <ul>
       <li><strong>Manual</strong> - With a manual playlist, you assign specific videos to the playlist and re-order them manually</li>
-      <li><strong>Smart</strong> - With a smart playlist, the list of videos in the playlist is constructed automatically, based on video tags or other video properties. Smart playlists are dynamic and automatically update based upon the videos in your media library and the rules that define the playlist.</li>
+      <li><strong>Smart</strong> - With a smart playlist, the videos in the playlist are constructed automatically, based on video tags. Smart playlists are dynamic and automatically update based upon the videos in your media library and the rules that define the playlist.</li>
     </ul>
     <p>A maximum of 100 videos can be added to a playlist (both Manual and Smart). There is no limit to the number of playlists that can be created. The videos that are initially loaded into a playlist in the player is determined by the type of playlist:</p>
     <ul>
-      <li><strong>Manual Playlists</strong> - Videos are loaded into the playlist based upon the order of the videos in the manual playlist</li>
+      <li><strong>Manual Playlists</strong> - Videos are loaded into the playlist based upon the order of the videos in the  playlist</li>
       <li><strong>Smart Playlists</strong> - Videos are loaded into the playlist based upon the <strong>Play Order</strong> playlist setting</li>
     </ul>
     <p>For information on programmatically retrieving additional videos into a playlist, see the <a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-playback-api-paging.html">Playback API Paging</a> player sample.</p>
@@ -1248,11 +1248,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
       <li>Enter a <strong>Playlist Name</strong> using the following guidelines.
         <ul>
-          <li><strong>Playlist name</strong> is limited to 255 characters</li>
+          <li>Name is limited to 255 characters</li>
           <li>Illegal character: /</li>
         </ul>
       </li>
-      <li>Click to select a <strong>Playlist type</strong>.</li>
+      <li>Click on a <strong>Playlist type</strong>.</li>
       <li>Click <strong>Create playlist</strong>. The panel will close and reopen. For smart playlists, configure the <a href="#smart-props">smart playlist parameters</a>.</li>
       <li>Click the <strong>Overview</strong> tab.</li>
       <li>Configure the overview settings as needed.
@@ -1366,11 +1366,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <h3>Changing the order of videos in a smart playlist</h3>
       <ol class="bcls-tasklist-restart">
         <li>If the playlist is displayed in the sidebar, click on the playlist and then click the down arrow next to the playlist and click<strong> Edit Settings</strong>.</li>
-        <li>If the playlist is not displayed in the sidebar, click the <strong>All Playlists</strong> heading in the side navigation, locate the playlist and click the playlist name link and then click <strong>Edit Settings</strong>.</li>
+        <li>If the playlist is not displayed in the sidebar, click the <strong>All Playlists</strong> heading in the side navigation, locate the playlist, click the playlist name link and then click <strong>Edit Settings</strong>.</li>
         <li>Select a new <strong>Play Order</strong> for the playlist.</li>
         <li>Click <strong>Save</strong>.</li>
       </ol>
-      <p>Smart playlists are created dynamically when the player is loaded from the available video information and so the order should always reflect current state. However, the player always gets its info via the Playback API, which uses data cached for up to 20 min. Playlists may take that long to refresh and may be behind what the <span translate="No">CMS API</span> would show.</p>
+      <p>Smart playlists are created dynamically when the player is loaded from the available video information so the order should always reflect current state. However, the player always gets its info via the Playback API which uses data cached for up to 20 min. Playlists may take that long to refresh and may be behind what the <span translate="No">CMS API</span> would show.</p>
     </div>
   </section>
   <section class="bcls-section">
@@ -1379,7 +1379,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ol class="bcls-tasklist-restart">
       <li>If the playlist is displayed in the sidebar, click on the playlist and then click the down arrow next to the playlist and click<strong> Edit Settings</strong>.</li>
       <li>If the playlist is not displayed in the sidebar, click the <strong>All playlists</strong> heading in the side navigation, locate the playlist and click the playlist name link and then click <strong>Edit Settings</strong>.</li>
-      <li>Edit the playlist settings and then click <strong>Save</strong>.</li>
+      <li>Edit the playlist settings and then click <strong>Apply</strong>.</li>
     </ol>
     <p>If the playlist is displayed in the side navigation panel, you can click on the playlist and then click the down arrow next to the playlist and click<strong> Edit Settings</strong>.</p>
   </section>
