@@ -1219,13 +1219,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 id="What_is_HDCP">What is HDCP?</h2>
-    <p>High-bandwidth Digital Content Protection (HDCP) is a form of digital copy protection used to protect audio and video signals from being copied on unauthorized devices. To make a device HDCP compatible, the manufacturer must obtain a license from the Intel subsidiary, Digital Content Protection LLC, and pay an annual fee. There are three types of security rules: </p>
+    <p>High-bandwidth Digital Content Protection (HDCP) is a form of digital copy protection used to protect high definition (HD) video and audio signals from being copied on unauthorized devices. The transmitting device first checks if the receiver is authorized to receive data. If yes, then the transmitter sends encrypted data to prevent eavesdropping.</p>
+    <p>The recieving setup must be HDCP compliant, including devices, cables, adaptors, and software drivers. If the receiver is not HDCP compliant, then video will play in standard definition (SD) only. In general, newer HDTVs and HDMI or DVI cables should be HDCP compliant.</p>
+    <p>To make a device HDCP compatible, the manufacturer must obtain a license from the Intel subsidiary, Digital Content Protection LLC, and pay an annual fee. There are three types of security rules:</p>
     <ul>
       <li>Data traveling through HDCP-enabled cabling is encrypted to stay hidden from cyber criminals</li>
       <li>Digital devices that have been compromised have their keys taken away, so the device can no longer get data</li>
       <li>Authentication prevents data and content from being sent to devices that don’t have a license</li>
     </ul>
-    <p>For details, see the Wikipedia page about <a href="https://en.wikipedia.org/wiki/High-bandwidth_Digital_Content_Protection">High-bandwidth Digital Content Protection</a>.</p>
+    <p>For details about HDCP, see the Wikipedia page about <a href="https://en.wikipedia.org/wiki/High-bandwidth_Digital_Content_Protection">High-bandwidth Digital Content Protection</a>.</p>
+    <p>Learn about hardware security levels in the <a href="#Hardware_Security">Hardware Security</a> section.</p>
+    
   </section>
   <section class="bcls-section">
     <h2 id="How_does_Brightcove_protect_your_content_using_HDCP">How does Brightcove protect your content using HDCP?</h2>
@@ -1263,7 +1267,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
 
   <section class="bcls-section">
-    <h2 id="FairPlay">FairPlay</h2>
+    <h2 id="Hardware_Security">Hardware Security</h2>
+    <p>Each DRM type implements a set of industry standards to protect content as it is distributed over the internet and played back on devices. They do this by providing security levels for devices.</p>
+    <h3>FairPlay</h3>
     <p>This table shows how DRM security levels relate to HDCP protection.</p>
     <table class="bcls-table">
       <caption class="bcls-caption--table">DRM security levels and HDCP</caption>
@@ -1292,10 +1298,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </tr>            
       </tbody>
     </table>
-  </section>
 
-  <section class="bcls-section">
-    <h2 id="Widevine">Widevine</h2>
+    <h3 id="Widevine">Widevine</h3>
     <p>A common implementation solution is to stream premium HD content only on devices supporting L1 security. Most Android devices for instance support L1 security. L2 and L3 devices (such as Chrome on Desktops) on the other hand receive standard-quality video streams.</p>
     <p>This table shows how DRM security levels relate to HDCP protection.</p>
     <table class="bcls-table">
@@ -1328,10 +1332,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </tr>            
       </tbody>
     </table>
-  </section>
 
-  <section class="bcls-section">
-    <h2 id="PlayReady">PlayReady</h2>
+    <h3 id="PlayReady">PlayReady</h3>
     <p>PlayReady provides security levels that define how robust the client is against unauthorized use. For details, see Microsoft's <a href="https://docs.microsoft.com/en-us/playready/overview/security-level">Security Level</a> document.</p>
     <p>This table shows how DRM security levels relate to HDCP protection.</p>
     <table class="bcls-table">
