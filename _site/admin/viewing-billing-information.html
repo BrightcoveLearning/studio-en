@@ -1225,19 +1225,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ol>
     <p>The main Billing page will display.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Main billing page" src="/assets/images/admin/node16461-billing-main.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Notes: 
-			<ul>
-				<li>If a <strong>Billing Account</strong> dropdown list appears at the top of the page, this indicates you have multiple contracts with Brightcove. Use the dropdown to select a contract to view billing details.</li>
-				<li>If you have one or more Zencoder accounts as well as Video Cloud accounts, VOD Zencoder Minutes Used items may appear on your Video Cloud billing statement. The information is included as a convenience, just to give you a complete picture of your billing - these charges are not related to Video Cloud.</li>
-        <li>When you delete a video, we keep it in the system for 12 days in case you need to revert that decision. Therefore, deleted videos will continue to be reflected in managed content for 12 days after they are deleted.</li>
-			</ul>
-			</aside>
+    <aside class="bcls-aside bcls-aside--information">Notes:
+      <ul>
+        <li>If a <strong>Billing Account</strong> dropdown list appears at the top of the page, this indicates you have multiple contracts with Brightcove. Use the dropdown to select a contract to view billing details.</li>
+        <li>If you have one or more Zencoder accounts as well as Video Cloud accounts, VOD Zencoder Minutes Used items may appear on your Video Cloud billing statement. The information is included as a convenience, just to give you a complete picture of your billing - these charges are not related to Video Cloud.</li>
+      </ul>
+    </aside>
     <h3>Expired accounts</h3>
     <p>If you have older, expired accounts, you can also select those from the <strong>Billing Account</strong> dropdown:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" src="/assets/images/admin/billing-expired-account.png" alt="Expired Accounts">
-    </figure>
-      <p>With expired accounts, there is an issue where the last period of an expired contract is not available. In the above example, if the expired contract is selected, data for August 2020 will not be available.  Contact your account manager or Brightcove Support if this information is needed. </p>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" src="/assets/images/admin/billing-expired-account.png" alt="Expired Accounts"> </figure>
+    <p>With expired accounts, there is an issue where the last period of an expired contract is not available. In the above example, if the expired contract is selected, data for August 2020 will not be available.  Contact your account manager or Brightcove Support if this information is needed. </p>
   </section>
   <section class="bcls-section">
     <h2 id="metrics">Billing metrics</h2>
@@ -1255,9 +1252,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>The Encryption Licenses metric will display the total DRM licenses / contracted licenses. If the number of licenses used is over quota, the graphic will appear in red. The bar chart can be used to view the number of licenses used <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
     <aside class="bcls-aside bcls-aside--information">Note: Regardless of the Player Preload setting, encryption is always loaded even before the video is streamed to avoid delay in loading the video. For this reason, you may see more Encryption Licenses than Streams in your billing metrics.</aside>
     <h3><strong>Auto Captions</strong></h3>
-      <p>The Auto Captions metric will display the total number of auto captioning minutes used / contracted amount.</p>
-       <h3><strong>APS and ANS</strong></h3>
-      <p>Active Paying Subscribers (APS) and Active NonPaying Subscribers (ANS) metrics for  Brightcove Beacon Evergent Billing.</p>
+    <p>The Auto Captions metric will display the total number of auto captioning minutes used / contracted amount.</p>
+    <h3><strong>APS and ANS</strong></h3>
+    <p>Active Paying Subscribers (APS) and Active NonPaying Subscribers (ANS) metrics for  Brightcove Beacon Evergent Billing.</p>
     <h3><strong>Storage</strong></h3>
     <p>The Storage metric will display the total storage / contracted storage. If the storage used is over quota, the graphic will appear in red. The bar chart can be used to view the storage used <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
     <aside class="bcls-aside bcls-aside--information">
@@ -1288,7 +1285,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h3><strong>Brightcove Live DVR Hours</strong></h3>
     <p>The <strong> Brightcove Live DVR Hours</strong> displays the input seconds transcoded + the Live video with DVR enabled. If the number of hours is over quota, the graphic will appear in red.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select metric" src="/assets/images/admin/node16461-live-dvr-hours.png" /></figure>
-
     <h3><strong>Live Origin</strong></h3>
     <p>Live origin bandwidth is defined as a cache-miss from the CDN and requests that need to be fulfilled by the live origin. It has cost implications on the system when reselling bandwidth and will help assess margins per customer and overall profitability of the platform to drive future pricing discussions.</p>
     <h3><strong>VOD Origin</strong></h3>
@@ -1300,7 +1296,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select metric" src="/assets/images/admin/node16461-select-metric.png" /></figure>
     <p>The bar chart will update to display the details for the selected metric. Data for the current month and past 12 months will be displayed. Hovering over the chart will display the details for that month.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="graph details" src="/assets/images/admin/node16461-graph-details.png" /></figure>
-		<p>If you hover over the current month, however, note that this is <strong>not</strong> realtime data. The data for the current month is only as recent as four days prior to the current date, and is only an estimate.</p>
+    <p>If you hover over the current month, however, note that this is <strong>not</strong> realtime data. The data for the current month is only as recent as four days prior to the current date, and is only an estimate.</p>
     <p>A list of all accounts will appear below the bar chart. By default, if you have multiple accounts, the data for all accounts will be displayed. To view data for a single account, select an account by clicking the radio button for the account or by clicking on the row.</p>
   </section>
   <section class="bcls-section">
@@ -1310,10 +1306,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="deleted_videos">Deleted videos and digital masters</h2>
-    <p>Note that when you delete videos, digital masters, and other assets, the physical files are not removed immediately. We keep them in place for at least seven days (and sometimes up to fourteen) for two reasons:</p>
+    <p>Note that when you delete videos, digital masters, and other assets, the physical files are not removed immediately. We keep the content for 12-14 days (for Dynamic Delivery) and even longer for Legacy. This is done for two reasons:</p>
     <ul>
-      <li>In case they were deleted by mistake and you want to restore them</li>
-      <li>So that you can still get the metadata and analytics for the videos</li>
+      <li>In case the videos were deleted by mistake and you want to restore them</li>
+      <li>So  you can still get the metadata and analytics for the videos</li>
     </ul>
     <p>As long as the physical files are still in place, you <strong>will</strong> see deleted media assets reflected in your billing.</p>
   </section>
