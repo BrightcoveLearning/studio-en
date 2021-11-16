@@ -61,26 +61,26 @@ parent: General Information
       </ul>
       <p>In practice you will very rarely realize whether content has been streamed or progressively downloaded unless you look for some of the distinguished features as described above.</p>
     </section>
-  <section id="pd" class="bcls-subsection">
-    <h3>Progressive download (also called PD)</h3>
-    <aside class="bcls-aside bcls-aside--information">Only very old browsers or devices still require progressive download. The main use of it now is to provide renditions that can be downloaded and saved by the user.</aside>
-    <p>When you deliver your content using progressive download, the file is served from a standard web server through an HTTP request, just like a normal web page or any other downloadable document. When the video is played, the video file is downloaded to the viewer's computer or device and stored in a temporary directory. The video will begin to play when enough of the file has has been downloaded to the computer/device. If the viewer wants to fast forward or skip to another part of the video, he/she will only be able to do so if that part of the video has already been downloaded and stored. In comparison to streaming video, there's really only one consistent benefit to progressive download—you don't need a streaming server to deliver the video. Progressive download video can be served from any normal web server.</p>
-    <p>Progressive download is fine for hobbyists or websites that have low traffic requirements, don't mind if their content is cached on the viewer's computer/device, and if you only need to deliver shorter length videos (under 10 minutes). Publishers who need advanced features and control over their video delivery, and/or those who need to display video to larger audiences (several hundred or more simultaneous viewers), need to track and report usage or viewing statistics for the video, or want to offer the best interactive playback experience, will need to stream their video. Streaming delivery also consumes less bandwidth than progressive delivery because only the portion of the video that is watched is actually delivered.</p>
-    <p>Progressive download key points:</p>
-    <ul>
-      <li>Limited seek and navigation capabilities</li>
-      <li>Viewers can access and re-purpose content</li>
-      <li>Does not effectively utilize Video Cloud’s dynamic delivery feature</li>
-      <li>Less secure and content can be easily copied</li>
-      <li>More bandwidth is used as all parts of the video are downloaded, not just the watched ones</li>
-    </ul>
+    <section id="pd" class="bcls-subsection">
+      <h3>Progressive download (also called PD)</h3>
+      <aside class="bcls-aside bcls-aside--information">Only very old browsers or devices still require progressive download. The main use of it now is to provide renditions that can be downloaded and saved by the user.</aside>
+      <p>When you deliver your content using progressive download, the file is served from a standard web server through an HTTP request, just like a normal web page or any other downloadable document. When the video is played, the video file is downloaded to the viewer's computer or device and stored in a temporary directory. The video will begin to play when enough of the file has has been downloaded to the computer/device. If the viewer wants to fast forward or skip to another part of the video, he/she will only be able to do so if that part of the video has already been downloaded and stored. In comparison to streaming video, there's really only one consistent benefit to progressive download—you don't need a streaming server to deliver the video. Progressive download video can be served from any normal web server.</p>
+      <p>Progressive download is fine for hobbyists or websites that have low traffic requirements, don't mind if their content is cached on the viewer's computer/device, and if you only need to deliver shorter length videos (under 10 minutes). Publishers who need advanced features and control over their video delivery, and/or those who need to display video to larger audiences (several hundred or more simultaneous viewers), need to track and report usage or viewing statistics for the video, or want to offer the best interactive playback experience, will need to stream their video. Streaming delivery also consumes less bandwidth than progressive delivery because only the portion of the video that is watched is actually delivered.</p>
+      <p>Progressive download key points:</p>
+      <ul>
+        <li>Limited seek and navigation capabilities</li>
+        <li>Viewers can access and re-purpose content</li>
+        <li>Does not effectively utilize Video Cloud’s dynamic delivery feature</li>
+        <li>Less secure and content can be easily copied</li>
+        <li>More bandwidth is used as all parts of the video are downloaded, not just the watched ones</li>
+      </ul>
+    </section>
+    <section id="images" class="bcls-subsection">
+      <h3>How are image assets delivered?</h3>
+      <p>Regardless of whether you use streaming or progressive download for your video content, images delivered to end users in the Video Cloud player (thumbnails and video stills, for example) are delivered via HTTP download.</p>
+    </section>
   </section>
-  <section id="images" class="bcls-subsection">
-    <h3>How are image assets delivered?</h3>
-    <p>Regardless of whether you use streaming or progressive download for your video content, images delivered to end users in the Video Cloud player (thumbnails and video stills, for example) are delivered via HTTP download.</p>
-  </section>
-</section>
-<section class="bcls-section">
+  <section class="bcls-section">
     <h2 id="compare">Comparing content delivery: Brightcove-hosted video assets vs. BYO vs. remote assets</h2>
     <p>Video Cloud supports a few basic CDN configurations, depending on your CDN provider and setup. The choices are:</p>
     <ul>
@@ -96,6 +96,8 @@ parent: General Information
     <section id="BYOCDN" class="bcls-subsection">
       <h3>BYO CDN</h3>
       <p>You can also choose to use your own choice of CDN (<strong>BYO CDN</strong> or "bring your own bandwidth"). In this case, depending on the agreement with your CDN provider, your videos will be delivered seamlessly through Video Cloud players using either Progressive Download (PD) or streaming mechanisms. If you choose BYO CDN, you can use the Video Cloud pull-based ingestion to ingest content into your Video Cloud account, which then gets moved to your CDN provider for delivery to end users through your Video Cloud players.</p>
+      <h4>Does Dynamic Delivery support BYO CDN publishers? </h4>
+      <p>Dynamic Delivery allows publishers to take advantage of their own CDN relationships, however, all video assets must be managed by the Brightcove Origin. Please contact your account manager for more information.</p>
     </section>
     <section id="RemoteAssets" class="bcls-subsection">
       <h3>Remote assets</h3>
