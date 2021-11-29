@@ -1075,6 +1075,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/media/using-the-caption-editor.html",
+      "oldURL": "/using-the-caption-editor"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/general/video-cloud-architecture-overview.html",
       "oldURL": "/video-cloud-architecture-overview"
   },

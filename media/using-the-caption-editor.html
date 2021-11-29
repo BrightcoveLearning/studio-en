@@ -1,0 +1,46 @@
+---
+title: Using the Caption Editor
+description: In this topic you will learn how to edit captions using the caption editor.
+parent: Managing Videos
+layout: staging
+---
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>Captions can be added to videos and provide additional or interpretive information to individuals who wish to access it. Captions are associated with videos as part of the <strong>Text Track</strong> properties. Video Cloud provides the ability to <a href="generating-captions-videos.html">auto-generate captions</a> for a video or captions can be <a href="adding-captions-videos-using-media-module.html">manually associated</a> with videos. </p>
+    <p>Once captions have been added to videos, the caption editor can be used to edit the caption files.The text tracks properties can be configured to provide captions for a video. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit">Editing a caption file</h2>
+    <p>To edit a caption file, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Media</strong> module.</li>
+      <li>Click a video name  to open the video properties page.</li>
+      <li>Icons above the preview player can be used to display the preview player or the caption editor. Click the <strong>CC</strong> icon to open the caption editor.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/capedit-cc-icon.png" /></figure>
+      </li>
+      <li>Use the preview player to play the video. Pause the video at the point where you want to add a cue point.</li>
+      <li>Click <strong>Add Cue Point</strong>.</li>
+      <li>If needed, adjust the <strong>Timecode (hh:mm:ss)</strong> values for the cue point. Note that the <strong>seconds</strong> field supports milliseconds after the decimal point.</li>
+      <li>Select the <strong>Type</strong> of cue point and then add the appropriate metadata.
+        <ul>
+          <li><strong>ad</strong> - An ad request will be made. When using ad cue points, the player should be <a href="/players/configuring-player-advertising-using-players-module.html">configured for advertising</a>.</li>
+          <li><strong>code</strong> - Cue points will be handled programmatically. See the <a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">Implementing Cue Points Programmatically</a> developer document for more information.</li>
+        </ul>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15151-add-code-cue-point.png" /></figure>
+      </li>
+      <li>Enter a <strong>Name</strong> for the cue point. The name value can be accessed <a href="https://player.support.brightcove.com/general/implementing-cue-points-programmatically.html">programmatically</a>.</li>
+      <li></li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit">Editing cue points</h2>
+    <p>To edit cue points in a video, open the Media module and follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click the video title link to open the video properties page.</li>
+      <li>Click th</li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">Note: It is not possible to have multiple cue points with the same timecode.</aside>
+  </section>
+</article>
