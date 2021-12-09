@@ -23,7 +23,7 @@ grandparent: Integrations
       <li>Click through the service agreement the first time you use the module</li>
       <li>Have a Salesforce.com account with the <strong>API Enabled</strong> permission and belong to a role which allows you to read and write to the Salesforce object they choose to send viewing data to</li>
       <li>Use the Advanced Embed (in-page) publishing code when publishing your player; Standard Embed (iframe) publishing code will not work as the plugin will be running inside of an iframe and therefore will be unable to access the parent page URL parameters</li>
-      <li>If you will be using the Pardot integration, you should complete the steps outlined in the <a href="../../../campaign/integrations/salesforce/creating-salesforce-object-pardot.html">Creating a Custom Salesforce Object for Pardot Integration</a> topic.</li>
+      <li>If you will be using the Pardot integration, you should complete the steps outlined in the <a href="/campaign/integrations/salesforce/creating-salesforce-object-pardot.html">Creating a Custom Salesforce Object for Pardot Integration</a> topic.</li>
     </ul>
   </section>
   <section class="bcls-section">
@@ -158,13 +158,13 @@ grandparent: Integrations
     </ul>
     <pre>
   &lt;video data-video-id="6033402539001" 
-         data-account="1486906377" 
-         data-player="default" 
-         data-embed="default" 
-         data-application-id 
-         class="video-js"
-         <strong>data-bc-trackingid="12345"</strong> 
-         controls&gt;&lt;/video&gt;
+      data-account="1486906377" 
+      data-player="default" 
+      data-embed="default" 
+      data-application-id 
+      class="video-js"
+      <strong>data-bc-trackingid="12345"</strong> 
+      controls&gt;&lt;/video&gt;
   &lt;script src="//players.brightcove.net/1486906377/default_default/index.min.js"&gt;&lt;/script&gt;</pre>
     <p>Campaign will then pass the value along to Salesforce as another field that is synced.</p>
   </section>
