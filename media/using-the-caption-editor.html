@@ -26,22 +26,33 @@ layout: staging
       </li>
       <li>Edit the text track content as needed. The preview player can be used to preview changes to the text track.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/capedit-captions-edited.png" /></figure>
-          <aside class="bcls-aside bcls-aside--information">Note: You must click out of the caption line and then back in to view your changes in the preview player.</aside>
-          <aside class="bcls-aside bcls-aside--information">Note: For videos longer than one hour, the timecode format will change to 00:00:00:00.</aside>
+        <aside class="bcls-aside bcls-aside--information">Note: You must click out of the caption line and then back in to view your changes in the preview player.</aside>
+        <aside class="bcls-aside bcls-aside--information">Note: For videos longer than one hour, the timecode format will change to 00:00:00:00.</aside>
       </li>
       <li>Click <strong>Publish text track</strong> to save the changes. Video Cloud will upload the updated text tracks file.
-        </li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/capedit-status-published.png" /></figure>
+      </li>
       <aside class="bcls-aside bcls-aside--information">Note: There will be a slight delay before the updated text tracks appear in players.</aside>
     </ol>
   </section>
   <section class="bcls-section">
     <h2 id="unpublish">Unpublishing a caption file</h2>
     <p>When a caption file is unpublished, it will not be displayed to viewers. To unpublish a captions file, open caption editor and click <strong>Unpublish</strong>.</p>
-<p>There are two ways to confirm that your track has been unpublished:</p>
-      <ul>
-          <li>Review the main preview player (which only contains published tracks) and confirm that the captions do not appear</li>
-          <li>Toggle to the Caption Editor and confirm that the status field has changed to <strong>Draft</strong></li>
+    <p>There are two ways to confirm that your track has been unpublished:</p>
+    <ul>
+      <li>Review the main preview player (which only contains published tracks) and confirm that the captions do not appear</li>
+      <li>Toggle to the caption editor and confirm that the status field has changed to <strong>Draft</strong></li>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/capedit-status-draft.png" /></figure>
     </ul>
-
-      </section>
+  </section>
+  <section class="bcls-section">
+    <h2 id="issues">Known issues and feature gaps</h2>
+    <p>Because the caption Eeitor is not yet a finished feature, there are some known issues/feature gaps that you may want to be aware of. These are listed below and will be resolved in the coming weeks. </p>
+    <ul>
+      <li><strong>Publish and Unsave workflow</strong> - We recognize that it is not ideal to have to publish a text track and then unpublish separately to hide the captions from end viewers. We are working on making this a single action.</li>
+      <li><strong>Overlapping captions</strong> - If one caption has a start time with the same timecode as the previous caption’s end time, they will appear to overlap in the caption player. It will not appear that way to end viewers - the caption line with the same start timecode will win the conflict.</li>
+      <li><strong>Timecode errors</strong> - Only numbers and colons are allowed in the timecode field. If you enter in any other character-types (e.g. letters, commas), it will result in an error. To fix this, replace the disallowed characters with a number or colon. </li>
+      <li><strong>Analytics panel</strong> - The Video Views panel in the video details page may be removed once the caption editor is turned on. This will also impact the position of the panels. We are working on fixing this. </li>
+    </ul>
+  </section>
 </article>
