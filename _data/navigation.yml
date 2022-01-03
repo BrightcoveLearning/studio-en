@@ -193,14 +193,18 @@
       url: /cloud-playout/static-image-overlays.html
     - name: Adding Dynamic Overlays
       url: /cloud-playout/dynamic-overlays.html
-    - name: Using Channel Actions
-      url: /cloud-playout/using-channel-actions.html
+#    - name: Importing Captions
+#      url: /cloud-playout/import-captions.html
     - name: Adding Bumpers to Cloud Playout
       url: /cloud-playout/adding-bumpers-to-vod.html
     - name: Monetizing Cloud Playout
       url: /cloud-playout/enabling-server-side-ads.html
     - name: Adding Mid-Roll Ads to a Channel
       url: /cloud-playout/mid-roll-ad-insertion.html
+#    - name: Searching for Channels
+#      url: /cloud-playout/searching-for-channels.html
+    - name: Using Channel Actions
+      url: /cloud-playout/using-channel-actions.html
     - name: Generating the Channel Embed Code
       url: /cloud-playout/generating-channel-embed-code.html
     - name: Viewing Channel Output and Analytics
