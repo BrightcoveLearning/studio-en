@@ -505,27 +505,47 @@
   },
 
   {
+<<<<<<< Updated upstream
       "newURL": "https://studio.support.brightcove.com/campaign/integrations/marketo/",
+=======
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
+>>>>>>> Stashed changes
       "oldURL": "/index"
   },
 
   {
+<<<<<<< Updated upstream
       "newURL": "https://studio.support.brightcove.com/social/",
+=======
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/eloqua/",
+>>>>>>> Stashed changes
       "oldURL": "/index"
   },
 
   {
+<<<<<<< Updated upstream
       "newURL": "https://studio.support.brightcove.com/release-notes/",
+=======
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/salesforce/",
+>>>>>>> Stashed changes
       "oldURL": "/index"
   },
 
   {
+<<<<<<< Updated upstream
       "newURL": "https://studio.support.brightcove.com/",
+=======
+      "newURL": "https://studio.support.brightcove.com/general/",
+>>>>>>> Stashed changes
       "oldURL": "/index"
   },
 
   {
+<<<<<<< Updated upstream
       "newURL": "https://studio.support.brightcove.com/basics/",
+=======
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/marketo/",
+>>>>>>> Stashed changes
       "oldURL": "/index"
   },
 
@@ -535,52 +555,29 @@
   },
 
   {
+<<<<<<< Updated upstream
       "newURL": "https://studio.support.brightcove.com/cloud-playout/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/analytics/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/",
-      "oldURL": "/index"
-  },
-
-  {
+=======
       "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/",
+>>>>>>> Stashed changes
       "oldURL": "/index"
   },
 
   {
+<<<<<<< Updated upstream
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
+=======
       "newURL": "https://studio.support.brightcove.com/campaign/admin/",
+>>>>>>> Stashed changes
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/salesforce/",
+<<<<<<< Updated upstream
+      "newURL": "https://studio.support.brightcove.com/training/",
+=======
+      "newURL": "https://studio.support.brightcove.com/get-started/",
+>>>>>>> Stashed changes
       "oldURL": "/index"
   },
 
@@ -590,7 +587,11 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/",
+<<<<<<< Updated upstream
+      "newURL": "https://studio.support.brightcove.com/campaign/",
+=======
+      "newURL": "https://studio.support.brightcove.com/publish/",
+>>>>>>> Stashed changes
       "oldURL": "/index"
   },
 
@@ -600,27 +601,102 @@
   },
 
   {
+<<<<<<< Updated upstream
+      "newURL": "https://studio.support.brightcove.com/campaign/admin/",
+=======
+      "newURL": "https://studio.support.brightcove.com/training/",
+>>>>>>> Stashed changes
+      "oldURL": "/index"
+  },
+
+  {
+<<<<<<< Updated upstream
+      "newURL": "https://studio.support.brightcove.com/publish/",
+=======
+      "newURL": "https://studio.support.brightcove.com/basics/",
+>>>>>>> Stashed changes
+      "oldURL": "/index"
+  },
+
+  {
+<<<<<<< Updated upstream
+      "newURL": "https://studio.support.brightcove.com/general/",
+=======
+      "newURL": "https://studio.support.brightcove.com/release-notes/",
+>>>>>>> Stashed changes
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/",
+      "oldURL": "/index"
+  },
+
+  {
+<<<<<<< Updated upstream
+      "newURL": "https://studio.support.brightcove.com/admin/",
+=======
+      "newURL": "https://studio.support.brightcove.com/",
+>>>>>>> Stashed changes
+      "oldURL": "/index"
+  },
+
+  {
+<<<<<<< Updated upstream
+      "newURL": "https://studio.support.brightcove.com/media/",
+=======
+      "newURL": "https://studio.support.brightcove.com/social/",
+>>>>>>> Stashed changes
+      "oldURL": "/index"
+  },
+
+  {
+<<<<<<< Updated upstream
+      "newURL": "https://studio.support.brightcove.com/campaign/general/",
+=======
+      "newURL": "https://studio.support.brightcove.com/campaign/",
+>>>>>>> Stashed changes
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/campaign/integrations/eloqua/",
       "oldURL": "/index"
   },
 
   {
+<<<<<<< Updated upstream
       "newURL": "https://studio.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/get-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/",
-      "oldURL": "/index"
-  },
-
-  {
+=======
       "newURL": "https://studio.support.brightcove.com/players/",
+>>>>>>> Stashed changes
+      "oldURL": "/index"
+  },
+
+  {
+<<<<<<< Updated upstream
+      "newURL": "https://studio.support.brightcove.com/campaign/get-started/",
+=======
+      "newURL": "https://studio.support.brightcove.com/media/",
+>>>>>>> Stashed changes
+      "oldURL": "/index"
+  },
+
+  {
+<<<<<<< Updated upstream
+      "newURL": "https://studio.support.brightcove.com/get-started/",
+=======
+      "newURL": "https://studio.support.brightcove.com/analytics/",
+>>>>>>> Stashed changes
+      "oldURL": "/index"
+  },
+
+  {
+<<<<<<< Updated upstream
+      "newURL": "https://studio.support.brightcove.com/players/",
+=======
+      "newURL": "https://studio.support.brightcove.com/support/",
+>>>>>>> Stashed changes
       "oldURL": "/index"
   },
 
