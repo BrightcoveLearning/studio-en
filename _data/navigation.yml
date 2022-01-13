@@ -498,8 +498,6 @@
       url: /admin/managing-profile-information.html
     - name: 'Standard Ingest Profiles (DD & CAE)'
       url: /admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html
-    # - name: 'Standard Ingest Profiles (Legacy)'
-    #   url: /admin/standard-ingest-profiles-legacy-transcoding.html
     - name: Managing Users
       url: /admin/managing-users.html
     - name: Using the Directed Migration Tool
