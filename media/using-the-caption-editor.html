@@ -10,6 +10,7 @@ layout: staging
   <section class="bcls-section">
     <p>Captions can be added to videos and provide additional or interpretive information to individuals who wish to access it. Captions are associated with videos as part of the <strong>Text Track</strong> properties. Video Cloud provides the ability to <a href="generating-captions-videos.html">auto-generate captions</a> for a video or captions can be <a href="adding-captions-videos-using-media-module.html">manually associated</a> with videos. </p>
     <p>Once captions have been added to videos, the caption editor can be used to edit the caption files. The text tracks properties can be configured to provide captions for a video. </p>
+    <aside class="bcls-aside bcls-aside--information">Note: Any type of text tracks (i.e. <a href="adding-chapters-video.html">chapters</a>) can be edited using the caption editor as long as it is a VTT file. For editing purposes, the text will appear in the editor as a caption but that is not necessarily how it will display to the end viewer.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="open">Opening the caption editor</h2>
@@ -23,6 +24,7 @@ layout: staging
     </ol>
     <p>The first text track will be loaded into the editor. If there are no text tracks, the editor will be empty.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/capedit-captions-loaded.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Note: If you would like to disable the caption editor for your account, contact Brightcove Support.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="edit">Editing a caption file</h2>
@@ -69,7 +71,6 @@ layout: staging
       <li><strong>Publish and Unsave workflow</strong> - We recognize that it is not ideal to have to publish a text track and then unpublish separately to hide the captions from end viewers. We are working on making this a single action.</li>
       <li><strong>Overlapping captions</strong> - If one caption has a start time with the same timecode as the previous caption’s end time, they will appear to overlap in the caption player. It will not appear that way to end viewers - the caption line with the same start timecode will win the conflict.</li>
       <li><strong>Timecode errors</strong> - Only numbers and colons are allowed in the timecode field. If you enter in any other character-types (e.g. letters, commas), it will result in an error. To fix this, replace the disallowed characters with a number or colon. </li>
-      <li><strong>Analytics panel</strong> - The Video Views panel in the video details page may be removed once the caption editor is turned on. This will also impact the position of the panels. We are working on fixing this. </li>
     </ul>
   </section>
 </article>
