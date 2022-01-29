@@ -10,3 +10,4 @@ support/.DS_Store
 .vscode/settings.json
 .vscode/settings.json
 cloud-playout/import-captions.html
+.jekyll-metadata
