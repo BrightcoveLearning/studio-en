@@ -19,6 +19,8 @@ layout: staging
   </section>
   <section class="bcls-section">
     <h2 id="configure-player">Configuring a Brightcove Player with the HapYak plugin</h2>
+    <p>Adding the HaypYak plugin to a Brightcove Player will allow interactivity to be displayed inside of the player during video playback. There should be no issues adding  the HapYak plugin to a player with other plugins. If you have questions on plugin compatibility, please contact <a href="https://supportportal.brightcove.com/">Brightcove Support</a>.</p>
+    <p>To add the HapYak plugin to a Brightcove Player, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
       <li>Open the <strong>Players</strong> module.</li>
       <li>Click <span class="button-blue">+ Add player.</span></li>
@@ -30,10 +32,16 @@ layout: staging
       <li>Click <span class="button-blue">Add a Plugin ˇ</span> &gt; <strong>Custom Plugin</strong>.</li>
       <li>For the <strong>Plugin Name</strong> use <strong>hapyak</strong>.</li>
       <li>For the <strong>JavaScript URL</strong>, use:
-<pre><code> https://d2qrdklrsxowl2.cloudfront.net/js/partners/brightcoveV2/hapyak-plugin.js</code></pre>
+        <pre><code> https://d2qrdklrsxowl2.cloudfront.net/js/partners/brightcoveV2/hapyak-plugin.js</code></pre>
       </li>
-      <li>For the plugin <strong>Options(JSON)</strong>, you will need the value of your HapYak API Read  Key. To get your API Read Key, login to your HapYak account and click <strong>Integrations</strong> in the main navigation (or click  <a href="http://www.hapyak.com/portal/settings/integrations">here</a>). When you have the key, for the <strong>Options(JSON)</strong> enter:
-<pre><code>
+      <li>If the player is also using the  IMA3 plugin, the following should be added to the <strong>CSS URL</strong>:
+        <pre><code>
+//hapyak-partners.s3.amazonaws.com/brightcove/ima3.css
+</code></pre>
+        <p>This will ensure the IMA3 plugin layer does not cover up any HapYak interactions.</p>
+      </li>
+      <li>For the plugin <strong>Options(JSON)</strong>, you will need the value of your HapYak API Read  Key. To get your API Read Key, login to your HapYak account and click <strong>Integrations</strong> in the main navigation (or click <a href="http://www.hapyak.com/portal/settings/integrations">here</a>). When you have the key, for the <strong>Options(JSON)</strong> enter:
+        <pre><code>
 {
 "apiKey":"your-hapyak-read-api-key"
 }
@@ -46,7 +54,7 @@ layout: staging
 </code></pre>
       </li>
       <li>Click <span class="button-blue">Save</span>.</li>
-      <li>To publish the player, click  <span class="button-blue">Publish &amp; Embed</span> and then <span class="button-blue">Publish Changes</span>.</li>
+      <li>To publish the player, click <span class="button-blue">Publish &amp; Embed</span> and then <span class="button-blue">Publish Changes</span>.</li>
     </ol>
     <p>The HapYakPlayer is now ready to use.</p>
   </section>
@@ -144,16 +152,6 @@ bcPlayerInstance.on(‘hyViewerLoaded’, function () {
         <p>As seen above, you can access the HapYak viewer instance off of the player instance as a property called <code>hapyakViewer</code>.</p>
       </li>
     </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="plugins">Working with other plugins</h2>
-    <p>If you have other plugins applied to your Brightcove players, they should not conflict with the HapYak plugin. If you do have a question around this email <a href="mailto:support@brightcove.com">support@brightcove.com</a> with the name of a link to the JavaScript of the plugin.</p>
-    <h3>IMA3</h3>
-    <p>If you use Brightcove’s IMA3 Plugin, add this URL to the Brightcove Player Plugins’ CSS field.</p>
-    <pre><code>
-//hapyak-partners.s3.amazonaws.com/brightcove/ima3.css
-</code></pre>
-    <p>This will ensure the IMA3 plugin layer does not cover up the HapYak interaction later.</p>
   </section>
   <section class="bcls-section">
     <h2 id="mobile">Mobile support</h2>
