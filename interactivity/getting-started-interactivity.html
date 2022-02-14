@@ -45,7 +45,13 @@ layout: staging
 {
 "apiKey":"your HapYak API Read Key"
 }
-</code></pre>
+</code></pre></li>
+        <li>Some mobile devices will strip interactive elements when videos are opened in device-native players such as the  QuickTime player on iOS devices. HapYak has created a solution that overrides the default behavior of video on iOS and Android devices. By &quot;mocking full screen&quot;,  videos can play  full screen and retain HapYak interactive features. The following parameters can be added to the <strong>Options(JSON)</strong> to improve the experience on mobile devices:
+          <ul>
+          <li><strong><code>loadFullScreenMobile: true</code></strong> - Overrides the default fullscreen behavior on iOS devices</li>
+          <li><strong><code>position: middle</code></strong> - Ensures that the video appears in the middle of the devices display in portrait mode (mimics default behavior of all mobile devices)</li>
+        </ul>
+      </li>
         <figure class="bcls-figure"><img src="/assets/images/interactivity/gsi-plugin-settings.png"> </figure>
       </li>
       <li>If you wish to configure a &quot;read-only&quot; player which will display interactivity on existing Hapyak projects but will <strong>NOT</strong> publish any new projects, add the following parameter to the <strong>Options(JSON)</strong>, below the <code>apiKey</code> value:
@@ -108,6 +114,14 @@ layout: staging
       </li>
       <li>Copy the embed code and paste it into your webpage.</li>
     </ol>
+<p>Additionally, in the embed code, you <strong>MUST</strong> add <code>playsinline</code> inside the <code>&lt;video-js&gt;</code> tag. Please reference the examples below:</p>
+<h3>Standard</h3>
+<pre>&lt;div<br>  style=&quot;position: relative; display: block; max-width: 960px;&quot;&gt;<br>  &lt;div<br>    style=&quot;padding-top: 56.25%;&quot;&gt;<br>    &lt;iframe<br>      src=&quot;//players.brightcove.net/1486906377/dunFq3vI6_default/index.html&quot;  <br>      playsinline<br>      allowfullscreen=&quot;&quot;<br>      allow=&quot;encrypted-media&quot;<br>      style=&quot;position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;</pre>
+<h3>Advanced</h3>
+<pre><code>
+&lt;div style=&quot;max-width: 960px;&quot;&gt;<br>  &lt;video-js
+    playsinline<br>    data-account=&quot;1486906377&quot;<br>    data-player=&quot;dunFq3vI6&quot;<br>    data-embed=&quot;default&quot;<br>    controls=&quot;&quot;<br>    data-application-id=&quot;&quot;<br>    class=&quot;vjs-fluid&quot;<br>    style=&quot;padding-top: 56.25%;&quot;&gt;<br>  &lt;/video-js&gt;<br>&lt;/div&gt;<br>&lt;script<br>  src=&quot;//players.brightcove.net/1486906377/dunFq3vI6_default/index.min.js&quot;&gt;<br>&lt;/script&gt;
+</code></pre>
   </section>
   <section class="bcls-section">
     <h2 id="works">How it works</h2>
@@ -138,59 +152,6 @@ layout: staging
       <li>Do not manually modify the video source of a HapYak project that was automatically created. </li>
       <li>Do not use the EMBED code generated from the HapYak tools when using the plugin. Instead publish your videos per the normal Brightcove workflow.</li>
       <li>Workflow-generated projects can be deleted through the HapYak UI. Please note that subsequent loads of the corresponding video through the Brightcove Player will not auto-generate a separate project in the portal.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="advanced">Advanced</h2>
-    <ol class="bcls-tasklist-restart">
-      <li>You can tag a HapYak Template and add the same tag to multiple Brightcove videos. This is a quick and easy way to add identical annotations to dozens or hundreds of Brightcove videos. For example, if your video is tagged "click-to-buy-cta" then a matching HapYak Template also tagged "click-to-buy-cta" will be added to that video.</li>
-      <li>A custom javascript method can be provided to capture tracking events as they occur. To do so simply add the location of your javascript file in the plugin options for "hapyak"
-        <pre><code>
-{
-  "apiKey": …,
-  "customTracking": "https://dmhl2y7t4r72w.cloudfront.net/brightcove/bcovTrackingHandler.js"
-}
-</code></pre>
-      </li>
-      <li>HapYak loads its own copy of JQuery by default.   If you embed the Brightcove Player with the HapYak plugin enabled, HapYak will override an existing copy of JQuery already on the page when it loads.   To prevent this behavior and preserve an existing copy of JQuery, you must pass the “preserveJQuery” option in plugin options when setting up the plugin.   For example, specifying
-        <pre><code>
-{
-  "apiKey": …,
-  "preserveJQuery": true
-}
-</code></pre>
-        <p>will prevent HapYak from loading its own JQuery as long as there is already one on the page.</p>
-        <table class="bcls-table">
-          <caption class="bcls-caption--table">
-          Summary of HapYak jQuery Loading Behavior
-          </caption>
-          <tbody class="bcls-table__body">
-            <tr>
-              <td></td>
-              <td>preserveJQuery: true</td>
-              <td>preserveJQuery: false</td>
-            </tr>
-            <tr>
-              <td>jQuery present on page</td>
-              <td>Do not load jQuery</td>
-              <td>Load jQuery</td>
-            </tr>
-            <tr>
-              <td>jQuery absent from page</td>
-              <td>Load jQuery</td>
-              <td>Load jQuery</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>HapYak emits a custom event on the Brightcove Player instance that notifies when the HapYak viewer instance is ready. This event is <code>hyViewerLoaded</code> which can be listened for using the following code:
-        <pre><code>
-bcPlayerInstance.on(‘hyViewerLoaded’, function () {
-   console.log(player.hapyakViewer);
-});
-</code></pre>
-        <p>As seen above, you can access the HapYak viewer instance off of the player instance as a property called <code>hapyakViewer</code>.</p>
-      </li>
     </ol>
   </section>
   <section class="bcls-section">
