@@ -1230,13 +1230,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Automatic HapYak project creation  for each video viewed in the configured player</li>
       <li>Programmatic access to video metadata from the HapYak Extension APIs</li>
       <li>Dynamic loading of HapYak templates</li>
-      <li>Sync HapYak project titles with Brightcove media titles</li>
+      <li>Automatic syncing of HapYak project titles with Brightcove media titles</li>
     </ul>
     <p>When interactions are added to a HapYak project,  they will automatically appear on the corresponding video. This removes the need to copy and publish embed code within  HapYak Studio.</p>
   </section>
   <section class="bcls-section">
     <h2 id="configure-player">Configuring a Brightcove Player with the HapYak plugin</h2>
-    <p>Adding the HaypYak plugin to a Brightcove Player will allow interactivity to be displayed inside of the player during video playback. There should be no issues adding  the HapYak plugin to a player with other plugins. If you have questions on plugin compatibility, please contact <a href="https://supportportal.brightcove.com/">Brightcove Support</a>.</p>
+    <p>Adding the HapYak plugin to a Brightcove Player will allow interactivity to be displayed inside of the player during video playback. The HapYak plugin can coexist with other player plugins. If you have questions on plugin compatibility, please contact <a href="https://supportportal.brightcove.com/">Brightcove Support</a>.</p>
     <p>To add the HapYak plugin to a Brightcove Player, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
       <li>Open the <strong>Players</strong> module.</li>
@@ -1245,7 +1245,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <aside class="bcls-aside bcls-aside--information">Note: You can also add the HapYak plugin to an existing player.  If you are adding the HapYak plugin to a player with other plugins, please contact <a href="https://supportportal.brightcove.com/">Brightcove Support</a> to verify compatibility.</aside>
       </li>
       <li>Click the <strong>HapYakPlayer</strong> link to open the player properties.</li>
-      <li>Click <strong>Plugins</strong> in the left navigation menu.</li>
+     <li>Click <strong>Plugins</strong> in the left navigation menu.</li>
       <li>Click <span class="button-blue">Add a Plugin ˇ</span> &gt; <strong>Custom Plugin</strong>.</li>
       <li>For the <strong>Plugin Name</strong> use <strong>hapyak</strong>.</li>
       <li>For the <strong>JavaScript URL</strong>, use:
@@ -1260,7 +1260,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>For the plugin <strong>Options(JSON)</strong>, you will need the value of your HapYak API Read  Key. To get your API Read Key, login to your HapYak account and click <strong>Integrations</strong> in the main navigation (or click <a href="http://www.hapyak.com/portal/settings/integrations">here</a>). When you have the key, for the <strong>Options(JSON)</strong> enter:
         <pre><code>
 {
-"apiKey":"your-hapyak-read-api-key"
+"apiKey":"your HapYak API Read Key"
 }
 </code></pre>
         <figure class="bcls-figure"><img src="/assets/images/interactivity/gsi-plugin-settings.png"> </figure>
@@ -1276,15 +1276,42 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>The HapYakPlayer is now ready to use.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="workflow">Workflow</h2>
+    <h2 id="project-creation">Creating a HapYak project</h2>
+    <p>When a video is played inside of a HapYak-enabled Brightcove Player, a HapYak project will be created automatically.  The following steps will create a HapYak project:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In Video Cloud Studio,  publish the video using the HapYakPlayer. <strong>Click the link</strong> to play the published video for a few seconds. This will auto-create the project in HapYak.</li>
-      <li>In the <a href="http://www.hapyak.com/portal/">HapYak Portal</a> you will see the title of your Brightcove Video in the Project List.  You’ll notice that each HapYak project automatically created by the plugin includes the tag <strong>live</strong>.
-        <figure class="bcls-figure"> <img src="/assets/images/getting-started/bc-player-workflow.png"> </figure>
+      <li>Open the <strong>Media</strong> module.</li>
+      <li>Select a video to publish by checking the box next to the video thumbnail.</li>
+      <li>Click <span class="button-blue">Publish and embed... ˇ</span> &gt; <strong>Publish to web.</strong></li>
+      <li>Select the player with the HapYak plugin.</li>
+      <li>Click the preview link to open a preview in a new browser tab.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-vc-publish.png"> </figure>
       </li>
-      <li>Click on the project and author the annotations.</li>
-      <li>Publish your video using  Video Cloud Studio. </li>
+      <li>Play the preview video (the video only needs to be played for a few seconds). This will auto-create a project in HapYak.</li>
+      <li>Login to your HapYak account.</li>
+      <li>In the left navigation, click <strong>Manage</strong>.</li>
+      <li>A list of projects will appear. Confirm the video you just published appears in the project list.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-projects-list.png"> </figure>
+        <aside class="bcls-aside bcls-aside--information">Note: The <strong>Tags</strong> column includes all tags associated with the video.  An additional tag of <strong>live</strong> is added to each project automatically created by the plugin.</aside>
+      </li>
     </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="text-overlay">Adding a text overlay</h2>
+    <p>In this topic a simple text overlay will be added just to validate that the interactivity can be viewed inside of a Brightcove Player.</p>
+      <ol class="bcls-tasklist-restart">
+      <li>In the HapYak UI, click on the project to open it.</li>
+      <li>In the bottom toolbar, click on the text overlay button.
+                  <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-add-overlay.png"> </figure>
+          </li>
+      <li>Click on the <strong>Editor</strong> link in the menu.
+                  <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-overlay-editor.png"> </figure>
+
+          </li>
+      <li>Enter some sample text for the overlay and click <strong>Submit</strong>.
+                            <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-overlay-text-added.png"> </figure>
+          </li>
+          <li>Click <strong>Done</strong>.</li>
+          </ol>
   </section>
   <section class="bcls-section">
     <h2 id="works">How it works</h2>
