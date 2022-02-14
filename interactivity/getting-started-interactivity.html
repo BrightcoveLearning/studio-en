@@ -154,42 +154,4 @@ layout: staging
       <li>Workflow-generated projects can be deleted through the HapYak UI. Please note that subsequent loads of the corresponding video through the Brightcove Player will not auto-generate a separate project in the portal.</li>
     </ol>
   </section>
-  <section class="bcls-section">
-    <h2 id="mobile">Mobile support</h2>
-    <p>Some mobile devices will strip interactive elements when videos are opened in device-native players (like the Quicktime player on iOS devices). HapYak has created a solution that overrides the default behavior of video on iOS and Android devices. By &quot;Mocking Fullscreen&quot;, your videos can play in full screen and retain HapYak interactive features.</p>
-    <p>Below are a few steps that help you get set up.</p>
-    <h3>Getting Setup</h3>
-    <p>If you have not already done so, use steps at the top of this document to setup the HapYak plugin on a Brightcove Player of your choice.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the Players module in Video Cloud Studio.</li>
-      <li>In the Players list, click the HapYak playerthat you have configured using the steps above.</li>
-      <li>Click <strong>Plugins</strong> in the left navigation menu.</li>
-      <li>Click on the <strong>hapyak</strong> plugin.</li>
-      <li>In the <strong>Options(JSON)</strong>, add the options shown below in the “JSON options” section*. If you have correctly configured the plugin, your apiKey will already be included.
-        <ul>
-          <li><strong>loadFullScreenMobile: true.</strong> This property will override the default fullscreen behavior on iOS devices</li>
-          <li><strong>position: middle.</strong> This will ensure that the video appears in the middle of the devices display in portrait mode (mimics default behavior of all mobile devices)</li>
-        </ul>
-      </li>
-      <li>Click <strong>Save</strong>.</li>
-      <li>Click <strong>Publish &amp; Embed</strong> &gt; <strong>Publish Changes</strong>.</li>
-      <li>Open the <strong>Media</strong> module in your Brightcove account and select the video you’d like to publish.</li>
-      <li>Click <strong>Publish and embed</strong> &gt; <strong>Publish to web</strong>, then select the correct hapyak configured player from the dropdown list of players.</li>
-      <li><strong>CRITICAL STEP</strong>: Additionally, in the embed code, you MUST add <code>playsinline</code> inside the <code>&lt;video-js&gt;</code> tag. Please reference the example below to ensure this attribute has been added correctly.</li>
-    </ol>
-    <h3>Configuration</h3>
-    <p><strong>JSON options:</strong></p>
-    <p>The following configuration will allow videos to be show in fullscreen with annotations present:</p>
-    <pre><code>
-{
-  “loadFullScreenMobile”: true,
-  "position": "middle",
-  “apiKey”: “your-api-key-here”
-}
-</code></pre>
-    <p>Sample embed code for optimal mobile configuration:</p>
-    <pre><code>
-&lt;video-js<br>   playsinline<br>   data-account="2335723960001"<br>   data-player="beYnaVQrm"<br>   data-embed="default"<br>   controls=""<br>   data-video-id="6129560246001"<br>   data-playlist-id=""<br>   data-application-id=""<br>   width="960"<br>   height="540"&gt;<br>&lt;/video-js&gt;<br>&lt;script src="https://players.brightcove.net/2335723960001/beYnaVQrm_default/index.min.js"&gt;&lt;/script&gt;
-</code></pre>
-  </section>
 </article>
