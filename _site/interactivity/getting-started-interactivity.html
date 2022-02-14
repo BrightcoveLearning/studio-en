@@ -1305,7 +1305,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Click the preview link to open a preview in a new browser tab.
         <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-vc-publish.png"> </figure>
       </li>
-      <li>Play the preview video (the video only needs to be played for a few seconds). This will auto-create a project in HapYak.</li>
+      <li>Play the preview video (the video only needs to be played for a few seconds). This will auto-create a project in HapYak.
+        <aside class="bcls-aside bcls-aside--information">Note: You must preview the video using the preview link.  Previewing the video with the preview player in the Media module <strong>will not</strong> auto-create a project in HapYak.</aside>
+      </li>
       <li>Login to your HapYak account.</li>
       <li>In the left navigation, click <strong>Manage</strong>.</li>
       <li>A list of projects will appear. Confirm the video you just published appears in the project list.
@@ -1370,8 +1372,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>The Brightcove video ID, title, tags and custom fields are sent to HapYak.</li>
       <li>HapYak attempts to look up the video ID within your HapYak Group.</li>
       <li><strong>If a matching record is found</strong>, then HapYak filters to the record that has the <code>is_published</code> value set to <strong>TRUE</strong>. The Project with both the matching video ID and the <code>is_published</code> value set to <strong>TRUE</strong> will be displayed.</li>
-      <li><strong>If more than one matching record is found</strong>, then HapYak filters to the most recently modified record that has the <code>is_published</code> value set to <strong>TRUE</strong>. The most recently modified Project with both the matching VideoId and the "is_published"
-      </li>
+      <li><strong>If more than one matching record is found</strong>, then HapYak filters to the most recently modified record that has the <code>is_published</code> value set to <strong>TRUE</strong>. The most recently modified Project with both the matching VideoId and the "is_published" </li>
     </ol>
     <aside class="bcls-aside bcls-aside--information">Note: The <code>is_published</code> value can be manually changed as needed by using the CONFIGURE dialog pictured above.</aside>
   </section>
