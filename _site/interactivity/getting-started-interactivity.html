@@ -1283,7 +1283,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="project-creation">Creating a HapYak project</h2>
-    <p>When a video is played inside of a HapYak-enabled Brightcove Player, a HapYak project will be created automatically.  The following steps will create a HapYak project:</p>
+    <p>When a video is played inside of a HapYak-enabled Brightcove Player, the following things happen:  </p>
+    <ol class="bcls-tasklist-restart">
+      <li>The Brightcove video ID, title, tags and custom fields are sent to HapYak.</li>
+      <li>HapYak attempts to look up the video ID within your HapYak Group.</li>
+      <li><strong>If no matching record is found</strong>, then HapYak creates a HapYak project with the data sent by Brightcove.</li>
+      <li>HapYak will also set the project properties to indicate that it was "auto created":
+        <ul>
+          <li> The <code>is_published</code> value will be set to <strong>TRUE</strong></li>
+          <li> A tag with the value <code>live</code> will be added</li>
+        </ul>
+      </li>
+    </ol>
+    <p>The following steps will automatically create a HapYak project:</p>
     <ol class="bcls-tasklist-restart">
       <li>Open the <strong>Media</strong> module.</li>
       <li>Select a video to publish by checking the box next to the video thumbnail.</li>
@@ -1342,15 +1354,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="works">How it works</h2>
-    <h3>Automatic creation of projects in the HapYak portal</h3>
-    <p>When a video is loaded in a properly configured player the following things happen:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>The Brightcove Video Id, Title, Tags and Custom Fields are sent to HapYak.</li>
-      <li>HapYak attempts to look up the Video ID within your HapYak Group.</li>
-      <li><strong>If no matching record is found</strong>, then HapYak creates a Project with the data sent by Brightcove.</li>
-      <li>HapYak will also set properties on the Project to indicate that it was "auto created", the "is_published" value will be set to TRUE and a tag with the value "live" will be added.</li>
-    </ol>
-    <figure class="bcls-figure"> <img src="/assets/images/getting-started/bc-player-configure-dialog.png"> </figure>
+
     <h3>Display of the proper HapYak project on the Brightcove video</h3>
     <p>When a video is loaded in a properly configured player, the following things happen:</p>
     <ol class="bcls-tasklist-restart">
