@@ -16,20 +16,35 @@ layout: staging
   </section>
   <section class="bcls-section">
     <h2 id="text-overlay">Adding a text overlay</h2>
-    <p>When a video is played inside of a HapYak-enabled Brightcove Player, a HapYak project will be created automatically.  Follow these steps to add a text overlay to a project:</p>
+    <p>Text overlays are used to display text on a video during playback. The overlay can also be clickable and open another browser page when clicked. In the following example, the overlay will appear at the 75% point of the video and display until the end of the video. Clicking the overlay will open a link in a new browser tab and pause the video.</p>
+<div style="position: relative; display: block; max-width: 960px;"><div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/1752604059001/KstZEfIwn_default/index.html?videoId=4817237857001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
+    <p>Follow these steps to add a text overlay to a project:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the HapYak UI, click on the project to open it.</li>
+      <li>In the HapYak UI, click on a project to open it.</li>
       <li>In the bottom toolbar, click on the text overlay button.
-        <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-add-overlay.png"> </figure>
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-add-text-overlay.png"> </figure>
       </li>
       <li>Click on the <strong>Editor</strong> link in the menu.
-        <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-overlay-editor.png"> </figure>
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-overlay-editor.png"> </figure>
       </li>
-      <li>Enter some sample text for the overlay and click <strong>Submit</strong>.
-        <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-overlay-text-added.png"> </figure>
+      <li>Enter  text for the overlay and click <strong>Submit</strong>.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-overlay-text.png"> </figure>
       </li>
+        <li>Click and drag the overlay to where you want it to appear on the video.
+          <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-position-overlay.png"> </figure>
+      </li>
+      <li>Click  the <strong>Start Time</strong> menu.</li>
+      <li>Enter a <strong>Start time</strong> in seconds, as a percentage or in time format. This example sets the start time to the 75% point of the video.
+                  Click <strong>Submit</strong>.
+<figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-start-time.png"> </figure>
+      </li>
+      <li>Click the clock icon to set the duration of the overlay. Click <strong>Submit</strong>.</li>
+      <li>Click the <strong>Link</strong> menu.</li>
+      <li>Enter a <strong>URL</strong> to direct to when the overlay is clicked.</li>
+      <li>(Optional) Click the <strong>BEHAVIOR</strong> tab and have the video <strong>Pause on video click</strong>. Click <strong>Submit</strong>.</li>
       <li>Click <strong>Done</strong>.</li>
     </ol>
+    <p>Publish the video using the Media module and confirm that the overlay appears.</p>
   </section>
   <section class="bcls-section">
     <h2 id="transparent-overlay">Adding a transparent overlay</h2>
