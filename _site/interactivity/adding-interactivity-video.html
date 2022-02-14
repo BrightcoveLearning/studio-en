@@ -1234,7 +1234,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="text-overlay">Adding a text overlay</h2>
     <p>Text overlays are used to display text on a video during playback. The overlay can also be clickable and open another browser page when clicked. In the following example, the overlay will appear at the 75% point of the video and display until the end of the video. Clicking the overlay will open a link in a new browser tab and pause the video.</p>
-<div style="position: relative; display: block; max-width: 960px;"><div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/1752604059001/KstZEfIwn_default/index.html?videoId=4817237857001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
+    <div style="position: relative; display: block; max-width: 960px;">
+      <div style="padding-top: 56.25%;">
+        <iframe src="https://players.brightcove.net/1752604059001/KstZEfIwn_default/index.html?videoId=4817237857001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
+      </div>
+    </div>
     <p>Follow these steps to add a text overlay to a project:</p>
     <ol class="bcls-tasklist-restart">
       <li>In the HapYak UI, click on a project to open it.</li>
@@ -1247,13 +1251,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Enter  text for the overlay and click <strong>Submit</strong>.
         <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-overlay-text.png"> </figure>
       </li>
-        <li>Click and drag the overlay to where you want it to appear on the video.
-          <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-position-overlay.png"> </figure>
+      <li>Click and drag the overlay to where you want it to appear on the video.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-position-overlay.png"> </figure>
+        <aside class="bcls-aside bcls-aside--information">Note: Make sure the overlay isn't placed at the bottom of the player will it will be covered up by the control bar..</aside>
       </li>
       <li>Click  the <strong>Start Time</strong> menu.</li>
-      <li>Enter a <strong>Start time</strong> in seconds, as a percentage or in time format. This example sets the start time to the 75% point of the video.
-                  Click <strong>Submit</strong>.
-<figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-start-time.png"> </figure>
+      <li>Enter a <strong>Start time</strong> in seconds, as a percentage or in time format. This example sets the start time to the 75% point of the video. Click <strong>Submit</strong>.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-start-time.png"> </figure>
       </li>
       <li>Click the clock icon to set the duration of the overlay. Click <strong>Submit</strong>.</li>
       <li>Click the <strong>Link</strong> menu.</li>
@@ -1268,55 +1272,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>In this topic a simple text overlay will be added just to validate that the interactivity can be viewed inside of a Brightcove Player.</p>
     <ol class="bcls-tasklist-restart">
       <li>In the HapYak UI, click on the project to open it.</li>
-      <li>In the bottom toolbar, click on the text overlay button.
-        <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-add-overlay.png"> </figure>
-      </li>
-      <li>Click on the <strong>Editor</strong> link in the menu.
-        <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-overlay-editor.png"> </figure>
-      </li>
-      <li>Enter some sample text for the overlay and click <strong>Submit</strong>.
-        <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-overlay-text-added.png"> </figure>
-      </li>
-      <li>Click <strong>Done</strong>.</li>
-    </ol>
-  </section>
-<section class="bcls-section">
-    <h2 id="image-overlay">Adding an image overlay</h2>
-    <p>In this topic a simple text overlay will be added just to validate that the interactivity can be viewed inside of a Brightcove Player.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>In the HapYak UI, click on the project to open it.</li>
-      <li>In the bottom toolbar, click on the text overlay button.
-        <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-add-overlay.png"> </figure>
-      </li>
-      <li>Click on the <strong>Editor</strong> link in the menu.
-        <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-overlay-editor.png"> </figure>
-      </li>
-      <li>Enter some sample text for the overlay and click <strong>Submit</strong>.
-        <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-overlay-text-added.png"> </figure>
-      </li>
-      <li>Click <strong>Done</strong>.</li>
+      <li></li>
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="works">How it works</h2>
-    <h3>Automatic creation of projects in the HapYak portal</h3>
-    <p>When a video is loaded in a properly configured player the following things happen:</p>
+    <h2 id="image-overlay">Adding an image overlay</h2>
+    <p>In this topic a simple text overlay will be added just to validate that the interactivity can be viewed inside of a Brightcove Player.</p>
     <ol class="bcls-tasklist-restart">
-      <li>The Brightcove Video Id, Title, Tags and Custom Fields are sent to HapYak.</li>
-      <li>HapYak attempts to look up the Video ID within your HapYak Group.</li>
-      <li><strong>If no matching record is found</strong>, then HapYak creates a Project with the data sent by Brightcove.</li>
-      <li>HapYak will also set properties on the Project to indicate that it was "auto created", the "is_published" value will be set to TRUE and a tag with the value "live" will be added.</li>
+      <li></li>
     </ol>
-    <figure class="bcls-figure"> <img src="/assets/images/getting-started/bc-player-configure-dialog.png"> </figure>
-    <h3>Display of the proper HapYak project on the Brightcove video</h3>
-    <p>When a video is loaded in a properly configured player, the following things happen:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>The Brightcove video ID, title, tags and custom fields are sent to HapYak.</li>
-      <li>HapYak attempts to look up the video ID within your HapYak Group.</li>
-      <li><strong>If a matching record is found</strong>, then HapYak filters to the record that has the "is_published" value set to TRUE. The Project with both the matching VideoId and the "is_published" value set to TRUE will be displayed.</li>
-      <li><strong>If more than one matching record is found</strong>, then HapYak filters to the most recently modified record that has the "is_published" value set to TRUE. The most recently modified Project with both the matching VideoId and the "is_published" value set to TRUE will be displayed.</li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">Note: The "is_published" value can be manually changed as needed by using the CONFIGURE dialog pictured above.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="notes">Important notes</h2>
@@ -1380,44 +1344,6 @@ bcPlayerInstance.on(‘hyViewerLoaded’, function () {
         <p>As seen above, you can access the HapYak viewer instance off of the player instance as a property called <code>hapyakViewer</code>.</p>
       </li>
     </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="mobile">Mobile support</h2>
-    <p>Some mobile devices will strip interactive elements when videos are opened in device-native players (like the Quicktime player on iOS devices). HapYak has created a solution that overrides the default behavior of video on iOS and Android devices. By &quot;Mocking Fullscreen&quot;, your videos can play in full screen and retain HapYak interactive features.</p>
-    <p>Below are a few steps that help you get set up.</p>
-    <h3>Getting Setup</h3>
-    <p>If you have not already done so, use steps at the top of this document to setup the HapYak plugin on a Brightcove Player of your choice.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the Players module in Video Cloud Studio.</li>
-      <li>In the Players list, click the HapYak playerthat you have configured using the steps above.</li>
-      <li>Click <strong>Plugins</strong> in the left navigation menu.</li>
-      <li>Click on the <strong>hapyak</strong> plugin.</li>
-      <li>In the <strong>Options(JSON)</strong>, add the options shown below in the “JSON options” section*. If you have correctly configured the plugin, your apiKey will already be included.
-        <ul>
-          <li><strong>loadFullScreenMobile: true.</strong> This property will override the default fullscreen behavior on iOS devices</li>
-          <li><strong>position: middle.</strong> This will ensure that the video appears in the middle of the devices display in portrait mode (mimics default behavior of all mobile devices)</li>
-        </ul>
-      </li>
-      <li>Click <strong>Save</strong>.</li>
-      <li>Click <strong>Publish &amp; Embed</strong> &gt; <strong>Publish Changes</strong>.</li>
-      <li>Open the <strong>Media</strong> module in your Brightcove account and select the video you’d like to publish.</li>
-      <li>Click <strong>Publish and embed</strong> &gt; <strong>Publish to web</strong>, then select the correct hapyak configured player from the dropdown list of players.</li>
-      <li><strong>CRITICAL STEP</strong>: Additionally, in the embed code, you MUST add <code>playsinline</code> inside the <code>&lt;video-js&gt;</code> tag. Please reference the example below to ensure this attribute has been added correctly.</li>
-    </ol>
-    <h3>Configuration</h3>
-    <p><strong>JSON options:</strong></p>
-    <p>The following configuration will allow videos to be show in fullscreen with annotations present:</p>
-    <pre><code>
-{
-  “loadFullScreenMobile”: true,
-  "position": "middle",
-  “apiKey”: “your-api-key-here”
-}
-</code></pre>
-    <p>Sample embed code for optimal mobile configuration:</p>
-    <pre><code>
-&lt;video-js<br>   playsinline<br>   data-account="2335723960001"<br>   data-player="beYnaVQrm"<br>   data-embed="default"<br>   controls=""<br>   data-video-id="6129560246001"<br>   data-playlist-id=""<br>   data-application-id=""<br>   width="960"<br>   height="540"&gt;<br>&lt;/video-js&gt;<br>&lt;script src="https://players.brightcove.net/2335723960001/beYnaVQrm_default/index.min.js"&gt;&lt;/script&gt;
-</code></pre>
   </section>
 </article>
 
