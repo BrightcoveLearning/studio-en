@@ -1335,59 +1335,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ol>
     <p>Publish the video using the Media module and confirm that when the overlay area is clicked, the URL is opened.</p>
   </section>
-  <section class="bcls-section">
-    <h2 id="advanced">Advanced</h2>
-    <ol class="bcls-tasklist-restart">
-      <li>You can tag a HapYak Template and add the same tag to multiple Brightcove videos. This is a quick and easy way to add identical annotations to dozens or hundreds of Brightcove videos. For example, if your video is tagged "click-to-buy-cta" then a matching HapYak Template also tagged "click-to-buy-cta" will be added to that video.</li>
-      <li>A custom javascript method can be provided to capture tracking events as they occur. To do so simply add the location of your javascript file in the plugin options for "hapyak"
-        <pre><code>
-{
-  "apiKey": …,
-  "customTracking": "https://dmhl2y7t4r72w.cloudfront.net/brightcove/bcovTrackingHandler.js"
-}
-</code></pre>
-      </li>
-      <li>HapYak loads its own copy of JQuery by default.   If you embed the Brightcove Player with the HapYak plugin enabled, HapYak will override an existing copy of JQuery already on the page when it loads.   To prevent this behavior and preserve an existing copy of JQuery, you must pass the “preserveJQuery” option in plugin options when setting up the plugin.   For example, specifying
-        <pre><code>
-{
-  "apiKey": …,
-  "preserveJQuery": true
-}
-</code></pre>
-        <p>will prevent HapYak from loading its own JQuery as long as there is already one on the page.</p>
-        <table class="bcls-table">
-          <caption class="bcls-caption--table">
-          Summary of HapYak jQuery Loading Behavior
-          </caption>
-          <tbody class="bcls-table__body">
-            <tr>
-              <td></td>
-              <td>preserveJQuery: true</td>
-              <td>preserveJQuery: false</td>
-            </tr>
-            <tr>
-              <td>jQuery present on page</td>
-              <td>Do not load jQuery</td>
-              <td>Load jQuery</td>
-            </tr>
-            <tr>
-              <td>jQuery absent from page</td>
-              <td>Load jQuery</td>
-              <td>Load jQuery</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>HapYak emits a custom event on the Brightcove Player instance that notifies when the HapYak viewer instance is ready. This event is <code>hyViewerLoaded</code> which can be listened for using the following code:
-        <pre><code>
-bcPlayerInstance.on(‘hyViewerLoaded’, function () {
-   console.log(player.hapyakViewer);
-});
-</code></pre>
-        <p>As seen above, you can access the HapYak viewer instance off of the player instance as a property called <code>hapyakViewer</code>.</p>
-      </li>
-    </ol>
-  </section>
 </article>
 
 <!-- complete bootstrap layout -->
