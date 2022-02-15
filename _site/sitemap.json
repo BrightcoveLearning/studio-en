@@ -40,6 +40,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/interactivity/adding-chapters-video.html",
+      "oldURL": "/adding-chapters-video"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
@@ -47,6 +52,11 @@
   {
       "newURL": "https://studio.support.brightcove.com/general/adding-facebook-button-brightcove-player.html",
       "oldURL": "/adding-facebook-button-brightcove-player"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/interactivity/adding-interactivity-video.html",
+      "oldURL": "/adding-interactivity-video"
   },
 
   {
@@ -165,12 +175,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
