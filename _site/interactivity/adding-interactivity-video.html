@@ -1304,21 +1304,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="transparent-overlay">Adding a transparent overlay</h2>
-    <p>In this topic a simple text overlay will be added just to validate that the interactivity can be viewed inside of a Brightcove Player.</p>
+    <p>Transparent overlays can be used to add a &quot;clickable hotspot&quot; to an area of a video. For example, you may have a video with a company logo burned into the bottom corner. A transparent overlay can be added over the logo so when clicked the viewer is directed to another URL. In the following example, the Brightcove logo is burned into the source video. Clicking the overlay at any point will open a link in a new browser tab and pause the video.</p>
+    <p>Follow these steps to add a text overlay to a project:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the HapYak UI, click on the project to open it.</li>
-      <li></li>
+      <li>In the HapYak UI, click on a project to open it.</li>
+      <li>In the bottom toolbar, click on the transparent overlay button.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-add-transparent-overlay.png"> </figure>
+      </li>
+      <li>Enter the <strong>URL</strong> to direct to.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-transparent-url.png"> </figure>
+      </li>
+      <li>Click the <strong>BEHAVIOR</strong> tab and set the video to <strong>Pause on video click</strong>.</li>
+      <li>Click <strong>Submit</strong>.</li>
+      <li>Drag and size the overlay to where you want the &quot;hotspot&quot; to be. In this example, the overlay will cover a logo image that appears in the video
+        .
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-position-transparent-overlay.png"> </figure>
+        <aside class="bcls-aside bcls-aside--information">Note: Make sure the overlay isn't placed at the bottom of the player where it may be covered up by the control bar.</aside>
+      </li>
+      <li>Click  the <strong>Start Time</strong> menu. By default, the <strong>Start time</strong> is set to 00:00.000 which is the start of the video. Enter a <strong>Start time</strong> and click <strong>Submit</strong>.</li>
+      <li>Click the clock icon to set the duration of the overlay. Click <strong>Submit</strong>.</li>
+      <li>Click <strong>Done</strong>.</li>
     </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="notes">Important notes</h2>
-    <ol class="bcls-tasklist-restart">
-      <li>There will be an initial delay between the time when the HapYak project is auto created and the time that annotations appear via the plugin. The delay can be upwards of a couple hours.</li>
-      <li>Do not manually create Brightcove projects in the HapYak portal. The plugin will do this automatically.</li>
-      <li>Do not manually modify the video source of a HapYak project that was automatically created. </li>
-      <li>Do not use the EMBED code generated from the HapYak tools when using the plugin. Instead publish your videos per the normal Brightcove workflow.</li>
-      <li>Workflow-generated projects can be deleted through the HapYak UI. Please note that subsequent loads of the corresponding video through the Brightcove Player will not auto-generate a separate project in the portal.</li>
-    </ol>
+    <p>Publish the video using the Media module and confirm that when the overlay area is clicked, the URL is opened.</p>
   </section>
   <section class="bcls-section">
     <h2 id="advanced">Advanced</h2>
