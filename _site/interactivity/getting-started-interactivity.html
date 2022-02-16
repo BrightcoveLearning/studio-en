@@ -1266,8 +1266,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
       <li>Some mobile devices will strip interactive elements when videos are opened in device-native players such as the  QuickTime player on iOS devices. HapYak has created a solution that overrides the default behavior of video on iOS and Android devices. By &quot;mocking full screen&quot;,  videos can play  full screen and retain HapYak interactive features. The following parameters can be added to the <strong>Options(JSON)</strong> to improve the experience on mobile devices:
         <ul>
-          <li><strong><code>loadFullScreenMobile: true</code></strong> - Overrides the default fullscreen behavior on iOS devices</li>
-          <li><strong><code>position: middle</code></strong> - Ensures that the video appears in the middle of the devices display in portrait mode (mimics default behavior of all mobile devices)</li>
+          <li><strong><code>&quot;loadFullScreenMobile&quot; : true</code></strong> - Overrides the default fullscreen behavior on iOS devices</li>
+          <li><strong><code>&quot;position&quot;: &quot;middle&quot;</code></strong> - Ensures that the video appears in the middle of the devices display in portrait mode (mimics default behavior of all mobile devices)</li>
         </ul>
       </li>
       <figure class="bcls-figure"><img src="/assets/images/interactivity/gsi-plugin-settings.png"> </figure>
@@ -1379,9 +1379,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="notes">Notes</h2>
     <ol class="bcls-tasklist-restart">
-      <li>There will be an initial delay between the time when the HapYak project is auto created and the time that annotations appear via the plugin. The delay can be upwards of a couple hours.</li>
+      <li>Annotations added to a project at the project level (meaning not through templates) should appear in approximately 90 seconds. Annotations added via templates can take up to two hours to appear. </li>
       <li>Do not manually create Brightcove projects in the HapYak portal. The plugin will do this automatically.</li>
-      <li>Do not manually modify the video source of a HapYak project that was automatically created. </li>
+      <li>Uploading a new video source files in Video Cloud will preserve the video ID and the connection to HapYak.</li>
       <li>Do not use the EMBED code generated from the HapYak tools when using the plugin. Instead publish your videos per the normal Brightcove workflow.</li>
       <li>Workflow-generated projects can be deleted through the HapYak UI. Please note that subsequent loads of the corresponding video through the Brightcove Player will not auto-generate a separate project in the portal.</li>
     </ol>
@@ -1403,7 +1403,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 15 Feb 2022
+  Page last updated on 16 Feb 2022
 </div>
 
 
