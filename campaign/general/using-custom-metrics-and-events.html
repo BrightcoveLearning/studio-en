@@ -77,13 +77,11 @@ if (result) {
     <ul>
       <li>The limit on string length for event slot values is 250 characters.</li>
       <li>If multiple values are sent to the same event or metric slot during a single viewing session, the existing value in the slot is replaced with the new value. In the following example, the final value stored in event1 is “click3”.
-        <pre>
-  <code class="language-javascript" translate="No">
+<pre><code class="language-javascript" translate="No">
 player.audience.track(‘event1’, ‘click1’);
 player.audience.track(‘event1’, ‘click2’);
 player.audience.track(‘event1’, ‘click3’);
-</code>
-      </pre>
+</code></pre>
       </li>
       <li>If a view event for the session does not exist yet then one will be created.</li>
       <li>If the result of <code translate="No">track()</code> is false indicating that the event failed to send, you can <a href="#logging">enable the verbose option</a> on the Campaign plugin to see console logging with a specific reason why.</li>
