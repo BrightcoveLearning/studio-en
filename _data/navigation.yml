@@ -324,6 +324,14 @@
     - name: Social API
       url: 'https://apis.support.brightcove.com/social/index.html'
 - section:
+  name: Adding Interactivity
+  url: /interactivity/index.html
+  docs:
+    - name: Adding Interactive Overlays to Videos
+      url: /interactivity/adding-interactivity-video.html
+    - name: Getting Started with Interactivity
+      url: /interactivity/getting-started-interactivity.html
+- section:
   name: Marketing Automation
   url: /campaign/index.html
   docs:
