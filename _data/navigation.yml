@@ -324,7 +324,7 @@
     - name: Social API
       url: 'https://apis.support.brightcove.com/social/index.html'
 - section:
-  name: Adding Interactivity
+  name: Interactivity
   url: /interactivity/index.html
   docs:
     - name: Adding Interactive Overlays to Videos
