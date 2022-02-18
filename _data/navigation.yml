@@ -327,6 +327,8 @@
   name: Interactivity
   url: /interactivity/index.html
   docs:
+    - name: Adding Interactive Chapters to a Video
+      url: /interactivity/adding-chapters-video.html
     - name: Adding Interactive Overlays to Videos
       url: /interactivity/adding-interactivity-video.html
     - name: Getting Started with Interactivity
