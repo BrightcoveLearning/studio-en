@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will learn how to use the Analytics module to monitor the performance of your videos enabled for Server-Side Ad Insertion (SSAI).">
+  <meta name="description" content="This topic provides an overview of the upcoming Video Cloud Studio interface and modules. Video Cloud Studio allows you to manage your video publishing workflow across desktop, tablet and mobile devices.">
   
-  <title>SSAI Performance Analytics</title>
+  <title>Getting Started with Video Cloud Studio</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -59,9 +59,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/analytics/">Reviewing Analytics</a></li>
+      <li class="breadcrumb-item"><a href="/get-started/">Getting Started</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">SSAI Performance Analytics</li>
+      <li class="breadcrumb-item active" aria-current="page">Getting Started with Video Cloud Studio</li>
     </ol>
   </nav>
 </header>
@@ -1244,113 +1244,95 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>SSAI Performance Analytics</h1>
 <article class="bcls-article">
-    <summary>In this topic, you will learn how to use the Analytics module to monitor the performance of your videos enabled for Server-Side Ad Insertion (SSAI).</summary>
-
-    <section class="bcls-section">
-      <h2 id="Introduction">Introduction</h2>
-      <p>Brightcove Server-Side Ad Insertion (SSAI) stitches ads into your content stream while it is being delivered. Because ad stitching happens on the server-side, SSAI works with any platform. For details about SSAI, see the <a href="https://ssai.support.brightcove.com/getting-started/video-cloud-ssai-overview.html">Video Cloud SSAI Overview</a> document.</p>
-      <p>SSAI Performance analytics are supported with the following:</p>
-      <ul>
-        <li>Both VOD and Live streams</li>
-        <li>Brightcove's web player, the Native SDKs, and Beacon apps</li>
-        <li>Video Cloud and remote assets</li>
-      </ul>
-      <p>In Video Cloud Studio, within the <strong>Analytics</strong> module, the <strong>SSAI Performance</strong> section allows you monitor the efficiency of your ad providers and ad configurations. Here, you can track the performance and errors associated with your server-side advertising. </p>
-
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="SSAI Performance overview" src="/assets/images/analytics/ssai/performance-overview.png" />
-        <figcaption class="bcls-caption--image">SSAI Performance overview</figcaption>
-      </figure>
-
-      <p>For SSAI Performance metrics, there are two points of communication with the ad server:</p>
-      <ul>
-        <li>Ad Request - When the player makes the request to the ad server</li>
-        <li>Ad Tracker - When the player tells the ad provider any user info</li>
-      </ul>
-
-      <aside class="bcls-aside bcls-aside--information">There may be some latency of 30-60 mins before you see data in the Studio UI.</aside>
-
-      <!-- <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="2346841845001">&nbsp;</div>
-      <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> -->
-    </section>
-
-    <section class="bcls-section">
-      <h2 id="Setup">Setup</h2>
-      <p>This feature is available to any customer who has SSAI enabled for their account. Contact your account manager for the following:</p>
-      <ul>
-        <li>Ensure your account is enable for Brightcove Server-Side Ad Insertion (SSAI).</li>
-        <li>Enable your account for SSAI Performance analytics.</li>
-      </ul>
-    </section>
-
-    <section class="bcls-section">
-      <h2 id="Work_flow">Work flow</h2>
-      <p>Follow this work flow to start seeing analytics data associated with SSAI:</p>
-      <ol class="bcls-tasklist">
-        <li>
-          Create an ad configuration with the <code translate="No">ad_tracking_sample_percentage</code> parameter.
-          <ul>
-            <li>For VOD, see the <a href="https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Manage_ad_configurations">Video Cloud SSAI API</a> document.</li>
-            <li>For Live streams, see the <a href="https://apis.support.brightcove.com/live-api/references/reference.html#operation/CreateAdConfiguration">Create Ad Configuration</a> reference.</li>
-          </ul>
-        </li>
-        <li>
-          Associate the ad configuration with your player.
-          <ul>
-            <li>For Brightcove web player, see the <a href="https://player.support.brightcove.com/plugins/implementing-server-side-ads-brightcove-player.html#Implementing_SSAI_using_Studio">Implementing Server-Side Ads with Brightcove Player</a> document.</li>
-            <li>For the Native SDKs, see the <a href="https://sdks.support.brightcove.com/features/implementing-server-side-ads-native-player-sdks.html">Implementing Server-Side Ads with the Native SDKs</a> document.</li>
-          </ul>
-        </li>
-
-      </ol>
-      
-    </section>
-
-
-
-
-
-
+  <h1>Getting Started with Video Cloud Studio</h1>
+  <summary>This topic provides an overview of the upcoming Video Cloud Studio interface and modules. Video Cloud Studio allows you to manage your video publishing workflow across desktop, tablet and mobile devices.</summary>
   <section class="bcls-section">
-    <h2 id="launch" class="BCL_conceptTitle">Launching the Analytics module</h2>
-    <p>To launch the Analytics module:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Log into Video Cloud Studio.</li>
-      <li>Open the Analytics module by clicking <strong>Analytics</strong> in the navigation header.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="timespan" class="BCL_conceptTitle">Selecting a time span</h2>
-    <p>Use the date selector to specify the time period for the report, you can select a fixed date range or select a custom date range. Note that when a single day is selected, the graphs will display by hour.</p>
-    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="date selector" src="/assets/images/analytics/node10119-date-picker.png" /></figure>
-    <div class="BCL-subsection">
-      <h3>Reporting time zone</h3>
-      <p>Data in the Analytics module is shown using the account's reporting time zone. The time zone is displayed below the calendar control.</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="time zone" src="/assets/images/analytics/node10119-timezone.png" /></figure>
-      <p>The reporting time zone is used to calculate day boundaries for reporting data. Changing the reporting time zone setting only affects data going forward, and changes are not applied retroactively. If you change this setting, you may see a flat spot or a spike in your data when looking at day boundaries where the change was applied. Updates to this setting may not take effect immediately, and analytics data may continue to refer to the old setting until the system processes the changes.</p>
-      <p>The reporting time zone can be configured as part of the account settings. For information on changing the reporting time zone, see <a href="/admin/managing-account-settings.html">Managing Account Settings</a>.</p>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="search" class="BCL_conceptTitle">Searching for a video</h2>
-    <p>The search feature can be used to search for a specific video.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="search field" src="/assets/images/analytics/node10119-search.png" /></figure>
-    <p>The following video properties will be searched:</p>
+    <p>To access Video Cloud Studio, navigate to: <a href="https://studio.brightcove.com">https://studio.brightcove.com</a>. Sign in with your email address and password. The home page provides the ability to:</p>
     <ul>
-      <li>Name</li>
-      <li>Short description</li>
-      <li>Long description</li>
-      <li>Tags</li>
-      <li>Video ID</li>
-      <li>Reference ID</li>
-      <li>All custom fields</li>
+      <li><a href="#notification">View system notifications</a></li>
+      <li><a href="#settings">Manage Video Cloud settings</a></li>
+      <li><a href="#account">Select an account and view the user profile</a></li>
+      <li><a href="#modules">Access Video Cloud modules</a></li>
+      <li><a href="#dashboard">View the Video Cloud dashboard</a></li>
     </ul>
-    <p>A list of matches will be displayed below the search field.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="search results" src="/assets/images/analytics/node10119-search-results.png" /></figure>
-    <p>Clicking a video link will open the report that is "in context". For example, if you are looking at the engagement for your account and then use search to locate a specific video, clicking the link to the video will open the Engagement Report. If you are looking at the Performance report, searching and clicking a link will open the Performance Report.</p>
-    <p>For a complete list of options that are available when searching for videos in the Analytics module, see <a href="/analytics/how-search-videos-analytics-module.html">How to Search for Videos in the Analytics Module</a>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: The Analytics reports do include analytics for videos that have been deleted from your account. You cannot search for deleted videos in the Analytics module. To get a report on a deleted video, you will need to know the video ID for the deleted video and use the <a href="https://apis.support.brightcove.com/analytics/">Analytics API</a> to generate the report.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node14494-studio-home2.png" /></figure>
+    <p> You can have a maximum of 5 sessions at any time. A session is initiated any time you log in  with the same email address. Once a 6th session is started, the oldest session is invalidated. The Video Cloud Studio session timeout is 24 hours.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="notification">Viewing system notifications</h2>
+    <p>The Video Cloud Studio header will display a bell icon <img alt="" src="/assets/images/get-started/node14494-notification-icon.png" /> when there are system notifications available. Clicking the icon will display the list of system notifications.</p>
+    <p>The Video Cloud Studio header will display a warning icon <img alt="" src="/assets/images/get-started/node14494-system-issue-icon.png" /> when there are system issues. Clicking the icon will open the Brightcove System Status page.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="settings">Managing settings</h2>
+    <p>The Video Cloud Studio settings can be accessed by clicking the <strong>Admin</strong> icon (<i data-feather="edit-3"></i> ) in the primary navigation. The Video Cloud Admin menu provides access to:</p>
+    <ul>
+      <li><a href="/admin/managing-account-settings.html#account_info">Account Information</a> - View information about the current Video Cloud account</li>
+      <li><a href="/admin/managing-users.html">Manage Users</a> - Manage the users who are authorized to use Video Cloud Studio</li>
+      <li><a href="/admin/managing-account-settings.html#account_settings">Account Settings</a> - Configure general account settings</li>
+      <li><a href="/admin/managing-account-settings.html#upload">Upload Settings</a> - Provides options to customize the Upload module</li>
+      <li><a href="/admin/managing-ingest-profiles.html">Ingest Profiles</a> - Manage the ingest profiles in your Video Cloud account</li>
+      <li><a href="/admin/managing-account-settings.html#fields">Video Fields</a> - Mark standard video fields as required and also view, create, and modify custom metadata fields for the account</li>
+      <li><a href="/admin/configuring-language-settings.html">Language Settings</a> - Configure support for  additional metadata languages</li>
+      <li><a href="/admin/managing-playback-rights.html">Playback Rights</a> - Configure playback rights</li>
+      <li><a href="/admin/managing-media-sharing-settings.html">Media Sharing</a> - Share videos to other accounts</li>
+      <li><a href="/admin/configuring-server-side-ad-settings.html">Server-Side Ad Settings</a> - Configure server-side ad settings</li>
+      <li><a href="/admin/managing-account-settings.html#player">Player Settings</a> - Provides the option of using basic user name and password authentication for access to the Player Management and Delivery System APIs</li>
+      <li><a href="https://live.support.brightcove.com/live-module/zoom-live-integration.html">Integrations</a> - Integrate Zoom meetings into Brightcove Live</li>
+      <li><a href="https://live.support.brightcove.com/admin/managing-live-settings.html">Live Settings</a> - Manage the settings used by the Live module</li>
+      <li><a href="/admin/managing-api-authentication-credentials.html">API Authentication</a> - Create and manage API credentials</li>
+      <li><a href="/admin/viewing-billing-information.html">Billing</a> - View billing information for the account</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">Note: You must be an account administrator to have access to the Admin settings.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="account">Selecting an account</h2>
+    <p>If you have access to multiple Video Cloud accounts, the Video Cloud account selector can be used to select the Video Cloud account you want to access. To switch accounts, click on the <strong>Profile</strong> icon in the top right corner of Video Cloud Studio. The current account is indicated with a dot preceding the account name.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node14494-select-account2.png" /></figure>
+    <p>Click the <strong>My Profile</strong> link to update your user information and password. For more information, see <a href="/admin/managing-profile-information.html">Managing Profile Information</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="modules">Accessing modules</h2>
+    <p>The Video Cloud Studio primary navigation provides access to the Studio modules.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node14494-nav-header2.png" /></figure>
+    <p>Note that the modules that you have access to are based upon your Video Cloud subscription and user profile.</p>
+    <ul>
+      <li><a href="/media/uploading-videos-using-upload-module.html">Upload</a> - Upload videos to your Video Cloud account</li>
+      <li><a href="/media/getting-started-media-module.html">Media</a> - Set video properties, organize videos using folders and publish videos</li>
+      <li><a href="/analytics/getting-started-analytics-module.html">Analytics</a> - View analytics on video and player performance</li>
+      <li><a href="/players/getting-started-players-module.html">Players</a> - Create and style players and generate publishing code for players</li>
+      <li><a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html">Live</a> - Create and stream live events</li>
+      <li><a href="/cloud-playout/cloud-playout-overview.html">Cloud Playout</a> - Create live linear channels for videos</li>
+      <li><a href="https://gallery.support.brightcove.com/get-started/getting-started-brightcove-gallery.html">Gallery</a> - Create video portals for your video content</li>
+      <li><a href="/social/getting-started-brightcove-social.html">Social</a> - Distribute videos to social media accounts</li>
+      <li><a href="/campaign/index.html">Campaign</a> - Connects video analytics from Video Cloud to marketing automation platforms</li>
+    </ul>
+    The <strong>Marketplace</strong> link will open the Brightcove Marketplace in a new browser tab. The Brightcove Marketplace contains integrations and applications that extend the capabilities of the Brightcove platform.</section>
+  <section class="bcls-section">
+    <h2 id="dashboard">Viewing the dashboard</h2>
+    <p>The Video Cloud Studio home page displays the Video Cloud dashboard. The dashboard contains a series of "cards" which provide high level metrics on the videos in your account. The following cards are available:</p>
+    <ul>
+      <li><strong>Video views</strong> - Displays number of video views per day for the time period selected. Clicking the <strong>See Video View Details</strong> link will open the Performance Report where you can view video performance.</li>
+      <li><strong>Account summary</strong> - Displays total number of videos and players in the account and the number of recently created and updated videos. Clicking on a number will open the Media or Players module.</li>
+      <li><strong>Device type</strong> - Displays type of devices used to watch videos for the time period selected. Clicking the <strong>See Video Views by Device Type</strong> link will open the Performance Report where you can view video performance by device type.</li>
+      <li><strong>What's new?</strong> - Displays Video Cloud product updates. For a complete list of updates, see the <a href="/release-notes/video-cloud-studio-release-notes.html">Video Cloud Studio Release Notes</a>.</li>
+      <li><strong>Top trending videos</strong> - Displays videos with the most views for the time period selected. Clicking the card title link will open the Performance Report where you can view video performance.</li>
+      <li><strong>Viewing regions</strong> - Displays viewer locations for the time period selected. Clicking <strong>See Video Views by Country</strong> will open the Performance Report where you can view video views by country.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="localization">Localization</h2>
+    <p>The Video Cloud Studio language can be changed by changing the language in your profile. The following languages are supported:</p>
+    <ul>
+      <li>English</li>
+      <li>Spanish (Spain)</li>
+      <li>Japanese</li>
+      <li>French (France)</li>
+      <li>Chinese (Traditional)</li>
+      <li>Korean</li>
+    </ul>
+    <p>For more information, see <a href="/admin/managing-profile-information.html">Managing Profile Information</a>.</p>
   </section>
 </article>
 
