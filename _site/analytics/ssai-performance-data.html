@@ -1313,23 +1313,63 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="SSAI Performance" src="/assets/images/analytics/ssai/performance.png" />
         <figcaption class="bcls-caption--image">SSAI Performance</figcaption>
       </figure>
-      <p>For SSAI Performance metrics, there are two points of communication with the ad server:</p>
-      <ul>
-        <li>Ad Request - When the player makes the request to the ad server</li>
-        <li>Ad Tracker - When the player tells the ad provider any user info</li>
-      </ul>
+      
       <h3>Date range</h3>
       <P>Use the dropdown menu to select a pre-defined date range or enter a custom date or date range.</P>
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Date range" src="/assets/images/analytics/ssai/date-range.png" />
         <figcaption class="bcls-caption--image">Date range</figcaption>
       </figure>
-      <h3>SSAI request codes</h3>
-      <P>This section displays all unique response codes from each request to your ad server.</P>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Date range" src="/assets/images/analytics/ssai/date-range.png" />
-        <figcaption class="bcls-caption--image">Date range</figcaption>
+
+      <h3>Data views</h3>
+      <p>The data on this page shows the response codes from each request to your ad server. There are two points of communication with the ad server:</p>
+      <ul>
+        <li>Ad Request - When the player makes the request to the ad server</li>
+        <li>Ad Tracker - When the player tells the ad provider any user info</li>
+      </ul>
+      <p>The page is broken into five sections of data:</p>
+
+      <ul>
+        <li><strong>SSAI request codes</strong> - All of the response codes from each request to your ad server, including success and error codes</li>
+        <li><strong>Ad request errors by ad provider</strong> - A list of request errors sorted by ad provider</li>
+        <li><strong>Ad request errors by ad configuration</strong> - A list of request errors sorted by ad configuration</li>
+        <li><strong>Tracker errors by ad provider</strong> - A list of tracker errors sorted by ad provider</li>
+        <li><strong>Tracker errors by ad configuration</strong> - A list of tracker errors sorted by ad configuration</li>
+      </ul>
+
+      <p>Click <strong>view more</strong> to see more details.</p>
+    </section>
+
+    <section class="bcls-section">
+      <h2 id="Ad Error Codes">Ad Error Codes</h2>
+      <p>The SSAI Performance page provides a summary of ad requests, both success and errors.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Ad Error Codes" src="/assets/images/analytics/ssai/ad-error-codes.png" />
+        <figcaption class="bcls-caption--image">Ad Error Codes</figcaption>
+      </figure>
+      
+      <h3>Ad providers</h3>
+      <P>Use the dropdown menu to filter results for a specific ad provider or show data for <strong>All ad providers</strong>.</P>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Ad providers" src="/assets/images/analytics/ssai/ad-providers.png" />
+        <figcaption class="bcls-caption--image">Ad providers</figcaption>
       </figure>
 
-      
+      <h3>Ad configurations</h3>
+      <P>Use the dropdown menu to filter results for a specific ad configuration or show data for <strong>All ad configurations</strong>.</P>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Ad configurations" src="/assets/images/analytics/ssai/ad-configurations.png" />
+        <figcaption class="bcls-caption--image">Ad configurations</figcaption>
+      </figure>
+
+      <h3>SSAI errors</h3>
+      <P>Use the dropdown menu to filter results for <strong>Ad Request Errors</strong>, <strong>Ad Tracker Impression Errors</strong>, or show data for <strong>All SSAI Errors</strong>.</P>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="SSAI errors" src="/assets/images/analytics/ssai/ssai-errors.png" />
+        <figcaption class="bcls-caption--image">SSAI errors</figcaption>
+      </figure>
+
+      <h3>Data view</h3>
+      <p>The graph shows the number of SSAI ad errors by date. The details display below the graph:</p>
+      <ul>
+        <li><strong>Request Code</strong> - The error code returned from the ad provider</li>
+        <li><strong># of Requests</strong> - The number of requests associated with the error code</li>
+      </ul>
     </section>
 
 </article>
