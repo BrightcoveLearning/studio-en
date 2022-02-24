@@ -10,29 +10,68 @@ layout: staging
 
     <section class="bcls-section">
       <h2 id="Introduction">Introduction</h2>
-      <p>Brightcove Server-Side Ad Insertion (SSAI) stitches ads into your content stream while it is being delivered. We provide support for both VOD and Live streams. Because ad stitching happens on the server-side, SSAI works with Brightcove's web player, the Native SDKs, and Beacon apps. For details about SSAI, see the <a href="https://ssai.support.brightcove.com/getting-started/video-cloud-ssai-overview.html">Video Cloud SSAI Overview</a> document.</p>
-      <p>The SSAI Performance section within the Video Cloud Analytics module allow you monitor the efficiency of your ad providers and ad configurations. Here, you can track the performance and errors associated with your server-side advertising. </p>
+      <p>Brightcove Server-Side Ad Insertion (SSAI) stitches ads into your content stream while it is being delivered. Because ad stitching happens on the server-side, SSAI works with any platform. For details about SSAI, see the <a href="https://ssai.support.brightcove.com/getting-started/video-cloud-ssai-overview.html">Video Cloud SSAI Overview</a> document.</p>
+      <p>SSAI Performance analytics are supported with the following:</p>
+      <ul>
+        <li>Both VOD and Live streams</li>
+        <li>Brightcove's web player, the Native SDKs, and Beacon apps</li>
+        <li>Video Cloud and remote assets</li>
+      </ul>
+      <p>In Video Cloud Studio, within the <strong>Analytics</strong> module, the <strong>SSAI Performance</strong> section allows you monitor the efficiency of your ad providers and ad configurations. Here, you can track the performance and errors associated with your server-side advertising. </p>
 
-    <!-- <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="2346841845001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> -->
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="SSAI Performance overview" src="/assets/images/analytics/ssai/performance-overview.png" />
+        <figcaption class="bcls-caption--image">SSAI Performance overview</figcaption>
+      </figure>
 
-    <p>Regardless of your specific goals for online video, understanding your audience is a key to developing a successful video strategy. The better you understand your viewers, the easier it is to create content that will engage them in formats they can easily consume. The Analytics module provides different reports that can be used to get analytics about your videos and players:</p>
-    <ul>
-      <li><a href="/analytics/performance-report-reference.html">Performance Report</a> - Provides details on the number of video views, traffic sources, device types and device operating systems</li>
-      <li><a href="/analytics/engagement-report-reference.html">Engagement Report</a> - Provides details on how users are engaging with your videos; what percentage of a video viewers are watching</li>
-      <li><a href="/analytics/trending-now-report-reference.html">Trending Now</a> - Provides the number of concurrent viewers for the past hour</li>
-      <li><a href="/analytics/creating-custom-analytics-reports.html">Custom</a> - Provides the ability to create custom analytics reports</li>
-    </ul>
-    <p>Using these reports, you can generate up-to-date reports about how many viewers you have, how much content your viewers are watching, when they stop watching videos, and even the traffic sources for your content.</p>
-    <p>This topic includes the following sections that describe how to use the Analytics module:</p>
-    <ul>
-      <li><a href="#launch">Launching the Analytics module</a></li>
-      <li><a href="#timespan">Selecting a time span</a></li>
-      <li><a href="#search">Searching for a video</a></li>
-      <li><a href="#limitations">Limitations</a></li>
-    </ul>
-    <p>Note that all data displayed in the Analytics module is also available through the Analytics API. For more information, see the <a href="https://apis.support.brightcove.com/analytics/">Video Cloud Analytics API</a> documentation.</p>
-  </section>
+      <p>For SSAI Performance metrics, there are two points of communication with the ad server:</p>
+      <ul>
+        <li>Ad Request - When the player makes the request to the ad server</li>
+        <li>Ad Tracker - When the player tells the ad provider any user info</li>
+      </ul>
+
+      <aside class="bcls-aside bcls-aside--information">There may be some latency of 30-60 mins before you see data in the Studio UI.</aside>
+
+      <!-- <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="2346841845001">&nbsp;</div>
+      <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> -->
+    </section>
+
+    <section class="bcls-section">
+      <h2 id="Setup">Setup</h2>
+      <p>This feature is available to any customer who has SSAI enabled for their account. Contact your account manager for the following:</p>
+      <ul>
+        <li>Ensure your account is enable for Brightcove Server-Side Ad Insertion (SSAI).</li>
+        <li>Enable your account for SSAI Performance analytics.</li>
+      </ul>
+    </section>
+
+    <section class="bcls-section">
+      <h2 id="Work_flow">Work flow</h2>
+      <p>Follow this work flow to start seeing analytics data associated with SSAI:</p>
+      <ol class="bcls-tasklist">
+        <li>
+          Create an ad configuration with the <code translate="No">ad_tracking_sample_percentage</code> parameter.
+          <ul>
+            <li>For VOD, see the <a href="https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Manage_ad_configurations">Video Cloud SSAI API</a> document.</li>
+            <li>For Live streams, see the <a href="https://apis.support.brightcove.com/live-api/references/reference.html#operation/CreateAdConfiguration">Create Ad Configuration</a> reference.</li>
+          </ul>
+        </li>
+        <li>
+          Associate the ad configuration with your player.
+          <ul>
+            <li>For Brightcove web player, see the <a href="https://player.support.brightcove.com/plugins/implementing-server-side-ads-brightcove-player.html#Implementing_SSAI_using_Studio">Implementing Server-Side Ads with Brightcove Player</a> document.</li>
+            <li>For the Native SDKs, see the <a href="https://sdks.support.brightcove.com/features/implementing-server-side-ads-native-player-sdks.html">Implementing Server-Side Ads with the Native SDKs</a> document.</li>
+          </ul>
+        </li>
+
+      </ol>
+      
+    </section>
+
+
+
+
+
+
   <section class="bcls-section">
     <h2 id="launch" class="BCL_conceptTitle">Launching the Analytics module</h2>
     <p>To launch the Analytics module:</p>
