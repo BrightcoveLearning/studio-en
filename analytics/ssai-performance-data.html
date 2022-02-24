@@ -23,12 +23,6 @@ layout: staging
         <figcaption class="bcls-caption--image">SSAI Performance overview</figcaption>
       </figure>
 
-      <p>For SSAI Performance metrics, there are two points of communication with the ad server:</p>
-      <ul>
-        <li>Ad Request - When the player makes the request to the ad server</li>
-        <li>Ad Tracker - When the player tells the ad provider any user info</li>
-      </ul>
-
       <aside class="bcls-aside bcls-aside--information">There may be some latency of 30-60 mins before you see data in the Studio UI.</aside>
 
       <!-- <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="2346841845001">&nbsp;</div>
@@ -62,54 +56,21 @@ layout: staging
             <li>For the Native SDKs, see the <a href="https://sdks.support.brightcove.com/features/implementing-server-side-ads-native-player-sdks.html">Implementing Server-Side Ads with the Native SDKs</a> document.</li>
           </ul>
         </li>
-
       </ol>
+    </section>
+
+    <section class="bcls-section">
+      <h2 id="SSAI_Performance">SSAI Performance</h2>
+      <p>The SSAI Performance page provides a summary of ad requests, both success and errors.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="SSAI Performance" src="/assets/images/analytics/ssai/performance.png" />
+        <figcaption class="bcls-caption--image">SSAI Performance</figcaption>
+      </figure>
+      <p>For SSAI Performance metrics, there are two points of communication with the ad server:</p>
+      <ul>
+        <li>Ad Request - When the player makes the request to the ad server</li>
+        <li>Ad Tracker - When the player tells the ad provider any user info</li>
+      </ul>
       
     </section>
 
-
-
-
-
-
-  <section class="bcls-section">
-    <h2 id="launch" class="BCL_conceptTitle">Launching the Analytics module</h2>
-    <p>To launch the Analytics module:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Log into Video Cloud Studio.</li>
-      <li>Open the Analytics module by clicking <strong>Analytics</strong> in the navigation header.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="timespan" class="BCL_conceptTitle">Selecting a time span</h2>
-    <p>Use the date selector to specify the time period for the report, you can select a fixed date range or select a custom date range. Note that when a single day is selected, the graphs will display by hour.</p>
-    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="date selector" src="/assets/images/analytics/node10119-date-picker.png" /></figure>
-    <div class="BCL-subsection">
-      <h3>Reporting time zone</h3>
-      <p>Data in the Analytics module is shown using the account's reporting time zone. The time zone is displayed below the calendar control.</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="time zone" src="/assets/images/analytics/node10119-timezone.png" /></figure>
-      <p>The reporting time zone is used to calculate day boundaries for reporting data. Changing the reporting time zone setting only affects data going forward, and changes are not applied retroactively. If you change this setting, you may see a flat spot or a spike in your data when looking at day boundaries where the change was applied. Updates to this setting may not take effect immediately, and analytics data may continue to refer to the old setting until the system processes the changes.</p>
-      <p>The reporting time zone can be configured as part of the account settings. For information on changing the reporting time zone, see <a href="/admin/managing-account-settings.html">Managing Account Settings</a>.</p>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="search" class="BCL_conceptTitle">Searching for a video</h2>
-    <p>The search feature can be used to search for a specific video.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="search field" src="/assets/images/analytics/node10119-search.png" /></figure>
-    <p>The following video properties will be searched:</p>
-    <ul>
-      <li>Name</li>
-      <li>Short description</li>
-      <li>Long description</li>
-      <li>Tags</li>
-      <li>Video ID</li>
-      <li>Reference ID</li>
-      <li>All custom fields</li>
-    </ul>
-    <p>A list of matches will be displayed below the search field.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="search results" src="/assets/images/analytics/node10119-search-results.png" /></figure>
-    <p>Clicking a video link will open the report that is "in context". For example, if you are looking at the engagement for your account and then use search to locate a specific video, clicking the link to the video will open the Engagement Report. If you are looking at the Performance report, searching and clicking a link will open the Performance Report.</p>
-    <p>For a complete list of options that are available when searching for videos in the Analytics module, see <a href="/analytics/how-search-videos-analytics-module.html">How to Search for Videos in the Analytics Module</a>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: The Analytics reports do include analytics for videos that have been deleted from your account. You cannot search for deleted videos in the Analytics module. To get a report on a deleted video, you will need to know the video ID for the deleted video and use the <a href="https://apis.support.brightcove.com/analytics/">Analytics API</a> to generate the report.</aside>
-  </section>
 </article>
