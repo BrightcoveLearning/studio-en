@@ -40,12 +40,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/adding-chapters-video.html",
+      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
 
@@ -530,6 +530,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/get-started/getting-started-video-cloud-studio-new-nav.html",
+      "oldURL": "/getting-started-video-cloud-studio-new-nav"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/get-started/getting-started-video-cloud-studio.html",
       "oldURL": "/getting-started-video-cloud-studio"
   },
@@ -552,6 +557,11 @@
   {
       "newURL": "https://studio.support.brightcove.com/media/how-search-videos-and-playlists-media-module.html",
       "oldURL": "/how-search-videos-and-playlists-media-module"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/interactivity/how-to-increase-click-through-rate.html",
+      "oldURL": "/how-to-increase-click-through-rate"
   },
 
   {
@@ -610,7 +620,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/",
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/eloqua/",
       "oldURL": "/index"
   },
 
@@ -625,22 +635,17 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/basics/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/hubspot/",
+      "newURL": "https://studio.support.brightcove.com/social/help/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/help/",
+      "newURL": "https://studio.support.brightcove.com/social/",
       "oldURL": "/index"
   },
 
@@ -655,12 +660,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/",
+      "newURL": "https://studio.support.brightcove.com/interactivity/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/home/help/",
+      "newURL": "https://studio.support.brightcove.com/publish/",
       "oldURL": "/index"
   },
 
@@ -670,12 +675,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/support/",
+      "newURL": "https://studio.support.brightcove.com/home/help/",
       "oldURL": "/index"
   },
 
@@ -685,7 +685,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/general/",
+      "newURL": "https://studio.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -695,7 +695,17 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/general/",
       "oldURL": "/index"
   },
 
@@ -705,12 +715,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/admin/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/",
       "oldURL": "/index"
   },
 
@@ -720,27 +725,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/marketo/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/cloud-playout/help/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/salesforce/",
       "oldURL": "/index"
   },
 
@@ -750,12 +735,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/eloqua/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/training/",
+      "newURL": "https://studio.support.brightcove.com/campaign/admin/",
       "oldURL": "/index"
   },
 
@@ -765,12 +745,42 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/campaign/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/get-started/",
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/hubspot/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/training/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/marketo/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/players/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/salesforce/",
       "oldURL": "/index"
   },
 
@@ -1045,12 +1055,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/training/register-training.html",
+      "newURL": "https://studio.support.brightcove.com/register-training.html",
       "oldURL": "/register-training"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/register-training.html",
+      "newURL": "https://studio.support.brightcove.com/training/register-training.html",
       "oldURL": "/register-training"
   },
 
@@ -1147,6 +1157,11 @@
   {
       "newURL": "https://studio.support.brightcove.com/admin/help/ingest-profiles/simple-editor.html",
       "oldURL": "/simple-editor"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/ssai-performance-data.html",
+      "oldURL": "/ssai-performance-data"
   },
 
   {
@@ -1287,6 +1302,11 @@
   {
       "newURL": "https://studio.support.brightcove.com/publish/using-reference-ids.html",
       "oldURL": "/using-reference-ids"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/interactivity/using-templates.html",
+      "oldURL": "/using-templates"
   },
 
   {
