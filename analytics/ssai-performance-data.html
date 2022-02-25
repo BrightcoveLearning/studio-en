@@ -2,7 +2,6 @@
 title: SSAI Performance Analytics
 description: In this topic, you will learn how to use the Analytics module to monitor the performance of your videos enabled for Server-Side Ad Insertion (SSAI).
 parent: Reviewing Analytics
-layout: staging
 ---
 <h1>{{ page.title }}</h1>
 <article class="bcls-article">
@@ -54,6 +53,7 @@ layout: staging
           <ul>
             <li>For Brightcove web player, see the <a href="https://player.support.brightcove.com/plugins/implementing-server-side-ads-brightcove-player.html#Implementing_SSAI_using_Studio">Implementing Server-Side Ads with Brightcove Player</a> document.</li>
             <li>For the Native SDKs, see the <a href="https://sdks.support.brightcove.com/features/implementing-server-side-ads-native-player-sdks.html">Implementing Server-Side Ads with the Native SDKs</a> document.</li>
+            <li>For the Brightcove Beacon apps, see the <a href="https://beacon-help.support.brightcove.com/monetization/ssai/index.html">SSAI related topics</a>.</li>
           </ul>
         </li>
       </ol>
@@ -75,8 +75,17 @@ layout: staging
       <h3>Data views</h3>
       <p>The data on this page shows the response codes from each request to your ad server. There are two points of communication with the ad server:</p>
       <ul>
-        <li>Ad Request - When the player makes the request to the ad server</li>
-        <li>Ad Tracker - When the player tells the ad provider any user info</li>
+        <li><strong>Ad Request</strong> - When the player makes a request for an ad</li>
+        <li><strong>Ad Tracker</strong> - When ad tracking events are fired from the Brightcove SSAI server; these can include the following:
+          <ul>
+            <li><code translate="No">AdStart</code></li>
+            <li><code translate="No">AdComplete</code></li>
+            <li><code translate="No">AdfirstQuartile</code></li>
+            <li><code translate="No">Admidpoint</code></li>
+            <li><code translate="No">AdthirdQuartile</code></li>
+            <li><code translate="No">AdcreativeView</code></li>
+          </ul>
+        </li>
       </ul>
       <p>The page is broken into five sections of data:</p>
 
@@ -144,13 +153,13 @@ layout: staging
       </figure>
 
       <h3>Data view</h3>
-      <p>The graph shows the number of SSAI ad errors by date. The details display below the graph:</p>
+      <p>Here are the data details displayed on this page:</p>
       <ul>
         <li><strong>Ad provider</strong> - Your ad provider</li>
         <li><strong>Total calls</strong> - Total number of ad request calls</li>
         <li><strong>Errors</strong> - Number of ad request errors associated with the ad provider</li>
         <li><strong>Success</strong> - Number of successful ad request calls to the ad provider</li>
-        <li><strong>Percent of total errors</strong> - The percentage of errors related to the total number of request calls</li>
+        <li><strong>Percent of total errors</strong> - The ratio of the total number of errors/total number of ad requests</li>
       </ul>
     </section>
 
@@ -174,13 +183,13 @@ layout: staging
       </figure>
 
       <h3>Data view</h3>
-      <p>The graph shows the number of SSAI ad errors by date. The details display below the graph:</p>
+      <p>Here are the data details displayed on this page:</p>
       <ul>
-        <li><strong>Ad provider</strong> - Your ad provider</li>
+        <li><strong>Ad Configurations</strong> - A list of your ad configurations being used</li>
         <li><strong>Total calls</strong> - Total number of ad request calls</li>
-        <li><strong>Errors</strong> - Number of ad request errors associated with the ad provider</li>
-        <li><strong>Success</strong> - Number of successful ad request calls to the ad provider</li>
-        <li><strong>Percent of total errors</strong> - The percentage of errors related to the total number of request calls</li>
+        <li><strong>Errors</strong> - Number of ad request errors associated with the ad configuration</li>
+        <li><strong>Success</strong> - Number of successful ad request calls associated with the ad configuration</li>
+        <li><strong>Percent of total errors</strong> - The ratio of the total number of errors/total number of ad requests</li>
       </ul>
     </section>
 
