@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This topic provides an overview of the social sharing properties that can be configured for a player.">
+  <meta name="description" content="In this topic you will learn how to add user sentiment to videos using HapYak.">
   
-  <title>Configuring the Social Properties for a Player</title>
+  <title>Adding User Sentiment to Videos</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -60,9 +60,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/players/">Managing Players</a></li>
+      <li class="breadcrumb-item"><a href="/interactivity/">Interactivity</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Configuring the Social Properties for a Player</li>
+      <li class="breadcrumb-item active" aria-current="page">Adding User Sentiment to Videos</li>
     </ol>
   </nav>
 </header>
@@ -1257,29 +1257,107 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
+<h1>Adding User Sentiment to Videos</h1>
 <article class="bcls-article">
-  <h1>Configuring the Social Properties for a Player</h1>
-  <summary>This topic provides an overview of the social sharing properties that can be configured for a player.</summary>
+  <summary>In this topic you will learn how to add user sentiment to videos using HapYak.</summary>
   <section class="bcls-section">
-    <p>Players can be configured so the video content can be shared to popular social media sites. When social sharing is enabled, a share icon will appear in the title and description dock.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/node14058-viral-promotion-icon.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Note: If the player is configured to not show the title and description, the share icon will appear at the bottom right of the player next to the other player controls.</aside>
-    <p>When the sharing icon is clicked, the selected sharing options will appear allowing the video to be shared.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/node14058-viral-promotion-dialog.png" /></figure>
-    <p>To configure the <strong>Social</strong> properties, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Click <strong>Players</strong> in the navigation header to open the Players module.</li>
-      <li>Click the link for the player you want to configure.</li>
-      <li>Click <strong>Social</strong> in the left navigation menu.</li>
-      <li>Click the checkbox to <strong>Enable Sharing</strong> and select the social media sites that the video can be shared to.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/node14058-social-sharing-settings.png" /></figure>
+    <p>HapYak Studio provides the ability to add different types of interactive overlays to videos. The User Sentiment widget can be used to gather viewer feedback on the helpfulness of  videos by letting viewers rate their experience. The sentiment widget can display three different icon types:</p>
+    <ul>
+      <li> Thumbs Up/Thumbs Down
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/sentiment/thumbs.png"> </figure>
       </li>
-      <li>Check <strong>Display Player Embed Code</strong> to allow the viewer to copy the player embed code when the social sharing options are displayed.</li>
-      <li>Check <strong>Display Player Direct Link</strong> to allow the viewer to copy a link to the page where the player is embedded when the social sharing options are displayed.
-        <aside class="bcls-aside bcls-aside--information">Note: When this option is selected, the Advanced embed code is required in order for the complete page URL to be displayed.  
-          Using the Standard embed code will not display the complete page URL.</aside>
+      <li>Star Rating (out of 5)
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/sentiment/stars.png"> </figure>
       </li>
+      <li>Emoticons
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/sentiment/emoticons.png"> </figure>
+      </li>
+    </ul>
+    Reports are available to provide the aggregate feedback about the ratings.</section>
+  <section class="bcls-section">
+    <h2 id="add">Adding a user sentiment widget</h2>
+    <p>Typically, the User Sentiment widget is added to a <a href="using-templates.html">template</a> so that it can be easily added to multiple videos easily. Follow these steps to add a user sentiment widget to a template:</p>
+      <ol class="bcls-tasklist-restart">
+      <li>Login to HapYak Studio.</li>
+      <li>Click <strong>NEW TEMPLATE</strong>.</li>
+      <li>Enter a <strong>Title</strong> and click <strong>NEXT</strong>.
+        <figure class="bcls-figure"><img src="/assets/images/interactivity/sentiment/new-template.png"></figure>
+      </li>
+      <li>Confirm that the template is created. A sample video is automatically loaded into the template. To change the video, click <strong>Configure</strong> and enter a new <strong>Video Source</strong>.</li>
+      <li>Click the widget icon in the bottom toolbar.
+                  <figure class="bcls-figure"> <img src="/assets/images/interactivity/sentiment/add-widget.png"> </figure>
+
+          </li>
+      <li>Click the <strong>User Sentiment</strong> widget.
+                  <figure class="bcls-figure"> <img src="/assets/images/interactivity/sentiment/user-sentiment-widget.png"> </figure>
+<aside class="bcls-aside bcls-aside--information language-editable">Note: Your group must be provisioned to have access to the User Sentiment widget.</aside>
+          </li>
+      <li>Click <strong>ADD</strong>. The widget is added on top of a sample video.</li>
+      <li>Hover over the widget and click <strong>CONFIGURE</strong>.</li>
+      <li></li>
+      <li></li>
+      <li>Click <strong>SETTINGS</strong> at the top of the page.</li>
+      <li>Locate the <strong>Templates Applied</strong> field and click it.</li>
+      <li>Click on one or more templates to add to the project. Templates added to the project will be listed at the top of the dialog.
+        <figure class="bcls-figure"><img src="/assets/images/interactivity/templates/apply-template.png"></figure>
+      </li>
+      <li>Click <strong>SUBMIT</strong>.</li>
     </ol>
+    <ol class="bcls-tasklist-restart">
+      <li>Login to HapYak Studio.</li>
+      <li>In the left navigation, click <strong>Manage</strong>.</li>
+      <li> Click on a project to open it.</li>
+      <li>In the bottom toolbar, click on the text overlay button.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-add-text-overlay.png"> </figure>
+      </li>
+      <li>Click on the <strong>Editor</strong> link in the menu.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-overlay-editor.png"> </figure>
+      </li>
+      <li>Enter  text for the overlay and click <strong>Submit</strong>.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-overlay-text.png"> </figure>
+      </li>
+      <li>Click and drag the overlay to where you want it to appear on the video.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-position-overlay.png"> </figure>
+        <aside class="bcls-aside bcls-aside--information">Note: Make sure the overlay isn't placed at the bottom of the player where it may be covered up by the control bar.</aside>
+      </li>
+      <li>Click  the <strong>Start Time</strong> menu.</li>
+      <li>Enter a <strong>Start time</strong> in seconds, as a percentage or in time format. This example sets the start time to the 75% point of the video. Click <strong>Submit</strong>.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-start-time.png"> </figure>
+      </li>
+      <li>Click the clock icon to set the duration of the overlay. Click <strong>Submit</strong>.</li>
+      <li>Click the <strong>Link</strong> menu.</li>
+      <li>Enter a <strong>URL</strong> to direct to when the overlay is clicked.</li>
+      <li>(Optional) Click the <strong>BEHAVIOR</strong> tab and have the video <strong>Pause on video click</strong>. Click <strong>Submit</strong>.</li>
+      <li>Click <strong>Done</strong>.</li>
+    </ol>
+    <p>Publish the video using the Media module and confirm that the overlay appears.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="reports">Reviewing sentiment reports</h2>
+    <p>Transp</p>
+    <p>Follow these steps to add a text overlay to a project:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Login to HapYak Studio.</li>
+      <li>In the left navigation, click <strong>Manage</strong>.</li>
+      <li>Click on a project to open it.</li>
+      <li>In the bottom toolbar, click on the transparent overlay button.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-add-transparent-overlay.png"> </figure>
+      </li>
+      <li>Enter the <strong>URL</strong> to direct to.
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-transparent-url.png"> </figure>
+      </li>
+      <li>Click the <strong>BEHAVIOR</strong> tab and set the video to <strong>Pause on video click</strong>.</li>
+      <li>Click <strong>Submit</strong>.</li>
+      <li>Drag and size the overlay to where you want the &quot;hotspot&quot; to be. In this example, the overlay will cover a logo image that appears in the video
+        .
+        <figure class="bcls-figure"> <img src="/assets/images/interactivity/int-video-position-transparent-overlay.png"> </figure>
+        <aside class="bcls-aside bcls-aside--information">Note: Make sure the overlay isn't placed at the bottom of the player where it may be covered up by the control bar.</aside>
+      </li>
+      <li>Click  the <strong>Start Time</strong> menu. By default, the <strong>Start time</strong> is set to 00:00.000 which is the start of the video. Enter a <strong>Start time</strong> and click <strong>Submit</strong>.</li>
+      <li>Click the clock icon to set the duration of the overlay. Click <strong>Submit</strong>.</li>
+      <li>Click <strong>Done</strong>.</li>
+    </ol>
+    <p>Publish the video using the Media module and confirm that when the overlay area is clicked, the URL is opened.</p>
   </section>
 </article>
 
