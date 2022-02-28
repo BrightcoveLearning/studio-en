@@ -1555,6 +1555,16 @@
       
         <url>
           
+            <loc>https://studio.support.brightcove.com/interactivity/adding-sentiment-video.html</loc>
+          
+            <lastmod>2022-02-28</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
             <loc>https://studio.support.brightcove.com/interactivity/getting-started-interactivity.html</loc>
           
             <lastmod>2022-02-28</lastmod>
@@ -1566,6 +1576,16 @@
         <url>
           
             <loc>https://studio.support.brightcove.com/interactivity/how-to-increase-click-through-rate.html</loc>
+          
+            <lastmod>2022-02-28</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://studio.support.brightcove.com/interactivity/managing-group-members.html</loc>
           
             <lastmod>2022-02-28</lastmod>
             <changefreq>daily</changefreq>
