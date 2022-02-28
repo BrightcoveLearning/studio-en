@@ -205,6 +205,8 @@
       url: /cloud-playout/searching-for-channels.html
     - name: Using Channel Actions
       url: /cloud-playout/using-channel-actions.html
+    - name: Using Live Redundancy with Channels
+      url: /cloud-playout/channel-live-redundancy.html
     - name: Generating the Channel Embed Code
       url: /cloud-playout/generating-channel-embed-code.html
     - name: Viewing Channel Output and Analytics

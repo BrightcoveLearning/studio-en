@@ -1,5 +1,5 @@
 ---
-title: Using Live Redundancy with channels
+title: Using Live Redundancy with Channels
 description: 'Cloud Playout allows you to make use of Live Redundancy using either Studio module or Channels API. This topic covers Live redundancy integration using Studio.'
 parent: Cloud Playout
 ---
@@ -17,7 +17,7 @@ parent: Cloud Playout
     <ul>
       <li>The redundant group should contain exactly 2 live jobs.</li>
       <li>Both live jobs in the redundant group must be of <strong>Static Entry Point</strong> type.</li>
-      <li>Set the region for <strong>one</strong> of the jobs to the region that you th</li>
+      <li>Set the region for <strong>one</strong> of the jobs to the region that you think will be closest to the majority of your viewers. This will be the "primary region", which you should also select as the <strong>Output Region</strong> in the Destination settings when you create the channel. Brightcove will automatically set the region for the 2nd live job to the region closest to the primary region.</li>
       <li>The redundant group (and the jobs in it) must be in <strong>standby</strong> state.</li>
       <li>If the Cloud Playout channel is SSAI-enabled then the redundant group must also be SSAI-enabled with <strong>RTP-FEC</strong> protocol. See <a href="https://live.support.brightcove.com/live-module/implementing-server-side-ads-live-module.html">Implementing Server-Side Ads in the Live Module</a> for more information.</li>
     </ul>

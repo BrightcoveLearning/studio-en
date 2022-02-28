@@ -83,7 +83,9 @@ parent: Cloud Playout
           <li><strong>Output Region</strong> - The region where the channel will be created. Brightcove recommends selecting a region geographically closest to where the majority of your audience is expected.</li>
           <li><strong>Output to</strong> - Select an output method for the channel
             <ul>
-              <li><strong>Brightcove Live Event</strong> - Create or use a previously created Brightcove Live  Channel. When creating a new channel, the region of the channel will be optimized based upon the <strong>Output Region</strong> that was selected.</li>
+              <li><strong>Brightcove Live Event</strong> - Create or use a previously created Brightcove Live  Channel. When creating a new channel, the region of the channel will be optimized based upon the <strong>Output Region</strong> that was selected.
+                <aside class="bcls-aside bcls-aside--information language-editable">If you are using Brightcove Live, you can also set the destination as a redundant group to get automatic failover for uninterrupted, reliable playback. See <a href="/cloud-playout/channel-live-redundancy.html">Using Live Redundancy with Channels</a> for more details.</aside>
+              </li>
               <li><strong>RTMP</strong> - Select to output the stream to an RTMP or RTP ingestion point. RTP is not available for third party ingestion points; you can use it only when <strong>Ad Insertion</strong> and <strong>Brightcove Live Event</strong> is enabled. When selected, an <strong>RTMP URL</strong> field will appear - enter the RTMP input URL for your live streaming service.</li>
               <li><strong>Amazon S3 Bucket </strong>- Select to push an HLS output to an Amazon S3 bucket. You will be required to enter Bucket Name, Region, Access Key and Secret Key. The bucket should be public and writeable.</li>
             </ul>
