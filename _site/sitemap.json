@@ -440,6 +440,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/interactivity/embedding-form-video.html",
+      "oldURL": "/embedding-form-video"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/campaign/integrations/eloqua/embedding-video-cloud-video-eloqua-landing-page.html",
       "oldURL": "/embedding-video-cloud-video-eloqua-landing-page"
   },
