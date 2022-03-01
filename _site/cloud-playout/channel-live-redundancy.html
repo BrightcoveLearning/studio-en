@@ -516,6 +516,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
+                    <li><a href="/cloud-playout/configuring-s3-buckets.html">Configuring S3 Buckets</a></li>
+                  
+                
+                  
                     <li><a href="/cloud-playout/cloud-playout-add-content.html">Managing the Channel Program</a></li>
                   
                 
@@ -1280,9 +1284,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="live_redundancy">Live redundancy</h2>
     <p>Live redundancy allows you to combine two or more live jobs into a single stream with automatic failover for uninterrupted, reliable playback.</p>
     <aside class="bcls-aside bcls-aside--information language-editable">Note that integration with Live Redundancy is not turned by default. If you would like to have it turned on for your account, contact your account manager.</aside>
-    <p>To create a Live redundant group, see <a href="https://live.support.brightcove.com/live-module/live-redundancy.html">Using Live Redundancy</a>. Once redundant groups are created using the above document you can use them in Cloud Playout.</p>
+    <p>The simplest way to get redundancy is to let Cloud Playout create the group:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/cloud-playout/create-redundancy-group.png" alt="Cloud Playout Creates Redundant Group">
+      <figcaption class="bcls-caption--image">Cloud Playout Creates Redundant Group</figcaption>
+    </figure>
+    <p>If you prefer to create the redundant group yourself, see <a href="https://live.support.brightcove.com/live-module/live-redundancy.html">Using Live Redundancy</a>. Once redundant groups are created using the above document you can use them in Cloud Playout.</p>
     <h3>Redundant groups eligibility criteria</h3>
-    <p>To be available for use as a Cloud Playout channel destination, the redundant group must meet the following criteria:</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that if you have Cloud Playout create the redundant group, it will meet the necessary criteria automatically.</aside>
+    <p>To be available for use as a Cloud Playout channel destination, a redundant group must meet the following criteria:</p>
     <ul>
       <li>The redundant group should contain exactly 2 live jobs.</li>
       <li>Both live jobs in the redundant group must be of <strong>Static Entry Point</strong> type.</li>
