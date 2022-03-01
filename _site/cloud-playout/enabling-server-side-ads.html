@@ -552,6 +552,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
+                    <li><a href="/cloud-playout/channel-live-redundancy.html">Using Live Redundancy with Channels</a></li>
+                  
+                
+                  
                     <li><a href="/cloud-playout/generating-channel-embed-code.html">Generating the Channel Embed Code</a></li>
                   
                 
@@ -1272,7 +1276,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 		<h2 id="introduction">Introduction</h2>
 		<p>One way to monetize a Cloud Playout channel is through advertising. The most reliable way to deliver ads is through server-side ad insertion, or SSAI.</p>
 		<aside class="bcls-aside bcls-aside--information">If you are interested in adding SSAI capability to your account, contact your account manager.</aside>
-		<p>This topic covers enabling SSAI for a Cloud Playout channel, and setting up pre-roll and post-roll ad insertion. Because mid-roll ad insertion works differently, that is covered in <a href="/cloud-playout/mid-roll-ad-insertion.html">Adding Mid-Roll Ads to a Channel</a>. Pre-roll, post-roll, and mid-roll ads can all be inserted into a channel of VOD content.</p>
+		<p>This topic covers enabling SSAI for a Cloud Playout channel, and setting up pre-roll and post-roll ad insertion. Because mid-roll ad insertion works differently, that is covered in <a href="/cloud-playout/mid-roll-ad-insertion.html">Adding Mid-Roll Ads to a Channel</a>. Pre-roll, post-roll, and mid-roll ads can all be inserted into a channel.</p>
     <aside class="bcls-aside bcls-aside--information">
       For SSAI-enabled channels, the destination must be set to an ad-enabled RTP live event:
         <figure class="bcls-figure">
@@ -1299,7 +1303,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <aside class="bcls-aside bcls-aside--information">Notes: 
       <ul>
         <li>When using ad insertion, the channel can only be output to a Brightcove Live Event.</li>
-        <li>If you enable ad insertion, Live Inputs may not be used in the channel.</li>
       </ul>
       </aside>
     <h3>Configuring Ad tags and fill slates</h3>
@@ -1319,6 +1322,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <aside class="bcls-aside bcls-aside--information">Note: For existing channels, the Ad Insertion setting cannot be changed.</aside>
     <h3>Inserting ad placeholders into a program</h3>
     <p>You need to insert ad placeholders into the program listing where ads should be displayed. Follow these steps to insert ad placeholders.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that the placeholders are only required for SSAI with VOD content. If the channel includes a Live stream, ad placement and duration are handled via SCTE-35 cue points sent from the encoder. See <a href="https://apis.support.brightcove.com/live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html">live-api/ssai/live-api-cue-points-and-ad-beacons-ssai.html</a> and <a href="https://live.support.brightcove.com/live-module/implementing-server-side-ads-live-module.html">Implementing Server-Side Ads in the Live Module</a> for more information.</aside>
     <ol class="bcls-tasklist-restart" style="--s:1">
       <li>Click a channel name to edit it.</li>
       <li>In the program listing, click the checkbox next to the video <strong>after</strong> which you want an ad to play.</li>
@@ -1353,7 +1357,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 04 Jan 2022
+  Page last updated on 28 Feb 2022
 </div>
 
 
