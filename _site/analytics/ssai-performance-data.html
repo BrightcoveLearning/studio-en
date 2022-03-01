@@ -1320,14 +1320,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <p>Follow this work flow to start seeing analytics data associated with SSAI:</p>
       <ol class="bcls-tasklist">
         <li>
-          Create an ad configuration with the <code translate="No">ad_tracking_sample_percentage</code> parameter.
+          <p>Create an ad configuration ( <code translate="No">AdConfig</code>) with tracking enabled. To do this, you will include the <code translate="No">ad_tracking_sample_percentage</code> parameter in the configuration.</p>
           <ul>
             <li>For VOD, see the <a href="https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Manage_ad_configurations">Video Cloud SSAI API</a> document.</li>
             <li>For Live streams, see the <a href="https://apis.support.brightcove.com/live-api/references/reference.html#operation/CreateAdConfiguration">Create Ad Configuration</a> reference.</li>
           </ul>
+          <aside class="bcls-aside bcls-aside--information"> if you create a new <code translate="No">AdConfig</code>, you will need to enable tracking.</aside>
         </li>
         <li>
-          Associate the ad configuration with your player.
+          <p>Associate the ad configuration with your player.</p>  
           <ul>
             <li>For Brightcove web player, see the <a href="https://player.support.brightcove.com/plugins/implementing-server-side-ads-brightcove-player.html#Implementing_SSAI_using_Studio">Implementing Server-Side Ads with Brightcove Player</a> document.</li>
             <li>For the Native SDKs, see the <a href="https://sdks.support.brightcove.com/features/implementing-server-side-ads-native-player-sdks.html">Implementing Server-Side Ads with the Native SDKs</a> document.</li>
