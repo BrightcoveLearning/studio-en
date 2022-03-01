@@ -343,6 +343,8 @@
       url: /interactivity/managing-group-members.html
     - name: Using Templates
       url: /interactivity/using-templates.html
+    - name: Terminology
+      url: /interactivity/terminology.html
 - section:
   name: Marketing Automation
   url: /campaign/index.html
