@@ -1595,6 +1595,16 @@
       
         <url>
           
+            <loc>https://studio.support.brightcove.com/interactivity/embedding-form-video.html</loc>
+          
+            <lastmod>2022-03-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
             <loc>https://studio.support.brightcove.com/interactivity/getting-started-interactivity.html</loc>
           
             <lastmod>2022-03-01</lastmod>
@@ -1625,7 +1635,7 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/interactivity/using-templates.html</loc>
+            <loc>https://studio.support.brightcove.com/interactivity/terminology.html</loc>
           
             <lastmod>2022-03-01</lastmod>
             <changefreq>daily</changefreq>
@@ -1635,7 +1645,7 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/interactivity/terminology.html</loc>
+            <loc>https://studio.support.brightcove.com/interactivity/using-templates.html</loc>
           
             <lastmod>2022-03-01</lastmod>
             <changefreq>daily</changefreq>
