@@ -71,47 +71,7 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/training/training-demand-introduction-video-cloud-analytics.html</loc>
-          
-            <lastmod>2022-03-03</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/training/training-demand-introduction-video-cloud.html</loc>
-          
-            <lastmod>2022-03-03</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/training/training-demand-video-cloud-basics.html</loc>
-          
-            <lastmod>2022-03-03</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
             <loc>https://studio.support.brightcove.com/get-started/video-cloud-glossary.html</loc>
-          
-            <lastmod>2022-03-03</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/training/video-cloud-studio-training-videos.html</loc>
           
             <lastmod>2022-03-03</lastmod>
             <changefreq>daily</changefreq>
@@ -284,6 +244,79 @@
           <url>
             
               <loc>https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-viewing-brightcove-system-status-page.html</loc>
+            
+            <lastmod>2022-03-03</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
+            <loc>https://studio.support.brightcove.com/get-started/training/index.html</loc>
+          
+            <lastmod>2022-03-03</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/get-started/training/online-training-courses.html</loc>
+            
+            <lastmod>2022-03-03</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/get-started/training/register-training.html</loc>
+            
+            <lastmod>2022-03-03</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/get-started/training/training-demand-introduction-video-cloud.html</loc>
+            
+            <lastmod>2022-03-03</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/get-started/training/training-demand-introduction-video-cloud-analytics.html</loc>
+            
+            <lastmod>2022-03-03</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/get-started/training/training-demand-video-cloud-basics.html</loc>
+            
+            <lastmod>2022-03-03</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/get-started/training/video-cloud-studio-training-videos.html</loc>
+            
+            <lastmod>2022-03-03</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/get-started/training/brightcove-university.html</loc>
             
             <lastmod>2022-03-03</lastmod>
             <changefreq>daily</changefreq>
