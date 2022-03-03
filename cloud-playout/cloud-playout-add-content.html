@@ -78,6 +78,7 @@ parent: Cloud Playout
           <img class="bcls-image" src="/assets/images/cloud-playout/newly-added-videos.png" alt="Added Videos">
           <figcaption class="bcls-caption--image">Added Videos</figcaption>
         </figure>
+        <p>Note that start and end times are automatically calculated from the video durations. You can drag and drop videos in the list to reorder them, and the start/end times will be automatically adjusted.</p>
       </li>
     </ol>
     <aside class="bcls-aside bcls-aside--information language-editable">
@@ -97,6 +98,7 @@ parent: Cloud Playout
 			<li>A <strong>snapshot</strong> of the playlist in its current state will be imported (meaning that future changes to the playlist will <strong>not</strong> be reflected in the channel contents).</li>
 			<li>Only one playlist can be imported at a time.</li>
 			<li>If the imported playlist contains a Live event, an identical new Live event with same name, description & duration will be created. This is because a Live event always shares an 1:1 relationship with the channel.</li>
+			<li>The videos in the playlist will be added <strong>to the end</strong> of the current channel program.</li>
 			<li>You can add VOD content as well as playlists, and duplicates are allowed.</li>
 			<li>There is a validation check on the total asset limit (1000). If the import will exceed 1000 asset limit, the import will fail.</li>
       <li>If Live input is not enabled for the channel, you can still import a playlist that includes Live events in it by choosing to exclude the Live events from import.</li>
@@ -113,6 +115,19 @@ parent: Cloud Playout
         </figure>
         <aside class="bcls-aside bcls-aside--information language-editable">If no video is selected to define the insertion point, new videos will be added to the end of the program.</aside>
       </li>
+			<li>There is a validation check on the total asset limit (100). If the import will exceed 100 asset limit, the import will fail.</li>
+			<li>
+				<aside class="bcls-aside bcls-aside--information">Note: If Live input is not enabled for the channel, you can still import a playlist that includes Live events in it by choosing to exclude the Live events from import.</aside>
+			</li>
+			<li>
+				<aside class="bcls-aside bcls-aside--information">Note: If this is an SSAI-enabled channel, live events are not allowed. You can still import a playlist that includes Live events in it by choosing to exclude the Live events from import.</aside>
+			</li>
+			<li>
+				<aside class="bcls-aside bcls-aside--information">Note: Only the eligible assets with an MP4 rendition will be allowed. A warning indicates what assets will be ineligible for import - upon confirmation, only the eligible assets will be imported.</aside>
+			</li>
+		</ul>
+		<h3>Add playlist steps</h3>
+		<ol class="bcls-tasklist-restart">
 			<li>Click <span class="button-blue">Import Playlists</span>.</li>
 			<li>Click <span class="blue-button">Import</span> for the playlist you want to import.</li>
 			<li>If messages appear indicating that some items in the playlist cannot be imported, click <span class="blue-button">Proceed</span> if you want to import the supported videos.</li>
@@ -160,6 +175,7 @@ parent: Cloud Playout
             <figcaption class="bcls-caption--image">Live Event Added</figcaption>
           </figure>
         </li>
+        <li>You can drag live events to reorder the list just as you can videos. You can also use the <img src="/assets/images/cloud-playout/cloudplayout-quick-edit.png" alt="quick edit" class="ui-image"> button to modify the duration of a live event.</li>
     </ol>
 	</section>
 
