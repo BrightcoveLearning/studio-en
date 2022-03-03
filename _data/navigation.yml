@@ -29,41 +29,41 @@
       url: /basics/index.html
       docs:
         - name: Activating and Deactivating a Video
-          url: /basics/video-cloud-basics-activating-and-deactivating-video.html
+          url:  /get-started/basics/video-cloud-basics-activating-and-deactivating-video.html
         - name: Adding a User to a Video Cloud Account
-          url: /basics/video-cloud-basics-adding-user-video-cloud-account.html
+          url:  /get-started/basics/video-cloud-basics-adding-user-video-cloud-account.html
         - name: Capturing Video Poster & Thumbnail Images
-          url: /basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html
+          url:  /get-started/basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html
         - name: Creating a Manual Playlist
-          url: /basics/video-cloud-basics-creating-manual-playlist.html
+          url:  /get-started/basics/video-cloud-basics-creating-manual-playlist.html
         - name: Creating a Player
-          url: /basics/video-cloud-basics-creating-player.html
+          url:  /get-started/basics/video-cloud-basics-creating-player.html
         - name: Creating a Playlist Player
-          url: /basics/video-cloud-basics-creating-playlist-player.html
+          url:  /get-started/basics/video-cloud-basics-creating-playlist-player.html
         - name: Creating a Smart Playlist
-          url: /basics/video-cloud-basics-creating-smart-playlist.html
+          url:  /get-started/basics/video-cloud-basics-creating-smart-playlist.html
         - name: Determining How Much of a Video is Watched
-          url: /basics/video-cloud-basics-determining-how-much-video-being-watched.html
+          url:  /get-started/basics/video-cloud-basics-determining-how-much-video-being-watched.html
         - name: Determining Which Videos Have the Most Views
-          url: /basics/video-cloud-basics-determining-which-videos-have-most-views.html
+          url:  /get-started/basics/video-cloud-basics-determining-which-videos-have-most-views.html
         - name: Editing Basic Video Properties
-          url: /basics/video-cloud-basics-editing-basic-video-properties.html
+          url:  /get-started/basics/video-cloud-basics-editing-basic-video-properties.html
         - name: Editing Video Properties for Multiple Videos
-          url: /basics/video-cloud-basics-editing-video-properties-multiple-videos.html
+          url:  /get-started/basics/video-cloud-basics-editing-video-properties-multiple-videos.html
         - name: Organizing Videos Using Folders
-          url: /basics/video-cloud-basics-organizing-videos-using-folders.html
+          url:  /get-started/basics/video-cloud-basics-organizing-videos-using-folders.html
         - name: Publishing a Playlist to the Web
-          url: /basics/video-cloud-basics-publishing-playlist-web.html
+          url:  /get-started/basics/video-cloud-basics-publishing-playlist-web.html
         - name: Publishing a Single Video to the Web
-          url: /basics/video-cloud-basics-publishing-single-video-web.html
+          url:  /get-started/basics/video-cloud-basics-publishing-single-video-web.html
         - name: Styling a Player
-          url: /basics/video-cloud-basics-styling-player.html
+          url:  /get-started/basics/video-cloud-basics-styling-player.html
         - name: Uploading Video Poster & Thumbnail Images
-          url: /basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html
+          url:  /get-started/basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html
         - name: Uploading Videos
-          url: /basics/video-cloud-basics-uploading-videos.html
+          url:  /get-started/basics/video-cloud-basics-uploading-videos.html
         - name: Viewing the Brightcove System Status Page
-          url: /basics/video-cloud-basics-viewing-brightcove-system-status-page.html
+          url:  /get-started/basics/video-cloud-basics-viewing-brightcove-system-status-page.html
 - section:
   name: General Information
   url: /general/index.html
