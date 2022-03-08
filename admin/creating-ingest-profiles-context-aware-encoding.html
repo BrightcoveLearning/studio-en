@@ -15,7 +15,7 @@ description: 'This topic provides an overview of how to create  custom ingest pr
 				<li>If you want to be able to retranscode videos ingested with a custom profile, you <strong>must archive the digital master</strong> (as all standard profiles do). See <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">Archiving Masters</a> for details on how to do this.</li>
 			</ul>
 		</aside>
-    <p>To access the Ingest Profiles administration page, click the  <i data-feather="settings"></i> <strong>Admin</strong>   link and then <strong>Ingest Profiles</strong>. A list of ingest profiles will appear.</p>
+    <p>To access the Ingest Profiles administration page, click the <strong>Admin</strong>   link and then <strong>Ingest Profiles</strong>. A list of ingest profiles will appear.</p>
     <aside class="bcls-aside bcls-aside--information">Note: To access the Ingest Profiles page, you must be a Video Cloud Studio user with the Administrator role.</aside>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node18434-profile-list.png" /></figure>
     <p>Your Video Cloud account will be configured with one or more transcoding options. All Video Cloud accounts are configured with a default set of ingest profiles which can't be edited or deleted. These are marked with a <strong>Type</strong> of <strong>Standard VOD</strong> in the Studio. The <strong>Profile Version</strong> displays the type of transcoding that is used with the profile. For specific details on the renditions provided with the Brightcove supplied ingest profiles, see the appropriate document:</p>
@@ -29,7 +29,7 @@ description: 'This topic provides an overview of how to create  custom ingest pr
     <p>The Ingest Profiles administration page can be used to create new ingest profiles. Ingest profiles are defined using JSON.</p>
     <p>To create a new context aware ingest profile:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Click  <i data-feather="settings"></i> <strong>Admin</strong>  in the Studio header.</li>
+      <li>Click <strong>Admin</strong>  in the Studio header.</li>
       <li>Click  <strong>Ingest Profiles</strong> .</li>
       <li>Click <strong>New Profile &gt; Context Aware</strong>. The profile editor will open.</li>
       <li>Enter a <strong>Name</strong>, <strong>Display Name</strong> and <strong>Description</strong> for the profile.</li>
@@ -61,7 +61,7 @@ description: 'This topic provides an overview of how to create  custom ingest pr
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/node18434-mp4.png" /></figure>
       </li>
       <li>Select the <strong>Audio Renditions</strong> that should be created.</li>
-      <li>Click <strong>Save</strong> to save the new profile.</li>
+      <li>Click <span class="button-blue">Save</span> to save the new profile.</li>
     </ol>
     <aside class="bcls-aside bcls-aside--information">Note that if you require renditions with specific resolutions, it is possible to require that in the profile, but not in Studio. Instead, you will need to use the <a href="http://docs.brightcove.com/ingest-profiles-api/v1/doc/index.html#operation/CreateIngestProfile">Ingest Profiles API</a>.</aside>
     <aside class="bcls-aside bcls-aside--information">Note that requiring renditions is <em>not</em> recommended, as it decreases the efficiency of Context Aware Encoding. If you have several required resolutions, CAE may not be the right option for you.</aside>
@@ -71,12 +71,12 @@ description: 'This topic provides an overview of how to create  custom ingest pr
     <p>If you need to create a profile that is similar to an existing profile, you can duplicate an existing profile and then edit it to make the needed changes.</p>
     <p>To duplicate an ingest profile:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Click  <i data-feather="settings"></i> <strong>Admin</strong>  in the Studio header.</li>
+      <li>Click  <strong>Admin</strong>  in the Studio header.</li>
       <li>Click  <strong>Ingest Profiles</strong>.</li>
       <li>Click on the ingest profile to duplicate.</li>
       <li>Click <strong>Duplicate</strong>.</li>
       <li>Use the Profile Editor to edit the profile name and definition.</li>
-      <li>Click <strong>Save</strong>.</li>
+      <li>Click <span class="button-blue">Save</span>.</li>
     </ol>
   </section>
   <section class="bcls-section">
@@ -84,11 +84,11 @@ description: 'This topic provides an overview of how to create  custom ingest pr
     <p>The Ingest Profiles administration page can be used to edit ingest profiles. Note that the default set of ingest profiles (marked <strong>Standard VOD</strong>) can't be edited.</p>
     <p>To edit an ingest profile:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Click <i data-feather="settings"></i> <strong>Admin</strong>  in the Studio header.</li>
+      <li>Click  <strong>Admin</strong>  in the Studio header.</li>
       <li>Click  <strong>Ingest Profiles</strong>.</li>
       <li>Click on the ingest profile to edit.</li>
       <li>Use the Profile Editor to edit the profile definition.</li>
-      <li>Click <strong>Save</strong>.</li>
+      <li>Click <span class="button-blue">Save</span>.</li>
     </ol>
   </section>
   <section class="bcls-section">
@@ -96,10 +96,10 @@ description: 'This topic provides an overview of how to create  custom ingest pr
     <p>The Ingest Profiles administration page can be used to delete ingest profiles that are no longer needed. Note that the default set of ingest profiles (marked <strong>Standard VOD</strong>) can't be deleted but <a href="#hide">they can be hidden</a> if they are not needed.</p>
     <p>To delete an ingest profile:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Click  <i data-feather="settings"></i> <strong>Admin</strong>  in the Studio header.</li>
+      <li>Click  <strong>Admin</strong>  in the Studio header.</li>
       <li>Click  <strong>Ingest Profiles</strong>. The Ingest Profiles administration page will open displaying the ingest profiles that have been created for your account.</li>
-      <li>Click the delete icon (<img alt="" src="/assets/images/admin/node16840-delete-icon.png" />) next to the ingest profile or click the profile name and then click  <strong>Delete. </strong></li>
-      <li>Confirm the deletion by clicking <strong>Delete Profile</strong>.</li>
+      <li>Click the delete icon (<img alt="" src="/assets/images/admin/node16840-delete-icon.png" />) next to the ingest profile or click the profile name and then click <span class="button-red-text">Delete</span>.</li>
+      <li>Confirm the deletion by clicking <span class="button-red">Delete Profile</span>.</li>
     </ol>
   </section>
   <section class="bcls-section">
@@ -107,7 +107,7 @@ description: 'This topic provides an overview of how to create  custom ingest pr
     <p>All Video Cloud accounts have an uploading default ingest profile. The uploading default ingest profile is indicated with <img alt="" src="/assets/images/admin/node16840-default-button.png" /> next to the profile name.</p>
     <p>To change the default  profile for the account:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Click <i data-feather="settings"></i> <strong>Admin</strong>   in the Studio header.</li>
+      <li>Click <strong>Admin</strong>   in the Studio header.</li>
       <li>Click the <strong>Ingest Profiles</strong> link. The Ingest Profiles administration page will open displaying the ingest profiles that have been created for the account.</li>
       <li>Click the ingest profile name for the profile you want to set as the default.</li>
       <li>Click <strong>Uploading</strong> next to  <strong>Use as default</strong> link at the top of the page.</li>
