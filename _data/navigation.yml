@@ -95,6 +95,8 @@
       url: /general/enabling-longer-videos-youtube.html
     - name: Making Your Video Content Indexable
       url: /general/making-your-video-content-indexable.html
+    - name: Migration of Static Videos to Dynamic Delivery
+      url: /general/migration-dynamic-delivery.html
     - name: Optimal Video Dimensions
       url: /general/optimal-video-dimensions.html
     - name: Overview of Context Aware Encoding
