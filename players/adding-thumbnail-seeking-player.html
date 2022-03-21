@@ -17,6 +17,12 @@ parent: Managing Players
     </div>
     <aside class="bcls-aside bcls-aside--information">Note: This feature is currently not available when using a playlist player.</aside>
     <aside class="bcls-aside bcls-aside--information">Note: Thumbnails on mobile devices are not supported.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: If you build custom implementations on top of the Brightcove Playback API (PAPI) responses, please note the following:
+      <ul>
+        <li>With Server-Side Ad Insertion (SSAI), the thumbnails manifest is located in the VMAP instead of the PAPI response.</li>
+        <li>With non-SSAI, the thumbnails manifest is included in the PAPI response.</li>
+      </ul>
+    </aside>
     <h3>When are thumbnail images generated?</h3>
     <p>Brightcove generates the images dynamically on request. Any video ingested with Dynamic Delivery will have images generated on the first request. This ensures that images are not created for unused videos. Once generated, images are cached locally and on the CDN for repeat viewing, just like any other image.</p>
     <h3>How often are images generated?</h3>
