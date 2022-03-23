@@ -3,4 +3,7 @@
 <Description>Brightcove Technical Support - Search Articles, Tutorials and Videos</Description>
 <Image height="16" width="16" type="image/x-icon">https://support.brightcove.com/favicon-32x32.png</Image>
 <Url type="text/html" method="get" template="https://studio.support.brightcove.com/search.html?q={searchTerms}"/>
+<Url type="application/atom+xml" rel="results" template="https://studio.support.brightcove.com/search.html?q={searchTerms}"/>
+<InputEncoding>UTF-8</InputEncoding>
+<OutputEncoding>UTF-8</OutputEncoding>
 </OpenSearchDescription>
