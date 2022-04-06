@@ -1287,12 +1287,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>To access Video Cloud Studio, navigate to: <a href="https://studio.brightcove.com">https://studio.brightcove.com</a>. Sign in with your email address and password. The home page provides the ability to:</p>
     <ul>
       <li><a href="#notification">View system notifications</a></li>
-      <li><a href="#settings">Manage Video Cloud settings</a></li>
       <li><a href="#account">Select an account and view the user profile</a></li>
       <li><a href="#modules">Access Video Cloud modules</a></li>
+      <li><a href="#settings">Manage Video Cloud settings</a></li>
       <li><a href="#dashboard">View the Video Cloud dashboard</a></li>
     </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node14494-studio-home.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node14494-studio-home2.png" /></figure>
     <p> You can have a maximum of 5 sessions at any time. A session is initiated any time you log in  with the same email address. Once a 6th session is started, the oldest session is invalidated. The Video Cloud Studio session timeout is 24 hours.</p>
   </section>
   <section class="bcls-section">
@@ -1301,8 +1301,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>The Video Cloud Studio header will display a warning icon <img alt="" src="/assets/images/get-started/node14494-system-issue-icon.png" /> when there are system issues. Clicking the icon will open the Brightcove System Status page.</p>
   </section>
   <section class="bcls-section">
+    <h2 id="account">Selecting an account</h2>
+    <p>If you have access to multiple Video Cloud accounts, the Video Cloud account selector can be used to select the Video Cloud account you want to access. To switch accounts, click on the <strong>Profile</strong> icon in the top right corner of Video Cloud Studio. The current account appears above the account list.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node14494-select-account2.png" /></figure>
+    <p>Click the <strong>My Profile</strong> link to update your user information and password. For more information, see <a href="/admin/managing-profile-information.html">Managing Profile Information</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="modules">Accessing modules</h2>
+    <p>The Video Cloud Studio primary navigation provides access to the Studio modules.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node14494-nav-header2.png" /></figure>
+    <p>Note that the modules that you have access to are based upon your Video Cloud subscription and user profile.</p>
+    <ul>
+      <li><a href="/media/uploading-videos-using-upload-module.html">Upload</a> - Upload videos to your Video Cloud account</li>
+      <li><a href="/media/getting-started-media-module.html">Media</a> - Set video properties, organize videos using folders and publish videos</li>
+      <li><a href="https://gallery.support.brightcove.com/get-started/getting-started-brightcove-gallery.html">Gallery</a> - Create video portals for your video content</li>
+      <li><a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html">Live</a> - Create and stream live events</li>
+      <li><a href="/cloud-playout/cloud-playout-overview.html">Cloud Playout</a> - Create live linear channels for videos</li>
+      <li><a href="/social/getting-started-brightcove-social.html">Social</a> - Distribute videos to social media accounts</li>
+      <li><a href="/analytics/getting-started-analytics-module.html">Analytics</a> - View analytics on video and player performance</li>
+      <li><a href="/players/getting-started-players-module.html">Players</a> - Create and style players and generate publishing code for players</li>
+      <li><a href="/campaign/index.html">Campaign</a> - Connects video analytics from Video Cloud to marketing automation platforms</li>
+    </ul>
+    The <strong>Marketplace</strong> icon will open the Brightcove Marketplace in a new browser tab. The Brightcove Marketplace contains integrations and applications that extend the capabilities of the Brightcove platform.</section>
+  <section class="bcls-section">
+    <h2 id="dashboard">Viewing the dashboard</h2>
+    <p>The Video Cloud Studio home page displays the Video Cloud dashboard. The dashboard contains a series of "cards" which provide high level metrics on the videos in your account. The following cards are available:</p>
+    <ul>
+      <li><strong>Video views</strong> - Displays number of video views per day for the time period selected. Clicking the <strong>See Video View Details</strong> link will open the Performance Report where you can view video performance.</li>
+      <li><strong>Account summary</strong> - Displays total number of videos and players in the account and the number of recently created and updated videos. Clicking on a number will open the Media or Players module.</li>
+      <li><strong>Device type</strong> - Displays type of devices used to watch videos for the time period selected. Clicking the <strong>See Video Views by Device Type</strong> link will open the Performance Report where you can view video performance by device type.</li>
+      <li><strong>What's new?</strong> - Displays Video Cloud product updates. For a complete list of updates, see the <a href="/release-notes/video-cloud-studio-release-notes.html">Video Cloud Studio Release Notes</a>.</li>
+      <li><strong>Top trending videos</strong> - Displays videos with the most views for the time period selected. Clicking the card title link will open the Performance Report where you can view video performance.</li>
+      <li><strong>Viewing regions</strong> - Displays viewer locations for the time period selected. Clicking <strong>See Video Views by Country</strong> will open the Performance Report where you can view video views by country.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
     <h2 id="settings">Managing settings</h2>
-    <p>The Video Cloud Studio settings menu can be accessed from the <strong>ADMIN</strong> menu. The Video Cloud ADMIN menu provides access to:</p>
+    <p>The Video Cloud Studio settings can be accessed by clicking the <strong>Admin</strong> icon <i data-feather="settings"></i> in the primary navigation. The Video Cloud Admin menu provides access to:</p>
     <ul>
       <li><a href="/admin/managing-account-settings.html#account_info">Account Information</a> - View information about the current Video Cloud account</li>
       <li><a href="/admin/managing-users.html">Manage Users</a> - Manage the users who are authorized to use Video Cloud Studio</li>
@@ -1320,42 +1355,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><a href="/admin/managing-api-authentication-credentials.html">API Authentication</a> - Create and manage API credentials</li>
       <li><a href="/admin/viewing-billing-information.html">Billing</a> - View billing information for the account</li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: You must be an account administrator to have access to the ADMIN menu.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="account">Selecting an account</h2>
-    <p>If you have access to multiple Video Cloud accounts, the Video Cloud account selector can be used to select the Video Cloud account you want to access. To switch accounts, click on your <strong>name - account</strong> in the top right corner of Video Cloud Studio. The current account is indicated with a dot preceding the account name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node14494-select-account.png" /></figure>
-    <p>Click the <strong>My Profile</strong> link to update your user information and password. For more information, see <a href="/admin/managing-profile-information.html">Managing Profile Information</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="modules">Accessing modules</h2>
-    <p>The Video Cloud Studio menu provides access to the Studio modules. Access the menu by clicking <strong>HOME</strong>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node14494-nav-header.png" /></figure>
-    <p>Note that the modules that display are based upon your Video Cloud subscription and user profile.</p>
-    <ul>
-      <li><a href="/media/uploading-videos-using-upload-module.html">Upload</a> - Upload videos to your Video Cloud account</li>
-      <li><a href="/media/getting-started-media-module.html">Media</a> - Set video properties, organize videos using folders and publish videos</li>
-      <li><a href="/analytics/getting-started-analytics-module.html">Analytics</a> - View analytics on video and player performance</li>
-      <li><a href="/players/getting-started-players-module.html">Players</a> - Create and style players and generate publishing code for players</li>
-      <li><a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html">Live</a> - Create and stream live events</li>
-      <li><a href="/cloud-playout/cloud-playout-overview.html">Cloud Playout</a> - Create live linear channels for videos</li>
-      <li><a href="https://gallery.support.brightcove.com/get-started/getting-started-brightcove-gallery.html">Gallery</a> - Create video portals for your video content</li>
-      <li><a href="/social/getting-started-brightcove-social.html">Social</a> - Distribute videos to social media accounts</li>
-      <li><a href="/campaign/index.html">Campaign</a> - Connects video analytics from Video Cloud to marketing automation platforms</li>
-    </ul>
-    The <strong>Marketplace</strong> link will open the Brightcove Marketplace in a new browser tab. The Brightcove Marketplace contains integrations and applications that extend the capabilities of the Brightcove platform.</section>
-  <section class="bcls-section">
-    <h2 id="dashboard">Viewing the dashboard</h2>
-    <p>The Video Cloud Studio home page displays the Video Cloud dashboard. The dashboard contains a series of "cards" which provide high level metrics on the videos in your account. The following cards are available:</p>
-    <ul>
-      <li><strong>Video views</strong> - Displays number of video views per day for the time period selected. Clicking the <strong>See Video View Details</strong> link will open the Performance Report where you can view video performance.</li>
-      <li><strong>Account summary</strong> - Displays total number of videos and players in the account and the number of recently created and updated videos. Clicking on a number will open the Media or Players module.</li>
-      <li><strong>Device type</strong> - Displays type of devices used to watch videos for the time period selected. Clicking the <strong>See Video Views by Device Type</strong> link will open the Performance Report where you can view video performance by device type.</li>
-      <li><strong>What's new?</strong> - Displays Video Cloud product updates. For a complete list of updates, see the <a href="/release-notes/video-cloud-studio-release-notes.html">Video Cloud Studio Release Notes</a>.</li>
-      <li><strong>Top trending videos</strong> - Displays videos with the most views for the time period selected. Clicking the card title link will open the Performance Report where you can view video performance.</li>
-      <li><strong>Viewing regions</strong> - Displays viewer locations for the time period selected. Clicking <strong>See Video Views by Country</strong> will open the Performance Report where you can view video views by country.</li>
-    </ul>
+    <aside class="bcls-aside bcls-aside--information">Note: You must be an account administrator to have access to the Admin settings.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="localization">Localization</h2>
