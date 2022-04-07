@@ -9,14 +9,6 @@
       url: /get-started/getting-started-video-cloud-studio.html
     - name: Getting Started with your Video Cloud Trial
       url: /get-started/getting-started-your-video-cloud-trial.html
-    - name: Navigating the Brightcove Support Site
-      url: /get-started/navigating-brightcove-support-site.html
-    - name: Quick Start to Video Cloud
-      url: /get-started/quick-start-video-cloud.html
-    - name: 'Step-by-Step:  Video Cloud Publishing Workflow'
-      url: /get-started/step-step-video-cloud-studio-publishing-workflow.html
-    - name: Video Cloud Glossary
-      url: /get-started/video-cloud-glossary.html
     - name: Learn the Basics
       url:  /get-started/basics/index.html
       docs:
@@ -56,6 +48,15 @@
           url:  /get-started/basics/video-cloud-basics-uploading-videos.html
         - name: Viewing the Brightcove System Status Page
           url:  /get-started/basics/video-cloud-basics-viewing-brightcove-system-status-page.html
+
+    - name: Navigating the Brightcove Support Site
+      url: /get-started/navigating-brightcove-support-site.html
+    - name: Quick Start to Video Cloud
+      url: /get-started/quick-start-video-cloud.html
+    - name: 'Step-by-Step:  Video Cloud Publishing Workflow'
+      url: /get-started/step-step-video-cloud-studio-publishing-workflow.html
+    - name: Video Cloud Glossary
+      url: /get-started/video-cloud-glossary.html
     - name: Training
       url:  /get-started/training/index.html
       docs:
