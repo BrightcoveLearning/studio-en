@@ -7,13 +7,15 @@ parent: Managing Videos
   <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-    <p>The default look and feel of the captions is subject to change so you may wish to style the captions. There are a few ways that captions can be styled:</p>
+    <p>The default look and feel of the captions is subject to change so you may wish to style the captions. When styling captions, be cautious to preserve <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=122#contrast-minimum" title="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=122#contrast-minimum">adequate color contrast to meet WCAG accessibility guidelines</a> and consider  end viewers when making styling changes. </p>
+    <p>There are a few ways that captions can be styled:</p>
     <ul>
       <li><a href="#infile">By adding styling options to the WebVTT file</a></li>
       <li><a href="#css">By creating a custom class in a CSS file</a></li>
       <li><a href="#cssguide">CSS style guide</a></li>
       <li><a href="#user">User styling options</a></li>
     </ul>
+    <aside class="bcls-aside bcls-aside--information">Note:  Never use <code>!important</code> or any other CSS tricks to override user preferences (those set in the Captions Settings dialog).</aside>
     <aside class="bcls-aside bcls-aside--information">Note:  Safari uses native captions on the device and the device settings take precedence over vtt styles.</aside>
   </section>
   <section class="bcls-section">
