@@ -1,10 +1,9 @@
-<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:sfdc="http://salesforce.com/2006/federatedsearch/1.0">
 <ShortName>Brightcove Support</ShortName>
 <Description>Brightcove Technical Support - Search Articles, Tutorials and Videos</Description>
 <Image height="16" width="16" type="image/x-icon">https://support.brightcove.com/favicon-32x32.png</Image>
-<Url type="text/html" method="get" template="https://studio.support.brightcove.com/search.html?q={searchTerms}"/>
-<Url type="application/atom+xml" rel="results" template="https://studio.support.brightcove.com/search.html?q={searchTerms}"/>
-<Url type="application/json" rel="results" template="https://studio.support.brightcove.com/search.html?q={searchTerms}"/>
+<Url type="application/atom+xml" sfdc:maxTotalResults="100" sfdc:maxCount="10" template="https://www.googleapis.com/customsearch/v1?key=AIzaSyCMZKqPrFp8iPQs6CTiJ-_Oqs7MI7fdSYQ&alt=atom&cx=065727fc8a1cea079&q={searchTerms}&start={startIndex?}&num={count?}"/>
 <InputEncoding>UTF-8</InputEncoding>
 <OutputEncoding>UTF-8</OutputEncoding>
+<sfdc:Version>1</sfdc:Version>
 </OpenSearchDescription>
