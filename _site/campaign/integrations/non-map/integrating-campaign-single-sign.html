@@ -1311,6 +1311,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><a href="#player">Create a Campaign-enabled player</a></li>
       <li><a href="#viewdata">View video data</a></li>
     </ol>
+    <aside class="bcls-aside bcls-aside--information">Note: Campaign lead forms are not supported when using  SSO connections. If you create your own custom lead form to collect viewer information,  the data submitted through the form will not be stored or available through the Audience API or the Campaign Module. Custom Lead Forms and their data are only submitted to the system they are built to work for.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="sso">Configuring SSO software</h2>
@@ -1360,7 +1361,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <li><strong>Disabled</strong> - No data is collected (integration is disabled)</li>
         </ul>
       </li>
-      <li>Select a data retention policy. The data retention policy determines how long the viewing data and lead form data (if using a Campaign lead form) will be retained in your Video Cloud account. <strong>You should adjust the retention settings according to your privacy policy</strong>.
+      <li>Select a data retention policy. The data retention policy determines how long the viewing data  will be retained in your Video Cloud account. <strong>You should adjust the retention settings according to your privacy policy</strong>.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="data retention options" src="/assets/images/campaign/general/node18363-data-retention-options.png" /></figure>
       </li>
     </ol>
