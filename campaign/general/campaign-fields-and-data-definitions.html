@@ -94,9 +94,44 @@ parent: General Information
     </table>
   </section>
   <section class="bcls-section">
-    <h2 id="custom">Custom fields</h2>
-    <p>These fields are not automatically populated. You have the option to sync reference ID, tags or custom fields to your MAP or CRM via these fields. To set this up please <a href="https://supportportal.brightcove.comlanguage=en_US/create">contact support</a> and request, for example: “Please map my Video Cloud field “tags” to the Campaign “custom_1” field.”</p>
-    <table width="99%" class="bcls-table">
+    <h2 id="custom">Optional field tracking</h2>
+    <p data-renderer-start-pos="758">You may want to use this feature if you want to send additional data to a third-party MAP without the use of additional JavaScript to leverage Campaign's <a href="/campaign/general/using-custom-metrics-and-events.html">client-side API for custom metric tracking</u></a>.</p>
+    <p data-renderer-start-pos="958">Once enabled, every event call logged from a Campaign-enabled player will also include the key/value pairs for the video metadata requested.</p>
+    <h3>Important Caveats</h3>
+    <ul>
+      <li>This feature is currently only supported for Eloqua integrations (it's possible that more third-party integrations could be supported in the future)</li>
+      <li>This feature can <strong>only</strong> be used for tracking the following types of metadata:
+        <ul>
+          <li>Video Reference ID</li>
+          <li>A comma-delimited list of video tags</li>
+          <li>Video custom metadata fields</li>
+        </ul>
+      </li>
+      <li>Up to 3 values can be set up for this type of tracking</li>
+      <li>Once this setup has been completed, Brightcove is unable to remove or modify the custom objects sent to your third-party MAP. In other words, this is a one-time set-up which cannot be reversed at this time.</li>
+      <li>This data will <strong>not</strong> be available through the Campaign module</li>
+      <li>This data will <strong>not</strong> be available through the Audience API</li>
+      <li>This data does appear in exported View Events reports</li>
+    </ul>
+    <h3>How to request this feature</h3>
+    <p>To set this up please <a href="https://supportportal.brightcove.com/">contact Brightcove Support</a> and request that you'd like to &quot;<strong>enable a MAP integration for automatic video metadata tracking</strong>&quot;. Please review the above caveats and include the following in your request:</p>
+    <ul>
+      <li>Your Brightcove Account ID</li>
+      <li>The ID of the Eloqua data integration you'd like to enable this on
+        <ul>
+          <li>Optional fields are set up on an integration-by-integration basis. Since it's possible to have more than one integration on your account, Brightcove will need to know the ID of the integration it should be enabled on.</li>
+        </ul>
+      </li>
+      <li>Up to 3 fields you&rsquo;d like to enable. This must be one or a combination of the following:
+        <ul>
+          <li>Reference ID</li>
+          <li>Tags</li>
+          <li>Internal name of an existing video custom metadata field on your account</li>
+        </ul>
+      </li>
+    </ul>
+    <p>Once you provide this request to Customer Support, no further work is required on your end to enable this in Eloqua. After Customer Support confirms that the optional fields have been enabled and View Events have been sync'd, you should start to see these additional fields being automatically be added to your BrightcoveVideoView Custom Object in Eloqua.</p>
+    <!--<table width="99%" class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
           <th width="12%" style="width: 24%;">Field</th>
@@ -109,6 +144,6 @@ parent: General Information
           <td valign="top"><p>Custom events</p></td>
         </tr>
       </tbody>
-    </table>
+    </table>--> 
   </section>
 </article>
