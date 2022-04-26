@@ -1307,13 +1307,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
 	<section class="bcls-section">
 		<h2 id="overview">Overview</h2>
-		<p>Mid-roll ad insertions depend on cuepoints created for the video either through Studio or the CMS API. Cloud Playout imports the cuepoint data for the videos in the channel and sets mid-roll ad insertion points based on them. For information on how to add cuepoints, see <a href="/media/working-cue-points-media-module.html">Working with Cue Points in the Media Module</a> </p>
+		<p>Mid-roll ad insertions depend on cuepoints created for the video either through Studio or the CMS API. Cloud Playout imports the cuepoint data for the videos in the channel and sets mid-roll ad insertion points based on them. For information on how to add cuepoints, see <a href="/media/working-cue-points.html">Working with Cue Points</a>.</p>
 	</section>
 	<section class="bcls-section">
 		<h2 id="Enabling_mid-roll_ad_cuepoints">Enabling mid-roll ad cuepoints</h2>
 		<p>Import of cuepoints for mid-roll ads can be enabled or disabled when you create the channel, or any time after that, regardless of the state of the channel:</p>
 		<figure class="bcls-figure">
-			<img class="bcls-image" src="/assets/images/cloud-playout/new-channel-with-ssai.png" alt="Enable Mid-Roll Ads">
+			<img class="bcls-image" src="/assets/images/s-cloudplayout-img/new-channel-with-ssai.png" alt="Enable Mid-Roll Ads">
 			<figcaption class="bcls-caption--image">Enable Mid-Roll Ads</figcaption>
 		</figure>
 	</section>
@@ -1327,7 +1327,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 				The default duration for mid-roll is 30 seconds. This can be changed in the channel settings: minimum duration: 30 seconds; maximum duration: 10 minutes.
 				<p>The duration of mid-roll slots can be changed at any time, regardless of the channel state:</p>
 				<figure class="bcls-figure">
-					<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-cuepoints-running-state.png" alt="Edit Mid-Roll Slot Duration (RUNNING State)">
+					<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-cuepoints-running-state.png" alt="Edit Mid-Roll Slot Duration (RUNNING State)">
 					<figcaption class="bcls-caption--image">Edit Mid-Roll Slot Duration (RUNNING State)</figcaption>
 				</figure>
 				<aside class="bcls-aside bcls-aside--information">Notes:
@@ -1338,12 +1338,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 					</ul>
 					</aside>
 			</li>
-			<li>Mid-roll ads can only be inserted in VOD content, not in ad placeholders for <a href="/cloud-playout/adding-bumpers-to-vod.html">bumpers</a> or <a href="/cloud-playout/enabling-server-side-ads.html">pre-roll and post-roll ads</a>. For Live streams, all ad insertion is handled through SCTE-35 cuepoints.</li>
+			<li>Mid-roll ads can only be inserted in VOD content, not in ad placeholders for <a href="/cloud-playout/adding-bumpers-to-vod.html">bumpers</a> or <a href="/cloud-playout/enabling-server-side-ads.html">pre-roll and post-roll ads</a>.</li>
 			<li>The start and end times, and the duration of assets in the program in the Cloud Playout UI and in the EPG, will reflect the mid-roll ad content.</li>
 			<li>
 				Importing cuepoint data for mid-roll ads can be enabled or disabled at any time, regardless of the current state of the channel.
 				<figure class="bcls-figure">
-					<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-cuepoints-running-state.png" alt="Enable/Disable Mid-Rolls while Running">
+					<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-cuepoints-running-state.png" alt="Enable/Disable Mid-Rolls while Running">
 					<figcaption class="bcls-caption--image">Enable/Disable Mid-Rolls while Running</figcaption>
 				</figure>
 				<p><strong>Notes</strong></p>
@@ -1363,17 +1363,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 		<h2 id="Identify assets with mid-rolls">Identify assets with mid-rolls</h2>
 		<p>If mid-roll cuepoint import has been enabled, videos with valid mid-roll cuepoints will have a green dotted icon next to the video title in the program:</p>
 		<figure class="bcls-figure">
-			<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-assets-with-midroll.png" alt="Videos with Mid-Roll Cuepoints">
+			<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-assets-with-midroll.png" alt="Videos with Mid-Roll Cuepoints">
 			<figcaption class="bcls-caption--image">Videos with Mid-Roll Cuepoints</figcaption>
 		</figure>
 		<p>If the channel is in a <strong>DRAFT</strong> state, you can hover the mouse over the green dotted icon to reveal the mid-roll details:</p>
 		<figure class="bcls-figure">
-			<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-draft-state.png" alt="Reveal Mid-Roll Details - DRAFT State">
+			<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-draft-state.png" alt="Reveal Mid-Roll Details - DRAFT State">
 			<figcaption class="bcls-caption--image">Reveal Mid-Roll Details - DRAFT State</figcaption>
 		</figure>
 		<p>If the channel is in a <strong>RUNNING</strong> state, you can click the green dotted icon to reveal the mid-roll details:</p>
 		<figure class="bcls-figure">
-			<img class="bcls-image" src="/assets/images/cloud-playout/mid-roll-running-state.png" alt="Reveal Mid-Roll Details - RUNNING State">
+			<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-running-state.png" alt="Reveal Mid-Roll Details - RUNNING State">
 			<figcaption class="bcls-caption--image">Reveal Mid-Roll Details - DRAFT State</figcaption>
 		</figure>
 	</section>
