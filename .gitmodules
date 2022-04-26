@@ -17,6 +17,8 @@
 [submodule "_includes/s-social"]
 	path = _includes/s-social
 	url = https://github.com/BrightcoveLearning/s-social
+  brach = main
 [submodule "assets/images/s-social-img"]
 	path = assets/images/s-social-img
 	url = https://github.com/BrightcoveLearning/s-social-img
+  branch = main
