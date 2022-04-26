@@ -9,7 +9,7 @@
 [submodule "_includes/s-cloudplayout"]
 	path = _includes/s-cloudplayout
 	url = https://github.com/BrightcoveLearning/s-cloudplayout
-  brach = main
+  branch = main
 [submodule "assets/images/s-cloudplayout-img"]
 	path = assets/images/s-cloudplayout-img
 	url = https://github.com/BrightcoveLearning/s-cloudplayout-img
