@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic you will learn how to work with 360-degree videos in Video Cloud.">
+  <meta name="description" content="In this topic you will learn how to work with 360-degree videos in {{ site.product_short }}.">
   
   <title>Working with 360° Videos</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -1333,7 +1333,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </style>
   <section class="bcls-section">
     <h1>Working with 360° Videos</h1>
-    <summary>In this topic you will learn how to work with 360-degree videos in Video Cloud.</summary>
+    <summary>In this topic you will learn how to work with 360-degree videos in {{ site.product_short }}.</summary>
     <p>360° videos are video recordings where a view in every direction is recorded at the same time. 360° videos are shot using an omnidirectional camera or a collection of cameras. During playback the viewer has control of the viewing direction like a panorama.</p>
     <p>Video Cloud supports uploading and publishing of 360° videos. A sample 360° video is shown below. Once you play the video, you can use  your mouse to control the view on the desktop, or the gyroscope if viewing on a mobile device.</p>
     <video-js data-video-id="5269424457001" data-account="1752604059001" data-player="Sy6GVYJz" data-embed="default" data-application-id="" class="video-js" controls="" width="300" height="150" playsinline="">&nbsp;</video-js>
@@ -1359,7 +1359,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="upload">Uploading 360° videos</h2>
     <p>360° video is filmed to be projected on the interior of a sphere. This means that the visible area of the video in the player is only a fraction of the entire video. The following screenshot gives you a rough idea of this concept. The area inside the red rectangle is what is visible in the player, but it is only a small part of the entire video.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="player view" src="/assets/images/general/node16784-player-view.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="player view" src="/assets/images/s-general-img/node16784-player-view.png" /></figure>
     <p>Since only a small part of the video will be in the player at any one time, you want a very high quality rendition to be playing, with no chance of a lower quality rendition appearing. In essence, you are "zooming in" on part of the video and a poor quality rendition would yield a very poor quality viewing experience. When uploading your video, Brightcove recommends creating a custom Dynamic Delivery ingest profile with a single 1080p rendition and at least one audio rendition.</p>
     <aside class="bcls-aside bcls-aside--information">Note: For information on creating custom ingest profiles, see <a href="/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a>. Some care should be taken as mobile devices sometimes have fixed bitrate and resolution limits. Some old mobile devices may fail to play 360° videos higher than 1080p.</aside>
   </section>
