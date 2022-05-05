@@ -1,15 +1,10 @@
----
-title: TLS for Media, Player, and API URLs
-description: This topic explains Brightcove's support of TLS and HTTPS for secure delivery of online media.
-parent: General Information
----
 <article class="bcls-article">
   <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
     <h2>Introduction</h2>
     <p>Transport Layer Security (TLS) protects data transferred over the internet by encrypting it. (TLS replaced an earlier cryptographic protocol called SSL.) The process is largely transparent to users. Data delivered over the web can be delivered with or without encryption, so it is up to the client (a browser, for example) to signal to servers that data should be encrypted. This is usually done by using the HTTPS protocol for URLs instead of HTTP.</p>
-    <p>Video Cloud supports TLS for all media delivery on these terms:</p>
+    <p>{{ site.product_short }} supports TLS for all media delivery on these terms:</p>
     <ul>
       <li>Those using Brightcove CDNs can <a href="https://supportportal.brightcove.com">Contact Brightcove Support</a> to have their accounts configured for either <strong>HTTPS + HTTP</strong> delivery of data, or for <strong>HTTPS-only</strong> delivery.</li>
       <li>Those using other CDNs (sometimes called BYO CDNs) can request these options from their CDN (if they are supported, which is likely).</li>
@@ -21,7 +16,7 @@ parent: General Information
     <p>Following the recommendations of internet security experts, Brightcove change its support for versions of TLS as detailed below.</p>
     <section class="bcls-subsection">
       <h3>What is the change?</h3>
-      <p>Video Cloud is gradually ending support for TLS versions 1.0 or 1.1. Customers using these versions must migrate as soon as possible.</p>
+      <p>{{ site.product_short }} is gradually ending support for TLS versions 1.0 or 1.1. Customers using these versions must migrate as soon as possible.</p>
       <p>Support for TLS 1.0 and 1.1 has been turned off for the:</p>
       <ul>
         <li>Gallery APIs</li>
@@ -37,9 +32,9 @@ parent: General Information
     </section>
     <section class="bcls-subsection">
       <h3>How do I know if our systems are ready for this change?</h3>
-      <p>As TLS 1.0/1.1 are deprecated, connections with the Video Cloud platform will need to use the TLS 1.2 encryption protocol (or later). We expect the impact to be minimal, but there are two areas of risk:</p>
+      <p>As TLS 1.0/1.1 are deprecated, connections with the {{ site.product_short }} platform will need to use the TLS 1.2 encryption protocol (or later). We expect the impact to be minimal, but there are two areas of risk:</p>
       <ol class="bcls-tasklist-restart">
-        <li>You should make sure that all connections to the Video Cloud APIs (e.g., a call from a Python script to the CMS API) are made from platforms that support TLS 1.2 or later. This means that automated processes should be hosted from a compatible platform.</li>
+        <li>You should make sure that all connections to the {{ site.product_short }} APIs (e.g., a call from a Python script to the CMS API) are made from platforms that support TLS 1.2 or later. This means that automated processes should be hosted from a compatible platform.</li>
         <li>Your users may be impacted if they are using an unsupported browser, if they have disabled the relevant encryption protocols, or if they are using an unsupported device.</li>
       </ol>
       <p>In general, the impact should be limited to older devices and browsers that represent a small fraction of our users. Please see below for a sample of unsupported clients and devices.</p>
@@ -101,7 +96,7 @@ parent: General Information
       <ol class="bcls-tasklist-restart">
         <li>Open Internet Explorer.</li>
         <li>From the menu bar, click Tools &gt; Internet Options &gt; Advanced tab:
-          <figure class="bcls-figure"><img class="bcls-image" alt="Internet Explorer Settings" src="/assets/images/general/node18576-IE-dialog.png" />
+          <figure class="bcls-figure"><img class="bcls-image" alt="Internet Explorer Settings" src="/assets/images/s-general-img/node18576-IE-dialog.png" />
             <figcaption class="bcls-caption--image">Internet Explorer Settings.</figcaption>
           </figure>
         </li>
