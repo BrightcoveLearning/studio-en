@@ -127,7 +127,7 @@
     - name: Organizing Videos Using Folders
       url: /media/organizing-videos-using-folders.html
   - name: Captions and Audio Files
-    url: /general/index.html
+    url: /media/index.html
     docs:
     - name: 'Overview: Adding Captions to a Video'
       url: /media/overview-adding-captions-video.html
@@ -196,66 +196,93 @@
   name: Managing Players
   url: /players/index.html
   docs:
+  - name: Using the Players Module
+    url: /players/index.html
+    docs:
+    - name: Getting Started with the Players Module
+      url: /players/getting-started-players-module.html
+    - name: 'Step-by-Step:  Creating and Publishing a Player'
+      url: /publish/step-step-using-players-module-create-and-publish-player.html
+  - name: Player Properties
+    url: /players/index.html
+    docs:
+    - name: Setting Player Properties
+      url: /players/setting-player-properties.html    
+    - name: Setting Player Information Properties
+      url: /players/setting-player-information-properties.html
+    - name: Configuring Player Content Restrictions
+      url: /players/configuring-player-content-restrictions.html
+    - name: Configuring Player Playback Properties
+      url: /players/configuring-player-playback-properties.html
+    - name: Setting the Player Update Mode
+      url: /players/setting-player-update-mode-and-version.html
+  - name: Appearance and Controls
+    url: /players/index.html
+    docs:
     - name: Adding Thumbnail Seeking
       url: /players/adding-thumbnail-seeking-player.html
     - name: Configuring a Player Overlay
       url: /players/configuring-player-overlay-using-overlay-plugin.html
     - name: Configuring a Playlist Endscreen
       url: /players/configuring-playlist-endscreen-using-plugin.html
-    - name: Configuring Adobe Analytics Event Tracking
-      url: /players/configuring-adobe-analytics-event-tracking.html
-    - name: Configuring Google Analytics Event Tracking
-      url: /players/configuring-google-analytics-event-tracking.html
-    - name: Configuring Player Advertising
-      url: /players/configuring-player-advertising-using-players-module.html
-    - name: Configuring Player Content Restrictions
-      url: /players/configuring-player-content-restrictions.html
     - name: Configuring Player Controls
       url: /players/configuring-player-controls.html
     - name: Configuring the Player Endscreen
       url: /players/configuring-player-endscreen.html
     - name: Configuring Player Localization
       url: /players/configuring-player-localization.html
-    - name: Configuring Player Playback Properties
-      url: /players/configuring-player-playback-properties.html
-    - name: Configuring Player Plugins
-      url: /players/configuring-player-plugins.html
     - name: Configuring the Social Properties
       url: /players/configuring-social-properties-player.html
-    - name: Generating Player Embed Code
-      url: /players/generating-player-embed-code.html
-    - name: Getting Started with the Players Module
-      url: /players/getting-started-players-module.html
-    - name: Setting Player Information Properties
-      url: /players/setting-player-information-properties.html
-    - name: Setting Player Properties
-      url: /players/setting-player-properties.html
-    - name: Setting the Player Update Mode
-      url: /players/setting-player-update-mode-and-version.html
     - name: Styling Players
       url: /players/styling-players.html
+  - name: General Information
+    url: /players/index.html
+    docs:
+    - name: Configuring Adobe Analytics Event Tracking
+      url: /players/configuring-adobe-analytics-event-tracking.html
+    - name: Configuring Google Analytics Event Tracking
+      url: /players/configuring-google-analytics-event-tracking.html
+    - name: Configuring Player Advertising
+      url: /players/configuring-player-advertising-using-players-module.html
+    - name: Configuring Player Plugins
+      url: /players/configuring-player-plugins.html
+    - name: Generating Player Embed Code
+      url: /players/generating-player-embed-code.html
 - section:
   name: 'Publishing Videos & Players'
   url: /publish/index.html
   docs:
-    - name: Adding a 3Play Media Interactive Transcript
-      url: /publish/adding-3play-media-interactive-transcript-video.html
+  - name: Publishing
+    url: /publish/index.html
+    docs:
     - name: Adding an Application ID to the Embed Code
       url: /publish/adding-application-id-player-embed-code.html
-    - name: Adding a Player to a Facebook Fan Page
-      url: /publish/adding-brightcove-player-facebook-fan-page.html
     - name: Changing a Video in a Player
       url: /publish/changing-video-player-without-changing-embed-code.html
     - name: Choosing the Correct Embed Code
       url: /publish/choosing-correct-embed-code.html
-    - name: Creating and Publishing High Quality Screencasts
-      url: /publish/creating-and-publishing-high-quality-screencasts.html
+    - name: Publishing a Video to Email
+      url: /publish/publishing-video-email.html
+    - name: Publishing Videos and Playlists
+      url: /publish/publishing-videos-and-playlists-media-module.html
+    - name: Publishing Videos to an In-Page Experience
+      url: /publish/publishing-videos-page-experience.html
+  - name: General Information
+    url: /publish/index.html
+    docs:
     - name: Deep Linking
       url: /publish/deep-linking.html
     - name: Driving Video Views Through Email
       url: /publish/driving-video-views-through-email.html
-    - name: Dynamically Assigning Videos to a Player
-      url: /publish/dynamically-assigning-videos-player.html
+    - name: 'Step-by-Step:  Creating and Publishing a Player'
+      url: /publish/step-step-using-players-module-create-and-publish-player.html
+    - name: Creating and Publishing High Quality Screencasts
+      url: /publish/creating-and-publishing-high-quality-screencasts.html
+  - name: Publishing to third-Party Apps
+    url: /publish/index.html
+    docs:
+    - name: Adding a Player to a Facebook Fan Page
+      url: /publish/adding-brightcove-player-facebook-fan-page.html
     - name: Embedding a Player on a Google Sites Page
       url: /publish/embedding-brightcove-player-google-sites-page.html
     - name: Publishing a Player in a Wordpress Page
@@ -264,14 +291,13 @@
       url: /publish/publishing-brightcove-players-facebook-instant-articles.html
     - name: Publishing Players in Joomla
       url: /publish/publishing-brightcove-players-joomla.html
-    - name: Publishing a Video to Email
-      url: /publish/publishing-video-email.html
-    - name: Publishing Videos and Playlists
-      url: /publish/publishing-videos-and-playlists-media-module.html
-    - name: Publishing Videos to an In-Page Experience
-      url: /publish/publishing-videos-page-experience.html
-    - name: 'Step-by-Step:  Creating and Publishing a Player'
-      url: /publish/step-step-using-players-module-create-and-publish-player.html
+  - name: Advanced Features
+    url: /publish/index.html
+    docs:         
+    - name: Adding a 3Play Media Interactive Transcript
+      url: /publish/adding-3play-media-interactive-transcript-video.html
+    - name: Dynamically Assigning Videos to a Player
+      url: /publish/dynamically-assigning-videos-player.html
     - name: Using Multiple Players on One Page
       url: /publish/using-multiple-players-one-page.html
     - name: Using Reference IDs

@@ -536,7 +536,7 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/general/index.html</loc>
+            <loc>https://studio.support.brightcove.com/media/index.html</loc>
           
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
@@ -841,192 +841,222 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/players/adding-thumbnail-seeking-player.html</loc>
+            <loc>https://studio.support.brightcove.com/players/index.html</loc>
           
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
         
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/getting-started-players-module.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/step-step-using-players-module-create-and-publish-player.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/players/configuring-player-overlay-using-overlay-plugin.html</loc>
+            <loc>https://studio.support.brightcove.com/players/index.html</loc>
           
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
         
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/setting-player-properties.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/setting-player-information-properties.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/configuring-player-content-restrictions.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/configuring-player-playback-properties.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/setting-player-update-mode-and-version.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/players/configuring-playlist-endscreen-using-plugin.html</loc>
+            <loc>https://studio.support.brightcove.com/players/index.html</loc>
           
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
         
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/adding-thumbnail-seeking-player.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/configuring-player-overlay-using-overlay-plugin.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/configuring-playlist-endscreen-using-plugin.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/configuring-player-controls.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/configuring-player-endscreen.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/configuring-player-localization.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/configuring-social-properties-player.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/styling-players.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/players/configuring-adobe-analytics-event-tracking.html</loc>
+            <loc>https://studio.support.brightcove.com/players/index.html</loc>
           
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
         
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/configuring-google-analytics-event-tracking.html</loc>
-          
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/configuring-adobe-analytics-event-tracking.html</loc>
+            
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
-        </url>
+          </url>
         
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/configuring-player-advertising-using-players-module.html</loc>
-          
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/configuring-google-analytics-event-tracking.html</loc>
+            
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
-        </url>
+          </url>
         
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/configuring-player-content-restrictions.html</loc>
-          
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/configuring-player-advertising-using-players-module.html</loc>
+            
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
-        </url>
+          </url>
         
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/configuring-player-controls.html</loc>
-          
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/configuring-player-plugins.html</loc>
+            
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
-        </url>
+          </url>
         
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/configuring-player-endscreen.html</loc>
-          
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/generating-player-embed-code.html</loc>
+            
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/configuring-player-localization.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/configuring-player-playback-properties.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/configuring-player-plugins.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/configuring-social-properties-player.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/generating-player-embed-code.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/getting-started-players-module.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/setting-player-information-properties.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/setting-player-properties.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/setting-player-update-mode-and-version.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/players/styling-players.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
+          </url>
         
       
     
@@ -1039,192 +1069,213 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/publish/adding-3play-media-interactive-transcript-video.html</loc>
+            <loc>https://studio.support.brightcove.com/publish/index.html</loc>
           
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
         
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/adding-application-id-player-embed-code.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/changing-video-player-without-changing-embed-code.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/publishing-video-email.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/publishing-videos-and-playlists-media-module.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/publishing-videos-page-experience.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/publish/adding-application-id-player-embed-code.html</loc>
+            <loc>https://studio.support.brightcove.com/publish/index.html</loc>
           
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
         
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/deep-linking.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/driving-video-views-through-email.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/step-step-using-players-module-create-and-publish-player.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/creating-and-publishing-high-quality-screencasts.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/publish/adding-brightcove-player-facebook-fan-page.html</loc>
+            <loc>https://studio.support.brightcove.com/publish/index.html</loc>
           
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
         
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/adding-brightcove-player-facebook-fan-page.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/embedding-brightcove-player-google-sites-page.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-player-wordpress-page.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-players-facebook-instant-articles.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-players-joomla.html</loc>
+            
+            <lastmod>2022-05-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/publish/changing-video-player-without-changing-embed-code.html</loc>
+            <loc>https://studio.support.brightcove.com/publish/index.html</loc>
           
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
         
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html</loc>
-          
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/adding-3play-media-interactive-transcript-video.html</loc>
+            
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
-        </url>
+          </url>
         
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/creating-and-publishing-high-quality-screencasts.html</loc>
-          
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/dynamically-assigning-videos-player.html</loc>
+            
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
-        </url>
+          </url>
         
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/deep-linking.html</loc>
-          
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/using-multiple-players-one-page.html</loc>
+            
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
-        </url>
+          </url>
         
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/driving-video-views-through-email.html</loc>
-          
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/using-reference-ids.html</loc>
+            
             <lastmod>2022-05-06</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/dynamically-assigning-videos-player.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/embedding-brightcove-player-google-sites-page.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-player-wordpress-page.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-players-facebook-instant-articles.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-players-joomla.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/publishing-video-email.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/publishing-videos-and-playlists-media-module.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/publishing-videos-page-experience.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/step-step-using-players-module-create-and-publish-player.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/using-multiple-players-one-page.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/using-reference-ids.html</loc>
-          
-            <lastmod>2022-05-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
+          </url>
         
       
     
