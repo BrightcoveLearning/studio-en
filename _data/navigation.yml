@@ -306,28 +306,28 @@
   name: Social Sharing
   url: /social/index.html
   docs:
-    - name: Adding a Facebook Like Button to a Player
-      url: /social/adding-facebook-button-brightcove-player.html
+  - name: Getting Started
+    url: /social/index.html
+    docs:
+    - name: Getting Started with Social
+      url: /social/getting-started-brightcove-social.html
     - name: Creating Publishing Destinations
       url: /social/creating-social-media-publishing-destinations.html
+  - name: General Information
+    url: /social/index.html
+    docs:    
+    - name: Adding a Facebook Like Button to a Player
+      url: /social/adding-facebook-button-brightcove-player.html
     - name: Creating a Video Clip
       url: /social/creating-video-clip-using-brightcove-social.html
     - name: Enabling Longer Videos In YouTube
       url: /social/enabling-longer-videos-youtube.html
-    - name: Getting Started with Social
-      url: /social/getting-started-brightcove-social.html
+    - name: Publishing Videos to Social Media
+      url: /social/publishing-videos-social-media-platforms.html
     - name: Publishing a Live Event to Facebook
       url: /social/publishing-live-event-facebook.html
     - name: Publishing a Live Event to YouTube
       url: /social/publishing-live-event-youtube.html
-    - name: Publishing Videos to Social Media
-      url: /social/publishing-videos-social-media-platforms.html
-    - name: Reviewing Social Analytics
-      url: /social/reviewing-social-analytics.html
-    - name: Reviewing Social Engagement Analytics
-      url: /social/reviewing-social-engagement-analytics.html
-    - name: Reviewing Social Views Analytics
-      url: /social/reviewing-social-views-analytics.html
     - name: Setting the Privacy Status for a Video
       url: /social/setting-privacy-status-video.html
     - name: Sharing Videos to Twitter Player Cards
@@ -336,8 +336,24 @@
       url: /social/using-auto-sync-synchronize-videos-social-media-accounts.html
     - name: Viewing Published Videos
       url: /social/viewing-videos-published-social-media.html
-    - name: Social API
-      url: 'https://apis.support.brightcove.com/social/index.html'
+  - name: Reviewing Analytics
+    url: /social/index.html
+    docs:
+    - name: Reviewing Social Analytics
+      url: /social/reviewing-social-analytics.html
+    - name: Reviewing Social Engagement Analytics
+      url: /social/reviewing-social-engagement-analytics.html
+    - name: Reviewing Social Views Analytics
+      url: /social/reviewing-social-views-analytics.html
+  - name: Developers
+    url: /social/index.html
+    docs:
+    - name: 'Quick Start: Social API'
+      url: 'https://apis.support.brightcove.com/social/getting-started/quick-start-social-api.html'
+    - name: Social API Reference
+      url: 'https://apis.support.brightcove.com/social/references/reference.html'
+    - name: 'Social API: Error Reference'
+      url: 'https://apis.support.brightcove.com/social/references/social-api-error-reference.html'
 - section:
   name: Interactivity
   url: /interactivity/index.html
@@ -475,38 +491,53 @@
   name: Reviewing Analytics
   url: /analytics/index.html
   docs:
+  - name: Using the Analytics Module
+    url: /analytics/index.html
+    docs:
+    - name: Getting Started with the Analytics Module
+      url: /analytics/getting-started-analytics-module.html
     - name: Analytics Module UI Glossary
       url: /analytics/analytics-module-ui-glossary.html
+    - name: How to Search for Videos
+      url: /analytics/how-search-videos-analytics-module.html
+    - name: 'FAQ: Analytics Module'
+      url: /analytics/faq-analytics-module.html
+  - name: Analytics Reports
+    url: /analytics/index.html
+    docs:
     - name: Analytics Report Reference
       url: /analytics/analytics-report-reference.html
-    - name: Calculating Video Engagement Score
-      url: /analytics/calculating-video-engagement-score.html
     - name: Creating Custom Analytics Reports
       url: /analytics/creating-custom-analytics-reports.html
     - name: Engagement Report Reference
       url: /analytics/engagement-report-reference.html
-    - name: Exporting Data
-      url: /analytics/exporting-data-analytics-module.html
-    - name: 'FAQ: Analytics Module'
-      url: /analytics/faq-analytics-module.html
-    - name: Getting Started with the Analytics Module
-      url: /analytics/getting-started-analytics-module.html
-    - name: How to Search for Videos
-      url: /analytics/how-search-videos-analytics-module.html
     - name: Managing Scheduled Reports
       url: /analytics/managing-scheduled-reports.html
     - name: Performance Report Reference
       url: /analytics/performance-report-reference.html
-    - name: Reviewing Player Events in Google Analytics
-      url: /analytics/reviewing-player-event-data-google-analytics.html
+  - name: General Information
+    url: /analytics/index.html
+    docs:      
+    - name: Calculating Video Engagement Score
+      url: /analytics/calculating-video-engagement-score.html
+    - name: Exporting Data
+      url: /analytics/exporting-data-analytics-module.html
     - name: SSAI Performance Analytics
       url: /analytics/ssai-performance-data.html
+  - name: Third-Party Analytics
+    url: /analytics/index.html
+    docs:
+    - name: Reviewing Player Events in Google Analytics
+      url: /analytics/reviewing-player-event-data-google-analytics.html
     # - name: Trending Now Report Reference
     #   url: /analytics/trending-now-report-reference.html
 - section:
   name: Administering Accounts
   url: /admin/index.html
   docs:
+  - name: General Information
+    url: /admin/index.html
+    docs:
     - name: Authenticating Studio Users using SSO
       url: /admin/authenticating-studio-users-using-single-sign.html
     - name: Configuring Language Settings
@@ -515,34 +546,37 @@
       url: /admin/configuring-server-side-ad-settings.html
     - name: Creating Custom Metadata Fields
       url: /admin/creating-custom-metadata-fields.html
-    - name: Creating Ingest Profiles for Context Aware Encoding
-      url: /admin/creating-ingest-profiles-context-aware-encoding.html
-    - name: Creating Ingest Profiles for Dynamic Delivery
-      url: /admin/creating-ingest-profiles-dynamic-delivery.html
-    - name: Ingest Profiles Best Practices
-      url: /admin/ingest-profiles-best-practices.html
     - name: Managing Account Information
       url: /admin/managing-account-information.html
     - name: Managing Account Settings
       url: /admin/managing-account-settings.html
     - name: Managing API Authentication Credentials
       url: /admin/managing-api-authentication-credentials.html
-    - name: Managing Ingest Profiles
-      url: /admin/managing-ingest-profiles.html
     - name: Managing Media Sharing Settings
       url: /admin/managing-media-sharing-settings.html
     - name: Managing Playback Rights
       url: /admin/managing-playback-rights.html
     - name: Managing Profile Information
       url: /admin/managing-profile-information.html
-    - name: 'Standard Ingest Profiles (DD & CAE)'
-      url: /admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html
     - name: Managing Users
       url: /admin/managing-users.html
     - name: Using the Directed Migration Tool
       url: /admin/using-directed-migration-tool-migrate-brightcove-smart-players.html
     - name: Viewing Billing Information
       url: /admin/viewing-billing-information.html
+  - name: Managing Ingest Profiles
+    url: /admin/index.html
+    docs:
+    - name: Creating Ingest Profiles for Context Aware Encoding
+      url: /admin/creating-ingest-profiles-context-aware-encoding.html
+    - name: Creating Ingest Profiles for Dynamic Delivery
+      url: /admin/creating-ingest-profiles-dynamic-delivery.html
+    - name: Ingest Profiles Best Practices
+      url: /admin/ingest-profiles-best-practices.html
+    - name: Managing Ingest Profiles
+      url: /admin/managing-ingest-profiles.html
+    - name: 'Standard Ingest Profiles (DD & CAE)'
+      url: /admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html
 - section:
   name: General Information
   url: /general/index.html
