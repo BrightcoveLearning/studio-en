@@ -77,3 +77,7 @@
 	path = assets/images/s-support-img
 	url = https://github.com/BrightcoveLearning/s-support-img
   branch = main
+[submodule "assets/images/s-feather-img"]
+	path = assets/images/s-feather-img
+	url = https://github.com/BrightcoveLearning/s-feather-img
+  branch = main

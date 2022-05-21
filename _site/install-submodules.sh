@@ -21,5 +21,6 @@ git submodule add https://github.com/BrightcoveLearning/s-media-img
 git submodule add https://github.com/BrightcoveLearning/s-analytics-img
 git submodule add https://github.com/BrightcoveLearning/s-general-img
 git submodule add https://github.com/BrightcoveLearning/s-support-img
+git submodule add https://github.com/BrightcoveLearning/s-feather-img
 cd ..
 git submodule update --init --recursive
