@@ -855,6 +855,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/support/known-issues-studio-brightcove-player-and-apis.html",
+      "oldURL": "/known-issues-studio-brightcove-player-and-apis"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/admin/help/language-settings.html",
       "oldURL": "/language-settings"
   },
