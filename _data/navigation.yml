@@ -48,7 +48,6 @@
           url:  /get-started/basics/video-cloud-basics-uploading-videos.html
         - name: Viewing the Brightcove System Status Page
           url:  /get-started/basics/video-cloud-basics-viewing-brightcove-system-status-page.html
-
     - name: Navigating the Brightcove Support Site
       url: /get-started/navigating-brightcove-support-site.html
     - name: Quick Start to Video Cloud
@@ -59,21 +58,6 @@
       url: /get-started/video-cloud-glossary.html
     - name: Training
       url:  /get-started/training/index.html
-      docs:
-        - name: All Online Training Courses
-          url: /get-started/training/online-training-courses.html
-        - name: Register for Instructor-led Training
-          url: /get-started/training/register-training.html
-        - name: 'Introduction to Video Cloud'
-          url: /get-started/training/training-demand-introduction-video-cloud.html
-        - name: 'Introduction to Video Cloud Analytics'
-          url: /get-started/training/training-demand-introduction-video-cloud-analytics.html
-        - name: 'Video Cloud Basics'
-          url: /get-started/training/training-demand-video-cloud-basics.html
-        - name: Video Cloud Studio Training Videos
-          url: /get-started/training/video-cloud-studio-training-videos.html
-        - name: Brightcove University Courses
-          url: /get-started/training/brightcove-university.html
 - section:
   name: Managing Videos
   url: /media/index.html
