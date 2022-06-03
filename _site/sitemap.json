@@ -10,6 +10,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/activating-and-deactivating-video.html",
+      "oldURL": "/activating-and-deactivating-video"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/publish/adding-3play-media-interactive-transcript-video.html",
       "oldURL": "/adding-3play-media-interactive-transcript-video"
   },
@@ -40,12 +45,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/adding-chapters-video.html",
+      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
 
@@ -67,6 +72,11 @@
   {
       "newURL": "https://studio.support.brightcove.com/players/adding-thumbnail-seeking-player.html",
       "oldURL": "/adding-thumbnail-seeking-player"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/adding-user-video-cloud-account.html",
+      "oldURL": "/adding-user-video-cloud-account"
   },
 
   {
@@ -145,6 +155,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/capturing-video-poster-thumbnail-images.html",
+      "oldURL": "/capturing-video-poster-thumbnail-images"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/publish/changing-video-player-without-changing-embed-code.html",
       "oldURL": "/changing-video-player-without-changing-embed-code"
   },
@@ -185,12 +200,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
@@ -360,8 +375,28 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/creating-manual-playlist.html",
+      "oldURL": "/creating-manual-playlist"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/creating-player.html",
+      "oldURL": "/creating-player"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/creating-playlist-player.html",
+      "oldURL": "/creating-playlist-player"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/campaign/integrations/salesforce/creating-salesforce-object-pardot.html",
       "oldURL": "/creating-salesforce-object-pardot"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/creating-smart-playlist.html",
+      "oldURL": "/creating-smart-playlist"
   },
 
   {
@@ -395,6 +430,16 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/determining-how-much-video-being-watched.html",
+      "oldURL": "/determining-how-much-video-being-watched"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/determining-which-videos-have-most-views.html",
+      "oldURL": "/determining-which-videos-have-most-views"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/general/domains-and-ports-must-be-accessible-video-cloud.html",
       "oldURL": "/domains-and-ports-must-be-accessible-video-cloud"
   },
@@ -422,6 +467,16 @@
   {
       "newURL": "https://studio.support.brightcove.com/publish/dynamically-assigning-videos-player.html",
       "oldURL": "/dynamically-assigning-videos-player"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/editing-basic-video-properties.html",
+      "oldURL": "/editing-basic-video-properties"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/editing-video-properties-multiple-videos.html",
+      "oldURL": "/editing-video-properties-multiple-videos"
   },
 
   {
@@ -995,6 +1050,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/organizing-videos-using-folders.html",
+      "oldURL": "/organizing-videos-using-folders"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/media/overview-adding-captions-video.html",
       "oldURL": "/overview-adding-captions-video"
   },
@@ -1070,6 +1130,16 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/publishing-playlist-web.html",
+      "oldURL": "/publishing-playlist-web"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/publishing-single-video-web.html",
+      "oldURL": "/publishing-single-video-web"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/campaign/general/publishing-video-email-using-campaign-module.html",
       "oldURL": "/publishing-video-email-using-campaign-module"
   },
@@ -1100,12 +1170,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/get-started/training/register-training.html",
+      "newURL": "https://studio.support.brightcove.com/register-training.html",
       "oldURL": "/register-training"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/register-training.html",
+      "newURL": "https://studio.support.brightcove.com/get-started/training/register-training.html",
       "oldURL": "/register-training"
   },
 
@@ -1245,6 +1315,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/styling-player.html",
+      "oldURL": "/styling-player"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/players/styling-players.html",
       "oldURL": "/styling-players"
   },
@@ -1300,6 +1375,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/uploading-video-poster-thumbnail-images.html",
+      "oldURL": "/uploading-video-poster-thumbnail-images"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/media/uploading-videos-remote-urls.html",
       "oldURL": "/uploading-videos-remote-urls"
   },
@@ -1307,6 +1387,11 @@
   {
       "newURL": "https://studio.support.brightcove.com/media/uploading-videos-using-upload-module.html",
       "oldURL": "/uploading-videos-using-upload-module"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/uploading-videos.html",
+      "oldURL": "/uploading-videos"
   },
 
   {
@@ -1370,96 +1455,6 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-activating-and-deactivating-video.html",
-      "oldURL": "/video-cloud-basics-activating-and-deactivating-video"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-adding-user-video-cloud-account.html",
-      "oldURL": "/video-cloud-basics-adding-user-video-cloud-account"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html",
-      "oldURL": "/video-cloud-basics-capturing-video-poster-thumbnail-images"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-creating-manual-playlist.html",
-      "oldURL": "/video-cloud-basics-creating-manual-playlist"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-creating-player.html",
-      "oldURL": "/video-cloud-basics-creating-player"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-creating-playlist-player.html",
-      "oldURL": "/video-cloud-basics-creating-playlist-player"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-creating-smart-playlist.html",
-      "oldURL": "/video-cloud-basics-creating-smart-playlist"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-determining-how-much-video-being-watched.html",
-      "oldURL": "/video-cloud-basics-determining-how-much-video-being-watched"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-determining-which-videos-have-most-views.html",
-      "oldURL": "/video-cloud-basics-determining-which-videos-have-most-views"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-editing-basic-video-properties.html",
-      "oldURL": "/video-cloud-basics-editing-basic-video-properties"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-editing-video-properties-multiple-videos.html",
-      "oldURL": "/video-cloud-basics-editing-video-properties-multiple-videos"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-organizing-videos-using-folders.html",
-      "oldURL": "/video-cloud-basics-organizing-videos-using-folders"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-publishing-playlist-web.html",
-      "oldURL": "/video-cloud-basics-publishing-playlist-web"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-publishing-single-video-web.html",
-      "oldURL": "/video-cloud-basics-publishing-single-video-web"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-styling-player.html",
-      "oldURL": "/video-cloud-basics-styling-player"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html",
-      "oldURL": "/video-cloud-basics-uploading-video-poster-thumbnail-images"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-uploading-videos.html",
-      "oldURL": "/video-cloud-basics-uploading-videos"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-viewing-brightcove-system-status-page.html",
-      "oldURL": "/video-cloud-basics-viewing-brightcove-system-status-page"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/get-started/video-cloud-glossary.html",
       "oldURL": "/video-cloud-glossary"
   },
@@ -1502,6 +1497,11 @@
   {
       "newURL": "https://studio.support.brightcove.com/admin/viewing-billing-information.html",
       "oldURL": "/viewing-billing-information"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/viewing-brightcove-system-status-page.html",
+      "oldURL": "/viewing-brightcove-system-status-page"
   },
 
   {
