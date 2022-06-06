@@ -3,4 +3,111 @@ title: Viewing Billing Information
 description: In this topic you will learn how to view the billing information for an account.
 parent: Administering Accounts
 ---
-{% include s-admin/viewing-billing-information.html %}
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>You can use Video Cloud Studio to view the billing information for an account. Note that to access the Billing page, you must be a Video Cloud Studio user with the Administrator role and you must have an annual contract associated with your account.</p>
+    <p>To access the Billing page:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Login to Video Cloud Studio.</li>
+      <li>Open the <strong>Admin</strong> module and then <strong>Billing</strong>.</li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">Note: The Billing page is not available for trial accounts.</aside>
+    <p>The main Billing page will display.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Main billing page" src="/assets/images/s-admin-img/node16461-billing-main.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Notes:
+      <ul>
+        <li>If a <strong>Billing Account</strong> dropdown list appears at the top of the page, this indicates you have multiple contracts with Brightcove. Use the dropdown to select a contract to view billing details.</li>
+        <li>If you have one or more Zencoder accounts as well as Video Cloud Studio accounts, VOD Zencoder Minutes Used items may appear on your Video Cloud Studio billing statement. The information is included as a convenience, just to give you a complete picture of your billing - these charges are not related to Video Cloud Studio.</li>
+        <li>Updating of billing information: Analytic and usage data is collected continuously and can be viewed in the Analytics Module in Video Cloud Studio.  Daily rollups of usage data are available 2-3 days later to account for late arriving data (such as, but not limited to, bandwidth usage from CDN logs).  Data used specifically for billing is generated from the analytic and usage data on a regular schedule at the time invoices are created.</li>
+      </ul>
+    </aside>
+    <h3>Expired accounts</h3>
+    <p>If you have older, expired accounts, you can also select those from the <strong>Billing Account</strong> dropdown:</p>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" src="/assets/images/s-admin-img/billing-expired-account.png" alt="Expired Accounts"> </figure>
+    <p>With expired accounts, there is an issue where the last period of an expired contract is not available. In the above example, if the expired contract is selected, data for August 2020 will not be available.  Contact your account manager or Brightcove Support if this information is needed. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="metrics">Billing metrics</h2>
+    <p>The data displayed on the Billing page will vary based upon the number of accounts you have and your account entitlements. For example, if you do not use DRM, that information will not be displayed.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Billing information for the previous month will not be available until the 7th of the current month.</aside>
+    <p>The Contract Overview section may display the following billing metrics.</p>
+    <h3>Bandwidth</h3>
+    <p>The Bandwidth metric consists of 2 submetrics which are <strong>VOD</strong> Edge bandwidth plus <strong>Live</strong> Edge bandwidth. It displays total bandwidth / contracted bandwidth. Total bandwidth includes video and player loads. The name for this metric name will match what you see in your billing invoice to track the bandwidth usage (i.e. it may not display as Bandwidth). If the bandwidth amount is over quota, the graphic will appear in red. The bar chart can be used to view the bandwidth <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Bandwidth data is delayed by up to 3-5 days, though usually it is available sooner. The data is partly dependent on information from CDNs, so there may be delays on their side that are beyond our control.</aside>
+    <h3>Streams</h3>
+    <p>The Streams metric displays the total stream starts / contracted stream starts. This should match the number of video views in the Analytics module. If the number of stream starts is over quota, the graphic will appear in red. The bar chart can be used to view the streams (in thousands) <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The number of stream starts corresponds to the number of video views in the Analytics module.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: You may notice discrepancies when comparing billing data to analytics data. This can be due to comparing reconciled billing data to unreconciled analytics data. The reconciliation process requires server logs provided by the CDNs and there may be a delay in getting the server logs and processing the data.</aside>
+    <h3>Encryption Licenses</h3>
+    <p>The Encryption Licenses metric will display the total DRM licenses / contracted licenses. If the number of licenses used is over quota, the graphic will appear in red. The bar chart can be used to view the number of licenses used <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Regardless of the Player Preload setting, encryption is always loaded even before the video is streamed to avoid delay in loading the video. For this reason, you may see more Encryption Licenses than Streams in your billing metrics.</aside>
+    <h3>Auto Captions</h3>
+    <p>The Auto Captions metric will display the total number of auto captioning minutes used / contracted amount.</p>
+    <h3>APS and ANS</h3>
+    <p>Active Paying Subscribers (APS) and Active NonPaying Subscribers (ANS) metrics for  Brightcove Beacon Evergent Billing.</p>
+    <h3>Managed Content/Storage</h3>
+    <p>The Storage metric will display the total storage / contracted storage. If the storage used is over quota, the graphic will appear in red. The bar chart can be used to view the storage used <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">
+      <p>Notes:</p>
+      <ul>
+        <li>Storage is only displayed for Professional and Enterprise accounts</li>
+        <li>Video renditions/assets and digital masters are stored separately, but the Storage metric represents the total combined storage for both renditions/assets and digital masters</li>
+      </ul>
+    </aside>
+    <h3>Transcoding</h3>
+    <p>Transcoding refers to the total amount of output GBs processed by Brightcove in connection with the conversion of a video file to additional video formats or bit rates. If the transcoding used is over quota, the graphic will appear in red. The bar chart can be used to view the transcoding used <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <h3>Origin Serving Bandwidth</h3>
+    <p>Bandwidth usage for bytes delivered only (applies to BYO CDN publishers). This is the bandwidth from the Brightcove Origin. If you are using your own CDN, Brightcove does not track the amount of  bandwidth from that CDN, you will need to ask your CDN for the bandwidth data.</p>
+    <h3>Ads Delivered</h3>
+    <p>Total number of ads delivered. This also ties to the overall value of the product. This metric also provides data for downstream collateral or information regarding ROI for a publisher using the Live module.</p>
+    <h3>Alive Bandwidth</h3>
+    <p>Input hours transcoded of your content.</p>
+    <h3>Brightcove Live Output Tiers</h3>
+    <p>The Brightcove Live Output Tiers metric will display the total live hours/ contracted live hours. If the number of hours is over quota, the graphic will appear in red. The bar chart can be used to view the number of hours used <strong>Contract to Date</strong> or <strong>Month to Date</strong>. When this metric is selected, the output hours for each tier will be displayed above the bar chart.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select metric" src="/assets/images/s-admin-img/node16461-live-output-tiers.png" /></figure>
+    <p>It will take 3 days after an event for the Live module hours used and live bandwidth to appear in the Billing UI. Billing by ingestion tier is as follows:</p>
+    <ul>
+      <li>Tier 1 is charged at 1.0x hours</li>
+      <li>Tier 2 is charged at 1.5x hours</li>
+      <li>Tier 3 is charged at 2.0x hours</li>
+    </ul>
+    <p>When using <a href="https://live.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html">custom Live ingest profiles</a>, the tier will be decided by the total bitrate of the Live profile. Note that with RTMP outputs, billing begins when a job starts to when it ends, including any Reconnect Timeout if an encoder is  shut off.</p>
+    <h3>Brightcove Live DVR Hours</h3>
+    <p>The <strong> Brightcove Live DVR Hours</strong> displays the input hours transcoded + the Live video hours with DVR enabled. If the number of hours is over quota, the graphic will appear in red.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select metric" src="/assets/images/s-admin-img/node16461-live-dvr-hours.png" /></figure>
+    <h3>Live Origin</h3>
+    <p>Live origin bandwidth is defined as a cache-miss from the CDN and requests that need to be fulfilled by the live origin. It has cost implications on the system when reselling bandwidth and will help assess margins per customer and overall profitability of the platform to drive future pricing discussions.</p>
+    <h3>VOD Origin</h3>
+    <p>Live VOD origin bandwidth (BYO CDN).</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="details">Viewing account details</h2>
+    <p>The Account Details section of the page will display the details for the selected metric. To select a metric to view, click an item in the Contract Overview section or select one using the dropdown list in the Account Details section.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select metric" src="/assets/images/s-admin-img/node16461-select-metric.png" /></figure>
+    <p>The bar chart will update to display the details for the selected metric. Data for the current month and past 12 months will be displayed. Hovering over the chart will display the details for that month.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="graph details" src="/assets/images/s-admin-img/node16461-graph-details.png" /></figure>
+    <p>If you hover over the current month, however, note that this is <strong>not</strong> realtime data. The data for the current month is only as recent as four days prior to the current date, and is only an estimate.</p>
+    <p>A list of all accounts will appear below the bar chart. By default, if you have multiple accounts, the data for all accounts will be displayed. To view data for a single account, select an account by clicking the radio button for the account or by clicking on the row.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="export">Exporting data</h2>
+    <p>To download <strong>invoiced</strong> billing data in a CSV format, click <strong>CSV</strong> in the page header.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="export data" src="/assets/images/s-admin-img/billing-export.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="deleted_videos">Deleted videos and digital masters</h2>
+    <p>Note that when you delete videos, digital masters, and other assets, the physical files are not removed immediately. We keep the content for 12-14 days (for Dynamic Delivery) and even longer for Legacy. This is done for two reasons:</p>
+    <ul>
+      <li>In case the videos were deleted by mistake and you want to restore them</li>
+      <li>So  you can still get the metadata and analytics for the videos</li>
+    </ul>
+    <p>As long as the physical files are still in place, you <strong>will</strong> see deleted media assets reflected in your billing.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Brightcove has purge capability allowing customers to skip the 12-14 days grace period for deleted videos. You can ask <a href="https://supportportal.brightcove.com/s/login/?language=en_US&startURL=%2Fs%2F&ec=302l">Support</a> to do it.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="locked_accounts">Locked accounts</h2>
+    <p>Storage for locked accounts will continue to be reflected in the Billing data for up to 60 days.</p>
+  </section>
+</article>
