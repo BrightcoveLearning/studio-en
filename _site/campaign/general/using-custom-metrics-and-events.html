@@ -1572,7 +1572,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <p>Custom events/metrics stored on a view event will sync for Marketo REST and Eloqua if the fields are defined on the custom activity or CDO. Campaign will also sync custom events/metrics to HubSpot if they're defined and to Salesforce if the integration is using a <strong>Mapping Type</strong> of <strong>Advanced</strong> and the events/metrics are mapped to something.</p>
       <h3>Marketo REST</h3>
       <p>For Marketo REST integrations, publishers should verify that the <strong>Brightcove Video View</strong> custom activity in Marketo has the custom event and metric fields. Custom activities are located under <strong>Admin</strong> &gt; <strong>Database Management</strong>.</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit custom activity" src="/assets/images/campaign/general/node18442-edit-activity.png" /></figure>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit custom activity" src="/assets/images/s-campaign-img/general/node18442-edit-activity.png" /></figure>
       <p>If the fields are not in the Brightcove Video view object:</p>
       <ol class="bcls-tasklist-restart">
         <li>Update the <strong>Brightcove Video View</strong> custom activity to add the fields, or</li>
@@ -1581,7 +1581,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </ol>
       <h3>Oracle Eloqua</h3>
       <p>For Eloqua integrations, publishers should verify that the <strong>BrightcoveVideoView</strong> custom object has the custom event and metric fields.</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit custom activity" src="/assets/images/campaign/general/node18442-eloqua-cdo.png" /></figure>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit custom activity" src="/assets/images/s-campaign-img/general/node18442-eloqua-cdo.png" /></figure>
       <p>If the fields do not exist, the fields need to be added to the <strong>BrightcoveVideoView</strong> object by either:</p>
       <ol class="bcls-tasklist-restart">
         <li>Reconnecting your Eloqua account, or</li>
@@ -1589,7 +1589,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </ol>
       <h3>Salesforce</h3>
       <p>For Salesforce, your Campaign connection should be using a <strong>Mapping Type</strong> of <strong>Advanced</strong>. The <strong>Event</strong> and <strong>Metric</strong> fields can be mapped to Salesforce objects.</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit custom activity" src="/assets/images/campaign/general/node18442-sf-fields.png" /></figure>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="edit custom activity" src="/assets/images/s-campaign-img/general/node18442-sf-fields.png" /></figure>
     </section>
     <section class="bcls-section">
       <h2 id="notes">Notes</h2>
@@ -1609,12 +1609,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <section class="bcls-section">
       <h2 id="view">Viewing events and metrics</h2>
       <p>Custom events and metrics will appear in the Campaign UI. In the left navigation, click <strong>All Recent Activity</strong>. If any custom events or metrics have been recorded, the <strong>Show Interaction Events</strong> link will be enabled. Click the link to display the event/metric data.</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="viewing metrics" src="/assets/images/campaign/general/node18442-events-ui.png" /></figure>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="viewing metrics" src="/assets/images/s-campaign-img/general/node18442-events-ui.png" /></figure>
     </section>
     <section class="bcls-section">
       <h2 id="logging">Enabling verbose logging</h2>
       <p>Verbose logging can be enabled by adding&nbsp;<code translate="No">bcverbose=1</code> to the URL of the page with the player or by configuring the Campaign plugin with the <code translate="No">"verbose": true</code> option:</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="configure plugin" src="/assets/images/campaign/general/node18442-plugin.png" /></figure>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="configure plugin" src="/assets/images/s-campaign-img/general/node18442-plugin.png" /></figure>
     </section>
   </article>
   

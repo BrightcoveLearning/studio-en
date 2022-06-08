@@ -1571,19 +1571,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <li>Open the <strong>Campaign</strong> module.</li>
         <li>Click <strong>All Recent Activity</strong> in the left navigation.</li>
         <li>Confirm that there is an event with a recent timestamp showing the name of the video that was just watched. The event status should be <strong>unprocessed</strong>. This indicates that Campaign has captured the view but has not yet attempted to sync it to Marketo.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node18740-unprocessed.png" /></figure>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/marketo/node18740-unprocessed.png" /></figure>
         </li>
         <li>To manually trigger a sync between Campaign and Marketo, click <strong>Synchronization Activity</strong> in the left navigation.</li>
         <li>From the <strong>Select Connection</strong> dropdown list, select your Marketo integration. A <span class="button-blue">Test Sync</span> button should appear.</li>
         <li>Click <span class="button-blue">Test Sync</span> to trigger a manual sync. Note that you are limited to how often you can trigger a manual sync. By default, Campaign will sync views to Marketo once an hour.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node18740-test-sync.png" /></figure>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/marketo/node18740-test-sync.png" /></figure>
         </li>
         <li>Click <strong>All Recent Activity</strong> in the left navigation.</li>
         <li>The status of your view event will be <strong>queued</strong>. It may take 15 minutes or so for the data to actually sync to Marketo. Once the data does sync, the status will change to one of two statuses:
           <ul>
             <li><strong>synced</strong> - Indicates the user was a known user and data was successfully delivered to their activity log. The data should also be viewable in Marketo within a few minutes.</li>
             <li><strong>unknown_contact</strong> - Indicates the user was considered unknown and Marketo was unable to accept the data. If you get an <strong>unknown_contact</strong> status, check that you published the video using the correct player, have a Marketo form in place and are testing using the preview link, not embedded in a page.
-              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node18740-synced.png" /></figure>
+              <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/marketo/node18740-synced.png" /></figure>
             </li>
           </ul>
         </li>
@@ -1600,7 +1600,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <li>Click the <strong>Activity Log</strong> tab.</li>
         <li>Using <strong>Quick Find...</strong> at the bottom of the page, search for <strong>Brightcove Video View</strong>.</li>
         <li>Double-click a row to display the fields Campaign has populated.. The popup will display the video viewing data delivered from Campaign to Marketo such as Player ID, Video ID, Video Name, Percentage Watched and other fields.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/campaign/integrations/marketo/node18740-marketo-info.png" /></figure>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-campaign-img/integrations/marketo/node18740-marketo-info.png" /></figure>
         </li>
       </ol>
     </section>
