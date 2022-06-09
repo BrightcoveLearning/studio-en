@@ -376,6 +376,8 @@
   - name: General Information
     url: /campaign/general/index.html
     docs:
+      - name: Campaign FAQ
+        url: /campaign/general/campaign-faq.html
       - name: Campaign Fields and Data Definitions
         url: /campaign/general/campaign-fields-and-data-definitions.html
       - name: Configuring Campaign Settings
