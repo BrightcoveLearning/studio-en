@@ -150,6 +150,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/campaign/general/campaign-plugin-faq.html",
+      "oldURL": "/campaign-plugin-faq"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/media/capturing-poster-and-thumbnail-images.html",
       "oldURL": "/capturing-poster-and-thumbnail-images"
   },
@@ -200,12 +205,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
