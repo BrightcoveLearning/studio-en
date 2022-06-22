@@ -1575,6 +1575,38 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </li>
       </ol>
     </section>
+<section class="bcls-section">
+      <h2 id="example">Tracking custom metadata example</h2>
+        <p>This example uses the Player API to:</p>
+      <ul>
+        <li>Track when the player enters full screen mode and track to <code>event1</code></li>
+        <li>At the same time upon entering fullscreen mode, we track the time the event occurs into <code>metric 1</code></li>
+        <li>Track a custom metadata field associated with the video into <code>metric 2</code></li>
+    </ul>
+<pre class="line-numbers"><code class="language-javascript" translate="No">
+&lt;script&gt;
+// obtain a reference to your player
+  var player = videojs('myPlayer');
+  var audienceTrackingReady = false;
+
+  // listen when the audience plugin is ready
+  player.on('audience:ready', function() {
+    // player.audience is now available for use
+    audienceTrackingReady = true;
+  });
+
+  // track when viewer enters fullscreen mode
+  player.on('fullscreenchange', () =&gt; {
+    if (player.isFullscreen() &amp; audienceTrackingReady) {
+      // The player is full screen, dispatch custom tracking
+      player.audience.track('event1', 'enteredfullscreen');
+      player.audience.track('metric1', player.currentTime());
+      player.audience.track('metric2', player.catalog.data.custom_fields['platform']);
+    }
+  });
+&lt;/script&gt;
+</code></pre>
+    </section>
     <section class="bcls-section">
       <h2 id="sync">Synchronization with marketing automation platforms</h2>
       <p>Custom events/metrics stored on a view event will sync for Marketo REST and Eloqua if the fields are defined on the custom activity or CDO. Campaign will also sync custom events/metrics to HubSpot if they're defined and to Salesforce if the integration is using a <strong>Mapping Type</strong> of <strong>Advanced</strong> and the events/metrics are mapped to something.</p>
