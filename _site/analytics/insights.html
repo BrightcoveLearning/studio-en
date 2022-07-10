@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This topic covers the metrics available in Essential Insights.">
+  <meta name="description" content="This topic covers the metrics available in the Insights page of Analytics.">
   
-  <title>Essential Insights</title>
+  <title>Insights</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
@@ -65,7 +65,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item"><a href="/analytics/">Analytics</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Essential Insights</li>
+      <li class="breadcrumb-item active" aria-current="page">Insights</li>
     </ol>
   </nav>
 </header>
@@ -1530,13 +1530,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Essential Insights</h1>
+<h1>Insights</h1>
 <article class="bcls-article">
-  <summary>This topic covers the metrics available in Essential Insights.</summary>
+  <summary>This topic covers the metrics available in the Insights page of Analytics.</summary>
 
   <section class="bcls-section">
   <h2 id="Introduction">Introduction</h2>
-  <p>Essential Insights is designed as an informational tool, answering two questions every video service has: how is my audience engaging with my video service and how is my content performing. Unique features include:
+  <p>Insights is designed as an informational tool, answering two questions every video service has: how is my audience engaging with my video service and how is my content performing. Unique features include:
     <ul>
       <li>A detailed understanding of <strong>Play Starts</strong> vs <strong>Engaged Views</strong> (as defined as at least 30 seconds). Every video service has audience members that start and quickly stop videos but as these lines diverge, you will want to better understand why customers are not sticking with your video.</li>
       <li>Beyond understanding the Total Hours Viewed per Device, a breakdown by <strong>User</strong> identifies particular devices that are over or under performing.</li>
@@ -1547,139 +1547,79 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><strong>First Watched</strong> identifies the first video an audience member engages with, including its <strong>Attention Index</strong>. Promoting the right group of videos is a key to attracting new audience members.</li>
       <li>CSV Exports allow for additional analysis and can support Royalty Reporting or importing into personalization engines.</li>
     </ul>
+    <p>In looking at the information provided by Insights, you may find it helpful to refer to the <a href="/analytics/insights-glossary.html">Glossary</a>.</p>
 </section>
 
   <section class="bcls-section">
-    <h2 id="Usage_trends">Usage trends</h2>
-    <p>Usage Trends shows views, hours viewed, and audience size grouped by trialists & subscribers.</p>
-
-    <h3>Overview</h3>
-    <p>Quickly view a summary of usage trends data per day.</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="Lost customers per day"
-            src="/assets/images/s-audience-insights-img/guides/engagement/usage-trends.png" />
-        <figcaption class="bcls-caption--image">Usage trends</figcaption>
-
+  <h2 id="Setting_data_range">Setting date range</h2>
+  <p>You can set the period for the reports by clicking  <span class="button-blue">3 Months</span> to reveal additional options:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/select-data-period.png" alt="Data Period Options">
+    <figcaption class="bcls-caption--image">Data Period Options</figcaption>
+    <p>There are additional options under the <strong>To-Date</strong> tab:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/select-by-to-date.png" alt="To Date Options">
+      <figcaption class="bcls-caption--image">To Date Options</figcaption>
     </figure>
+  </figure>
+  <h3>Individual insights</h3>
+  <p>All insights on the page by default will have the date range set for the page, but some graphs have their own <strong>to</strong> and <strong>from</strong> date-pickers to select a range just for that graph:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/date-range-graph.png" alt="To/From Date Pickers">
+    <figcaption class="bcls-caption--image">To/From Date Pickers</figcaption>
+  </figure>
+  <p>Also, in time-based graphs, you can click and drag in the graph itself or click and drag the start/end handles on the timeline below the graph to select a smaller range:</p>
 
-    <p>Review usage trends data:</p>
-    <ul>
-        <li><strong>New</strong> - Users with a view in the last week but none in the last year</li>
-        <li><strong>Engaged</strong> - Users with multiple views in the last month; views may not have gaps longer
-            than 28 days from previous views</li>
-        <li><strong>Re-engaged</strong> - Users with a view in the last week, but no views in the prior four weeks</li>
-        <li><strong>Recent</strong> - Users with no views in the last week but at least one view in the prior three weeks.</li>
-    </ul>
-
-
-    <h3>Actions</h3>
-    <ul>
-        <li>Click <img class="bcls-image--no-border" alt="Expand Icon"
-                src="/assets/images/s-audience-insights-img/guides/lost-customers/expand-icon.png" /> to expand the graph and see more
-            information.
-
-        </li>
-        <li> Select <img class="bcls-image--no-border" alt="Expand Icon"
-                src="/assets/images/s-audience-insights-img/guides/engagement/view-hour-audience.png" /> to see engage trends displayed by
-            views, hours watched or audience size.</li>
-        <li>Click <img class="bcls-image--no-border" alt="Overflow menu"
-                src="/assets/images/s-audience-insights-img/guides/summary/overflow-menu.png" /> to download data as a CSV
-            file or a PNG image.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Download customer change data"
-                    src="/assets/images/s-audience-insights-img/guides/summary/download-csv.png" />
-            </figure>
-        </li>
-
-        <li>Select a date range for your data.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Date range"
-                    src="/assets/images/s-audience-insights-img/guides/summary/date-range.png" />
-            </figure>
-        </li>
-        <li>Select the x-axis granularity to be <strong>Day</strong>, <strong>Week</strong> or
-            <strong>Month</strong>.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="X-axis granularity"
-                    src="/assets/images/s-audience-insights-img/guides/summary/granularity.png" />
-            </figure>
-        </li>
-        <li>Check <img class="bcls-image--no-border" alt="Auto adjust"
-                src="/assets/images/s-audience-insights-img/guides/summary/auto-adjust.png" /> to automatically change the x-axis dimension
-            to day.
-        </li>
-        <li>Select <img class="bcls-image--no-border" alt=""
-                src="/assets/images/s-audience-insights-img/guides/engagement/new-engage-reengage.png" /> to automatically show a specific
-            graphic for new, engage and re-engage.
-        </li>
-    </ul>
-    <h3>Examples</h3>
-    <ul>
-        <li>
-            Disinterested user
-            <figure class="bcls-figure"><img width="80%" class="bcls-image--no-border" alt="Example 1"
-                    src="/assets/images/s-audience-insights-img/guides/engagement/example-1.png" />
-                <figcaption class="bcls-caption--image">Disinterested User</figcaption>
-
-        </li>
-        <li>
-            Spotty viewing
-            <figure class="bcls-figure"><img width="80%" class="bcls-image--no-border" alt="Example 2"
-                    src="/assets/images/s-audience-insights-img/guides/engagement/example-2.png" />
-                <figcaption class="bcls-caption--image"> Spotty viewing</figcaption>
-
-        </li>
-        <li>
-            Seasonal viewing
-            <figure class="bcls-figure"><img width="80%" class="bcls-image--no-border" alt="Example 3"
-                    src="/assets/images/s-audience-insights-img/guides/engagement/example-3.png" />
-                <figcaption class="bcls-caption--image">Seasonal Viewing</figcaption>
-
-        </li>
-    </ul>
-
-</section> 
+  <div style="position: relative; display: block; max-width: 800px;"><div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/6225316964001/Qznf2bKtV_default/index.html?videoId=6309328394112" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
+</section>
 
   <section class="bcls-section">
-    <h2 id="Milestones">Milestones</h2>
-    <p>Milestones track progress against your decisions and are persistent throughout each tab of the Scorecard.</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="Customer summary scorecard"
-            src="/assets/images/s-audience-insights-img/guides/lost-customers/milestones.png" />
-        <figcaption class="bcls-caption--image">Milestones</figcaption>
-    </figure>
-    <h3>Actions</h3>
-    <p>Here are the actions that are available for the milestones section.</p>
-    <ul>
-        <li>
-            <p>Click <img class="bcls-image--no-border" alt="Expand Icon"
-                    src="/assets/images/s-audience-insights-img/guides/lost-customers/create-milestone-button.png" /> to add a new
-                milestone.</p>
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Download customer change data"
-                    src="/assets/images/s-audience-insights-img/guides/lost-customers/new-milestone.png" />
-            </figure>
+  <h2 id="Downloading_reports">Downloading reports</h2>
+  <p>When you mouseover near the top of many of the different sections of the insights, either a <i data-feather="more-vertical"></i> or <i data-feather="download"></i> icon will appear:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/more-icon.png" alt="More Icon">
+    <figcaption class="bcls-caption--image">More Icon</figcaption>
+  </figure>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/download-icon.png" alt="Download Icon">
+    <figcaption class="bcls-caption--image">Download Icon</figcaption>
+  </figure>
+  <p>Clicking these icons will reveal a menu that allows you to download a CSV report of the data and/or a PNG image of the graph.</p>
+</section>
 
-        </li>
-        <li>
-            <p>Click <img class="bcls-image--no-border" alt="Overflow menu"
-                    src="/assets/images/s-audience-insights-img/guides/engagement/three-dots-milestones.png" /> to delete or edit a
-                milestone.</p>
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Download customer change data"
-                    src="/assets/images/s-audience-insights-img/guides/engagement/edit-delete.png" />
-            </figure>
-        </li>
-        <li>
-            <p>Click <img class="bcls-image--no-border" alt="Overflow menu"
-                    src="/assets/images/s-audience-insights-img/guides/lost-customers/views-button.png" /> to select which views to show.
-            </p>
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Download customer change data"
-                    src="/assets/images/s-audience-insights-img/guides/lost-customers/views.png" />
-            </figure>
-        </li>
-    </ul>
+  <section class="bcls-section">
+  <h2 id="Usage_trends">Usage trends</h2>
+  <p>The <strong>Usage Trends</strong> report give you three reports detailing how you video library is performing overall:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/usage-trends.png" alt="Usage Trends">
+    <figcaption class="bcls-caption--image">Usage Trends</figcaption>
+    <p>By default you see <strong>Engaged Views</strong>, but the options above the graph allow you to change this to <strong>Hours Watched</strong> or <strong>Audience Size</strong>. Note that <strong>engaged views</strong> means a viewer watched at least 30 seconds of the video.</p>
+    <p>By default, the data is for the data range is the the general one set in the <a href="#Setting_data_range">Date Range Selector</a>, but you can also choose the data range for this graph specifically in the controls above the graph.</p>
+  </figure>
+</section>
+
+  <section class="bcls-section">
+  <h2 id="Milestones">Milestones</h2>
+  <p>You can add <strong>Milestones</strong> to the Insights and they will appear beside several beside the <strong>Usage Trends</strong>, <strong>Sessions Over Time</strong>, and <strong>Content Trends</strong> graphs, with lines added to the graphs corresponding to the Milestones:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/milestones.png" alt="Milestones">
+    <figcaption class="bcls-caption--image">Milestones</figcaption>
+  </figure>
+  <p>The Milestones help you correlate events, releases, campaigns, and such to changes in content consumption. To add new milestones, just click <span style="border-radius: 50%;padding: 0.2em 0.6em;background-color: #092dbd;color: #ffffff;width: 1.5em;font-weight: bold;">+</span> and fill in the required information.</p>
 </section>
 
   <section class="bcls-section">
   <h2 id="Hours_by_device">Hours by device</h2>
   <p>The Hours by Location insight shows you how your content is performing on different devices:</p>
   <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-device.png" alt="Hours by Device">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-device-overview.png" alt="Hours by Device">
     <figcaption class="bcls-caption--image">Hours by Location</figcaption>
+  </figure>
+  <p>This can be useful for making decisions about ingest profiles and video production, to ensure that you are producing content well-matched to viewers's preferred devices.</p>
+  <p>Mouseover circles in the graph on the right to see more details:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-device-detail.png" alt="Hours by Device Details">
+    <figcaption class="bcls-caption--image">Hours by Device Details</figcaption>
   </figure>
 </section>
 
@@ -1690,113 +1630,62 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-location.png" alt="Hours by Location">
     <figcaption class="bcls-caption--image">Hours by Location</figcaption>
   </figure>
-  <p>You can click on countries to get a more granular breakdown by state or region.</p>
+  <p>Note the zoom control in the lower-left corner of the map and also that you can mouseover countries on the map or the graph the right to get details:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/views-by-country-details-1.png" alt="Country Details">
+    <figcaption class="bcls-caption--image">Country Details</figcaption>
+  </figure>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/views-by-country-details-2.png" alt="Country Details">
+    <figcaption class="bcls-caption--image">Country Details</figcaption>
+  </figure>
+  <p>In addition, you can click on countries on the map to drilldown into a regional breakdown:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/regional-drilldown.png" alt="Regional Drilldown">
+    <figcaption class="bcls-caption--image">Regional Drilldown</figcaption>
+  </figure>
+  <p>Mousing over regions works the same as for countries in the global view, and you can return to the global view by clicking <strong>Back</strong>.</p>
 </section>
 
   <section class="bcls-section">
-    <h2 id="Sessions_over_time">Sessions over time</h2>
-    <p>Engagement sessions over time metrics allows you to see the new, engaged, re-engaged, and the average duration in minutes data.</p>
-
-    <h3>Overview</h3>
-    <p>Quickly view a summary of sessions over time data.</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="Sessions over time"
-            src="/assets/images/s-audience-insights-img/guides/engagement/session-over-time.png" />
-        <figcaption class="bcls-caption--image">Sessions over time</figcaption>
-
-    </figure>
-
-    <p>Review usage trends data:</p>
-    <ul>
-        <li><strong>New</strong> - Users with a view in the last week but none in the last year</li>
-        <li><strong>Engaged</strong> - Users with multiple views in the last month. Views may not have gaps longer
-            than 28 days from previous views</li>
-        <li><strong>Re-engaged</strong> - Users with a view in the last week, but no views in the prior four weeks
-            <li><strong>Average duration</strong> - Average duration in minutes per session
-        </li>
-    </ul>
-
-
-    <h3>Actions</h3>
-    <p>Here are the actions that are available for this graph.</p>
-    <ul>
-        <li>
-            <p>Click <img class="bcls-image--no-border" alt="Overflow menu"
-                    src="/assets/images/s-audience-insights-img/guides/summary/overflow-menu.png" /> to download data as a CSV
-                file or a PNG image.</p>
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Download customer change data"
-                    src="/assets/images/s-audience-insights-img/guides/summary/download-csv.png" />
-            </figure>
-        </li>
-
-        <li><p>Select a date range for your data.</p>
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Date range"
-                    src="/assets/images/s-audience-insights-img/guides/summary/date-range.png" />
-            </figure>
-        </li>
-        <li><p>Select the x-axis granularity to be <strong>Day</strong>, <strong>Week</strong> or
-            <strong>Month</strong>.</p>
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="X-axis granularity"
-                    src="/assets/images/s-audience-insights-img/guides/summary/granularity.png" />
-            </figure>
-        </li>
-        <li>Check <img class="bcls-image--no-border" alt="Auto adjust"
-                src="/assets/images/s-audience-insights-img/guides/summary/auto-adjust.png" /> to automatically change the x-axis dimension
-            to day.
-        </li>
-    </ul>
+  <h2 id="Sessions_over_time">Sessions over time</h2>
+  <p>The <strong>Sessions Over Time</strong> graph provides insight into the number and duration of viewing sessions over a period. <a href="#Milestones">Milestones</a> are shown as well to help you gauge the impact of events.</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/sessions-over-time.png" alt="Sessions Over Time">
+    <figcaption class="bcls-caption--image">Sessions Over Time</figcaption>
+  </figure>
+  <p>Mousing over the graph reveals the data for particular days.</p>
 </section>
  
   <section class="bcls-section">
-    <h2 id="Sessions_over_time">Sessions over time</h2>
-    <p>Engagement sessions over time metrics allows you to see the new, engaged, re-engaged, and the average duration in minutes data.</p>
-
-    <h3>Overview</h3>
-    <p>Quickly view a summary of sessions over time data.</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="Sessions over time"
-            src="/assets/images/s-audience-insights-img/guides/engagement/session-over-time.png" />
-        <figcaption class="bcls-caption--image">Sessions over time</figcaption>
-
-    </figure>
-
-    <p>Review usage trends data:</p>
-    <ul>
-        <li><strong>New</strong> - Users with a view in the last week but none in the last year</li>
-        <li><strong>Engaged</strong> - Users with multiple views in the last month. Views may not have gaps longer
-            than 28 days from previous views</li>
-        <li><strong>Re-engaged</strong> - Users with a view in the last week, but no views in the prior four weeks
-            <li><strong>Average duration</strong> - Average duration in minutes per session
-        </li>
-    </ul>
-
-
-    <h3>Actions</h3>
-    <p>Here are the actions that are available for this graph.</p>
-    <ul>
-        <li>
-            <p>Click <img class="bcls-image--no-border" alt="Overflow menu"
-                    src="/assets/images/s-audience-insights-img/guides/summary/overflow-menu.png" /> to download data as a CSV
-                file or a PNG image.</p>
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Download customer change data"
-                    src="/assets/images/s-audience-insights-img/guides/summary/download-csv.png" />
-            </figure>
-        </li>
-
-        <li><p>Select a date range for your data.</p>
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Date range"
-                    src="/assets/images/s-audience-insights-img/guides/summary/date-range.png" />
-            </figure>
-        </li>
-        <li><p>Select the x-axis granularity to be <strong>Day</strong>, <strong>Week</strong> or
-            <strong>Month</strong>.</p>
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="X-axis granularity"
-                    src="/assets/images/s-audience-insights-img/guides/summary/granularity.png" />
-            </figure>
-        </li>
-        <li>Check <img class="bcls-image--no-border" alt="Auto adjust"
-                src="/assets/images/s-audience-insights-img/guides/summary/auto-adjust.png" /> to automatically change the x-axis dimension
-            to day.
-        </li>
-    </ul>
+  <h2 id="Content_trends">Content trends</h2>
+  <p>The <strong>Content Trends</strong> section of Insights provides several different ways to see trends in your content library, detailed below.</p>
+  <h3>Popular content</h3>
+  <p>In the <strong>Popular Content</strong> graph, you can see a ranking of your titles by hours viewed or the number of engaged views (at least 30 seconds). Note that you can mouseover a title in the <strong>Legend</strong> to highlight its line in the graph, and also adjust the date range and granularity:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/popular-content.png" alt="Popular Content">
+    <figcaption class="bcls-caption--image">Popular Content</figcaption>
+  </figure>
+  <p>Below the Content Trends graph are some data points for you overall content library:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/library-data-points.png" alt="Content Library Data Points">
+    <figcaption class="bcls-caption--image">Content Library Data Points</figcaption>
+  </figure>
+  <p>Note that you can drag the mouse over these to see data for each day.</p>
+  <p>The relevance of these will likely vary somewhat depending on the kind of content you have, but Attention Index is one probably everyone will find useful. It ranges from -100 to 100, comparing the number of "dissatisfied viewers" (who watched at least one minute but less than 10% of a video) with "satisfied viewers" (who watched at least 75%). Negative numbers mean you have more unsatisfied than satisfied viewers.</p>
+  <h3>Top content</h3>
+  <p>You can see details about audience size, engaged views, completion rate, and so forth for all your content in this section of Insights:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/top-content.png" alt="Top Content">
+    <figcaption class="bcls-caption--image">Top Content</figcaption>
+  </figure>
+  <p>Click on any column to sort the content list by that column.</p>
+  <h3>Library Breakdown and First Watched</h3>
+  <p>The last two parts of Insights offer you information on the performance by type (short clips vs. full videos) and on videos watched for the first time in this period:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/library-breaddown-first-watched.png" alt="Library Breakdown / First Watched">
+    <figcaption class="bcls-caption--image">Library Breakdown / First Watched</figcaption>
+  </figure>
 </section>
  
   <section class="bcls-section">
@@ -1828,7 +1717,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 28 Jun 2022
+  Page last updated on 10 Jul 2022
 </div>
 
 
