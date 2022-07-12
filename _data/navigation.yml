@@ -540,6 +540,8 @@
       url: /admin/managing-api-authentication-credentials.html
     - name: Managing Media Sharing Settings
       url: /admin/managing-media-sharing-settings.html
+    - name: Managing Live Settings
+      url: /admin/managing-live-settings.html
     - name: Managing Playback Rights
       url: /admin/managing-playback-rights.html
     - name: Managing Profile Information
@@ -553,16 +555,22 @@
   - name: Managing Ingest Profiles
     url: /admin/index.html
     docs:
+    - name: Creating Custom Live Ingest Profiles
+      url: /admin/creating-custom-live-ingest-profiles.html
     - name: Creating Ingest Profiles for Context Aware Encoding
       url: /admin/creating-ingest-profiles-context-aware-encoding.html
     - name: Creating Ingest Profiles for Dynamic Delivery
       url: /admin/creating-ingest-profiles-dynamic-delivery.html
+    - name: Fields for Live Ingest Profiles
+      url: /admin/fields-custom-live-ingest-profiles.html
     - name: Ingest Profiles Best Practices
       url: /admin/ingest-profiles-best-practices.html
     - name: Managing Ingest Profiles
       url: /admin/managing-ingest-profiles.html
     - name: 'Standard Ingest Profiles (DD & CAE)'
       url: /admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html
+    - name: Standard Live Ingest Profiles
+      url: /admin/standard-live-ingest-profiles.html
 - section:
   name: General Information
   url: /general/index.html

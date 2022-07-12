@@ -1287,6 +1287,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                           
                         
                           
+                            <li><a href="/admin/managing-live-settings.html">Managing Live Settings</a></li>
+                          
+                        
+                          
                             <li><a href="/admin/managing-playback-rights.html">Managing Playback Rights</a></li>
                           
                         
@@ -1316,11 +1320,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                       <ul class="sidenav-subsubmenu" style="display:none;">
                         
                           
+                            <li><a href="/admin/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a></li>
+                          
+                        
+                          
                             <li><a href="/admin/creating-ingest-profiles-context-aware-encoding.html">Creating Ingest Profiles for Context Aware Encoding</a></li>
                           
                         
                           
                             <li><a href="/admin/creating-ingest-profiles-dynamic-delivery.html">Creating Ingest Profiles for Dynamic Delivery</a></li>
+                          
+                        
+                          
+                            <li><a href="/admin/fields-custom-live-ingest-profiles.html">Fields for Live Ingest Profiles</a></li>
                           
                         
                           
@@ -1333,6 +1345,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         
                           
                             <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Standard Ingest Profiles (DD & CAE)</a></li>
+                          
+                        
+                          
+                            <li><a href="/admin/standard-live-ingest-profiles.html">Standard Live Ingest Profiles</a></li>
                           
                         
                       </ul>
@@ -1687,6 +1703,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/library-breaddown-first-watched.png" alt="Library Breakdown / First Watched">
     <figcaption class="bcls-caption--image">Library Breakdown / First Watched</figcaption>
   </figure>
+</section>
+
+  <section class="bcls-section">
+  <h2 id="Understanding_viewers">Understanding "viewers"</h2>
+  <p>When the term "viewer" is used in Brightcove Analytics, what it means depends on how you deploy your content to viewers.</p>
+  <h3>Scenario 1: registered/subscribed viewers</h3>
+  <p>If viewers must register or subscribe to view your content <strong>and</strong> you <a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-viewer.html#Setting_the_viewer_id">instrument the player to send some kind of viewer id to the Brightcove data collector</a>, then viewers will be the viewers you identified and will be unique.</p>
+  <h3>Scenario 2: unidentified viewers</h3>
+  <p>In many cases, however, content is open to all viewers, and no "viewer id" is available. In this case the Brightcove Analytics system will try to generate one based on the player, User Agent, and IP address. (The IP address is not stored for privacy reasons.) While this method is helpful in giving you an idea of unique viewers, but can result in some inaccurate data because these parameters can change for same physical viewer - for example:</p>
+  <ul>
+    <li>A viewer starts to watch on a mobile device on 4G; this counts as a combination number 1 of Player, IP, UA.</li>
+    <li>The same viewer switches to home wifi to continue to watch, and we now have a combination 2 of Player, IP, UA. (The IP has changed.)</li>
+    <li>The viewer now stops the stream on the mobile and loads it on a PC browser. That's a new combination, the IP is the same but the User-Agent has changed. The Player ID could also change if he switches from a mobile app to a web player.</li>
+  </ul>
+  <p>This would lead to 3 supposedly unique viewers when, in reality, all metrics are coming from the same person. </p>
 </section>
  
   <section class="bcls-section">
