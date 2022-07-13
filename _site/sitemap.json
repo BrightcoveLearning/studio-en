@@ -45,12 +45,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/adding-chapters-video.html",
+      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
 
@@ -780,7 +780,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/release-notes/",
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
       "oldURL": "/index"
   },
 
@@ -810,7 +810,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/home/help/",
+      "newURL": "https://studio.support.brightcove.com/release-notes/",
       "oldURL": "/index"
   },
 
@@ -900,7 +900,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
+      "newURL": "https://studio.support.brightcove.com/home/help/",
       "oldURL": "/index"
   },
 
@@ -1050,11 +1050,6 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/live/general/live-platforms-comparison-matrix.html",
-      "oldURL": "/live-platforms-comparison-matrix"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/live/live-module/live-redundancy.html",
       "oldURL": "/live-redundancy"
   },
@@ -1195,12 +1190,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/organizing-videos-using-folders.html",
+      "newURL": "https://studio.support.brightcove.com/media/organizing-videos-using-folders.html",
       "oldURL": "/organizing-videos-using-folders"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/organizing-videos-using-folders.html",
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/organizing-videos-using-folders.html",
       "oldURL": "/organizing-videos-using-folders"
   },
 
