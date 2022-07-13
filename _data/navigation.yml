@@ -356,8 +356,6 @@
   - name: Using the Live Module
     url: /live/live-module/index.html
     docs:
-    - name: Audio-Only Live Events
-      url: /live/live-module/audio-only-live-events.html
     - name: Client-Side Pre-roll Ads with Live SSAI
       url: /live/live-module/client-side-preroll-with-live-ssai.html
     - name: Creating and Managing Live Events using the Live Module
