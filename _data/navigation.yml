@@ -497,6 +497,10 @@
       url: /analytics/creating-custom-analytics-reports.html
     - name: Engagement Report Reference
       url: /analytics/engagement-report-reference.html
+    - name: Insights Reference
+      url: /analytics/insights.html
+    - name: Insights Glossary
+      url: /analytics/insights-glossary.html
     - name: Managing Scheduled Reports
       url: /analytics/managing-scheduled-reports.html
     - name: Performance Report Reference
