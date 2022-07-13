@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This topic covers the metrics available in the Insights page of Analytics.">
+  <meta name="description" content="In this topic, you will learn how to create a video clip using the Live module.">
   
-  <title>Insights Reference</title>
+  <title>Creating a Video Clip Using the Live Module</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
@@ -63,9 +63,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/analytics/">Analytics</a></li>
+      <li class="breadcrumb-item"><a href="/live/live-module/">Live Module</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Insights Reference</li>
+      <li class="breadcrumb-item active" aria-current="page">Creating a Video Clip Using the Live Module</li>
     </ol>
   </nav>
 </header>
@@ -1554,194 +1554,315 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Insights Reference</h1>
+<h1>Creating a Video Clip Using the Live Module</h1>
 <article class="bcls-article">
-  <summary>This topic covers the metrics available in the Insights page of Analytics.</summary>
-  <aside class="bcls-aside bcls-aside--information language-editable">Insights is currently in <strong>Limited Availability</strong>.</aside>
+    <summary>In this topic, you will learn how to create a video clip using the Live module.</summary>
 
+  <section id="top" class="bcls-section">
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5810384996001">&nbsp;</div>
+  </section>
   <section class="bcls-section">
-  <h2 id="Introduction">Introduction</h2>
-  <p>Insights is designed as an informational tool, answering two questions every video service has: how is my audience engaging with my video service and how is my content performing. Unique features include:
+    <h2 id="Overview">Overview</h2>
+    <p>The Live module provides the ability to create video clips from completed events. Clips can also be created while a live event is in progress. There are several reasons you might want to create a clip:</p>
     <ul>
-      <li><strong>Engaged Views</strong> (as defined as at least 30 seconds). Engaged views are a better indication of how your content is working than video views - because as we know, there are a lot of 5-second views that are accidental or a result of random curiosity and do not reflect your real audience.</li>
-      <li>Beyond understanding the Total Hours Viewed per Device, a breakdown by <strong>User</strong> identifies particular devices that are over or under performing.</li>
-      <li><strong>Sessions Over Time</strong> not only gives a sense of how many audience members are engaging with your video service but the average duration of their session. Any time session duration drops, you should start digging into your content performance.</li>
-      <li><strong>Percent Library Viewed</strong> and <strong>Percent Viewers Watching New Content</strong> (released in the last two weeks) are distinct metrics indicating your library's performance.</li>
-      <li><strong>Attention Index</strong> is a better method for measuring how engaging any video, series, or genre is.  The percentage of viewers that complete less than 10% of a video are subtracted from the percent of viewers watching more than 75% of a video. It’s like a Net Promoter Score for video.</li>
-      <li><strong>Top Titles includes Play Starts</strong> and <strong>Engaged Views</strong> as well as the <strong>Attention Index</strong> help you understand how each video is working for your audience. Editorial and promotional decisions should steer audiences to the most compelling videos.</li>
-      <li><strong>First Watched</strong> identifies the first video an audience member engages with, including its <strong>Attention Index</strong>. Promoting the right group of videos is a key to attracting new audience members.</li>
-      <li>CSV Exports allow for additional analysis and can support Royalty Reporting or importing into personalization engines.</li>
+      <li>To create a short, teaser clip that can be posted to social media</li>
+      <li>To limit the length of a video that you want to post (most platforms limit the length of videos)</li>
+      <li>You have found that shorter videos perform better on social media</li>
     </ul>
-    <p>In looking at the information provided by Insights, you may find it helpful to refer to the <a href="/analytics/insights-glossary.html">Glossary</a>.</p>
-</section>
+    <p>Clipping can be done with all types of live events and it can also be done <em>during</em> and <em>after</em> the live stream using the Live API or the Live Module.</p>
+    <p>Both the Live Module and the <a href="https://apis.support.brightcove.com/live-api/guides/live-api-creating-vod-clips.html">Live API</a> support creating clips from encrypted or DRM-protected jobs.</p>
 
+    <h3>Notes</h3>
+    <ul>
+      <li>Legacy ingest profiles no longer support live clipping. To create a video clip from a live stream, make sure your account is enabled for Dynamic Delivery and use a Dynamic Delivery ingest profile.</li>
+      <li>Clips can only be created within 7 days of the event end. Afterwards, the <strong>Create Clip</strong> button will be disabled. If the event is longer than 24 hours, only the last 24 hours are clippable.</li>
+      <li>For recurring events: If during the 7 days after an event the event is reactivated, the clipping will only be available for the content of the most recent event. There will be no way to create clips from the prior event, even if it's under 7 days after the last event was deactivated.</li>
+      <li>If you stop and restart a channel for a new live stream, the previous live stream information for clipping may be overwritten.</li>
+      <li>Clips will be frame-accurate <strong>provided that the encoder is sending SMPTE timecodes for the stream</strong> - otherwise, they will be accurate within a couple of frames. Note that to provide clips as quickly as possible, a segment-accurate clip is first created, and replaced by a frame-accurate clip as soon as it is available.</li>
+      <li>Clips with a start time less than 10 seconds into the stream cannot be created.</li>
+      <li>Clipping is not supported when using the Safari browser.</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">Note:  When you create a recurring event, a video is automatically created for it in the Media module. Do <strong>not</strong> delete this video, as it will be needed every time the event reactivated.</aside>
+  </section>
   <section class="bcls-section">
-  <h2 id="Setting_data_range">Setting date range</h2>
-  <p>You can set the period for the reports by clicking  <span class="button-blue">3 Months</span> to reveal additional options:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/select-data-period.png" alt="Data Period Options">
-    <figcaption class="bcls-caption--image">Data Period Options</figcaption>
-    <p>There are additional options under the <strong>To-Date</strong> tab:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/select-by-to-date.png" alt="To Date Options">
-      <figcaption class="bcls-caption--image">To Date Options</figcaption>
-    </figure>
-  </figure>
-  <h3>Individual insights</h3>
-  <p>All insights on the page by default will have the date range set for the page, but some graphs have their own <strong>to</strong> and <strong>from</strong> date-pickers to select a range just for that graph:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/date-range-graph.png" alt="To/From Date Pickers">
-    <figcaption class="bcls-caption--image">To/From Date Pickers</figcaption>
-  </figure>
-  <p>Also, in time-based graphs, you can click and drag in the graph itself or click and drag the start/end handles on the timeline below the graph to select a smaller range:</p>
-
-  <div style="position: relative; display: block; max-width: 800px;"><div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/6225316964001/Qznf2bKtV_default/index.html?videoId=6309328394112" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
-</section>
-
+    <h2 id="Navigating_the_clip_editor">Navigating the clip editor</h2>
+    <p>To open the clip editor, open the Live module, click on an event name and then click <strong>Create Clip</strong> in the left navigation. The clip editor will open.</p>
+    <p>Note that all times in the clipping interface are based around the UTC time that the video data was received by Brightcove. This is a necessary adjustment to account for streams that have exceeded the VOD window (run more than 24 hours). When a video has exceeded that window, the time we get back from the player can no longer reliably be used to generate clips.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-clip-editor-numbered.png" /></figure>
+    <p>The clip editor is organized as follows:</p>
+    <ul>
+      <li>A - <a href="#preview">Preview player</a></li>
+      <li>B - <a href="#playback_control">Playback control buttons</a></li>
+      <li>C - <a href="#clip_time">Clip time</a></li>
+      <li>D - <a href="#clipping">Clipping buttons</a></li>
+      <li>E - <a href="#preview_clip">Preview clip button</a></li>
+      <li>F - Save button</li>
+      <li>G - <a href="#playhead">Playhead</a></li>
+      <li>H - <a href="#focus_timeline">Focus timeline</a></li>
+      <li>I - <a href="#context_timeline">Context timeline</a></li>
+      <li>J - <a href="#zoom_buttons">Zoom buttons</a></li>
+      <li>K - <a href="#list_of_clips">List of clips</a></li>
+    </ul>
+  </section>
   <section class="bcls-section">
-  <h2 id="Downloading_reports">Downloading reports</h2>
-  <p>When you mouseover near the top of many of the different sections of the insights, either a <i data-feather="more-vertical"></i> or <i data-feather="download"></i> icon will appear:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/more-icon.png" alt="More Icon">
-    <figcaption class="bcls-caption--image">More Icon</figcaption>
-  </figure>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/download-icon.png" alt="Download Icon">
-    <figcaption class="bcls-caption--image">Download Icon</figcaption>
-  </figure>
-  <p>Clicking these icons will reveal a menu that allows you to download a CSV report of the data and/or a PNG image of the graph.</p>
-</section>
-
+    <h2 id="Creating_a_clip">Creating a clip</h2>
+    <p>When creating clips, the highest quality rendition from the selected <strong>Live Ingest Profile</strong> is used as the source for the clip. The default uploading ingest profile for the account is used when creating renditions for the clip.</p>
+    <p>Follow these steps to create a clip.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Using the clipping buttons or shortcut keys, set the start and end points for the clip.
+        <figure><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-clip-portion.png" /></figure>
+      </li>
+      <li>Click <strong>Save</strong>.</li>
+      <li>Enter the clip video properties.
+        <ul>
+          <li><strong>Clip Name</strong> - Name of the clip</li>
+          <li><strong>Short Description</strong> - Description of the clip</li>
+          <li><strong>Tags</strong> - Tags to associate with the clip</li>
+          <li><strong>Reference ID</strong> - Reference ID to assign to the clip</li>
+        </ul>
+      </li>
+      <li>Enter any required custom field values.</li>
+      <li>Check <strong>Remove Source Ad Break Content</strong> to remove ad breaks triggered within the clip, keeping only program content.  This option will only appear when the stream is SSAI enabled.</li>
+      <li>Check <strong>Create clip using fast VOD pipeline</strong> to generate the clip more quickly. This option speeds up the turn around time by creating a single <strong>segment-accurate</strong> rendition..  The system will then replace this clip with a <strong>frame-accurate</strong> clip  with the full rendition set when it is available.
+        <figure><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-create-clip-dialog.png" /></figure>
+      </li>
+      <li>Enter any required custom fields that are displayed.</li>
+      <li>Click <span class="button-blue">Create Clip</span>. The transcoding process for the clip will begin. Clips are transcoded using the default ingest profile for the account.</li>
+    </ol>
+    <p>A list of all clips will appear below the clip editor. Clicking the <strong>Clip Name</strong> will open the clip in the Media module in another browser tab. Click <strong>Publish to Social</strong> to open the clip in the social module to publish it to a social media account. 
+    
+        For information on publishing videos using the Social module, see <a href="/social/publishing-videos-social-media-platforms.html">Publishing Videos to Social Media Platforms</a>.
+      
+    
+      </p>
+  </section>
   <section class="bcls-section">
-  <h2 id="Usage_trends">Usage trends</h2>
-  <p>The <strong>Usage Trends</strong> report give you three reports detailing how you video library is performing overall:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/usage-trends.png" alt="Usage Trends">
-    <figcaption class="bcls-caption--image">Usage Trends</figcaption>
-    <p>By default you see <strong>Engaged Views</strong>, but the options above the graph allow you to change this to <strong>Hours Watched</strong> or <strong>Audience Size</strong>. Note that <strong>engaged views</strong> means a viewer watched at least 30 seconds of the video.</p>
-    <p>By default, the data is for the data range is the the general one set in the <a href="#Setting_data_range">Date Range Selector</a>, but you can also choose the data range for this graph specifically in the controls above the graph.</p>
-  </figure>
-</section>
-
+    <h2 id="preview">Preview player</h2>
+    <p>The preview player is used to preview the clip. When the event is in progress and the clip editor is opened, the clip will begin to play from the "safe live point" which is approximately 3 segments before the end. Note that not all browsers support autoplay.</p>
+  </section>
   <section class="bcls-section">
-  <h2 id="Milestones">Milestones</h2>
-  <p>You can add <strong>Milestones</strong> to the Insights and they will appear beside several beside the <strong>Usage Trends</strong>, <strong>Sessions Over Time</strong>, and <strong>Content Trends</strong> graphs, with lines added to the graphs corresponding to the Milestones:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/milestones.png" alt="Milestones">
-    <figcaption class="bcls-caption--image">Milestones</figcaption>
-  </figure>
-  <p>The Milestones help you correlate events, releases, campaigns, and such to changes in content consumption. To add new milestones, just click <span style="border-radius: 50%;padding: 0.2em 0.6em;background-color: #092dbd;color: #ffffff;width: 1.5em;font-weight: bold;">+</span> and fill in the required information.</p>
-</section>
-
+    <h2 id="playback_control">Playback control buttons</h2>
+    <p>The playback control buttons are used to control to playback of the clip inside of the preview player.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th width="107">Button</th>
+          <th width="430">Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-start-button.png" /></td>
+          <td>Jumps to start of video</td>
+        </tr>
+        <tr>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-back15-button.png" /></td>
+          <td>Jumps the playhead back 15 seconds</td>
+        </tr>
+        <tr>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-play-button.png" /></td>
+          <td>Starts video playback from the playhead position</td>
+        </tr>
+        <tr>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-forward15-button.png" /></td>
+          <td>Jumps the playhead forward 15 seconds</td>
+        </tr>
+        <tr>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-end-button.png" /></td>
+          <td>Jumps to end of video</td>
+        </tr>
+        <tr>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-live-button.png" /></td>
+          <td>Jumps to live point in the video (only available when the live stream is active)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
   <section class="bcls-section">
-  <h2 id="Hours_by_device">Hours by device</h2>
-  <p>The Hours by Location insight shows you how your content is performing on different devices:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-device-overview.png" alt="Hours by Device">
-    <figcaption class="bcls-caption--image">Hours by Location</figcaption>
-  </figure>
-  <p>This can be useful for making decisions about ingest profiles and video production, to ensure that you are producing content well-matched to viewers's preferred devices.</p>
-  <p>Mouseover circles in the graph on the right to see more details:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-device-detail.png" alt="Hours by Device Details">
-    <figcaption class="bcls-caption--image">Hours by Device Details</figcaption>
-  </figure>
-</section>
-
+    <h2 id="clip_time">Clip time</h2>
+    <p>The clip time displays the current UTC time for the playhead and the clippable time. Clicking on the UTC link will switch to the local time display.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-clip-time.png" /></figure>
+  </section>
   <section class="bcls-section">
-  <h2 id="Hours_by_location">Hours by location</h2>
-  <p>The Hours by Location insight shows you how your content is performing in various parts of the world:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-location.png" alt="Hours by Location">
-    <figcaption class="bcls-caption--image">Hours by Location</figcaption>
-  </figure>
-  <p>Note the zoom control in the lower-left corner of the map and also that you can mouseover countries on the map or the graph the right to get details:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/views-by-country-details-1.png" alt="Country Details">
-    <figcaption class="bcls-caption--image">Country Details</figcaption>
-  </figure>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/views-by-country-details-2.png" alt="Country Details">
-    <figcaption class="bcls-caption--image">Country Details</figcaption>
-  </figure>
-  <p>In addition, you can click on countries on the map to drilldown into a regional breakdown:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/regional-drilldown.png" alt="Regional Drilldown">
-    <figcaption class="bcls-caption--image">Regional Drilldown</figcaption>
-  </figure>
-  <p>Mousing over regions works the same as for countries in the global view, and you can return to the global view by clicking <strong>Back</strong>.</p>
-</section>
-
+    <h2 id="clipping">Clipping buttons</h2>
+    <p>The clipping buttons are used to clip the desired portion of the source video.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th width="124">Button</th>
+          <th width="709">Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-go-cue-in-button.png" /></td>
+          <td>Jumps to cue in point of the video</td>
+        </tr>
+        <tr>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-set-cue-in-button.png" /></td>
+          <td>Sets the starting point of the clip. The start point can also be set by dragging the handle at the beginning of the focus timeline.</td>
+        </tr>
+        <tr>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-set-cue-out-button.png" /></td>
+          <td>Sets the ending point of the clip. The end point can also be set by dragging the handle at the end of the focus timeline.</td>
+        </tr>
+        <tr>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-go-cue-out-button.png" /></td>
+          <td>Jumps to the cue out point of the video</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The cue in and cue out points are the start and end of a clip. Each of these points is represented on the focus timeline with a draggable handle, and the time between the points is filled-in green. The points are also represented in the context timeline as the left and right edges of the green rectangle indicating the clip space.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-cue-in-out-example.png" /></figure>
+  </section>
   <section class="bcls-section">
-  <h2 id="Sessions_over_time">Sessions over time</h2>
-  <p>The <strong>Sessions Over Time</strong> graph provides insight into the number and duration of viewing sessions over a period. <a href="#Milestones">Milestones</a> are shown as well to help you gauge the impact of events.</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/sessions-over-time.png" alt="Sessions Over Time">
-    <figcaption class="bcls-caption--image">Sessions Over Time</figcaption>
-  </figure>
-  <p>Mousing over the graph reveals the data for particular days.</p>
-</section>
- 
+    <h2 id="preview_clip">Preview clip</h2>
+    <p>Click the preview clip button to play the clip.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-preview-clip-button.png" /></figure>
+  </section>
   <section class="bcls-section">
-  <h2 id="Content_trends">Content trends</h2>
-  <p>The <strong>Content Trends</strong> section of Insights provides several different ways to see trends in your content library, detailed below.</p>
-  <h3>Popular content</h3>
-  <p>In the <strong>Popular Content</strong> graph, you can see a ranking of your titles by hours viewed or the number of engaged views (at least 30 seconds). Note that you can mouseover a title in the <strong>Legend</strong> to highlight its line in the graph, and also adjust the date range and granularity:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/popular-content.png" alt="Popular Content">
-    <figcaption class="bcls-caption--image">Popular Content</figcaption>
-  </figure>
-  <p>Below the Content Trends graph are some data points for you overall content library:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/library-data-points.png" alt="Content Library Data Points">
-    <figcaption class="bcls-caption--image">Content Library Data Points</figcaption>
-  </figure>
-  <p>Note that you can drag the mouse over these to see data for each day.</p>
-  <p>The relevance of these will likely vary somewhat depending on the kind of content you have, but Attention Index is one probably everyone will find useful. It ranges from -100 to 100, comparing the number of "dissatisfied viewers" (who watched at least one minute but less than 10% of a video) with "satisfied viewers" (who watched at least 75%). Negative numbers mean you have more unsatisfied than satisfied viewers.</p>
-  <h3>Top content</h3>
-  <p>You can see details about audience size, engaged views, completion rate, and so forth for all your content in this section of Insights:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/top-content.png" alt="Top Content">
-    <figcaption class="bcls-caption--image">Top Content</figcaption>
-  </figure>
-  <p>Click on any column to sort the content list by that column.</p>
-  <h3>Library Breakdown and First Watched</h3>
-  <p>The last two parts of Insights offer you information on the performance by type (short clips vs. full videos) and on videos watched for the first time in this period:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/library-breaddown-first-watched.png" alt="Library Breakdown / First Watched">
-    <figcaption class="bcls-caption--image">Library Breakdown / First Watched</figcaption>
-  </figure>
-</section>
-
+    <h2 id="playhead">Playhead</h2>
+    <p>The playhead is an indicator of where in time the player is playing. The playhead is represented in the focus timeline by a red line with a red circle on top and with a red vertical line in the context timeline.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-playhead.png" /></figure>
+    <p>On the focus timeline, the playhead may be dragged to scrub through the video. Double-clicking on the focus timeline will move the playhead to that point. The playhead can also be used to set cue in and cue out points using the cue-in/cue-out buttons or by using the keyboard shortcuts.</p>
+  </section>
   <section class="bcls-section">
-  <h2 id="Understanding_viewers">Understanding "viewers"</h2>
-  <p>When the term "viewer" is used in Brightcove Analytics, what it means depends on how you deploy your content to viewers.</p>
-  <h3>Scenario 1: registered/subscribed viewers</h3>
-  <p>If viewers must register or subscribe to view your content <strong>and</strong> you <a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-viewer.html#Setting_the_viewer_id">instrument the player to send some kind of viewer id to the Brightcove data collector</a>, then viewers will be the viewers you identified and will be unique.</p>
-  <h3>Scenario 2: unidentified viewers</h3>
-  <p>In many cases, however, content is open to all viewers, and no "viewer id" is available. In this case the Brightcove Analytics system will try to generate one based on the player, User Agent, and IP address. (The IP address is not stored for privacy reasons.) While this method is helpful in giving you an idea of unique viewers, but can result in some inaccurate data because these parameters can change for same physical viewer - for example:</p>
-  <ul>
-    <li>A viewer starts to watch on a mobile device on 4G; this counts as a combination number 1 of Player, IP, UA.</li>
-    <li>The same viewer switches to home wifi to continue to watch, and we now have a combination 2 of Player, IP, UA. (The IP has changed.)</li>
-    <li>The viewer now stops the stream on the mobile and loads it on a PC browser. That's a new combination, the IP is the same but the User-Agent has changed. The Player ID could also change if he switches from a mobile app to a web player.</li>
-  </ul>
-  <p>This would lead to 3 supposedly unique viewers when, in reality, all metrics are coming from the same person. </p>
-</section>
- 
+    <h2 id="focus_timeline">Focus timeline</h2>
+    <p>The focus timeline is the top timeline in the interface.</p>
+    <p>The playhead is an indicator of where in time the player is playing. The playhead is represented in the focus timeline by a red line with a red circle on top.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-focus-timeline.png" /></figure>
+    <p>The green shaded area represents the selected clipping time, where the edges are also draggable. Please note that the UI pre-selects the clip duration according to the total available clipping time. For example, in events greater than 10 minutes, the last 10 minutes will be pre-selected, similarly, for 30 and 60 minutes.</p>
+  </section>
   <section class="bcls-section">
-  <h2 id="Limitations">Limitations</h2>
-  <ul>
-    <li>Top Titles are limited to the top 100 videos by audience size.</li>
-    <li>Insights are presented 1-day behind viewership as data is processed overnight.</li>
-    <li>Hours Viewed by Location only goes to a state/province level.</li>
-    <li>Library Breakdown by Genre may be disabled if the customer’s metadata isn’t structured to allow identification of videos by genre.</li>
-    <li>Data export per viewer is not included.</li>
-    <li>Segments and Sync to marketing systems are not included in Essential Insights, but are available in the full version of <a href="https://audience-insights.support.brightcove.com/">Audience Insights</a>.</li>
-
-  </ul>
-</section>
-
+    <h2 id="context_timeline">Context timeline</h2>
+    <p>The context timeline is the bottom timeline in the clip editor. The context timeline shows the entire duration of the video, regardless of zoom level, the selected area of the clip, the location of the playhead, and the current focus viewport. The timeline is indicated with a red line.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-context-timeline.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="zoom_buttons">Zoom buttons</h2>
+    <p>The zoom buttons are used to zoom in or out on the focus timeline.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Button</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-zoom-in-button.png" /></td>
+          <td>Zooms in the focus timeline. The focus viewport (white box) in the context timeline will show the area of the clip that is being displayed in the focus timeline.</td>
+        </tr>
+        <tr>
+          <td><img alt="" src="/assets/images/s-live-img/live-module/clipping/node18551-zoom-out-button.png" /></td>
+          <td>Zooms out the focus timeline. The focus viewport (white box) in the context timeline will show the area of the clip that is being displayed in the focus timeline.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="list_of_clips">List of clips</h2>
+    <p>A list of clips will appear below the clip editor. Click <strong>Publish to Social</strong> to publish the clip to one of your social destinations using Brightcove Social. 
+      
+        For information on publishing videos using the Social module, see <a href="/social/publishing-videos-social-media-platforms.html">Publishing Videos to Social Media Platforms</a>.
+      
+    
+      
+      </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Keyboard_shortcuts">Keyboard shortcuts</h2>
+    <p>Keyboard shortcuts can also be used to play and create a clip from the video. The following keyboard shortcuts are available.</p>
+    <h3>Playback controls</h3>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th width="177">Press this key</th>
+          <th width="781">To do this</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">space, k, down</code></td>
+          <td>Play / Pause</td>
+        </tr>
+        <tr>
+          <td><code translate="No">I</code></td>
+          <td>Go to cue-in</td>
+        </tr>
+        <tr>
+          <td><code translate="No">O</code></td>
+          <td>Go to cue-out</td>
+        </tr>
+        <tr>
+          <td><code translate="No">p</code></td>
+          <td>Play preview</td>
+        </tr>
+        <tr>
+          <td><code translate="No">j, left</code></td>
+          <td>Jump back 1 frame</td>
+        </tr>
+        <tr>
+          <td><code translate="No">J, shift + left</code></td>
+          <td>Jump 1 second back</td>
+        </tr>
+        <tr>
+          <td><code translate="No">l, right</code></td>
+          <td>Jump 1 frame forward</td>
+        </tr>
+        <tr>
+          <td><code translate="No">L, shift + right</code></td>
+          <td>Jump 1 second forward</td>
+        </tr>
+        <tr>
+          <td><code translate="No">s</code></td>
+          <td>Jump to start</td>
+        </tr>
+        <tr>
+          <td><code translate="No">e</code></td>
+          <td>Jump to end / live</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Timeline controls</h3>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th width="177">Press this key</th>
+          <th width="781">To do this</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">i</code></td>
+          <td>Set cue-in</td>
+        </tr>
+        <tr>
+          <td><code translate="No">o</code></td>
+          <td>Set cue-out</td>
+        </tr>
+        <tr>
+          <td><code translate="No">+</code></td>
+          <td>Zoom in</td>
+        </tr>
+        <tr>
+          <td><code translate="No">-</code></td>
+          <td>Zoom out</td>
+        </tr>
+        <tr>
+          <td><code translate="No">u</code></td>
+          <td>Pan timeline to playhead</td>
+        </tr>
+        <tr>
+          <td><code translate="No">?</code></td>
+          <td>Open help modal</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> 
 </article>
+
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -1757,7 +1878,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 13 Jul 2022
+  Page last updated on 12 Jul 2022
 </div>
 
 

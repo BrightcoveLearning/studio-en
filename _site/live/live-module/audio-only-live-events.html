@@ -3,20 +3,18 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This topic covers the metrics available in the Insights page of Analytics.">
+  <meta name="description" content="In this topic, you will learn how to create audio-only live streams.">
   
-  <title>Insights Reference</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
-  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Creating Audio-Only Live Events</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/landing-page.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
   <link rel="stylesheet" href="/assets/css/local.css">
@@ -33,8 +31,9 @@
   gtag('config', 'UA-2728311-17');
 </script>
   <script src="/assets/js/sajari-head.js"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
+	<script src="https://unpkg.com/feather-icons"></script>
 </head>
+
 
 <body class="body">
 
@@ -63,9 +62,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/analytics/">Analytics</a></li>
+      <li class="breadcrumb-item"><a href="/live/live-module/">Live Module</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Insights Reference</li>
+      <li class="breadcrumb-item active" aria-current="page">Creating Audio-Only Live Events</li>
     </ol>
   </nav>
 </header>
@@ -1554,194 +1553,430 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Insights Reference</h1>
 <article class="bcls-article">
-  <summary>This topic covers the metrics available in the Insights page of Analytics.</summary>
-  <aside class="bcls-aside bcls-aside--information language-editable">Insights is currently in <strong>Limited Availability</strong>.</aside>
+    <h1>Creating Audio-Only Live Events</h1>
+  <summary>In this topic, you will learn how to create audio-only live streams.</summary>
+  <br/>
+  <aside class="bcls-aside bcls-aside--warning"><strong>This feature is available for a specific set of customers with access to the Limited Availability phase of Live Audio Only.</strong></aside>
 
-  <section class="bcls-section">
-  <h2 id="Introduction">Introduction</h2>
-  <p>Insights is designed as an informational tool, answering two questions every video service has: how is my audience engaging with my video service and how is my content performing. Unique features include:
-    <ul>
-      <li><strong>Engaged Views</strong> (as defined as at least 30 seconds). Engaged views are a better indication of how your content is working than video views - because as we know, there are a lot of 5-second views that are accidental or a result of random curiosity and do not reflect your real audience.</li>
-      <li>Beyond understanding the Total Hours Viewed per Device, a breakdown by <strong>User</strong> identifies particular devices that are over or under performing.</li>
-      <li><strong>Sessions Over Time</strong> not only gives a sense of how many audience members are engaging with your video service but the average duration of their session. Any time session duration drops, you should start digging into your content performance.</li>
-      <li><strong>Percent Library Viewed</strong> and <strong>Percent Viewers Watching New Content</strong> (released in the last two weeks) are distinct metrics indicating your library's performance.</li>
-      <li><strong>Attention Index</strong> is a better method for measuring how engaging any video, series, or genre is.  The percentage of viewers that complete less than 10% of a video are subtracted from the percent of viewers watching more than 75% of a video. It’s like a Net Promoter Score for video.</li>
-      <li><strong>Top Titles includes Play Starts</strong> and <strong>Engaged Views</strong> as well as the <strong>Attention Index</strong> help you understand how each video is working for your audience. Editorial and promotional decisions should steer audiences to the most compelling videos.</li>
-      <li><strong>First Watched</strong> identifies the first video an audience member engages with, including its <strong>Attention Index</strong>. Promoting the right group of videos is a key to attracting new audience members.</li>
-      <li>CSV Exports allow for additional analysis and can support Royalty Reporting or importing into personalization engines.</li>
-    </ul>
-    <p>In looking at the information provided by Insights, you may find it helpful to refer to the <a href="/analytics/insights-glossary.html">Glossary</a>.</p>
+<section class="bcls-section">
+<h2 id="Introduction">Introduction</h2>
+  <p>
+    Audio-only live streams allow you to tap into the sizeable audio entertainment ecosystem, including podcasts and radio. With Brightcove, you can ingest and live stream audio-specific content without a video component. Brightcove's player technology has been optimized for audio to mobile, web, and connected home devices. You will even get relevant analytics for audio-only playback.
+  </p>
+  <h3>Audio only player</h3>
+  <figure class="bcls-figure">
+    <img class="bcls-image--no-border" alt="Audio-only player" src="/assets/images/s-live-img/live-module/audio-only/audio-only-player.png" />
+  </figure>
+
+  <h3>Constraints</h3>
+  <p>The following functions are not available with audio-only streams:</p>
+  <ul>
+    <li>Streaming to social media</li>
+    <li>Low latency</li>
+    <li>Live ingest profile selection</li>
+    <li>Redundancy (backup streams)</li>
+    <li>Audio tracks</li>
+    <li>Server-Side Ad Insertion (SSAI)</li>
+    <li>Clip creation</li>
+    <li>Zoom integration</li>
+  </ul>
+
+  <aside class="bcls-aside bcls-aside--information">Audio-only live events can only be defined for new live jobs. You cannot update an existing live event to make it audio-only.</aside>
 </section>
 
-  <section class="bcls-section">
-  <h2 id="Setting_data_range">Setting date range</h2>
-  <p>You can set the period for the reports by clicking  <span class="button-blue">3 Months</span> to reveal additional options:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/select-data-period.png" alt="Data Period Options">
-    <figcaption class="bcls-caption--image">Data Period Options</figcaption>
-    <p>There are additional options under the <strong>To-Date</strong> tab:</p>
+<!-- <section class="bcls-section">
+  <h2 id="Requirements">Requirements</h2>
+  <p>This feature is a paid add-on for your account. Contact your account manager to enable the following:</p>
+  <ul>
+    <li>Enable your account for either DRM or AES-128 (HLSe) encryption.</li>
+    <li>
+      <p>Enable your account for Playback Rights (EPA).</p>
+      <aside class="bcls-aside bcls-aside--warning">Currently, enabling your account for Playback Rights (EPA) will impact your ability to do live clipping.</aside>
+    </li>
+  </ul>
+</section> -->
+
+<section class="bcls-section">
+<h2 id="Workflow">Workflow</h2>
+<p>To create an audio-only live stream, follow these steps:</p>
+<ol class="bcls-tasklist">
+  <li><a href="#Create_a_live_event">Create a live event</a></li>
+  <li><a href="#Configure_your_encoder">Configure your encoder</a></li>
+  <li><a href="#Publish_the_live_event">Publish the live event</a></li>
+</ol>
+<!-- <p>Alternatively, you can use the Brightcove APis to create the live event and associate Playback Restrictions. For details, see the <a href="https://apis.support.brightcove.com/live-api/guides/live-playback-restrictions.html">Playback Restrictions with Live Streams</a> document.</p> -->
+</section>
+
+<section class="bcls-section">
+<h2 id="Create_a_live_event">Create a live event</h2>
+<p>Create an audio-only live event.</p>
+<ol class="bcls-tasklist-restart">
+  <li>In Video Cloud Studio, navigate to the <strong>Live</strong> module.</li>
+  <li>Click <span class="button-blue">Create Event</span>.</li>
+  <li>
+    <p>Enter values for your live stream event.</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/select-by-to-date.png" alt="To Date Options">
-      <figcaption class="bcls-caption--image">To Date Options</figcaption>
+      <img class="bcls-image--no-border" alt="Create live event" src="/assets/images/s-live-img/live-module/audio-only/create-event1.png" />
+    </figure> 
+    <ul>
+      <li><strong>Event Name</strong> - Name for the event; this name will also appear in the Media module if the video is saved as a video asset (max 255 characters)</li>
+      <li><strong>Short Description</strong> - Description of the event (max 250 characters)</li>
+      <li><strong>Tags</strong> - Tags to associate with the event; tags will be assigned to the video if the video is saved as a video asset (max 128 characters and 1200 tags)</li>
+      <li><strong>Reference ID</strong> - Reference ID for the event; must be unique (max 150 characters)</li>
+    </ul>
+  </li>
+  <li>Any required custom fields for the account will be displayed. Assign values to the custom fields.</li>
+  <li>
+    <p>Select <strong>Create an audio only event</strong>. Notice the following options are grayed out:</p>
+    <ul>
+      <li><strong>Streaming to Social Media</strong></li>
+      <!-- <li><strong>Streaming Latency</strong></li> -->
+      <li><strong>Live Ingest Profile</strong></li>
+    </ul>
+    <figure class="bcls-figure">
+      <img class="bcls-image--no-border" alt="Create audio only event" src="/assets/images/s-live-img/live-module/audio-only/create-event2.png" />
     </figure>
-  </figure>
-  <h3>Individual insights</h3>
-  <p>All insights on the page by default will have the date range set for the page, but some graphs have their own <strong>to</strong> and <strong>from</strong> date-pickers to select a range just for that graph:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/date-range-graph.png" alt="To/From Date Pickers">
-    <figcaption class="bcls-caption--image">To/From Date Pickers</figcaption>
-  </figure>
-  <p>Also, in time-based graphs, you can click and drag in the graph itself or click and drag the start/end handles on the timeline below the graph to select a smaller range:</p>
-
-  <div style="position: relative; display: block; max-width: 800px;"><div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/6225316964001/Qznf2bKtV_default/index.html?videoId=6309328394112" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
+  </li>
+  <li>
+    <p>In the <strong>Advanced</strong> section, the following option is grayed out:</p>
+    <ul>
+      <li><strong>Enable Server-Side Ad Insertion (SSAI)</strong></li>
+    </ul>
+    <figure class="bcls-figure">
+      <img class="bcls-image--no-border" alt="Advanced options" src="/assets/images/s-live-img/live-module/audio-only/advanced-options.png" />
+    </figure>
+  </li>
+  <li>
+    <p>Complete the rest of the options for your live stream.</p>
+    <p>For details about these options, see the <a href="/live-module/creating-and-managing-live-events-using-live-module.html#create">Creating and Managing Live Events</a> document.</p>
+  </li>
+  <li>Click <span class="button-blue">Create Event</span>.</li>
+</ol>
 </section>
 
-  <section class="bcls-section">
-  <h2 id="Downloading_reports">Downloading reports</h2>
-  <p>When you mouseover near the top of many of the different sections of the insights, either a <i data-feather="more-vertical"></i> or <i data-feather="download"></i> icon will appear:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/more-icon.png" alt="More Icon">
-    <figcaption class="bcls-caption--image">More Icon</figcaption>
-  </figure>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/download-icon.png" alt="Download Icon">
-    <figcaption class="bcls-caption--image">Download Icon</figcaption>
-  </figure>
-  <p>Clicking these icons will reveal a menu that allows you to download a CSV report of the data and/or a PNG image of the graph.</p>
+<section class="bcls-section">
+<h2 id="Configure_your_encoder">Configure your encoder</h2>
+<p>Use the encoder of your choice to stream your audio-only event.</p>
+
+<p>To stream your Live event, follow these steps:</p>
+<ol class="bcls-tasklist-restart">
+	<li>
+    <p>In Video Cloud Studio, return to the <strong>Control Room</strong> for your audio stream.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image--no-border" alt="Live control room" src="/assets/images/s-live-img/live-module/audio-only/control-room.png" />
+    </figure> 
+  </li>
+  <li>Copy the following:
+    <ul>
+      <li>Stream Endpoint (RTMP URL)</li>
+      <li>Sream Name</li>
+    </ul>
+  </li>
+  <li>Paste the values above into the settings for your encoder and start streaming.</li>
+</ol>
 </section>
 
-  <section class="bcls-section">
-  <h2 id="Usage_trends">Usage trends</h2>
-  <p>The <strong>Usage Trends</strong> report give you three reports detailing how you video library is performing overall:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/usage-trends.png" alt="Usage Trends">
-    <figcaption class="bcls-caption--image">Usage Trends</figcaption>
-    <p>By default you see <strong>Engaged Views</strong>, but the options above the graph allow you to change this to <strong>Hours Watched</strong> or <strong>Audience Size</strong>. Note that <strong>engaged views</strong> means a viewer watched at least 30 seconds of the video.</p>
-    <p>By default, the data is for the data range is the the general one set in the <a href="#Setting_data_range">Date Range Selector</a>, but you can also choose the data range for this graph specifically in the controls above the graph.</p>
-  </figure>
+<section class="bcls-section">
+<h2 id="Publish_the_live_event">Publish the live event</h2>
+<p>To publish a live stream, follow these steps:</p>
+
+<ol class="bcls-tasklist-restart">
+  <li>In Video Cloud Studio, return to the <strong>Live</strong> module.</li>
+  <li>In the left navigation, select <strong>Publish and Embed</strong>.</li>
+  <li>In the <strong>Live Player Options</strong> section, select your player.</li>
+  <li>
+    <p>Copy either the <strong>Standard</strong> or <strong>Advanced</strong> embed code, and paste it into your HTML page.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image--no-border" alt="Player embed code" src="/assets/images/s-live-img/live-module/playback-restrictions/embed-code.png" />
+    </figure>
+  </li>
+  <li>Confirm playback in your web page.</li>
+</ol>
 </section>
 
-  <section class="bcls-section">
-  <h2 id="Milestones">Milestones</h2>
-  <p>You can add <strong>Milestones</strong> to the Insights and they will appear beside several beside the <strong>Usage Trends</strong>, <strong>Sessions Over Time</strong>, and <strong>Content Trends</strong> graphs, with lines added to the graphs corresponding to the Milestones:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/milestones.png" alt="Milestones">
-    <figcaption class="bcls-caption--image">Milestones</figcaption>
-  </figure>
-  <p>The Milestones help you correlate events, releases, campaigns, and such to changes in content consumption. To add new milestones, just click <span style="border-radius: 50%;padding: 0.2em 0.6em;background-color: #092dbd;color: #ffffff;width: 1.5em;font-weight: bold;">+</span> and fill in the required information.</p>
-</section>
-
-  <section class="bcls-section">
-  <h2 id="Hours_by_device">Hours by device</h2>
-  <p>The Hours by Location insight shows you how your content is performing on different devices:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-device-overview.png" alt="Hours by Device">
-    <figcaption class="bcls-caption--image">Hours by Location</figcaption>
-  </figure>
-  <p>This can be useful for making decisions about ingest profiles and video production, to ensure that you are producing content well-matched to viewers's preferred devices.</p>
-  <p>Mouseover circles in the graph on the right to see more details:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-device-detail.png" alt="Hours by Device Details">
-    <figcaption class="bcls-caption--image">Hours by Device Details</figcaption>
-  </figure>
-</section>
-
-  <section class="bcls-section">
-  <h2 id="Hours_by_location">Hours by location</h2>
-  <p>The Hours by Location insight shows you how your content is performing in various parts of the world:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-location.png" alt="Hours by Location">
-    <figcaption class="bcls-caption--image">Hours by Location</figcaption>
-  </figure>
-  <p>Note the zoom control in the lower-left corner of the map and also that you can mouseover countries on the map or the graph the right to get details:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/views-by-country-details-1.png" alt="Country Details">
-    <figcaption class="bcls-caption--image">Country Details</figcaption>
-  </figure>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/views-by-country-details-2.png" alt="Country Details">
-    <figcaption class="bcls-caption--image">Country Details</figcaption>
-  </figure>
-  <p>In addition, you can click on countries on the map to drilldown into a regional breakdown:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/regional-drilldown.png" alt="Regional Drilldown">
-    <figcaption class="bcls-caption--image">Regional Drilldown</figcaption>
-  </figure>
-  <p>Mousing over regions works the same as for countries in the global view, and you can return to the global view by clicking <strong>Back</strong>.</p>
-</section>
-
-  <section class="bcls-section">
-  <h2 id="Sessions_over_time">Sessions over time</h2>
-  <p>The <strong>Sessions Over Time</strong> graph provides insight into the number and duration of viewing sessions over a period. <a href="#Milestones">Milestones</a> are shown as well to help you gauge the impact of events.</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/sessions-over-time.png" alt="Sessions Over Time">
-    <figcaption class="bcls-caption--image">Sessions Over Time</figcaption>
-  </figure>
-  <p>Mousing over the graph reveals the data for particular days.</p>
-</section>
- 
-  <section class="bcls-section">
-  <h2 id="Content_trends">Content trends</h2>
-  <p>The <strong>Content Trends</strong> section of Insights provides several different ways to see trends in your content library, detailed below.</p>
-  <h3>Popular content</h3>
-  <p>In the <strong>Popular Content</strong> graph, you can see a ranking of your titles by hours viewed or the number of engaged views (at least 30 seconds). Note that you can mouseover a title in the <strong>Legend</strong> to highlight its line in the graph, and also adjust the date range and granularity:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/popular-content.png" alt="Popular Content">
-    <figcaption class="bcls-caption--image">Popular Content</figcaption>
-  </figure>
-  <p>Below the Content Trends graph are some data points for you overall content library:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/library-data-points.png" alt="Content Library Data Points">
-    <figcaption class="bcls-caption--image">Content Library Data Points</figcaption>
-  </figure>
-  <p>Note that you can drag the mouse over these to see data for each day.</p>
-  <p>The relevance of these will likely vary somewhat depending on the kind of content you have, but Attention Index is one probably everyone will find useful. It ranges from -100 to 100, comparing the number of "dissatisfied viewers" (who watched at least one minute but less than 10% of a video) with "satisfied viewers" (who watched at least 75%). Negative numbers mean you have more unsatisfied than satisfied viewers.</p>
-  <h3>Top content</h3>
-  <p>You can see details about audience size, engaged views, completion rate, and so forth for all your content in this section of Insights:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/top-content.png" alt="Top Content">
-    <figcaption class="bcls-caption--image">Top Content</figcaption>
-  </figure>
-  <p>Click on any column to sort the content list by that column.</p>
-  <h3>Library Breakdown and First Watched</h3>
-  <p>The last two parts of Insights offer you information on the performance by type (short clips vs. full videos) and on videos watched for the first time in this period:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/library-breaddown-first-watched.png" alt="Library Breakdown / First Watched">
-    <figcaption class="bcls-caption--image">Library Breakdown / First Watched</figcaption>
-  </figure>
-</section>
-
-  <section class="bcls-section">
-  <h2 id="Understanding_viewers">Understanding "viewers"</h2>
-  <p>When the term "viewer" is used in Brightcove Analytics, what it means depends on how you deploy your content to viewers.</p>
-  <h3>Scenario 1: registered/subscribed viewers</h3>
-  <p>If viewers must register or subscribe to view your content <strong>and</strong> you <a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-viewer.html#Setting_the_viewer_id">instrument the player to send some kind of viewer id to the Brightcove data collector</a>, then viewers will be the viewers you identified and will be unique.</p>
-  <h3>Scenario 2: unidentified viewers</h3>
-  <p>In many cases, however, content is open to all viewers, and no "viewer id" is available. In this case the Brightcove Analytics system will try to generate one based on the player, User Agent, and IP address. (The IP address is not stored for privacy reasons.) While this method is helpful in giving you an idea of unique viewers, but can result in some inaccurate data because these parameters can change for same physical viewer - for example:</p>
+<section class="bcls-section">
+  <h2 id="Create_a_live_event_using_the_API">Create a live event using the API</h2>
+  <p>Optionally, you can use the Live API to create an audio-only live event.</p>
+  <p>Review the following documents:</p>
   <ul>
-    <li>A viewer starts to watch on a mobile device on 4G; this counts as a combination number 1 of Player, IP, UA.</li>
-    <li>The same viewer switches to home wifi to continue to watch, and we now have a combination 2 of Player, IP, UA. (The IP has changed.)</li>
-    <li>The viewer now stops the stream on the mobile and loads it on a PC browser. That's a new combination, the IP is the same but the User-Agent has changed. The Player ID could also change if he switches from a mobile app to a web player.</li>
+    <li><a href="https://apis.support.brightcove.com/live-api/getting-started/quick-start-create-live-stream-using-brightcove-live-api.html">Create a Live Stream Using the Brightcove Live API</a></li>
+    <li><a href="https://apis.support.brightcove.com/live-api/references/reference.html">Live API Reference</a></li>
   </ul>
-  <p>This would lead to 3 supposedly unique viewers when, in reality, all metrics are coming from the same person. </p>
-</section>
- 
-  <section class="bcls-section">
-  <h2 id="Limitations">Limitations</h2>
-  <ul>
-    <li>Top Titles are limited to the top 100 videos by audience size.</li>
-    <li>Insights are presented 1-day behind viewership as data is processed overnight.</li>
-    <li>Hours Viewed by Location only goes to a state/province level.</li>
-    <li>Library Breakdown by Genre may be disabled if the customer’s metadata isn’t structured to allow identification of videos by genre.</li>
-    <li>Data export per viewer is not included.</li>
-    <li>Segments and Sync to marketing systems are not included in Essential Insights, but are available in the full version of <a href="https://audience-insights.support.brightcove.com/">Audience Insights</a>.</li>
 
-  </ul>
-</section>
+  <details>
+    <summary><h3 id="Sample_request_body">Sample request body</h3></summary> 
+    <pre class="line-numbers"><code class="language-json" translate="No">{
+  &quot;live_stream&quot;: true,
+  &quot;region&quot;:&quot;us-west-2&quot;,
+  &quot;reconnect_time&quot;: 1800,
+  &quot;live_dvr_sliding_window_duration&quot;:600,
+  &quot;audio_only&quot;: true,
+  &quot;audio_only_storage_format&quot;: &quot;mpeg-ts&quot;,    //or &quot;aac&quot;
+  &quot;outputs&quot;: [
+    {
+      &quot;live_stream&quot;: true,
+      &quot;segment_seconds&quot;: 6,
+      &quot;audio_bitrate&quot;: 196
+    },
+    {
+      &quot;live_stream&quot;: true,
+      &quot;segment_seconds&quot;: 6,
+      &quot;audio_bitrate&quot;: 128
+    },
+    {
+      &quot;live_stream&quot;: true,
+      &quot;segment_seconds&quot;: 6,
+      &quot;audio_bitrate&quot;: 96
+    },
+    {
+      &quot;live_stream&quot;: true,
+      &quot;segment_seconds&quot;: 6,
+      &quot;audio_bitrate&quot;: 64
+    },
+    {
+      &quot;live_stream&quot;: true,
+      &quot;segment_seconds&quot;: 6,
+      &quot;audio_bitrate&quot;: 32
+    }
+  ]
+}</code></pre>
+  </details>  
+
+  <details>
+    <summary><h3 id="Sample_response_body">Sample response body</h3></summary> 
+    <pre class="line-numbers"><code class="language-json" translate="No">{
+      &quot;job&quot;: {
+        &quot;created_at&quot;: &quot;2022-02-21T13:49:30.512Z&quot;,
+        &quot;finished_at&quot;: null,
+        &quot;id&quot;: &quot;d123456789a123456789b1&quot;,
+        &quot;privacy&quot;: false,
+        &quot;state&quot;: &quot;standby&quot;,
+        &quot;ssai_state&quot;: &quot;none&quot;,
+        &quot;sep_state&quot;: &quot;waiting&quot;,
+        &quot;submitted_at&quot;: &quot;2022-02-21T13:49:30.512Z&quot;,
+        &quot;test&quot;: false,
+        &quot;updated_at&quot;: &quot;2022-02-21T13:59:37.826Z&quot;,
+        &quot;region&quot;: &quot;us-west-2&quot;,
+        &quot;stream_key&quot;: &quot;alive&quot;,
+        &quot;protocol&quot;: &quot;rtmp&quot;,
+        &quot;reconnect_time&quot;: 600,
+        &quot;live_stream&quot;: true,
+        &quot;low_latency&quot;: false,
+        &quot;static&quot;: true,
+        &quot;ad_insertion&quot;: false,
+        &quot;metadata_passthrough&quot;: false,
+        &quot;out_worker_bytes&quot;: 21010938,
+        &quot;out_worker_bytes_rate&quot;: 0,
+        &quot;channel_type&quot;: &quot;event&quot;,
+        &quot;state_history&quot;: [
+            {
+                &quot;state&quot;: &quot;standby&quot;,
+                &quot;transition_timestamp&quot;: 1645451977826
+            },
+            {
+                &quot;state&quot;: &quot;disconnected&quot;,
+                &quot;transition_timestamp&quot;: 1645451748246
+            },
+            {
+                &quot;state&quot;: &quot;processing&quot;,
+                &quot;transition_timestamp&quot;: 1645451498407
+            },
+            {
+                &quot;state&quot;: &quot;waiting&quot;,
+                &quot;transition_timestamp&quot;: 1645451386677
+            },
+            {
+                &quot;state&quot;: &quot;standby&quot;,
+                &quot;transition_timestamp&quot;: 1645451370512
+            }
+        ],
+        &quot;state_history_is_truncated&quot;: false,
+        &quot;account_id&quot;: &quot;11a1234556789b1111ef&quot;,
+        &quot;user_id&quot;: &quot;bfe56cc6084f4136b168980010eaca39&quot;,
+        &quot;pass_through&quot;: {
+            &quot;stream_to_social_media&quot;: true,
+            &quot;dvr&quot;: false
+        },
+        &quot;job_videocloud_asset_id&quot;: &quot;6298381216001&quot;,
+        &quot;live_dvr_sliding_window_duration_ms&quot;: 0,
+        &quot;live_sliding_window_duration_ms&quot;: 0,
+        &quot;outputs&quot;: [
+            {
+                &quot;live_stream&quot;: true,
+                &quot;audio_bitrate&quot;: 196,
+                &quot;label&quot;: &quot;hls1080p&quot;,
+                &quot;segment_seconds&quot;: 6
+            },
+            {
+                &quot;live_stream&quot;: true,
+                &quot;audio_bitrate&quot;: 128,
+                &quot;label&quot;: &quot;hls720p&quot;,
+                &quot;segment_seconds&quot;: 6
+            }
+        ],
+        &quot;videocloud&quot;: {
+            &quot;video&quot;: {
+                &quot;name&quot;: &quot;audio-only test&quot;,
+                &quot;link&quot;: {},
+                &quot;schedule&quot;: {},
+                &quot;state&quot;: &quot;ACTIVE&quot;,
+                &quot;custom_fields&quot;: {}
+            }
+        },
+        &quot;randomize_chunk_url&quot;: true,
+        &quot;rtmp_outputs&quot;: [],
+        &quot;playback_url&quot;: &quot;https://bcovlive-a.akamaihd.net/d123456789a123456789b1/us-west-2/6243585733001/playlist.m3u8&quot;,
+        &quot;playback_url_dvr&quot;: &quot;https://bcovlive-a.akamaihd.net/d123456789a123456789b1/us-west-2/6243585733001/playlist_dvr.m3u8&quot;,
+        &quot;playback_added_cdns&quot;: [],
+        &quot;encryption&quot;: {},
+        &quot;audio_only&quot;: true,
+        &quot;audio_only_storage_format&quot;: &quot;mpeg-ts&quot;,
+        &quot;input_media_file&quot;: {
+            &quot;audio_bitrate_in_kbps&quot;: null,
+            &quot;audio_codec&quot;: null,
+            &quot;audio_sample_rate&quot;: null,
+            &quot;audio_tracks&quot;: null,
+            &quot;channels&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-21T13:49:30.512Z&quot;,
+            &quot;duration_in_ms&quot;: null,
+            &quot;error_class&quot;: null,
+            &quot;error_message&quot;: null,
+            &quot;file_size_bytes&quot;: null,
+            &quot;finished_at&quot;: null,
+            &quot;format&quot;: null,
+            &quot;frame_rate&quot;: null,
+            &quot;height&quot;: null,
+            &quot;id&quot;: &quot;input-d123456789a123456789b1&quot;,
+            &quot;md5_checksum&quot;: null,
+            &quot;privacy&quot;: false,
+            &quot;state&quot;: &quot;standby&quot;,
+            &quot;test&quot;: false,
+            &quot;updated_at&quot;: &quot;2022-02-21T13:59:37.826Z&quot;,
+            &quot;video_bitrate_in_kbps&quot;: null,
+            &quot;video_codec&quot;: null,
+            &quot;width&quot;: null,
+            &quot;total_bitrate_in_kbps&quot;: null,
+            &quot;url&quot;: null
+        },
+        &quot;stream&quot;: {
+            &quot;created_at&quot;: &quot;2022-02-21T13:51:38.407Z&quot;,
+            &quot;finished_at&quot;: null,
+            &quot;height&quot;: null,
+            &quot;id&quot;: &quot;stream-d123456789a123456789b1&quot;,
+            &quot;name&quot;: &quot;alive&quot;,
+            &quot;protocol&quot;: null,
+            &quot;state&quot;: null,
+            &quot;test&quot;: false,
+            &quot;updated_at&quot;: &quot;2022-02-21T13:59:37.826Z&quot;,
+            &quot;width&quot;: null,
+            &quot;total_bitrate_in_kbps&quot;: null,
+            &quot;duration&quot;: null,
+            &quot;region&quot;: &quot;us-west-2&quot;,
+            &quot;url&quot;: &quot;rtmp://d123456789a123456789b1.sep.bcovlive.io:1935/d123456789a123456789b1&quot;,
+            &quot;location&quot;: {
+                &quot;source&quot;: {
+                    &quot;latitude&quot;: null,
+                    &quot;longitude&quot;: null,
+                    &quot;location&quot;: null
+                },
+                &quot;destination&quot;: {
+                    &quot;latitude&quot;: null,
+                    &quot;longitude&quot;: null,
+                    &quot;location&quot;: null
+                },
+                &quot;distance&quot;: null
+            },
+            &quot;in_worker_bytes&quot;: 12058775,
+            &quot;in_worker_bytes_rate&quot;: 0
+        },
+        &quot;output_media_files&quot;: [
+            {
+                &quot;audio_bitrate_in_kbps&quot;: 196,
+                &quot;audio_codec&quot;: &quot;AAC&quot;,
+                &quot;audio_sample_rate&quot;: null,
+                &quot;channels&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-21T13:49:30.512Z&quot;,
+                &quot;duration_in_ms&quot;: null,
+                &quot;error_class&quot;: null,
+                &quot;error_message&quot;: null,
+                &quot;file_size_bytes&quot;: null,
+                &quot;finished_at&quot;: null,
+                &quot;format&quot;: null,
+                &quot;fragment_duration_in_ms&quot;: null,
+                &quot;frame_rate&quot;: null,
+                &quot;height&quot;: null,
+                &quot;id&quot;: &quot;0-d123456789a123456789b1&quot;,
+                &quot;md5_checksum&quot;: null,
+                &quot;privacy&quot;: false,
+                &quot;rfc_6381_audio_codec&quot;: null,
+                &quot;rfc_6381_video_codec&quot;: null,
+                &quot;state&quot;: &quot;standby&quot;,
+                &quot;test&quot;: false,
+                &quot;updated_at&quot;: &quot;2022-02-21T13:59:37.826Z&quot;,
+                &quot;video_bitrate_in_kbps&quot;: null,
+                &quot;video_codec&quot;: null,
+                &quot;video_codec_profile&quot;: null,
+                &quot;width&quot;: null,
+                &quot;label&quot;: &quot;hls1080p&quot;,
+                &quot;total_bitrate_in_kbps&quot;: 196,
+                &quot;keyframe_interval&quot;: null,
+                &quot;keyframe_interval_follow_source&quot;: null,
+                &quot;segment_seconds&quot;: 6,
+                &quot;live_stream&quot;: true
+            },
+            {
+                &quot;audio_bitrate_in_kbps&quot;: 128,
+                &quot;audio_codec&quot;: &quot;AAC&quot;,
+                &quot;audio_sample_rate&quot;: null,
+                &quot;channels&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-21T13:49:30.512Z&quot;,
+                &quot;duration_in_ms&quot;: null,
+                &quot;error_class&quot;: null,
+                &quot;error_message&quot;: null,
+                &quot;file_size_bytes&quot;: null,
+                &quot;finished_at&quot;: null,
+                &quot;format&quot;: null,
+                &quot;fragment_duration_in_ms&quot;: null,
+                &quot;frame_rate&quot;: null,
+                &quot;height&quot;: null,
+                &quot;id&quot;: &quot;1-d123456789a123456789b1&quot;,
+                &quot;md5_checksum&quot;: null,
+                &quot;privacy&quot;: false,
+                &quot;rfc_6381_audio_codec&quot;: null,
+                &quot;rfc_6381_video_codec&quot;: null,
+                &quot;state&quot;: &quot;standby&quot;,
+                &quot;test&quot;: false,
+                &quot;updated_at&quot;: &quot;2022-02-21T13:59:37.826Z&quot;,
+                &quot;video_bitrate_in_kbps&quot;: null,
+                &quot;video_codec&quot;: null,
+                &quot;video_codec_profile&quot;: null,
+                &quot;width&quot;: null,
+                &quot;label&quot;: &quot;hls720p&quot;,
+                &quot;total_bitrate_in_kbps&quot;: 128,
+                &quot;keyframe_interval&quot;: null,
+                &quot;keyframe_interval_follow_source&quot;: null,
+                &quot;segment_seconds&quot;: 6,
+                &quot;live_stream&quot;: true
+            },
+            {
+                &quot;playlist_type&quot;: &quot;defaultS3&quot;,
+                &quot;type&quot;: &quot;playlist&quot;,
+                &quot;filename&quot;: &quot;playlist.m3u8&quot;,
+                &quot;dvr_filename&quot;: &quot;playlist_dvr.m3u8&quot;,
+                &quot;playback_url&quot;: &quot;https://bcovlive-a.akamaihd.net/d123456789a123456789b1/us-west-2/6243585733001/playlist.m3u8&quot;,
+                &quot;playback_url_dvr&quot;: &quot;https://bcovlive-a.akamaihd.net/d123456789a123456789b1/us-west-2/6243585733001/playlist_dvr.m3u8&quot;,
+                &quot;playback_added_cdns&quot;: []
+            }
+        ]
+    }
+  }</code></pre>
+  </details>
+  
+  </section>
 
 </article>
+
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -1757,7 +1992,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 13 Jul 2022
+  Page last updated on 12 Jul 2022
 </div>
 
 

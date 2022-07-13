@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This topic covers the metrics available in the Insights page of Analytics.">
+  <meta name="description" content="">
   
-  <title>Insights Reference</title>
+  <title>Step-by-Step: Streaming a Secure Reliable Transport (SRT) Live event</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
@@ -63,9 +63,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/analytics/">Analytics</a></li>
+      <li class="breadcrumb-item"><a href="/live/get-started/">Getting Started</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Insights Reference</li>
+      <li class="breadcrumb-item active" aria-current="page">Step-by-Step: Streaming a Secure Reliable Transport (SRT) Live event</li>
     </ol>
   </nav>
 </header>
@@ -1554,194 +1554,177 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Insights Reference</h1>
 <article class="bcls-article">
-  <summary>This topic covers the metrics available in the Insights page of Analytics.</summary>
-  <aside class="bcls-aside bcls-aside--information language-editable">Insights is currently in <strong>Limited Availability</strong>.</aside>
-
+  <h1>Step-by-Step: Streaming a Secure Reliable Transport (SRT) Live event</h1>
+  <summary>The purpose of this Quick Start is to show you how to use the Video Cloud Live module and Open Broadcaster Software (OBS) to broadcast an SRT live event.</summary>
   <section class="bcls-section">
-  <h2 id="Introduction">Introduction</h2>
-  <p>Insights is designed as an informational tool, answering two questions every video service has: how is my audience engaging with my video service and how is my content performing. Unique features include:
+      
+    <p>To learn about all of the features and functionality available in the Live module, see <a href="/live/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>. For a series of best practices and recommendations to help ensure a high quality, stable live streaming experience, see <a href="/live/get-started/live-module-guidelines-and-best-practices.html">Live Module Guidelines and Best Practices</a>. For a list of all the options available from Brightcove for delivering live streaming video, see <a href="/live/get-started/delivering-live-streams.html">Delivering Live Streams</a>.</p>
+      
+      
+    <aside class="bcls-aside bcls-aside--information">Note: Live streaming support is available only for Video Cloud Enterprise publishers.</aside>
+    <p>After completing this Quick Start, you should be able to:</p>
     <ul>
-      <li><strong>Engaged Views</strong> (as defined as at least 30 seconds). Engaged views are a better indication of how your content is working than video views - because as we know, there are a lot of 5-second views that are accidental or a result of random curiosity and do not reflect your real audience.</li>
-      <li>Beyond understanding the Total Hours Viewed per Device, a breakdown by <strong>User</strong> identifies particular devices that are over or under performing.</li>
-      <li><strong>Sessions Over Time</strong> not only gives a sense of how many audience members are engaging with your video service but the average duration of their session. Any time session duration drops, you should start digging into your content performance.</li>
-      <li><strong>Percent Library Viewed</strong> and <strong>Percent Viewers Watching New Content</strong> (released in the last two weeks) are distinct metrics indicating your library's performance.</li>
-      <li><strong>Attention Index</strong> is a better method for measuring how engaging any video, series, or genre is.  The percentage of viewers that complete less than 10% of a video are subtracted from the percent of viewers watching more than 75% of a video. It’s like a Net Promoter Score for video.</li>
-      <li><strong>Top Titles includes Play Starts</strong> and <strong>Engaged Views</strong> as well as the <strong>Attention Index</strong> help you understand how each video is working for your audience. Editorial and promotional decisions should steer audiences to the most compelling videos.</li>
-      <li><strong>First Watched</strong> identifies the first video an audience member engages with, including its <strong>Attention Index</strong>. Promoting the right group of videos is a key to attracting new audience members.</li>
-      <li>CSV Exports allow for additional analysis and can support Royalty Reporting or importing into personalization engines.</li>
+      <li>Use the Video Cloud Live module to create an SRT live event</li>
+      <li>Configure your encoder for an SRT live event</li>
+      <li>Trim your event and save it as a VOD asset in your Video Cloud account</li>
     </ul>
-    <p>In looking at the information provided by Insights, you may find it helpful to refer to the <a href="/analytics/insights-glossary.html">Glossary</a>.</p>
-</section>
-
+    <p>This Quick Start will help you broadcast a live event to different devices using Open Broadcaster Software (OBS) Studio. OBS is open source software for video recording and live streaming and can be <a href="https://obsproject.com">downloaded here</a>. Other encoders can also be used with the Live module.</p>
+  </section>
   <section class="bcls-section">
-  <h2 id="Setting_data_range">Setting date range</h2>
-  <p>You can set the period for the reports by clicking  <span class="button-blue">3 Months</span> to reveal additional options:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/select-data-period.png" alt="Data Period Options">
-    <figcaption class="bcls-caption--image">Data Period Options</figcaption>
-    <p>There are additional options under the <strong>To-Date</strong> tab:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/select-by-to-date.png" alt="To Date Options">
-      <figcaption class="bcls-caption--image">To Date Options</figcaption>
-    </figure>
-  </figure>
-  <h3>Individual insights</h3>
-  <p>All insights on the page by default will have the date range set for the page, but some graphs have their own <strong>to</strong> and <strong>from</strong> date-pickers to select a range just for that graph:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/date-range-graph.png" alt="To/From Date Pickers">
-    <figcaption class="bcls-caption--image">To/From Date Pickers</figcaption>
-  </figure>
-  <p>Also, in time-based graphs, you can click and drag in the graph itself or click and drag the start/end handles on the timeline below the graph to select a smaller range:</p>
-
-  <div style="position: relative; display: block; max-width: 800px;"><div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/6225316964001/Qznf2bKtV_default/index.html?videoId=6309328394112" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
-</section>
-
+    <h2 id="audience">Audience</h2>
+    <p>Any Video Cloud publisher who needs to broadcast a live streaming event using the Video Cloud Live module.</p>
+  </section>
   <section class="bcls-section">
-  <h2 id="Downloading_reports">Downloading reports</h2>
-  <p>When you mouseover near the top of many of the different sections of the insights, either a <i data-feather="more-vertical"></i> or <i data-feather="download"></i> icon will appear:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/more-icon.png" alt="More Icon">
-    <figcaption class="bcls-caption--image">More Icon</figcaption>
-  </figure>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/download-icon.png" alt="Download Icon">
-    <figcaption class="bcls-caption--image">Download Icon</figcaption>
-  </figure>
-  <p>Clicking these icons will reveal a menu that allows you to download a CSV report of the data and/or a PNG image of the graph.</p>
-</section>
-
+    <h2 id="prereq">Prerequisites</h2>
+    <ul>
+      <li>A Video Cloud Enterprise account with access to the Live module</li>
+      <li>A camera to broadcast the event</li>
+      <li>You must have your own encoding software; this Quick Start uses <a href="https://obsproject.com">OBS Studio</a> which can be downloaded for free</li>
+    </ul>
+  </section>
   <section class="bcls-section">
-  <h2 id="Usage_trends">Usage trends</h2>
-  <p>The <strong>Usage Trends</strong> report give you three reports detailing how you video library is performing overall:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/usage-trends.png" alt="Usage Trends">
-    <figcaption class="bcls-caption--image">Usage Trends</figcaption>
-    <p>By default you see <strong>Engaged Views</strong>, but the options above the graph allow you to change this to <strong>Hours Watched</strong> or <strong>Audience Size</strong>. Note that <strong>engaged views</strong> means a viewer watched at least 30 seconds of the video.</p>
-    <p>By default, the data is for the data range is the the general one set in the <a href="#Setting_data_range">Date Range Selector</a>, but you can also choose the data range for this graph specifically in the controls above the graph.</p>
-  </figure>
-</section>
-
+    <h2 id="limitations">Limitations</h2>
+    <ul>
+      <li>Your encoder must output an RTMP or SRT stream</li>
+      <li>Live broadcasts will experience a 20-30 second delay</li>
+      <li>Streaming must begin within 30 minutes of the event start (default-level account setting)</li>
+    </ul>
+  </section>
   <section class="bcls-section">
-  <h2 id="Milestones">Milestones</h2>
-  <p>You can add <strong>Milestones</strong> to the Insights and they will appear beside several beside the <strong>Usage Trends</strong>, <strong>Sessions Over Time</strong>, and <strong>Content Trends</strong> graphs, with lines added to the graphs corresponding to the Milestones:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/milestones.png" alt="Milestones">
-    <figcaption class="bcls-caption--image">Milestones</figcaption>
-  </figure>
-  <p>The Milestones help you correlate events, releases, campaigns, and such to changes in content consumption. To add new milestones, just click <span style="border-radius: 50%;padding: 0.2em 0.6em;background-color: #092dbd;color: #ffffff;width: 1.5em;font-weight: bold;">+</span> and fill in the required information.</p>
-</section>
-
+    <h2 id="steps">Steps to broadcast a live event</h2>
+    <p>To stream your live event using the Live module, you will complete the following tasks:</p>
+    <ul>
+      <li><a href="#newevent">Create a new event using the Video Cloud Live module</a></li>
+      <li><a href="#encoder">Configure your encoder</a></li>
+      <li><a href="#publish">Publish the live stream</a></li>
+      <li><a href="#clip">Create a clip from the live event</a></li>
+    </ul>
+  </section>
   <section class="bcls-section">
-  <h2 id="Hours_by_device">Hours by device</h2>
-  <p>The Hours by Location insight shows you how your content is performing on different devices:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-device-overview.png" alt="Hours by Device">
-    <figcaption class="bcls-caption--image">Hours by Location</figcaption>
-  </figure>
-  <p>This can be useful for making decisions about ingest profiles and video production, to ensure that you are producing content well-matched to viewers's preferred devices.</p>
-  <p>Mouseover circles in the graph on the right to see more details:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-device-detail.png" alt="Hours by Device Details">
-    <figcaption class="bcls-caption--image">Hours by Device Details</figcaption>
-  </figure>
-</section>
-
+    <h2 id="newevent">Creating a new live event</h2>
+    <ol class="bcls-tasklist-restart">
+      <li>In a browser window, navigate to <a href="https://studio.brightcove.com">Video Cloud Studio</a>.</li>
+      <li>Enter your Video Cloud login credentials and click<strong> Sign In.</strong></li>
+      <li>Open the <strong>Live</strong> module.</li>
+      <li>Click <span class="button-blue">Create Event</span>  to create a new event.</li>
+      <li>Enter an <strong>Event Name</strong>.</li>
+      <li>Enter some <strong>Tags</strong> for the event.</li>
+      <li>If your account has been configured with required custom fields, make sure the custom fields are assigned values.</li>
+      <li>Select a <strong>Live Ingest Profile</strong> from the dropdown list. The live ingest profile controls the number and quality of live renditions that are created.</li>
+      <li>Select <strong>Convert event to video asset when complete</strong>. This will save the event as a video in the Media module.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/sbs-srt-create-live-event.png" /></figure>
+      </li>
+      <li>Select the <strong>Region</strong> closest to your location.</li>
+      <li>Click the <strong>Advanced Options</strong> link to expand the advanced options.</li>
+      <li>Set the <strong>Reconnect Time</strong> to 10 minutes (default). </li>
+      <li>For the <strong>Input Format</strong>, select <strong>Secure Reliable Transport (SRT)</strong>.</li>
+      <li>In the <strong>CIDR Whitelist</strong> section, enter a set of IP addresses that are allowed to connect to the SRT endpoint. This controls who can connect to the SRT endpoints. Note this option will only appear if the <strong>Input Format</strong> is RTP or SRT. You can specify <code translate="No">0.0.0.0/0</code> to allow all networks. To allow specific IP addresses, use <code translate="No">{IP address}/32</code> (example: 255.160.10.1/32).
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/sbs-srt-adv-options.png" /></figure>
+      </li>
+      <li>Click <strong>Start Streaming</strong>. The Live module will return a <strong>Stream Endpoint (SRT URL)</strong>. The SRT URL will be used in the encoder settings.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/sbs-srt-encoder-settings.png" /></figure>
+      </li>
+    </ol>
+  </section>
   <section class="bcls-section">
-  <h2 id="Hours_by_location">Hours by location</h2>
-  <p>The Hours by Location insight shows you how your content is performing in various parts of the world:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-location.png" alt="Hours by Location">
-    <figcaption class="bcls-caption--image">Hours by Location</figcaption>
-  </figure>
-  <p>Note the zoom control in the lower-left corner of the map and also that you can mouseover countries on the map or the graph the right to get details:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/views-by-country-details-1.png" alt="Country Details">
-    <figcaption class="bcls-caption--image">Country Details</figcaption>
-  </figure>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/views-by-country-details-2.png" alt="Country Details">
-    <figcaption class="bcls-caption--image">Country Details</figcaption>
-  </figure>
-  <p>In addition, you can click on countries on the map to drilldown into a regional breakdown:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/regional-drilldown.png" alt="Regional Drilldown">
-    <figcaption class="bcls-caption--image">Regional Drilldown</figcaption>
-  </figure>
-  <p>Mousing over regions works the same as for countries in the global view, and you can return to the global view by clicking <strong>Back</strong>.</p>
-</section>
-
+    <h2 id="encoder">Configuring your encoder</h2>
+    <p>In this section, we will configure and use the OBS Studio encoder to support a live streaming event. OBS Studio software is a desktop application that captures input from your camera and produces a stream that can be delivered by a CDN. Note that there are hardware and other software based encoding solutions available that may be better suited for delivering your live streaming event. You can download the OBS Studio software <a href="https://obsproject.com">here</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: You should have the OBS software installed and a camera connected to your computer before proceeding</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: This example uses a Canon camera connected to a laptop using the Canon EOS Webcam Utility software.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: OBS offers the ability to record a local copy of the stream. By choosing to do this, you will have a local copy of the stream that you can create clips from in case any networking issues occur during the broadcast of the event. For information on how to record a local file, see the <a href="https://obsproject.com/docs/index.html">OBS documentation</a>.</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>Open OBS Studio.</li>
+      <li>In the <strong>Sources</strong> section, click <strong>+</strong> to add a new source. Select a <strong>Source</strong> from the list. This Quick Start is using a camera for video capture so <strong>Video Capture Device</strong> is selected.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/sbs-srt-add-source.png" /></figure>
+      </li>
+      <li>Enter a name for the new source and click <strong>OK</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/sbs-srt-source-name.png" /></figure>
+      </li>
+      <li>Select your camera from the <strong>Device</strong> list. A preview should appear in the properties dialog. Click <strong>OK</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/sbs-srt-source-preview.png" /></figure>
+      </li>
+      <li>In the Controls section, click <strong>Settings</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/sbs-srt-settings.png" /></figure>
+      </li>
+      <li>Click <strong>Stream</strong> in the left side of the Settings dialog.</li>
+      <li>For the Stream<strong> Service</strong> select <strong>Custom...</strong>.</li>
+      <li>For <strong>Server</strong>, use the <strong>SRT URL</strong> provided by the Live module.</li>
+      <li>For the <strong>Stream key</strong>, leave it empty.</li>
+      <li>Click <strong>OK</strong> to save the settings.</li>
+      <li>In the <strong>Controls</strong> section, click <strong>Start Streaming</strong>. The live stream should begin.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/sbs-srt-live-stream.png" /></figure>
+      </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">Note: It will take about a minute to process your streams.</aside>
+  </section>
   <section class="bcls-section">
-  <h2 id="Sessions_over_time">Sessions over time</h2>
-  <p>The <strong>Sessions Over Time</strong> graph provides insight into the number and duration of viewing sessions over a period. <a href="#Milestones">Milestones</a> are shown as well to help you gauge the impact of events.</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/sessions-over-time.png" alt="Sessions Over Time">
-    <figcaption class="bcls-caption--image">Sessions Over Time</figcaption>
-  </figure>
-  <p>Mousing over the graph reveals the data for particular days.</p>
-</section>
- 
+    <h2 id="publish">Publishing the live event</h2>
+    <p>To generate the embed code for the live event, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Return to the Live module.</li>
+      <li>If the Control Room page for the event is not displayed, click the <strong>Live</strong> tab to display a list of live events. Click on the event name to open the Control Room page.</li>
+      <li>Confirm that you can see the live stream. Note that after starting the encoder, it may take a minute for the live stream to appear.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/sbs-srt-control-room.png" /></figure>
+      </li>
+      <li>To publish the live event, click <strong>Publish and Embed</strong> in the left navigation.</li>
+      <li>Select a player using the <strong>Available Player</strong> dropdown.</li>
+      <li>Click the <strong>Player URL</strong> to view the live stream. </li>
+      <li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/sbs-srt-publish.png" /></figure>
+      </li>
+      <li>When you are done with the live stream, click the <strong>Stop Stream</strong> button in the Live module. Also, return to OBS Studio and click the stream button to stop the encoder from streaming.
+        <aside class="bcls-aside bcls-aside--information">Note: It is important to make sure you close/stop your encoder when the live stream is complete. Leaving a connection open between any encoder and Brightcove, even when no data is being sent, may result in unexpected connection charges.</aside>
+      </li>
+    </ol>
+  </section>
   <section class="bcls-section">
-  <h2 id="Content_trends">Content trends</h2>
-  <p>The <strong>Content Trends</strong> section of Insights provides several different ways to see trends in your content library, detailed below.</p>
-  <h3>Popular content</h3>
-  <p>In the <strong>Popular Content</strong> graph, you can see a ranking of your titles by hours viewed or the number of engaged views (at least 30 seconds). Note that you can mouseover a title in the <strong>Legend</strong> to highlight its line in the graph, and also adjust the date range and granularity:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/popular-content.png" alt="Popular Content">
-    <figcaption class="bcls-caption--image">Popular Content</figcaption>
-  </figure>
-  <p>Below the Content Trends graph are some data points for you overall content library:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/library-data-points.png" alt="Content Library Data Points">
-    <figcaption class="bcls-caption--image">Content Library Data Points</figcaption>
-  </figure>
-  <p>Note that you can drag the mouse over these to see data for each day.</p>
-  <p>The relevance of these will likely vary somewhat depending on the kind of content you have, but Attention Index is one probably everyone will find useful. It ranges from -100 to 100, comparing the number of "dissatisfied viewers" (who watched at least one minute but less than 10% of a video) with "satisfied viewers" (who watched at least 75%). Negative numbers mean you have more unsatisfied than satisfied viewers.</p>
-  <h3>Top content</h3>
-  <p>You can see details about audience size, engaged views, completion rate, and so forth for all your content in this section of Insights:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/top-content.png" alt="Top Content">
-    <figcaption class="bcls-caption--image">Top Content</figcaption>
-  </figure>
-  <p>Click on any column to sort the content list by that column.</p>
-  <h3>Library Breakdown and First Watched</h3>
-  <p>The last two parts of Insights offer you information on the performance by type (short clips vs. full videos) and on videos watched for the first time in this period:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/library-breaddown-first-watched.png" alt="Library Breakdown / First Watched">
-    <figcaption class="bcls-caption--image">Library Breakdown / First Watched</figcaption>
-  </figure>
-</section>
-
+    <h2 id="clip">Creating a clip</h2>
+    <p>The Live module provides the ability to create video clips from completed events. Clips can also be created while a live event is in progress. There are several reasons you might want to create a clip:</p>
+    <ul>
+      <li>To create a short, teaser clip that can be posted to social media</li>
+      <li>To limit the length of a video that you want to post (most platforms limit the length of videos)</li>
+      <li>You have found that shorter videos perform better on social media</li>
+    </ul>
+    <p>Clips can only be created within 7 days of the event end. Afterwards, the <strong>Create Clip</strong> button will be disabled. If the event is longer than 24 hours, only the last 24 hours are clippable.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: For complete details on using the clipping interface, see <a href="/live-module/creating-video-clip-using-live-module.html">Creating a Video Clip Using the Live Module</a>.</aside>
+    <p>To create a clip, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Return to the Live module.</li>
+      <li>Click the <strong>Completed</strong> tab.</li>
+      <li>Locate the event and click the event name to open the Control Room.</li>
+      <li>Click <strong>Create Clip</strong>. The clipping editor will open.</li>
+      <li>Click and drag the clipping handles on the focus timeline to set the start and end points for the clip.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/sbs-srt-clip-selected.png" /></figure>
+      </li>
+      <li>Click <strong>Preview Clip</strong> to preview the clip. The start and end points can be adjusted as needed.</li>
+      <li>Click <strong>Save Clip</strong>.</li>
+      <li>Enter a <strong>Clip Name</strong> and other metadata values. Any required fields for the account will also appear and should be assigned values.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/sbs-srt-clip-save.png" /></figure>
+      </li>
+      <li>Click <strong>Create Clip</strong>. The ingestion process will begin and the clip will be saved to your Video Cloud account.</li>
+      <li>Clips will appear below the clip editor. Click <strong>Publish to Social</strong> to publish the clip to one of your social destinations using Brightcove Social. For information on publishing videos using the Social module, see <a href="https://studio.support.brightcove.com/social/publishing-videos-social-media-platforms.html">Publishing Videos to Social Media Platforms</a>.</li>
+      <li>Click the <strong>Back to Control Room: Completed</strong> breadcrumb. All clips will also appear in the Control Room for the event.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/get-started/sbs-srt-clips-control-room.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">Note: You can click the Create Clip button multiple times to create multiple clips of your broadcast. This allows you to trim and save as many times as you want for each broadcast, saving the clips as separate VOD assets in your media library.</aside>
+      </li>
+    </ol>
+  </section>
   <section class="bcls-section">
-  <h2 id="Understanding_viewers">Understanding "viewers"</h2>
-  <p>When the term "viewer" is used in Brightcove Analytics, what it means depends on how you deploy your content to viewers.</p>
-  <h3>Scenario 1: registered/subscribed viewers</h3>
-  <p>If viewers must register or subscribe to view your content <strong>and</strong> you <a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-viewer.html#Setting_the_viewer_id">instrument the player to send some kind of viewer id to the Brightcove data collector</a>, then viewers will be the viewers you identified and will be unique.</p>
-  <h3>Scenario 2: unidentified viewers</h3>
-  <p>In many cases, however, content is open to all viewers, and no "viewer id" is available. In this case the Brightcove Analytics system will try to generate one based on the player, User Agent, and IP address. (The IP address is not stored for privacy reasons.) While this method is helpful in giving you an idea of unique viewers, but can result in some inaccurate data because these parameters can change for same physical viewer - for example:</p>
-  <ul>
-    <li>A viewer starts to watch on a mobile device on 4G; this counts as a combination number 1 of Player, IP, UA.</li>
-    <li>The same viewer switches to home wifi to continue to watch, and we now have a combination 2 of Player, IP, UA. (The IP has changed.)</li>
-    <li>The viewer now stops the stream on the mobile and loads it on a PC browser. That's a new combination, the IP is the same but the User-Agent has changed. The Player ID could also change if he switches from a mobile app to a web player.</li>
-  </ul>
-  <p>This would lead to 3 supposedly unique viewers when, in reality, all metrics are coming from the same person. </p>
-</section>
- 
-  <section class="bcls-section">
-  <h2 id="Limitations">Limitations</h2>
-  <ul>
-    <li>Top Titles are limited to the top 100 videos by audience size.</li>
-    <li>Insights are presented 1-day behind viewership as data is processed overnight.</li>
-    <li>Hours Viewed by Location only goes to a state/province level.</li>
-    <li>Library Breakdown by Genre may be disabled if the customer’s metadata isn’t structured to allow identification of videos by genre.</li>
-    <li>Data export per viewer is not included.</li>
-    <li>Segments and Sync to marketing systems are not included in Essential Insights, but are available in the full version of <a href="https://audience-insights.support.brightcove.com/">Audience Insights</a>.</li>
-
-  </ul>
-</section>
-
+    <h2 id="troubleshoot">Troubleshooting live stream issues</h2>
+    <p>If you need further help getting your live event to work, you can <a href="https://supportportal.brightcove.com/create">contact us</a>. To make sure you get the fastest response possible, below is a list of what support will need to solve the problem.</p>
+    <ul>
+      <li>The specific symptoms the stream is having. For example, does it not play at all or does it stutter or freeze?</li>
+      <li>Whether this stream worked correctly in the past</li>
+      <li>The entry point URL you are using in your encoder</li>
+      <li>The encoding software and hardware are you using</li>
+      <li>The URL to the player to which you have published the live event</li>
+      <li>The video ID of your live asset in Video Cloud Studio</li>
+      <li>The results of a trace-route from your encoder to the publishing point host</li>
+    </ul>
+  </section>
 </article>
+
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -1757,7 +1740,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 13 Jul 2022
+  Page last updated on 12 Jul 2022
 </div>
 
 

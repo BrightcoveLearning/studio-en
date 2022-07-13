@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This topic covers the metrics available in the Insights page of Analytics.">
+  <meta name="description" content="In this topic you will learn how to create and manage live events using the Live module.">
   
-  <title>Insights Reference</title>
+  <title>Creating and Managing Live Events using the Live Module</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
@@ -63,9 +63,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/analytics/">Analytics</a></li>
+      <li class="breadcrumb-item"><a href="/live/live-module/">Live Module</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Insights Reference</li>
+      <li class="breadcrumb-item active" aria-current="page">Creating and Managing Live Events using the Live Module</li>
     </ol>
   </nav>
 </header>
@@ -1554,194 +1554,526 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Insights Reference</h1>
+<h1>Creating and Managing Live Events using the Live Module</h1>
 <article class="bcls-article">
-  <summary>This topic covers the metrics available in the Insights page of Analytics.</summary>
-  <aside class="bcls-aside bcls-aside--information language-editable">Insights is currently in <strong>Limited Availability</strong>.</aside>
-
+  <summary>In this topic you will learn how to create and manage live events using the Live module.</summary>
   <section class="bcls-section">
-  <h2 id="Introduction">Introduction</h2>
-  <p>Insights is designed as an informational tool, answering two questions every video service has: how is my audience engaging with my video service and how is my content performing. Unique features include:
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="2403492012001">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> 
+  </section>
+  <section class="bcls-section">
+    <h2 id="introduction">Introduction</h2>
+    <p>The Live module can be used to help you broadcast a live event to both desktop and mobile devices. After entering your event information into the Live module, you will be provided with a set of encoder settings that you plug into your on-site encoder. All transcoding is done in the cloud so you don't need a hardware based transcoder.</p>
+    <p>Depending on your Live subscription, you may have the ability to create events, channels or both. Typically, events are created to stream shorter length, one time or recurring events. Channels are typically used when delivering 24/7 live events.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Live streaming support is available only for enterprise publishers.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="prerequisites">Prerequisites</h2>
+    <p>Before you can broadcast a live event, the following items are required:</p>
     <ul>
-      <li><strong>Engaged Views</strong> (as defined as at least 30 seconds). Engaged views are a better indication of how your content is working than video views - because as we know, there are a lot of 5-second views that are accidental or a result of random curiosity and do not reflect your real audience.</li>
-      <li>Beyond understanding the Total Hours Viewed per Device, a breakdown by <strong>User</strong> identifies particular devices that are over or under performing.</li>
-      <li><strong>Sessions Over Time</strong> not only gives a sense of how many audience members are engaging with your video service but the average duration of their session. Any time session duration drops, you should start digging into your content performance.</li>
-      <li><strong>Percent Library Viewed</strong> and <strong>Percent Viewers Watching New Content</strong> (released in the last two weeks) are distinct metrics indicating your library's performance.</li>
-      <li><strong>Attention Index</strong> is a better method for measuring how engaging any video, series, or genre is.  The percentage of viewers that complete less than 10% of a video are subtracted from the percent of viewers watching more than 75% of a video. It’s like a Net Promoter Score for video.</li>
-      <li><strong>Top Titles includes Play Starts</strong> and <strong>Engaged Views</strong> as well as the <strong>Attention Index</strong> help you understand how each video is working for your audience. Editorial and promotional decisions should steer audiences to the most compelling videos.</li>
-      <li><strong>First Watched</strong> identifies the first video an audience member engages with, including its <strong>Attention Index</strong>. Promoting the right group of videos is a key to attracting new audience members.</li>
-      <li>CSV Exports allow for additional analysis and can support Royalty Reporting or importing into personalization engines.</li>
+      <li>A Brightcove account with access to the Live module</li>
+      <li>A camera to broadcast the event</li>
+      <li>You must have your own encoding software, for example <a href="https://www.telestream.net/wirecast/overview.htm">Telestream's Wirecast</a> or <a href="https://obsproject.com">Open Broadcaster Software</a></li>
     </ul>
-    <p>In looking at the information provided by Insights, you may find it helpful to refer to the <a href="/analytics/insights-glossary.html">Glossary</a>.</p>
-</section>
-
+  </section>
   <section class="bcls-section">
-  <h2 id="Setting_data_range">Setting date range</h2>
-  <p>You can set the period for the reports by clicking  <span class="button-blue">3 Months</span> to reveal additional options:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/select-data-period.png" alt="Data Period Options">
-    <figcaption class="bcls-caption--image">Data Period Options</figcaption>
-    <p>There are additional options under the <strong>To-Date</strong> tab:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/select-by-to-date.png" alt="To Date Options">
-      <figcaption class="bcls-caption--image">To Date Options</figcaption>
-    </figure>
-  </figure>
-  <h3>Individual insights</h3>
-  <p>All insights on the page by default will have the date range set for the page, but some graphs have their own <strong>to</strong> and <strong>from</strong> date-pickers to select a range just for that graph:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/date-range-graph.png" alt="To/From Date Pickers">
-    <figcaption class="bcls-caption--image">To/From Date Pickers</figcaption>
-  </figure>
-  <p>Also, in time-based graphs, you can click and drag in the graph itself or click and drag the start/end handles on the timeline below the graph to select a smaller range:</p>
-
-  <div style="position: relative; display: block; max-width: 800px;"><div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/6225316964001/Qznf2bKtV_default/index.html?videoId=6309328394112" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
-</section>
-
+    <h2 id="limitations">Limitations</h2>
+    <ul>
+      <li>To create a Live stream with DVR on the Media module, you will need first to create a new remote asset from there and then fill a Live module playlist with a "playlist_dvr.m3u8" extension at the end of your URL stream.</li>
+      <li>Live streams with SSAI must be published via the Live module, not the Media Module.</li>
+      <li>Live broadcasts will experience a 20-30 second delay.</li>
+      <li>Streaming must begin within 30 minutes of the event start (default-level account setting).</li>
+      <li>Live streams with DVR are not supported when using the Brightcove Player SDKs. In this case, you should add the DVR playback URL to a remote asset and then use the remote asset URL with the SDK.</li>
+      <li>Output settings <strong>cannot</strong> be modified after the event has been created.</li>
+      <li>Brightcove scales live streaming capacity up or down to match demand, and generally this is transparent. When an account attempts to create several live jobs in a region in a short time, however, there may be a short delay while additional capacity is prepared. If you try the request again in a few minutes, it should succeed.</li>
+    </ul>
+  </section>
   <section class="bcls-section">
-  <h2 id="Downloading_reports">Downloading reports</h2>
-  <p>When you mouseover near the top of many of the different sections of the insights, either a <i data-feather="more-vertical"></i> or <i data-feather="download"></i> icon will appear:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/more-icon.png" alt="More Icon">
-    <figcaption class="bcls-caption--image">More Icon</figcaption>
-  </figure>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/download-icon.png" alt="Download Icon">
-    <figcaption class="bcls-caption--image">Download Icon</figcaption>
-  </figure>
-  <p>Clicking these icons will reveal a menu that allows you to download a CSV report of the data and/or a PNG image of the graph.</p>
-</section>
-
+    <h2 id="billable_states">Billable states</h2>
+    <p>Billing for live jobs applies to <strong>Active</strong> states:</p>
+    <h3>Active states (billing applies)</h3>
+    <ul>
+      <li><code translate="no">waiting</code></li>
+      <li><code translate="no">processing</code></li>
+      <li><code translate="no">disconnected</code></li>
+    </ul>
+    <h3>Inactive states (billing does not apply)</h3>
+    <ul>
+      <li><code translate="no">standby</code></li>
+      <li><code translate="no">cancelling</code></li>
+      <li><code translate="no">finishing</code></li>
+      <li><code translate="no">cancelled</code></li>
+      <li><code translate="no">finished</code></li>
+      <li><code translate="no">failed</code></li>
+    </ul>
+  </section>
   <section class="bcls-section">
-  <h2 id="Usage_trends">Usage trends</h2>
-  <p>The <strong>Usage Trends</strong> report give you three reports detailing how you video library is performing overall:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/usage-trends.png" alt="Usage Trends">
-    <figcaption class="bcls-caption--image">Usage Trends</figcaption>
-    <p>By default you see <strong>Engaged Views</strong>, but the options above the graph allow you to change this to <strong>Hours Watched</strong> or <strong>Audience Size</strong>. Note that <strong>engaged views</strong> means a viewer watched at least 30 seconds of the video.</p>
-    <p>By default, the data is for the data range is the the general one set in the <a href="#Setting_data_range">Date Range Selector</a>, but you can also choose the data range for this graph specifically in the controls above the graph.</p>
-  </figure>
-</section>
-
+    <h2 id="manage">Managing live events</h2>
+    <p>To access the Live module, login to Video Cloud Studio and click <strong> Live</strong> in the navigation header. After logging in, your Video Cloud account name will appear in the upper right corner of the page. If you have multiple accounts, use the account switcher dropdown to select the account you would like to work with. If the account you select hasn't been enabled for Live, an introductory "Brightcove Live" video page will appear. The Manage Events page displays three main tabs:</p>
+    <ul>
+      <li><strong>Live</strong> - Lists live events that are in progress</li>
+      <li><strong>Standby</strong> - Lists <a href="#intro_recurring">recurring events</a> that are in standby mode</li>
+      <li><strong>Completed</strong> - Lists completed events</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-homepage.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Note: The ability to create live channels is based upon your Live subscription.</aside>
+    <p>The <strong>Show</strong> dropdown can be used to filter the events that appear on the <strong>Completed</strong> tab.</p>
+    <p>The body of the page will display a list of live events with related information:</p>
+    <ul>
+      <li>Job Status - Status of the live stream
+        <ul>
+          <li><strong>Processing</strong> - Stream is live</li>
+          <li><strong>Processing Error</strong> - The Live stream has encountered an error</li>
+          <li><strong>Standby</strong> - Stream ready to be activated (static entry points only)</li>
+          <li><strong>Stopping</strong> - The live stream is stopping and creating any associated VOD outputs</li>
+          <li><strong>Completed</strong> - Live stream has completed</li>
+          <li><strong>Cancelling</strong> - The live stream is stopping and will NOT process any pending VOD outputs</li>
+          <li><strong>Cancelled</strong> - The live stream has been cancelled</li>
+          <li><strong>Disconnected</strong> - The encoder has been disconnected</li>
+          <li><strong>Deactivated</strong> - Recurring event is in a deactivated state</li>
+          <li><strong>Not Activated</strong> - Recurring event has been activated but a stream start has not occurred</li>
+          <li><strong>Waiting</strong> - Waiting for the RTMP stream (encoder to start)</li>
+          <li><strong>Failed</strong> - The job has stopped as a result of a system error</li>
+          <li><strong>Abandoned</strong> - The event finished without an encoder being connected</li>
+        </ul>
+      </li>
+      <li>Completed date and time</li>
+      <li>Event name and ID</li>
+      <li>Total views</li>
+      <li>Duration</li>
+      <li>Created date and time (for recurring events only)</li>
+    </ul>
+    <p>To view the live event video properties, click on the event name to open the <a href="#controlroom">Control Room</a>.</p>
+  </section>
   <section class="bcls-section">
-  <h2 id="Milestones">Milestones</h2>
-  <p>You can add <strong>Milestones</strong> to the Insights and they will appear beside several beside the <strong>Usage Trends</strong>, <strong>Sessions Over Time</strong>, and <strong>Content Trends</strong> graphs, with lines added to the graphs corresponding to the Milestones:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/milestones.png" alt="Milestones">
-    <figcaption class="bcls-caption--image">Milestones</figcaption>
-  </figure>
-  <p>The Milestones help you correlate events, releases, campaigns, and such to changes in content consumption. To add new milestones, just click <span style="border-radius: 50%;padding: 0.2em 0.6em;background-color: #092dbd;color: #ffffff;width: 1.5em;font-weight: bold;">+</span> and fill in the required information.</p>
-</section>
-
+    <h2 id="create">Creating a new event</h2>
+    <p>For a complete step-by-step guide to creating and streaming a live event using the Live module, see one of the following topics:</p>
+    <ul>
+        
+      <li><a href="/get-started/step-step-using-live-module-telestream-wirecast.html">Step-by-Step: Using the Live Module with Telestream Wirecast</a></li>
+      <li><a href="/get-started/step-step-using-live-module-open-broadcaster-software-obs.html">Step-by-Step: Using the Live Module with Open Broadcaster Software (OBS)</a></li>
+        
+        
+    </ul>
+    <p>To create a new event, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>From the Manage Events page click <span class="button-blue">Create Event</span>. The Create Live Event or Create Live Channel page will open. The properties when creating events and channels are the same. The screen shots in this document cover creating an event.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-new-event.png" /></figure>
+      </li>
+      <li>Enter the event details:
+        <ul>
+          <li><strong>Event Name</strong> - Name for the event; this name will also appear in the Media module if the video is saved as a video asset (max 255 characters)</li>
+          <li><strong>Short Description</strong> - Description of the event (max 250 characters)</li>
+          <li><strong>Tags</strong> - Tags to associate with the event; tags will be assigned to the video if the video is saved as a video asset (max 128 characters and 1200 tags)</li>
+          <li><strong>Reference ID</strong> - Reference ID for the event; must be unique (max 150 characters)</li>
+        </ul>
+      </li>
+      <li>Any required custom fields for the account will be displayed. Assign values to the custom fields.</li>
+      <li>Setting <strong>Streaming to Social Media</strong> to <strong>Allowed</strong> will make the event available for streaming to social media platforms. This can be done <a href="#social">once the event has started streaming</a> or by using the 
+             
+          <a href="/social/publishing-live-event-facebook.html">Social module</a>.
+          
+          </li>
+      <!--<li>Select a <strong>Streaming Latency</strong> option.
+      <ul>
+        <li><strong>Regular</strong> - Live delay can be approximately 30-45 seconds</li>
+        <li><strong>Low Latency</strong> - Live delay reduced to approximately 5-10 seconds (see the <a href="#low-latency">Using Low Latency streaming</a> section below)</li>
+      </ul></li>-->
+      <li>Select a <strong>Live Ingest Profile</strong>. The dropdown list will list all Live ingest profiles. The ingest profile will control the quality and number of live renditions that are created. Clicking the <strong>Manage Profiles</strong> link will open the ingest profile editor in another browser tab. Note that you must be an account administrator to access the ingest profile editor. Click the <strong>Renditions</strong> link to view the renditions that will be created using the selected ingest profile.
+        <aside class="bcls-aside bcls-aside--information">The bitrate and billing details of the three tiers are as follows:
+          <ul>
+            <li>Tier 1 allows up to 5,500 Kbps and is charged at 1.0x hours</li>
+            <li>Tier 2 allows up to 10,000 Kbps and is charged at 1.5x hours</li>
+            <li>Tier 3 allows up to 20,000 Kbps and is charged at 2.0x hours</li>
+          </ul>
+        </aside>
+        <aside class="bcls-aside bcls-aside--information">Note: For information on creating Live ingest profiles, see <a href="/admin/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a>.</aside>
+      </li>
+      <li>Select <strong>Convert event to video asset when complete</strong> to save a VOD version of the live video to your Video Cloud account. When this option is selected, the highest quality rendition from the selected <strong>Live Ingest Profile</strong> is used as the source for the VOD video. The default ingest profile for the account is used when creating renditions. <strong>Note that the VOD version is not available as soon as the live event ends, the video will be available once the ingestion process is complete.</strong>
+        <aside class="bcls-aside bcls-aside--information">Note: This option is not supported when using a recurring event.</aside>
+      </li>
+      <li>Click <strong>Integrations</strong> to add an integration with a Zoom meeting. For information, please refer to the <a href="zoom-live-integration.html" target="_blank">Integrating a Zoom meeting documentation</a>.</li>
+      <li>Click <strong>Stream Options</strong> and select a <strong>Region. </strong>The Region is the  Amazon Web Services (AWS) region to use. To reduce latency, you should select the region that is closest to where your encoder is located. <strong>By default, the region is set to Oregon (US West) which will produce bad results if you are streaming from another continent.</strong> The following regions are supported:
+        <ul>
+          <li>Oregon (US West) (default)</li>
+          <li>Virginia (US East)</li>
+          <li>Tokyo (Asia Pacific)</li>
+          <li>Seoul (Asia Pacific)</li>
+          <li>Singapore (Asia Pacific)</li>
+          <li>Sydney (Asia Pacific)</li>
+          <li>Mumbai (Asia Pacific)</li>
+          <li>Frankfurt (EU)</li>
+          <li>Ireland (EU)</li>
+        </ul>
+      </li>
+      <li>Click <strong>Advanced Options</strong> and <a href="#advanced">configure the advanced options</a>.</li>
+      <li>Click <span class="button-blue">Create Event</span> to start the live event. The <a href="#controlroom">Control Room page</a> will open with details about the live event including the <strong>Streaming Endpoint (RTMP URL)</strong> and <strong>Stream Name</strong> which will be used by your encoder.
+        <aside class="bcls-aside bcls-aside--information"> It will take about a minute to process your streams.</aside>
+        <p>By default, the encoder must be started within 30 minutes from when a new event is created.</p>
+      </li>
+    </ol>
+    <p>Click <span class="button-blue">Stop Streaming</span> to end the event.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Make sure the encoder is closed/stopped when the live stream is complete. Leaving a connection open between any encoder and Brightcove, even when no data is being sent, may result in unexpected connection charges.</aside>
+  </section>
   <section class="bcls-section">
-  <h2 id="Hours_by_device">Hours by device</h2>
-  <p>The Hours by Location insight shows you how your content is performing on different devices:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-device-overview.png" alt="Hours by Device">
-    <figcaption class="bcls-caption--image">Hours by Location</figcaption>
-  </figure>
-  <p>This can be useful for making decisions about ingest profiles and video production, to ensure that you are producing content well-matched to viewers's preferred devices.</p>
-  <p>Mouseover circles in the graph on the right to see more details:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-device-detail.png" alt="Hours by Device Details">
-    <figcaption class="bcls-caption--image">Hours by Device Details</figcaption>
-  </figure>
-</section>
-
+    <h2 id="advanced">Configuring advanced options</h2>
+    <p>When creating a new event, advanced options can be configured. To configure the advanced options, click the <strong>Advanced Options</strong> link when creating the event.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-advanced-options.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Note: For VOD clips, no notification will be sent.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: Please contact Brightcove Support if you are interested in a custom edge CDN hostname.</aside>
+    <p>The following options can be configured:</p>
+    <ul>
+      <li><strong>Content Encryption</strong> - Select the type of encryption to apply to the live output stream:
+        <ul>
+          <li><strong>None</strong> - No encryption is applied</li>
+          <li><strong>AES-128</strong> - Secures the live HLS outputs using AES-128 encryption. If this option is selected, you must enter your <strong>Encryption Key</strong>. The key must be 32 hexadecimal characters. For best results, use a <a href="https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx">key generator</a>, choosing the <code translate="No">128-bit</code> and <code translate="No">Hex</code> options.  The encryption key value is only entered in the Live module, it is not used as part of your encoder settings.
+            <aside class="bcls-aside bcls-aside--information">Note: When using this option, you should not send an encrypted stream to Brightcove. Configure your encoder as you normally would. Selecting this option will encrypt the HLS output streams sent from Brightcove Live.</aside>
+            <aside class="bcls-aside bcls-aside--information">Note: Clips can't be created from encrypted live streams.</aside>
+          </li>
+          <li><strong>Digital Rights Management (DRM)</strong> - Secure Premium content stream with Digital Rights Management technologies. For details, see the 
+              
+              <a href="/live/general/live-drm.html">Live DRM</a> document.
+              
+            
+            <ul>
+              <li>HLS + <a href="https://developer.apple.com/streaming/fps/">FairPlay</a></li>
+              <li>HLS (fMP4) + Widevine Modular</li>
+            </ul>
+            <aside class="bcls-aside bcls-aside--information"> Your Live account must be enabled first by Brightcove Support in order to use DRM. To publish a DRM-enabled event, it is necessary to create and use a DRM enabled player v6.37.1 or greater.</aside>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Reconnect Time</strong> - If the encoder is disconnected, this is the amount of time that the live stream will be kept available. This setting has no effect on how soon the encoder must be started when a new event is created.</li>
+      <li><strong>Enable Server Side Ad Insertion (SSAI)</strong> - Enables server side ad insertion. Ads are configured as part of the server-side ad settings. For information on working with server-side ads in the Live module, see <a href="implementing-server-side-ads-live-module.html">Implementing Server-Side Ads in the Live Module.</a>
+        <ul>
+          <li><strong>Fill Slate</strong> - Select a fill slate. The fill slate will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad. Create fill slates as part of the Live settings.</li>
+          <li><strong>Ad Audio</strong> - When checked, normalizes the audio levels on ads based on the adjustment that is set. This can be used as a way to help make sure ads aren’t significantly louder than the content.</li>
+        </ul>
+      </li>
+      <li><strong>Create Cloud DVR</strong> - Enables DVR capability. If the event is published using a Brightcove Player version earlier than 6.33.0, the <a href="https://player.support.brightcove.com/plugins/live-dvrux-plugin.html">Live DVRUX Plugin</a> is required. Content is available for 7 days after the event finishes.
+        <ul>
+          <li><strong>DVR Window</strong> - The amount of time, in seconds, to keep in the live DVR manifest.</li>
+        </ul>
+      </li>
+      <li><strong>Input Format</strong> - The input format from the encoder that will be sent to the Live module. This feature enables additional metadata in a live stream like now, now-next, more flexibility in subtitles and captioning, audio tracks and enables streamlined digital experiences with standard broadcast level data. The following input formats are supported:
+        <ul>
+          <li><strong>RTMP (default)</strong></li>
+          <li><strong>Real-Time Transport Protocol (RTP)</strong></li>
+          <li><strong>Secure Reliable Transport (SRT)</strong></li>
+        </ul>
+      </li>
+      <li><strong>RTMP credentials to use</strong> - Select the RTMP credential used to secure the Streaming Endpoint. Note this option will only appear if the Input Format is RTMP and at least one RTMP credential was created as part of the Live settings.</li>
+      <li><strong>RTMP IP whitelist</strong> - Enter a set of IP addresses that are allowed to connect to the RTMP endpoint. This controls who can connect to the RTMP endpoint. Note this option will only appear if the Input Format is RTMP.</li>
+      <li><strong>Enable stream status notifications</strong> - When checked, enter a <strong>Notification URL</strong>. An http request will be made to the <strong>Notification URL</strong> when there is a change in the job status. This can be used to update a server in response to changes in the job status. For more information on using API notifications, see the <a href="https://apis.support.brightcove.com/live-api/guides/live-api-notifications.html">Live API Notifications</a> topic.</li>
+      <li id="cidr"><strong>CIDR Whitelist</strong> - Enter a set of IP addresses that are allowed to connect to the RTP or SRT endpoint. This controls who can connect to the RTP or SRT endpoints. Note this option will only appear if the Input Format is RTP or SRT.
+        <p>You can specify <code translate="No">0.0.0.0/0</code> to allow all networks.</p>
+        <p>To allow specific IP addresses, use <code translate="No">{IP address}/32</code> (example: 255.160.10.1/32).</p>
+        <p>See <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a> for more information.</p>
+      </li>
+      <li><strong>+ Add Multi CDN configuration</strong> - Enter a <strong>label</strong> and <strong>URL</strong> for additional CDNs. This is a whitelist of CDNs that are allowed to ask our primary CDN for the video segments. You are responsible for configuring the secondary CDN correctly.</li>
+      <li><strong>Create this as a recurring event using a Static Entry Point (SEP)</strong> - Allows a single live stream to be created and then activated/deactivated when needed. For information, see the <a href="#intro_recurring">Introduction to recurring events</a> section of this document.</li>
+    </ul>
+    <p>Click <strong>Edit Configuration </strong> to view/edit the API request that will be made to create the live stream. Caution should be used when editing the API call directly.</p>
+  </section>
+  <!--<section class="bcls-section">
+    <h2 id="low-latency">Using low latency streaming</h2>
+    <p>Latency refers to the delay between when a video is captured and when it&rsquo;s displayed on a viewer&rsquo;s device. When creating a new live event, there is an option to use <strong>Low Latency</strong>.</p>
+    <figure class="bcls-figure"> <img src="/assets/images/s-live-img/live-module/node18470-streaming-latency.png"> </figure>
+    <aside class="bcls-aside bcls-aside--information">Note: If low latency is not enabled for your account, contact Brightcove Support.</aside>
+    <p>Low latency provides  near real-time streaming with streaming delays reduced to approximately 5-10 seconds. Low latency is recommended when faster interactions are needed but may provide an inferior quality of experience. There are factors outside of Brightcove's control that may determine whether a low latency feed can be delivered (encoder, viewer bandwith, etc.). If a low latency stream cannot be delivered, Brightcove Live will fallback and deliver the regular latency stream.</p>
+    <p>The following options are not supported when using low latency:</p>
+    <ul>
+      <li>DRM</li>
+      <li> SSAI</li>
+      <li> Redundancy</li>
+      <li> Multi-Language Audio</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">Note: Low latency requires Brightcove Player version 6.62.0 and above.</aside>
+  </section>-->
   <section class="bcls-section">
-  <h2 id="Hours_by_location">Hours by location</h2>
-  <p>The Hours by Location insight shows you how your content is performing in various parts of the world:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-location.png" alt="Hours by Location">
-    <figcaption class="bcls-caption--image">Hours by Location</figcaption>
-  </figure>
-  <p>Note the zoom control in the lower-left corner of the map and also that you can mouseover countries on the map or the graph the right to get details:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/views-by-country-details-1.png" alt="Country Details">
-    <figcaption class="bcls-caption--image">Country Details</figcaption>
-  </figure>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/views-by-country-details-2.png" alt="Country Details">
-    <figcaption class="bcls-caption--image">Country Details</figcaption>
-  </figure>
-  <p>In addition, you can click on countries on the map to drilldown into a regional breakdown:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/regional-drilldown.png" alt="Regional Drilldown">
-    <figcaption class="bcls-caption--image">Regional Drilldown</figcaption>
-  </figure>
-  <p>Mousing over regions works the same as for countries in the global view, and you can return to the global view by clicking <strong>Back</strong>.</p>
-</section>
-
+    <h2 id="intro_recurring">Introduction to recurring events</h2>
+    <p>Selecting the <strong>Create this as a recurring event using a Static Entry Point (SEP)</strong> option allows for a long-running live stream that can be activated and deactivated while keeping the same entry point URL and playback URL. When using recurring events, the streaming endpoint URL and video ID will not change.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: When you create a recurring event, a video is automatically created for it in the Media module. Do <strong>not</strong> delete this video as it will be needed every time the event recurs.</aside>
+    <h3  id="recurring_limitations">Limitations</h3>
+    <p>The following limitations apply when working with recurring events:</p>
+    <ul>
+      <li>The <strong>Convert event to video asset when complete</strong> option is not available. An alternative is to use clipping to archive the full live event as a VOD. Clips can be created up until the next activation of the stream, or for 7 days, whichever is shorter. When the stream is re-activated, previous recording sessions are removed from the server and can no longer be clipped.</li>
+      <li>Job settings can not be modified, they are currently tied to the settings that initially created the recurring event.</li>
+      <li>Activating the stream can take up to 60 seconds for the event to become available. Some encoders have built-in retry (Wirecast, Elemental, etc.) so the encoders will reconnect as soon as the entry point is available.</li>
+      <li><strong>Reconnect Time</strong> is still applicable for recurring events on encoder disconnects. If the <strong>Reconnect Time</strong> is reached, the recurring event will be set to a deactivated state. Brightcove recommends deactivating a stream when a job completes and setting the <strong>Reconnect Time</strong> to an acceptable window of time to wait in the event of a disconnect (input hour costs are accrued during this wait period).</li>
+      <li>You should always stop the encoder before deactivating a recurring event. Accounts are allocated a finite number of recurring events. If the limit is reached, you will need to stop one of your recurring events before you can create a new one. If you have reached the maximum number of recurring events and attempt to create another one, an error will be returned.</li>
+      <li>When you deactivate a recurring event, the last few seconds of the stream remain playable for some time, related to clipping purposes.  .</li>
+      <li>Accounts are limited to a total of 34 SEP events (3 per region, except for us-west-2, where 10 allowed). If you reach the limit, you must end one SEP event in the region where you want to create a new one before you can proceed.</li>
+      <li>If you attempt to activate more than 5 SEP jobs at once, you will receive an error like the following:
+        <pre class="line-numbers"><code class="language-json" translate="No">{
+  “message”:“Allocating additional streaming capacity to the region. Please retry your request.: no_streaming_capacity_in_region”,
+  “statusCode”:500,
+  “name”:“ApiError”,
+  “isApiError”:true
+}</code></pre>
+        <p>You will need to wait until some jobs have finished activating before retrying the request.</p>
+      </li>
+    </ul>
+  </section>
   <section class="bcls-section">
-  <h2 id="Sessions_over_time">Sessions over time</h2>
-  <p>The <strong>Sessions Over Time</strong> graph provides insight into the number and duration of viewing sessions over a period. <a href="#Milestones">Milestones</a> are shown as well to help you gauge the impact of events.</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/sessions-over-time.png" alt="Sessions Over Time">
-    <figcaption class="bcls-caption--image">Sessions Over Time</figcaption>
-  </figure>
-  <p>Mousing over the graph reveals the data for particular days.</p>
-</section>
- 
+    <h2 id="work_recurring">Working with recurring events</h2>
+    <p>To create a recurring event, select the <strong>Create this as a recurring event using a Static Entry Point (SEP)</strong> option when creating a live event and then click <strong>Create Event</strong>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-recurring-event-selected.png" /></figure>
+    <p>When the recurring event is created, it will appear in the <strong>Standby</strong> tab on the Manage Events page.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-standby-tab.png" /></figure>
+    <p>The recurring event status can be one of:</p>
+    <ul>
+      <li><strong>Not Activated</strong> - Recurring event has been created and streaming has never started</li>
+      <li><strong>Waiting</strong> - Recurring event is activated and waiting for stream</li>
+      <li><strong>Streaming</strong> - Recurring event in progress</li>
+      <li><strong>Disconnected</strong> - Recurring event is in the process of being stopped</li>
+      <li><strong>Deactivated</strong> - Recurring event is deactivated</li>
+      <li><strong>Archived</strong> - Recurring event has been archived</li>
+    </ul>
+    <h3>Activating a recurring event</h3>
+    <p>Activating a recurring event makes the job available for streaming. The recurring event should be activated before the encoder is started. To activate a recurring event:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on the <strong>Standby</strong> tab.</li>
+      <li>Click on the event name to open the event in the Control Room.</li>
+      <li>Click <span class="button-blue-text-bordered">Activate</span>.</li>
+      <li>Start your encoder.</li>
+    </ol>
+    <p>When the recurring event is activated, it will move from the <strong>Standby</strong> tab to the <strong>Live</strong> tab.</p>
+    <h3>Deactivating a recurring event</h3>
+    <p>Deactivating a recurring event disables the job for streaming. When the event is over, the recurring event should be deactivated. To deactivate a recurring event:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on the <strong>Live</strong> tab.</li>
+      <li>Click on the event name to open the event in the Control Room.</li>
+      <li>Click <strong>Deactivate</strong>.</li>
+      <li>Stop your encoder.</li>
+    </ol>
+    <h3>Archiving a recurring event</h3>
+    <p>Archiving a recurring event permanently deactivates the job so it can't be enabled for streaming. Eventually the event will be deleted. Only events where streaming was started can be archived. If a recurring event was created and streaming never started, a <strong>Cancel</strong> button will appear vs. an <strong>Archive</strong> button.</p>
+    <p>To archive a recurring event:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on the <strong>Standby</strong> tab.</li>
+      <li>Click on the row for the event to select it.</li>
+      <li>Click <strong>Archive</strong>.</li>
+    </ol>
+  </section>
   <section class="bcls-section">
-  <h2 id="Content_trends">Content trends</h2>
-  <p>The <strong>Content Trends</strong> section of Insights provides several different ways to see trends in your content library, detailed below.</p>
-  <h3>Popular content</h3>
-  <p>In the <strong>Popular Content</strong> graph, you can see a ranking of your titles by hours viewed or the number of engaged views (at least 30 seconds). Note that you can mouseover a title in the <strong>Legend</strong> to highlight its line in the graph, and also adjust the date range and granularity:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/popular-content.png" alt="Popular Content">
-    <figcaption class="bcls-caption--image">Popular Content</figcaption>
-  </figure>
-  <p>Below the Content Trends graph are some data points for you overall content library:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/library-data-points.png" alt="Content Library Data Points">
-    <figcaption class="bcls-caption--image">Content Library Data Points</figcaption>
-  </figure>
-  <p>Note that you can drag the mouse over these to see data for each day.</p>
-  <p>The relevance of these will likely vary somewhat depending on the kind of content you have, but Attention Index is one probably everyone will find useful. It ranges from -100 to 100, comparing the number of "dissatisfied viewers" (who watched at least one minute but less than 10% of a video) with "satisfied viewers" (who watched at least 75%). Negative numbers mean you have more unsatisfied than satisfied viewers.</p>
-  <h3>Top content</h3>
-  <p>You can see details about audience size, engaged views, completion rate, and so forth for all your content in this section of Insights:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/top-content.png" alt="Top Content">
-    <figcaption class="bcls-caption--image">Top Content</figcaption>
-  </figure>
-  <p>Click on any column to sort the content list by that column.</p>
-  <h3>Library Breakdown and First Watched</h3>
-  <p>The last two parts of Insights offer you information on the performance by type (short clips vs. full videos) and on videos watched for the first time in this period:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/library-breaddown-first-watched.png" alt="Library Breakdown / First Watched">
-    <figcaption class="bcls-caption--image">Library Breakdown / First Watched</figcaption>
-  </figure>
-</section>
-
+    <h2 id="controlroom">Viewing live event info using the Control Room</h2>
+    <p>The Control Room page is used to view information about a live event. When you create a new live event and streaming begins, the Control Room page will open displaying the event information. A preview of the event will appear in the preview player. The Control Room page is also displayed when you click on an event on the Manage Live Events page. Click the <strong>Monitoring</strong> tab below the preview player to <a href="#monitor">view monitoring information</a> while the stream is in progress.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-control-room.png" /></figure>
+    <p>The Control Room page <strong>Event Information</strong> tab is organized into the following sections:</p>
+    <ul>
+      <li><a href="#eventstatus">Event Status</a></li>
+      <li><a href="#eventinfo">Event Information</a></li>
+      <li><a href="#clips">Clips</a></li>
+      <li><a href="#monitor">Monitor</a></li>
+      <li><a href="#renditions">Renditions</a></li>
+      <li><a href="#rtmp">RTMP</a></li>
+      <li><a href="#social_event">Social Event</a></li>
+    </ul>
+    <p>Click the <strong>Monitoring</strong> tab below the preview player to <a href="#ext-monitoring">view monitoring information</a> while the stream is in progress.</p>
+    <div>
+      <h3 id="eventstatus">Event Status</h3>
+      <p>The Event Status section is displayed only while an event is in progress. The following information is displayed:</p>
+      <ul>
+        <li><strong>Job Status</strong> - Current job status
+          <ul>
+            <li><strong>Streaming</strong> - Stream is live</li>
+            <li><strong>Processing Error</strong> - The Live stream has encountered an error</li>
+            <li><strong>Standby</strong> - Stream ready to be activated (static entry points only)</li>
+            <li><strong>Stopping</strong> - The live stream is stopping and creating any associated VOD outputs</li>
+            <li><strong>Completed</strong> - Live stream has completed</li>
+            <li><strong>Cancelling</strong> - The live stream is stopping and will NOT process any pending VOD outputs</li>
+            <li><strong>Cancelled</strong> - The live stream has been cancelled</li>
+            <li><strong>Disconnected</strong> - The encoder has been disconnected</li>
+            <li><strong>Waiting</strong> - Waiting for the RTMP stream (encoder to start)</li>
+            <li><strong>Failed</strong> - The job has stopped as a result of a system error</li>
+          </ul>
+        </li>
+        <li><strong>Current Viewers</strong> - Number of current viewers. Please note this is just an estimation and the figure may not be accurate for events with a low number of viewers or spikes in the audience.</li>
+        <li><strong>Elapsed Time - </strong>Stream elapsed time since it was <strong>started</strong> (not when it was created)</li>
+        <li><strong>Current Time - </strong>Current UTC time</li>
+      </ul>
+    </div>
+    <div>
+      <h3 id="eventinfo">Event Information</h3>
+      <p>The Event Information section displays the following information:</p>
+      <ul>
+        <li><strong>Name</strong> - Name of the event</li>
+        <li><strong>Job ID</strong> - Internal job ID</li>
+        <li><strong>Video ID</strong></li>
+        <li><strong>Short Description</strong></li>
+        <li><strong>Tags</strong></li>
+        <li><strong>Reference ID</strong></li>
+        <li><strong>Streaming to Social Media</strong> - If <strong>Allowed</strong>, the live event can be assigned to a scheduled social event</li>
+        <li><strong>Streaming Endpoint (RTMP URL</strong>) - Streaming endpoint used by the encoder</li>
+        <li><strong>Stream Name</strong> - Stream name used by the encoder</li>
+        <li><strong>Region</strong> - Streaming region</li>
+        <li><strong>Playback URL</strong> - URL that can be used to view the live stream in a non-Brightcove Player</li>
+      </ul>
+    </div>
+    <div>
+      <h3 id="clips">Clips</h3>
+      <p>The Clips section displays all of the clips that were created from the live stream. Clicking the clip name will open the clip in the Media module. For information on creating a clip, see <a href="creating-video-clip-using-live-module.html">Creating a Video Clip Using the Live Module</a>.</p>
+    </div>
+    <div>
+      <h3 id="monitor">Monitor</h3>
+      <p>The Monitor section displays the Input and Output Drift for the stream. Click <strong>Retrieve updated data and graphs</strong> to view updated graphs. If the account is enabled for extended monitoring, the Monitor section will be replaced with a <strong>Monitoring</strong> tab below the preview player. See the <a href="#ext-monitoring">extended monitoring</a> section for details.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-monitor.png" /></figure>
+      </p>
+    </div>
+    <div>
+      <h3 id="renditions">Renditions</h3>
+      <p>The Renditions section displays details about the renditions that were created. Clicking on a rendition link will show the encoding settings for the rendition.</p>
+    </div>
+    <div>
+      <h3 id="rtmp">RTMP</h3>
+      <p>The RTMP section can be used to add RTMP Outputs. This allows the live stream to be sent to other RTMP entry points. This can be used to send the live to stream to Facebook or YouTube for example.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-rtmp.png" /></figure>
+      <p>Enter the <strong>RTMP Output URL</strong> and the <strong>Rendition</strong> to send. Note that the format of the output URL may change depending on where the RTMP stream is being used. For more information, see <a href="using-live-rtmp-outputs-stream-facebook-and-youtube.html">Using Live RTMP Outputs to Stream to Facebook and YouTube</a>.</p>
+      <aside class="bcls-aside bcls-aside--information">Note: RTMP outputs are limited to 5 outputs per live job. This limitation includes connections marked as an error.</aside>
+    </div>
+    <div>
+      <h3 id="social_event">Social Event</h3>
+      <p>The Social Event section will display information about the <a href="#social">scheduled social event</a> the live stream is assigned to, if any.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-social-event.png" /></figure>
+    </div>
+  </section>
   <section class="bcls-section">
-  <h2 id="Understanding_viewers">Understanding "viewers"</h2>
-  <p>When the term "viewer" is used in Brightcove Analytics, what it means depends on how you deploy your content to viewers.</p>
-  <h3>Scenario 1: registered/subscribed viewers</h3>
-  <p>If viewers must register or subscribe to view your content <strong>and</strong> you <a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-viewer.html#Setting_the_viewer_id">instrument the player to send some kind of viewer id to the Brightcove data collector</a>, then viewers will be the viewers you identified and will be unique.</p>
-  <h3>Scenario 2: unidentified viewers</h3>
-  <p>In many cases, however, content is open to all viewers, and no "viewer id" is available. In this case the Brightcove Analytics system will try to generate one based on the player, User Agent, and IP address. (The IP address is not stored for privacy reasons.) While this method is helpful in giving you an idea of unique viewers, but can result in some inaccurate data because these parameters can change for same physical viewer - for example:</p>
-  <ul>
-    <li>A viewer starts to watch on a mobile device on 4G; this counts as a combination number 1 of Player, IP, UA.</li>
-    <li>The same viewer switches to home wifi to continue to watch, and we now have a combination 2 of Player, IP, UA. (The IP has changed.)</li>
-    <li>The viewer now stops the stream on the mobile and loads it on a PC browser. That's a new combination, the IP is the same but the User-Agent has changed. The Player ID could also change if he switches from a mobile app to a web player.</li>
-  </ul>
-  <p>This would lead to 3 supposedly unique viewers when, in reality, all metrics are coming from the same person. </p>
-</section>
- 
+    <h2 id="ext-monitoring">Viewing extended monitoring</h2>
+    <p>By default, the Live module will  display a <strong>Monitor</strong> section with  Output and Input Drift graphs. If you would like   extended monitoring  enabled, please contact your Brightcove account representative. Extended monitoring will display a <strong>Monitoring</strong> tab below the preview player. The monitoring information is available while an event is in progress and for up to 1 hour after the event ends. </p>
+    <p>Click <strong>Select Graphs</strong> to select which graphs appear and for a description of what each graph contains.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-monitoring.png" /></figure>
+    <p>The following graphs are available:</p>
+    <ul>
+      <li><strong>Input Drift</strong> - Input drift can be an indicator of stream health, and represents the stream currently being sent from the encoder to the Brightcove entry point.</li>
+      <li><strong>Output Drift</strong> - Output drift is the processing of each rendition in the stream. Higher values could increase the latency of the stream and/or cause viewing problems for end users.</li>
+      <li><strong>Client Disconnections</strong> - Disconnections from the encoder connected to the entry point. This is an indication of connectivity issues or incorrect output settings in your encoder.</li>
+      <li><strong>Validation Disconnections</strong> - Forced stream disconnections due to unexpected input settings from your encoder.</li>
+      <li><strong>Input Reconnections</strong> - Reconnections from the encoder to the entry point. This indicates a reestablished connection from your encoder to the entry point.</li>
+      <li><strong>VOD Process Time</strong> - Live to VOD processing time. This is the time before syndicating the clip to a content management system, including Brightcove Video Cloud.</li>
+      <li><strong>Cuepoint Detected</strong> - Detected ad triggers sent in the input stream via inband SCTE-35 or Live API triggers.</li>
+      <li><strong>Cuepoint Missed</strong> - Detected Ad triggers that could not be executed. This may be a result of incorrect formatting. See <a href="https://apis.support.brightcove.com/live-api/ssai/live-api-server-side-ad-insertion-ssai.html">documentation</a> for formatting.</li>
+      <li><strong>SSAI Tracking Event Counts</strong> - Server-side tracking pixel response time by HTTP status code and host.</li>
+      <li><strong>Variant Response Time</strong> - HLS master manifest response time for session-based streams.</li>
+      <li><strong>Chunklist Response Time</strong> - HLS variant (rendition) manifest response time for session-based streams.</li>
+      <li><strong>Inserted Ad Counts</strong> - Total number of inserted ads.</li>
+      <li><strong>RTMP Output Drift</strong> - Output drift is the processing of each RTMP rendition in the stream. Higher values could increase the latency of the stream and/or cause viewing problems for end users.</li>
+      <li><strong>RTMP Output Disconnection</strong> - Disconnections encountered for the RTMP output. This is an indicator of connection problems between the RTMP server and the destination server.</li>
+      <li><strong>RTMP Output Connection</strong> - Reconnections for the RTMP output stream. This occurs typically after being disconnected from the destination server.</li>
+    </ul>
+  </section>
   <section class="bcls-section">
-  <h2 id="Limitations">Limitations</h2>
-  <ul>
-    <li>Top Titles are limited to the top 100 videos by audience size.</li>
-    <li>Insights are presented 1-day behind viewership as data is processed overnight.</li>
-    <li>Hours Viewed by Location only goes to a state/province level.</li>
-    <li>Library Breakdown by Genre may be disabled if the customer’s metadata isn’t structured to allow identification of videos by genre.</li>
-    <li>Data export per viewer is not included.</li>
-    <li>Segments and Sync to marketing systems are not included in Essential Insights, but are available in the full version of <a href="https://audience-insights.support.brightcove.com/">Audience Insights</a>.</li>
-
-  </ul>
-</section>
-
+    <h2 id="duplicate">Duplicating an event</h2>
+    <p>Duplicating an event makes it easy to create another event with the same settings that were used to create a prior live event. To duplicate an event, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on an event to open the Control Room page.</li>
+      <li>Click <span class="button-blue-text-bordered">Duplicate</span> at the top of the page. A new live event will be created using the settings from the prior live event. Make changes to the event properties as needed.</li>
+      <li>Click <strong>Create Event</strong>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="publish">Generating the embed code for a live event</h2>
+    <p>To generate the embed code for an event, click <strong>Publish and Embed </strong>in the left navigation. Two types of embed code are available:</p>
+    <ul>
+      <li><strong>Standard</strong> - iframe embed code. Recommended for most cases. This type places the player inside an &lt;iframe&gt; tag.</li>
+      <li><strong>Advanced</strong> - In-page embed code. Allows the player to exist in the HTML page directly, not in an iframe. This offers developers the benefits of ease of accessing the player and associated properties and events.</li>
+    </ul>
+    <p>You also have the ability to get the URL to the published player. This is useful for viewing the event in a browser.</p>
+    <p>To generate the embed code for a live event, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on an event to open the Control Room page.</li>
+      <li>Click<strong> Publish and Embed </strong> in the left navigation.</li>
+      <li>Select a <strong>Player</strong>.
+        <aside class="bcls-aside bcls-aside--information">Note: If the event is configured to enable server-side ads (SSAI), DVR or multi-CDN, Brightcove Player version 6.18.3 and above must be used. Only version 6.18.3 and above players will appear in the dropdown list.</aside>
+      </li>
+      <li>When <strong>Allow DVR</strong> is checked, the player will request the DVR manifest instead of the live manifest. This option is only available if the event was created with the <strong>Create Cloud DVR</strong> option selected. If the event is published using a Brightcove Player version earlier than 6.33.0, the <a href="https://player.support.brightcove.com/plugins/live-dvrux-plugin.html">Live DVRUX Plugin</a> is required.
+        <aside class="bcls-aside bcls-aside--information">Notes:
+          <ul>
+            <li>The "Allow DVR" feature is not compatible with the Gallery module at the moment.</li>
+            <li>By selecting the "Allow DVR" option, its value will be changed to <strong>adConfigId=live</strong>.</li>
+          </ul>
+        </aside>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-allow-dvr.png" /></figure>
+      </li>
+      <li>Click the <strong>Player URL</strong> to preview the event in a browser or copy the appropriate embed code to use.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-publish-event.png" /></figure>
+        <p>Another option to preview your Live Streaming is doing it through the API.</p>
+        <p>Copy the <strong>playback_url</strong> value returned from creating a Live job using the Live API, and paste it into the Safari browser. Since this browser supports native HLS playback, you should see your live stream.</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" width="800" height="500" src="/assets/images/s-live-img/live-module/0.png" /></figure>
+        <p>Also, you can copy your URL and paste it into the Brightcove Player Reference App here:</p>
+        <p><a href="https://players.brightcove.net/3303963094001/player-reference-app/index.html
+">https://players.brightcove.net/3303963094001/player-reference-app/index.html </a></p>
+      </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--tip">Tips:
+      <ul>
+        <Li>For DVR and SSAI Live events, the generated URL will contain an <code translate="No">adConfigId</code> parameter which is a unique playback token for the event.</Li>
+        <li>The value for the <code translate="No">adConfigId</code> parameter is NOT your Ad Configuration ID that you defined in the Video Cloud Studio Admin module. It is the playback token generated by the <a href="https://apis.support.brightcove.com/live-api/references/reference.html#operation/CreatePlaybackToken">Brightcove Live API</a>.</li>
+        <!-- <li>Live jobs created using the Live module in Studio automatically create a special Video Cloud video that, when used in a Brightcove player, makes use of the <code translate="No">adConfigId</code> property to select the specific source desired (i.e. SSAI, DVR). </li> -->
+        <li>Jobs which have SSAI enabled must always provide an <code translate="No">adConfigId</code> in the player, even if the source desired is non-SSAI. This prevents a user from omitting the <code translate="No">adConfigId</code> and receiving a clear stream.</li>
+      </ul>
+    </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="social">Connecting to social media</h2>
+    <p>It's possible to connect a live event to a social event that was scheduled in the Social module. Before you can connect a live event to a social event, you should create a live event in the Social module. Only events that were created with the <strong>Streaming to Social Media</strong> setting set to <strong>Allowed</strong> can be assigned to a scheduled event.</p>
+    <p>To connect a live event to a social event, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Create a live event in the Social module.</li>
+      <li>Click on an event to open the Control Room page.</li>
+      <li>Click <strong>Connect to Social Media </strong>in the left navigation. A list of scheduled social events will display. If no events display, no scheduled events exist.</li>
+      <li>Click on a scheduled event and then click <strong>Connect</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-select-social-event.png" /></figure>
+      </li>
+    </ol>
+    <p>Once the event is assigned using the Live module, return to the Social module to preview the event and start the streaming process to the social platform.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="clip">Creating a clip</h2>
+    <p>Clips can be created while the event is in progress or after the event has ended. If clips can't be created, a message will appear when hovering over <strong>Create Clip</strong> in the left navigation. For information on creating a clip, see <a href="creating-video-clip-using-live-module.html">Creating a Video Clip Using the Live Module</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note:
+      <ul>
+        <li>
+          <p>Streams are available for clipping for 7 days after the live event has ended.</p>
+        </li>
+        <li>
+          <p>For Static Entry Point (recurring) streams: If during the 7 days after a stream, the stream is re-activated with a 2nd stream, the clipping will only be available for the content of the 2nd stream. The 1st stream will be cleared at that point, and there is no way to create create clips from it anymore, even if it is under 7 days after the stream was deactivated.</p>
+        </li>
+      </ul>
+    </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="reporting">Live event reporting</h2>
+    <p>Click <strong>Reporting</strong> in the left navigation to view <a href="reviewing-live-analytics.html">Live analytics</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="ad">Requesting an ad</h2>
+    <p>If the <strong>Enable Server Side Ad Insertion (SSAI)</strong> option was selected when the event was created, the Control Room page will display a <strong>Goto Ad</strong> button. When clicked, the length of the ad break can be selected.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/node18470-goto-ad.png" /></figure>
+    <p>Click <span class="button-blue">Insert</span> to insert an ad break into the live stream. If the ad doesn't fill the entire ad break time, the fill slate will be displayed. For information on working with server-side ads in the Live module, see <a href="implementing-server-side-ads-live-module.html">Implementing Server-Side Ads in the Live Module</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="captions">Captions</h2>
+    
+    <p>For details about using captions with Live streams, see the <a href="/live/general/captions-with-live-streams.html"> Captions with Live Streams</a> document.</p>
+      
+    
+  </section>
+  <section class="bcls-section">
+    <h2 id="trouble">Troubleshooting live stream issues</h2>
+    <p>If you need further help getting your live event to work, you can <a href="https://supportportal.brightcove.com/">contact us</a>. To make sure you get the fastest response possible, below is a list of what support will need to solve the problem.</p>
+    <ul>
+      <li>The specific symptoms the stream is having. For example, does it not play at all or does it stutter or freeze?</li>
+      <li>Whether this stream worked correctly in the past</li>
+      <li>The entry point URL you are using in your encoder</li>
+      <li>The encoding software and hardware are you using</li>
+      <li>The URL to the player to which you have published the live event</li>
+      <li>The video ID of your live asset in Video Cloud Studio</li>
+      <li>The results of a trace-route from your encoder to the publishing point host</li>
+    </ul>
+  </section>
 </article>
+
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -1757,7 +2089,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 13 Jul 2022
+  Page last updated on 12 Jul 2022
 </div>
 
 

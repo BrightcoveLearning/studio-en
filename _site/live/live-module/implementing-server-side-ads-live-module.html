@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This topic covers the metrics available in the Insights page of Analytics.">
+  <meta name="description" content="">
   
-  <title>Insights Reference</title>
+  <title>Implementing Server-Side Ads in the Live Module (SSAI)</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
@@ -63,9 +63,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/analytics/">Analytics</a></li>
+      <li class="breadcrumb-item"><a href="/live/live-module/">Live Module</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Insights Reference</li>
+      <li class="breadcrumb-item active" aria-current="page">Implementing Server-Side Ads in the Live Module (SSAI)</li>
     </ol>
   </nav>
 </header>
@@ -1554,194 +1554,155 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Insights Reference</h1>
 <article class="bcls-article">
-  <summary>This topic covers the metrics available in the Insights page of Analytics.</summary>
-  <aside class="bcls-aside bcls-aside--information language-editable">Insights is currently in <strong>Limited Availability</strong>.</aside>
-
+  <h1>Implementing Server-Side Ads in the Live Module</h1>
+  <summary>In this topic you will learn how to implement server-side advertising in the Live module.</summary>
   <section class="bcls-section">
-  <h2 id="Introduction">Introduction</h2>
-  <p>Insights is designed as an informational tool, answering two questions every video service has: how is my audience engaging with my video service and how is my content performing. Unique features include:
+    <h2 id="Introduction">Introduction</h2>
+    <p>The Live module supports Server-Side Ad Insertion (SSAI) so server-side ads can be requested and displayed during a live stream. SSAI provides these main features during live events:</p>
     <ul>
-      <li><strong>Engaged Views</strong> (as defined as at least 30 seconds). Engaged views are a better indication of how your content is working than video views - because as we know, there are a lot of 5-second views that are accidental or a result of random curiosity and do not reflect your real audience.</li>
-      <li>Beyond understanding the Total Hours Viewed per Device, a breakdown by <strong>User</strong> identifies particular devices that are over or under performing.</li>
-      <li><strong>Sessions Over Time</strong> not only gives a sense of how many audience members are engaging with your video service but the average duration of their session. Any time session duration drops, you should start digging into your content performance.</li>
-      <li><strong>Percent Library Viewed</strong> and <strong>Percent Viewers Watching New Content</strong> (released in the last two weeks) are distinct metrics indicating your library's performance.</li>
-      <li><strong>Attention Index</strong> is a better method for measuring how engaging any video, series, or genre is.  The percentage of viewers that complete less than 10% of a video are subtracted from the percent of viewers watching more than 75% of a video. It’s like a Net Promoter Score for video.</li>
-      <li><strong>Top Titles includes Play Starts</strong> and <strong>Engaged Views</strong> as well as the <strong>Attention Index</strong> help you understand how each video is working for your audience. Editorial and promotional decisions should steer audiences to the most compelling videos.</li>
-      <li><strong>First Watched</strong> identifies the first video an audience member engages with, including its <strong>Attention Index</strong>. Promoting the right group of videos is a key to attracting new audience members.</li>
-      <li>CSV Exports allow for additional analysis and can support Royalty Reporting or importing into personalization engines.</li>
+      <li>Since ads are stitched into the live video stream on the server side, they are not affected by ad blockers</li>
+      <li>Ads are inserted at cue points sent from your encoder or you can create an instant cue point using the&nbsp;Live module Control Room</li>
+      <li>You can configure&nbsp;<a href="#fill_slate">fill slates</a>&nbsp;to fill any unused ad time</li>
     </ul>
-    <p>In looking at the information provided by Insights, you may find it helpful to refer to the <a href="/analytics/insights-glossary.html">Glossary</a>.</p>
-</section>
-
+    <aside class="bcls-aside bcls-aside--information">
+      <ul>
+        <li>Before you can use SSAI, your Video Cloud account needs to be configured for Dynamic Delivery and enabled for SSAI. Contact your account manager for details.</li>
+        <li>The Live SSAI + DRM feature is not enabled at the moment.</li>
+        <li>SSAI for encrypted (AES) live streams uses <strong>segment-accurate</strong> (not frame-accurate) ad insertion by default. If you require frame-accurate ad insertion, you must contact Support to have your account configured for it.</li>
+      </ul>
+    </aside>
+    <p>This topic focuses on the settings required and the process to request a server-side ad during a live event.</p>
+  </section>
   <section class="bcls-section">
-  <h2 id="Setting_data_range">Setting date range</h2>
-  <p>You can set the period for the reports by clicking  <span class="button-blue">3 Months</span> to reveal additional options:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/select-data-period.png" alt="Data Period Options">
-    <figcaption class="bcls-caption--image">Data Period Options</figcaption>
-    <p>There are additional options under the <strong>To-Date</strong> tab:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/select-by-to-date.png" alt="To Date Options">
-      <figcaption class="bcls-caption--image">To Date Options</figcaption>
-    </figure>
-  </figure>
-  <h3>Individual insights</h3>
-  <p>All insights on the page by default will have the date range set for the page, but some graphs have their own <strong>to</strong> and <strong>from</strong> date-pickers to select a range just for that graph:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/date-range-graph.png" alt="To/From Date Pickers">
-    <figcaption class="bcls-caption--image">To/From Date Pickers</figcaption>
-  </figure>
-  <p>Also, in time-based graphs, you can click and drag in the graph itself or click and drag the start/end handles on the timeline below the graph to select a smaller range:</p>
-
-  <div style="position: relative; display: block; max-width: 800px;"><div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/6225316964001/Qznf2bKtV_default/index.html?videoId=6309328394112" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
-</section>
-
+    <h2 id="Configuring_the_server_side_ad_settings">Configuring the server-side ad settings</h2>
+    <p>Before server-side ads can be delivered, server-side ad settings must be configured. The server-side ad settings define various aspects of ad playback, including ad calls, timing, beacons and other ad configuration options. These settings are configured as part of the Server-Side Ad Settings in the Admin module. In this example, a simple ad tag is defined.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/live-ad-config.png" /></figure>
+    <p>For more information, see <a href="/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>.</p>
+  </section>
   <section class="bcls-section">
-  <h2 id="Downloading_reports">Downloading reports</h2>
-  <p>When you mouseover near the top of many of the different sections of the insights, either a <i data-feather="more-vertical"></i> or <i data-feather="download"></i> icon will appear:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/more-icon.png" alt="More Icon">
-    <figcaption class="bcls-caption--image">More Icon</figcaption>
-  </figure>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/download-icon.png" alt="Download Icon">
-    <figcaption class="bcls-caption--image">Download Icon</figcaption>
-  </figure>
-  <p>Clicking these icons will reveal a menu that allows you to download a CSV report of the data and/or a PNG image of the graph.</p>
-</section>
-
+    <h2 id="fill_slate">Configuring the fill slate</h2>
+    <p>Fill slates are videos that will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad. If the requested ad is shorter than the ad break time, the fill slate will be displayed so viewers don't see a blank player. You should configure at least one fill slate before requesting a server-side ad. Ad slates are configured as part of the Live Settings in the Admin module. In this example, a fill slate that displays the Brightcove logo was defined.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/fill-slate.png" /></figure>
+    <p>For information on creating ad slates, see <a href="/admin/managing-live-settings.html">Managing Live Settings</a>.</p>
+  </section>
   <section class="bcls-section">
-  <h2 id="Usage_trends">Usage trends</h2>
-  <p>The <strong>Usage Trends</strong> report give you three reports detailing how you video library is performing overall:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/usage-trends.png" alt="Usage Trends">
-    <figcaption class="bcls-caption--image">Usage Trends</figcaption>
-    <p>By default you see <strong>Engaged Views</strong>, but the options above the graph allow you to change this to <strong>Hours Watched</strong> or <strong>Audience Size</strong>. Note that <strong>engaged views</strong> means a viewer watched at least 30 seconds of the video.</p>
-    <p>By default, the data is for the data range is the the general one set in the <a href="#Setting_data_range">Date Range Selector</a>, but you can also choose the data range for this graph specifically in the controls above the graph.</p>
-  </figure>
-</section>
-
+    <h2 id="Creating_a_live_event_that_supports_server_side_ads">Creating a live event that supports server-side ads</h2>
+    <p>In order for a live event to display server-side ads, the <strong>Enable Server Side Ad Insertion (SSAI)</strong> setting must be selected when the event is created. For complete information on creating a live event using the Live module, see <a href="creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">You should have configured the Server-Side Ad Settings and added at least one fill slate before creating an event.</aside>
+    <p>To create a new live event that supports server-side ads, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the Live module.</li>
+      <li>From the Manage Events page click <span class="button-blue">Create Event</span>.</li>
+      <li>Enter the event details as needed.</li>
+      <li>Click <strong>ADVANCED OPTIONS</strong> to expand the advanced options.</li>
+      <li>Check <strong>Enable Server Side Ad Insertion (SSAI)</strong>. This will enable server side ad insertion.</li>
+      <li>Select a <strong>Fill Slate</strong>. The fill slate will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad.</li>
+      <li>When the <strong>Ad Audio</strong> setting is checked, the audio levels on ads will be normalized based on the adjustment that is set. This can be used as a way to help make sure ads aren’t significantly louder than the content. Brightcove recommends selecting this option.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/event-ssai-settings.png" /></figure>
+      </li>
+      <li>Click <span class="button-blue">Create Event</span>.</li>
+      <li>The&nbsp;Control Room page&nbsp;will open with details about the live event including the&nbsp;<strong>Streaming Endpoint (RTMP URL)</strong>&nbsp;and&nbsp;<strong>Stream Name</strong>. These values will be used by the encoder.</li>
+      <li>Configure the encoder and start the live stream.</li>
+      <li>By default, &nbsp;the Control Room preview player shows the ad-free stream. Ads will not be shown in the Control Room unless a Live ad configuration is selected. Use the dropdown below to the player to select an ad configuration.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/select-ad-config2.png" /></figure>
+      </li>
+      <li><strong>(Optional)</strong> Click the plus button (<img alt="" src="/assets/images/s-live-img/live-module/implement-ssai/plus-icon.png" width="15" height="15" />) to select an additional ad configuration. Doing this will add another preview player on the Control Room page.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/two-preview-players.png" /></figure>
+      </li>
+    </ol>
+    <p>Click the volume button below the preview player to control which player audio stream is active.</p>
+    <aside class="bcls-aside bcls-aside--information">If the event is using RTMP outputs, ads will not be streamed to the RTMP output. The ad-free stream will be streamed instead.</aside>
+    <aside class="bcls-aside bcls-aside--information">If the event is being used by the  Live to Facebook feature in the Social module, ads will not be streamed to Facebook. The ad-free stream will be streamed instead.</aside>
+  </section>
   <section class="bcls-section">
-  <h2 id="Milestones">Milestones</h2>
-  <p>You can add <strong>Milestones</strong> to the Insights and they will appear beside several beside the <strong>Usage Trends</strong>, <strong>Sessions Over Time</strong>, and <strong>Content Trends</strong> graphs, with lines added to the graphs corresponding to the Milestones:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/milestones.png" alt="Milestones">
-    <figcaption class="bcls-caption--image">Milestones</figcaption>
-  </figure>
-  <p>The Milestones help you correlate events, releases, campaigns, and such to changes in content consumption. To add new milestones, just click <span style="border-radius: 50%;padding: 0.2em 0.6em;background-color: #092dbd;color: #ffffff;width: 1.5em;font-weight: bold;">+</span> and fill in the required information.</p>
-</section>
-
+    <h2 id="Requesting_an_ad">Requesting an ad</h2>
+    <p>To request an ad, click <span class="button-blue">Go To Ad ˇ</span>. When clicked, the length of the ad break can be selected.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/goto-ad.png"  /></figure>
+    <p>Click <span class="button-blue">Insert</span> to insert an ad break into the live stream. If the ad doesn't fill the entire ad break time, the fill slate (selected when the event was created) will be displayed. Ads will be seen in the Control Room preview player and in players that are published using the Live module. This example shows 2 ads being displayed in the Control Room.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/two-ad-preview.png" /></figure>
+  </section>
   <section class="bcls-section">
-  <h2 id="Hours_by_device">Hours by device</h2>
-  <p>The Hours by Location insight shows you how your content is performing on different devices:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-device-overview.png" alt="Hours by Device">
-    <figcaption class="bcls-caption--image">Hours by Location</figcaption>
-  </figure>
-  <p>This can be useful for making decisions about ingest profiles and video production, to ensure that you are producing content well-matched to viewers's preferred devices.</p>
-  <p>Mouseover circles in the graph on the right to see more details:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-device-detail.png" alt="Hours by Device Details">
-    <figcaption class="bcls-caption--image">Hours by Device Details</figcaption>
-  </figure>
-</section>
-
+    <h2 id="Publishing_the_live_event">Publishing the live event</h2>
+    <p>Live streams with server-side ads cannot be published using the Media module, they must be published using the Live Module.</p>
+    <p>To generate the embed code for a live event with server-side ads, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on an event to open the Control Room page.</li>
+      <li>Click<strong> Publish and Embed</strong> in the left navigation.</li>
+      <li>Select an <strong>Available Player</strong>.
+        <aside class="bcls-aside bcls-aside--information">If the event is configured to enable server-side ads (SSAI), DVR or multi-CDN, Brightcove Player version 6.18.3 and above must be used. Only version 6.18.3 and above players will appear in the dropdown list.</aside>
+      </li>
+      <li>Select the <strong>Ad Configuration</strong> to use with the player. The ad configuration will determine which ad(s) appear in the player.</li>
+      <li>Click the <strong>Player URL</strong> to preview the event in a browser or copy the appropriate embed code to use.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/publish.png" /></figure>
+      </li>
+    </ol>
+  </section>
   <section class="bcls-section">
-  <h2 id="Hours_by_location">Hours by location</h2>
-  <p>The Hours by Location insight shows you how your content is performing in various parts of the world:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/hours-by-location.png" alt="Hours by Location">
-    <figcaption class="bcls-caption--image">Hours by Location</figcaption>
-  </figure>
-  <p>Note the zoom control in the lower-left corner of the map and also that you can mouseover countries on the map or the graph the right to get details:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/views-by-country-details-1.png" alt="Country Details">
-    <figcaption class="bcls-caption--image">Country Details</figcaption>
-  </figure>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/views-by-country-details-2.png" alt="Country Details">
-    <figcaption class="bcls-caption--image">Country Details</figcaption>
-  </figure>
-  <p>In addition, you can click on countries on the map to drilldown into a regional breakdown:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/regional-drilldown.png" alt="Regional Drilldown">
-    <figcaption class="bcls-caption--image">Regional Drilldown</figcaption>
-  </figure>
-  <p>Mousing over regions works the same as for countries in the global view, and you can return to the global view by clicking <strong>Back</strong>.</p>
-</section>
-
+    <h2 id="Publishing_a_remote_live_event">Publishing a remote live event</h2>
+    <p>If you want to publish a remote live event, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>After creating your live event by following the steps <a href="#Creating_a_live_event_that_supports_server_side_ads">listed above</a>, return to the <strong>Live</strong> module's <strong>Control Room</strong>. 
+      </li>
+      <li>If you know the value of your ad config id, then you can insert it into the playlist URL.
+        <p>In the <strong>Live</strong> module's <strong>Control Room</strong>, copy the <strong>Playback URL</strong>.</p>
+        <p></p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Playback URL" src="/assets/images/s-live-img/live-module/implement-ssai/playback-url.png" />
+          <figcaption class="bcls-caption--image">Playback URL</figcaption>
+        </figure>
+        <p>Next, insert the ad config id (045f90cfd55187ff6e60c8) that you want to use to the URL as follows:</p>
+        <pre>
+<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/21e83ff8c229478e8c81416838eb6e1f/us-west-2/NA/<span class="bcls-highlight">045f90cfd55187ff6e60c8/</span>playlist.m3u8</code></pre>
+        <p>Then, rename the playlist from <code translate="No">playlist.m3u8</code> to <code translate="No">playlist_ssaiM.m3u8</code>. The remote asset should look similar to this:</p>
+        <pre>
+<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/21e83ff8c229478e8c81416838eb6e1f/us-west-2/NA/045f90cfd55187ff6e60c8/<span class="bcls-highlight">playlist_ssaiM.m3u8</span></code></pre>
+        <p>Skip to step 6 and use this playlist URL.</p>
+      </li>
+      <li>If you don't know the value of your ad config id, you can get the complete playlist URL as follows. Select the ad configuration that you want to use.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Select ad config" src="/assets/images/s-live-img/live-module/implement-ssai/select-ad-config.png" />
+          <figcaption class="bcls-caption--image">Select ad config</figcaption>
+        </figure>
+      </li>
+      <li>For your browser, open the network console tab. In this case, we are using the Chrome browser.
+      </li>
+      <li>In the network console, search for "playlist_ssaiM". Copy the URL that ends with "playlist_ssaiM.m3u8". You may have to refresh the page and re-open your network tab.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Network console" src="/assets/images/s-live-img/live-module/implement-ssai/network-console.png" />
+          <figcaption class="bcls-caption--image">Network console</figcaption>
+        </figure>
+        <aside class="bcls-aside bcls-aside--information">Since the ad config id is contained within the URL, your SSAI URL will be different depending on the ad config you have selected.</aside>
+        <p>In this example, the URL is:</p>
+        <pre>
+<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/21e83ff8c229478e8c81416838eb6e1f/us-west-2/NA/582ea6fafea84bf595f610b8ebbeeda8/playlist_ssaiM.m3u8</code></pre>
+      </li>
+      <li>In Studio, navigate to the <strong>Media</strong> module and create a new Remote asset pointing to the playlist URL from the previous step. In the left-side menu, select <strong>+ Add Remote Video</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Add Remote Video" src="/assets/images/s-live-img/live-module/implement-ssai/add-remote-video.png" />
+          <figcaption class="bcls-caption--image">Add Remote Video</figcaption>
+        </figure>
+      </li>
+      <li>In the <strong>Add Remote Video</strong> enter a <strong>Video Name</strong> and the playlist URL. Select the <strong>Save</strong> button.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Add Remote Video dialog" src="/assets/images/s-live-img/live-module/implement-ssai/remote-dialog.png" />
+          <figcaption class="bcls-caption--image">Add Remote Video dialog</figcaption>
+        </figure>
+      </li>
+      <li>You now have a video Id pointing to your remote live stream. You can use this with any player in your account to stream live content with server-side ads.
+      </li>
+    </ol>
+  </section>
   <section class="bcls-section">
-  <h2 id="Sessions_over_time">Sessions over time</h2>
-  <p>The <strong>Sessions Over Time</strong> graph provides insight into the number and duration of viewing sessions over a period. <a href="#Milestones">Milestones</a> are shown as well to help you gauge the impact of events.</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/sessions-over-time.png" alt="Sessions Over Time">
-    <figcaption class="bcls-caption--image">Sessions Over Time</figcaption>
-  </figure>
-  <p>Mousing over the graph reveals the data for particular days.</p>
-</section>
- 
-  <section class="bcls-section">
-  <h2 id="Content_trends">Content trends</h2>
-  <p>The <strong>Content Trends</strong> section of Insights provides several different ways to see trends in your content library, detailed below.</p>
-  <h3>Popular content</h3>
-  <p>In the <strong>Popular Content</strong> graph, you can see a ranking of your titles by hours viewed or the number of engaged views (at least 30 seconds). Note that you can mouseover a title in the <strong>Legend</strong> to highlight its line in the graph, and also adjust the date range and granularity:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/popular-content.png" alt="Popular Content">
-    <figcaption class="bcls-caption--image">Popular Content</figcaption>
-  </figure>
-  <p>Below the Content Trends graph are some data points for you overall content library:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/library-data-points.png" alt="Content Library Data Points">
-    <figcaption class="bcls-caption--image">Content Library Data Points</figcaption>
-  </figure>
-  <p>Note that you can drag the mouse over these to see data for each day.</p>
-  <p>The relevance of these will likely vary somewhat depending on the kind of content you have, but Attention Index is one probably everyone will find useful. It ranges from -100 to 100, comparing the number of "dissatisfied viewers" (who watched at least one minute but less than 10% of a video) with "satisfied viewers" (who watched at least 75%). Negative numbers mean you have more unsatisfied than satisfied viewers.</p>
-  <h3>Top content</h3>
-  <p>You can see details about audience size, engaged views, completion rate, and so forth for all your content in this section of Insights:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/top-content.png" alt="Top Content">
-    <figcaption class="bcls-caption--image">Top Content</figcaption>
-  </figure>
-  <p>Click on any column to sort the content list by that column.</p>
-  <h3>Library Breakdown and First Watched</h3>
-  <p>The last two parts of Insights offer you information on the performance by type (short clips vs. full videos) and on videos watched for the first time in this period:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-audience-insights-img/essential-insights/library-breaddown-first-watched.png" alt="Library Breakdown / First Watched">
-    <figcaption class="bcls-caption--image">Library Breakdown / First Watched</figcaption>
-  </figure>
-</section>
-
-  <section class="bcls-section">
-  <h2 id="Understanding_viewers">Understanding "viewers"</h2>
-  <p>When the term "viewer" is used in Brightcove Analytics, what it means depends on how you deploy your content to viewers.</p>
-  <h3>Scenario 1: registered/subscribed viewers</h3>
-  <p>If viewers must register or subscribe to view your content <strong>and</strong> you <a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-viewer.html#Setting_the_viewer_id">instrument the player to send some kind of viewer id to the Brightcove data collector</a>, then viewers will be the viewers you identified and will be unique.</p>
-  <h3>Scenario 2: unidentified viewers</h3>
-  <p>In many cases, however, content is open to all viewers, and no "viewer id" is available. In this case the Brightcove Analytics system will try to generate one based on the player, User Agent, and IP address. (The IP address is not stored for privacy reasons.) While this method is helpful in giving you an idea of unique viewers, but can result in some inaccurate data because these parameters can change for same physical viewer - for example:</p>
-  <ul>
-    <li>A viewer starts to watch on a mobile device on 4G; this counts as a combination number 1 of Player, IP, UA.</li>
-    <li>The same viewer switches to home wifi to continue to watch, and we now have a combination 2 of Player, IP, UA. (The IP has changed.)</li>
-    <li>The viewer now stops the stream on the mobile and loads it on a PC browser. That's a new combination, the IP is the same but the User-Agent has changed. The Player ID could also change if he switches from a mobile app to a web player.</li>
-  </ul>
-  <p>This would lead to 3 supposedly unique viewers when, in reality, all metrics are coming from the same person. </p>
-</section>
- 
-  <section class="bcls-section">
-  <h2 id="Limitations">Limitations</h2>
-  <ul>
-    <li>Top Titles are limited to the top 100 videos by audience size.</li>
-    <li>Insights are presented 1-day behind viewership as data is processed overnight.</li>
-    <li>Hours Viewed by Location only goes to a state/province level.</li>
-    <li>Library Breakdown by Genre may be disabled if the customer’s metadata isn’t structured to allow identification of videos by genre.</li>
-    <li>Data export per viewer is not included.</li>
-    <li>Segments and Sync to marketing systems are not included in Essential Insights, but are available in the full version of <a href="https://audience-insights.support.brightcove.com/">Audience Insights</a>.</li>
-
-  </ul>
-</section>
-
+    <h2 id="Troubleshooting_live_stream_issues">Troubleshooting live stream issues</h2>
+    <p>If you need further help getting your live event to work, you can <a href="https://supportportal.brightcove.com/create">contact us</a>. To make sure you get the fastest response possible, below is a list of what support will need to solve the problem.</p>
+    <ul>
+      <li>The specific symptoms the stream is having. For example, does it not play at all or does it stutter or freeze?</li>
+      <li>Whether this stream worked correctly in the past</li>
+      <li>The entry point URL you are using in your encoder</li>
+      <li>The encoding software and hardware are you using</li>
+      <li>The URL to the player to which you have published the live event</li>
+      <li>The video ID of your live asset in Video Cloud Studio</li>
+      <li>The results of a trace-route from your encoder to the publishing point host</li>
+    </ul>
+  </section>
 </article>
+
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -1757,7 +1718,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 13 Jul 2022
+  Page last updated on 12 Jul 2022
 </div>
 
 
