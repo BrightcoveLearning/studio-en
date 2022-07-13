@@ -45,12 +45,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/adding-chapters-video.html",
+      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
 
@@ -225,12 +225,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
@@ -680,6 +680,26 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/live/web-conferencing/host-avaya-conference-brightcove-live.html",
+      "oldURL": "/host-avaya-conference-brightcove-live"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/live/web-conferencing/host-cisco-webex-conference-brightcove-live.html",
+      "oldURL": "/host-cisco-webex-conference-brightcove-live"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/live/web-conferencing/host-inxpo-live.html",
+      "oldURL": "/host-inxpo-live"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/live/web-conferencing/host-zoom-conference-brightcove-live.html",
+      "oldURL": "/host-zoom-conference-brightcove-live"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/campaign/general/how-campaign-module-identifies-viewers.html",
       "oldURL": "/how-campaign-module-identifies-viewers"
   },
@@ -825,12 +845,22 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/live/web-conferencing/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/live/live-module/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/live/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/live/",
       "oldURL": "/index"
   },
 
@@ -1165,12 +1195,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/organizing-videos-using-folders.html",
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/organizing-videos-using-folders.html",
       "oldURL": "/organizing-videos-using-folders"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/organizing-videos-using-folders.html",
+      "newURL": "https://studio.support.brightcove.com/media/organizing-videos-using-folders.html",
       "oldURL": "/organizing-videos-using-folders"
   },
 
