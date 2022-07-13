@@ -3,19 +3,16 @@ title: Getting Started
 description: Topics to help you get started with live streaming.
 parent: Live Streaming
 ---
-<h1>{{ page.title }}</h1>
-<article class="landing-page-wrapper">
+<article class="bcls-article"> 
+  <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
-  <section class="bcls-topic-list">
-    <h2 id="Topics_in_this_section">Topics</h2>
+  <section class="bcls-section">
     <ul>
-      {% for item in site.data.navigation %}
-      {% if item.name == page.title %}
-      {% for doc in item.docs %}
-      <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
-      {% endfor %}
-      {% endif %}
-      {% endfor %}
+      <li><a href="get-started/delivering-live-streams.html">Delivering Live Streams</a></li>
+      <li><a href="get-started/live-module-guidelines-and-best-practices.html">Brightcove Live: Best Practices</a></li>
+      <li><a href="get-started/step-step-live-srt.html">Step-by-Step: SRT Live event</a></li>
+      <li><a href="get-started/step-step-using-live-module-open-broadcaster-software-obs.html">Step-by-Step: Using the Live Module with OBS</a></li>
+      <li><a href="get-started/step-step-using-live-module-telestream-wirecast.html">Step-by-Step: Using the Live Module with Telestream Wirecast</a></li>
     </ul>
   </section>
 </article>

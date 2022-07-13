@@ -3,20 +3,15 @@ title: Web Conferencing
 description: This section contains topics that apply to integrating Brightcove Live with different web conferencing platforms.
 parent: Live Streaming
 ---
-
-<h1>{{ page.title }}</h1>
-<article class="landing-page-wrapper">
+<article class="bcls-article"> 
+  <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
-  <section class="bcls-topic-list">
-    <h2 id="Topics_in_this_section">Topics</h2>
+  <section class="bcls-section">
     <ul>
-      {% for item in site.data.navigation %}
-      {% if item.name == page.title %}
-      {% for doc in item.docs %}
-      <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
-      {% endfor %}
-      {% endif %}
-      {% endfor %}
+      <li><a href="web-conferencing/host-avaya-conference-brightcove-live.html">Hosting an Avaya Conference on Brightcove</a></li>
+      <li><a href="web-conferencing/host-cisco-webex-conference-brightcove-live.html">Hosting a Cisco Webex Conference to Brightcove Live</a></li>
+      <li><a href="web-conferencing/host-inxpo-live.html">Hosting an INXPO Event on Brightcove Live</a></li>
+      <li><a href="web-conferencing/host-zoom-conference-brightcove-live.html">Hosting a Zoom Conference on Brightcove Live</a></li>
     </ul>
   </section>
 </article>
