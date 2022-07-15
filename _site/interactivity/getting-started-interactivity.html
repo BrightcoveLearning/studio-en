@@ -1745,7 +1745,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </code></pre>
         <p>This will ensure the IMA3 plugin layer does not cover up any HapYak interactions.</p>
       </li>
-      <li>For the plugin <strong>Options(JSON)</strong>, you will need the value of your HapYak API Read  Key. To get your API Read Key, login to your HapYak account and click <strong>Integrations</strong> in the main navigation (or click <a href="http://www.hapyak.com/portal/settings/integrations">here</a>). When you have the key, for the <strong>Options(JSON)</strong> enter:
+      <li>For the plugin <strong>Options(JSON)</strong>, you will need the value of your HapYak API Read  Key. To get your API Read Key, login to your Brightcove Interactivity account and click <strong>Integrations</strong> in the main navigation (or click <a href="http://www.hapyak.com/portal/settings/integrations">here</a>). When you have the key, for the <strong>Options(JSON)</strong> enter:
 <pre><code>
 {
 "apiKey":"your HapYak API Read Key"
@@ -1760,7 +1760,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
       <figure class="bcls-figure"><img src="/assets/images/interactivity/gsi-plugin-settings.png"> </figure>
       </li>
-      <li>If you wish to configure a &quot;read-only&quot; player which will display interactivity on existing HapYak projects but will <strong>NOT</strong> publish any new projects, add the following parameter to the <strong>Options(JSON)</strong>, below the <code>apiKey</code> value:
+      <li>If you wish to configure a &quot;read-only&quot; player which will display interactivity on existing Brightcove Interactivity projects but will <strong>NOT</strong> publish any new projects, add the following parameter to the <strong>Options(JSON)</strong>, below the <code>apiKey</code> value:
 <pre><code>
 “readOnly”: true
 </code></pre>
@@ -1771,20 +1771,20 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>The HapYak Player is now ready to use.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="project-creation">Creating a HapYak project</h2>
+    <h2 id="project-creation">Creating a Brightcove Interactivity project</h2>
     <p>When a video is played inside of a HapYak-enabled Brightcove Player, the following things happen: </p>
     <ul>
-      <li>The Brightcove video ID, title, tags and custom fields are sent to HapYak.</li>
-      <li>HapYak attempts to look up the video ID within your HapYak group.</li>
-      <li><strong>If no matching record is found</strong>, then HapYak creates a HapYak project with the data sent by Brightcove.</li>
-      <li>HapYak will also set the project properties to indicate that it was "auto created":
+      <li>The Brightcove video ID, title, tags and custom fields are passed to Brightcove Interactivity.</li>
+      <li>Brightcove Interactivity attempts to look up the video ID within your group.</li>
+      <li><strong>If no matching record is found</strong>, then Brightcove Interactivity creates a  project with the data that was sent.</li>
+      <li>Brightcove Interactivity will also set the project properties to indicate that it was "auto created":
         <ul>
           <li> The <code>is_published</code> value will be set to <strong>TRUE</strong></li>
           <li> A tag with the value <code>live</code> will be added</li>
         </ul>
       </li>
     </ul>
-    <p>The following steps will automatically create a HapYak project:</p>
+    <p>The following steps will automatically create a Brightcove Interactivity project:</p>
     <ol class="bcls-tasklist-restart">
       <li>Open the <strong>Media</strong> module.</li>
       <li>Select a video to publish by checking the box next to the video thumbnail.</li>
@@ -1793,10 +1793,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Click the preview link to open a preview in a new browser tab.
         <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-vc-publish.png"> </figure>
       </li>
-      <li>Play the preview video (the video only needs to be played for a few seconds). This will auto-create a project in HapYak.
-        <aside class="bcls-aside bcls-aside--information">Note: You must preview the video using the preview link.  Previewing the video with the preview player in the Media module <strong>will not</strong> auto-create a project in HapYak.</aside>
+      <li>Play the preview video (the video only needs to be played for a few seconds). This will auto-create a project in Brightcove Interactivity.
+        <aside class="bcls-aside bcls-aside--information">Note: You must preview the video using the preview link.  Previewing the video with the preview player in the Media module <strong>will not</strong> auto-create a project.</aside>
       </li>
-      <li>Login to  HapYak Studio.</li>
+      <li>Login to  Brightcove Interactivity Studio.</li>
       <li>In the left navigation, click <strong>Manage</strong>.</li>
       <li>A list of projects will appear. Confirm the video you just published appears in the project list.
         <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-projects-list.png"> </figure>
@@ -1808,14 +1808,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="text-overlay">Adding a text overlay</h2>
     <p>In this topic a simple text overlay will be added just to validate that the interactivity can be viewed inside of a Brightcove Player.</p>
     <ol class="bcls-tasklist-restart">
-      <li>In the HapYak UI, click on the project to open it.</li>
+      <li>In the Brightcove Interactivity UI, click on the project to open it.</li>
       <li>In the bottom toolbar, click on the text overlay button.
         <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-add-overlay.png"> </figure>
       </li>
       <li>Click on the <strong>Editor</strong> link in the menu.
         <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-overlay-editor.png"> </figure>
       </li>
-      <li>Enter some sample text for the overlay and click <strong>Submit</strong>.
+      <li>Enter some sample text for the overlay and click <strong>SUBMIT</strong>.
         <figure class="bcls-figure"> <img src="/assets/images/interactivity/gsi-hapyak-overlay-text-added.png"> </figure>
       </li>
       <li>Click <strong>Done</strong>.</li>
@@ -1823,18 +1823,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   For detailed information on adding text and image overlays to videos, see <a href="adding-interactivity-video.html">Adding Interactive Overlays to Videos</a>.</section>
   <section class="bcls-section">
     <h2 id="preview-publish">Previewing and generating embed code for a video</h2>
-    <p>Once an interaction has been added to a HapYak project, preview the video to ensure the interactivity is working as expected. When a video is loaded in a HapYak-enabled Brightcove Player, the following things happen:</p>
+    <p>Once an interaction has been added to a Brightcove Interactivity project, preview the video to ensure the interactivity is working as expected. When a video is loaded in a HapYak-enabled Brightcove Player, the following things happen:</p>
     <ol class="bcls-tasklist-restart">
-      <li>The Brightcove video ID, title, tags and custom fields are sent to HapYak.</li>
-      <li>HapYak attempts to look up the video ID within your HapYak group.</li>
-      <li><strong>If a matching record is found</strong>, then HapYak filters to the record that has the <code>is_published</code> value set to <strong>TRUE</strong>. The project with both the matching video ID and the <code>is_published</code> value set to <strong>TRUE</strong> will be displayed.</li>
-      <li><strong>If more than one matching record is found</strong>, then HapYak filters to the most recently modified record that has the <code>is_published</code> value set to <strong>TRUE</strong>. The most recently modified project with both the matching video ID and the <code>is_published</code></li>
+      <li>The Brightcove video ID, title, tags and custom fields are sent to Brightcove Interactivity.</li>
+      <li>Brightcove Interactivity attempts to look up the video ID within your Brightcove Interactivity group.</li>
+      <li><strong>If a matching record is found</strong>, then Brightcove Interactivity filters to the record that has the <code>is_published</code> value set to <strong>TRUE</strong>. The project with both the matching video ID and the <code>is_published</code> value set to <strong>TRUE</strong> will be displayed.</li>
+      <li><strong>If more than one matching record is found</strong>, then Brightcove Interactivity filters to the most recently modified record that has the <code>is_published</code> value set to <strong>TRUE</strong>. The most recently modified project with both the matching video ID and the <code>is_published</code></li>
     </ol>
     <aside class="bcls-aside bcls-aside--information">Note: The <code>is_published</code> value can be manually changed using the Settings dialog (click  <strong>SETTINGS</strong> at the top of the page).</aside>
     <p>Follow these steps to preview and generate the embed code for the video:</p>
     <ol class="bcls-tasklist-restart">
       <li>Open the <strong>Media</strong> module.</li>
-      <li>Select the video you used to create the HapYak project and publish it.</li>
+      <li>Select the video you used to create the Brightcove Interactivity project and publish it.</li>
       <li>In the <strong>Select Player</strong> dropdown list, select the HapYak-enabled player. </li>
       <li>Click the <strong>URL</strong> below the preview player to open it in a new browser tab. Confirm that the interaction appears.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/interactivity/gsi-overlay-sample.png" /></figure>
@@ -1857,10 +1857,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="notes">Notes</h2>
     <ol class="bcls-tasklist-restart">
       <li>Annotations added to a project at the project level (meaning not through templates) should appear in approximately 90 seconds. Annotations added via templates can take up to two hours to appear. </li>
-      <li>Do not manually create Brightcove projects in the HapYak portal. The plugin will do this automatically.</li>
-      <li>Uploading a new video source files in Video Cloud will preserve the video ID and the connection to HapYak.</li>
-      <li>Do not use the EMBED code generated from the HapYak tools when using the plugin. Instead publish your videos per the normal Brightcove workflow.</li>
-      <li>Workflow-generated projects can be deleted through the HapYak UI. Please note that subsequent loads of the corresponding video through the Brightcove Player will not auto-generate a separate project in the portal.</li>
+      <li>Do not manually create Brightcove projects in  Brightcove Interactivity Studio. The plugin will do this automatically.</li>
+      <li>Uploading a new video source files in Video Cloud will preserve the video ID and the connection to Brightcove Interactivity.</li>
+      <li>Do not use the EMBED code generated from the Brightcove Interactivity tools when using the plugin. Instead publish your videos per the normal Brightcove workflow.</li>
+      <li>Workflow-generated projects can be deleted using Brightcove Interactivity Studio. Please note that subsequent loads of the corresponding video through the Brightcove Player will not auto-generate a separate project in the portal.</li>
     </ol>
   </section>
 </article>
