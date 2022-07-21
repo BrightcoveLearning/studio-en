@@ -16,6 +16,7 @@ parent: Interactivity
     </ul>
     <p>When interactions are added to a Brightcove Interactivity project,  they will automatically appear on the corresponding video. This removes the need to copy and publish embed code within  Brightcove Interactivity Studio.</p>
   </section>
+
   <section class="bcls-section">
     <h2 id="configure-player">Configuring a Brightcove Player with the HapYak plugin</h2>
     <p>Adding the HapYak plugin to a Brightcove Player will allow interactivity to be displayed inside of the player during video playback. The HapYak plugin can coexist with other player plugins. If you have questions on plugin compatibility, please contact <a href="https://supportportal.brightcove.com/">Brightcove Support</a>.</p>
@@ -63,7 +64,9 @@ parent: Interactivity
       <li>To publish the player, click <span class="button-blue">Publish &amp; Embed</span> and then <span class="button-blue">Publish Changes</span>.</li>
     </ol>
     <p>The HapYak Player is now ready to use.</p>
+    <aside class="bcls-aside bcls-aside--information">Please note that the plugin name should always be <strong>hapyak</strong> since it is case-sensitive. Setting up the plugin name like <strong>Hapyak</strong> or <strong>HapYak</strong> would not work.</aside>
   </section>
+
   <section class="bcls-section">
     <h2 id="project-creation">Creating a Brightcove Interactivity project</h2>
     <p>When a video is played inside of a HapYak-enabled Brightcove Player, the following things happen: </p>
@@ -98,6 +101,7 @@ parent: Interactivity
       </li>
     </ol>
   </section>
+
   <section class="bcls-section">
     <h2 id="text-overlay">Adding a text overlay</h2>
     <p>In this topic a simple text overlay will be added just to validate that the interactivity can be viewed inside of a Brightcove Player.</p>
@@ -146,7 +150,10 @@ parent: Interactivity
 &lt;div style=&quot;max-width: 960px;&quot;&gt;<br>  &lt;video-js
     playsinline<br>    data-account=&quot;1486906377&quot;<br>    data-player=&quot;dunFq3vI6&quot;<br>    data-embed=&quot;default&quot;<br>    controls=&quot;&quot;<br>    data-application-id=&quot;&quot;<br>    class=&quot;vjs-fluid&quot;<br>    style=&quot;padding-top: 56.25%;&quot;&gt;<br>  &lt;/video-js&gt;<br>&lt;/div&gt;<br>&lt;script<br>  src=&quot;//players.brightcove.net/1486906377/dunFq3vI6_default/index.min.js&quot;&gt;<br>&lt;/script&gt;
 </code></pre>
-  </section>
+  
+
+</section>
+
   <section class="bcls-section">
     <h2 id="notes">Notes</h2>
     <ol class="bcls-tasklist-restart">
@@ -157,4 +164,5 @@ parent: Interactivity
       <li>Workflow-generated projects can be deleted using Brightcove Interactivity Studio. Please note that subsequent loads of the corresponding video through the Brightcove Player will not auto-generate a separate project in the portal.</li>
     </ol>
   </section>
+
 </article>
