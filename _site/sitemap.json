@@ -225,12 +225,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
@@ -545,6 +545,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/media/embedding-captions-videos.html",
+      "oldURL": "/embedding-captions-videos"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/interactivity/embedding-form-video.html",
       "oldURL": "/embedding-form-video"
   },
@@ -780,7 +785,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
+      "newURL": "https://studio.support.brightcove.com/release-notes/",
       "oldURL": "/index"
   },
 
@@ -810,7 +815,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/release-notes/",
+      "newURL": "https://studio.support.brightcove.com/home/help/",
       "oldURL": "/index"
   },
 
@@ -900,7 +905,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/home/help/",
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
       "oldURL": "/index"
   },
 
