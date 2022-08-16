@@ -1718,27 +1718,33 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="faq">FAQ</h2>
-    <dl>
-      <dt>Why is Brightcove migrating videos out of Static Delivery?</dt>
-      <dd>Legacy Ingestion service was shut down during 2021, meaning that customers can only ingest new videos using the Dynamic Delivery system. Dynamic Delivery is more efficient for ingestion and storage, and also more flexible, Static delivery relies on a separate legacy data center, thus we want to move to all cloud-based SaaS solutions with Dynamic Delivery. We don’t expect customers to have to perform any action as the migration process will happen in the backend and should be transparent for them.
+     <dd><details>
+      <summary>Why is Brightcove migrating videos out of Static Delivery?</summary>
+      <detalils>Legacy Ingestion service was shut down during 2021, meaning that customers can only ingest new videos using the Dynamic Delivery system. Dynamic Delivery is more efficient for ingestion and storage, and also more flexible, Static delivery relies on a separate legacy data center, thus we want to move to all cloud-based SaaS solutions with Dynamic Delivery. We don’t expect customers to have to perform any action as the migration process will happen in the backend and should be transparent for them.
         <p>The cost of migrating the content to use dynamic delivery will be covered by Brightcove.</p>
-      </dd>
-      <dt>What is the plan to migrate customers to Dynamic Delivery?</dt>
-      <dd>
+      </detalils> 
+    </dd>
+    <dd> <details>
+        <summary>What is the plan to migrate customers to Dynamic Delivery?</summary>
         <ul>
           <li>All affected customers will be notified about the migration and how this can affect them.</li>
           <li>Customers will have until Apr 15, 2022 to notify Brightcove if they need to do changes to their video library prior to the migration.</li>
           <li>Migrations will be scheduled to happen between April - July 2022. Customers who need to make changes before the migration will be scheduled after Jun 15, 2022.</li>
           <li>Once the migration is complete, Brightcove will again notify customers.</li>
         </ul>
-      </dd>
-      <dt>What are possible blockers which can prevent Brightcove from completing the migration?</dt>
-      <dd>If a customer has hardcoded URLs to access the content, then they need to change those to get them via CMS API. Otherwise, their URLs are going to break once the migration is done. See <a href="https://apis.support.brightcove.com/cms/getting-started/best-practices-cms-and-playback-apis.html#using_media_urls">Best Practices: CMS and Playback APIs</a>.</dd>
-      <dt>What will happen to new videos?</dt>
-      <dd>Since the deprecation of Legacy Ingestion, all new videos have been ingested using Dynamic Delivery. This will continue. This migration only affects content that was ingested before 2021 using Legacy Ingestion and has not been migrated to Dynamic Delivery.</dd>
-      <dt>Can we get an extension beyond the deadline?</dt>
-      <dd>Yes, since the migration is going to be in batches, we are going to schedule in different dates (between April - July 2022) the migration per account. Please reach out to your customer success manager to ask for an extension.</dd>
-    </dl>
+      </details></dd>
+    <dd><details>
+        <summary>What are possible blockers which can prevent Brightcove from completing the migration?</summary>
+      If a customer has hardcoded URLs to access the content, then they need to change those to get them via CMS API. Otherwise, their URLs are going to break once the migration is done. See <a href="https://apis.support.brightcove.com/cms/getting-started/best-practices-cms-and-playback-apis.html#using_media_urls">Best Practices: CMS and Playback APIs</a>.
+      </details></dd>
+    <dd> <details>
+        <summary>What will happen to new videos?</summary>
+      Since the deprecation of Legacy Ingestion, all new videos have been ingested using Dynamic Delivery. This will continue. This migration only affects content that was ingested before 2021 using Legacy Ingestion and has not been migrated to Dynamic Delivery.
+      </details></dd>
+    <dd><details>
+        <summary>Can we get an extension beyond the deadline?</summary>
+      Yes, since the migration is going to be in batches, we are going to schedule in different dates (between April - July 2022) the migration per account. Please reach out to your customer success manager to ask for an extension.
+    </details></dd>
   </section>
 </article>
 
