@@ -1741,48 +1741,48 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="faq">FAQ</h2>
-    <h5 class="bcls-question">I know that SAML based SSO is supported but what about two factor (2FA) or multi-factor auth? Is that supported?</h5>
-    <div class="bcls-answer">
+    <dd><details>
+  <summary>I know that SAML based SSO is supported but what about two factor (2FA) or multi-factor auth? Is that supported?</summary>
       <p>No, we don’t have any plans to support 2FA on regular Studio logins at this time. You can enable login for SAML based SSO and add 2FA to your IdP setup, but that would be configured by your IT team on your own IdP.</p>
-    </div>
-    <h5 class="bcls-question">Are there plans to support other SSO protocols like CAS or Kerberos?</h5>
-    <div class="bcls-answer">
+    </dd>
+    <dd><details>
+  <summary>Are there plans to support other SSO protocols like CAS or Kerberos?</summary>
       <p>Not at this time.</p>
-    </div>
-    <h5 class="bcls-question">We have some users on our account that should not go through SSO and others who need to go through SSO. Is this supported?</h5>
-    <div class="bcls-answer">
+    </dd>
+    <dd><details>
+  <summary>We have some users on our account that should not go through SSO and others who need to go through SSO. Is this supported?</summary>
       <p>Yes. SSO is enabled on a per user basis so some users can be enabled for SSO login and others can be enabled for regular Studio login. One thing to note is that there is no way in the Studio user management UI to select which authentication path a user should go through when a new user is being added to the account. Currently the user will inherit whatever auth path that the admin who is adding them is configured for. We do plan to expose an option for selecting this in the Studio at a later date. The workaround for now for mixed authentication flows is to have one admin configured for SSO and one configured for regular Studio login. The admin should log into the appropriate user account when adding new users based on what authentication method they should be setup for.</p>
       <p>While we support the flexibility of having different users configured for different identity providers, we also have customers who want one single IdP and every user to always be configured for that single IdP. That configuration is also available.</p>
-    </div>
-    <h5 class="bcls-question">Is the ability to setup multiple identity providers for users on a single account supported?</h5>
-    <div class="bcls-answer">
+    </dd>
+    <dd><details>
+  <summary>Is the ability to setup multiple identity providers for users on a single account supported?</summary>
       <p>Yes. We can set up multiple identity providers for a given org (customer) and we can assign users to either IdP. See the question above regarding the inheritance of auth paths when adding a new user to an account.</p>
-    </div>
-    <h5 class="bcls-question">Is local login (Studio auth username/password) directly to Brightcove allowed when SAML SSO is turned on for a user?</h5>
-    <div class="bcls-answer">
+    </dd>
+    <dd><details>
+  <summary>Is local login (Studio auth username/password) directly to Brightcove allowed when SAML SSO is turned on for a user?</summary>
       <p>No. Once a user is enabled for SSO, that is the only way they can authenticate into their account.</p>
-    </div>
-    <h5 class="bcls-question">Does Brightcove support SAML v2.0 with SP-initiated SSO?</h5>
-    <div class="bcls-answer">
+    </dd>
+    <dd><details>
+  <summary>Does Brightcove support SAML v2.0 with SP-initiated SSO?</summary>
       <p>Yes</p>
       <ul>
         <li>SP-initiated login is supported via a special direct domain login URL that will look like this:<br />
           <code translate="No">https://signin.brightcove.com/login/ext/saml?behavior=xxxxxxxxx</code></li>
         <li>It is also possible for users to go to the <code translate="No">signin.brightcove.com</code> page. When they type in username/password on the Brightcove signin page, they will be redirected to your IdP to login (if you are not already signed in). Note the password field gets ignored on the Brightcove login page - we only inspect the email address to see if the user is enabled for SSO.</li>
       </ul>
-    </div>
-    <h5 class="bcls-question">Does Brightcove support the use of RelayState parameter in SAMLRequest/SAMLResponse for direct access to video after SSO?</h5>
-    <div class="bcls-answer">
+    </dd>
+    <dd><details>
+  <summary>Does Brightcove support the use of RelayState parameter in SAMLRequest/SAMLResponse for direct access to video after SSO?</summary>
       <p>No. After login via SSO, users will always be taken to the Studio Home dashboard.</p>
-    </div>
-    <h5 class="bcls-question">Does the SSO integration support Single Sign-Out?</h5>
-    <div class="bcls-answer">
+    </dd>
+    <dd><details>
+  <summary>Does the SSO integration support Single Sign-Out?</summary>
       <p>No.</p>
-    </div>
-    <h5 class="bcls-question">What identity providers are supported?</h5>
-    <div class="bcls-answer">
+    </dd>
+    <dd><details>
+  <summary>What identity providers are supported?</summary>
       <p>While Brightcove hasn’t tested with all SSO Identity Providers, we are confident that as long as your IdP supports SAML 2.0, there shouldn't be any problems. Some of the common ones we’ve talked to customers about include: Okta, Ping Federated, Ping Identity, Microsoft Active Directory, OneLogin, and Auth0.</p>
-    </div>
+    </dd>
   </section>
 </article>
 <!-- complete bootstrap layout -->
