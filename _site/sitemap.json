@@ -45,12 +45,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/adding-chapters-video.html",
+      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
 
@@ -287,6 +287,11 @@
   {
       "newURL": "https://studio.support.brightcove.com/players/configuring-player-playback-properties.html",
       "oldURL": "/configuring-player-playback-properties"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/interactivity/getting-started/configuring-player-plugin.html",
+      "oldURL": "/configuring-player-plugin"
   },
 
   {
@@ -655,6 +660,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/interactivity/getting-started/getting-started-interactivity.html",
+      "oldURL": "/getting-started-interactivity"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/media/getting-started-media-module.html",
       "oldURL": "/getting-started-media-module"
   },
@@ -785,7 +795,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/release-notes/",
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
       "oldURL": "/index"
   },
 
@@ -815,7 +825,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/home/help/",
+      "newURL": "https://studio.support.brightcove.com/release-notes/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/interactivity/getting-started/",
       "oldURL": "/index"
   },
 
@@ -905,7 +920,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
+      "newURL": "https://studio.support.brightcove.com/home/help/",
       "oldURL": "/index"
   },
 
@@ -1022,6 +1037,11 @@
   {
       "newURL": "https://studio.support.brightcove.com/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html",
       "oldURL": "/integrating-video-cloud-salesforce"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/interactivity/getting-started/interactive-video-types.html",
+      "oldURL": "/interactive-video-types"
   },
 
   {
