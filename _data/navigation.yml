@@ -410,6 +410,17 @@
   name: Interactivity
   url: /interactivity/index.html
   docs:
+    - name: 'Getting Started: Interactivity'
+      url: '/interactivity/getting-started/index.html'
+      docs:
+        - name: 'Configuring a Player with the HapYak plugin'
+          url: '/interactivity/getting-started/configuring-player-plugin.html'
+        - name: 'Getting Started with Interactivity'
+          url: '/interactivity/getting-started/getting-started-interactivity.html'
+        - name: 'Interactive Video Types'
+          url: '/interactivity/getting-started/interactive-video-types.html'
+        - name: 'Terminology'
+          url: '/interactivity/getting-started/terminology.html'
     - name: Adding Interactive Chapters to a Video
       url: /interactivity/adding-chapters-video.html
     - name: Adding Interactive Overlays to Videos

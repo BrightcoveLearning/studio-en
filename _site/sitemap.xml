@@ -1717,6 +1717,52 @@
       
         <url>
           
+            <loc>https://studio.support.brightcove.com/interactivity/getting-started/index.html</loc>
+          
+            <lastmod>2022-08-23</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/getting-started/configuring-player-plugin.html</loc>
+            
+            <lastmod>2022-08-23</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/getting-started/getting-started-interactivity.html</loc>
+            
+            <lastmod>2022-08-23</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/getting-started/interactive-video-types.html</loc>
+            
+            <lastmod>2022-08-23</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/getting-started/terminology.html</loc>
+            
+            <lastmod>2022-08-23</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
             <loc>https://studio.support.brightcove.com/interactivity/adding-chapters-video.html</loc>
           
             <lastmod>2022-08-23</lastmod>
