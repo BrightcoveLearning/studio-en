@@ -358,7 +358,7 @@
     docs:
     - name: Client-Side Pre-roll Ads with Live SSAI
       url: /live/live-module/client-side-preroll-with-live-ssai.html
-    - name: Creating and Managing Live Events using the Live Module
+    - name: Creating and Managing Live Events
       url: /live/live-module/creating-and-managing-live-events-using-live-module.html
     - name: Creating a Video Clip
       url: /live/live-module/creating-video-clip-using-live-module.html
