@@ -1763,6 +1763,133 @@
       
         <url>
           
+            <loc>https://studio.support.brightcove.com/interactivity/annotations/index.html</loc>
+          
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/annotations/adding-chapters-video.html</loc>
+            
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/annotations/adding-quiz-annotation.html</loc>
+            
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/annotations/adding-image-overlay.html</loc>
+            
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/annotations/adding-text-overlay.html</loc>
+            
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/annotations/adding-time-triggered-action.html</loc>
+            
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/annotations/adding-transparent-overlay.html</loc>
+            
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com</loc>
+            
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/annotations/automatically-pause-the-video-or-jump-to-a-time-in-the-video-aka-skip-to-time.html</loc>
+            
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/annotations/bulk-annotation-edit.html</loc>
+            
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/annotations/configuring-annotation-links.html</loc>
+            
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/annotations/looping-back-in-a-video.html</loc>
+            
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/annotations/reviewing-annotations.html</loc>
+            
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/annotations/using-custom-transitions-with-animate-css.html</loc>
+            
+            <lastmod>2022-08-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
             <loc>https://studio.support.brightcove.com/interactivity/adding-chapters-video.html</loc>
           
             <lastmod>2022-08-24</lastmod>
