@@ -1954,6 +1954,52 @@
       
         <url>
           
+            <loc>https://studio.support.brightcove.com/interactivity/projects/index.html</loc>
+          
+            <lastmod>2022-08-25</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/projects/branching-overview.html</loc>
+            
+            <lastmod>2022-08-25</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/projects/configuring-project-settings.html</loc>
+            
+            <lastmod>2022-08-25</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/projects/in-video-branching.html</loc>
+            
+            <lastmod>2022-08-25</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/projects/creating-and-managing-projects.html</loc>
+            
+            <lastmod>2022-08-25</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
             <loc>https://studio.support.brightcove.com/interactivity/adding-chapters-video.html</loc>
           
             <lastmod>2022-08-25</lastmod>

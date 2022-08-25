@@ -464,6 +464,17 @@
           url: '/interactivity/custom-annotations/embedding-form-video.html'
         - name: 'Using the Custom Widget Library'
           url: '/interactivity/custom-annotations/using-custom-widget-library.html'
+    - name: 'Projects'
+      url: '/interactivity/projects/index.html'
+      docs:
+        - name: 'Branching Overview'
+          url: '/interactivity/projects/branching-overview.html'
+        - name: 'Configuring Project Settings'
+          url: '/interactivity/projects/configuring-project-settings.html'
+        - name: 'Creating an In-Video Branching Project'
+          url: '/interactivity/projects/in-video-branching.html' 
+        - name: 'Creating and Managing Projects'
+          url: '/interactivity/projects/creating-and-managing-projects.html'
     - name: Adding Interactive Chapters to a Video
       url: /interactivity/adding-chapters-video.html
     - name: Adding Interactive Overlays to Videos
