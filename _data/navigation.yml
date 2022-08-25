@@ -449,6 +449,21 @@
           url: '/interactivity/annotations/reviewing-annotations.html'
         - name: 'Using Custom Transitions with Animate.css'
           url: '/interactivity/annotations/using-custom-transitions-with-animate-css.html'
+    - name: 'Custom Annotations'
+      url: '/interactivity/custom-annotations/index.html'
+      docs:
+        - name: 'Adding a Display Rule to a Video'
+          url: '/interactivity/custom-annotations/adding-display-rule.html'
+        - name: 'Adding a Poll to a Video'
+          url: '/interactivity/custom-annotations/adding-poll-video.html'
+        - name: 'Adding a Sign In Form to a Video'
+          url: '/interactivity/custom-annotations/adding-sign-in-video.html'
+        - name: 'Adding User Sentiment to Videos'
+          url: '/interactivity/custom-annotations/adding-sentiment-video.html'
+        - name: 'Embedding a Form in a Video'
+          url: '/interactivity/custom-annotations/embedding-form-video.html'
+        - name: 'Using the Custom Widget Library'
+          url: '/interactivity/custom-annotations/using-custom-widget-library.html'
     - name: Adding Interactive Chapters to a Video
       url: /interactivity/adding-chapters-video.html
     - name: Adding Interactive Overlays to Videos
