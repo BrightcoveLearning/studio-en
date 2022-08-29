@@ -34,11 +34,14 @@ language: "en-US"
 # local server (for "jekyll serve") will be localhost:{PORT number below}
 port: 8100
 
+# site prefixes
+interactivity_prefix: '/interactivity/'
+cloud_playout_path: '/cloud-playout/'
+
 product: Video Cloud Studio
 product_short: Video Cloud
 product_short_lc: video cloud
 product_underscore: Video_Cloud
-cloud_playout_path: '/cloud-playout/'
 color: rgb(51, 51, 51)
 product_color: rgb(239, 108, 42)
 product_icon: "COVE004_Brightcove_Video_Cloud_Logo_RGB_K.svg"
