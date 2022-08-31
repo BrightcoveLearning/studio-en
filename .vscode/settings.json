@@ -50,5 +50,6 @@
     "terminal.ansiRed": "#BA6236",
     "terminal.ansiWhite": "#929181",
     "terminal.ansiYellow": "#A5980D"
-  }
+  },
+  "editor.wordWrap": "on"
 }
