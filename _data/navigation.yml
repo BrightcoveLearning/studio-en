@@ -480,6 +480,15 @@
           url: '/interactivity/templates/applying-templates-projects.html'
         - name: 'Creating and Managing Templates'
           url: '/interactivity/templates/creating-and-managing-templates.html'
+    - name: 'Experiences'
+      url: '/interactivity/experiences/index.html'
+      docs:
+        - name: 'Creating a Branching Experience'
+          url: '/interactivity/experiences/creating-branching-experience.html'
+        - name: 'Creating a Slide Sync Experience'
+          url: '/interactivity/experiences/creating-slide-sync-experience.html'
+        - name: 'Experiences Overview'
+          url: '/interactivity/experiences/experiences-overview.html'
     - name: Adding Interactive Chapters to a Video
       url: /interactivity/adding-chapters-video.html
     - name: Adding Interactive Overlays to Videos
