@@ -473,6 +473,13 @@
           url: '/interactivity/projects/in-video-branching.html' 
         - name: 'Creating and Managing Projects'
           url: '/interactivity/projects/creating-and-managing-projects.html'
+    - name: 'Templates'
+      url: '/interactivity/templates/index.html'
+      docs:
+        - name: 'Applying Templates to Projects'
+          url: '/interactivity/templates/applying-templates-projects.html'
+        - name: 'Creating and Managing Templates'
+          url: '/interactivity/templates/creating-and-managing-templates.html'
     - name: Adding Interactive Chapters to a Video
       url: /interactivity/adding-chapters-video.html
     - name: Adding Interactive Overlays to Videos

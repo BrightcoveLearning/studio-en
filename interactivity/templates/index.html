@@ -1,22 +1,36 @@
 ---
 title: Templates
-parent: Home
+parent: Interactivity
 description: This section contains information on working with templates.
 ---
+
 <h1>{{ page.title }}</h1>
 <article class="bcls-article">
-
   <summary>{{ page.description }}</summary>
-  <section>
-    <h3 id="Topics_in_this_section">Topics in {{ page.title }}</h3>
-    <ul class="bcls-topic-list">
-      {% for item in site.data.navigation %}
-        {% if item.name == page.title %}
-          {% for doc in item.docs %}
-          <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
-    </ul>
+  <section class="bcls-section" id="page_wrapper">
+    {% for item in site.data.navigation %}
+      {% if item.name == page.parent %}
+      <section>
+        {% for entry in item.docs %}
+          {% if entry.name == page.title %}
+            {% for subentry in entry.docs %}
+              <div style="display:block">
+                {% if subentry.docs %}
+                    <h3><a href="{{ subentry.url }}">{{ subentry.name }}</a></h3>
+                    <ul class="landing-page-item">
+                      {% for subdoc in subentry.docs %}
+                      <li><a href="{{ subdoc.url }}">{{ subdoc.name }}</a></li>
+                      {% endfor %}
+                    </ul>
+                {% else %}
+                  <div style="display:block"><a href="{{ subentry.url }}">{{ subentry.name }}</a></div>
+                {% endif %}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </section>
+      {% endif %}
+    {% endfor %}
   </section>
 </article>

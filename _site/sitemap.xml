@@ -1991,6 +1991,34 @@
       
         <url>
           
+            <loc>https://studio.support.brightcove.com/interactivity/templates/index.html</loc>
+          
+            <lastmod>2022-09-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/templates/applying-templates-projects.html</loc>
+            
+            <lastmod>2022-09-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/interactivity/templates/creating-and-managing-templates.html</loc>
+            
+            <lastmod>2022-09-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
             <loc>https://studio.support.brightcove.com/interactivity/adding-chapters-video.html</loc>
           
             <lastmod>2022-09-01</lastmod>
