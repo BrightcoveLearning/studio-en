@@ -36,6 +36,7 @@ port: 8100
 
 # site prefixes
 interactivity_prefix: '/interactivity/'
+live_prefix: '/live/'
 cloud_playout_path: '/cloud-playout/'
 
 product: Video Cloud Studio
