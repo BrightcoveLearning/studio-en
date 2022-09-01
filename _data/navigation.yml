@@ -489,24 +489,6 @@
           url: '/interactivity/experiences/creating-slide-sync-experience.html'
         - name: 'Experiences Overview'
           url: '/interactivity/experiences/experiences-overview.html'
-    - name: Adding Interactive Chapters to a Video
-      url: /interactivity/adding-chapters-video.html
-    - name: Adding Interactive Overlays to Videos
-      url: /interactivity/adding-interactivity-video.html
-    - name: Adding User Sentiment to Videos
-      url: /interactivity/adding-sentiment-video.html
-    - name: Embedding a Form
-      url: /interactivity/embedding-form-video.html
-    - name: Getting Started with Interactivity
-      url: /interactivity/getting-started-interactivity.html
-    - name: How to Increase Click Through Rate
-      url: /interactivity/how-to-increase-click-through-rate.html
-    - name: Managing Group Members
-      url: /interactivity/managing-group-members.html
-    - name: Terminology
-      url: /interactivity/terminology.html
-    - name: Using Templates
-      url: /interactivity/using-templates.html
 - section:
   name: Marketing Automation
   url: /campaign/index.html
