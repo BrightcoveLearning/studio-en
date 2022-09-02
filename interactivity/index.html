@@ -6,17 +6,24 @@ parent: Home
 
 <h1>{{ page.title }}</h1>
 <article class="landing-page-wrapper">
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-topic-list">
-    <h2 id="Topics_in_this_section">Topics</h2>
-    <ul>
-      {% for item in site.data.navigation %}
-      {% if item.name == page.title %}
-      {% for doc in item.docs %}
-      <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
-      {% endfor %}
-      {% endif %}
-      {% endfor %}
-    </ul>
+  <section class="landing-page-header" id="landing_page_header">
+    <h1>{{ site.title }}</h1>
+
+    <p>{{ site.description }}</p>
+  </section>
+  <section class="card-wrapper">
+    {% for section in site.data.navigation offset:1 %}
+    <section class="bcls-card-small" onclick="window.location.href='{{ section.url }}'">
+      <div class="card-content">
+        <h2>{{ section.name }}</h2>
+        <ul class="bcls-topic-list">
+          {% for doc in section.docs limit:4 %}
+          <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
+          {% endfor %}
+        </ul>
+        <p style="font-size:small;"><a href="{{ section.url }}">View all...</a></p>
+      </div>
+    </section>
+    {% endfor %}
   </section>
 </article>
