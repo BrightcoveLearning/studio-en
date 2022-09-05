@@ -408,7 +408,7 @@
   name: Interactivity
   url: /interactivity/index.html
   docs:
-    - name: 'Getting Started: Interactivity'
+    - name: 'Getting Started'
       url: '/interactivity/getting-started/index.html'
       docs:
         - name: 'Configuring a Player with the HapYak plugin'
