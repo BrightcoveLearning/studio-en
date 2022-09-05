@@ -13,20 +13,13 @@ description: This section contains information on working with templates.
       <section>
         {% for entry in item.docs %}
           {% if entry.name == page.title %}
-            {% for subentry in entry.docs %}
-              <div style="display:block">
-                {% if subentry.docs %}
-                    <h3><a href="{{ subentry.url }}">{{ subentry.name }}</a></h3>
-                    <ul class="landing-page-item">
-                      {% for subdoc in subentry.docs %}
-                      <li><a href="{{ subdoc.url }}">{{ subdoc.name }}</a></li>
-                      {% endfor %}
-                    </ul>
-                {% else %}
-                  <div style="display:block"><a href="{{ subentry.url }}">{{ subentry.name }}</a></div>
-                {% endif %}
-              </div>
+          <div style="display:block">               
+            <ul class="landing-page-item">   
+          {% for subentry in entry.docs %}                    
+                      <li><a href="{{ subentry.url }}">{{ subentry.name }}</a></li>                    
             {% endfor %}
+          </ul>
+        </div>
           {% endif %}
         {% endfor %}
       </section>
