@@ -15,7 +15,7 @@ parent: Home
         <div>
             {% if entry.docs %}
                 <h3><a href="{{ entry.url }}">{{ entry.name }}</a></h3>
-                <ul class="landing-page-item">
+                <ul>
                   {% for subdoc in entry.docs %}
                   <li><a href="{{ subdoc.url }}">{{ subdoc.name }}</a></li>
                   {% endfor %}
