@@ -2021,6 +2021,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </table>
   </section>
   <section class="bcls-section">
+    <h2 id="transmux_live_jobs">Transmux Live jobs</h2>
+    <p>Set the insertion of key frames so that it matches the request segmentation settings. For example, if the frame rate is 25 frames per second and the desire is for a 6 second segment then set the keyframe interval to be at least once every 300 frames.</p>
+    <p>Test the encoder settings/output with desired target devices. This is particularly important if using a broadcast contribution encoder that may have advanced settings that result in a stream that may not be compatible with all consumer devices. It is also a good idea to avoid particularly advanced settings - it is hard to say what these are exactly as there are so many possible encoders and options. But a general top rate profile should be something like:</p>
+    <ul>
+      <li>6Mbps peak bitrate</li>
+      <li>H264 High profile</li>
+      <li>B frames: 2</li>
+      <li>8bit 4:2:0 color</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
     <h2 id="verification">Verification and testing</h2>
     <p>Ideally you should start with the lowest possible settings on your most complex (most changing content) and test with their content by increasing the various settings until the output is acceptable. This is because generally the higher the settings the more likely issues are to be encountered in either the network or transcoding.</p>
     <h3>Testing bandwidth</h3>
