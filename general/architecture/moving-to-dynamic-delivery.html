@@ -1,0 +1,66 @@
+---
+title: 'Moving to Dynamic Delivery'
+description: 'In this topic you will learn about the advantages of moving your Video Cloud account to dynamic delivery.'
+parent: General Information
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
+    <p>There are good reasons to migrate to Brightcove's Dynamic Delivery ingest system. Below are some of reasons, information about how to do it, and answers to some frequently asked questions</p>
+    <aside class="bcls-aside bcls-aside--information">The legacy ingest system will be shut down on January 31, 2021. See the <a href="#frequently_asked_questions">Frequently Asked Questions</a> below for more information, and feel free to contact Support or your Account Manager if you have other questions or concerns.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="dynamic_delivery_overview">Dynamic Delivery Overview</h2>
+    <p>Dynamic Delivery is our latest video delivery platform that has many advantages over our previous generation of delivery technology. In particular it allows you to reach a larger set of devices with fewer renditions stored. It also allows you to enable <a href="/general/content-protection/overview-digital-rights-management-drm-video-cloud.html">DRM</a> and <a href="/media/adding-audio-tracks-videos-using-media-module.html">multiple audio tracks</a> after ingest on a per-video basis.</p>
+    <p>For more information on the details and advantages of Dynamic Delivery, see <a href="https://www.brightcove.com/en/blog/2018/08/why-you-need-just-time-packaging-dynamic-delivery">Why You Need Just-In-Time Packaging with Dynamic Delivery</a> and also our <a href="/general/architecture/overview-dynamic-delivery.html">Overview of Dynamic Delivery</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="what_will_change">What Will Change</h2>
+    <p>While it is unlikely, if you have created custom ingest profiles you may see some changes in the renditions that get generated. We have created the new Dynamic Delivery profiles to optimize playback on a large set of devices, but there may be some minor differences. You can still adjust Dynamic Delivery ingest settings, so take a look at <a href="/admin/creating-ingest-profiles-dynamic-delivery.html">Creating Ingest Profiles for Dynamic Delivery</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="try_it_now">Try It Now!</h2>
+    <p>Dynamic Delivery is already enabled for your account, so you can try it in one of two ways:</p>
+    <dl>
+      <dt>Use it for all the new videos you upload</dt>
+      <dd>You can try Dynamic Delivery for all new videos you add using the Upload Module or the <span translate="No">Dynamic Ingest API</span> <a href="/admin/managing-ingest-profiles.html#default">by switching your default ingest profile to one of the Dynamic Delivery profiles</a> defined in your account.</dd>
+      <dt>Try Dynamic Delivery for individual video uploads</dt>
+      <dd>To try it for individual videos, go to the Upload Module, click on the Ingest Profile selector:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/general/moving-to-dd-ingest-profile-selector.png" alt="Ingest Profile Selector">
+          <figcaption class="bcls-caption--image">Ingest Profile Selector</figcaption>
+        </figure>
+        <p>And then select one of the Dynamic Delivery profiles:</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/general/moving-to-dd-dyanamic-delivery-profiles.png" alt="Dynamic Delivery Profiles">
+          <figcaption class="bcls-caption--image">Dynamic Delivery Profiles</figcaption>
+        </figure>
+      </dd>
+    </dl>
+  </section>
+  <section class="bcls-section">
+    <h2 id="frequently_asked_questions">Frequently Asked Questions</h2>
+    <dl>
+      <dt>Will legacy videos stop working after Legacy Ingest is turned off? Do I need to re-transcode all legacy videos?</dt>
+      <dd>Legacy videos will continue to work as they always have. You just won't be able to add any new videos using legacy ingest profiles. There is no need for you to re-transcode legacy videos - see the next item.</dd>
+      <dt>Can I migrate all of my videos over to Dynamic Delivery?</dt>
+      <dd>For the most part, yes, and we recommend it. If you want to do that, <a href="https://supportportal.brightcove.com">open a Support case</a> and ask, and we will attempt to migrate all videos that are still on the legacy ingest system.
+      <p>For details on how we will migrate your videos, see <a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-delivery.html#Back_catalog_migration">Back catalog migration</a>.</p>
+      <aside class="bcls-aside bcls-aside--information">Note that if your legacy videos are DRM-protected, we may not be able to migrate them unless we have a master. If not, and you have the source video, you can replace it using a Dynamic Delivery profile.</aside>
+      </dd>
+      <dt>Does Dynamic Delivery support BYO CDN customers?</dt>
+      <dd>Dynamic Delivery allows customers to take advantage of their own CDN relationships, however all video assets must be managed by the Brightcove Origin.  Origin Serving is priced on expected cache miss (a cost to Brightcove).  Pricing for Origin Serving is already integrated into the Media Pricing Configurator and rates are listed on the “Rate Card Master” tab.
+        <aside class="bcls-aside bcls-aside--information">Note that a new CDN configuration will be needed for Dynamic Delivery.</aside>
+      </dd>
+      <dt>What will happen to my legacy ingest profiles?</dt>
+      <dd>All legacy ingest profiles (standard or custom) will be removed from the system and no longer appear in <strong class="bc-module">Upload</strong>, <strong class="bc-module">Admin</strong> or other parts of Studio, or when you get profiles for your account via the Ingest Profiles API. 
+      </dd>
+      <dt>How will this impact my costs?</dt>
+      <dd>It depends on your setup. If you are using a Brightcove CDN, the impact to your costs should be negligible. If you are using a BYO CDN and using net storage, your storage costs at Brightcove will increase. Talk to your Account Manager for more information.</dd>
+      <dt>What if I want to migrate existing assets and support SSAI?</dt>
+      <dd>That can certainly be done. The migration will take a little longer, as the videos will need to be re-transcoded. See <a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-delivery.html#Back_catalog_migration">Back catalog migration</a>.</dd>
+    </dl>
+  </section>
+</article>

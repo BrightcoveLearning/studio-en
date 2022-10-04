@@ -524,8 +524,6 @@
         url: /campaign/general/how-campaign-module-identifies-viewers.html
       - name: How Video Benchmark Score is Calculated
         url: /campaign/general/how-vbs-calculated.html
-      - name: Overview of Video Content Types
-        url: /campaign/general/overview-video-content-types.html
       - name: Publishing a Video to Email
         url: /campaign/general/publishing-video-email-using-campaign-module.html
       - name: Using Custom Metrics and Events
@@ -712,60 +710,60 @@
   url: /general/index.html
   docs:
   - name: Content Protection
-    url: /general/index.html
+    url: /general/content-protection/index.html
     docs:
     - name: DRM Output Protection Settings
-      url: /general/drm-output-protection-settings.html
+      url: /general/content-protection/drm-output-protection-settings.html
     - name: 'Overview: Digital Rights Management (DRM)'
-      url: /general/overview-digital-rights-management-drm-video-cloud.html
+      url: /general/content-protection/overview-digital-rights-management-drm-video-cloud.html
     - name: Protecting Videos with HLS Encryption
-      url: /general/protecting-videos-hls-encryption.html
+      url: /general/content-protection/protecting-videos-hls-encryption.html
     - name: TLS for Media, Player, and API URLs
-      url: /general/tls-media-player-and-api-urls.html
+      url: /general/content-protection/tls-media-player-and-api-urls.html
   - name: References
-    url: /general/index.html
+    url: /general/references/index.html
     docs:
     - name: 'Best Practices: Transcoding and Uploading'
-      url: /general/best-practices-video-creating-transcoding-and-uploading-workflow.html
+      url: /general/references/best-practices-video-creating-transcoding-and-uploading-workflow.html
     - name: China Delivery Overview
-      url: /general/china-delivery-overview.html
+      url: /general/references/china-delivery-overview.html
     - name: Creating Audio-Only Renditions
-      url: /general/creating-audio-only-renditions-low-bandwidth-delivery.html
+      url: /general/references/creating-audio-only-renditions-low-bandwidth-delivery.html
     - name: Making Your Video Content Indexable
-      url: /general/making-your-video-content-indexable.html
+      url: /general/references/making-your-video-content-indexable.html
     - name: Optimal Video Dimensions
-      url: /general/optimal-video-dimensions.html
+      url: /general/references/optimal-video-dimensions.html
     - name: Resetting Your Studio Password
-      url: /general/resetting-your-studio-password.html
+      url: /general/references/resetting-your-studio-password.html
     - name: Studio System Requirements
-      url: /general/studio-system-requirements.html
+      url: /general/references/studio-system-requirements.html
     - name: Supported Video and Audio Formats
-      url: /general/supported-video-and-audio-formats-codecs-and-containers.html
+      url: /general/references/supported-video-and-audio-formats-codecs-and-containers.html
     - name: Video Source File Specs and Recommendations
-      url: /general/video-source-file-specifications-and-recommendations.html
+      url: /general/references/video-source-file-specifications-and-recommendations.html
     - name: Working with 360° Videos
-      url: /general/working-360deg-videos.html
+      url: /general/references/working-360deg-videos.html
     - name: Working with Audio-Only Content
-      url: /general/working-audio-content.html
+      url: /general/references/working-audio-content.html
     - name: Working with Multiple Accounts
-      url: /general/working-multiple-video-cloud-accounts.html
+      url: /general/references/working-multiple-video-cloud-accounts.html
   - name: Architecture
-    url: /general/index.html
+    url: /general/architecture/index.html
     docs:
     - name: Content Delivery Options
-      url: /general/content-delivery-options.html
+      url: /general/architecture/content-delivery-options.html
     - name: Domains and Ports that Must Be Accessible
-      url: /general/domains-and-ports-must-be-accessible-video-cloud.html
+      url: /general/architecture/domains-and-ports-must-be-accessible-video-cloud.html
     - name: Overview of Context Aware Encoding
-      url: /general/overview-context-aware-encoding.html
+      url: /general/architecture/overview-context-aware-encoding.html
     - name: Overview of Dynamic Delivery
-      url: /general/overview-dynamic-delivery.html
+      url: /general/architecture/overview-dynamic-delivery.html
     - name: Migration of Static Videos to Dynamic Delivery
-      url: /general/migration-dynamic-delivery.html
+      url: /general/architecture/migration-dynamic-delivery.html
     - name: Video Cloud Architecture Overview
-      url: /general/video-cloud-architecture-overview.html
+      url: /general/architecture/video-cloud-architecture-overview.html
     - name: Video Cloud Studio Cookies
-      url: /general/video-cloud-studio-cookies.html      
+      url: /general/architecture/video-cloud-studio-cookies.html      
 - section:
   name: Release Notes
   url: /release-notes/index.html

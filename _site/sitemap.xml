@@ -2191,15 +2191,6 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/campaign/general/overview-video-content-types.html</loc>
-            
-            <lastmod>2022-10-04</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
               <loc>https://studio.support.brightcove.com/campaign/general/publishing-video-email-using-campaign-module.html</loc>
             
             <lastmod>2022-10-04</lastmod>
@@ -2783,7 +2774,7 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/general/index.html</loc>
+            <loc>https://studio.support.brightcove.com/general/content-protection/index.html</loc>
           
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2792,7 +2783,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/drm-output-protection-settings.html</loc>
+              <loc>https://studio.support.brightcove.com/general/content-protection/drm-output-protection-settings.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2801,7 +2792,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/overview-digital-rights-management-drm-video-cloud.html</loc>
+              <loc>https://studio.support.brightcove.com/general/content-protection/overview-digital-rights-management-drm-video-cloud.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2810,7 +2801,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/protecting-videos-hls-encryption.html</loc>
+              <loc>https://studio.support.brightcove.com/general/content-protection/protecting-videos-hls-encryption.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2819,7 +2810,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/tls-media-player-and-api-urls.html</loc>
+              <loc>https://studio.support.brightcove.com/general/content-protection/tls-media-player-and-api-urls.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2829,7 +2820,7 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/general/index.html</loc>
+            <loc>https://studio.support.brightcove.com/general/references/index.html</loc>
           
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2838,7 +2829,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/best-practices-video-creating-transcoding-and-uploading-workflow.html</loc>
+              <loc>https://studio.support.brightcove.com/general/references/best-practices-video-creating-transcoding-and-uploading-workflow.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2847,7 +2838,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/china-delivery-overview.html</loc>
+              <loc>https://studio.support.brightcove.com/general/references/china-delivery-overview.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2856,7 +2847,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/creating-audio-only-renditions-low-bandwidth-delivery.html</loc>
+              <loc>https://studio.support.brightcove.com/general/references/creating-audio-only-renditions-low-bandwidth-delivery.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2865,7 +2856,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/making-your-video-content-indexable.html</loc>
+              <loc>https://studio.support.brightcove.com/general/references/making-your-video-content-indexable.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2874,7 +2865,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/optimal-video-dimensions.html</loc>
+              <loc>https://studio.support.brightcove.com/general/references/optimal-video-dimensions.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2883,7 +2874,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/resetting-your-studio-password.html</loc>
+              <loc>https://studio.support.brightcove.com/general/references/resetting-your-studio-password.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2892,7 +2883,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/studio-system-requirements.html</loc>
+              <loc>https://studio.support.brightcove.com/general/references/studio-system-requirements.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2901,7 +2892,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/supported-video-and-audio-formats-codecs-and-containers.html</loc>
+              <loc>https://studio.support.brightcove.com/general/references/supported-video-and-audio-formats-codecs-and-containers.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2910,7 +2901,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/video-source-file-specifications-and-recommendations.html</loc>
+              <loc>https://studio.support.brightcove.com/general/references/video-source-file-specifications-and-recommendations.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2919,7 +2910,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/working-360deg-videos.html</loc>
+              <loc>https://studio.support.brightcove.com/general/references/working-360deg-videos.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2928,7 +2919,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/working-audio-content.html</loc>
+              <loc>https://studio.support.brightcove.com/general/references/working-audio-content.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2937,7 +2928,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/working-multiple-video-cloud-accounts.html</loc>
+              <loc>https://studio.support.brightcove.com/general/references/working-multiple-video-cloud-accounts.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2947,7 +2938,7 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/general/index.html</loc>
+            <loc>https://studio.support.brightcove.com/general/architecture/index.html</loc>
           
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2956,7 +2947,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/content-delivery-options.html</loc>
+              <loc>https://studio.support.brightcove.com/general/architecture/content-delivery-options.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2965,7 +2956,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/domains-and-ports-must-be-accessible-video-cloud.html</loc>
+              <loc>https://studio.support.brightcove.com/general/architecture/domains-and-ports-must-be-accessible-video-cloud.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2974,7 +2965,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/overview-context-aware-encoding.html</loc>
+              <loc>https://studio.support.brightcove.com/general/architecture/overview-context-aware-encoding.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2983,7 +2974,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/overview-dynamic-delivery.html</loc>
+              <loc>https://studio.support.brightcove.com/general/architecture/overview-dynamic-delivery.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -2992,7 +2983,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/migration-dynamic-delivery.html</loc>
+              <loc>https://studio.support.brightcove.com/general/architecture/migration-dynamic-delivery.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -3001,7 +2992,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/video-cloud-architecture-overview.html</loc>
+              <loc>https://studio.support.brightcove.com/general/architecture/video-cloud-architecture-overview.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
@@ -3010,7 +3001,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/general/video-cloud-studio-cookies.html</loc>
+              <loc>https://studio.support.brightcove.com/general/architecture/video-cloud-studio-cookies.html</loc>
             
             <lastmod>2022-10-04</lastmod>
             <changefreq>daily</changefreq>
