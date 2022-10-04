@@ -185,6 +185,8 @@
       url: /players/getting-started-players-module.html
     - name: 'Step-by-Step:  Creating and Publishing a Player'
       url: /publish/step-step-using-players-module-create-and-publish-player.html
+    - name: 'Support for Brightcove Player 5'
+      url: /players/v5-players-support.html
   - name: Player Properties
     url: /players/index.html
     docs:
