@@ -300,12 +300,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/general/references/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/references/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
@@ -370,7 +370,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/getting-started/configuring-player-plugin.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/getting-started/configuring-player-plugin.html",
       "oldURL": "/configuring-player-plugin"
   },
 
@@ -775,7 +775,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/getting-started/getting-started-interactivity.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/getting-started/getting-started-interactivity.html",
       "oldURL": "/getting-started-interactivity"
   },
 
@@ -975,12 +975,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/experiences/",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/getting-started/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/getting-started/",
+      "newURL": "https://studio.support.brightcove.com/interactivity/experiences/",
       "oldURL": "/index"
   },
 
@@ -1200,7 +1200,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/getting-started/interactive-video-types.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/getting-started/interactive-video-types.html",
       "oldURL": "/interactive-video-types"
   },
 
@@ -1730,7 +1730,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/getting-started/terminology.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/getting-started/terminology.html",
       "oldURL": "/terminology"
   },
 
