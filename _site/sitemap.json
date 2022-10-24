@@ -45,11 +45,6 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
-      "oldURL": "/adding-chapters-video"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/interactivity/platform/annotations/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
@@ -60,7 +55,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/custom-annotations/adding-display-rule.html",
+      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
+      "oldURL": "/adding-chapters-video"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/custom-annotations/adding-display-rule.html",
       "oldURL": "/adding-display-rule"
   },
 
@@ -80,7 +80,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/custom-annotations/adding-poll-video.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/custom-annotations/adding-poll-video.html",
       "oldURL": "/adding-poll-video"
   },
 
@@ -90,17 +90,17 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/custom-annotations/adding-sentiment-video.html",
+      "oldURL": "/adding-sentiment-video"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/interactivity/adding-sentiment-video.html",
       "oldURL": "/adding-sentiment-video"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/custom-annotations/adding-sentiment-video.html",
-      "oldURL": "/adding-sentiment-video"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/interactivity/custom-annotations/adding-sign-in-video.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/custom-annotations/adding-sign-in-video.html",
       "oldURL": "/adding-sign-in-video"
   },
 
@@ -300,12 +300,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/references/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
+      "newURL": "https://studio.support.brightcove.com/general/references/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
@@ -660,12 +660,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/custom-annotations/embedding-form-video.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/embedding-form-video.html",
       "oldURL": "/embedding-form-video"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/embedding-form-video.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/custom-annotations/embedding-form-video.html",
       "oldURL": "/embedding-form-video"
   },
 
@@ -980,17 +980,17 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/custom-annotations/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/interactivity/experiences/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/interactivity/templates/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/interactivity/custom-annotations/",
       "oldURL": "/index"
   },
 
@@ -1825,7 +1825,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/custom-annotations/using-custom-widget-library.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/custom-annotations/using-custom-widget-library.html",
       "oldURL": "/using-custom-widget-library"
   },
 
