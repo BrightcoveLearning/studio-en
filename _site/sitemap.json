@@ -45,17 +45,17 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
+      "oldURL": "/adding-chapters-video"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/interactivity/platform/annotations/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/interactivity/adding-chapters-video.html",
-      "oldURL": "/adding-chapters-video"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/media/adding-chapters-video.html",
       "oldURL": "/adding-chapters-video"
   },
 
@@ -90,12 +90,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/platform/custom-annotations/adding-sentiment-video.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/adding-sentiment-video.html",
       "oldURL": "/adding-sentiment-video"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/adding-sentiment-video.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/custom-annotations/adding-sentiment-video.html",
       "oldURL": "/adding-sentiment-video"
   },
 
@@ -165,7 +165,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/templates/applying-templates-projects.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/templates/applying-templates-projects.html",
       "oldURL": "/applying-templates-projects"
   },
 
@@ -435,7 +435,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/templates/creating-and-managing-templates.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/templates/creating-and-managing-templates.html",
       "oldURL": "/creating-and-managing-templates"
   },
 
@@ -450,7 +450,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/experiences/creating-branching-experience.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/experiences/creating-branching-experience.html",
       "oldURL": "/creating-branching-experience"
   },
 
@@ -535,7 +535,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/experiences/creating-slide-sync-experience.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/experiences/creating-slide-sync-experience.html",
       "oldURL": "/creating-slide-sync-experience"
   },
 
@@ -660,12 +660,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/embedding-form-video.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/custom-annotations/embedding-form-video.html",
       "oldURL": "/embedding-form-video"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/platform/custom-annotations/embedding-form-video.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/embedding-form-video.html",
       "oldURL": "/embedding-form-video"
   },
 
@@ -695,7 +695,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/experiences/experiences-overview.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/experiences/experiences-overview.html",
       "oldURL": "/experiences-overview"
   },
 
@@ -975,22 +975,22 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/experiences/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/interactivity/platform/getting-started/",
       "oldURL": "/index"
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/templates/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/interactivity/platform/custom-annotations/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/interactivity/experiences/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/interactivity/templates/",
       "oldURL": "/index"
   },
 

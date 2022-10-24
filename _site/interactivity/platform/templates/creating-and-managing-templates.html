@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic you will learn about Brightcove Interactivity experiences and about the different types of experiences.">
+  <meta name="description" content="In this topic you will learn how to create and manage Brightcove Interactivity templates.">
   
-  <title>Experiences Overview</title>
+  <title>Creating and Managing Templates</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
@@ -163,11 +163,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
     
       
-        <li class="breadcrumb-item"><a href="/interactivity/experiences/">Experiences</a></li>
+        <li class="breadcrumb-item"><a href="/interactivity/platform/">Platform</a></li>
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">Experiences Overview</li>
+        <li class="breadcrumb-item"><a href="/interactivity/platform/templates/">Templates</a></li>
+      
+    
+      
+        <li class="breadcrumb-item active" aria-current="page">Creating and Managing Templates</li>
       
     
   </nav>
@@ -1624,19 +1628,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                     <li class="submenu-header">
                       
-                      <a href="/interactivity/templates/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Templates</a>
+                      <a href="/interactivity/platform/templates/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Templates</a>
                       
                       <ul role="list" class="sidenav-subsubmenu" style="display:none;">
                         
                           
                             
-                            <li><a href="/interactivity/templates/applying-templates-projects.html">Applying Templates to Projects</a></li>
+                            <li><a href="/interactivity/platform/templates/applying-templates-projects.html">Applying Templates to Projects</a></li>
                             
                           
                         
                           
                             
-                            <li><a href="/interactivity/templates/creating-and-managing-templates.html">Creating and Managing Templates</a></li>
+                            <li><a href="/interactivity/platform/templates/creating-and-managing-templates.html" aria-current="page">Creating and Managing Templates</a></li>
                             
                           
                         
@@ -1647,25 +1651,25 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                     <li class="submenu-header">
                       
-                      <a href="/interactivity/experiences/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Experiences</a>
+                      <a href="/interactivity/platform/experiences/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Experiences</a>
                       
                       <ul role="list" class="sidenav-subsubmenu" style="display:none;">
                         
                           
                             
-                            <li><a href="/interactivity/experiences/creating-branching-experience.html">Creating a Branching Experience</a></li>
+                            <li><a href="/interactivity/platform/experiences/creating-branching-experience.html">Creating a Branching Experience</a></li>
                             
                           
                         
                           
                             
-                            <li><a href="/interactivity/experiences/creating-slide-sync-experience.html">Creating a Slide Sync Experience</a></li>
+                            <li><a href="/interactivity/platform/experiences/creating-slide-sync-experience.html">Creating a Slide Sync Experience</a></li>
                             
                           
                         
                           
                             
-                            <li><a href="/interactivity/experiences/experiences-overview.html" aria-current="page">Experiences Overview</a></li>
+                            <li><a href="/interactivity/platform/experiences/experiences-overview.html">Experiences Overview</a></li>
                             
                           
                         
@@ -2545,34 +2549,47 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Experiences Overview</h1>
+<h1>Creating and Managing Templates</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn about Brightcove Interactivity experiences and about the different types of experiences.</summary>
+  <summary>In this topic you will learn how to create and manage Brightcove Interactivity templates.</summary>
   <section class="bcls-section">
-    <p>A Brightcove Interactivity Experience is a video with other elements (like synced slides or an e-commerce cart) outside the video player that dynamically interact with video player.</p>
-    <p>Experiences allow you to dynamically communicate between a video and the web page itself, opening the door to a new generation of lean-forward interactive realities for your viewers.</p>
+    <p>A template is a track (or group) of annotations that can be applied to multiple projects. Templates can be used to quickly apply identical annotations to multiple videos with one click.</p>
+    <p>Multiple template tracks can be added to a project. If the template track is updated, Brightcove Interactivity will automatically update all projects using the template. Templates are useful  for any features that should be added to a large number of videos. Some typical use cases for templates are:</p>
+    <ul>
+      <li>Adding a logo to all of the company videos</li>
+      <li>Adding a "skip-ahead" button to a series of videos that have the same pattern</li>
+      <li>Adding a call to action to all videos with a similar subject</li>
+    </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="experience-types">Experience types</h2>
-    <h3 id="video-landing-page">Video Landing Page</h3>
-    <p>A <b>Video Landing Page</b> experience is a great way to create a playlist of videos, set up a dedicated landing page link, and quickly add branding to the header and footers to the landing page.&nbsp;</p>
-    <p>There are two types of <b>Video Landing Pages:</b></p>
-    <ul>
-      <li><b>Single Video Landing Page</b> - Hide the other videos from the user's view, forcing the user to navigate only via the branching/CYOA annotations </li>
-      <li><b>Playlist Landing Page</b> - Show all videos included in the experience at the bottom of the screen, allowing users to quickly jump from video to video at will</li>
-    </ul>
-    <h3 id="slidesync">Slide Sync</h3>
-    <p><b>Slide Sync</b> is a powerful interactive video experience allowing users to present related slide decks or presentation imagery while the video plays. For information on creating a Slide Sync Experience, see <a href="/interactivity/platform/experiences/creating-slide-sync-experience.html">Creating a Slide Sync Experience</a>.</p>
-    <figure class="bcls-figure"><img src="/assets/images/platform/s-brightcove-interactivity-img/experiences/slide-sync.png"></figure>
-    <h3 id="branching">Branching</h3>
-    <p>Branching experiences allow you to create &quot;choose your own adventure&quot; (CYOA) experiences for your viewers.&nbsp;To learn more about  Branching experiences, see <a href="/interactivity/platform/projects/branching-overview.html">Branching Overview</a>.</p>
+    <h2 id="create">Creating a new template</h2>
+    <ol class="bcls-tasklist-restart">
+      <li>Login to Brightcove Interactivity Studio.</li>
+      <li>In the primary navigation, click <strong>Create</strong> and then <span class="button-blue-text-bordered">NEW TEMPLATE</span> or click <strong>Manage</strong>, click the <strong>Templates</strong> tab and then click <span class="button-blue">New Template</span>. </li>
+      <li>Enter a <strong>Title</strong> for the template.
+        <figure class="bcls-figure"> <img src="/assets/images/platform/s-brightcove-interactivity-img/templates/creating-templates/new-template-dialog.png"> </figure>
+      </li>
+      <li>Click <span class="button-blue">NEXT</span>.</li>
+      <li>Brightcove Interactivity automatically loads a sample video source. You can change this video by clicking <strong>Configure</strong> and by entering a new URL in the <strong> Video Source</strong> field.</li>
+      <li>Add the appropriate annotations.
+        <aside class="bcls-aside bcls-aside--tip language-editable">Tip: If you set the start time to -20, the annotation will appear 20 seconds before the end of the video. This means it will dynamically adjust for every project the template is applied to. Likewise, 25% will set the start time to 25% of the way into the video, no matter the length.</aside>
+      </li>
+    </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="notes">Notes</h2>
-    <ul>
-      <li>Experiences use a HapYak Player with native controls as the embed type. This is so multi-video experiences have a standard look and feel.</li>
-      <li>Viewer interaction on the standard  annotations is included in <a href="http://www.hapyak.com/portal/reports" rel="nofollow noopener noreferrer" target="_blank"> Reports</a> as normal.</li>
-    </ul>
+    <h2 id="apply">Applying a template to a project</h2>
+    <p>Templates can be applied to a project through the use of tags or by manually assigning one or more templates to a project using Brightcove Interactivity Studio. For information, see <a href="/interactivity/platform/templates/applying-templates-projects.html">Applying Templates to Projects</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="copy">Copying templates</h2>
+    <p>On the list of templates, hover over the right side of the template and click the copy icon (<img src="/assets/images/platform/s-brightcove-interactivity-img/templates/icon-copy.png">). </p>
+    <figure class="bcls-figure"> <img src="/assets/images/platform/s-brightcove-interactivity-img/templates/creating-templates/templates-list.png"> </figure>
+    <p>This will create an exact clone of the template including all annotations, tags, and custom CSS, titled "Copy of {template_name}".</p>
+    <p>This is a great way to save time when creating new templates that are similar to ones already created. Simply  adjust the annotations as needed. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="delete">Deleting templates</h2>
+    <p>To delete a template, find the template on the template list, click the delete icon (<img src="/assets/images/platform/s-brightcove-interactivity-img/templates/icon-x.png">), and then confirm the deletion.</p>
   </section>
 </article>
 
@@ -2591,7 +2608,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 10 Oct 2022
+  Page last updated on 20 Oct 2022
 </div>
 
 

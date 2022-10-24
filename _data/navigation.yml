@@ -475,21 +475,21 @@
         - name: 'Creating and Managing Projects'
           url: '/interactivity/platform/projects/creating-and-managing-projects.html'
     - name: 'Templates'
-      url: '/interactivity/templates/index.html'
+      url: '/interactivity/platform/templates/index.html'
       docs:
         - name: 'Applying Templates to Projects'
-          url: '/interactivity/templates/applying-templates-projects.html'
+          url: '/interactivity/platform/templates/applying-templates-projects.html'
         - name: 'Creating and Managing Templates'
-          url: '/interactivity/templates/creating-and-managing-templates.html'
+          url: '/interactivity/platform/templates/creating-and-managing-templates.html'
     - name: 'Experiences'
-      url: '/interactivity/experiences/index.html'
+      url: '/interactivity/platform/experiences/index.html'
       docs:
         - name: 'Creating a Branching Experience'
-          url: '/interactivity/experiences/creating-branching-experience.html'
+          url: '/interactivity/platform/experiences/creating-branching-experience.html'
         - name: 'Creating a Slide Sync Experience'
-          url: '/interactivity/experiences/creating-slide-sync-experience.html'
+          url: '/interactivity/platform/experiences/creating-slide-sync-experience.html'
         - name: 'Experiences Overview'
-          url: '/interactivity/experiences/experiences-overview.html'
+          url: '/interactivity/platform/experiences/experiences-overview.html'
 - section:
   name: Marketing Automation
   url: /campaign/index.html
