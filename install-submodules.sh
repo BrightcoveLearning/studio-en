@@ -33,9 +33,8 @@ git submodule add https://github.com/BrightcoveLearning/s-training-img
 git submodule add https://github.com/BrightcoveLearning/s-audience-insights-img
 git submodule add https://github.com/BrightcoveLearning/s-live-img
 git submodule add https://github.com/BrightcoveLearning/s-web-conferencing-img
-cd platform
 git submodule add https://github.com/BrightcoveLearning/s-brightcove-interactivity-img
-cd ../..
+cd ..
 echo 'Adding site assets'
 git submodule add https://github.com/BrightcoveLearning/s-site-assets-favicons
 git submodule add https://github.com/BrightcoveLearning/s-site-assets-stylesheets
