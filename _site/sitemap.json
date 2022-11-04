@@ -1305,6 +1305,11 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/managing-programs.html",
+      "oldURL": "/managing-programs"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/analytics/managing-scheduled-reports.html",
       "oldURL": "/managing-scheduled-reports"
   },
@@ -1520,12 +1525,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/get-started/training/register-training.html",
+      "newURL": "https://studio.support.brightcove.com/register-training.html",
       "oldURL": "/register-training"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/register-training.html",
+      "newURL": "https://studio.support.brightcove.com/get-started/training/register-training.html",
       "oldURL": "/register-training"
   },
 
