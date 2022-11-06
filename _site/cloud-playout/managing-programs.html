@@ -2546,7 +2546,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <summary>For non-looping channels, you add new programs to the channel as needed, or re-link a program to update its contents.</summary>
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>Many channel providers need to add new content to the channel on a regular basis. The <strong>Add Program</strong> and <strong>Link Program</strong> features of Cloud Playout allow you to easily add a whole program (playlist) of new content, or relink an existing program (playlist) to the channel to update the program items or simply play it again.</p>
+    <p>Many channel providers need to add new content to the channel on a regular basis. The <strong>Add Program</strong> and <strong>Link Program</strong> features of Cloud Playout allow you to easily add a whole program (playlist) of new content, or relink an existing program to the channel to update the program items or simply play it again.</p>
     <aside class="bcls-aside bcls-aside--information language-editable">Note that changes made to a program will be applied to all instances of the program that are linked to the channel.</aside>
     <p>This feature is available to all accounts that have Cloud Playout. It works on non-looped channels only.</p>
   </section>
@@ -2559,11 +2559,122 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ul>
   </section>
   <section class="bcls-section">
+    <h2 id="Viewing_channel_programs">Viewing channel programs</h2>
+    <p>To see the programs currently linked to a non-looping channel, select the channel in the channel list to see the channel details, and select the Program tab to see the program list:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-tab.webp" alt="Program Limitations">
+      <figcaption class="bcls-caption--image">Program List</figcaption>
+    </figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Create_a_new_program">Create a new program</h2>
+    <p>To create a new program for the channel, click <strong>New Program</strong>:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-add-program-button.webp" alt="New Program Button">
+      <figcaption class="bcls-caption--image">New Program Button</figcaption>
+    </figure>
+    <p>A dialog will open where you can enter a name for the program. Note that <code translate="No">cloudplayout_</code> will be automatically prepended to your name to identify this as a program created for Cloud Playout. An empty playlist with this name will be automatically created and appear in the Media module.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-add-program-button.webp" alt="New Program Dialog">
+      <figcaption class="bcls-caption--image">New Program Dialog</figcaption>
+    </figure>
+    <p>The new program will be added at the end of the list, but you can <a href="#Reorder_programs">Reorder programs</a> to change the order.</p>
+    <p>To complete the addition of this new program to your channel, you must click the <strong>Save</strong> button on the Programs tab.</p>
+    <p>To add content to the program see <a href="#Managing_program_items">Managing program items</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Link_an_existing_program_again">Link an existing program again</h2>
+    <p>To add an existing program to the channel to play it again, click <strong>Link Program</strong>:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-link-program-button.webp" alt="Link Program Button">
+      <figcaption class="bcls-caption--image">Link Program Button</figcaption>
+    </figure>
+    <p>A dialog will open, allowing you to select an existing program to add it again:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-relink-program.webp" alt="Link Program Dialog">
+      <figcaption class="bcls-caption--image">Link Program Dialog</figcaption>
+    </figure>
+    <p>The program will be added at the end of the list, but you can <a href="#Reorder_programs">Reorder programs</a> to change the order.</p>
+    <p>To complete the addition of the program to your channel, you must click the <strong>Save</strong> button on the Programs tab.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Selecting_a_filler_slate">Selecting a filler slate</h2>
+    <p>By default, the default slate is looped to fill any gaps in the channel schedule. You can add your own custom slates <strong>while the channel is in a DRAFT state</strong>, and if you do, you can select a custom slate to use by clicking the <strong>Filler Slate</strong> button:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-filler-slate-button.webp" alt="Filler Slate Button">
+      <figcaption class="bcls-caption--image">Filler Slate Button</figcaption>
+    </figure>
+    <p>A dialog will open that allows you to select a slate that has been added to the account:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-filler-slate-dialog.png" alt="Filler Slate Dialog">
+      <figcaption class="bcls-caption--image">Filler Slate Dialog</figcaption>
+    </figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Setting_Hard_Start_for_a_program">Setting Hard Start for a program</h2>
+    <p>The first 5 items in the program list will display the computed start time for the program. If you wish to set a Hard Start time for a program, click the calendar icon beside the computed start time:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-hard-start-time.webp" alt="Hard Start Icon">
+      <figcaption class="bcls-caption--image">Hard Start Icon</figcaption>
+    </figure>
+    <p>A dialog will open where can set the start time for the program:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-hard-start.webp" alt="Hard Start Dialog">
+      <figcaption class="bcls-caption--image">Hard Start Dialog</figcaption>
+    </figure>
+    <p>Any gaps in the channel schedule that are created by a Hard Start time will be filled by the slate content.</p>
+    <p>Programs that have a Hard Start time will have an indicator in the program list:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-hard-start-time-indicator.webp" alt="Hard Start Indicator">
+      <figcaption class="bcls-caption--image">Hard Start Indicator</figcaption>
+    </figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Reorder_programs">Reorder programs</h2>
+    <p>You can change the position of a program in the list by clicking and dragging the icon beside the program name:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-reorder-programs.webp" alt="Reorder Programs">
+      <figcaption class="bcls-caption--image">Reorder Programs</figcaption>
+    </figure>
+    <aside class="bcls-aside bcls-aside--warning language-editable">Note that if a program has a hard start, then re-ordering the program will carry over the hard start time attached to that program. This might lead to overlapping schedules or this may even cause certain programs in between to get skipped for playback. The system will always honor the hard start time attached to a program. Please look for warning messages when you save the changes.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Managing_program_items">Managing program items</h2>
+    <p>To manage program items, go to the <strong>Program Items</strong> tab and select a program in the selector at the top to see its items:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-manage-program-items.webp" alt="Program Items">
+      <figcaption class="bcls-caption--image">Program Items</figcaption>
+    </figure>
+    <p>Here you can add (or remove) items of different kinds (depending on what features are enabled for the channel). You can also reorder items by clicking and dragging the icon beside the item name.</p>
+    <p>See <a href="/cloud-playout/cloud-playout/cloud-playout-add-content.html">Adding Content</a> for more detailed information.</p>
+    <p>Note that if the program is currently playing, there will be an indicator of which item is playing:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-program-items-running-state.webp" alt="Currently Playing Item">
+      <figcaption class="bcls-caption--image">Currently Playing Item</figcaption>
+    </figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Program_status">Program status</h2>
+    <p>In the Programs view, programs that have finished will show <strong>Completed</strong> in the Status column, and the currently running program will show the status <strong>Active</strong>:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-program-status.webp" alt="Program Status">
+      <figcaption class="bcls-caption--image">Program Status</figcaption>
+    </figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Programs_in_the_Schedule_View">Programs in the Schedule View</h2>
+    <p>In the Schedule view, demarcations between programs are shown by dotted lines:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-schedule-view.webp" alt="Program Indicators in Schedule">
+      <figcaption class="bcls-caption--image">Program Indicators in Schedule</figcaption>
+    </figure>
+  </section>
+  <section class="bcls-section">
     <h2 id="Recommendations">Recommendations</h2>
     <ul>
-      <li><a href="/cloud-playout/">Hard start</a> can be used at the program level or channel level (first program in the list) but these may conflict, and they use different instances of the slate. We recommend using one or the other, but not both. If both are set for a channel, the program-level hard start is given the highest priority and the channel will start playback on the program hard start time.</li>
+      <li><a href="#Setting_Hard_Start_for_a_program">Hard start</a> can be used at the program level or <a href="/cloud-playout/cloud-playout/hard-start.html">channel level</a> (first program in the list), but these may conflict, and they use different instances of the slate. We recommend using one or the other, but not both. If both are set for a channel, the program-level hard start is given the highest priority and the channel will start playback on the program hard start time.</li>
       <li>The <strong>Play Now</strong> option can be used on any video in the channel, but we recommend that you use it only on videos within the current program.</li>
-      <li>When the channel is playing, if you need to add or update a <a href=""></a></li>
+      <li>When the channel is playing, if you need to add or update a <a href="#Setting_Hard_Start_for_a_program">Hard Start</a> on a program that will be playing next, you should do so at least 30 seconds before the currently scheduled start time.</li>
     </ul>
   </section>
   <section class="bcls-section">
