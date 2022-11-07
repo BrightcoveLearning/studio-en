@@ -2594,6 +2594,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-relink-program.webp" alt="Link Program Dialog">
       <figcaption class="bcls-caption--image">Link Program Dialog</figcaption>
     </figure>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that only programs created for this channel will appear in the list - this is deliberate, because any changes made to a program will affect all instances of it. If you want to reuse a program in a different channel, create a new program for that channel, and when you add content to it, import the playlist for the program you want.</aside>
     <p>The program will be added at the end of the list, but you can <a href="#Reorder_programs">Reorder programs</a> to change the order.</p>
     <p>To complete the addition of the program to your channel, you must click the <strong>Save</strong> button on the Programs tab.</p>
   </section>
@@ -2609,6 +2610,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-filler-slate-dialog.png" alt="Filler Slate Dialog">
       <figcaption class="bcls-caption--image">Filler Slate Dialog</figcaption>
     </figure>
+    <p>Click <strong>Save</strong> to save your changes.</p>
   </section>
   <section class="bcls-section">
     <h2 id="Setting_Hard_Start_for_a_program">Setting Hard Start for a program</h2>
@@ -2628,6 +2630,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-hard-start-time-indicator.webp" alt="Hard Start Indicator">
       <figcaption class="bcls-caption--image">Hard Start Indicator</figcaption>
     </figure>
+    <p>Click <strong>Save</strong> to save your changes.</p>
   </section>
   <section class="bcls-section">
     <h2 id="Reorder_programs">Reorder programs</h2>
@@ -2636,6 +2639,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-reorder-programs.webp" alt="Reorder Programs">
       <figcaption class="bcls-caption--image">Reorder Programs</figcaption>
     </figure>
+    <p>Click <strong>Save</strong> to save your changes.</p>
     <aside class="bcls-aside bcls-aside--warning language-editable">Note that if a program has a hard start, then re-ordering the program will carry over the hard start time attached to that program. This might lead to overlapping schedules or this may even cause certain programs in between to get skipped for playback. The system will always honor the hard start time attached to a program. Please look for warning messages when you save the changes.</aside>
   </section>
   <section class="bcls-section">
@@ -2647,6 +2651,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </figure>
     <p>Here you can add (or remove) items of different kinds (depending on what features are enabled for the channel). You can also reorder items by clicking and dragging the icon beside the item name.</p>
     <p>See <a href="/cloud-playout/cloud-playout/cloud-playout-add-content.html">Adding Content</a> for more detailed information.</p>
+    <p>Click <strong>Save</strong> to save your changes.</p>
     <p>Note that if the program is currently playing, there will be an indicator of which item is playing:</p>
     <figure class="bcls-figure">
       <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-program-items-running-state.webp" alt="Currently Playing Item">
@@ -2672,7 +2677,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Recommendations">Recommendations</h2>
     <ul>
-      <li><a href="#Setting_Hard_Start_for_a_program">Hard start</a> can be used at the program level or <a href="/cloud-playout/cloud-playout/hard-start.html">channel level</a> (first program in the list), but these may conflict, and they use different instances of the slate. We recommend using one or the other, but not both. If both are set for a channel, the program-level hard start is given the highest priority and the channel will start playback on the program hard start time.</li>
+      <li><a href="#Setting_Hard_Start_for_a_program">Hard start</a> can be used at the program level or <a href="/cloud-playout/cloud-playout/hard-start.html">channel level</a>, but these may conflict, and they use different instances of the slate. We recommend using one or the other, but not both. If both are set for a channel, the program-level hard start is given the highest priority and the channel will start playback on the program hard start time.</li>
       <li>The <strong>Play Now</strong> option can be used on any video in the channel, but we recommend that you use it only on videos within the current program.</li>
       <li>When the channel is playing, if you need to add or update a <a href="#Setting_Hard_Start_for_a_program">Hard Start</a> on a program that will be playing next, you should do so at least 30 seconds before the currently scheduled start time.</li>
     </ul>
