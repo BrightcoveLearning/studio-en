@@ -2680,6 +2680,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><a href="#Setting_Hard_Start_for_a_program">Hard start</a> can be used at the program level or <a href="/cloud-playout/cloud-playout/hard-start.html">channel level</a>, but these may conflict, and they use different instances of the slate. We recommend using one or the other, but not both. If both are set for a channel, the program-level hard start is given the highest priority and the channel will start playback on the program hard start time.</li>
       <li>The <strong>Play Now</strong> option can be used on any video in the channel, but we recommend that you use it only on videos within the current program.</li>
       <li>When the channel is playing, if you need to add or update a <a href="#Setting_Hard_Start_for_a_program">Hard Start</a> on a program that will be playing next, you should do so at least 30 seconds before the currently scheduled start time.</li>
+      <li>Existing active channels (channels in the scheduled or running state during the release of the Managing Programs features), will not have filler slates associated with them. For them to use this feature, they need to be re-activated (stopped and started again).
+      </li>
     </ul>
   </section>
   <section class="bcls-section">
