@@ -148,6 +148,8 @@
       url: /cloud-playout/configuring-s3-buckets.html
     - name: Managing the Channel Program
       url: /cloud-playout/cloud-playout-add-content.html
+    - name: Managing Programs
+      url: /cloud-playout/managing-programs.html
     - name: Adding Static Image Overlays
       url: /cloud-playout/static-image-overlays.html
     - name: Adding Dynamic Overlays
