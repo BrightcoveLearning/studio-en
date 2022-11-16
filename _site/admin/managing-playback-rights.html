@@ -2558,7 +2558,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <aside class="bcls-aside bcls-aside--information">Note: To access the Playback Rights page, you must be a Video Cloud Studio user with the Administrator role.</aside>
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-list.png" /></figure>
       Playback rights are assigned to videos in the <strong>Playback Restrictions</strong> section of the video properties page  in the Media module. </p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-assign.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="" src="/assets/images/s-admin-img/playback-rights-assign.webp" /></figure>
     <p>Playback rights with a <strong>Status</strong> of <strong>Inactive</strong> cannot be assigned to videos in the Media module.</p>
   </section>
   <section class="bcls-section">
@@ -2567,7 +2567,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ol class="bcls-tasklist-restart">
       <li>Login to Video Cloud Studio as an Administrator.</li>
       <li>Open the <strong>Admin</strong> module  and then <strong>Playback Rights</strong>. Note that you must be an account administrator to access to the ADMIN menu.</li>
-      <li>Click <strong>New Playback Rights</strong>.</li>
+      <li>Click <span class="button-blue">+ Add playback rights</span>.</li>
       <li>Enter a <strong>Playback Rights Name</strong>.</li>
       <li>Checking <strong>Allow Playback Right without token</strong> will allow playback requests to be made without a JSON Web Token (JWT).
         <aside class="bcls-aside bcls-aside--information">Note: Unchecking this option won't affect the restrictions set for that Playback Right, however, the playback request is going to require a valid JWT which is set programmatically at the player level.  For information, see the developer document <a href="https://apis.support.brightcove.com/playback-authorization/guides/using-pas-with-bcp.html">Using Playback Authorization DRM with the Brightcove Player</a>.</aside>
