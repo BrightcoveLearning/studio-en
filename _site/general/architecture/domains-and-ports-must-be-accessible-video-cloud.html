@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In order to use Video Cloud Studio from within your network, your browser client needs to be able to access a number of required ports and domains through the firewall. If you can not access the ports and domains below, you may experience issues using Video Cloud players, Studio and modules.">
+  <meta name="description" content="">
   
-  <title>Domains and Ports that Must Be Accessible to Video Cloud</title>
+  <title></title>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
@@ -168,7 +168,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">Domains and Ports that Must Be Accessible to Video Cloud</li>
+        <li class="breadcrumb-item active" aria-current="page"></li>
       
     
   </nav>
@@ -2552,9 +2552,39 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Domains and Ports that Must Be Accessible to Video Cloud</h1>
+<h1></h1>
 <article class="bcls-article">
-  <summary>In order to use Video Cloud Studio from within your network, your browser client needs to be able to access a number of required ports and domains through the firewall. If you can not access the ports and domains below, you may experience issues using Video Cloud players, Studio and modules.</summary>
+  <summary></summary>
+  <section class="bcls-section">
+    <h2 id="Note_on_managed_player_releases">Note on managed player releases</h2>
+    <p>Brightcove generally allows about a week for customers to try a pre-release before a managed release begins.
+      Managed release is the process of running a controlled A/B test across production web sites. The managed release
+      system allows loading the new version of the player on a small percentage of page loads for a short period -
+      usually a few hours. During this time, Brightcove collects data so the performance of the old and new versions can
+      be compared. The distribution of number of errors, number of minutes viewed, number of ad starts, and several
+      other metrics are all examined. Brightcove looks at distributional counts and summaries of the data, but also at
+      outliers, sites that have greater than average differences in the tracked metrics. After careful review of all the
+      data, either the update is committed or rolled back. If it is decided to roll it back, small updates may be made
+      to fix an identified problem and then the managed release is re-run.</p>
+    <aside class="bcls-aside bcls-aside--information">
+      <p>The version of the Brightcove Player script used in the Managed Release contains a use of <code
+          translate="no">eval()</code>, which is blocked by many content security policies (CSP) using the <code
+          translate="no">script-src</code> directive. If a CSP like this is in place, the player will be unable to
+        function on any affected site for which that CSP applies.</p>
+
+      <p>There are two ways to mitigate the impact of a CSP and allow the Brightcove Player to continue functioning
+        during a managed release:</p>
+
+      <ul>
+        <li>Use <code>unsafe-eval</code> as part of the CSP. More info is available <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src">here.</a>
+        </li>
+        <li>Lock the player version and manually update players when appropriate. Locked players will never be updated
+          via a managed release.</li>
+      </ul>
+
+    </aside>
+  </section>
   <section class="bcls-section">
     <p>The list of key URLs for Video Cloud operations are (all over http port 80 and https port 443):</p>
   </section>
@@ -2563,7 +2593,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>The table below list key domains for Brightcove with wilcards.</p>
     <table class="bcls-table">
       <caption class="bcls-caption--table">
-      Key Domains for Brightcove (wildcards)
+        Key Domains for Brightcove (wildcards)
       </caption>
       <thead class="bcls-table__head">
         <tr>
@@ -2646,7 +2676,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td translate="no">*.analytics.edgekey.net</td>
-          <td translate="no">Source for analytics data (this is for Akamai CDN media analytics; not needed if Akamai is not used as your CDN)</td>
+          <td translate="no">Source for analytics data (this is for Akamai CDN media analytics; not needed if Akamai is
+            not used as your CDN)</td>
         </tr>
         <tr>
           <td translate="no">*.cloudfront.net</td>
@@ -2690,7 +2721,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 id="Protocols_for_Live">Protocols for Live</h2>
-    <aside class="bcls-aside bcls-aside--information">Note: 
+    <aside class="bcls-aside bcls-aside--information">Note:
       <ul>
         <li>You only need to open these protocols if you are using Brightcove Live.</li>
         <li>These protocols must be open regardless of using wildcards or specific domains.</li>
@@ -2699,30 +2730,31 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <caption class="bcls-caption--table">Protocols for Live</caption>
       <thead class="bcls-table__head">
-          <tr>
-              <th>Protocol</th>
-              <th>Ports</th>
-          </tr>
+        <tr>
+          <th>Protocol</th>
+          <th>Ports</th>
+        </tr>
       </thead>
       <tbody class="bcls-table__body">
-          <tr>
-              <td><code translate="no">rtmp</code></td>
-              <td>TCP port 1935</td>
-          </tr>
-          <tr>
-              <td><code translate="no">srt/rtp/rtp-fec</code></td>
-              <td>Randomly assigned UDP port in the range 10000-65535</td>
-          </tr>
+        <tr>
+          <td><code translate="no">rtmp</code></td>
+          <td>TCP port 1935</td>
+        </tr>
+        <tr>
+          <td><code translate="no">srt/rtp/rtp-fec</code></td>
+          <td>Randomly assigned UDP port in the range 10000-65535</td>
+        </tr>
       </tbody>
-  </table>
+    </table>
   </section>
 
   <section class="bcls-section">
     <h2 id="specific_domains">Specfic domains</h2>
-    <p>If wildcarding is not possible, individually list the following domains (all over http port 80 and https port 443):</p>
+    <p>If wildcarding is not possible, individually list the following domains (all over http port 80 and https port
+      443):</p>
     <table class="bcls-table">
       <caption class="bcls-caption--table">
-      Specific Domains
+        Specific Domains
       </caption>
       <thead class="bcls-table__head">
         <tr>
@@ -2804,7 +2836,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>Source for video assets</td>
         </tr>
         <tr>
-          <td translate="no">brightcove-01.fcod.llnwd.net, brightcove-02.fcod.llnwd.net, brightcove-03.fcod.llnwd.net,...</td>
+          <td translate="no">brightcove-01.fcod.llnwd.net, brightcove-02.fcod.llnwd.net,
+            brightcove-03.fcod.llnwd.net,...</td>
           <td>...and so forth, through brightcove-199.fcod.llnwd.net; additional sources for video assets</td>
         </tr>
         <tr>
@@ -2981,12 +3014,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
       </tbody>
     </table>
-    <p>Please understand that specific IP addresses are not available, as they may change at any time without notice. In addition, as we add new features or modify existing features, this list may change.  </p>
+    <p>Please understand that specific IP addresses are not available, as they may change at any time without notice. In
+      addition, as we add new features or modify existing features, this list may change. </p>
   </section>
-	<section class="bcls-section">
-		<h2 id="content_security_policies">Content security policies</h2>
-		<p>Brightcove's current set of CSPs:</p>
-<pre><code translate="no">default-src 'self';
+  <section class="bcls-section">
+    <h2 id="content_security_policies">Content security policies</h2>
+    <p>Brightcove's current set of CSPs:</p>
+    <pre><code translate="no">default-src 'self';
 script-src 'self' players.brightcove.net vjs.zencdn.net;
 connect-src 'self' players.brightcove.net edge.api.brightcove.com;
 img-src 'self' players.brightcove.net *.boltdns.net *.akamaihd.net;
@@ -2994,9 +3028,9 @@ style-src 'self' players.brightcove.net;
 frame-src 'self' players.brightcove.net;
 media-src 'self' *.brightcovecdn.com *.boltdns.net *.media.brightcove.com *.llnw.net *.llnwd.net *.akafms.net *.akamaihd.net *.cf.brightcove.com;
 prefetch-src 'self' *.boltdns.net;</code></pre>
-	</section>
-</article>
+  </section>
 
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
