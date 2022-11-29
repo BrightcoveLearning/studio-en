@@ -771,7 +771,7 @@
   url: /release-notes/index.html
   docs:
     - name: Video Cloud Studio Release Notes
-      url: /release-notes/video-cloud-studio-release-notes.html
+      url: 'https://support.brightcove.com/product-updates.html#video_cloud'
 - section:
   name: Support
   url: /support/index.html
