@@ -2,9 +2,10 @@
 title: Managing Cloud Playout Channels
 description: Brightcove Cloud Playout is a Studio module that enables you to program a scheduled playout of items from your VOD catalogue, combined with live feeds, and stream it as a Linear Channel all with the reliability and scalability of Brightcove Live.
 parent: Home
+layout: index_pages
 ---
 
-<h1>{{ page.title }}</h1>
+<h1><i class="fa-regular fa-cloud-bolt"></i> {{ page.title }}</h1>
 <article class="landing-page-wrapper">
   <summary>{{ page.description }}</summary>
   <section class="bcls-topic-list">
@@ -13,7 +14,7 @@ parent: Home
       {% for item in site.data.navigation %}
       {% if item.name == page.title %}
       {% for doc in item.docs %}
-      <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
+      <li><a class="theme-link" href="{{ doc.url }}">{{ doc.name }}</a></li>
       {% endfor %}
       {% endif %}
       {% endfor %}

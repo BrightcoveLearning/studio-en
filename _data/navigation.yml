@@ -252,6 +252,7 @@
 - section:
   name: 'Publishing Videos & Players'
   url: /publish/index.html
+  icon: fa-regular fa-display-code
   docs:
   - name: Publishing
     url: /publish/index.html
@@ -650,11 +651,11 @@
 - section:
   name: Reviewing Analytics
   url: /analytics/index.html
-  icon: fa-regular fa-chart-line-up"
+  icon: fa-regular fa-chart-line-up
   docs:
   - name: Using the Analytics Module
     url: /analytics/index.html
-    icon: fa-regular fa-chart-line-up"
+    icon: fa-regular fa-chart-line-up
     docs:
     - name: Getting Started with the Analytics Module
       url: /analytics/getting-started-analytics-module.html
@@ -666,7 +667,7 @@
       url: /analytics/faq-analytics-module.html
   - name: Analytics Reports
     url: /analytics/index.html
-    icon: fa-regular fa-chart-line-up"
+    icon: fa-regular fa-chart-line-up
     docs:
     - name: Analytics Report Reference
       url: /analytics/analytics-report-reference.html
@@ -830,7 +831,7 @@
 - section:
   name: Support
   url: /support/index.html
-  icon: fa-regular fa-comments-question-check"
+  icon: fa-regular fa-comments-question-check
   docs:
     - name: 'Contact Sales'
       url: '/support/contact-sales.html'

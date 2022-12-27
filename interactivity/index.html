@@ -2,9 +2,10 @@
 title: Interactivity
 description: Brightcove Interactivity allows you to add many kinds of interactivity to players, including call to action, chapters, click-to-buy, branching, and polls.
 parent: Home
+layout: index_pages
 ---
 
-<h1>{{ page.title }}</h1>
+<h1><i class="fa-regular fa-hand-back-point-up"></i> {{ page.title }}</h1>
 <article class="bcls-article">
   <summary>{{ page.description }}</summary>
   <section class="bcls-section" id="page_wrapper">
@@ -14,14 +15,14 @@ parent: Home
         {% for entry in item.docs %}
         <div>
             {% if entry.docs %}
-                <h3><a href="{{ entry.url }}">{{ entry.name }}</a></h3>
+                <h3><a class="theme-link" href="{{ entry.url }}">{{ entry.name }}</a></h3>
                 <ul>
                   {% for subdoc in entry.docs %}
-                  <li><a href="{{ subdoc.url }}">{{ subdoc.name }}</a></li>
+                  <li><a class="theme-link" href="{{ subdoc.url }}">{{ subdoc.name }}</a></li>
                   {% endfor %}
                 </ul>
             {% else %}
-            <p style="display:block"><a href="{{ entry.url }}">{{ entry.name }}</a></>
+            <p style="display:block"><a class="theme-link" href="{{ entry.url }}">{{ entry.name }}</a></>
             {% endif %}
           </div>
           {% endfor %}
