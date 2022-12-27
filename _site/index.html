@@ -3282,25 +3282,28 @@ Video Cloud Studio allows you to manage your video publishing workflow across de
         
 
 
-        <!-- <script>
-          let show_more = document.querySelector('#show_more'),
-            showing_all;
-          show_more.addEventListener('click', function(){
-            if (showing_all) {
-              show_more.textContent = 'Show Less';
-              showing_all = true;
-            } else {
-              show_more.textContent = 'Show More';
-              showing_all = false;
-            }
-          });
-        </script> -->
-        
+       
         
       </div><!--//row-->
       <div class="row justify-content-center" style="width: 80%;">
-        <button class="btn btn-primary" id="show_more" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2" style="background-color:#4EA9D1; margin-left:30%;max-width: 150px;">Show more</button>
+        <button class="btn btn-primary" id="show_more_btn" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2" style="background-color:#4EA9D1; margin-left:30%;max-width: 150px;">Show more</button>
       </div>
+
+      <script>
+        const btn = document.getElementById('show_more_btn');
+        let flag = true;
+
+        btn.addEventListener('click', () => {
+          if (flag === true) {
+            btn.textContent = 'Show Less'
+            flag = false;
+          } else {
+            btn.textContent = 'Show More'
+            flag = true;
+          }
+        });
+      </script>
+      
   </div><!--//container-->
 </div><!--//container-->
 </div><!--//page-content-->
