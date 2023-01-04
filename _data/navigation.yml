@@ -76,19 +76,19 @@
     icon: fa-regular fa-photo-film
     docs:
     - name: Uploading Videos
-      url: /media/uploading-videos-using-upload-module.html
+      url: /media/manage/uploading-videos-using-upload-module.html
     - name: Replacing a Video Source File
-      url: /media/replacing-video-source-file.html
+      url: /media/manage/replacing-video-source-file.html
     - name: Retranscoding Videos
-      url: /media/retranscoding-videos-using-media-module.html
+      url: /media/manage/retranscoding-videos-using-media-module.html
     - name: Downloading Videos from Video Cloud
-      url: /media/downloading-videos-video-cloud.html
+      url: /media/manage/downloading-videos-video-cloud.html
     - name: Uploading Videos Remote URLs
-      url: /media/uploading-videos-remote-urls.html
+      url: /media/manage/uploading-videos-remote-urls.html
     - name: Working with Remote Asset Videos
-      url: /media/working-remote-asset-videos.html
+      url: /media/manage/working-remote-asset-videos.html
     - name: Exporting Video Data
-      url: /media/exporting-video-data.html
+      url: /media/manage/exporting-video-data.html
   - name: Video Properties
     url: /media/index.html
     icon: fa-regular fa-photo-film
