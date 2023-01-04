@@ -1,0 +1,34 @@
+---
+title: Managing Video Files
+description: Learn how to manage video files in the Media module
+parent: Managing Videos
+grandparent: Home
+layout: index_pages
+---
+
+<h1><i class="fa-regular fa-photo-film"></i> {{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section" id="page_wrapper">
+    {% for item in site.data.navigation %}
+      {% if item.name == page.title %}
+      <section class="flex-container">
+        {% for entry in item.docs %}
+        <div>
+            {% if entry.docs %}
+                <h3><a class="theme-link" href="{{ entry.url }}">{{ entry.name }}</a></h3>
+                <ul>
+                  {% for subdoc in entry.docs %}
+                  <li><a class="theme-link" href="{{ subdoc.url }}">{{ subdoc.name }}</a></li>
+                  {% endfor %}
+                </ul>
+            {% else %}
+            <p style="display:block"><a class="theme-link" href="{{ entry.url }}">{{ entry.name }}</a></>
+            {% endif %}
+          </div>
+          {% endfor %}
+      </section>
+      {% endif %}
+    {% endfor %}
+  </section>
+</article>
