@@ -116,23 +116,23 @@
     - name: Organizing Videos Using Folders
       url: /media/organize/organizing-videos-using-folders.html
   - name: Captions and Audio Files
-    url: /media/index.html
+    url: /media/captions/index.html
     icon: fa-regular fa-closed-captioning
     docs:
     - name: 'Overview: Adding Captions to a Video'
-      url: /media/overview-adding-captions-video.html
+      url: /media/captions/overview-adding-captions-video.html
     - name: Adding Captions to Videos
-      url: /media/adding-captions-videos-using-media-module.html
+      url: /media/captions/adding-captions-videos-using-media-module.html
     - name: Adding Audio Tracks to Videos
-      url: /media/adding-audio-tracks-videos-using-media-module.html
+      url: /media/captions/adding-audio-tracks-videos-using-media-module.html
     - name: Adding Chapters to a Video
-      url: /media/adding-chapters-video.html
+      url: /media/captions/adding-chapters-video.html
     - name: Generating Captions for Videos
-      url: /media/generating-captions-videos.html
+      url: /media/captions/generating-captions-videos.html
     - name: Styling Captions
-      url: /media/styling-captions.html
+      url: /media/captions/styling-captions.html
     - name: Using the Caption Editor
-      url: /media/using-the-caption-editor.html
+      url: /media/captions/using-the-caption-editor.html
   - name: Advanced Topics
     url: /media/advanced/index.html
     icon: fa-regular fa-diamond"

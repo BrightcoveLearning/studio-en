@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Overview: Adding Captions to a Video</title>
+        <title>Captions and Audio Files</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic, you will learn about working with captions in Video Cloud.">
+        <meta name="description" content="Learn how to work with captions and audio files in the Media module.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -542,7 +542,7 @@
 
               <li class="nav-item subsection-title">
                 
-                <a class="nav-link" href="/media/index.html">
+                <a class="nav-link" href="/media/captions/index.html">
                   <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Captions and Audio Files</a>
                 
 
@@ -550,43 +550,43 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/media/overview-adding-captions-video.html" aria-current="page">Overview: Adding Captions to a Video</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/overview-adding-captions-video.html">Overview: Adding Captions to a Video</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/media/adding-captions-videos-using-media-module.html">Adding Captions to Videos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/adding-captions-videos-using-media-module.html">Adding Captions to Videos</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/media/adding-audio-tracks-videos-using-media-module.html">Adding Audio Tracks to Videos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/adding-audio-tracks-videos-using-media-module.html">Adding Audio Tracks to Videos</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/media/adding-chapters-video.html">Adding Chapters to a Video</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/adding-chapters-video.html">Adding Chapters to a Video</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/media/generating-captions-videos.html">Generating Captions for Videos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/generating-captions-videos.html">Generating Captions for Videos</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/media/styling-captions.html">Styling Captions</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/styling-captions.html">Styling Captions</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/media/using-the-caption-editor.html">Using the Caption Editor</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/using-the-caption-editor.html">Using the Caption Editor</a></li>
                   
                   
                   
@@ -2766,7 +2766,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Overview: Adding Captions to a Video</li>
+            <li class="breadcrumb-item active" aria-current="page">Captions and Audio Files</li>
             
             
           </ol>
@@ -2779,90 +2779,83 @@
   <div class="container">
     <div class="docs-overview py-5">
       
-      <div class="centered-inpage-nav" id="centered_inpage_nav">
-        <nav id="centered_toc">
-          <select id="centered_in_page_toc" class="form-select select-focus"></select>
-        </nav>
-      </div>
-      <br>
       
-      
-<h1>Overview: Adding Captions to a Video</h1>
+<h1><i class="fa-regular fa-photo-film"></i> Captions and Audio Files</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn about working with captions in Video Cloud.</summary>
-  <section class="bcls-section">
-    <h2 id="intro">Introduction</h2>
-    <p>Closed captions can be added to videos to provide additional or interpretive information to individuals who wish to access it. Captions are necessary so the deaf and hard of hearing can access the audio portion of video presentations.</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="Example of Captions" src="/assets/images/s-media-img/overview-captions-sample.png" />
-      <figcaption class="bcls-caption--image">Example of Captions</figcaption>
-    </figure>
-    <p>Such text may be used for accessibility, to provide translations of the audio track or some other purpose, but the underlying technology used is the same.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="filelocation">Captions file location</h2>
-    <p>You can choose where to host the WebVTT captions file:</p>
-    <ol>
-      <li><strong>At a Remote URL (remote asset)</strong> - In this case, the WebVTT file is hosted on your server and you add the URL for the file to the video metadata.
-        <aside class="bcls-aside bcls-aside--information">Note: If you are hosting captions files on your own server, make sure the file is located at a URL that can be accessed by the Brightcove player. The server hosting the captions file should also have Cross-Origin Resource Sharing (CORS) enabled. You can read more about CORS <a href="https://general.support.brightcove.com/developer/concepts-cors.html">here</a>.</aside>
-      </li>
-      <li><strong>Uploaded using Video Cloud</strong> (<strong>ingested</strong>) - In this case, the WebVTT file is uploaded (ingested) to Video Cloud. This can be done using the Media module or using the APIs.</li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">
-      <p>Note: If the video source file you ingest into Video Cloud has embedded 608 captions, they will be ignored during the processing of the video, and <strong>not</strong> present in the video renditions. To have captions with your videos, you have a few options:</p>
-      <ul>
-        <li><a href="/media/generating-captions-videos.html">Let Video Cloud generate caption files</a></li>
-        <li><a href="/media/adding-captions-videos-using-media-module.html">Manually add captions</a></li>
-        <li><a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">Use the Dynamic Ingest API</a></li>
-        <li><a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-add-webvtt-captions-text-tracks.html">Use the CMS API (for remotely hosted captions)</a></li>
-      </ul>
-    </aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="associate">Associating captions with a video</h2>
-    <p>There are several ways to associate a captions file with a video:</p>
-    <ol>
-      <li>Using Studio</li>
-      <li>Modifying the player publishing code</li>
-      <li>Using the APIs</li>
-    </ol>
-    <h3 id="cap_gen">Automatically generating captions for videos</h3>
-    <p>Video Cloud Studio can  generate captions for videos. For information, see <a href="/media/generating-captions-videos.html">Generating Captions for Videos</a>.</p>
-    <h3 id="studio">Adding captions in Studio</h3>
-    <p>Captions can be associated with a video using the Media module. For information, see <a href="/media/adding-captions-videos-using-media-module.html">Adding Captions to Videos using the Media Module</a>.</p>
-    <h3 id="pubcode">Modifying the player publishing code</h3>
-    <p>In this case, a <code translate="No">&lt;track&gt;</code> tag is added to the player publishing code. For more information, see <a href="https://player.support.brightcove.com/general/adding-captions-videos-programmatically.html">Adding Captions to Videos Programmatically</a>.</p>
-    <h3 id="api">Adding captions via the APIs</h3>
-    <p>How you add captions via the APIs varies depending on whether the captions file will be ingested or used as a remote asset.</p>
-    <ul>
-      <li>
-        <p><strong>Remote asset captions</strong> - If you prefer to host the captions yourself (or have a captions provider who hosts them), then you can associate the captions with a video using the CMS API. For information, see <a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-add-webvtt-captions-text-tracks.html">Using the CMS API: Add WebVTT Captions</a>.</p>
-      </li>
-      <li>
-        <p><strong>Add captions to Video Cloud Studio</strong> - If you want to have Brightcove host your captions, you can ingest your WebVTT file using the Dynamic Ingest API. For information, see <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">Ingesting WebVTT Files</a>.</p>
-      </li>
+<br/>
+  <summary>Learn how to work with captions and audio files in the Media module.</summary>
+  <section>
+    <h2 id="Topics_in_this_section">Topics</h2>
+    <ul class="bcls-topic-list">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li><a href="/media/captions/overview-adding-captions-video.html">Overview: Adding Captions to a Video</a></li>
+      
+      <li><a href="/media/captions/adding-captions-videos-using-media-module.html">Adding Captions to Videos</a></li>
+      
+      <li><a href="/media/captions/adding-audio-tracks-videos-using-media-module.html">Adding Audio Tracks to Videos</a></li>
+      
+      <li><a href="/media/captions/adding-chapters-video.html">Adding Chapters to a Video</a></li>
+      
+      <li><a href="/media/captions/generating-captions-videos.html">Generating Captions for Videos</a></li>
+      
+      <li><a href="/media/captions/styling-captions.html">Styling Captions</a></li>
+      
+      <li><a href="/media/captions/using-the-caption-editor.html">Using the Caption Editor</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: Regardless of the method used to add caption files to a video, no more than 1000 text tracks may be added.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The Chinese language is not supported by 608 captions.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="remove">Removing captions</h2>
-    <p>Captions can be removed from videos using the Media module or via the CMS API. In Studio, open the  <strong>Media</strong>  module and edit the video properties. Edit the <strong>Text Tracks</strong> property as needed.</p>
-    <p>Captions can also be removed using the <span translate="No">CMS API</span> by making an <a href="https://apis.support.brightcove.com/cms/references/reference.html#api-videoGroup-Update_Video">Update Video</a> request and submitting a request body with an empty <code translate="No">text_tracks</code> array (or an array from which the object associated with that set of captions has been removed).</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="styling">Styling captions</h2>
-    <p>Styling can be applied to WebVTT captions using CSS. See <a href="/media/styling-captions.html">Styling Captions</a> for details.</p>
-  </section>
+</section>
 </article>
-
-<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
-  
-  <nav class="right-side-nav" id="right_side_nav">
-    <h6 class="toc">Page Contents</h6>
-    <ul id="in_page_nav" class="list-none"></ul>
-  </nav>
-  
-<!-- </div> -->
+<footer class="footer">
+    <div class="container text-center py-5">
+        <div>Looking for somethinng? go to our <a class="theme-link" href="https://support.brightcove.com/search.html" target="_blank">search page</small>
+    </div>
+</footer>
 </div>
 </div>
 </div>
@@ -2984,7 +2977,6 @@
   <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
   <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
   <script src="/assets/s-site-assets-scripts/tabs.js"></script>
-  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
   <script src="/assets/js/sites_nav.js"></script>
   <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
   <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
