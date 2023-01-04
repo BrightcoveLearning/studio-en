@@ -72,7 +72,7 @@
     - name: How to Search for Videos and Playlists
       url: /media/how-search-videos-and-playlists-media-module.html
   - name: Managing Video Files
-    url: /media/index.html
+    url: /media/manage/index.html
     icon: fa-regular fa-photo-film
     docs:
     - name: Uploading Videos
@@ -106,7 +106,7 @@
     - name: Configuring Video Availability
       url: /media/configuring-video-availability.html
   - name: Organizing Videos
-    url: /media/index.html
+    url: /media/organize/index.html
     icon: fa-regular fa-folder-tree
     docs:
     - name: Introduction to Playlists
