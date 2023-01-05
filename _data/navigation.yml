@@ -133,18 +133,18 @@
       url: /media/captions/styling-captions.html
     - name: Using the Caption Editor
       url: /media/captions/using-the-caption-editor.html
-  - name: Advanced Topics
-    url: /media/advanced/index.html
+  - name: General Information
+    url: /media/general/index.html
     icon: fa-regular fa-diamond"
     docs:      
     - name: Media Sharing
-      url: /media/advanced/media-sharing-using-media-module.html
+      url: /media/general/media-sharing-using-media-module.html
     - name: Setting Required Fields
-      url: /media/advanced/setting-required-fields-videos.html
+      url: /media/general/setting-required-fields-videos.html
     - name: Working with Cue Points
-      url: /media/advanced/working-cue-points-media-module.html
+      url: /media/general/working-cue-points-media-module.html
     - name: Working with Multi-Lingual Metadata
-      url: /media/advanced/working-multi-lingual-metadata.html
+      url: /media/general/working-multi-lingual-metadata.html
 - section:
   name: Managing Players
   url: /players/index.html
