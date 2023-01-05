@@ -960,7 +960,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/advanced/",
+      "newURL": "https://studio.support.brightcove.com/media/captions/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/general/content-protection/",
       "oldURL": "/index"
   },
 
@@ -970,17 +975,17 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/social/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/",
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/general/",
       "oldURL": "/index"
   },
 
@@ -1040,22 +1045,17 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/hubspot/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/media/organize/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/admin/",
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/non-map/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/captions/",
+      "newURL": "https://studio.support.brightcove.com/campaign/admin/",
       "oldURL": "/index"
   },
 
@@ -1085,12 +1085,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/content-protection/",
+      "newURL": "https://studio.support.brightcove.com/interactivity/platform/projects/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/platform/projects/",
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/marketo/",
       "oldURL": "/index"
   },
 
@@ -1125,11 +1125,6 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/marketo/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/interactivity/platform/custom-annotations/",
       "oldURL": "/index"
   },
@@ -1146,6 +1141,11 @@
 
   {
       "newURL": "https://studio.support.brightcove.com/interactivity/platform/annotations/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/hubspot/",
       "oldURL": "/index"
   },
 
@@ -1330,7 +1330,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/advanced/media-sharing-using-media-module.html",
+      "newURL": "https://studio.support.brightcove.com/media/general/media-sharing-using-media-module.html",
       "oldURL": "/media-sharing-using-media-module"
   },
 
@@ -1380,12 +1380,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/organize/organizing-videos-using-folders.html",
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/organizing-videos-using-folders.html",
       "oldURL": "/organizing-videos-using-folders"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/organizing-videos-using-folders.html",
+      "newURL": "https://studio.support.brightcove.com/media/organize/organizing-videos-using-folders.html",
       "oldURL": "/organizing-videos-using-folders"
   },
 
@@ -1630,7 +1630,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/advanced/setting-required-fields-videos.html",
+      "newURL": "https://studio.support.brightcove.com/media/general/setting-required-fields-videos.html",
       "oldURL": "/setting-required-fields-videos"
   },
 
@@ -1965,12 +1965,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/advanced/working-cue-points-media-module.html",
+      "newURL": "https://studio.support.brightcove.com/media/general/working-cue-points-media-module.html",
       "oldURL": "/working-cue-points-media-module"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/advanced/working-multi-lingual-metadata.html",
+      "newURL": "https://studio.support.brightcove.com/media/general/working-multi-lingual-metadata.html",
       "oldURL": "/working-multi-lingual-metadata"
   },
 
