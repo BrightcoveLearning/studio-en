@@ -15,14 +15,14 @@ layout: index_pages
         {% for entry in item.docs %}
         <div>
             {% if entry.docs %}
-                <h3><a class="theme-link" href="{{ entry.url }}">{{ entry.name }}</a></h3>
+                <h3><a  class="theme-link" href="{{ entry.url }}">{{ entry.name }}</a></h3>
                 <ul>
                   {% for subdoc in entry.docs %}
-                  <li><a class="theme-link" href="{{ subdoc.url }}">{{ subdoc.name }}</a></li>
+                  <li><a  href="{{ subdoc.url }}">{{ subdoc.name }}</a></li>
                   {% endfor %}
                 </ul>
             {% else %}
-            <p style="display:block"><a class="theme-link" href="{{ entry.url }}">{{ entry.name }}</a></>
+            <p style="display:block"><a  href="{{ entry.url }}">{{ entry.name }}</a></>
             {% endif %}
           </div>
           {% endfor %}
