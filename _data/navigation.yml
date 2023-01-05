@@ -64,13 +64,13 @@
   icon: fa-regular fa-photo-film
   docs:
   - name: Using the Media Module
-    url: /media/index.html
+    url: /media/module/index.html
     icon: fa-regular fa-photo-film
     docs:
     - name: Getting Started with the Media Module
-      url: /media/getting-started-media-module.html
+      url: /media/module/getting-started-media-module.html
     - name: How to Search for Videos and Playlists
-      url: /media/how-search-videos-and-playlists-media-module.html
+      url: /media/module/how-search-videos-and-playlists-media-module.html
   - name: Managing Video Files
     url: /media/manage/index.html
     icon: fa-regular fa-photo-film
