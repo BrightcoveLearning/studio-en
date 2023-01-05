@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Editing Video Properties using Quick Edit</title>
+        <title>Embedding Captions in Videos</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to use the Quick Edit feature inside of the Media module to edit video properties for multiple videos.">
+        <meta name="description" content="This topic shows you how to embed captions in a video source file using the Media module.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -468,37 +469,37 @@
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/media/editing-video-properties-using-media-module.html">Editing Video Properties</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/properties/editing-video-properties-using-media-module.html">Editing Video Properties</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/media/editing-video-properties-using-quick-edit.html" aria-current="page">Editing Properties using Quick Edit</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/properties/editing-video-properties-using-quick-edit.html">Editing Properties using Quick Edit</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/media/capturing-poster-and-thumbnail-images.html">Capturing Poster and Thumbnail Images</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/properties/capturing-poster-and-thumbnail-images.html">Capturing Poster and Thumbnail Images</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/media/increasing-quality-poster-and-thumbnail-images.html">Increasing the Quality of Poster Images</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/properties/increasing-quality-poster-and-thumbnail-images.html">Increasing the Quality of Poster Images</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/media/uploading-poster-and-thumbnail-images.html">Uploading Poster and Thumbnail Images</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/properties/uploading-poster-and-thumbnail-images.html">Uploading Poster and Thumbnail Images</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/media/configuring-video-availability.html">Configuring Video Availability</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/properties/configuring-video-availability.html">Configuring Video Availability</a></li>
                   
                   
                   
@@ -2766,7 +2767,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Editing Video Properties using Quick Edit</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/media/captions/">Captions</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Embedding Captions in Videos</li>
             
             
           </ol>
@@ -2788,49 +2793,31 @@
       
       
 <article class="bcls-article">
-  <h1>Editing Video Properties using Quick Edit</h1>
-  <summary>In this topic you will learn how to use the Quick Edit feature inside of the Media module to edit video properties for multiple videos.</summary>
+  <h1>Embedding Captions in Videos</h1>
+  <summary>This topic shows you how to embed captions in a video source file using the Media module.</summary>
   <section class="bcls-section">
-    
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6054750976001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-   
-    <p>The Quick Edit feature provides a convenient way to edit videos properties for multiple videos.  Clicking <strong>Quick Edit</strong> will open the Quick Edit panel on the right side of the Media module.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15923-quick-edit.png" /></figure>
+    <p>Brightcove reserves the right to update the default ingest profiles associated with Video Cloud accounts. You may also have the need to update your own, custom ingest profiles. When ingest profiles change, you may wish to have existing videos in your account retranscoded so that they have renditions that correspond to the new ingest profile settings.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The ability to retranscode existing videos is available only for Professional and Enterprise accounts. If you are interested in this feature, please contact your Customer Success Manager.</aside>
   </section>
   <section class="bcls-section">
-    <p>The Quick Edit panel will display a subset of the video properties:</p>
-    <ul>
-      <li>Name</li>
-      <li>Short Description</li>
-      <li>Long Description</li>
-      <li>Tags to Add</li>
-      <li>Tags to Remove</li>
-      <li>Related Link URL</li>
-      <li>Related Link Text</li>
-      <li>Advertising</li>
-      <li>Ad Keys</li>
-      <li>Scheduling Start/End Dates</li>
-      <li>Geofiltering</li>
-      <li>Custom Fields</li>
-    
-      <li>Playback Restrictions</li>
-   
-    </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: For a description of all of these properties, see the <a href="/media/editing-video-properties-using-media-module.html">Editing Video Properties using the Media Module</a> topic.</aside>
-    <p>Use the Quick Edit panel to assign values. When done, click Save to save the changes or Cancel to exit.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="notes">Notes on using Quick Edit</h2>
-    <ul>
-      <li>When at least one video has values assigned to a property, <strong>Edit Mixed Value</strong> will be displayed
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15923-mixed-values.png" /></figure>
+    <h2 id="steps">Steps to embed captions in a video</h2>
+    <p>Follow these steps to replace the existing renditions for a video.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Media</strong>  module.</li>
+      <li>Click on the video you want to retranscode.</li>
+
+      <li>In the <strong>Video Files</strong> section, click  <span class="button-blue-text-bordered">Retranscode</span>.</li>
+      <li>Select an ingest profile to use.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15921-retranscode-settings.png" /></figure>
+        <!-- <aside class="bcls-aside bcls-aside--information">Note: Videos that were initially transcoded using a Dynamic Delivery or Context Aware ingest profile can only be retranscoded using one of those ingest profile types. Videos transcoded using a Legacy ingest profile can be retranscoded with any type of profile.</aside> --> 
       </li>
-      <li>An asterisk (*) following the property name indicates a required property</li>
-      <li>To cancel changes made to a property, click <strong>Restore</strong>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/node15923-restore.png" /></figure>
+      <li> Check <strong>Keep existing thumbnail and poster images</strong> to keep the existing images. If you uncheck this box, new images will be generated based upon the image settings in the selected ingest profile.
+        <aside class="bcls-aside bcls-aside--information">Note that if you check the box, the existing images will be preserved - however, <strong>the image URLs will change</strong>.</aside>
+        <aside class="bcls-aside bcls-aside--information">Note: If the account is enabled for forensic watermarking, there will be an option to either add a forensic watermark or keep the existing forensic watermark.</aside>
       </li>
-    </ul>
+      <li>Click <span class="button-blue"> Retranscode</span> .</li>
+    </ol>
+    <p>While the new renditions are being created, the video will remain playable using the existing renditions.</p>
   </section>
 </article>
 
