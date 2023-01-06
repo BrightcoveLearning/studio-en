@@ -901,6 +901,61 @@
         
           <url>
             
+              <loc>https://studio.support.brightcove.com/publish/adding-brightcove-player-facebook-fan-page.html</loc>
+            
+            <lastmod>2023-01-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/embedding-brightcove-player-google-sites-page.html</loc>
+            
+            <lastmod>2023-01-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-player-wordpress-page.html</loc>
+            
+            <lastmod>2023-01-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-players-facebook-instant-articles.html</loc>
+            
+            <lastmod>2023-01-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-players-joomla.html</loc>
+            
+            <lastmod>2023-01-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
+            <loc>https://studio.support.brightcove.com/publish/index.html</loc>
+          
+            <lastmod>2023-01-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
               <loc>https://studio.support.brightcove.com/publish/adding-3play-media-interactive-transcript-video.html</loc>
             
             <lastmod>2023-01-06</lastmod>
@@ -965,61 +1020,6 @@
           <url>
             
               <loc>https://studio.support.brightcove.com/publish/using-reference-ids.html</loc>
-            
-            <lastmod>2023-01-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/index.html</loc>
-          
-            <lastmod>2023-01-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/publish/adding-brightcove-player-facebook-fan-page.html</loc>
-            
-            <lastmod>2023-01-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/publish/embedding-brightcove-player-google-sites-page.html</loc>
-            
-            <lastmod>2023-01-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-player-wordpress-page.html</loc>
-            
-            <lastmod>2023-01-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-players-facebook-instant-articles.html</loc>
-            
-            <lastmod>2023-01-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-players-joomla.html</loc>
             
             <lastmod>2023-01-06</lastmod>
             <changefreq>daily</changefreq>

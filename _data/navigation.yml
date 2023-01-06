@@ -229,6 +229,20 @@
       url: /publish/publishing-videos-and-playlists-media-module.html
     - name: Publishing Videos to an In-Page Experience
       url: /publish/publishing-videos-page-experience.html
+  - name: Publishing to Third-Party Apps
+    url: /publish/index.html
+    icon: fa-regular fa-display-code
+    docs:
+    - name: Adding a Player to a Facebook Fan Page
+      url: /publish/adding-brightcove-player-facebook-fan-page.html
+    - name: Embedding a Player on a Google Sites Page
+      url: /publish/embedding-brightcove-player-google-sites-page.html
+    - name: Publishing a Player in a Wordpress Page
+      url: /publish/publishing-brightcove-player-wordpress-page.html
+    - name: Publishing Players in Facebook Instant Articles
+      url: /publish/publishing-brightcove-players-facebook-instant-articles.html
+    - name: Publishing Players in Joomla
+      url: /publish/publishing-brightcove-players-joomla.html
   - name: General Information
     url: /publish/index.html
     icon: fa-regular fa-circle-info
@@ -249,20 +263,6 @@
       url: /publish/using-multiple-players-one-page.html
     - name: Using Reference IDs
       url: /publish/using-reference-ids.html
-  - name: Publishing to Third-Party Apps
-    url: /publish/index.html
-    icon: fa-regular fa-display-code
-    docs:
-    - name: Adding a Player to a Facebook Fan Page
-      url: /publish/adding-brightcove-player-facebook-fan-page.html
-    - name: Embedding a Player on a Google Sites Page
-      url: /publish/embedding-brightcove-player-google-sites-page.html
-    - name: Publishing a Player in a Wordpress Page
-      url: /publish/publishing-brightcove-player-wordpress-page.html
-    - name: Publishing Players in Facebook Instant Articles
-      url: /publish/publishing-brightcove-players-facebook-instant-articles.html
-    - name: Publishing Players in Joomla
-      url: /publish/publishing-brightcove-players-joomla.html
 - section:
   name: Reviewing Analytics
   url: /analytics/index.html
