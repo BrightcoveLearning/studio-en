@@ -233,15 +233,23 @@
     url: /publish/index.html
     icon: fa-regular fa-circle-info
     docs:
+    - name: Adding a 3Play Media Interactive Transcript
+      url: /publish/adding-3play-media-interactive-transcript-video.html
     - name: Deep Linking
       url: /publish/deep-linking.html
     - name: Driving Video Views Through Email
       url: /publish/driving-video-views-through-email.html
+    - name: Dynamically Assigning Videos to a Player
+      url: /publish/dynamically-assigning-videos-player.html
     - name: 'Step-by-Step:  Creating and Publishing a Player'
       url: /publish/step-step-using-players-module-create-and-publish-player.html
     - name: Creating and Publishing High Quality Screencasts
       url: /publish/creating-and-publishing-high-quality-screencasts.html
-  - name: Publishing to third-Party Apps
+    - name: Using Multiple Players on One Page
+      url: /publish/using-multiple-players-one-page.html
+    - name: Using Reference IDs
+      url: /publish/using-reference-ids.html
+  - name: Publishing to Third-Party Apps
     url: /publish/index.html
     icon: fa-regular fa-display-code
     docs:
@@ -255,18 +263,6 @@
       url: /publish/publishing-brightcove-players-facebook-instant-articles.html
     - name: Publishing Players in Joomla
       url: /publish/publishing-brightcove-players-joomla.html
-  - name: Advanced Features
-    url: /publish/index.html
-    icon: fa-regular fa-diamond
-    docs:         
-    - name: Adding a 3Play Media Interactive Transcript
-      url: /publish/adding-3play-media-interactive-transcript-video.html
-    - name: Dynamically Assigning Videos to a Player
-      url: /publish/dynamically-assigning-videos-player.html
-    - name: Using Multiple Players on One Page
-      url: /publish/using-multiple-players-one-page.html
-    - name: Using Reference IDs
-      url: /publish/using-reference-ids.html
 - section:
   name: Reviewing Analytics
   url: /analytics/index.html

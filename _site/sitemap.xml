@@ -901,6 +901,15 @@
         
           <url>
             
+              <loc>https://studio.support.brightcove.com/publish/adding-3play-media-interactive-transcript-video.html</loc>
+            
+            <lastmod>2023-01-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
               <loc>https://studio.support.brightcove.com/publish/deep-linking.html</loc>
             
             <lastmod>2023-01-06</lastmod>
@@ -919,6 +928,15 @@
         
           <url>
             
+              <loc>https://studio.support.brightcove.com/publish/dynamically-assigning-videos-player.html</loc>
+            
+            <lastmod>2023-01-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
               <loc>https://studio.support.brightcove.com/publish/step-step-using-players-module-create-and-publish-player.html</loc>
             
             <lastmod>2023-01-06</lastmod>
@@ -929,6 +947,24 @@
           <url>
             
               <loc>https://studio.support.brightcove.com/publish/creating-and-publishing-high-quality-screencasts.html</loc>
+            
+            <lastmod>2023-01-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/using-multiple-players-one-page.html</loc>
+            
+            <lastmod>2023-01-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/publish/using-reference-ids.html</loc>
             
             <lastmod>2023-01-06</lastmod>
             <changefreq>daily</changefreq>
@@ -984,52 +1020,6 @@
           <url>
             
               <loc>https://studio.support.brightcove.com/publish/publishing-brightcove-players-joomla.html</loc>
-            
-            <lastmod>2023-01-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-      
-        <url>
-          
-            <loc>https://studio.support.brightcove.com/publish/index.html</loc>
-          
-            <lastmod>2023-01-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/publish/adding-3play-media-interactive-transcript-video.html</loc>
-            
-            <lastmod>2023-01-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/publish/dynamically-assigning-videos-player.html</loc>
-            
-            <lastmod>2023-01-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/publish/using-multiple-players-one-page.html</loc>
-            
-            <lastmod>2023-01-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/publish/using-reference-ids.html</loc>
             
             <lastmod>2023-01-06</lastmod>
             <changefreq>daily</changefreq>
