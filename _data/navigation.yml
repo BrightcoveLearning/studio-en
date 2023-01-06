@@ -90,7 +90,7 @@
     - name: Exporting Video Data
       url: /media/manage/exporting-video-data.html
   - name: Video Properties
-    url: /media/index.html
+    url: /media/properties/index.html
     icon: fa-regular fa-photo-film
     docs:
     - name: Editing Video Properties
