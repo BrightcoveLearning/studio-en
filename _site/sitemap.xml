@@ -616,15 +616,6 @@
             <priority>0.5</priority>
           </url>
         
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/players/v5-players-support.html</loc>
-            
-            <lastmod>2023-01-06</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
       
         <url>
           
@@ -811,6 +802,15 @@
           <url>
             
               <loc>https://studio.support.brightcove.com/players/generating-player-embed-code.html</loc>
+            
+            <lastmod>2023-01-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/players/v5-players-support.html</loc>
             
             <lastmod>2023-01-06</lastmod>
             <changefreq>daily</changefreq>
