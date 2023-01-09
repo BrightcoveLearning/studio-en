@@ -619,7 +619,7 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/players/index.html</loc>
+            <loc>https://studio.support.brightcove.com/players/properties/index.html</loc>
           
             <lastmod>2023-01-09</lastmod>
             <changefreq>daily</changefreq>
@@ -628,7 +628,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/players/setting-player-properties.html</loc>
+              <loc>https://studio.support.brightcove.com/players/properties/setting-player-properties.html</loc>
             
             <lastmod>2023-01-09</lastmod>
             <changefreq>daily</changefreq>
@@ -637,7 +637,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/players/setting-player-information-properties.html</loc>
+              <loc>https://studio.support.brightcove.com/players/properties/setting-player-information-properties.html</loc>
             
             <lastmod>2023-01-09</lastmod>
             <changefreq>daily</changefreq>
@@ -646,7 +646,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/players/configuring-player-content-restrictions.html</loc>
+              <loc>https://studio.support.brightcove.com/players/properties/configuring-player-content-restrictions.html</loc>
             
             <lastmod>2023-01-09</lastmod>
             <changefreq>daily</changefreq>
@@ -655,7 +655,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/players/configuring-player-playback-properties.html</loc>
+              <loc>https://studio.support.brightcove.com/players/properties/configuring-player-playback-properties.html</loc>
             
             <lastmod>2023-01-09</lastmod>
             <changefreq>daily</changefreq>
@@ -664,7 +664,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/players/setting-player-update-mode-and-version.html</loc>
+              <loc>https://studio.support.brightcove.com/players/properties/setting-player-update-mode-and-version.html</loc>
             
             <lastmod>2023-01-09</lastmod>
             <changefreq>daily</changefreq>

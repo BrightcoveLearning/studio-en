@@ -159,19 +159,19 @@
     - name: 'Step-by-Step:  Creating and Publishing a Player'
       url: /publish/step-step-using-players-module-create-and-publish-player.html
   - name: Player Properties
-    url: /players/index.html
+    url: /players/properties/index.html
     icon: fa-regular fa-play
     docs:
     - name: Setting Player Properties
-      url: /players/setting-player-properties.html    
+      url: /players/properties/setting-player-properties.html    
     - name: Setting Player Information Properties
-      url: /players/setting-player-information-properties.html
+      url: /players/properties/setting-player-information-properties.html
     - name: Configuring Player Content Restrictions
-      url: /players/configuring-player-content-restrictions.html
+      url: /players/properties/configuring-player-content-restrictions.html
     - name: Configuring Player Playback Properties
-      url: /players/configuring-player-playback-properties.html
+      url: /players/properties/configuring-player-playback-properties.html
     - name: Setting the Player Update Mode
-      url: /players/setting-player-update-mode-and-version.html
+      url: /players/properties/setting-player-update-mode-and-version.html
   - name: Appearance and Controls
     url: /players/index.html
     icon: fa-regular fa-sidebar

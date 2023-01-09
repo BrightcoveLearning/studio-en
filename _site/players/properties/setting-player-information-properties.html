@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Configuring Player Playback Properties</title>
+        <title>Setting Player Information Properties</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to configure the playback properties for a player.">
+        <meta name="description" content="In this topic you will learn how to configure the player information properties.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -672,7 +672,7 @@
 
               <li class="nav-item subsection-title">
                 
-                <a class="nav-link" href="/players/index.html">
+                <a class="nav-link" href="/players/properties/index.html">
                   <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Player Properties</a>
                 
 
@@ -680,31 +680,31 @@
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/players/setting-player-properties.html">Setting Player Properties</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/players/properties/setting-player-properties.html">Setting Player Properties</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/players/setting-player-information-properties.html">Setting Player Information Properties</a></li>
+                  <li class="nav-item section-doc"><a class="nav-link" href="/players/properties/setting-player-information-properties.html" aria-current="page">Setting Player Information Properties</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/players/configuring-player-content-restrictions.html">Configuring Player Content Restrictions</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/players/properties/configuring-player-content-restrictions.html">Configuring Player Content Restrictions</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/players/configuring-player-playback-properties.html" aria-current="page">Configuring Player Playback Properties</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/players/properties/configuring-player-playback-properties.html">Configuring Player Playback Properties</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/players/setting-player-update-mode-and-version.html">Setting the Player Update Mode</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/players/properties/setting-player-update-mode-and-version.html">Setting the Player Update Mode</a></li>
                   
                   
                   
@@ -2753,7 +2753,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Configuring Player Playback Properties</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/players/properties/">Properties</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Setting Player Information Properties</li>
             
             
           </ol>
@@ -2775,74 +2779,74 @@
       
       
 <article class="bcls-article">
-  <h1>Configuring Player Playback Properties</h1>
-  <summary>In this topic you will learn how to configure the playback properties for a player.</summary>
+  <h1>Setting Player Information Properties</h1>
+  <summary>In this topic you will learn how to configure the player information properties.</summary>
   <section class="bcls-section">
-    <p>The <strong>Playback</strong> properties can be used to configure how video playback is handled in the player.</p>
-    <p>To configure the <strong>Playback</strong> properties, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
+    <p>The player information properties can be used to set the player name, sizing, aspect ratio, dimensions, update mode and player version.</p>
+    <p>Many of the player properties can also be set/changed dynamically by editing the player publishing code. For more information, check these related documents depending on whether you are using the <a href="https://player.support.brightcove.com/publish/available-options-standard-iframe-embed-code.html">Standard (iframe)</a> or <a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html">Advanced (in-page)</a> embed code.</p>
+  </section>
+  <section class="bcls-section">
+    <p>To configure the <strong>Player Information</strong> properties, follow these steps:</p>
+    <ol class="bcls-tasklist">
       <li>Open the  <strong>Players</strong>  module.</li>
       <li>Click the link for the player you want to configure.</li>
-      <li>Click <strong>Playback</strong> in the left navigation menu.</li>
+      <li>Click <strong>Player Information</strong> in the left navigation menu.</li>
     </ol>
     
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="playback properties" src="/assets/images/s-players-img/node18510-playback-props-vc.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="player information" src="/assets/images/s-players-img/node18508-player-info-props-vc.png" /></figure>
   
     
     <aside class="bcls-aside bcls-aside--information">Note: Any changes made to a player may take up to 5 minutes to appear in published players.</aside>
-    <p>The following playback properties can be configured:</p>
+    <p>The following player information properties can be configured:</p>
     <ul>
-      <li><a href="#start">Auto-Play Video on Player Load</a></li>
-      <li><a href="#muted">Play Muted</a></li>
-      <li><a href="#preload">Preload Video Before Playback</a></li>
-      <li><a href="#drm">Enable DRM</a></li>
-      <li><a href="#playlist">Playlist properties</a></li>
+      <li>Name and Short Description</li>
+      <li><a href="#player_type">Player Type</a></li>
+      <li><a href="#sizing">Sizing</a></li>
+      <li><a href="#aspect">Aspect Ratio</a></li>
+      <li><a href="#dimensions">Player Dimensions</a></li>
+      <li><a href="#updateversion">Update Mode</a></li>
+      <li><a href="#updateversion">Player Version</a></li>
+      <li><a href="#localization">Localization</a></li>
+    </ul>
+    <p>After making changes, click <span class="button-blue">Save</span> and then publish the player.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="player_type">Player Type</h2>
+    <p>The <strong>Player Type </strong> setting determines if the player will display a single video or if playlists are supported:</p>
+    <ul>
+      <li><strong>Single Video</strong> - A single video is displayed</li>
+      <li><strong>Playlist</strong> - Player supports playlists</li>
+    </ul>
+    <p>Selecting <strong>Playlist</strong> will enable some additional <strong>Styling</strong> and <strong>Playback</strong> properties.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sizing">Sizing</h2>
+    <p>Sizing can be set to <strong>Responsive</strong> or <strong>Fixed</strong>.</p>
+    <ul>
+      <li><strong>Responsive</strong> - The player size will adjust automatically based upon the browser size</li>
+      <li><strong>Fixed</strong> - The player size is based upon the width and height parameters</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">Note: If you select the <strong>Responsive</strong> sizing option, the Standard (iframe) code works well and the player and playlist are responsive. If you use the Advanced (in-page embed) code, the player will be responsive, but the playlist will not.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="aspect">Aspect Ratio</h2>
+    <p>The <strong>Aspect Ratio</strong> sets the aspect ratio of the player.</p>
+    <ul>
+      <li><strong>1:1, 3:2, 4:3, 16:9, 21:9 or 9:16</strong> - Enter a player width and the height will be determined automatically</li>
+      <li><strong>Custom</strong> - Enter values for both the player width and height</li>
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="start">Auto-Play Video on Player Load</h2>
-    <p>The <strong>Auto-Play Video on Player Load</strong> setting controls whether the video will start playing when the player is loaded. This setting may function differently depending on the browser. For more detailed information, see <a href="https://player.support.brightcove.com/playback/autoplay-considerations.html">Autoplay Considerations</a>.</p>
+    <h2 id="dimensions">Player Dimensions</h2>
+    <p>The <strong>Player Dimensions</strong> control the width and height of the player.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="muted">Play Muted</h2>
-    <p>The <strong>Play Muted</strong> setting controls whether the video's audio will be muted.</p>
+    <h2 id="updateversion">Update Mode and Player Version</h2>
+    <p>The <strong>Update Mode</strong> controls how player updates are handled. The <strong>Player Version</strong> is used to select a player version. The <strong>Published Player Version</strong> field will display the current player version. For more information on these settings and how they should be used, see <a href="/players/properties/setting-player-update-mode-and-version.html">Setting the Player Update Mode and Version</a>.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="preload">Preload Video Before Playback</h2>
-    <p>The <strong>Preload Video Before Playback</strong> setting controls whether the player will preload video content before the user initiates playback.</p>
-    <aside class="bcls-aside bcls-aside--warning">Note: For more details, see the <a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html#preload_details">preload details section</a> of the Available Options for the Advanced (in-page) Embed Code document.</aside>
-    <p>The following options are available:</p>
-    <ul>
-      <li><strong>Preload Video (fastest)</strong> - Indicates that the whole video file could be downloaded, even if the user does not eventually watch the video. On the positive side, if the viewer plays the video, it can start playing immediately. On the negative side, this option will increase bandwidth consumption as the preload/load happens even if the viewer does not play the video.</li>
-      <li><strong>Preload Metadata</strong> - Only the video metadata is preloaded. <em>This is the default.</em></li>
-      <li><strong>Do not preload</strong> - None of the video is preloaded</li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--information">
-      <p>Notes:</p>
-      <ul>
-        <li>When using Server-Side Ad Insertion (SSAI), Brightcove recommends setting <code translate="No">preload=none</code>. If <code translate="No">preload</code> is set to <code translate="No">auto</code> or <code translate="No">metadata</code>, the first frames of the video stream will be requested, which counts the ad as delivered even if the user does not start playback.</li>
-        <li>The value for the preload setting in Studio will override the value of the <code translate="No">preload</code> attribute value in the <a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html">Advanced (In-Page) Embed Code</a>.</li>
-      </ul>
-    </aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="drm">Enable DRM</h2>
-    <p>The <strong>Enable DRM</strong> setting, when checked, enables the ability for DRM-protected content to play in the player.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="playlist">Playlist properties</h2>
-    <p>When a <strong>Player Type</strong> of <strong>Playlist </strong>is selected as part of the <strong>Player Information</strong> properties, some additional <strong>Playback</strong> properties will be displayed.</p>
-    <ul>
-      <li><strong>Randomize play order</strong> - Videos will be played in a random order</li>
-      <li><strong>Play video when selected</strong> - Clicking a thumbnail in the playlist menu will cause the video to play when loaded, even if the previous video in the player was paused</li>
-      <li><strong>Continuous play mode</strong> - Videos will advance automatically and repeat indefinitely</li>
-      <li><strong>Video Countdown</strong> - Only enabled when <strong>Continuous play mode</strong> is checked
-        <ul>
-          <li><strong>Up next card (auto advance)</strong> - An up next card is displayed in the player</li>
-          <li><strong>Up next endscreen (countdown)</strong> - An end screen countdown is displayed in the player</li>
-        </ul>
-      </li>
-    </ul>
+    <h2 id="localization">Localization</h2>
+    <p>The <strong>Localization</strong> field can be used to include the language(s) you wish to use for player localization. For more information on player localization, see <a href="/players/configuring-player-localization.html">Configuring Player Localization</a>.</p>
   </section>
 </article>
 
