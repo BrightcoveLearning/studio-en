@@ -151,11 +151,11 @@
   icon: fa-regular fa-play
   docs:
   - name: Using the Players Module
-    url: /players/index.html
+    url: /players/module/index.html
     icon: fa-regular fa-play
     docs:
     - name: Getting Started with the Players Module
-      url: /players/getting-started-players-module.html
+      url: /players/module/getting-started-players-module.html
     - name: 'Step-by-Step:  Creating and Publishing a Player'
       url: /publish/step-step-using-players-module-create-and-publish-player.html
   - name: Player Properties
