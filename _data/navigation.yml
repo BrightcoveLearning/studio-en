@@ -173,25 +173,25 @@
     - name: Setting the Player Update Mode
       url: /players/properties/setting-player-update-mode-and-version.html
   - name: Appearance and Controls
-    url: /players/index.html
-    icon: fa-regular fa-sidebar
+    url: /players/appearance/index.html
+    icon: fa-regular fa-play
     docs:
     - name: Adding Thumbnail Seeking
-      url: /players/adding-thumbnail-seeking-player.html
+      url: /players/appearance/adding-thumbnail-seeking-player.html
     - name: Configuring a Player Overlay
-      url: /players/configuring-player-overlay-using-overlay-plugin.html
+      url: /players/appearance/configuring-player-overlay-using-overlay-plugin.html
     - name: Configuring a Playlist Endscreen
-      url: /players/configuring-playlist-endscreen-using-plugin.html
+      url: /players/appearance/configuring-playlist-endscreen-using-plugin.html
     - name: Configuring Player Controls
-      url: /players/configuring-player-controls.html
+      url: /players/appearance/configuring-player-controls.html
     - name: Configuring the Player Endscreen
-      url: /players/configuring-player-endscreen.html
+      url: /players/appearance/configuring-player-endscreen.html
     - name: Configuring Player Localization
-      url: /players/configuring-player-localization.html
+      url: /players/appearance/configuring-player-localization.html
     - name: Configuring the Social Properties
-      url: /players/configuring-social-properties-player.html
+      url: /players/appearance/configuring-social-properties-player.html
     - name: Styling Players
-      url: /players/styling-players.html
+      url: /players/appearance/styling-players.html
   - name: General Information
     url: /players/general/index.html
     icon: fa-regular fa-play
