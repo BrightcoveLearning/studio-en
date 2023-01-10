@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Configuring Google Analytics Event Tracking</title>
+        <title>Configuring Player Advertising using the Players Module</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to configure Google Analytics event tracking in the Players module.">
+        <meta name="description" content="This topic provides an overview on how to configure a player to support both client-side and server-side advertising.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -792,7 +792,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/players/configuring-google-analytics-event-tracking.html" aria-current="page">Configuring Google Analytics Event Tracking</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/players/configuring-google-analytics-event-tracking.html">Configuring Google Analytics Event Tracking</a></li>
                   
                   
                   
@@ -2753,7 +2753,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Configuring Google Analytics Event Tracking</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/players/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Configuring Player Advertising using the Players Module</li>
             
             
           </ol>
@@ -2775,86 +2779,82 @@
       
       
 <article class="bcls-article">
-  <h1>Configuring Google Analytics Event Tracking</h1>
-  <summary>In this topic you will learn how to configure Google Analytics event tracking in the Players module.</summary>
+  <h1>Configuring Player Advertising using the Players Module</h1>
+  <summary>This topic provides an overview on how to configure a player to support both client-side and server-side advertising.</summary>
   <section class="bcls-section">
-    <p>The Players module provides the ability to easily integrate Brightcove Players with Google Analytics. This allows player events and custom dimension data to be sent to a Google Analytics account for reporting purposes. Note that when the integration is configured, only analytics for video events will be passed to Google Analytics.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Each analytics system gathers data and calculates metrics differently. Video Cloud analytics data will not be identical to what appears in Google Analytics.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The Google Analytics plugin is not supported when using the Brightcove Player SDKs.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The Players Module supports Google's Universal Analytics data model. The newer Google Analytics 4 update is not supported. See the <a href="#version">Google Analytics Versions</a> section below for more information.</aside>
+    
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4043519495001">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+    
+    <p>The advertising properties are used to enable client-side and/or server-side advertising for a Brightcove Player:</p>
+    <ul>
+      <li>Client-side advertising supports Google's Interactive Media Ads (IMA) for HTML5 version 3. This allows you to request and track VAST ads for your player. For details about Google IMA, see the <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/">Using the IMA HTML5 SDK Version 3</a> document.</li>
+      <li>Server-side advertising stitches ads right into the video content stream, so it works on any device that can play streaming video. Without SSAI, client-side ads, such as IMA or FreeWheel using VAST, VMAP and VPAID, will not play if there is an ad blocker in the browser. To learn more about SSAI, see the <a href="https://ssai.support.brightcove.com/getting-started/video-cloud-ssai-overview.html">Video Cloud SSAI Overview</a> document. Note that the server-side option will not appear unless your account has been enabled for SSAI.</li>
+    </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="configure">Configuring Google Analytics</h2>
-    <p>To configure Google Analytics integration, follow these steps:</p>
+    <h2 id="test">Testing the ad server (client-side advertising)</h2>
+    <p>When configuring the client-side advertising properties, an ad server URL will be required. Brightcove recommends that you verify the validity of your ad server URL. We have found that most of the issues around ads not playing are due to problems with the ad tag itself. Verifying that the ad tag is valid should ensure that ads play without issues. Google provides a Video Suite Inspector that can be used to verify ad tags. To verify your ad tag, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Players</strong> module.</li>
-      <li>Click the player name you want to configure to open the player properties.</li>
-      <li>Click <strong>Third-Party Analytics &gt; Google Analytics </strong>in the left navigation menu.</li>
-      <li>Check <strong>Enable Google Analytics</strong>.</li>
-      <li>Click <strong>Sign In to Google Account</strong>.</li>
-      <li>Select the Google account to sign in with and enter your credentials if prompted.</li>
-      <li>Click <strong>Allow</strong> to let Brightcove access your Google account.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node18804-permissions.png" /></figure>
+      <li>Open the <a href="https://googleads.github.io/googleads-ima-html5/vsi/">Video Suite Inspector</a> page.</li>
+      <li>Paste your ad tag URL into the Input type form input field.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ima plugin studio" src="/assets/images/s-players-img/node15689-vs-inspect.png" /></figure>
       </li>
-      <li>Use the <strong>Select Account</strong> dropdown to select the Google account to send tracking data to.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node18804-select-account.png" /></figure>
-      </li>
-      <li>Select the <strong>Events for Tracking</strong>. See the <a href="#events">Events and custom dimensions </a> section below for a description of the events.</li>
-      <li>Click  <span class="button-blue">Save</span>. This will configure the player with the Google Analytics plugin and create any needed custom dimensions in your Google Analytics account.
-        <aside class="bcls-aside bcls-aside--information">Note: You must have the <strong>Edit</strong> permission in your Google Analytics account in order to create dimensions.</aside>
-      </li>
+      <li>Click <strong>Test Ad</strong>.</li>
+      <li>Verify that you see your ad. If your ad tag is not working in this test environment, it will not work with a Brightcove Player.</li>
     </ol>
-    <p>Make sure to publish the changes to the player.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Use the Advanced embed (in-page) code when publishing your player. The Standard embed (iframe) code will not work as the plugin will be running inside of an iframe and therefore will be unable to interact with the needed JavaScript.</aside>
+    <p>The advertising properties are used to integrate a Brightcove Player with Google's Interactive Media Ads (IMA) for HTML5 version 3. This allows you to request and track VAST ads for your player. For details about Google IMA, see the <a href="https://developers.google.com/interactive-media-ads/docs/sdks/html5/">Using the IMA HTML5 SDK Version 3</a> document.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="events">Events &amp; custom dimensions</h2>
-    <p>Both events and custom dimension data can be passed to Google Analytics.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node18804-select-events.png" /></figure>
-    <p>The following events can be passed.</p>
-    <h3>Basic Events</h3>
-    <ul>
-      <li><strong>Video Impression</strong> - Sent when a video has been loaded into a player and is ready for playback</li>
-      <li><strong>Play Request</strong> - Sent when playback is initiated either by the user expressly clicking the play button, or automatically when the platform triggers playback in an auto-play scenario</li>
-      <li><strong>Video Engagement</strong> - A user watched a range of seconds of a video's timeline. This event is a heartbeat for tracking video engagement and will likely be sent many times during playback, depending on the user interaction and the length of the video.</li>
-    </ul>
-    <h3>Advertising Events</h3>
-    <ul>
-      <li><strong>Ad Start</strong> - Sent when control is handed over to an advertising agent by the playback platform</li>
-      <li><strong>Ad End</strong> - Sent when control is handed back from the advertising agent to the playback platform</li>
-    </ul>
-    <h3>Advanced Events</h3>
-    <ul>
-      <li><strong>Player Load</strong> - A player session has been initiated by an end-user</li>
-      <li><strong>Error</strong> - Sent when fatal errors which disrupt the playback experience are encountered</li>
-    </ul>
-    <h3>Custom Dimensions</h3>
-    <p>Custom dimensions allow you to combine Google Analytics data with non-Analytics data. Custom dimensions collect data that Google Analytics doesn't automatically track. The following custom dimensions are available.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: For more information on custom dimensions, see the <a href="https://support.google.com/analytics/answer/2709828?hl=en">Google Analytics Help</a>.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node18804-select-dimensions.png" /></figure>
-    <ul>
-      <li><strong>Video Seconds Viewed</strong> - Count of watched seconds (only available if the <strong>Video Engagement</strong> event was selected)</li>
-      <li><strong>Range</strong> - The range of seconds viewed (only available if the <strong>Video Engagement</strong> event was selected)</li>
-      <li><strong>Video Duration</strong> - The duration of the video in seconds (only available if the <strong>Video Engagement</strong> event was selected)</li>
-      <li><strong>Player ID and Player Name</strong> - Player ID and Name</li>
-      <li><strong>Account Name</strong> - Brightcove Account ID</li>
-      <li><strong>Session</strong> - The session identifier; the session value should be constant for the lifecycle of an experience and sent for all events from that experience</li>
-      <li><strong>Player Version</strong> - Brightcove Player version</li>
-    </ul>
+    <h2 id="client">Configuring the client-side advertising properties</h2>
+    <p>To configure client-side advertising for a player, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the  <strong>Players</strong>  module.</li>
+      <li>Click the link for the player you want to configure.</li>
+      <li>Click <strong>Advertising</strong> in the left navigation menu.</li>
+      <li>Check <strong>Enable Client-Side (IMA)</strong>.</li>
+      <li>Enter the <strong>Ad Tag</strong>.</li>
+      <li>Select the <strong>Request Ads</strong> setting.
+        <ul>
+          <li><strong>On load -</strong> Ads are requested immediately when the player loads (this is normally the best experience for DFP / VPAID)</li>
+          <li><strong>On play -</strong> The first ad request is delayed until playback is initiated</li>
+          <li><strong>On demand -</strong> All ad requests will be initiated programmatically using the <code translate="No">player.ima3.adrequest()</code> method</li>
+          <li><strong>On cue point -</strong> Ad requests are made when ad cue points are encountered in the video</li>
+        </ul>
+      </li>
+      <li>Select the <strong>VPAID Mode</strong>. The VPAID Mode is used to enable VPAID 2 support in IMA ads.
+        <ul>
+          <li><strong>Enabled -</strong> Play VPAID ads in an iframe with a different domain</li>
+          <li><strong>Insecure -</strong> Play VPAID ads in an iframe with the same domain</li>
+          <li><strong>Disabled -</strong> VPAID ads throw an error</li>
+        </ul>
+      </li>
+      <li>Set the <strong> Timeout</strong> value <strong>-</strong> The maximum amount of time to wait, in milliseconds, for an ad to initialize before playback.</li>
+      <li>Check <strong>Hard timeouts</strong> to prevent slow loading ads from appearing. Unchecking this option could result in a slow loading ad interrupting video playback.</li>
+      <li>Set the <strong>Maximum Number of Redirects</strong>. This specifies the maximum number of redirects before the subsequent redirects will be denied, and the ad load aborted. The number of redirects directly affects latency and thus user experience.</li>
+      <li>Select the IMA <strong>Plugin Version</strong> to use.
+    
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node15897-ad-props-vc.png" /></figure>
+        
+    
+      </li>
+      <li>Click <span class="button-blue">Save</span>  to save the changes.</li>
+    </ol>
+    <p>The IMA plugin does support additional properties that are not available in the UI. If needed, modify the IMA plugin JSON to include any other options you may need. For more information on IMA plugin specific options and ad framework options, see the <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html">Advertising with IMA3 Plugin</a> developer document.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="version">Google Analytics Versions</h2>
-    <p>The Players module supports Google's Universal Analytics data model. Currently, the newer Google Analytics 4 update is not supported. Brightcove recommends using Universal Analytics when integrating with the Players module and  Brightcove Players.</p>
-    <p>Following are high level steps to creating a Universal Analytics property within Google Analytics.</p>
-    <ul>
-      <li>Create property</li>
-      <li>Show advanced options</li>
-      <li>Toggle <strong>Create a Universal Analytics property</strong> on (toggle switch is on the right)</li>
-      <li>Enter a website URL</li>
-      <li>Make sure <strong>Create a Universal Analytics property only</strong> is selected</li>
-      <li> Fill out the rest of the form; you will be provided with a new property ID beginning with <strong>UA-</strong></li>
-    </ul>
-    <p>Note that Google also provides the ability to create a hybrid selection with both a Google Analytics 4 and a Universal Analytics property. Brightcove has not fully tested this scenario.</p>
+    <h2 id="server">Configuring server-side advertising</h2>
+    <p>When using server-side ads, you must create one or more ad configurations. Ad Configurations define various aspects of SSAI playback, including ad call(s), beacons, and other configuration options. An account can have multiple configurations and currently configurations can not be shared across accounts. The Server-Side Ad Setting menu in the Admin UI is used to create and manage ad configurations. For information, see <a href="/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>.</p>
+    <p>To configure client-side advertising for a player, follow these steps:</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The server-side advertising option will only appear if the account has been enabled for server-side ads.</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>Check <strong>Enable Server-Side (SSAI)</strong>.</li>
+      <li>Use the <strong>Select Configuration</strong> dropdown to select the ad configuration to associate with this player.</li>
+      <li>Check the <strong>Enable ad information overlays</strong> checkbox if you want overlays to display over your ads. This includes "Learn More" and ad count down overlays.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node15897-server-ad-props.png" /></figure>
+      </li>
+      <li>Click <span class="button-blue">Save</span>.</li>
+    </ol>
   </section>
 </article>
 

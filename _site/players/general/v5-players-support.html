@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Generating Player Embed Code</title>
+        <title>Support for Brightcove Player 5</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic covers how to generate embed code for both preview and published players.">
+        <meta name="description" content="This topic explains the support provided for version 5 of Brightcove Player.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -810,7 +810,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/players/generating-player-embed-code.html" aria-current="page">Generating Player Embed Code</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/players/generating-player-embed-code.html">Generating Player Embed Code</a></li>
                   
                   
                   
@@ -2753,7 +2753,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Generating Player Embed Code</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/players/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Support for Brightcove Player 5</li>
             
             
           </ol>
@@ -2774,56 +2778,18 @@
       <br>
       
       
+<h1>Support for Brightcove Player 5</h1>
 <article class="bcls-article">
-  <h1>Generating Player Embed Code</h1>
-  <summary>This topic covers how to generate embed code for both preview and published players.</summary>
-  <section class="bcls-section">
-    <p>The Players module provides the ability to generate the player embed code and player URL for both preview and published players. Typically, you would generate the embed code for a player using the Players module when you want to dynamically assign a video to the player at runtime. For information on assigning videos to a player dynamically, see <a href="/publish/dynamically-assigning-videos-player.html">Dynamically Assigning Videos to a Player</a>.</p>
-    <p>If you are a Video Cloud customer looking to publish a playlist or a single video to a player, use the publish function inside the Media module. For more information, see <a href="/publish/publishing-videos-and-playlists-media-module.html">Publishing Videos and Playlists with the Media Module</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="diff">Preview player vs. published player</h2>
-    <p>The preview player is used so you can preview changes before they are published. Once the changes are acceptable, the player can be published and the changes will be reflected in any published players. The preview player will display a Brightcove logo overlay indicating that it should not be used in production.</p>
-    <p>The published player has been optimized and is the player that will appear on your web pages. This player contains all of the changes that have been made to the player settings and then published by clicking the <strong>Publish</strong> button.</p>
-    <p>Open the Players module and select a player. Click <strong>Embed Code &amp; URL</strong> and click <strong>Preview Player</strong> or <strong>Published Player</strong>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14063-menu-options.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="types">Types of embed code</h2>
-    <p>There are two types of embed code that can be generated:</p>
-    <ul>
-      <li><strong>Standard (iframe)</strong> - Recommended for most cases. Places the player inside an <code translate="No">&lt;iframe&gt;</code> tag. If player dimensions are specified, the iframe will be sized to the player dimensions. If no player dimensions are specified, the iframe can be placed inside of a <code translate="No">&lt;div&gt;</code> tag and the responsive nature of the player will resize the player to occupy the entire space of the <code translate="No">&lt;div&gt;</code>.</li>
-      <li><strong>Advanced (I<strong>n-Page</strong>)</strong> - Allows the player to exist in the the HTML page directly, not in an iframe. This offers developers the benefits of ease of accessing the player and associated properties and events. By using the advanced embed code, you lose the ease of use of the player as a single, contained unit in social media applications and sharing. <strong>This option is available only for the published player.</strong></li>
-    </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node14063-pub-code.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="previewcode">Generating embed code for a preview player</h2>
-    <p>To generate the embed code for a preview player:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the  <strong>Players</strong>  module.</li>
-      <li>Click on the row for the player you want to generate the code for. Don't click on the player name and open the properties page.</li>
-      <li>Click <strong>Embed Code &amp; URL</strong> and click <strong>Preview Player</strong>.</li>
-      <li>Select the appropriate embed code.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="publish">Generating embed code for a published player</h2>
-    <p>To generate the embed code for a published player:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the  <strong>Players</strong>  module.</li>
-      <li>Click on the row for the player you want to generate the code for.</li>
-      <li>Click <strong>Embed Code &amp; URL</strong> and click <strong>Published Player</strong>.</li>
-      <li>Select the appropriate embed code.</li>
-    </ol>
-    <p>The Published Player embed code can also be copied by clicking on a player name and then clicking <span class="button-blue">Publish &amp; Embed</span>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="appid">Adding an application ID to the embed code</h2>
-    <p>In the past, publishers would commonly create new players with different names to use on different parts of a site or to use on different sites. When reviewing player analytics, having different player names made it easier to determine which players were getting the most views. By adding an application ID parameter to the embed code, the same player can be used across a site, or sites, and the application ID can be used to identify where the player was published. Using a player application ID can help reduce the number of players that need to be created and maintained. For information on adding an application ID to the embed code, see <a href="/publish/adding-application-id-player-embed-code.html">Adding an Application ID to the Player Embed Code</a>.</p>
-  </section>
+  <summary>This topic explains the support provided for version 5 of Brightcove Player.</summary>
+  <br/>
+  <aside class="bcls-aside bcls-aside--warning language-editable">
+    <p>V5 player will not be displayed in the new Marketing Studio UI but will still be visible in the standard Video Cloud Studio UI. However, editing or updating these v5 players using Video Cloud Studio is not supported.</p>
+    <p>The one exception will be the <strong>Brightcove Default Player</strong> (the player that every account comes with). You can delete this player through the Players module in Video Cloud Studio, and our Brightcove System will automatically generate a new Brightcove Default Player with the latest version.</p>
+    <p>If you want to know if your account still contains V5 players, you can use the <a href="https://apis.support.brightcove.com/player-management/code-samples/player-management-api-sample-display-players.html">Display Players</a> sample app.</p>
+    <p>It is still possible to update the player version using the Player Management API or, with this sample app, <a href="https://apis.support.brightcove.com/player-management/code-samples/player-managment-api-update-player-version.html">Update Player Version</a>. The v5 players in production (and their embed codes) will continue working as expected.</p>
+    <p>We highly recommend contacting <a href="https://supportportal.brightcove.com/s/login/?language=en_US&ec=302&startURL=%2Fs%2F">Brightcove Support</a> for guidance if you have any doubts or concerns about your embedded v5 players.</p>
+  </aside>
 </article>
-
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
