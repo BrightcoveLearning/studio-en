@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Configuring Player Localization</title>
+        <title>Configuring Player Controls</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to configure player localization using the Players module.">
+        <meta name="description" content="In this topic you will learn how to configure the controls for a player.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -754,7 +754,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/players/configuring-player-localization.html" aria-current="page">Configuring Player Localization</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/players/configuring-player-localization.html">Configuring Player Localization</a></li>
                   
                   
                   
@@ -2753,7 +2753,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Configuring Player Localization</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/players/appearance/">Appearance</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Configuring Player Controls</li>
             
             
           </ol>
@@ -2775,39 +2779,186 @@
       
       
 <article class="bcls-article">
-  <h1>Configuring Player Localization</h1>
-  <summary>In this topic you will learn how to configure player localization using the Players module.</summary>
+  <h1>Configuring Player Controls</h1>
+  <summary>In this topic you will learn how to configure the controls for a player.</summary>
   <section class="bcls-section">
-    <p>Brightcove Players can be localized so that interface elements appear in various languages. If the player localization properties are not configured, the interface will display in English.</p>
-    <p>To configure the player <strong>Localization</strong>, follow these steps.</p>
+    <p>Player controls such as a quality selector, playback rate, picture-inpicture, fullscreen
+      control and vertical volume slider can be configured for a player.</p>
+    <figure class="bcls-figure"> <img
+        class="bcls-image--no-border"
+        alt="style menu"  src="/assets/images/s-players-img/node18509-player-controls-example.png"
+      /> </figure>
+    <p>To configure the <strong>Controls</strong> properties, follow these steps: </p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Players</strong> module.</li>
-      <li>Click on a player to open the player properties.</li>
-      <li>Click <strong>Player Information</strong> in the left navigation menu.</li>
-      <li>In the <strong>Localization</strong> field, enter the two letter language code for the language and press enter. As you type, the language list will be filtered. You can also click on a value to select it.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node18715-select-language.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: The list of supported languages can be found on the <a href="https://github.com/videojs/video.js/tree/master/lang">Video.js language</a> page.</aside>
-      </li>
-      <li>Add additional languages as appropriate. If an invalid language code is entered, it will appear in red.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node18715-language-list.png" /></figure>
-      </li>
-      <li>Click <span class="button-blue">Save</span></li>
+      <li>Open the  <strong>Players</strong>  module.</li>
+      <li>Click the link for the player you want to configure. </li>
+      <li>Click <strong>Controls</strong> in the left navigation menu. </li>
     </ol>
-    <p>Make sure to publish any changes that are made to the player.</p>
+    
+    <figure class="bcls-figure"> <img
+        class="bcls-image--no-border"
+        alt="style menu"  src="/assets/images/s-players-img/node18509-player-controls-vc.png"
+      /> </figure>
+    
+    
+    <p>The following controls can be configured:</p>
+    <ul>
+      <li><a href="#quality">Quality Selector</a></li>
+      <li><a href="#rates">Playback Rates</a></li>
+      <li><a href="#fullscreen">Fullscreen</a></li>
+      <li> <a href="#volume">Vertical Volume Slider</a></li>
+      <li><a href="#seeking">Thumbnail Seeking</a></li>
+      <li><a href="#picture-in-picture">Picture-in-Picture</a></li>
+      <li> <a href="#skip">Skip to next video (playlist)</a></li>
+    </ul>
+    <p>After any changes have been made, make sure to republish the player for
+      the changes to be visible. </p>
+    <aside class="bcls-aside bcls-aside--information"> Note: Any changes made to a player may take up to 5 minutes to appear in
+      published players. </aside>
   </section>
   <section class="bcls-section">
-    <h2 id="support">Checking the language</h2>
-    <p>To use the localized language, set the preferred language in the browser. The exact steps vary depending on browser and operating system. If the browser's preferred language is English, or a language not available, you will see the default, or English, text. Browsers do not have perfectly standardized locale detection, so it can be a bit complicated. Broadly, browsers look to determine the desired language in this order:</p>
+    <h2 id="quality">Quality Selector</h2>
+    <p>Enabling the <strong> Quality Selector</strong> provides the ability to manually select a different rendition as the video is playing. A gear icon
+      will appear in the bottom right corner of the player. </p>
+    <aside class="bcls-aside bcls-aside--information">Note: The quality selector requires Brightcove Player version 5.17.0 or newer and may not work with all browsers.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: Apple does not allow controlling the playback quality on iOS or desktop as it uses adaptive bitrate streaming to adjust the quality level automatically based on bandwidth, connection speed, screen size, etc.</aside>
+    <p>When the Quality Selector is enabled, two options for the <strong>Quality Selector Label</strong> are enabled: </p>
     <ul>
-      <li>Check if the embedding page has a lang attribute on the <code translate="No">&lt;html&gt;</code> element</li>
-      <li>Check browser specific locale configurations</li>
-      <li>Fall back to English</li>
+      <li><strong>Show Resolution (e.g., 720p)</strong> - Renditions will be
+        displayed by lines of horizontal resolution
+        <figure class="bcls-figure"> <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/assets/images/s-players-img/node18509-resolution.png"
+          /> </figure>
+        <p>When using this option, another parameter
+          (<code translate="No">resolutionLabelBitrates</code>) can be added to the Quality
+          Selection plugin to also display the bitrates. </p>
+        <figure class="bcls-figure"> <img
+            class="bcls-image--no-border"
+            alt="" src="/assets/images/s-players-img/node18509-resolution-bitrates.png"
+          /> </figure>
+        <p>This must be done by editing the plugin parameters as there is
+          currently no way to configure this option using the Players module UI.
+          For more information, see the <a
+            href="https://player.support.brightcove.com/plugins/quality-selection-plugin.html"
+            >Quality Selection Plugin</a
+          > document.</p>
+      </li>
+      <li><strong>Show HD/SD</strong> - The player will look at the bitrate
+        information for each rendition to determine whether it is SD or HD
+        <figure class="bcls-figure"> <img
+            class="bcls-image--no-border"
+            alt="" src="/assets/images/s-players-img/node18509-hd-sd.png"
+          /> </figure>
+      </li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: This technique will only work with the Advanced (in-page) code implementation. Since the Standard implementation loads in an iframe, the browser language setting does not flow into it.</aside>
-    <p>If you use the HTML attribute you do not have to set the preferred language as default in your browser or computer as the player will use the one on the <code translate="No">lang</code> attribute.</p>
-    <pre>&lt;html lang="es"&gt; </pre>
-    <p>Also, if you are using an iframe, keep in mind that you will need to add the query parameter to the player URL.</p>
-    <pre>//players.brightcove.net/6045682556001/Jr6qqMDSb_default/index.html?videoId=6054419564001&amp;language=es</pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="rates">Playback Rates</h2>
+    <p>The <strong> Playback Rates </strong> are enabled by default for all new players from version 7 onwards. This feature provides the ability to select a different playback rate manually. A playback rate icon will appear in the bottom right corner of the player.</p>
+    <aside class="bcls-aside bcls-aside--information"> Notes:
+      <ul>
+        <li>The playback rate selector requires Brightcove Player version 6.35.0
+          or newer and may not work with all browsers. </li>
+        <li>The player width has to be at least 424 pixels to show Playback Rates Control.</li>
+        <li>Safari does not support rates above 2x.</li>
+      </ul>
+    </aside>
+    <figure class="bcls-figure"> <img
+        class="bcls-image--no-border"
+        alt=""  src="/assets/images/s-players-img/node18509-playback-rates.png"
+      /> </figure>
+      <aside class="bcls-aside bcls-aside--information">Playback rates are a valuable feature for accessibility. For example, an end user with auditory processing issues may find it helpful to playback a video more slowly than default, whereas a person with a visual impairment may wish to listen to a video at a higher speed.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="fullscreen">Fullscreen</h2>
+    <p>Select <strong>Fullscreen</strong> to enable the fullscreen control. The
+      fullscreen control provides the ability to resize the player to fill the entire display. When the video starts playing, a fullscreen icon will
+      appear in the bottom right corner of the player. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="volume">Vertical Volume Slider</h2>
+    <p>Select <strong>Vertical Volume Slider</strong> to display the volume
+      slider vertically. </p>
+    <figure class="bcls-figure"> <img
+        class="bcls-image--no-border"
+        alt="" src="/assets/images/s-players-img/node18509-vertical-volume.png"
+      /> </figure>
+    <aside class="bcls-aside bcls-aside--information"> This feature is only available in Brightcove Player 6.32.0+. </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="seeking">Thumbnail Seeking</h2>
+    <p>Select <strong>Thumbnail Seeking</strong> to display video thumbnails over the progress bar.</p>
+    <figure class="bcls-figure"> <img
+        class="bcls-image--no-border"
+        alt="" src="/assets/images/s-players-img/node18509-thumbnail-seeking.png"
+      /> </figure>
+    <aside class="bcls-aside bcls-aside--information"> This feature is only available in Brightcove Player 6.41.0+. To learn more about  thumbnail seeking, see <a href="adding-thumbnail-seeking-player.html">Adding Thumbnail Seeking to a  Brightcove Player</a>.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="skip">Skip to next video (playlist)</h2>
+    <p>Select <strong>Skip to next video (playlist)</strong> to enable the skip
+      control. The skip control can be clicked to advance to the next video in the playlist. </p>
+    <figure class="bcls-figure"> <img
+        class="bcls-image--no-border"
+        alt="" src="/assets/images/s-players-img/node18509-skip-control.png"
+      /> </figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="picture-in-picture">Picture-in-picture</h2>
+    <p>HTML5 picture in picture functionality is defined as: <em>Allows websites to create a floating video window always on top of other windows so that users may continue consuming media while they interact with other content sites, or applications on their device</em>.</p>
+    <p> An example of picture-in-picture is shown in the following two
+      screenshots. This first screenshot shows a browser with a player
+      displaying a video. Note the picture-in-picture button in the bottom-right
+      of the player with the red arrow pointing towards it. </p>
+    <figure class="bcls-figure"> <img
+        class="bcls-image--no-border"
+        alt="p-in-p nirnak" src="/assets/images/s-players-img/node18509-normal.png"
+      /> </figure>
+    <p>This next screenshot shows the result from clicking the picture-in-picture
+      button. The player by default moves near the bottom-right of the screen
+      (NOT the browser). The player can then be dragged wherever the viewer
+      wishes to place it. </p>
+    <figure class="bcls-figure"> <img
+        class="bcls-image--no-border"
+        alt="" src="/assets/images/s-players-img/node18509-p-in-p.png"
+      /> </figure>
+    <p>This functionality is turned on by default. Not all browsers support this
+      picture-in-picture functionality. The following table details current
+      support. </p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Browser</th>
+          <th>Support</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>Chrome</td>
+          <td>Supported in version 78+</td>
+        </tr>
+        <tr>
+          <td>Safari</td>
+          <td>Supported in version 13.1+</td>
+        </tr>
+        <tr>
+          <td>Firefox</td>
+          <td>Supported in version 13.1+</td>
+        </tr>
+        <tr>
+          <td>Edge</td>
+          <td>Supported in version 78+</td>
+        </tr>
+      </tbody>
+    </table>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that picture-in-picture functionality works differently in Firefox than other browsers. In Firefox, it must be enabled in the browser itself, rather than the player.</aside>
+    <p>You can turn off this functionality in Studio using the <strong>JSON Editor</strong> option from the <strong>Players</strong> module. To do this add the configuration option <code translate="No">"picture_in_picture_control": false,</code> as shown here: </p>
+    <figure class="bcls-figure"> <img
+        class="bcls-image--no-border"
+        alt="" src="/assets/images/s-players-img/node18509-json-editor.png"
+      /> </figure>
   </section>
 </article>
 

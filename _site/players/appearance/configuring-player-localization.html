@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Adding Thumbnail Seeking to a  Brightcove Player</title>
+        <title>Configuring Player Localization</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic, you will learn the how to add thumbnail seeking to a Brightcove Player.">
+        <meta name="description" content="In this topic you will learn how to configure player localization using the Players module.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -724,7 +724,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/players/adding-thumbnail-seeking-player.html" aria-current="page">Adding Thumbnail Seeking</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/players/adding-thumbnail-seeking-player.html">Adding Thumbnail Seeking</a></li>
                   
                   
                   
@@ -2753,7 +2753,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Adding Thumbnail Seeking to a  Brightcove Player</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/players/appearance/">Appearance</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Configuring Player Localization</li>
             
             
           </ol>
@@ -2775,54 +2779,39 @@
       
       
 <article class="bcls-article">
-  <h1>Adding Thumbnail Seeking to a  Brightcove Player</h1>
-  <summary>In this topic, you will learn the how to add thumbnail seeking to a Brightcove Player.</summary>
+  <h1>Configuring Player Localization</h1>
+  <summary>In this topic you will learn how to configure player localization using the Players module.</summary>
   <section class="bcls-section">
-    
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="1689514929134937463">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    
-    <p>Players can be configured to display video thumbnail images over the player progress bar. Thumbnail images show a preview of the video at that point in time and allow viewers to preview a video and jump to a specific point in the video. Play the video below and hover over the progress bar to see the thumbnail seeking feature.</p>
-    <div style="position: relative; display: block; max-width: 640px;">
-      <div style="padding-top: 56.25%;">
-        <iframe src="https://players.brightcove.net/1752604059001/p6Cx8IOkV_default/index.html?videoId=5124705901001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
-      </div>
-    </div>
-    <aside class="bcls-aside bcls-aside--information">Note: This feature is currently not available when using a playlist player.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: Thumbnails on mobile devices are not supported.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: If you build custom implementations on top of the Brightcove Playback API (PAPI) responses, please note the following:
-      <ul>
-        <li>With Server-Side Ad Insertion (SSAI), the thumbnails manifest is located in the VMAP instead of the PAPI response.</li>
-        <li>With non-SSAI, the thumbnails manifest is included in the PAPI response.</li>
-      </ul>
-    </aside>
-    <h3>When are thumbnail images generated?</h3>
-    <p>Brightcove generates the images dynamically on request. Any video ingested with Dynamic Delivery will have images generated on the first request. This ensures that images are not created for unused videos. Once generated, images are cached locally and on the CDN for repeat viewing, just like any other image.</p>
-    <h3>How often are images generated?</h3>
-    <p>The thumbnails list is filtered down based on the pixel width of the player at initialization. This list varies significantly depending on player styling, window sizing, platform/device, etc. The thumbnail plugin aims to show a new thumbnail roughly every 30px as the user hovers over the progress bar. For example, if the player is 1,500px wide, the player will attempt to filter the list down to 50 thumbnails. The remaining time intervals for the WebVTT cues are adjusted according to the content’s duration.</p>
-    <!-- <p>Images are generated every 5 seconds for videos < 1 hour and every 10 seconds for videos > 1 hour.</p> --> 
-  </section>
-  <section class="bcls-section">
-    <h2 id="Requirements">Requirements</h2>
-    <p> The following are required to use thumbnail seeking: </p>
-    <ul>
-      <li> Brightcove Player version 6.41.0+ </li>
-      <li> Videos must be ingested using a Dynamic Delivery ingest profile</li>
-      <li> If using  server-side ad insertion (SSAI), <strong>videojs-ssai</strong> plugin version 1.10.0+ must be used</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Implementing_thumbnails_using_Studio">Configuring thumbnail seeking</h2>
-    <p>Note that by default, thumbnail seeking is enabled for any newly created players. To configure thumbnail seeking for a player, follow these steps:</p>
+    <p>Brightcove Players can be localized so that interface elements appear in various languages. If the player localization properties are not configured, the interface will display in English.</p>
+    <p>To configure the player <strong>Localization</strong>, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the  <strong>Players</strong>  module.</li>
-      <li>Click the link for the player you want to configure.</li>
-      <li>Click <strong>Controls </strong>in the left navigation menu.</li>
-      <li>Check<strong> Thumbnail Seeking</strong>.
-        <figure class="bcls-figure">
-        <img class="bcls-image--no-border" alt="Brightcove Plugin" src="/assets/images/s-players-img/thumbnail-seeking.png" /> </figure></li>
-      <li>Click <span class="button-blue">Publish &amp; Embed</span>   and then <span class="button-blue">Publish Changes</span> to publish the player. Note that it may take up to 5 minutes for the changes to appear in published players.</li>
+      <li>Open the <strong>Players</strong> module.</li>
+      <li>Click on a player to open the player properties.</li>
+      <li>Click <strong>Player Information</strong> in the left navigation menu.</li>
+      <li>In the <strong>Localization</strong> field, enter the two letter language code for the language and press enter. As you type, the language list will be filtered. You can also click on a value to select it.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node18715-select-language.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">Note: The list of supported languages can be found on the <a href="https://github.com/videojs/video.js/tree/master/lang">Video.js language</a> page.</aside>
+      </li>
+      <li>Add additional languages as appropriate. If an invalid language code is entered, it will appear in red.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/node18715-language-list.png" /></figure>
+      </li>
+      <li>Click <span class="button-blue">Save</span></li>
     </ol>
+    <p>Make sure to publish any changes that are made to the player.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="support">Checking the language</h2>
+    <p>To use the localized language, set the preferred language in the browser. The exact steps vary depending on browser and operating system. If the browser's preferred language is English, or a language not available, you will see the default, or English, text. Browsers do not have perfectly standardized locale detection, so it can be a bit complicated. Broadly, browsers look to determine the desired language in this order:</p>
+    <ul>
+      <li>Check if the embedding page has a lang attribute on the <code translate="No">&lt;html&gt;</code> element</li>
+      <li>Check browser specific locale configurations</li>
+      <li>Fall back to English</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">Note: This technique will only work with the Advanced (in-page) code implementation. Since the Standard implementation loads in an iframe, the browser language setting does not flow into it.</aside>
+    <p>If you use the HTML attribute you do not have to set the preferred language as default in your browser or computer as the player will use the one on the <code translate="No">lang</code> attribute.</p>
+    <pre>&lt;html lang="es"&gt; </pre>
+    <p>Also, if you are using an iframe, keep in mind that you will need to add the query parameter to the player URL.</p>
+    <pre>//players.brightcove.net/6045682556001/Jr6qqMDSb_default/index.html?videoId=6054419564001&amp;language=es</pre>
   </section>
 </article>
 
