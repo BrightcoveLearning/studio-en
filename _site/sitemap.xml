@@ -756,7 +756,7 @@
       
         <url>
           
-            <loc>https://studio.support.brightcove.com/players/index.html</loc>
+            <loc>https://studio.support.brightcove.com/players/general/index.html</loc>
           
             <lastmod>2023-01-10</lastmod>
             <changefreq>daily</changefreq>
@@ -765,7 +765,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/players/configuring-adobe-analytics-event-tracking.html</loc>
+              <loc>https://studio.support.brightcove.com/players/general/configuring-adobe-analytics-event-tracking.html</loc>
             
             <lastmod>2023-01-10</lastmod>
             <changefreq>daily</changefreq>
@@ -774,7 +774,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/players/configuring-google-analytics-event-tracking.html</loc>
+              <loc>https://studio.support.brightcove.com/players/general/configuring-google-analytics-event-tracking.html</loc>
             
             <lastmod>2023-01-10</lastmod>
             <changefreq>daily</changefreq>
@@ -783,7 +783,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/players/configuring-player-advertising-using-players-module.html</loc>
+              <loc>https://studio.support.brightcove.com/players/general/configuring-player-advertising-using-players-module.html</loc>
             
             <lastmod>2023-01-10</lastmod>
             <changefreq>daily</changefreq>
@@ -792,7 +792,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/players/configuring-player-plugins.html</loc>
+              <loc>https://studio.support.brightcove.com/players/general/configuring-player-plugins.html</loc>
             
             <lastmod>2023-01-10</lastmod>
             <changefreq>daily</changefreq>
@@ -801,7 +801,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/players/generating-player-embed-code.html</loc>
+              <loc>https://studio.support.brightcove.com/players/general/generating-player-embed-code.html</loc>
             
             <lastmod>2023-01-10</lastmod>
             <changefreq>daily</changefreq>
@@ -810,7 +810,7 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/players/v5-players-support.html</loc>
+              <loc>https://studio.support.brightcove.com/players/general/v5-players-support.html</loc>
             
             <lastmod>2023-01-10</lastmod>
             <changefreq>daily</changefreq>
