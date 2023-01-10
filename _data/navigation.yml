@@ -306,14 +306,10 @@
       url: /analytics/calculating-video-engagement-score.html
     - name: Exporting Data
       url: /analytics/exporting-data-analytics-module.html
-    - name: SSAI Performance Analytics
-      url: /analytics/ssai-performance-data.html
-  - name: Third-Party Analytics
-    url: /analytics/index.html
-    icon: fa-regular fa-chart-line-up"
-    docs:
     - name: Reviewing Player Events in Google Analytics
       url: /analytics/reviewing-player-event-data-google-analytics.html
+    - name: SSAI Performance Analytics
+      url: /analytics/ssai-performance-data.html
     # - name: Trending Now Report Reference
     #   url: /analytics/trending-now-report-reference.html
 - section:
