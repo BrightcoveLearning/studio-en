@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Using Reference IDs</title>
+        <title>Deep Linking</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic, you will learn how to use reference IDs for videos and playlists when you publish to a Brightcove Player.">
+        <meta name="description" content="Deep linking is a feature that allows a user to start viewing a video from a specific time offset. This is a very useful feature for sharing a video like a newscast where the user may want people to view a certain segment of the program without having to watch everything that precedes it.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -981,7 +981,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/publish/using-reference-ids.html" aria-current="page">Using Reference IDs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/publish/using-reference-ids.html">Using Reference IDs</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Using Reference IDs</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/publish/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Deep Linking</li>
             
             
           </ol>
@@ -2761,179 +2765,47 @@
       
       
 <article class="bcls-article">
-  <h1>Using Reference IDs</h1>
-  <summary>In this topic, you will learn how to use reference IDs for videos and playlists when you publish to a Brightcove Player.</summary>
+  <h1>Deep Linking</h1>
+  <summary>Deep linking is a feature that allows a user to start viewing a video from a specific time offset. This is a very useful feature for sharing a video like a newscast where the user may want people to view a certain segment of the program without having to watch everything that precedes it.</summary>
   <section class="bcls-section">
-    <h2 id="Why_use_reference_IDs">Why use reference IDs?</h2>
-    <p>It is good practice to use reference ID instead of video ID or playlist ID when you can. Some advantages include:</p>
+    <h2 id="Overview">Overview</h2>
+    <p >You can implement deep linking with both the Standard (iframe) and Advanced (in-page) player implementations. For the Standard implementation you use a <code translate="No">t</code> query parameter:</p>
+    <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;iframe src="https://players.brightcove.net/1507807800001/
+    SJgrJZnuAz_default/index.html?videoId=5637008067001&amp;<span class="bcls-highlight">t=70s</span>"
+  allowfullscreen
+  webkitallowfullscreen
+  mozallowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+    <p >For the Advanced implementation use the attribute <code translate="No">data-start-time</code>:</p>
+    <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;video-js data-video-id="5637008067001"
+  data-account="1507807800001"
+  data-player="SJgrJZnuAz"
+  data-embed="default"
+  data-application-id
+  class="video-js"
+  controls
+  <span class="bcls-highlight">data-start-time="70"</span>&gt;&lt;/video-js&gt;
+&lt;script src="https://players.brightcove.net/1507807800001/SJgrJZnuAz_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Time_formats">Time formats</h2>
+    <p>Two possible time formats can be used for specifying the start time:</p>
     <ul>
-      <li>You don't have to update all of your publishing embed code if you accidentally delete a video or playlist. Instead, you simply upload another video or re-create a playlist and assign it the same reference ID as the deleted item.</li>
-      <li>It's easy to match up your reference IDs with content IDs when managing your videos and web pages with a content management system (CMS).</li>
+      <li>Simple time in seconds: This is what used in the examples above, showing start the video <span translate="No">70</span> seconds in (translated into <span translate="No">1:10</span> in the video). You cannot use <strong>min:seconds</strong> format.</li>
+      <li>The <strong>hms</strong> format: Here the time can be indicated in hours/minutes/seconds. For instance, to start the video <span translate="No">1</span> hour, <span translate="No">1</span> minute and <span translate="No">1</span> second in use the <strong translate="No">1h1m1s</strong> syntax.</li>
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="Overview">Overview</h2>
-    <p>By default, when you publish a video with a player, you will see that it uses the video ID. To use a reference ID, simply prepend the reference identifier with <code translate="No">ref:</code>.</p>
-    <p>So, instead of using a video ID like this:</p>
-    <pre class="line-numbers">
-<code class="language-html" translate="No">&lt;video-js data-video-id="4746402489001"</code></pre>
-    <p>You could use a reference ID like this:</p>
-    <pre class="line-numbers">
-<code class="language-html" translate="No">&lt;video-js data-video-id="ref:skivideo"</code></pre>
-    <p>The same applies for a playlist ID. For details, see the examples below.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Reference IDs <strong>must</strong> be unique across all videos in an account.</aside>
-    <p>To insure uniqueness of reference ids, operations involving reference ids will lock the id for up to 30 seconds. That means that if remove a reference id from a video (or delete that video) and then try to use the reference id for another video immediately, the operation will fail with a 409 error. Please wait at least 30 seconds after getting this error before retrying the operation.</p>
-    <p>Note also that if you attempt the create a video with a reference id, and the attempt fails (for reasons unrelated to the reference id), that reference id will be locked for 30 seconds, and repeated attempts to create the video will fail until you wait long enough for the reference id to be unlocked.</p>
-    <p>The only characters that would need to be escaped in a reference ID name would be double-quote and ampersand in double-quoted attributes, which follows the <a href="https://html.spec.whatwg.org/multipage/syntax.html#syntax-attributes">HTML specification</a>.</p>
-    </aside>
+    <h2 id="Social_media_use">Social media use</h2>
+    <p>Unfortunately, most social services do not allow deep linking as shown above. Instead, the services substitute a native player which does not support deep linking. As of July 2014 only one major social network, Twitter, supports direct inclusion of the Brightcove player in the social feed using an iframe, making deep linking possible.</p>
+    <p >For details about deep linking with Twitter, see the <a href="https://player.support.brightcove.com/plugins/social-sharing-plugin.html">Social Media Plugin</a> document.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="Adding_reference_ID">Adding a reference ID</h2>
-    <p>First, add a reference ID to your video:</p>
-    <ol class="bcls-tasklist">
-      <li>In Studio, open the <strong>Media</strong> module, and click the video title to open the video properties.</li>
-      <li>Locate the <strong>Video Information</strong> section and click <strong>Edit</strong>.</li>
-      <li>
-        For the <strong>Reference ID</strong> property, enter a value for your reference ID.
-        <aside class="bcls-aside bcls-aside--warning language-editable">The reference id should not contain spaces, commas, or special characters.</aside>
-      </li>
-      <li>Save your changes.</li>
-    </ol>
-    <figure class="bcls-figure"><img class="bcls-image" alt="Studio adding a reference ID" src="/assets/images/s-publish-img/node18117-reference-id.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Replacing_video_ID">Replacing video ID</h2>
-    <p>The video ID can be replaced with the reference ID.</p>
-    <h3>iframe</h3>
-    <p>To use the iframe implementation, do the following:</p>
-    <ol class="bcls-tasklist">
-      <li>In the <strong>Media</strong> module, publish your video with a player.</li>
-      <li>Copy the <strong>Standard</strong> embed code and paste it in your HTML page code.</li>
-      <li>Change the <code translate="No">videoId</code> value to the appropriate reference ID, prepended with the <strong>ref:</strong> term.</li>
-    </ol>
-    <pre class="line-numbers">
-<code class="language-html" translate="No">&lt;!doctype html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Video Reference ID&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-
-  &lt;iframe src="https://players.brightcove.net/1752604059001/default_default/index.html?<span class="bcls-highlight">videoId=ref:skivideo</span>&amp;muted"
-      allowfullscreen
-      webkitallowfullscreen
-      mozallowfullscreen
-      width="640"
-      height="360"&gt;&lt;/iframe&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-    <h3>In-page embed</h3>
-    <p>To use the In-Page embed implementation, do the following:</p>
-    <ol class="bcls-tasklist">
-      <li>In the <strong>Media</strong> module, publish your video with a player.</li>
-      <li>Copy the <strong>Advanced</strong> embed code and paste it in your HTML page code.</li>
-      <li>Change the <code translate="No">data-video-id</code> value to the appropriate reference ID, prepended with the <strong>ref:</strong> term.</li>
-    </ol>
-    <pre class="line-numbers">
-<code class="language-html" translate="No">&lt;!doctype html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Video Reference ID&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-
-  &lt;video-js <span class="bcls-highlight">data-video-id="ref:skivideo"</span>
-      data-account="1752604059001"
-      data-player="default"
-      data-embed="default"
-      data-application-id
-      class="video-js"
-      controls muted
-      width="640"
-      height="360"&gt;&lt;/video-js&gt;
-  &lt;script src="https://players.brightcove.net/1752604059001/default_default/index.min.js"&gt;&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Replacing_playlist_ID">Replacing playlist ID</h2>
-    <p>The playlist ID can be replaced with the reference ID.</p>
-    <h3>iframe</h3>
-    <p>To use the iframe implementation, do the following:</p>
-    <ol class="bcls-tasklist">
-      <li>In the <strong>Media</strong> module, publish your video with a player.</li>
-      <li>Copy the <strong>Standard</strong> embed code and paste it in your HTML page code.</li>
-      <li>Change the <code translate="No">playlistId</code> value to the appropriate reference ID, prepended with the <strong>ref:</strong> term.</li>
-    </ol>
-    <pre class="line-numbers">
-<code class="language-html" translate="No">&lt;!doctype html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Video Reference ID&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-
-  &lt;iframe src="https://players.brightcove.net/1752604059001/H1EyAYN3_default/index.html?<span class="bcls-highlight">playlistId=ref:allTimePlaylist</span>"
-      allowfullscreen
-      webkitallowfullscreen
-      mozallowfullscreen
-      width="640"
-      height="360"&gt;&lt;/iframe&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-    <h3>In-page embed</h3>
-    <p>To use the In-Page embed implementation, do the following:</p>
-    <ol class="bcls-tasklist">
-      <li>In the <strong>Media</strong> module, publish your video with a player.</li>
-      <li>Copy the <strong>Advanced</strong> embed code and paste it in your HTML page code.</li>
-      <li>Change the <code translate="No">data-playlist-id</code> value to the appropriate reference ID, prepended with the <strong>ref:</strong> term.</li>
-    </ol>
-    <pre class="line-numbers">
-<code class="language-html" translate="No">&lt;!doctype html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;title&gt;Video Reference ID&lt;/title&gt;
-  &lt;style type="text/css"&gt;
-    .video-js {
-      float: left;
-    }
-    .vjs-playlist {
-      width: 280px;
-      height: 360px;
-      overflow-x: hidden;
-    }
-  &lt;/style&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-
-  &lt;video-js <span class="bcls-highlight">data-playlist-id="ref:allTimePlaylist"</span>
-      data-account="1752604059001"
-      data-player="H1EyAYN3"
-      data-embed="default"
-      data-application-id
-      class="video-js"
-      controls
-      width="640"
-      height="360"&gt;&lt;/video&gt;
-  &lt;script src="https://players.brightcove.net/1752604059001/H1EyAYN3_default/index.min.js"&gt;&lt;/script&gt;&lt;div class="vjs-playlist"&gt;&lt;/div&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+    <h2 id="Known_issues">Known issues</h2>
+    <ul>
+      <li>The <code translate="No">data-start-time</code> attribute and <code translate="No">t</code> query parameter only work for players <span translate="No">v6.19.0+</span>.</li>
+    </ul>
   </section>
 </article>
 

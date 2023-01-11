@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Dynamically Assigning Videos to a Player</title>
+        <title>General Information</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic covers different ways that videos can be dynamically assigned to players.">
+        <meta name="description" content="General information about publishing videos and players.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -957,7 +957,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/publish/dynamically-assigning-videos-player.html" aria-current="page">Dynamically Assigning Videos to a Player</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/publish/dynamically-assigning-videos-player.html">Dynamically Assigning Videos to a Player</a></li>
                   
                   
                   
@@ -2739,7 +2739,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Dynamically Assigning Videos to a Player</li>
+            <li class="breadcrumb-item active" aria-current="page">General Information</li>
             
             
           </ol>
@@ -2752,100 +2752,53 @@
   <div class="container">
     <div class="docs-overview py-5">
       
-      <div class="centered-inpage-nav" id="centered_inpage_nav">
-        <nav id="centered_toc">
-          <select id="centered_in_page_toc" class="form-select select-focus"></select>
-        </nav>
-      </div>
-      <br>
       
-      
+<h1><i class="fa-regular fa-play"></i> General Information</h1>
 <article class="bcls-article">
-  <h1>Dynamically Assigning Videos to a Player</h1>
-  <summary>This topic covers different ways that videos can be dynamically assigned to players.</summary>
-  <section class="bcls-section">
-    <p>You may have cases where you need to change the video associated with a player. For example, maybe the viewer has the ability to control which video they want to see. Maybe the video in the player is based upon which part of the site the viewer came from.</p>
-    <p>If you need to display different videos in a player, it is recommended to use one player and then dynamically change the video associated with the player.</p>
-    <p>The following techniques are outlined in this topic:</p>
-    <ul>
-      <li><a href="#videourlparam">Passing the Video ID as a URL parameter</a></li>
-      <li><a href="#refurlparam">Passing the reference ID as a URL parameter</a></li>
-      <li><a href="#pubvideo">Modifying the embed&nbsp;code to supply a Video ID</a></li>
-      <li><a href="#pubref">Modifying the embed&nbsp;code to supply a Reference ID</a></li>
+<br/>
+  <summary>General information about publishing videos and players.</summary>
+  <section>
+    <h2 id="Topics_in_this_section">Topics</h2>
+    <ul class="bcls-topic-list">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: Although it is possible to change a video that is statically bound to a player, this is not a good practice. If you do this, the poster image for the statically bound video may briefly appear in the player before the dynamically added video is displayed. For this reason, it is a best practice to create a player that does not have a video initially associated with it for use in situations where the video will be dynamically changed.</aside>
-    <p>Content can also be dynamically assigned to a player using the Catalog API. For more information and sample code, see the developer document <a href="https://player.support.brightcove.com/code-samples/brightcove-player-sample-dynamically-change-source-videos.html">Dynamically Change Source Videos</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="videourlparam">Passing the video ID as a URL parameter</h2>
-    <p>You can change the video source for a player by passing the video ID as a URL parameter using the form <code translate="No">?videoId=YOUR_VIDEO_ID</code>.</p>
-    <pre class="line-numbers">
-<code class="language-html" translate="No">http://players.brightcove.net/20318290001/f1d70e07-8480-4bbd-b4ef-747e9333a034_default/index.html<strong>?videoId=4292158104001</strong></code></pre>
-  </section>
-  <section class="bcls-section">
-    <h2 id="refurlparam">Passing the reference ID as a URL parameter</h2>
-    <p>You can change the video source for a player by passing the reference ID as a URL parameter using the form <code translate="No">?videoId=ref:YOUR_VIDEO_REF_ID</code>.</p>
-    <pre class="line-numbers">
-<code class="language-html" translate="No">http://players.brightcove.net/20318290001/f1d70e07-8480-4bbd-b4ef-747e9333a034_default/index.html<strong>?videoId=ref:1234</strong></code></pre>
-  </section>
-  <section class="bcls-section">
-    <h2 id="pubvideo">Modifying the embed code to supply a Video ID</h2>
-    <p>You can assign a Video Cloud video to the player embed code directly using the video ID.</p>
-    <div class="BCL-subsection">
-      <h3>In-Page Embed Code</h3>
-      <p>Add the attribute <code translate="No">data-video-id="YOUR_VIDEO_ID"</code> to the <code translate="No">&lt;video&gt;</code> tag:</p>
-      <pre class="line-numbers">
-<code class="language-html" translate="No">&lt;video-js   data-account="57838016001"
-  data-player="6e44f16e-31e9-48b2-83b9-6edd71217540"
-  data-embed="default"
-  <strong>data-video-id="68143720001"</strong>
-  class="video-js"
-  controls&gt;&lt;/video-js&gt;
-&lt;script src="https://players.brightcove.net/57838016001/6e44f16e-31e9-48b2-83b9-6edd71217540_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
-      <aside class="bcls-aside bcls-aside--information">Note: When the player JavaScript executes, it reads the video ID from the data-video-id attribute only at startup. Changing the value with, for example, JavaScript's setAttribute() method, does not cause the player to load the video. For an example on how to change the video using JavaScript, see the <a href="https://player.support.brightcove.com/references/player-catalog.html">Player Catalog</a> developer document.</aside>
-    </div>
-    <div class="BCL-subsection">
-      <h3>iframe Embed Code</h3>
-      <p>Add <code translate="No">?videoId=YOUR_VIDEO_ID</code> to the end of the URL in the <code translate="No">src</code> attribute for the iframe:</p>
-      <pre class="line-numbers">
-<code class="language-html" translate="No">&lt;iframe src='//players.brightcove.net/57838016001/6e44f16e-31e9-48b2-83b9-6edd71217540_default/index.html<strong>?videoId=68143720001</strong>'
- allowfullscreen webkitallowfullscreen mozallowfullscreen&gt;&lt;/iframe&gt;</code></pre>
-    </div>
-  </section>
-  <section class="bcls-section">
-    <h2 id="pubref">Modifying the embed code to supply a Reference ID</h2>
-    <p>You can assign a Video Cloud video to the player embed code directly using the reference ID.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When using a reference ID that has special characters, you must escape the special characters in the publishing code or issues may arise.</aside>
-    <div class="BCL-subsection">
-      <h3>In-Page Embed Code</h3>
-      <p>Add the attribute <code translate="No">data-video-id="ref:YOUR_VIDEO_REF_ID"</code> to the <code translate="No">&lt;video&gt;</code> tag:</p>
-      <pre class="line-numbers">
-<code class="language-html" translate="No">&lt;video-js data-account="57838016001"
-  data-player="6e44f16e-31e9-48b2-83b9-6edd71217540"
-  data-embed="default"
-  <strong>data-video-id="ref:68143720001"</strong>
-  class="video-js"
-  controls&gt;&lt;/video-js&gt;
-&lt;script src="https://players.brightcove.net/57838016001/6e44f16e-31e9-48b2-83b9-6edd71217540_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
-    </div>
-    <div class="BCL-subsection">
-      <h3>iframe Embed Code</h3>
-      <p>Add <code translate="No">?videoId=ref:YOUR_VIDEO_REF_ID</code> to the end of the URL in the <code translate="No">src</code> attribute for the iframe:</p>
-      <pre class="line-numbers">
-<code class="language-html" translate="No">&lt;iframe src='//players.brightcove.net/57838016001/6e44f16e-31e9-48b2-83b9-6edd71217540_default/index.html<strong>?videoId=ref:68143720001</strong>'
- allowfullscreen webkitallowfullscreen mozallowfullscreen&gt;&lt;/iframe&gt;</code></pre>
-    </div>
-  </section>
+</section>
 </article>
-
-<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
-  
-  <nav class="right-side-nav" id="right_side_nav">
-    <h6 class="toc">Page Contents</h6>
-    <ul id="in_page_nav" class="list-none"></ul>
-  </nav>
-  
-<!-- </div> -->
+<footer class="footer">
+    <div class="container text-center py-5">
+        <div>Looking for something? go to our <a class="theme-link" href="https://support.brightcove.com/search.html" target="_blank">search page</small>
+    </div>
+</footer>
 </div>
 </div>
 </div>
@@ -2968,9 +2921,6 @@
   <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
   <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
   <script src="/assets/s-site-assets-scripts/tabs.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
-  
   <script src="/assets/js/sites_nav.js"></script>
   <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
   <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>

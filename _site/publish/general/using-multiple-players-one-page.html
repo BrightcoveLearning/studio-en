@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Publishing a Video to Email</title>
+        <title>Using Multiple Players on One Page</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic provides an overview of how to publish a video to email using the Media module.">
+        <meta name="description" content="In this topic, you will learn how to use multiple Brightcove Players on a single HTML page.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -2739,11 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/publish/publishing/">Publishing</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/publish/general/">General</a></li>
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Publishing a Video to Email</li>
+            <li class="breadcrumb-item active" aria-current="page">Using Multiple Players on One Page</li>
             
             
           </ol>
@@ -2765,32 +2765,56 @@
       
       
 <article class="bcls-article">
-  <h1>Publishing a Video to Email</h1>
-  <summary>This topic provides an overview of how to publish a video to email using the Media module.</summary>
-  <section class="bcls-section">
-    <p>On most platforms, embedding videos directly into email isn’t possible. This isn't a Brightcove limitation, nearly every modern email system will strip out video player embed code due to security reasons. You can however, drive awareness and traffic for content by creating an email with some teaser text and a poster image. The Media module provides the ability to publish a video to an email landing page.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: For another option on emailing videos that provides more control over the appearance of the video poster image and uses a custom landing page, see <a href="/publish/general/driving-video-views-through-email.html">Driving Video Views Through Email</a>.</aside>
-  </section>
-  <section class="bcls-section">
-    <p>To publish a video to an email landing page, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Media</strong> module.</li>
-      <li>Select a video.</li>
-      <li>Click  <span class="button-blue">Publish &amp; Embed </span>  &gt; Email Landing Page.</li>
-      <li>Select a landing page. The dropdown list will contain a <strong>Simple Landing Page</strong> which is a system provided, unstyled sample landing page. The list will also contain any published landing page experiences that were created using the Gallery module. Using a Gallery landing page provides more flexibility over the appearance and styling of the landing page. Lead forms can also be used to capture viewer information. For more information on creating Gallery landing pages, see <a href="https://gallery.support.brightcove.com/experiences/landing/creating-landing-page-experience.html">Creating a Landing Page Experience</a>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select player" src="/assets/images/s-publish-img/node16779-publish-dialog.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: The poster image will be sized to 640 x 360.</aside>
-      </li>
-      <li>Select to <strong>Autoplay Video</strong>. This option is only available when selecting the <strong>Simple Landing Page</strong>.</li>
-      <li>Select a video player. This option is only available when selecting the <strong>Simple Landing Page</strong>. For Gallery landing pages, the player is assigned as part of the <a href="https://gallery.support.brightcove.com/experiences/landing/creating-landing-page-experience.html">experience properties</a>.</li>
-      <li>(Optional) Click the <strong>Preview landing page</strong> link to preview the landing page.</li>
-      <li>Highlight the image, copy it to the clipboard and then paste into an email message.</li>
-    </ol>
-    <p>Click <strong>Generate Short Link</strong> to generate a shortened link that can also be used and distributed. When the email is received, clicking on the poster image or short link will open the video in a browser tab.</p>
-    <p>If a Gallery landing page is used with a lead form, the lead form data can be downloaded using the Campaign module. For information, see <a href="https://gallery.support.brightcove.com/experiences/portal/exporting-gallery-lead-data.html">Exporting Gallery Lead Data</a>.</p>
-  </section>
-</article>
+    <h1>Using Multiple Players on One Page</h1>
+    <summary>In this topic, you will learn how to use multiple Brightcove Players on a single HTML page.</summary>
+    <section id="multipleplayers" class="bcls-section">
+        <h2>Multiple players</h2>
+        <p>If you are using multiple players on the same page, there is nothing special you need to do. For instance, it is perfectly acceptable to have the following players on the same page.</p>
+        <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;video-js data-video-id="4093372393001"
+  data-account="1507807800001"
+  data-player="ry3j6rsze"
+  data-embed="default"
+  data-application-id
+  class="video-js"
+  controls&gt;&lt;/video-js&gt;
+&lt;script src="https://players.brightcove.net/1507807800001/ry3j6rsze_default/index.min.js"&gt;&lt;/script&gt;
 
+&lt;video-js data-video-id="5076962725001"
+  data-account="1507807800001"
+  data-player="BkTGbgSq"
+  data-embed="default"
+  data-application-id
+  class="video-js"
+  controls&gt;&lt;/video-js&gt;
+&lt;script src="https://players.brightcove.net/1507807800001/BkTGbgSq_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
+        <p>&nbsp;</p>
+        <aside class="bcls-aside bcls-aside--information">Note: If you are a Brightcove Player customer, you will not use the <code translate="No">data-video-id</code> attribute to assign a video to your player. You would either assign the video in the <strong>Players</strong> module or using curl.</aside>
+        <aside class="bcls-aside bcls-aside--tip">You can use the <strong>Standard (iframe)</strong> code for multiple players on the same page also.</aside>
+    </section>
+    <section id="Special_considerations" class="bcls-section">
+        <h2>Special considerations</h2>
+        <p>Be aware of the following when placing multiple players on the same HTML page:</p>
+        <ul>
+            <li>You can use multiple instances of the same player on same page, using a single <strong>index.min.js</strong> file. We strongly recommend using one <strong>index.min.js</strong> file if possible, as this saves considerable amounts of page load time.</li>
+            <li>It can be very expensive bandwidth-wise to have multiple players on a page and have the <code translate="No">preload</code> set to <code translate="No">auto</code>. It is generally not recommended.</li>
+            <li>You cannot use multiple players on the same page that are from different accounts where both players use the player ID value of <code translate="No">default</code>. (As a reminder, in the Advanced player code the player ID is used in the <code translate="No">data-player</code> attribute.) The workaround is to duplicate one of the default players so it has a unique identifier.</li>
+            <li>If you're using IE11&nbsp;and have multiple instances of the same player on a page, you need to either be sure each player instance has a unique value for the <code translate="No">id</code> attribute&nbsp;or use no <code translate="No">id</code> attributes.</li>
+            <li>Mixing in-page players of different versions is not supported. It may work for similar versions, but can easily cause problems. Use iframes if you need to mix players of different versions. If the players are of the same version, it should be fine.</li>
+            <li>When mixing in-page players, the global bc will refer to the last player in the page.</li>
+            <li>There are known issues when attempting to use AMD module loaders like RequireJS and multiple in-page players. We don't have a workaround for this at the moment.</li>
+            <li>When embedding multiple 360 videos on a page with the advanced embed code, only the first video can have 360 interactivity. The workaround is to use the basic (iframe) embed to allow multiple 360 videos to have interactivity.</li>
+            <li>Mixing players with 360 videos and players with non-360 videos is not supported.</li>
+            <li>If multiple players have the same id on one page and specify different size inside <code translate="No">&lt;video&gt;</code> tag using <code translate="No">width</code> and <code translate="No">height</code> attributes, the player CSS from the last player is applied to all players.
+                <p><strong>Workarounds</strong></p>
+                <ul>
+                    <li>Use players with a different player ids if you want them to have different sizes or styling</li>
+                    <li>Define a classes for the players that provide the player sizing using CSS, and add the classes to the video tags for the different players</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
