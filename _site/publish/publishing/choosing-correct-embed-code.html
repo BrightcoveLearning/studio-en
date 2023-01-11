@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Publishing Videos and Playlists with the Media Module</title>
+        <title>Choosing the Correct Embed Code</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to publish videos and playlists using the Media module.">
+        <meta name="description" content="This topic provides an overview of the types of embed code that are available when publishing videos using the Brightcove Player.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -869,7 +869,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/publish/publishing-videos-and-playlists-media-module.html" aria-current="page">Publishing Videos and Playlists</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/publish/publishing-videos-and-playlists-media-module.html">Publishing Videos and Playlists</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Publishing Videos and Playlists with the Media Module</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/publish/publishing/">Publishing</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Choosing the Correct Embed Code</li>
             
             
           </ol>
@@ -2760,126 +2764,65 @@
       <br>
       
       
-<article class="bcls-article">
-  <h1>Publishing Videos and Playlists with the Media Module</h1>
-  <summary>In this topic you will learn how to publish videos and playlists using the Media module.</summary>
+<h1>Choosing the Correct Embed Code</h1>
+ <article class="bcls-article">
+  <summary>This topic provides an overview of the types of embed code that are available when publishing videos using the Brightcove Player.</summary>
   <section class="bcls-section">
-    <p>This topic contains information on publishing videos and playlists to the web. For information on the other publishing options, see:</p>
-    <ul>
-      <li><a href="/publish/publishing-video-email.html">Publishing a Video to Email</a></li>
-      <li><a href="/social/publishing-videos-social-media-platforms.html">Publishing Videos to Social Media Platforms</a></li>
-      <li><a href="/publish/publishing-videos-page-experience.html">Publishing Videos to an In-Page Experience</a></li>
-    </ul>
-    <p>If you are looking to dynamically assign video content to a player, get the <a href="/players/general/generating-player-embed-code.html">embed code for the player</a> and then use one of the techniques available to <a href="/publish/dynamically-assigning-videos-player.html">dynamically assign videos to a player</a>.</p>
+    <p>When publishing videos using the Media module, you can use the player URL to preview the video or copy the iframe or In-Page embed code to paste into your web page or application.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Click the <strong>Shorten</strong> button next to the preview URL to generate&nbsp;a shortened preview URL.</aside>
+    <p >The <strong>Standard</strong> link displays the iframe embed code and the <strong>Advanced</strong> link displays the In-Page embed code. From the Player Management API perspective, you will also see the <strong>Advanced</strong> player code referred to as the <strong>embed_in_page</strong> implementation.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node15622-pub-code-options.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Note: For information on working with responsive players, see the <a href="https://player.support.brightcove.com/styling/responsive-sizing-brightcove-player.html">Responsive Sizing for the Brightcove Player</a> developer document.</aside>
   </section>
-  <section class="bcls-section"> 
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6038132304001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="6039051214001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> 
-    
-    <aside class="bcls-aside bcls-aside--information">Note: For information on creating playlists, see <a href="/media/organize/creating-and-managing-playlists.html">Creating and Managing Playlists</a>.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="steps">Publishing videos and playlists</h2>
-    <p>To publish a video or playlist, follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Media</strong> module.</li>
-      <li>To publish a single video, click <strong>All videos</strong> in the side navigation panel and then do one of the following:
-        <ul>
-          <li>Click the checkbox next to the video and then click <span class="button-blue">Publish &amp; Embed </span> &gt; Publish to web</li>
-          <li>Click on the video name and then click <span class="button-blue">Publish &amp; Embed </span> &gt; Publish to web on the video properties page</li>
-        </ul>
-      </li>
-      <li>To publish a playlist, click <strong>All playlists</strong> in the side navigation panel and then do one of the following:
-        <ul>
-          <li>Click the check box next to the playlist and then click <span class="button-blue">Publish &amp; Embed </span> &gt; Publish to web</li>
-          <li>Click on the playlist name and then click <strong>Publish Playlist </strong>on the playlist videos page</li>
-        </ul>
-      </li>
-      <li>Confirm that the publishing dialog opens. The name of the video or playlist being published will appear in the publishing dialog title.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node15473-publish-video.png" /></figure>
-        <p>Known Issue: Since the preview player is being loaded over HTTPS within the Studio, if your content is being served over HTTP, the preview player will not playback the content and your browser will display an insecure scripts message. This is not a Studio bug but a browser security limitation.</p>
-      </li>
-      <li>Select a player to use. When publishing playlists, there are some playlist-related player properties that can be set to control <span class="BCL-objective"> appearance and behavior of the playlist</span>. See the <a href="#playlistprop">Setting playlist properties</a> section below for details.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node15473-player-id.png" /></figure>
-        <p>Note that the preview will update to display the player that was selected.</p>
-      </li>
-      <li>(Optional) The preview link below the preview player can be used to preview the player in another browser tab. Click the <strong>Shorten</strong> button to generate a shortened URL.</li>
-      <li>Choose an option for the player sizing:
-        <ul>
-          <li><strong>Responsive</strong> - The player size will adjust automatically based upon the browser size</li>
-          <li><strong>Fixed</strong> - The player size is based upon the width and height parameters</li>
-        </ul>
-      </li>
-      <li>Select an aspect ratio for the player.
-        <ul>
-          <li><strong>16:9 </strong>or <strong>4:3 - </strong>enter a player width (the height will be determined automatically)</li>
-          <li><strong>Custom</strong> - to manually enter the player width and height</li>
-        </ul>
-      </li>
-      <li>Enter the <strong>Player Width</strong> and <strong>Player Height</strong>.</li>
-      <li>Select the <strong>Units</strong> of measurement.</li>
-      <li>Select the type of publishing code to copy by clicking <strong>Standard</strong> or <strong>Advanced</strong>.
-        <ul>
-          <li><strong>Standard - iframe embed code - Recommended for most cases.</strong> This type places the player inside an <code translate="No">&lt;iframe&gt;</code> tag. If player dimensions are specified, the iframe will be sized to the player dimensions. If no player dimensions are specified, the iframe can be placed inside of a <code translate="No">&lt;div&gt;</code> tag and the responsive nature of the player will resize the player to occupy the entire space of the <code translate="No">&lt;div&gt;</code>.
-            <aside class="bcls-aside bcls-aside--information">Note: The iframe width must be larger than 640px for the playlist to appear.</aside>
-            <aside class="bcls-aside bcls-aside--information language-editable">Note: If the selected player has been configured with the <a href="https://studio.support.brightcove.com/campaign/general/creating-campaign-enabled-player.html">Campaign plugin</a>, the iFrame code will not be displayed as the JavaScript code must be used.</aside>
-          </li>
-          <li><strong>Advanced - In-page embed code</strong> - Allows the player to exist in the the HTML page directly, not in an iframe. This offers developers the benefits of ease of accessing the player and associated properties and events. By using the in-page embed code, you lose the ease of use of the player as a single, contained unit in social media applications and sharing. This option is available only for the published player.</li>
-        </ul>
-        For more information on the types of publishing code, see <a href="/publish/choosing-correct-embed-code.html">Choosing the Correct Embed&nbsp;Code</a>.</li>
-      <li>Copy the publishing code. When finished, click <strong>Close</strong>.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="refid">Using reference IDs when publishing</h2>
-    <p>It is also possible to use the video or playlist reference ID when publishing. With this method, if you accidentally delete a video or playlist, you simply upload another video or re-create a playlist and assign it the same reference ID as the deleted item. For information, see <a href="/publish/using-reference-ids.html">Using Reference IDs</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="appid">Adding an application ID to the embed&nbsp;code</h2>
-    <p>In the past, publishers would commonly create new players with different names to use on different parts of a site or to use on different sites. When reviewing player analytics, having different player names made it easier to determine which players were getting the most views. By adding an application ID parameter to the embed&nbsp;code, the same player can be used across a site, or sites, and the application ID can be used to identify where the player was published. Using a player application ID can help reduce the number of players that need to be created and maintained. For information on adding an application ID to the embed&nbsp;code, see <a href="/publish/adding-application-id-player-embed-code.html">Adding an Application ID to the Player Embed&nbsp;Code</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="playlistprop">Setting playlist properties</h2>
-    <p>There are some playlist-related player properties that can be configured when working with playlists. <span class="BCL-objective">To configure the playlist-related player properties, </span>follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Players</strong> module.</li>
-      <li>Click on the player name to open the player properties.</li>
-      <li>As part of the <strong>Player Information</strong> properties, select a <strong>Player Type</strong> of <strong>Playlist</strong>. Click <span class="button-blue"> Save </span>.</li>
-      <li>Click <strong>Styling</strong> in the left navigation menu.</li>
-      <li>Select a <strong>Playlist Type</strong>:
-        <ul>
-          <li><strong>Playlist (Vertical)</strong> - Playlist displays on the right side of the player.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node15473-v-playlist-example.png" /></figure>
-          </li>
-          <li><strong>Playlist (Horizontal)</strong> - Playlist displays on the bottom of the player.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node15473-h-playlist-example.png" /></figure>
-          </li>
-          <li><strong>Playlist (Hidden)</strong> - Playlist is not displayed.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node15473-hidden-playlist-example.png" /></figure>
-          </li>
-        </ul>
-      </li>
-      <li>When a <strong>Player Type</strong> of <strong>Playlist</strong> is selected as part of the <strong>Player Information</strong> properties, additional <strong>Playback</strong> properties can be configured:
-        <ul>
-          <li><strong>Randomize play order</strong> - Videos will be played in a random order</li>
-          <li><strong>Play video when selected</strong> - Clicking a thumbnail in the playlist menu will cause the video to play when loaded, even if the previous video in the player was paused</li>
-          <li><strong>Continuous play mode</strong> - Videos will advance automatically and repeat indefinitely</li>
-          <li><strong>Video Countdown</strong> - Only enabled when <strong>Continuous play mode</strong> is checked
-            <ul>
-              <li><strong>Up next card (auto advance)</strong> - An up next card is displayed in the player</li>
-              <li><strong>Up next endscreen (countdown)</strong> - An end screen countdown is displayed in the player</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Click <span class="button-blue"> Save </span> to save changes. Remember to publish the player so the changes appear in the published player.</li>
-    </ol>
-    <p>When using the <strong>Standard (iframe)</strong> embed code, the playlist has a show/hide button and is automatically sized and positioned. When using the <strong>Advanced (in-page)</strong> embed code, you must insert the playlist as an HTML <code translate="No">&lt;div&gt;</code> element and write your own CSS to position and size the playlist. This gives you full control over the playlist's display. In the latter case, the playlist does not even need to be adjacent to the player if you don't want it to be. The <strong>Advanced (in-page embed) player</strong> section of the <a href="https://player.support.brightcove.com/general/implementing-playlists.html#Advanced_in_page_embed_player">Implementing Playlists</a>&nbsp;document has substantial content on formatting and styling a playlist.</p>
-  </section>
-</article>
 
+  <section class="bcls-section">
+    <h2 id="iframe">iframe embed code (Standard)</h2>
+    <p>Typical iframe embed code will appear as follows:</p>
+    <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;iframe src=&quot;https://players.brightcove.net/1507807800001/rf1BTdKk6M_default/index.html?videoId=6116779877001&quot;
+  allowfullscreen=&quot;&quot;
+  allow=&quot;encrypted-media&quot;
+  width=&quot;960&quot; height=&quot;540&quot;&gt;&lt;/iframe&gt;</code></pre>
+    <p>Some advantages of using the iframe embed code</p>
+    <ul>
+      <li>No collisions with existing JavaScript and/or CSS</li>
+      <li>Automatically responsive</li>
+      <li>The iframe eases use in social media apps or whenever the video will need to be used in an outside environment; for instance, Facebook will perceive the security threat is much less when the iframe is used versus putting the <code translate="No">&lt;video&gt;</code> tag and associated JavaScript on their site (which Facebook does not allow)</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: If the selected player has been configured with the <a href="https://studio.support.brightcove.com/campaign/general/creating-campaign-enabled-player.html">Campaign plugin</a>, the iFrame code will not be displayed as the JavaScript code must be used.</aside>
+
+    <aside class="bcls-aside bcls-aside--information">Note: The iframe will be able to access the parent page's full URL as long as the parent page has the header <code translate="No">referrer-policy: no-referrer-when-downgrade</code>. This means that the header <code translate="No">referrer</code> will be sent to the iframe with the full parent page's URL because both protocols match.</aside>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="inpage">In-Page embed code (Advanced)</h2>
+    <p>Typical in-page embed code will appear as follows:</p>
+    <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;video-js data-account=&quot;1507807800001&quot;
+  data-player=&quot;rf1BTdKk6M&quot;
+  data-embed=&quot;default&quot;
+  controls=&quot;&quot;
+  data-video-id=&quot;6116779877001&quot;
+  data-playlist-id=&quot;&quot;
+  data-application-id=&quot;&quot;
+  width=&quot;960&quot; height=&quot;540&quot;&gt;&lt;/video-js&gt;
+&lt;script src=&quot;https://players.brightcove.net/1507807800001/rf1BTdKk6M_default/index.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <p>Although integrating the In-Page publishing code can be more complex, using the In-Page code is best when the page containing the player needs to communicate with the player. Some examples of when to use the In-Page embed code include:</p>
+    <ul>
+      <li>The code in the containing page needs to listen for and act on player events</li>
+      <li>The player uses styles from the parent page</li>
+      <li>The iframe code will cause application logic to fail, like a redirect from the parent page</li>
+    </ul>
+    <p>Even if your final implementation does not use the iframe embed&nbsp;code, you can still use the In-Page code with a plugin for your JavaScript and a separate file for your CSS. This encapsulates your logic so that you can easily use it in multiple players.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: If you selected the iframe implementation when publishing from Studio, you will see the option <code translate="No">allowfullscreen</code> added in the iframe. If you are ever manually placing a Brightcove Player, either the in-page embed or iframe implementation, in an iframe you should also include this option for proper fullscreen functionality. If for some reason you nest a player in multiple iframes, all iframes should have the option added.</aside>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="recommend">Recommendation</h2>
+    <p>It is considered a best practice to use the Standard (iframe)) implementation unless some application logic requires the use of the Advanced (in-page) code. If you are using the Audience module to track viewer engagement, the Advanced (in-page)) embed code must be used.</p>
+  </section>
+
+</article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
