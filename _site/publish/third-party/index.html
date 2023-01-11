@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Publishing Brightcove Players in Joomla</title>
+        <title>Publishing to Third-Party Apps</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to publish Brightcove Players to Joomla.">
+        <meta name="description" content="Learn how to publish videos to third-party apps.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -919,7 +919,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/publish/publishing-brightcove-players-joomla.html" aria-current="page">Publishing Players in Joomla</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/publish/publishing-brightcove-players-joomla.html">Publishing Players in Joomla</a></li>
                   
                   
                   
@@ -2739,7 +2739,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Publishing Brightcove Players in Joomla</li>
+            <li class="breadcrumb-item active" aria-current="page">Publishing to Third-Party Apps</li>
             
             
           </ol>
@@ -2752,78 +2752,53 @@
   <div class="container">
     <div class="docs-overview py-5">
       
-      <div class="centered-inpage-nav" id="centered_inpage_nav">
-        <nav id="centered_toc">
-          <select id="centered_in_page_toc" class="form-select select-focus"></select>
-        </nav>
-      </div>
-      <br>
       
-      
+<h1><i class="fa-regular fa-play"></i> Publishing to Third-Party Apps</h1>
 <article class="bcls-article">
-  <h1>Publishing Brightcove Players in Joomla</h1>
-  <summary>In this topic you will learn how to publish Brightcove Players to Joomla.</summary>
-  <section class="bcls-section">
-    <p>Joomla is a popular, open-source, content management system (CMS), which enables you to build Web sites and powerful online applications. You can learn more about Joomla <a href="http://www.joomla.org">here</a>. This topic shows you how you can easily publish Brightcove Players to your Joomla pages.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: The steps and images in this topic were taken using Joomla 3.9.6.</aside>
-    <p>To publish a Brightcove Player to a Joomla page, the following steps are required:</p>
-    <ul>
-      <li><a href="#settings">Check the Joomla editor settings</a></li>
-      <li><a href="#pubcode">Paste in the player embed&nbsp;code</a></li>
+<br/>
+  <summary>Learn how to publish videos to third-party apps.</summary>
+  <section>
+    <h2 id="Topics_in_this_section">Topics</h2>
+    <ul class="bcls-topic-list">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="settings">Checking the Joomla editor settings</h2>
-    <p>By default, Joomla is configured to use the TinyMCE editor. The TinyMCE editor is configured to strip certain HTML tags when they are pasted into the editor. In order to paste in the Standard (iframe) player publishing code into the Joomla editor, you need to make sure that the <code translate="No">&lt;iframe&gt;</code> tag will not be removed by the editor.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Login as administrator into your Joomla backend.</li>
-      <li>Select <strong>Extensions &gt; Plugins</strong>.</li>
-      <li>Enter <span class="BCL-userInput"><strong>tinymce</strong></span> in the search box and click the search button.</li>
-      <li>Confirm that one item is returned, <strong>Editor - TinyMCE</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node11013-search-plugin.png" /></figure>
-      </li>
-      <li>Click on the <strong>Editor - TinyMCE</strong> plugin link to edit its settings.</li>
-      <li>Locate the <strong>Prohibited Elements</strong> section and make sure <strong>iframe</strong> is not listed. If <strong>iframe</strong> is listed, remove it from the list.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node11013-prohibited-elements.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: Joomla requires that there be a value in the <strong>Prohibited Elements</strong> field. If removing the <code translate="No">iframe</code> entry will leave this field blank, enter <span class="BCL-userInput">"none"</span> in this field.</aside>
-      </li>
-      <li>Click <strong>Save</strong> at the top of the page to save your changes.</li>
-    </ol>
-    <p>The TinyMCE editor will also strip out the <code translate="No">&lt;script&gt;</code> tag when using the Advanced (in-page) player publishing code. One way around this is to configure your Joomla instance to not use the TinyMCE editor. To select another editor, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Go to&nbsp;<strong>System</strong>&nbsp;&gt;&nbsp;<strong>Global Configuration</strong>.</li>
-      <li>Click the&nbsp;<strong>Site</strong>&nbsp;tab.</li>
-      <li>Find the&nbsp;<strong>Default Editor</strong>&nbsp;option.</li>
-      <li>Set this&nbsp;option to&nbsp;<strong>Editor - None</strong>. We have also found selecting <strong>Editor - CodeMirror</strong> will not strip the <code translate="No">&lt;script&gt;</code> tag.</li>
-      <li>Click <strong>Save &amp; Close</strong>.</li>
-    </ol>
-    <p>If your Joomla installation is configured to use another editor, you need to make sure that the player publishing code is not edited by the editor when you paste and save the code in Joomla. This may require you to change other Joomla settings or possibly use an extension (<a href="https://extensions.joomla.org/extensions/core-enhancements/coding-a-scripts-integration/custom-code-in-content/1023">Jumi</a> or <a href="https://extensions.joomla.org/extensions/core-enhancements/coding-a-scripts-integration/custom-code-in-content/5051">Sourcerer</a>) to allow you to paste in JavaScript code into your editor.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="pubcode">Paste in the player embed code</h2>
-    <p>Once your editor is configured so that it will not edit the code, you can generate the player embed code.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Media</strong> module to generate the embed code for the video you want to publish.</li>
-      <li>Open the page you want to edit in Joomla.</li>
-      <li>Click the <strong>Toggle editor</strong> button at the bottom of the editor to go into HTML mode.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node11013-toggle-editor.png" /></figure>
-      </li>
-      <li>Paste in your player publishing code and click <strong>Save &amp; Close</strong>.</li>
-      <li>Verify that the video appears and plays on your page.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node11013-final.png" /></figure>
-      </li>
-    </ol>
-  </section>
+</section>
 </article>
-
-<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
-  
-  <nav class="right-side-nav" id="right_side_nav">
-    <h6 class="toc">Page Contents</h6>
-    <ul id="in_page_nav" class="list-none"></ul>
-  </nav>
-  
-<!-- </div> -->
+<footer class="footer">
+    <div class="container text-center py-5">
+        <div>Looking for something? go to our <a class="theme-link" href="https://support.brightcove.com/search.html" target="_blank">search page</small>
+    </div>
+</footer>
 </div>
 </div>
 </div>
@@ -2946,9 +2921,6 @@
   <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
   <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
   <script src="/assets/s-site-assets-scripts/tabs.js"></script>
-  
-  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
-  
   <script src="/assets/js/sites_nav.js"></script>
   <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
   <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>

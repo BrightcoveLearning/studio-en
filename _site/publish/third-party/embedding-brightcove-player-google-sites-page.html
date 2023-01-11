@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Publishing Brightcove Players in Facebook Instant Articles</title>
+        <title>Embedding a Brightcove Player on a Google Sites Page</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to publish Brightcove Players in Facebook Instant Article pages.">
+        <meta name="description" content="In this topic you will learn how to embed a Brightcove Player on a Google Sites page.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -913,7 +913,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/publish/publishing-brightcove-players-facebook-instant-articles.html" aria-current="page">Publishing Players in Facebook Instant Articles</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/publish/publishing-brightcove-players-facebook-instant-articles.html">Publishing Players in Facebook Instant Articles</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Publishing Brightcove Players in Facebook Instant Articles</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/publish/third-party/">Third party</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Embedding a Brightcove Player on a Google Sites Page</li>
             
             
           </ol>
@@ -2761,47 +2765,25 @@
       
       
 <article class="bcls-article">
-  <h1>Publishing Brightcove Players in Facebook Instant Articles</h1>
-  <summary>In this topic you will learn how to publish Brightcove Players in Facebook Instant Article pages.</summary>
+  <h1>Embedding a Brightcove Player on a Google Sites Page</h1>
+  <summary>In this topic you will learn how to embed a Brightcove Player on a Google Sites page.</summary>
   <section class="bcls-section">
-    <p>Facebook Instant Articles are a fast and interactive experience for reading articles in a Facebook News Feed. Instant Articles can be published directly from a content management system (using the Instant Articles API) or by providing an RSS feed. Instant Articles display as much as ten times faster than standard mobile web articles. When a friend or page you follow shares a link in your News Feed, Facebook will check to see if there is an Instant Article associated with that URL. If so, Facebook will display it as an Instant Article. If not, it will open in the web browser.</p>
-    <p>Brightcove Players that are embedded in Instant Article continue to support:</p>
-    <ul>
-      <li>Pre-roll and mid-roll advertising</li>
-      <li>Brightcove analytics</li>
-      <li>Third party plugins</li>
-    </ul>
-    <p>Note that while analytics will be collected by Brightcove, the display domain recorded in analytics will be a <code translate="No">brightcove.com</code> domain, not a <code translate="No">facebook.com</code> domain.</p>
-    <p>While different types of content can be shared using Instant Articles, this topic covers sharing Brightcove Players in Instant Article pages. For complete information on Instant Articles, see the <a href="https://developers.facebook.com/docs/instant-articles">Facebook documentation</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Generating_player_embed_code">Generating player embed code</h2>
-    <p>No changes to the player properties are needed to use it in an Instant Article. Follow these steps to generate the player embed code for an Instant Article:</p>
+    <p>Google Sites is a web page creation tool offered by Google. Brightcove Players can easily be embedded in Google Sites pages.</p>
+    <p>To embed a Brightcove Player on a Google Sites page, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Take the standard iframe embed code from Video Cloud Studio and place it inside an HTML5 <code translate="No">&lt;figure&gt;</code> element.
-        <pre>
-	&lt;figure&gt;
-	&lt;iframe src="//players.brightcove.net/1486906377/V1ziujO35l_default/index.html?videoId=3766858011001"
-	 allowfullscreen webkitallowfullscreen mozallowfullscreen width="640" height="360"&gt;&lt;/iframe&gt;
-	&lt;/figure&gt;
-	        </pre>
-        <aside class="bcls-aside bcls-aside--tip">Using the video reference id (i.e. <code translate="No">videoId="ref:referenceId"</code>) in the iframe embed code is supported when publishing to Facebook Instant Articles.</aside>
+      <li>Locate the Google Sites page you want to add a Brightcove Player to.</li>
+      <li>Click the <strong>Edit page</strong> button.</li>
+      <li>A toolbar will appear at the top of the page. Click the <strong>&lt;HTML&gt;</strong> button.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node14399-toolbar.png" /></figure>
       </li>
-      <li>Add the <code translate="No">op-interactive</code> class to the <code translate="No">figure</code> tag.
-        <pre>
-	&lt;figure <strong>class="op-interactive"</strong>&gt;
-	&lt;iframe src="//players.brightcove.net/1486906377/V1ziujO35l_default/index.html?videoId=3766858011001"
-	 allowfullscreen webkitallowfullscreen mozallowfullscreen width="640" height="360"&gt;&lt;/iframe&gt;
-	&lt;/figure&gt;
-	        </pre>
+      <li>Paste in your Standard (iframe) player publishing code and click <strong>Update</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node14399-pub-code.png" /></figure>
       </li>
-      <li>Give the iframe a <code translate="No">width</code> and <code translate="No">height</code>. The <code translate="No">width</code> and <code translate="No">height</code> set the aspect ratio rather than the absolute size of the player. The finished code will look like this:
-        <pre>
-	&lt;figure class="op-interactive"&gt;
-	&lt;iframe src="//players.brightcove.net/1486906377/V1ziujO35l_default/index.html?videoId=3766858011001"
-	 allowfullscreen webkitallowfullscreen mozallowfullscreen <strong>width="16" height="9"</strong>&gt;&lt;/iframe&gt;
-	&lt;/figure&gt;
-	        </pre>
+      <li>The page will update and display a Google Gadget for the iframe.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node14399-iframe-gadget.png" /></figure>
+      </li>
+      <li>Click <strong>Save</strong> to save the changes. The video will be displayed in the page.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node14399-final.png" /></figure>
       </li>
     </ol>
   </section>

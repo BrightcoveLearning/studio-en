@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Embedding a Brightcove Player on a Google Sites Page</title>
+        <title>Publishing a Brightcove Player in a Wordpress Page</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to embed a Brightcove Player on a Google Sites page.">
+        <meta name="description" content="This topic explains how to embed a Brightcove Player in a WordPress page. This topic assumes you have WordPress installed for your site.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -901,7 +901,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/publish/embedding-brightcove-player-google-sites-page.html" aria-current="page">Embedding a Player on a Google Sites Page</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/publish/embedding-brightcove-player-google-sites-page.html">Embedding a Player on a Google Sites Page</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Embedding a Brightcove Player on a Google Sites Page</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/publish/third-party/">Third party</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Publishing a Brightcove Player in a Wordpress Page</li>
             
             
           </ol>
@@ -2761,26 +2765,32 @@
       
       
 <article class="bcls-article">
-  <h1>Embedding a Brightcove Player on a Google Sites Page</h1>
-  <summary>In this topic you will learn how to embed a Brightcove Player on a Google Sites page.</summary>
+  <h1>Publishing a Brightcove Player in a Wordpress Page</h1>
+  <summary>This topic explains how to embed a Brightcove Player in a WordPress page. This topic assumes you have WordPress installed for your site.</summary>
   <section class="bcls-section">
-    <p>Google Sites is a web page creation tool offered by Google. Brightcove Players can easily be embedded in Google Sites pages.</p>
-    <p>To embed a Brightcove Player on a Google Sites page, follow these steps:</p>
+    <p>Brightcove also provides the <a href="https://wordpress.org/plugins/brightcove-video-connect/">Brightcove Video Connect WordPress plugin</a>. This plugin supports multiple Brightcove accounts and allows you to upload videos, add them to playlists, and render shortcodes with your videos all from within the WordPress admin interface.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="steps">Steps to publish a Brightcove Player in a WordPress page</h2>
+    <p>The steps and screen captures were taken using WordPress 5.2.2.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Locate the Google Sites page you want to add a Brightcove Player to.</li>
-      <li>Click the <strong>Edit page</strong> button.</li>
-      <li>A toolbar will appear at the top of the page. Click the <strong>&lt;HTML&gt;</strong> button.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node14399-toolbar.png" /></figure>
+      <li>Login to your WordPress site and go to <strong>Posts </strong>on the left side bar.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="wordpress nav" src="/assets/images/s-publish-img/node15922-left-nav.png" /></figure>
       </li>
-      <li>Paste in your Standard (iframe) player publishing code and click <strong>Update</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node14399-pub-code.png" /></figure>
+      <li>Click <strong>Add New</strong> to add a new post.</li>
+      <li>Add a title for the post.</li>
+      <li>Click the <strong>+</strong> to add a block. In the <strong>Formatting</strong> section, click on <strong>Custom HTML</strong> to add an HTML block.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="text mode" src="/assets/images/s-publish-img/node15922-add-html-block.png" /></figure>
       </li>
-      <li>The page will update and display a Google Gadget for the iframe.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node14399-iframe-gadget.png" /></figure>
+      <li>Paste the iframe embed code into the editor. Edit the <code translate="No"><strong>width</strong></code> and <code translate="No"><strong>height</strong></code> parameters as needed.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="publishing code" src="/assets/images/s-publish-img/node15922-pub-code.png" /></figure>
       </li>
-      <li>Click <strong>Save</strong> to save the changes. The video will be displayed in the page.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/node14399-final.png" /></figure>
+      <li>Click <strong>Preview</strong> to preview the player.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="text mode" src="/assets/images/s-publish-img/node15922-preview.png" /></figure>
       </li>
+      <li>Click <strong>Publish...</strong> Verify the publish settings and then click <strong>Publish</strong>.</li>
+      <li>To view the player on your site, click the <strong>View Post</strong> button on the right side of the page.</li>
+      <li>If you make changes to the publishing code or title, make sure you click the <strong>Update</strong> button to save your changes.</li>
     </ol>
   </section>
 </article>
