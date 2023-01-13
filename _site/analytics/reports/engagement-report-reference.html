@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Analytics Report Reference</title>
+        <title>Engagement Report Reference</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic provides a reference to all of the reports that are available in the  Analytics module. Read Getting Started with the Analytics Module for information about how to use the Analytics module.">
+        <meta name="description" content="In this topic you will learn about the Engagement report that is provided as part of the Analytics module.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1048,7 +1048,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/analytics-report-reference.html" aria-current="page">Analytics Report Reference</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/analytics-report-reference.html">Analytics Report Reference</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Analytics Report Reference</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Engagement Report Reference</li>
             
             
           </ol>
@@ -2761,65 +2765,137 @@
       
       
 <article class="bcls-article">
-  <h1>Analytics Report Reference</h1>
-  <summary>This topic provides a reference to all of the reports that are available in the  Analytics module. Read <a href="/analytics/getting-started-analytics-module.html">Getting Started with the Analytics Module</a> for information about how to use the Analytics module.</summary>
+  <h1>Engagement Report Reference</h1>
+  <summary>In this topic you will learn about the Engagement report that is provided as part of the Analytics module.</summary>
   <section class="bcls-section">
-    <p>The Video Cloud Analytics module provides the following reports:</p>
+    
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="2349078817001">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+   
+    <p>To view the Engagement report, open the Analytics module and click <strong>Engagement</strong> in the left side navigation. The report will display a graph showing total video engagement for the time period selected. The report switcher below the chart can be used to quickly switch to another report.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/s-analytics-img/node10105-report-switcher.png" /></figure>
+    <p>The dropdown list to the right of the report switcher can be used to select a report dimension. The following dimensions are available with the Engagement Report:</p>
     <ul>
-      <li><a href="#performance">Performance</a></li>
-      <li><a href="#engagement">Engagement</a></li>
-      <li><a href="#trending">Trending Now</a></li>
-      <li><a href="#custom">Custom</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#player">Player</a></li>
+      <li><a href="#day">Day</a></li>
     </ul>
-    <p>A summary of each of these reports is described in the following sections.</p>
+    <p>The body of the page will display a list of videos sorted by engagement score. The bottom of the report has controls which let you select how many rows should be displayed and for navigating to other pages.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="performance">Performance Report</h2>
-    <p>The Performance Report shows the performance for the videos in your account, including video views, videos impressions, play rate, viewed minutes and engagement score. The Performance Report allows the data to be segmented into dimensions:</p>
+    <h2 id="engagement">Calculating video engagement</h2>
+    <p>Engagement is a measure of views, <strong>not</strong> viewers. In reporting the engagement data, we divide the video into 100 equal parts and count the views in each 100th. There is no distinction between one viewer watching a 100th part 5 times, and five viewers watching it 1 time.</p>
+    <p>Also, engagement is a measure of views at particular points in a video, not video views. Repeated views at a particular point by scrubbing back and watching again will increase engagement at that point but not video views.</p>
+    <p>The measurements are rounded in the Analytics UI for presentation. The numbers are a result of counting views by individuals and then normalizing those counts along a percentage of a video's timeline. The export API returns the result of this count. Since these are counted values, there is no simple way to estimate the significance of the value to a specific number of digits.</p>
+    <p>Note that engagement statistics for live streams are not reliable, because the duration of the video is not fixed.</p>
+    <p>It is possible for the engagement score to be greater than 100. Scrubbing and re-watching a video doesn't trigger new video_view events, but it does track video_engagement. For example, say we have a video in a single video player on a page somewhere. The following events show how the video engagement could vary widely:</p>
+    <ol class="bcls-tasklist">
+      <li>No watches yet. Engagement Score: 0.</li>
+      <li>A viewer loads the page and watches the video all the way through. Engagement Score: 100 (100 percent viewed / 1 view).</li>
+      <li>The same viewer scrubs back and watches it all the way through again (browser was not reloaded). Engagement Score: 200 (200 percent viewed / 1 view).</li>
+      <li>Another viewer loads the page and watches the entire video. Engagement Score: 150 (300 percent viewed / 2 views).</li>
+    </ol>
+    <p>For more details on how we calculate video engagement, watch the training video <a href="/analytics/general/calculating-video-engagement-score.html">Calculating Video Engagement</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="recent_historical">Recent and historical data</h2>
+    <p>For 32 days, Brightcove keeps detailed analytics data for videos (views for each one-hundredth of the video duration). After that time, the analytics data is moved to historical data, and only views at the 1%, 25%, 50%, 75%, and 100% points are kept.</p>
+    <p>Exported reports from the Analytics module will include only views at the 1%, 25%, 50%, 75%, and 100% points, even for periods within the past 32 days. For more detailed engagement data within the past 32 days, the <span translate="No">Analytics API</span> must be used.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="details" class="bcls-sectionTitle">Engagement report details</h2>
+    <p>The first column that appears in the body of the report will vary based upon the report dimension that is selected (video, player, or day). All reports will display the following data:</p>
     <ul>
-      <li><strong>Video</strong> - Displays performance metrics on videos</li>
-      <li><strong>Player</strong> - Displays performance metrics on players</li>
-      <li><strong>Source of Traffic</strong> - Displays performance metrics based upon source of traffic</li>
-      <li><strong>Display Domain</strong> - Displays performance metrics based upon the domain the viewer was on when a video was viewed; if the player is in an iframe, the display domain will be recorded as the URL of the page in the iframe. (This corresponds to the <a href="https://apis.support.brightcove.com/analytics/dimension-guides/dimension-destinationdomain.html"><code translate="No">destination_domain</code> dimension</a> of the Analytics API.)</li>
-      <li><strong>Country</strong> - Displays performance metrics based upon the country the video was viewed in</li>
-      <li><strong>Device</strong> - Displays performance metrics for each Device Type - Device Operating System combination that was used to view a video</li>
-      <li><strong>Device Type</strong> - Displays performance metrics by device type</li>
-      <li><strong>Device OS</strong> - Displays performance metrics by device operating system</li>
-      <li><strong>Device Manufacturer</strong> - Displays performance metrics by device manufacturer</li>
-      <li><strong>Browser Type</strong> - Displays performance metrics by browser type</li>
-      <li><strong>Day</strong> - Displays performance metrics based upon day</li>
+      <li><strong>Engagement Score</strong> - a calculation based on the views recorded for each 100th of the video</li>
+      <li><strong>Average Viewed Minutes</strong> - average viewed minutes for the selected dimension (video, player or day)</li>
+      <li><strong>Average Completion Rate</strong> - (video percent viewed / video view) / 100 </li>
+      <li><strong>Views at 1%</strong> - how many views were recorded at the 1% point of the video</li>
+      <li><strong>Views at 25%</strong> - how many views were recorded at the 25% point of the video</li>
+      <li><strong>Views at 50%</strong> - how many views were recorded at the 50% point of the video</li>
+      <li><strong>Views at 75%</strong> - how many views were recorded at the 75% point of the video</li>
+      <li><strong>Views at 100%</strong> - how many views were recorded at the 100% point of the video</li>
     </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Performance Report" src="/assets/images/s-analytics-img/node10104-account-performance.png" /></figure>
-    <p>For detailed information on the Performance report, see the <a href="/analytics/performance-report-reference.html">Performance Report Reference</a>.</p>
+    <p>In all cases, views at x% means that this segment of the video was played back in the player.</p>
+    <p>Note that the <strong>Views at x%</strong> is not the same as a <strong>Video View</strong> in the Performance Report. A video view is counted when a video first starts playing back. The views at 1% is recorded when the first percent is watched. The difference here is that if the first percent is watched multiple times (if the video is set to auto-replay, for instance), the count increases, whereas a video view is counted when the video first starts playing back but is not counted on a replay (unless the user reloads the page or watches another video in the playlist, etc).</p>
+    <aside class="bcls-aside bcls-aside--information">Note: For a complete list of all analytics terms and definitions, see the <a href="/analytics/module/analytics-module-ui-glossary.html">Analytics Glossary</a>.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: Simultaneous report requests within the same account will execute in series. If the reports have large date ranges and many fields are selected, there may be a delay before all the results are returned. A good alternative is to schedule large reports.</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="engagement">Engagement Report</h2>
-    <p>The Engagement Report shows the engagement for the videos in your account. This includes an engagement score and the number of views at the 1%, 25%, 50%, 75% and 100% points of the video. The Engagement Report allows the data to be segmented into dimensions:</p>
+    <h2 id="video" class="bcls-sectionTitle">Viewing video dimension analytics</h2>
+    <p>When the <strong>Video</strong> dimension is selected, a graph will display the overall video engagement for the time period selected. The body of the report lists the video name, video ID, duration and the engagement details for each video.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Account Engagement  Report" src="/assets/images/s-analytics-img/node10105-engagement-report.png" /></figure>
+    <p>Clicking the link for any of the videos will display the video engagement for that video.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Video Engagement  Report" src="/assets/images/s-analytics-img/node10105-video-engagement.png" /></figure>
+    <p>The preview player is synchronized with the engagement graph and provides to ability to see in the video where any engagement spikes or drop-offs occur. By clicking on any point in the engagement graph, the player will play the corresponding point in the video.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Video Engagement in Player" src="/assets/images/s-analytics-img/node10105-engagement-in-player.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="player" class="bcls-sectionTitle">Viewing player dimension analytics</h2>
+    <p>When the <strong>Player</strong> dimension is selected, a graph will display the overall video engagement for the time period selected. The body of the report lists the engagement details for each player.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Engagement by Player" src="/assets/images/s-analytics-img/node10105-player-engagement.png" /></figure>
+    <p>Clicking the link for any of the players will display the video engagement for that player.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="day" class="bcls-sectionTitle">Viewing day dimension analytics</h2>
+    <p>When the <strong>Day</strong> dimension is selected, a graph will display the video engagement for the time period selected. The body of the report lists the engagement details for each day. In the body of the report, you can use the drop down list to view the video engagement by Video or Player.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Engagement by Day" src="/assets/images/s-analytics-img/node10105-day-engagement.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="filter">Using filters</h2>
+    <p>Filters can be used to limit the data that appears in the report. To add a filter, follow these steps.</p>
+    <ol class="bcls-tasklist">
+      <li>Click the <strong>+ Add filters</strong> pill at the top of the report.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="add filter" src="/assets/images/s-analytics-img/node10105-add-filter.png" /></figure>
+      </li>
+      <li>The data can be filtered by <strong>tags</strong>,<strong> custom fields</strong>, <strong>countries</strong> and/or <strong>device types</strong>. Configure the filter criteria using the filter panel. The following example will apply the filter:
+        <ul>
+          <li>Tag = <strong>on demand training</strong> AND</li>
+          <li>Custom field <strong>Product</strong> = <strong>Video Cloud</strong> AND</li>
+          <li>Countries<strong></strong> = <strong>United States</strong></li>
+        </ul>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Day  Performance" src="/assets/images/s-analytics-img/node10105-filter-panel.png" /></figure>
+      </li>
+      <li>Click <span class="button-blue">Apply Filters</span>.</li>
+    </ol>
+    <p>The applied filters will appear in pills at the top of the report. Each pill will display a filter type and up to two values. Up to three pills will be displayed.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Day  Performance" src="/assets/images/s-analytics-img/node10105-filter-pills.png" /></figure>
+    <p>Additional pills are collapsed into an overflow pill and, are displayed in a tooltip on hover.</p>
+    <p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Day  Performance" src="/assets/images/s-analytics-img/node10105-pill-hover.png" /></figure>
+    </p>
+    <p>To remove a filter, click a pill and clear the filter from the filter panel.</p>
+    <h3>Notes on using filters</h3>
     <ul>
-      <li><strong>Video</strong> - Displays engagement metrics on videos</li>
-      <li><strong>Player</strong> - Displays engagement metrics on players</li>
-      <li><strong>Day</strong> - Displays engagement metrics by day</li>
+      <li>&nbsp;Stream type is only available if   Brightcove Live is enabled on the account</li>
+      <li>The custom fields section will be disabled if the account is not enabled for custom fields</li>
+      <li>Filters can be added/removed by using the plus / minus buttons to the right of the filter type</li>
+      <li>Although filters appear to be applied, they are not applicable to all sections of the Analytics module
+        <ul>
+          <li>Tags and custom field filters are not applied when you have drilled into a specific video or player (the only exception being Player by Video or Day dimensions)</li>
+          <li>Engagement graph in the Engagement report</li>
+        </ul>
+      </li>
+      <li>Analytics data may take a bit longer to load when applying filters</li>
+      <li>Filter type
+        <ul>
+          <li><strong>All</strong> - Must include <strong>all</strong> values</li>
+          <li><strong>Any</strong> - May include <strong>any</strong> values</li>
+          <li><strong>None</strong> - Must include <strong>none</strong> of the chosen values</li>
+        </ul>
+      </li>
     </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Engagement  Report" src="/assets/images/s-analytics-img/node10105-engagement-report.png" /></figure>
-    <p>For detailed information on the Engagement report, see the <a href="/analytics/engagement-report-reference.html">Engagement Report Reference</a>.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="trending">Trending Now Report</h2>
-    <p>The Trending Now report will display a graph showing the number of concurrent viewers for the past hour. The Trending Now report can be used to view the  data for VOD, live or both types of videos.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Engagement  Report" src="/assets/images/s-analytics-img/node4233-trending-now.png" /></figure>
-    <p>For detailed information on the Trending Now report, see the <a href="/analytics/trending-now-report-reference.html">Trending Now Report Reference</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="custom">Custom reports</h2>
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be downloaded in comma separated values (.csv) or Microsoft Excel (.xlsx) formats.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Custom Reports are available to Enterprise and Pro publishers.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Custom Report Builder" src="/assets/images/s-analytics-img/node14608-report-builder-ui.png" /></figure>
-    <p>For information on creating custom reports, see the <a href="/analytics/creating-custom-analytics-reports.html">Creating Custom Analytics Reports in the Analytics Module</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="export">Exporting Report Data</h2>
-    <p>Report data can be downloaded as both comma separated values and Excel formats.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Export Data" src="/assets/images/s-analytics-img/node4233-export-data.png" /></figure>
+    <h2 id="export">Exporting report data</h2>
+    <p>Report data can be downloaded as both comma separated values and Excel formats. Note that the export feature saves the data directly from an <span translate="No">Analytics API</span> call. The exported data is not manipulated the way the UI data is, and currently contains all of the underlying data in the report, not just the subset of fields the UI shows. Some of the differences between what is shown in the UI vs. the exported data:</p>
+    <ul>
+      <li>Different units (minutes vs seconds)</li>
+      <li>Rounding of numbers</li>
+      <li>The data export contains both the performance and engagement metrics regardless of where you are in the UI</li>
+    </ul>
+    <p>Having all of the data in the original format from the API allows you to manipulation the data in ways other than what is provided in the UI.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="export" src="/assets/images/s-analytics-img/node10105-export.png" /></figure>
+    <p>The export buttons above the graph will export the graph data. The export buttons above the table will export the table data. Note that the reports support print-friendly style sheets so printing a report or saving to PDF will generate a printer-friendly page.</p>
   </section>
 </article>
 
