@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Publishing a Live Event to YouTube</title>
+        <title>Reviewing Social Analytics</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to publish a live event to YouTube using Brightcove Social.">
+        <meta name="description" content="In this topic you will learn how to monitor the social performance of your videos using Brightcove Social.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1002,7 +1002,7 @@
 
               <li class="nav-item subsection-title">
                 
-                <a class="nav-link" href="/analytics/index.html">
+                <a class="nav-link" href="/analytics/module/index.html">
                   <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Using the Analytics Module</a>
                 
 
@@ -1032,6 +1032,12 @@
                   
                   
                   
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/module/insights-glossary.html">Insights Glossary</a></li>
+                  
+                  
+                  
                 </ul>
               </li>
               
@@ -1040,7 +1046,7 @@
 
               <li class="nav-item subsection-title">
                 
-                <a class="nav-link" href="/analytics/index.html">
+                <a class="nav-link" href="/analytics/reports/index.html">
                   <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Analytics Reports</a>
                 
 
@@ -1072,12 +1078,6 @@
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/analytics/module/insights-glossary.html">Insights Glossary</a></li>
-                  
-                  
-                  
-                  
-                  
                   <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
@@ -1096,7 +1096,7 @@
 
               <li class="nav-item subsection-title">
                 
-                <a class="nav-link" href="/analytics/index.html">
+                <a class="nav-link" href="/analytics/general/index.html">
                   <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;General Information</a>
                 
 
@@ -1207,7 +1207,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/social/publishing-live-event-youtube.html" aria-current="page">Publishing a Live Event to YouTube</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/social/publishing-live-event-youtube.html">Publishing a Live Event to YouTube</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Publishing a Live Event to YouTube</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/social/analytics/">Analytics</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Reviewing Social Analytics</li>
             
             
           </ol>
@@ -2761,132 +2765,104 @@
       
       
 <article class="bcls-article">
-  <h1>Publishing a Live Event to YouTube</h1>
-  <summary>In this topic you will learn how to publish a live event to YouTube using Brightcove Social.</summary>
+  <h1>Reviewing Social Analytics</h1>
+  <summary>In this topic you will learn how to monitor the social performance of your videos using Brightcove Social.</summary>
   <section class="bcls-section">
-    <p>The Brightcove Live to Social Media feature can be used to schedule and then broadcast a live event to YouTube all from within the Social module. To do this, the following tasks will be completed:</p>
+    <p>Brightcove Social provides several reports that can be used to monitor the performance of your videos that are posted to your social media accounts:</p>
     <ul>
-      <li><a href="#schedule">Schedule a YouTube live event</a></li>
-      <li><a href="#live_event">Create a live event and assign it to scheduled social event</a></li>
-      <li><a href="#preview">Preview and broadcast the live stream</a></li>
-      <li><a href="#end">End the live stream</a></li>
+      <li><strong>Dashboard</strong> - Provides a high level overview of video performance on social media accounts. Covered in this topic.</li>
+      <li><strong>Social Views</strong> - Provides an overview of the social view for videos shared to social media accounts. For information, see <a href="/social/analytics/reviewing-social-views-analytics.html">Reviewing Social Views Analytics</a>.</li>
+      <li><strong>Social Engagement</strong> - Provides an overview of the social engagement (Likes, Shares, Retweets, etc.) for videos shared to social media accounts. For information, see <a href="/social/analytics/reviewing-social-engagement-analytics.html">Reviewing Social Engagement Analytics</a>.</li>
     </ul>
-    <aside class="bcls-aside bcls-aside--information">Note: Your account must be enabled for Brightcove Live before using this feature.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="schedule">Scheduling a YouTube Live event</h2>
-    <p>Scheduling a YouTube live event in advance allows you to publicize the event to your YouTube&nbsp;audience before the event begins. Before a live event can be scheduled, a publishing destination for the YouTube site you are going to stream the event to must be created. For information on creating publishing destinations, see <a href="/social/creating-social-media-publishing-destinations.html">Creating Social Media Publishing Destinations</a>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: To create a Live stream on YouTube, you need to <a href="https://support.google.com/youtube/answer/9227509?hl=en&ref_topic=9257984"> verify your account</a>&nbsp;then enable Live streaming for your account, this step may take up to 24 hrs to activate.</aside>
-    <p>To schedule an upcoming YouTube live video, follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the<strong> Social </strong>Module.</li>
-      <li>From the <strong>Published</strong> page, click <span class="button-blue">Create Live Event</span>.</li>
-      <li>Select the destination the event will be streamed to and then click <span class="button-blue">Continue</span>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/live-yt-select-dest.png" /></figure>
-      </li>
-      <li>On the Schedule a Live Event page, optionally, enter a <strong>Title</strong>,&nbsp;<strong>Description</strong> and select a <strong>YouTube Category</strong>. These values will appear in your YouTube post and in the live stream.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/live-yt-event-info.png" /></figure>
-      </li>
-      <li>In the <strong>Schedule</strong> section, use the calendar and clock controls to set the <strong>Event Date &amp; Time</strong> for the event.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/live-yt-schedule.png" /></figure>
-      </li>
-      <li>Configure the<strong> </strong>remaining settings as appropriate.
-        <ul>
-          <li><strong>DVR</strong> - If Enabled,  viewers will be able to pause, rewind, and continue during the event. Once a viewer resumes playing, the event will continue from where they paused.</li>
-          <li><strong>Visibility</strong> - This option allows you to select the <strong>Privacy Settings</strong> of your live video</li>
-          <li><strong>License</strong> - This option allows you to select the <strong>License and Rights Ownership</strong> of the video</li>
-        </ul>
-        <figure class="bcls-figure"><img alt="" class="bcls-image--no-border" src="/assets/images/s-social-img/live-yt-settings.png" /></figure>
-      </li>
-      <li>Click the <strong>Add Custom Image</strong> link at the top of the page.</li>
-      <li>Click <strong>Select Image</strong> to browse and select an image or drag and drop an image to use. This image will appear in the YouTube post announcing the live event. <a href="https://support.google.com/youtube/answer/72431?hl=en-GB#zippy=,image-size-and-resolution),new-videos,image-size-and-resolution">YouTube recommends</a> that the image:
-        <ul>
-          <li>Have a resolution of 1,280 x 720 (with a minimum width of 640 pixels)</li>
-          <li>Be a JPG, GIF or PNG</li>
-          <li>Remain under the 2 MB limit</li>
-          <li>Have a 16:9 aspect ratio</li>
-        </ul>
-        <p>The preview image will update to display the new image.</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/live-yt-new-image.png" /></figure>
-      </li>
-      <li>Click <span class="button-blue">Ok, Got It</span>.</li>
-      <li>Click <strong>Schedule Event</strong> to schedule the event in YouTube.</li>
-      <li>Click the <strong>View on YouTube</strong> link at the top of the page to view the post on YouTube.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/live-yt-yt-event-scheduled.png" /></figure>
-      </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="live_event">Creating a Live event</h2>
-    <p>Before you can start streaming a live event, a live event must be created using the Live module. Live events created in the Live module will be available to broadcast using the Social module.</p>
-    <p>When creating an event in the Live module, keep the following points in mind:</p>
+    <p>To access the social analytics, open the Social module and click <strong>Social Analytics</strong> in the left navigation.&nbsp; </p>
+    <p>Start by <a href="#timespan">selecting a time span</a>. To select a report, click a tab at the top of the page. The dashboard is displayed by default.
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report tabs" src="/assets/images/s-social-img/node16643-report-tabs.png" /></figure>
+    </p>
+    <p>The Dashboard is organized into the following sections:</p>
     <ul>
-      <li>If you create a recurring event, you can create the event ahead of time and activate it when you are ready to start streaming to YouTube.</li>
-      <li>If you create a regular event (non-recurring), the live event must be started within 30 minutes of the event being created. If you are using a regular event, it should be created right before you are ready to go live on YouTube.</li>
+      <li><a href="#videoviews">Video views at a glance</a></li>
+      <li><a href="#topdest">Top destinations</a></li>
+      <li><a href="#topvideos">Top videos</a></li>
+      <li><a href="#trend">Video views trend</a></li>
     </ul>
-    <p>For detailed information on creating live events using the Live module, see <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</p>
-    <p>To create a new live event, follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Live</strong> module.</li>
-      <li>Click <span class="button-blue">Create Event</span>. The Create Live Event page will open.</li>
-      <li>Enter the <strong>Event Name</strong> and any required fields.</li>
-      <li>For the <strong>Streaming to Social Media</strong> option, select <strong>Allowed</strong>.</li>
-      <li>Select a <strong>Live Ingest Profile</strong>.</li>
-      <li>Click <strong>Stream Options</strong> and select the <strong>Region</strong> closest to where your encoder is located.</li>
-      <li>If you wish to create a recurring event, in the <strong>Advanced Options</strong> section, select the <strong>Create this as a recurring event using a Static Entry Point (SEP)</strong> option.</li>
-      <li>Click <span class="button-blue">Create Event</span>. The Control Room page will open and display a <strong>Streaming Endpoint (RTMP URL)</strong> and <strong>Stream Name</strong> which we will be used by your encoder.</li>
-      <li>To connect a live event to a scheduled social event using the Live module, click <strong>Connect to Social Media</strong> in the left navigation. Note that the live event can also be assigned using the <a href="#social_assign">Social module</a>.</li>
-      <li>Click on an event and then click <span class="button-blue">Connect</span>. <img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/live-yt-connect-social-media.png" /> </li>
-      <li>Click the <strong>Control Room</strong> link in the left navigation to return to the control room.</li>
-    </ol>
-    <p>The <strong>Streaming Endpoint (RTMP URL)</strong> and <strong>Stream Name</strong> values will be used by your encoder. Start the live stream and confirm it appears in the Control Room.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="social_assign">Assigning a live event to a scheduled social event</h2>
-    <p>If the live event wasn't assigned to a scheduled event using the Live module, the live event to use must be selected in the Social module. To assign a live event to a scheduled event using the Social module, follow these steps.</p>
-    <aside class="bcls-aside bcls-aside--information"> These steps are only required if the live event was not assigned in the Live module.</aside>
-    <ol class="bcls-tasklist-restart">
-      <li>Return to the <strong>Social</strong> module and edit the scheduled event.</li>
-      <li>Click the <strong>Connect Video Source</strong> link at the top of the page.</li>
-      <li>Select the live event from the <strong>Select Video Source</strong> dropdown list.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/live-yt-select-video-source.png" /></figure>
-      </li>
-      <li>Click <span class="button-blue">Connect Source</span>.</li>
-    </ol>
+    <h2 id="timespan">Selecting a time span</h2>
+    <p>To specify the time period for the reports, you can click on a quick date or use the calendar control. Social analytics data always uses the GMT time zone.</p>
+    <div class="BCL-subsection">
+      <h3>Using a quick date</h3>
+      <p>A series of quick dates are at the top of the page. The following quick dates are available:</p>
+      <ul>
+        <li>Last 7 days</li>
+        <li>Last 30 days</li>
+        <li>Previous month</li>
+        <li>2 months ago</li>
+      </ul>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="quick dates" src="/assets/images/s-social-img/node16643-quick-dates.png" /></figure>
+      <p>Click on a quick date to update the report.</p>
+    </div>
+    <div class="BCL-subsection">
+      <h3>Using the calendar control</h3>
+      <p>You can also select a start and end date by clicking on the calendar control.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="date selector" src="/assets/images/s-social-img/node16643-date-picker.png" /></figure>
+      <p>Click <strong>Apply</strong> to update the report.</p>
+    </div>
   </section>
   <section class="bcls-section">
-    <h2 id="preview">Previewing and broadcasting the live stream</h2>
-    <p>Before previewing the event in the Social module, the live event should be started and should be visible in the Live module.</p>
-    <p>To preview and broadcast the live stream, follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>If the event was assigned using the Live module, return to the Social module and edit the scheduled event.</li>
-      <li>Confirm the stream preview appears. This is a preview from the Live module.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/live-yt-social-module-preview.png" /></figure>
-      </li>
-      <li>Click the <strong>Preview Live Stream </strong>link at the top of the page and then click <strong>Preview</strong>. Click the <strong>Play</strong> button to preview the YouTube live stream. This is the stream that YouTube will broadcast so confirm it is as expected.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/live-yt-preview-yt-stream.png" /></figure>
-      </li>
-      <li>To broadcast the live stream to YouTube, click the <strong>Broadcast to Viewers</strong> link and then click <strong>Broadcast Stream</strong>. The preview will update to show the number of viewers.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/live-yt-broadcast-youtube.png" /></figure>
-      </li>
-    </ol>
-    <p>Click the <strong>View on YouTube</strong> link under the player to view the YouTube player.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/live-yt-live-on-youtube.png" /></figure>
-    <p>As YouTube comments are added by viewers, they can be viewed inside of the Social module by clicking on the <strong>Comment Feed</strong> tab.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/live-yt-comment-feed.png" /></figure>
+    <h2 id="videoviews">Video views at a glance</h2>
+    <p>The Video Views at a Glance section will display the number of video views from Brightcove players, Facebook, YouTube, LinkedIn and total views for the time period selected. The Updated date is the latest date that Video Cloud has social analytics data for. Typically, there is a 24-48+ hour delay before social platforms update the views and engagement data in their APIs.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The button "Create Post With Video" in Facebook analytics will create a new secondary post of your video added to the one created by Brightcove Social, causing the appearance of two identical video posts. Brightcove Social Analytics will only present the data from the original one.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="views at a glance" src="/assets/images/s-social-img/node16643-video-views.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Note: The Twitter Insights APIs don't report media views therefore viewing data is not available as part of the social analytics.</aside>
+    <p>Clicking on the <strong>MY SITES &amp; APPS</strong> link will open the Video Cloud Analytics Performance Report.</p>
+    <p>Note that views are counted differently by each social media platform:</p>
+    <ul>
+      <li><strong>My Sites &amp; Apps</strong> - Brightcove counts a video view when a video begins to play</li>
+      <li><strong>Facebook</strong> - Video view counted when viewer watches a video for at least 3 seconds</li>
+      <li><strong>YouTube</strong> - Video view counted when viewer watches a video for "around" 30 seconds</li>
+    </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="end">Ending the live stream</h2>
-    <p>To end the live stream, follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Return to the <strong>Social</strong> module and edit your scheduled event.</li>
-      <li>Click the <strong>End Social Live Event</strong> link at the top of the page and then click <strong>End Live Event</strong>.</li>
-      <li>Return to the Live module to end the event and make sure to stop your encoder.</li>
-      <li>If you were using a recurring event, return to the Live module and deactivate the event.</li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information"> Make sure the encoder is closed and stopped when the live stream is complete. Leaving a connection open between any encoder and Brightcove, even when no data is being sent, may result in unexpected connection charges.</aside>
-    <p>Completed events will appear in the Social module on the Published page. Clicking the delete icon (<img alt="" src="/assets/images/s-social-img/live-yt-delete-icon.png" />) will remove the event from YouTube.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/live-yt-event-complete.png" /></figure>
+    <h2 id="topdest">Top destinations</h2>
+    <p>The Top Destinations section will display the top 5 destinations that had the most views for the time period selected.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="top destinations" src="/assets/images/s-social-img/node16643-top-dest.png" /></figure>
+    <p>Clicking on the video title will open the <a href="/social/analytics/reviewing-social-views-analytics.html">social views analytics</a> for that video.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="topvideos2">Top videos</h2>
+    <p>The Top Videos section will display the top 5 videos with the most views for the time period selected.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="top videos" src="/assets/images/s-social-img/node16643-top-videos.png" /></figure>
+    <p>Clicking on the video title will open the <a href="/social/analytics/reviewing-social-views-analytics.html">social views analytics</a> for that video.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="trend">Video views trend</h2>
+    <p>The Video Views Trend graph will display the number of video views for the videos posted to your social media accounts for the time period selected. Hovering over a line in the graph will display the data for that date.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The Twitter Insights APIs don't report media views therefore viewing data is not available as part of the social analytics.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="video views trend" src="/assets/images/s-social-img/node16643-video-views-graph.png" /></figure>
+    <p>The legend to the right of the graph can be used to select the level of detail to display:</p>
+    <ul>
+      <li><strong>My Sites &amp; Apps</strong> - Display the number of video views from Brightcove players and apps</li>
+      <li><strong>Facebook</strong> - Display the number of video views on Facebook</li>
+      <li><strong>YouTube</strong> - Display the number of video views on YouTube</li>
+      <li><strong>LinkedIn</strong> - Display the number of video views on LinkedIn</li>
+      <li><strong>Total</strong> - Display the total number of video views across all platforms</li>
+    </ul>
+    <p>The YouTube views shown in the analytics reports are collected from the <a href="https://youtube.com/analytics">YouTube Analytics Overview</a> report. YouTube does not guarantee that this data is real-time data. Therefore, you may see delays of several days before the views and engagement appear in this report. Once the data is in the YouTube Analytics, it will be picked up by the nightly data collectors for the Brightcove Social Analytics.</p>
+    <p>If you need more recent real-time viewing data, YouTube also provides <a href="https://support.google.com/youtube/answer/6096647">real-time reports</a> with estimates of viewing data during the past 48 hours for your top 25 most recently published videos. You can find the real-time report for your YouTube channel <a href="https://www.youtube.com/analytics?o=U#r=realtime">here</a>. Brightcove Social Analytics is not collecting this real-time data since it provides estimated views (as opposed to actuals) and only applies to recent videos.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="deletedvideos">Deleted videos</h2>
+    <p>How social analytics appear for deleted videos depends on how the video was distributed, and, if the video was AutoSync'd, what the AutoSync settings were.</p>
+    <ul>
+      <li>If the video was distributed using the social publish feature, deleting it from Video Cloud does not remove the video from the social platform and Social will continue to collect analytics for the video</li>
+      <li>If the video was distributed using the AutoSync feature, deleting it from Video Cloud may delete the video from the social platform, depending on the AutoSync settings:
+        <ul>
+          <li>If the 'Delete distributed video on &lt;social platform&gt;' option was selected, then the Social module would have removed the video from the social platform and would stop trying to collect analytics data.</li>
+          <li>If any of the options that leave the video on the social platform (exact details of these options vary from platform to platform) were chosen, then the Social module will continue to attempt to collect analytics for it.</li>
+        </ul>
+      </li>
+      <li>Social analytics will continue to display any existing social analytics data for videos that have been deleted</li>
+    </ul>
   </section>
 </article>
 

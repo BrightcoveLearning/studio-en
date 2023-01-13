@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Creating a Video Clip Using Brightcove Social</title>
+        <title>Setting the Privacy Status for a Video</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to create a video clip using Brightcove Social.">
+        <meta name="description" content="This topic describes how you can set the privacy status for videos that are distributed  to YouTube using Brightcove Social.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1002,7 +1002,7 @@
 
               <li class="nav-item subsection-title">
                 
-                <a class="nav-link" href="/analytics/index.html">
+                <a class="nav-link" href="/analytics/module/index.html">
                   <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Using the Analytics Module</a>
                 
 
@@ -1032,6 +1032,12 @@
                   
                   
                   
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/analytics/module/insights-glossary.html">Insights Glossary</a></li>
+                  
+                  
+                  
                 </ul>
               </li>
               
@@ -1040,7 +1046,7 @@
 
               <li class="nav-item subsection-title">
                 
-                <a class="nav-link" href="/analytics/index.html">
+                <a class="nav-link" href="/analytics/reports/index.html">
                   <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Analytics Reports</a>
                 
 
@@ -1072,12 +1078,6 @@
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/analytics/module/insights-glossary.html">Insights Glossary</a></li>
-                  
-                  
-                  
-                  
-                  
                   <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
@@ -1096,7 +1096,7 @@
 
               <li class="nav-item subsection-title">
                 
-                <a class="nav-link" href="/analytics/index.html">
+                <a class="nav-link" href="/analytics/general/index.html">
                   <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;General Information</a>
                 
 
@@ -1183,7 +1183,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/social/creating-video-clip-using-brightcove-social.html" aria-current="page">Creating a Video Clip</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/social/creating-video-clip-using-brightcove-social.html">Creating a Video Clip</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Creating a Video Clip Using Brightcove Social</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/social/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Setting the Privacy Status for a Video</li>
             
             
           </ol>
@@ -2761,99 +2765,59 @@
       
       
 <article class="bcls-article">
-  <h1>Creating a Video Clip Using Brightcove Social</h1>
-  <summary>In this topic you will learn how to create a video clip using Brightcove Social.</summary>
+  <h1>Setting the Privacy Status for a Video</h1>
+  <summary>This topic describes how you can set the privacy status for videos that are distributed  to YouTube using Brightcove Social.</summary>
   <section class="bcls-section">
-    <p>Brightcove Social provides the ability to create video clips from existing videos in your Video Cloud account. There are several reasons you might want to create a clip:</p>
-    <ul>
-      <li>To create a short, teaser clip that can be posted to social media</li>
-      <li>To limit the length of a video that you want to post (most platforms limit the length of videos)</li>
-      <li>You have found that shorter videos perform better on social media</li>
-    </ul>
+    <p>When you create a YouTube publishing destination, one of the default properties that can be set is the YouTube privacy setting. By default, there are three options, <strong>Public</strong>, <strong>Private</strong> and <strong>Unlisted</strong>. When videos are published to YouTube, the privacy setting for all videos will be set to the selected setting.</p>
+    <p>You may have a cases where the YouTube privacy setting for each video should be different. In this case, a custom field associated with the video can be used to control the privacy setting allowing each video to have a different privacy setting. When the video is published to YouTube using Brightcove Social, the privacy setting will be set to the value specified by the custom field value.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="create">Creating a clip</h2>
-    After a clip is saved, it will be saved as a video in your Video Cloud account. Follow these steps to create a clip.
-    <ol class="bcls-tasklist-restart">
-      <li>Open the<strong> Social </strong>Module.</li>
-      <li>Click <strong>Videos</strong> in the left navigation. A list of videos in your Video Cloud account will display.</li>
-      <li>Click on the video to create a clip from and then click <strong> Clip</strong>. The clip editor will open.
-        <aside class="bcls-aside bcls-aside--information">
-          <ul>
-        <li>In order to create a clip, the source video must have at least one MP4 rendition available. If the <strong> Clip</strong> button is disabled, the video may not have an MP4 rendition available.</li>
-        <li>You cannot create a clip from another clip. If you selected a clipped video, the <strong> Clip</strong> button will be disabled.</li>
-        <li>You cannot create a clip from a video that has DRM enabled (lock appears in the video thumbnail) and was transcoded using a legacy ingest profile. DRM enabled videos transcoded using a Dynamic Delivery ingest profile can be clipped. If a clip can't be created, the <strong> Clip</strong> button will be disabled.</li>
-        <li>Videos with closed captions can be clipped via Social, but the resulting clipped video will not have captions. You will need to upload new captions to the clipped video, and Social will use those when publishing.</li>
-      </ul>
-      </aside>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16672-create-clip.png" /></figure>
-      </li>
-      <li>Enter a <strong>Clip Name</strong>.</li>
-      <li>Drag the handles that appear on the timeline to trim the beginning and end of your video. You can also enter specific start and end times using the edit fields. More precise control when editing may be achieved using the <a href="#keys">keyboard shortcuts</a>. When you are done, click <span class="button-blue">Continue</span>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16672-clipped-video.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: The player in the clipping modal will scrub to within a frame or two of the actual frame at the time displayed. The behavior is the same whether you use the mouse to drag the sliders or use the keyboard shortcuts to set the clip points. The clip editor clips at exactly the times provided.</aside>
-      </li>
-      <li>Review the clip information. The Clip Name, Tags and any custom fields created for the account can be edited.
-        <aside class="bcls-aside bcls-aside--information">Note: You may want to remove tags that will cause the clip to appear on your existing playlists or to be auto-synced to a social destination.</aside>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16672-clip-info.png" /></figure>
-      </li>
-      <li>When done, select an option:
-        <ul>
-          <li><span class="button-blue">Save</span> - Starts transcoding and then saves the clip in your Video Cloud account.</li>
-          <li><span class="button-blue">Save &amp; Publish...</span> - Starts transcoding and then saves the clip in your Video Cloud account. You also can select the destination(s) to publish the video to. There may be a delay for published clips to appear on your social media sites as the video must be transcoded.</li>
-          <li><span class="button-blue">Cancel</span> - Discards the clip.</li>
-        </ul>
-      </li>
-    </ol>
-    <p>Clips that are saved are transcoded using the ingest profile designated as the <strong>Social clipping default</strong> for the account. For information on setting default ingest profiles, see <a href="/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a>.</p>
-    <p>Note that when creating clips, the entire source video must be downloaded. For longer source videos, it may take longer before the clip is available in your Video Cloud account.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: The clip source file name will be set to the same source file name as the source video.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="keys">Using keyboard shortcut keys</h2>
-    <p>More precise control over the clipping can be done using the keyboard shortcut keys:</p>
+    <h2 id="customfield">Creating the custom field</h2>
+    <aside class="bcls-aside bcls-aside--information">Note: Custom fields are available only to Professional and Enterprise accounts.</aside>
+    <p>Start by adding a custom field to your account, <strong>yt_privacy_status</strong> of type <strong>List</strong>. For information on adding custom fields to an account see <a href="/admin/creating-custom-metadata-fields.html">Creating Custom Metadata Fields</a>. Setting the value of this custom field controls the YouTube video privacy setting:</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th scope="col">Shortcut</th>
-          <th scope="col">Description</th>
+          <th scope="col"><strong>yt_privacy_status</strong></th>
+          <th scope="col">YouTube Video Privacy Setting</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td >J <em>or</em> ←</td>
-          <td >Back one frame</td>
+          <td>private</td>
+          <td>private</td>
         </tr>
         <tr>
-          <td >K</td>
-          <td >Play / Pause</td>
+          <td>public</td>
+          <td>public</td>
         </tr>
         <tr>
-          <td >L <em>or</em> →</td>
-          <td >Forward one frame</td>
+          <td>unlisted</td>
+          <td>unlisted</td>
         </tr>
         <tr>
-          <td >I</td>
-          <td >Mark current frame as in point</td>
-        </tr>
-        <tr>
-          <td >O</td>
-          <td >Mark current frame as out point</td>
-        </tr>
-        <tr>
-          <td >Space bar</td>
-          <td >Play / Pause</td>
-        </tr>
-        <tr>
-          <td >⇧ + I</td>
-          <td >Go to in point</td>
-        </tr>
-        <tr>
-          <td >⇧ + O</td>
-          <td >Go to out point</td>
+          <td>value is null or unset</td>
+          <td>public</td>
         </tr>
       </tbody>
     </table>
+    <p class="BCL-aside">Tip: By using a <strong>List</strong> type for the custom field, users will be able to select the status using a dropdown list vs. having to type a value in.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node15611-custom-field.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="assign">Assigning a value to the custom field</h2>
+    <p>Once the custom field has been added, the value can be set using the Media module.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node15611-set-status.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="youtube">Editing the publishing destination</h2>
+    <p>Edit the YouTube publishing destination and set the <strong>Privacy Setting</strong> default to <strong>Use YT_Privacy_Status Custom Field</strong>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node15611-visibility-default.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="publish">Publishing the video</h2>
+    <p>When a video is selected and the YouTube destination is selected, it will have the privacy status that was set using the custom field.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node15611-video-visibility.png" /></figure>
   </section>
 </article>
 
