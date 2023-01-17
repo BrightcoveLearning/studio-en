@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Configuring Server-Side Ad Settings</title>
+        <title>Ingest Profiles Best Practices</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage and create Live and VOD server-side ad configurations.">
+        <meta name="description" content="This topic provides guidance on creating custom ingest profiles.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -2334,7 +2334,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/configuring-server-side-ad-settings.html" aria-current="page">Configuring Server-Side Ad Settings</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Configuring Server-Side Ad Settings</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/ingest-profiles/">Ingest profiles</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Ingest Profiles Best Practices</li>
             
             
           </ol>
@@ -2760,121 +2764,47 @@
       <br>
       
       
-<h1>Configuring Server-Side Ad Settings</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn how to manage and create Live and VOD server-side ad configurations.</summary>
+  <h1>Ingest Profiles Best Practices</h1>
+  <summary>This topic provides guidance on creating custom ingest profiles.</summary>
   <section class="bcls-section">
-    <p>Ad configurations define various aspects of ad playback, including ad calls, timing, beacons and other ad configuration options. The Server-Side Ad Settings define the ads that can be requested during video on demand (VOD) videos and during live events. Server-side ads take advantage of Brightcove's Server-Side Ad Insertion (SSAI) technology and provide these main features:</p>
+    <h2 id="How_many_profiles_should_I_have?">How many profiles should I have?</h2>
+    <p>You may define up to 200 custom profiles. However, you should generally create only as many as you need, in order to avoid confusion when selecting profiles for ingestion jobs.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="How_do_I_manage_my_profiles">How do I manage my profiles?</h2>
+    <p>You can use the <a href="https://studio.brightcove.com/products/videocloud/admin/ingestprofiles">Ingest Profiles Management page in Studio</a> to manage your ingest profiles. A variety of options are available within this interface including:</p>
     <ul>
-      <li>Since ads are stitched into the on-demand or live video stream on the server side, they are not affected by ad blockers</li>
-      <li>For live events, ads are inserted at cue points sent from your encoder or you can create an instant cue point using the 
-    
-          <a href="/live/live-module/creating-and-managing-live-events-using-live-module.html#ad">Live module Control Room</a>
-        
-           
-        </li>
-      <li>You can configure fill slates to fill any unused ad time</li>
+      <li>Setting your default profile</li>
+      <li>Creating new profiles</li>
+      <li>Cloning from existing profiles</li>
+      <li>Editing custom profiles</li>
+      <li>Removing unneeded profiles</li>
     </ul>
-    <p>To learn more about server-side advertising, see <a href="https://player.support.brightcove.com/plugins/implementing-server-side-ads-brightcove-player.html">Implementing Server-Side Ads with the Brightcove Player</a>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note:
-      <ul>
-        <li>Before you can use SSAI, your Video Cloud account needs to be configured for Dynamic Delivery and enabled for SSAI. Contact your Customer Success Manager for details.</li>
-        <li>VMAP for Brightcove Live SSAI is not currently supported.</li>
-        <li>Although there is no prefetch functionality for SSAI ads, we delegate the ad position logic to the ad provider. Dynamic Delivery makes all the add calls up front. If we get an ad from the ad provider and it is transcoded in our system we will insert it into the stream.</li>
-      </ul>
+    <p>If you need programmatic access to your ingest profiles, you can create, read, update, and delete custom profiles using the <a href="https://apis.support.brightcove.com/ingest-profiles/">Ingest Profiles REST API</a>. Note that this requires you to set up <a href="https://apis.support.brightcove.com/oauth/">OAuth credentials</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="How_do_I_update_my_profiles">How do I update my profiles?</h2>
+    <p>See the <a href="#How_do_I_manage_my_profiles">section above</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="How_many_renditions_can_a_profile_have">How many renditions can a profile have?</h2>
+    <p>A <a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-ingest-api-dynamic-delivery.html">Dynamic Delivery</a> profile can have up to 37 renditions. Note that for custom Dynamic Delivery profiles, you can only select the <a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html#Renditions">pre-defined renditions</a> that are currently available.</p>
+    <p>If you are making a custom Context Aware Encoding profile, <code translate="No">min_renditions</code> has a minimum values of 1, and <code translate="No">max_renditions</code> has a maximum value of 15.</p>
+    <aside class="bcls-aside bcls-aside--information">
+      <p>Note that unnecessary renditions will add to your managed storage costs, so you should not create renditions that are unlikely to be played given kind of videos you publish and the audiences and devices that you target.</p>
+      <p>The standard profiles in your account are designed to provide good viewing experiences over typical viewer bandwidths and the most commonly used devices.</p>
     </aside>
-    <p>The Server-Side Ad Settings page is used to manage the Live and VOD ad configurations. Note that to access the Server-Side Ad Settings page, you must be a user with the Administrator role.</p>
-    <p>To access the Server-Side Ad Settings page:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Login to Studio.</li>
-      <li>Open the <strong>Admin</strong> module and then<strong> Server-Side Ad Settings</strong>. A list of all ad configurations will be displayed.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18748-list-of-ad-configs.png" /></figure>
-      </li>
-    </ol>
-    <p>To create a new add configuration, click <span class="button-blue">+ Add configuration ∧</span> and then click the specific type of ad to create:</p>
-    <ul>
-      <li><a href="#vod">Video on Demand (VOD)</a></li>
-      <li><a href="#live">Live</a></li>
-    </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18748-create-ad.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="vod">Creating a Video On Demand ad configuration</h2>
-    <aside class="bcls-aside bcls-aside--information">Note: Server-side ad configurations can also be managed using the Server-Side Ad Insertion API. For information, see the <a href="https://ssai.support.brightcove.com/vod/guides/video-cloud-ssai-ad-config-api.html">Video Cloud SSAI Ad Config API</a> topic.</aside>
-    <p>To add a Video On Demand (VOD) ad configuration, follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>On the Server-Side Ad Settings page, click <span class="button-blue">+ Add configuration ∧</span> &gt; <strong>VOD</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18748-create-vod-ad.png" /></figure>
-      </li>
-      <li>Enter a <strong>Name</strong>.</li>
-      <li>Select the <strong>Ad Server Response</strong>:
-        <ul>
-          <li>DFP Ad Rules</li>
-          <li>DFP VMAP</li>
-          <li>Smart XML</li>
-          <li>VAST 3.0</li>
-        </ul>
-      </li>
-      <li>Enter the<strong> Ad Tag</strong>.</li>
-      <li>Check <strong>Disable server-side beacons</strong> to disable server-side beacons. When disabled, SSAI will not fire any beacons server-side and will include all beacons in the VMAP output.</li>
-      <li>Click <span class="button-blue">Save</span>.</li>
-    </ol>
-    <p>To edit an ad configuration, click the ad name, make the changes and then click <span class="button-blue">Save</span>. To delete an ad config, check the box next to the ad and then click <strong>Delete</strong>. To duplicate an ad config, check the box next to the ad and then click <strong>Duplicate</strong>.</p>
-    <p>Once VOD ad configurations have been created, open the Players module and click on a player to view the properties. When the <strong>Enable Server-Side (SSAI)</strong> advertising property is enabled, an ad configuration can be selected. For information on configuring player advertising, see 
-        
-        <a href="/players/general/configuring-player-advertising-using-players-module.html">Configuring Player Advertising using the Players Module</a>.
-      
-          
-      </p>
+    <h2 id="Naming_custom_profiles">Naming custom profiles</h2>
+    <p>Custom profile names should not include spaces or special characters. Use letters and numbers, and replace spaces with dashes (-) or underscores (_).</p>
+    <p>To avoid user errors, try to name profiles in a way that will clearly communicate to the people who upload videos what the profile should be used for.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="live">Creating a Live ad configuration</h2>
-    <aside class="bcls-aside bcls-aside--information"> Note: Server-side Live ad configurations can also be managed using the Live API. For information, see <a href="https://apis.support.brightcove.com/live-api/ssai/live-api-server-side-ad-insertion-ssai.html#Create_an_ad_configuration">Brightcove Live API: Server-Side Ad Insertion (SSAI)</a>.</aside>
-    <p>To add a Live ad configuration, follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>On the Server-Side Ad Settings page, click <span class="button-blue">+ Add configuration ∧</span> &gt; <strong>Live</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18748-create-live-ad.png" /></figure>
-      </li>
-      <li>Enter a <strong>Name</strong>.</li>
-      <li>Select the <strong>Ad Server Response</strong>:
-        <ul>
-          <li>VAST</li>
-          <li>DFP (Ad Rules)</li>
-          <li>Smart XML</li>
-        </ul>
-      </li>
-      <li>Enter the<strong> Ad Tag</strong>.</li>
-      <li>(Optional) Enable <strong>Ad Tracking</strong>. This feature must be configured with the help of Brightcove Support. The Ad Tracking % gives you the ability to select a &quot;sample rate&quot;, this can be useful when you just need to view averages.</li>
-      <li>(Optional) Enable <strong>Client Options</strong>. For information, see the <a href="#player-ssai">Player Enhancements for Live SSAI</a> section below.</li>
-      <li>Click <span class="button-blue">Save</span>.</li>
-    </ol>
-    <p>To edit an ad configuration, click the ad name, make the changes and then click <strong>Save</strong>. To delete an ad config, check the box next to the ad and then click <strong>Delete</strong>. To duplicate an ad config, check the box next to the ad and then click <strong>Duplicate</strong>.</p>
-    <p>Once Live ad configurations have been created, when an event is created with the <strong>Enable Server-Side Ad Insertion (SSAI)</strong> property enabled, an ad configuration can be selected in the Control Room. For information on creating live events, see 
-    
-        <a href="/live/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.
-      
-        
-    </p>
-    <h3 id="player-ssai">Player Enhancements for Live SSAI</h3>
-    <p>Brightcove's Player Enhancements for Live SSAI allows you to add client-side components to live streams, including ad counts, ad countdown timers, click through ads and companion ads. For details, see the <a href="https://apis.support.brightcove.com/live-api/ssai/overview-player-enhancements-live-ssai.html">Overview: Player Enhancements for Live SSAI</a> document.</p>
-    <p>To use this feature, contact your Customer Success Manager to enable your account for:</p>
-    <ul>
-      <li> Live streams</li>
-      <li>Server-Side Ad Insertion (SSAI)</li>
-      <li>Player Enhancements for Live SSAI</li>
-    </ul>
-    <p>To add player enhancements, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>On the Server-Side Ad Settings page, click <span class="button-blue">+ Add configuration ∧</span> &gt; <strong>Live</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Create Live ad configuration" src="/assets/images/s-admin-img/node18748-create-live-ad.png" /></figure>
-      </li>
-      <li>Enter the data as described in the <a href="#live">add a Live ad configuration</a> steps above.</li>
-      <li>Select <strong>Client Options Enabled</strong> to see a list of feature options.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Client Options Enabled" src="/assets/images/s-admin-img/node18748-client-options-enabled.png" /></figure>
-      </li>
-      <li>Select the client-side components that you want to add to your live stream.</li>
-      <li>Click <span class="button-blue">Save</span>.</li>
-    </ol>
+    <h2 id="What_profile_should_I_set_as_default">What profile should I set as default?</h2>
+    <p>Any standard or custom profile can be set as the default either in Studio or through the Ingest Profile API. The default will only be used if the user does not specify a particular profile (either in the Upload module or using the Dynamic Ingest API).</p>
+    <p>We recommend that you set the default profile to one that would not be a very bad choice if the user forgets to specify a particular profile.</p>
   </section>
 </article>
 

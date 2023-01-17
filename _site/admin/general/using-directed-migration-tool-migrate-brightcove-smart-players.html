@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Ingest Profiles Best Practices</title>
+        <title>Using the Directed Migration Tool</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic provides guidance on creating custom ingest profiles.">
+        <meta name="description" content="In this topic you will learn how to use the Directed Migration Tool to migrate Brightcove Smart Players to Brightcove Players.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -2444,7 +2444,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/ingest-profiles-best-practices.html" aria-current="page">Ingest Profiles Best Practices</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/ingest-profiles-best-practices.html">Ingest Profiles Best Practices</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Ingest Profiles Best Practices</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Using the Directed Migration Tool</li>
             
             
           </ol>
@@ -2760,50 +2764,104 @@
       <br>
       
       
+<h1>Using the Directed Migration Tool</h1>
 <article class="bcls-article">
-  <h1>Ingest Profiles Best Practices</h1>
-  <summary>This topic provides guidance on creating custom ingest profiles.</summary>
+  <summary>In this topic you will learn how to use the Directed Migration Tool to migrate Brightcove Smart Players to Brightcove Players.</summary>
   <section class="bcls-section">
-    <h2 id="How_many_profiles_should_I_have?">How many profiles should I have?</h2>
-    <p>You may define up to 200 custom profiles. However, you should generally create only as many as you need, in order to avoid confusion when selecting profiles for ingestion jobs.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="How_do_I_manage_my_profiles">How do I manage my profiles?</h2>
-    <p>You can use the <a href="https://studio.brightcove.com/products/videocloud/admin/ingestprofiles">Ingest Profiles Management page in Studio</a> to manage your ingest profiles. A variety of options are available within this interface including:</p>
+    <p>The Directed Migration Tool provides a way to specify that a Brightcove Player should be loaded instead of a Smart Player. The tool provides an easy way to publish videos inside of Brightcove Players instead of using legacy Smart Players. No changes to your existing publishing code is required.</p>
+    <p>This topic contains the following sections:</p>
     <ul>
-      <li>Setting your default profile</li>
-      <li>Creating new profiles</li>
-      <li>Cloning from existing profiles</li>
-      <li>Editing custom profiles</li>
-      <li>Removing unneeded profiles</li>
+      <li> <a href="#req">Directed migration requirements</a> </li>
+      <li> <a href="#create">Creating a mapping</a> </li>
+      <li> <a href="#test">Testing player mappings</a> </li>
+      <li> <a href="#edit">Editing player mappings</a> </li>
+      <li> <a href="#delete">Deleting player mappings</a> </li>
     </ul>
-    <p>If you need programmatic access to your ingest profiles, you can create, read, update, and delete custom profiles using the <a href="https://apis.support.brightcove.com/ingest-profiles/">Ingest Profiles REST API</a>. Note that this requires you to set up <a href="https://apis.support.brightcove.com/oauth/">OAuth credentials</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The Smart Player to Brightcove Player mappings will continue to function after the Smart Player end of life at the end of 2017.</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="How_do_I_update_my_profiles">How do I update my profiles?</h2>
-    <p>See the <a href="#How_do_I_manage_my_profiles">section above</a>.</p>
+    <h2 id="req">Directed Migration requirements</h2>
+    <p>The following requirements apply when using the Directed Migration Tool:</p>
+    <ul>
+      <li>The Directed Migration UI only shows up when you have 3 or more Smart Players in your account</li>
+      <li>You should create a new Brightcove Player that has the styling, customizations and plugins that are compatible with the Brightcove Player</li>
+      <li>The Directed Migration Tool is not supported for players with playlists.</li>
+      <li>Any Smart Player API code in your existing page will no longer function once the player is replaced.</li>
+    </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="How_many_renditions_can_a_profile_have">How many renditions can a profile have?</h2>
-    <p>A <a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-ingest-api-dynamic-delivery.html">Dynamic Delivery</a> profile can have up to 37 renditions. Note that for custom Dynamic Delivery profiles, you can only select the <a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html#Renditions">pre-defined renditions</a> that are currently available.</p>
-    <p>If you are making a custom Context Aware Encoding profile, <code translate="No">min_renditions</code> has a minimum values of 1, and <code translate="No">max_renditions</code> has a maximum value of 15.</p>
-    <aside class="bcls-aside bcls-aside--information">
-      <p>Note that unnecessary renditions will add to your managed storage costs, so you should not create renditions that are unlikely to be played given kind of videos you publish and the audiences and devices that you target.</p>
-      <p>The standard profiles in your account are designed to provide good viewing experiences over typical viewer bandwidths and the most commonly used devices.</p>
-    </aside>
+    <h2 id="limitations">Limitations</h2>
+    <p>Note the following limitations of the Directed Migration Tool:</p>
+    <ul>
+      <li>Directed Migration will work when using the Smart Player embed publishing code or with shortened or custom URLs (bcove.me or link.brightcove.com).</li>
+      <li>Directed Migration will not work with the Flash-only embed code from the Legacy Studio.</li>
+    </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="Naming_custom_profiles">Naming custom profiles</h2>
-    <p>Custom profile names should not include spaces or special characters. Use letters and numbers, and replace spaces with dashes (-) or underscores (_).</p>
-    <p>To avoid user errors, try to name profiles in a way that will clearly communicate to the people who upload videos what the profile should be used for.</p>
+    <h2 id="create">Creating a mapping</h2>
+    <p>Mappings are used to specify that a Smart Player should be replaced with a Brightcove Player. To create a new mapping, follow these steps:</p>
+    <ol class="bcls-tasklist">
+      <li> Open the  <strong>Admin</strong> module. </li>
+      <li> Click  <strong>Player Settings</strong>. </li>
+      <li> Click <strong>Create Mapping</strong> . A list of Smart Players in the account will be displayed.
+        <div> <img class="bcls-image--no-border" alt="Create mapping" src="/assets/images/s-admin-img/node16627-create-mapping.png" /> </div>
+      </li>
+      <li> Select one or more Smart Players to replace with a Brightcove Player. Click <strong>Next</strong> . </li>
+      <li> Select a Brightcove Player to use in place of the Smart Player(s). When a Brightcove Player is selected, a preview of the player will be displayed.
+        <div> <img class="bcls-image--no-border" alt="Select Brightcove Player" src="/assets/images/s-admin-img/node16627-select-bc-player.png" /> </div>
+      </li>
+      <li> Click <strong>Next</strong> . Instructions for <a href="#test">testing player mappings</a> will be displayed.
+        <p class="BCL-aside">Note: Player mappings can take up to 5 minutes to take effect.</p>
+      </li>
+      <li> Click<span class="button-blue">Save</span> . A list of current mappings will be displayed.
+        <div> <img class="bcls-image--no-border" alt="Player mappings" src="/assets/images/s-admin-img/node16627-mappings-list.png" /> </div>
+      </li>
+    </ol>
+    <p> After creating a mapping, the status will be <strong>Testing</strong> . Once the <a href="#test">mapping has been tested</a> and committed, the status will be <strong>Committed</strong>. Mappings marked with a status of <strong>Committed</strong> will render a Brightcove Player instead of the Smart Player. </p>
   </section>
   <section class="bcls-section">
-    <h2 id="What_profile_should_I_set_as_default">What profile should I set as default?</h2>
-    <p>Any standard or custom profile can be set as the default either in Studio or through the Ingest Profile API. The default will only be used if the user does not specify a particular profile (either in the Upload module or using the Dynamic Ingest API).</p>
-    <p>We recommend that you set the default profile to one that would not be a very bad choice if the user forgets to specify a particular profile.</p>
+    <h2 id="test">Testing player mappings</h2>
+    <p>You should test any player mappings that are created before they are committed. To test a player mapping, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li> Find a page that displays your legacy Smart Player.
+        <div> <img class="bcls-image--no-border" alt="Smart Player Example" src="/assets/images/s-admin-img/node16627-smart-player.png" /> </div>
+      </li>
+      <li> Add the <code translate="No">enableMapping=true</code> parameter to the page URL.
+        <ul>
+          <li> If the page URL doesn't have URL parameters, add <code translate="No">?enableMapping=true</code> to the end of the URL. For example: <br />
+            <code translate="No">http://www.mysite.com/videos.html?enableMapping=true</code> </li>
+          <li> If the page URL has URL parameters, add <code translate="No">&amp;enableMapping=true</code> to the end of the URL. For example: <br />
+            <code translate="No">http://www.mysite.com/videos.html?myparams=true&amp;enableMapping=true</code> </li>
+        </ul>
+        <p>The newly mapped Brightcove Player should display and the video should play.</p>
+        <div> <img class="bcls-image--no-border" alt="Brightcove  Player Example" src="/assets/images/s-admin-img/node16627-brightcove-player.png" /> </div>
+        <p>When you are satisfied with how the player is working, return to Video Cloud Studio.</p>
+      </li>
+      <li> Select the checkbox next to the player mapping and click <strong>Commit Mapping</strong> to make the new Brightcove Player visible to all site visitors. </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit">Editing player mappings</h2>
+    <p>To edit a player mapping, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li> Open the <strong>Admin</strong> module. </li>
+      <li> Click  <strong>Player Settings</strong>. A list of player mappings will be displayed. </li>
+      <li> Select the checkbox next to the player mapping to edit. Click <strong>Edit Mapping</strong> . </li>
+      <li> Select a new Brightcove Player to map to. Click <strong>Next</strong> and then <span class="button-blue">Save</span> to save the changes. </li>
+    </ol>
+    <p> Make sure you <a href="#test">test any changes to player mappings</a>. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="delete">Deleting player mappings</h2>
+    <p>To delete a player mapping, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li> Open the <strong>Admin</strong> module. </li>
+      <li> Click  <strong>Player Settings</strong>. A list of player mappings will be displayed. </li>
+      <li> Select the checkbox next to the player mapping to delete. Click <strong>Delete Mapping</strong> . </li>
+      <li> Confirm the delete by clicking <span class="button-red-text">Delete</span>. </li>
+    </ol>
   </section>
 </article>
-
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">

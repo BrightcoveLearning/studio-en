@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Fields for Custom Live Ingest Profiles</title>
+        <title>Managing Playback Rights</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
+        <meta name="description" content="In this topic you will learn how to create playback rights.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -2438,7 +2438,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/fields-custom-live-ingest-profiles.html" aria-current="page">Fields for Live Ingest Profiles</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/fields-custom-live-ingest-profiles.html">Fields for Live Ingest Profiles</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Fields for Custom Live Ingest Profiles</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Managing Playback Rights</li>
             
             
           </ol>
@@ -2761,188 +2765,178 @@
       
       
 <article class="bcls-article">
-  <h1>Fields for Custom Live Ingest Profiles</h1>
-  <summary>This topic provides a reference for the fields used in Live ingest profiles.</summary>
+  <h1>Managing Playback Rights</h1>
+  <summary>In this topic you will learn how to create playback rights.</summary>
   <section class="bcls-section">
-    <h2 id="primaryFields">Profile fields</h2>
-    <table class="bcls-table">
-      <thead class="bcls-table__head">
-        <tr>
-          <th>Property</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-        <tr id="account_id">
-          <td><code translate="No">account_id</code></td>
-          <td>integer</td>
-          <td>The <span translate="No">Video Cloud</span> account id</td>
-          <td>none</td>
-        </tr>
-        <tr id="name">
-          <td><code translate="No">name</code></td>
-          <td>string</td>
-          <td>The profile name - must be unique within the account</td>
-          <td>none</td>
-        </tr>
-        <tr id="name">
-          <td><code translate="No">display_name</code></td>
-          <td>string</td>
-          <td>The a display name for the profile to appear in the Studio Admin page - may be the same as <code translate="No">name</code>, but should be descriptive to help users understand the intended use for the profile</td>
-          <td>none</td>
-        </tr>
-        <tr id="description">
-          <td><code translate="No">description</code></td>
-          <td>string</td>
-          <td>The profile description</td>
-          <td>none</td>
-        </tr>
-        <tr id="description">
-          <td><code translate="No">model_version</code></td>
-          <td>integer</td>
-          <td>Set this to <code translate="No">1</code> to make the profile show up in the Live Module</td>
-          <td>none</td>
-        </tr>
-        <tr id="renditions">
-          <td><a href="#rendition_fields"><code translate="No">renditions</code></a></td>
-          <td>array</td>
-          <td>Array of rendition objects</td>
-          <td>[]</td>
-        </tr>
-        <tr id="packages">
-          <td><code translate="No">packages</code></td>
-          <td>array</td>
-          <td>Array of DRM packages - currently, DRM is not supported, so this should always be an empty array</td>
-          <td>[]</td>
-        </tr>
-      </tbody>
-    </table>
+    <p>Playback rights are used to restrict video playback. After playback rights have been created, they can be assigned to videos using the Media module.</p>
+    <p>To access the Playback Rights administration page, open the <strong>Admin</strong> module and then <strong>Playback Rights</strong>. A list of playback rights will appear.</p>
+    <p>
+      <aside class="bcls-aside bcls-aside--information">Note: To access the Playback Rights page, you must be a Video Cloud Studio user with the Administrator role.</aside>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-list.png" /></figure>
+      Playback rights are assigned to videos in the <strong>Playback Restrictions</strong> section of the video properties page  in the Media module. </p>
+    <figure class="bcls-figure"><img class="bcls-image" alt="" src="/assets/images/s-admin-img/playback-rights-assign.webp" /></figure>
+    <p>Playback rights with a <strong>Status</strong> of <strong>Inactive</strong> cannot be assigned to videos in the Media module.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="rendition_fields">Rendition fields</h2>
-    <p>The tables below show fields that can be used in the request body for updating live ingest profiles.</p>
-    <table class="bcls-table">
-      <thead class="bcls-table__head">
-        <tr>
-          <th>Property</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-        <tr id="audio_bitrate">
-          <td><code translate="No">audio_bitrate</code></td>
-          <td>integer</td>
-          <td>audio bitrate in kbps (min: 16, max: 1024)</td>
-          <td>match source</td>
-        </tr>
-        <tr id="audio_codec">
-          <td><code translate="No">audio_codec</code></td>
-          <td>string</td>
-          <td>Audio codec - <code translate="No">aac</code> | <code translate="No">mp3</code></td>
-          <td>Determined by the format or profile, in most cases, <code translate="No">aac</code> will be best</td>
-        </tr>
-        <tr id="decoder_bitrate_cap">
-          <td><code translate="No">decoder_bitrate_cap</code></td>
-          <td>integer</td>
-          <td>in kbps, the max bitrate fed to the decoder via a buffer</td>
-          <td>none</td>
-        </tr>
-        <tr id="decoder_buffer_size">
-          <td><code translate="No">decoder_buffer_size</code></td>
-          <td>integer</td>
-          <td>in kbps, the size of the buffer fed to the decoder when using a <code translate="No">bitrate_cap</code></td>
-          <td>none</td>
-        </tr>
-        <tr id="format">
-          <td><code translate="No">forced_keyframe_rate</code></td>
-          <td>number</td>
-          <td>Forces a keyframe every X frames, but still allows additional keyframes for scene cut, etc.</td>
-          <td>none</td>
-        </tr>
-        <tr id="format">
-          <td><code translate="No">format</code></td>
-          <td>string</td>
-          <td>Video format - <code translate="No">ts</code>, <code translate="No">mp4</code>, <code translate="No">flv</code></td>
-          <td>none</td>
-        </tr>
-        <tr id="h264_profile">
-          <td><code translate="No">h264_profile</code></td>
-          <td>string</td>
-          <td>H.264 has three commonly-used profiles: <code translate="No">Baseline</code> (lowest), <code translate="No">Main</code>, and <code translate="No">High</code>.</td>
-          <td><code translate="No">baseline</code></td>
-        </tr>
-        <tr id="keyframe_interval">
-          <td><code translate="No">keyframe_interval</code></td>
-          <td>integer</td>
-          <td>Maximum number of frames between keyframes</td>
-          <td><code translate="No">250</code></td>
-        </tr>
-        <tr id="keyframe_rate">
-          <td><code translate="No">keyframe_rate</code></td>
-          <td>float</td>
-          <td>Maximum keyframes per second</td>
-          <td><code translate="No">keyframe_interval</code> of 250</td>
-        </tr>
-        <tr id="label">
-          <td><code translate="No">label</code></td>
-          <td>string</td>
-          <td>Image type for image renditions - <code translate="No">poster</code> or <code translate="No">thumbnail</code></td>
-          <td>none</td>
-        </tr>
-        <tr id="live_stream">
-          <td><code translate="No">live_stream</code></td>
-          <td>boolean</td>
-          <td>whether this will be live video stream</td>
-          <td>none</td>
-        </tr>
-        <tr id="live_dvr_sliding_window_duration">
-          <td><code translate="No">live_dvr_sliding_window_duration</code></td>
-          <td>integer</td>
-          <td>Duration of stream to keep available for LiveDVR delivery in seconds</td>
-          <td><code translate="No">300</code></td>
-        </tr>
-        <tr id="max_video_bitrate">
-          <td><code translate="No">max_video_bitrate</code></td>
-          <td>integer</td>
-          <td>in kbps, 123 = 123kbps - h264 only</td>
-          <td>none</td>
-        </tr>
-        <tr id="media_type">
-          <td><code translate="No">media_type</code></td>
-          <td>string</td>
-          <td><code translate="No">video</code> or <code translate="No">audio</code></td>
-          <td>none</td>
-        </tr>
-        <tr id="video_bitrate">
-          <td><code translate="No">video_bitrate</code></td>
-          <td>integer</td>
-          <td>in kbps, 123 = 123kbps (min: 64, max: 10000)</td>
-          <td>none</td>
-        </tr>
-        <tr id="video_codec">
-          <td><code translate="No">video_codec</code></td>
-          <td>string</td>
-          <td>e.g. h264, ts</td>
-          <td>Determined by the format or profile</td>
-        </tr>
-        <tr id="width">
-          <td><code translate="No">width</code></td>
-          <td>integer</td>
-          <td>frame width in pixels</td>
-          <td>none</td>
-        </tr>
-        <tr id="height">
-          <td><code translate="No">height</code></td>
-          <td>integer</td>
-          <td>frame height in pixels</td>
-          <td>none</td>
-        </tr>
-      </tbody>
-    </table>
+    <h2 id="create">Creating playback rights</h2>
+    <p>To create playback rights, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Login to Video Cloud Studio as an Administrator.</li>
+      <li>Open the <strong>Admin</strong> module  and then <strong>Playback Rights</strong>. Note that you must be an account administrator to access to the ADMIN menu.</li>
+      <li>Click <span class="button-blue">+ Add playback rights</span>.</li>
+      <li>Enter a <strong>Playback Rights Name</strong>.</li>
+      <li>Checking <strong>Allow Playback Right without token</strong> will allow playback requests to be made without a JSON Web Token (JWT).
+        <aside class="bcls-aside bcls-aside--information">Note: Unchecking this option won't affect the restrictions set for that Playback Right, however, the playback request is going to require a valid JWT which is set programmatically at the player level.  For information, see the developer document <a href="https://apis.support.brightcove.com/playback-authorization/guides/using-pas-with-bcp.html">Using Playback Authorization DRM with the Brightcove Player</a>.</aside>
+      </li>
+      <li>Check <strong>Use as default</strong> to make this the default playback right. This will apply the configured playback right restrictions to  uploaded videos.
+        <aside class="bcls-aside bcls-aside--information">Note: The default playback right is not assigned if a video is re-transcoded.</aside>
+      </li>
+      <li>Click <span class="button-blue">Save</span>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-create.png" /></figure>
+      </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">Note:  The maximum number of playback rights you can have in an account is 100. If you need to increase the limit, please contact <a href="https://supportportal.brightcove.com">Brightcove Support</a>.</aside>
+    <p>Click a restriction link in the left navigation to add restrictions to a playback right:</p>
+    <ul>
+      <li><a href="#geo">Geographic</a></li>
+      <li><a href="#domain">Domain</a></li>
+      <li><a href="#proxy">Proxy</a></li>
+      <li><a href="#date">Time</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit">Editing playback rights</h2>
+    <p>To edit playback rights, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on a playback right.</li>
+      <li>Make required changes and click <span class="button-blue">Save</span>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="duplicate">Duplicating playback rights</h2>
+    <p>To duplicate a playback right, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on a playback right.</li>
+      <li>Click <strong>Duplicate</strong>.</li>
+      <li>Make required changes and click <span class="button-blue">Save</span>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="activate">Activating/Deactivating playback rights</h2>
+    <p>Playback rights cannot be deleted, however, they can be deactivated so they can't be assigned to videos in the Media module. To activate/deactivate playback rights, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on a playback right.</li>
+      <li>Click <strong>Activate</strong> to activate a playback right or <strong>Deactivate</strong> to deactivate a playback right. Playback rights that are deactivated cannot be assigned to videos in the Media module.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="geo">Assigning geographic restrictions</h2>
+    <p>Geographic restrictions allow you to limit video playback based upon country, ZIP code, IPs and designated market area. To assign geographic restrictions to a playback right, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on a playback right.</li>
+      <li>In the left navigation, click <strong>Geographic Restrictions</strong>.</li>
+    </ol>
+    <p>The <strong>Global rule</strong> can be set to <strong>Allow all</strong> or <strong>Block all</strong>.</p>
+    <ul>
+      <li><strong>Allow all</strong>
+        <ul>
+          <li>Used when you want to blacklist a small number of groups who will not have access</li>
+          <li>Select to allow viewing for all and then add  a list of blacklisted countries, zip codes, IPs and DMAs that are prevented from viewing</li>
+        </ul>
+      </li>
+      <li><strong>Block all</strong>
+        <ul>
+          <li>Used when you want to whitelist  a small number of groups who will have access</li>
+          <li>Select to block viewing for all and then add a list of whitelisted  countries, zip codes, IPs or DMAs that are allowed to view</li>
+        </ul>
+      </li>
+    </ul>
+    <p>Geographic restrictions can be added to allow/prevent viewing based upon:</p>
+    <ul>
+      <li><a href="#countries">Countries</a></li>
+      <li><a href="#zip">ZIP Codes</a></li>
+      <li><a href="#ip">IP Restrictions</a></li>
+      <li><a href="#dma">Designated Market Area (DMA)</a></li>
+    </ul>
+    <h3 id="countries">Restricting access to countries</h3>
+    <p>Country playback rights can be used to limit  viewing to specific countries.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Select the countries  that will be prevented (blacklisted) or allowed (whitelisted) to view. As you type, the selection list will be filtered.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-countries.png" /></figure>
+      </li>
+      <li>Click <span class="button-blue">Save</span>.</li>
+    </ol>
+    <h3 id="zip">Restricting access to zip codes</h3>
+    <p>Zip code playback rights can be used to limit  viewing to specific zip codes.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Enter a list of zip codes that will be prevented (blacklisted) or allowed (whitelisted) from viewing. The zip codes should be prefixed with an uppercase, two letter country code  and hyphen, for example, <strong>US-90045</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-zip.png" /></figure>
+      </li>
+    </ol>
+    <p>It is also possible to upload a .csv file containing  zip codes. Click <strong>Upload CSV</strong> to browse and select a file to upload.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-upload-csv.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">
+      Notes: 
+      <ul>
+        <li>Up to 5000 zip codes are supported.</li>
+        <li>Uploading a .csv file will replace the contents of the <strong> ZIP codes</strong> field.</li>
+      </ul>
+    </aside>
+    <h3 id="ip">Restricting access to IPs</h3>
+    <p>IP playback rights can be used to limit viewing to an IP address range.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Enter a range of IP addresses  that will be prevented (blacklisted) or allowed (whitelisted) from viewing. <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR block notation</a> is also supported.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-ip.png" /></figure>
+      </li>
+      <li>Click <span class="button-blue">Save</span>.</li>
+    </ol>
+    <h3 id="dma">Restricting access to DMAs</h3>
+    <p>A designated market area (DMA), also referred to as a media market, is a region of the United States that is used to define television and radio markets. Playback rights can be used to limit viewing based upon DMAs.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Enter a list of DMAs  that will be prevented (blacklisted) or allowed (whitelisted) from viewing
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-dma.png" /></figure>
+      </li>
+      <li>Click<span class="button-blue">Save</span>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="domain">Assigning domain restrictions</h2>
+    <p>Domain restrictions allow you to limit video playback based upon domain. To assign domain restrictions to a playback right, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on a playback right.</li>
+      <li>In the left navigation, click <strong>Domain Restrictions</strong>.</li>
+      <li>In the <strong>Blacklisted Domains</strong> field, enter the domains  that  will be prevented from viewing. </li>
+      <li>In the <strong>Whitelisted Domains</strong> field, enter the domains  that  will be allowed to view.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-domain.png" /></figure>
+      </li>
+      <li>Click <span class="button-blue">Save</span>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="proxy">Assigning proxy restrictions</h2>
+    <p>Proxy restrictions allow you to limit video playback based upon certain types of connections. To assign proxy restrictions to a playback right, follow these steps:</p>
+    <aside class="bcls-aside bcls-aside--information">Note: As VPN providers continue to improve their services, resolving IP addresses may change from what you have defined for blocked IP addresses. Because of this, proxy blocking is not 100% guaranteed.</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on a playback right.</li>
+      <li>In the left navigation, click <strong>Proxy Restrictions</strong>.</li>
+      <li>Select the proxy types to block.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-proxy.png" /></figure>
+      </li>
+      <li>Click <span class="button-blue">Save</span>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="date">Assigning time restrictions</h2>
+    <p>Time restrictions allow you to limit video playback based upon a specified start date. To assign time restrictions to a playback right, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on a playback right.</li>
+      <li>In the left navigation, click <strong>Time Restrictions</strong>.</li>
+      <li>Click the calendar control to select a <strong>Start Date</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-date.png" /></figure>
+      </li>
+      <li>(Optional) Click <strong>Add End Date</strong> to select an end date.</li>
+      <li>Click <span class="button-blue">Save</span>.</li>
+    </ol>
   </section>
 </article>
 

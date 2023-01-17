@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing API Authentication Credentials</title>
+        <title>Creating Custom Live Ingest Profiles</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic provides an overview of creating and managing API authentication credentials.">
+        <meta name="description" content="">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -2358,7 +2358,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/managing-api-authentication-credentials.html" aria-current="page">Managing API Authentication Credentials</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Managing API Authentication Credentials</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/ingest-profiles/">Ingest profiles</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Creating Custom Live Ingest Profiles</li>
             
             
           </ol>
@@ -2760,84 +2764,69 @@
       <br>
       
       
-<h1>Managing API Authentication Credentials</h1>
 <article class="bcls-article">
-  <summary>This topic provides an overview of creating and managing API authentication credentials.</summary>
+  <h1>Creating Custom Live Ingest Profiles</h1>
+  <summary>In this topic you will learn how to create and manage custom Live ingest profiles.</summary>
   <section class="bcls-section">
-    
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4097165379001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js">
-  </script>
-        
-    <p>When you use the Brightcove APIs, your method calls will require access tokens unless you enable basic authentication in the Player Service Settings. 
-        
-    For more information on enabling basic authentication, see <a href="/admin/managing-account-settings.html">Managing Account Settings</a>.
-      
-      </p>
-    <aside class="bcls-aside bcls-aside--information">Note: This feature is only available for Professional and Enterprise accounts.</aside>
+    <p>The Ingest Profiles Administration page is used to manage custom Live ingest profiles. Live ingest profiles determine the number and quality of the renditions created by Brightcove Live. The Live ingest profiles are not used when uploading videos to a Video Cloud account. Ingest profiles are defined using JSON. Before creating a new ingest profile, review the <a href="/admin/ingest-profiles/standard-live-ingest-profiles.html">Standard Live Ingest Profiles</a> document to see if there is an existing profile available that will meet your needs.</p>
+    <aside class="bcls-aside bcls-aside--information">Notes:
+      <ul>
+        <li>Trial accounts are restricted from creating profiles</li>
+        <li>Each profile can create a maximum of 25 renditions</li>
+        <li>You <strong>can</strong> create renditions for vertical video - just include <code translate="No">height</code> and <code translate="No">width</code> values in the rendition specifications that match the aspect ration of the video (1280 pixels is the maximum allowed value for the <code translate="No">height</code>)</li>
+        <li>When live profiles are hidden in Studio under <strong>Admin</strong> > <strong>Ingest Profiles</strong>, those won't be selectable in the <strong>Create Live Event</strong> UI but they can still be used with the Live API</li>
+        <li>Live Tiers:
+          <ul>
+            <li>For a Live ingest profile to be considered Tier 1, the sum of the bitrates of all its renditions, cannot be greater than 5450</li>
+            <li>If the sum of the bitrates of all its renditions is greater than 5450 but less than 10000, the Live ingest profile will be considered Tier 2</li>
+            <li>If the sum of the bitrates of all its renditions is greater than 10000, the profile will be considered Tier 3</li>
+          </ul>
+        </li>
+      </ul>
+      Each profile can create a maximum of 25 renditions.</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="Creating_client_registrations">Creating client registrations</h2>
-    <p>The API Authentication page is used to create new client registrations. When creating registrations, you can select the service and the roles that will be enabled with the registration.</p>
-    <p>To create a new client registration for your account:</p>
+    <h2 id="new">Creating a new profile</h2>
+    <p>The Ingest Profiles Administration page can be used to create custom Live ingest profiles. Note that for the profile to appear in the Live module UI, it should have <code translate="No">"model_version": 1</code> as part of the profile properties.</p>
+    <p>To create a new custom Live ingest profile:</p>
     <ol class="bcls-tasklist-restart">
       <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click  <strong>API Authentication</strong>. The API Authentication page opens, displaying your current client registrations.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14056-registered-apps.webp" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: Only the client registrations for the account you are logged into will display.</aside>
-      </li>
-      <li>Click <span class="button-blue">+ Add application</span></li>
-      <li>Enter a <strong>Name</strong> and <strong> Description</strong> for the client registration.</li>
-      <li>Select one or more of your accounts for authorization.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14056-select-accounts.png" /></figure>
-      </li>
-      <li>Select the API(s) and permission(s) to enable for this registration.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14056-select-apis.webp" /></figure>
-      <aside class="bcls-aside bcls-aside--information"> Notes:
-        <li>For DFP/Google Ad Manager inegration, the API permissions needed are <strong>CMS Video Read</strong>.</li>
-        <li>Selecting a large number of accounts and APIs may cause the HTTP header size to become large and invalid. The maximum header size that our server accepts is 8K, which means that you must select 30 accounts or less to apply the credentials to. For security reasons, we recommend that you limit the scope of permissions for a set of credentials to the smallest set of accounts and operations necessary.</li>
-      </aside>
-      </li>
-      <li>Click<span class="button-blue">Save</span>.</li>
-      <li>A <strong>Client ID</strong> and <strong>Client Secret</strong> will be returned.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14056-client-id-secret.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: Copy the client secret and store it in a secure location as the client secret <strong>will not</strong> be displayed again.</aside>
-      </li>
+      <li>Click <strong>Ingest Profiles</strong>.</li>
+      <li>Click <span class="button-blue">New Profile ˇ</span> &gt; <strong>Live</strong>.</li>
+      <li>Enter a <strong>Name</strong> for the profile and then click <span class="button-blue">Create</span>.</li>
+      <li>Use the Profile Editor to edit the profile as needed.</li>
+      <li>Click <span class="button-blue">Save</span>.<!-- <ol class="bcls-tasklist">
+  <li>Click the <strong>ADMIN</strong> link in the Studio header.</li>
+  <li>Click the <strong>Ingest Profiles</strong> link.</li>
+  <li>Click <strong>New Profile &gt; Live</strong>.</li>
+  <li>Enter a <strong>Name</strong> and <strong>Description</strong> for the profile.
+  <div><img alt="" src="https://img.brightcove.com/node18471-create-new.png" /></div>
+  </li>
+  <li>Click <strong>Create</strong>. The profile editor will open.</li>
+  <li>By default, the profile definition will default to the <a href="18619#premium-live-hd-1080p-tier-2">Standard Live premium-live-hd-1080p-tier-2</a> profile. Edit the rendition information as needed.</li>
+  <li>Click <strong>Save</strong>.</li>
+</ol>
+
+<p>The newly created profile will appear in the list of profiles. Custom profiles can be deleted by clicking the delete (<img alt="" src="https://img.brightcove.com/node18471-delete-icon.png" />) button.</p> --></li>
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="Managing_client_registrations">Managing client registrations</h2>
-    <p>The API Authentication page can be used to view and manage client registrations. Click the <strong>ADMIN</strong> link in the Studio header and then click <strong>API Authentication</strong>. A list of your current registrations will display.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14056-registered-apps.webp" /></figure>
-    <p>To view the registration details, click the on the name. From here, you can:</p>
-    <ul>
-      <li>Modify the name</li>
-      <li>Copy the client ID</li>
-      <li>Add accounts for authorization</li>
-      <li>Select additional APIs to enable</li>
-      <li>Delete the credential</li>
-    </ul>
-    <p>Click <span class="button-blue">Save</span> to save your changes.</p>
-    <p>Note that if a credential is created for multiple accounts, users will only see that credential if they have access to all of those accounts. For example, User 1 creates a credential for accounts A &amp; B. User 2 logs in and only has access to account A. User 2 will not see the credential as they do not have access to account B.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Updating_client_registrations">Updating client registrations</h2>
-    <p>Although you cannot retrieve the client secret for existing credentials, you can click on an existing credential name and then add or remove both permissions and accounts.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Delete_client_registrations">Deleting client registrations</h2>
-    <p>To delete a client registration, click the delete icon(<img alt="" src="/assets/images/s-admin-img/node1050-delete-icon.png" />) next to the registration or edit the registration and click <strong>Delete Registration</strong>. <strong>Deleting a registration permanently disables it and cannot be undone.</strong></p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="OAuth" src="/assets/images/s-admin-img/node14056-delete.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="dfp">Working with DFP</h2>
-    <p>If you currently have multiple Video Cloud accounts set up as content sources in DFP, you have two options:</p>
-    <ol>
-      <li>You can create a unique Client ID and Client Secret for each Video Cloud account that’s set up as a content source in DFP. For example, if you have 10 Video Cloud accounts, you'd have 10 applications named DFP in your API Authentication settings in Video Cloud.</li>
-      <li>You can create a single Client ID and Client Secret for all Video Cloud accounts that have been set up as content sources in DFP. For example, if you have 10 Video Cloud accounts, you'd have 1 application named DFP in your API Authentication settings in Video Cloud.</li>
+    <h2 id="duplicate">Duplicating a profile</h2>
+    <p>It is possible to create a new profile by duplicating an existing profile. Then, you can edit the new profile with your changes. Note that for the profile to appear in the Live module UI, it should have <code translate="No">"model_version": 1</code> as part of the profile.</p>
+    <p>To create a custom Live ingest profile by duplicating an existing profile:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Admin</strong> module.</li>
+      <li>Click <strong>Ingest Profiles</strong>.</li>
+      <li>Locate a profile with a <strong>Type</strong> of <strong>Standard Live</strong> to duplicate. Click the profile name to open the profile editor.</li>
+      <li>Click <span class="button-blue">Duplicate</span>. The profile editor will open with the new profile.</li>
+      <li>Scroll to the top of the profile. Edit the <code translate="No"><strong>name</strong></code> element to give the profile a meaningful name. This name will be displayed inside Video Cloud Studio.</li>
+      <li>Edit the <code translate="No"><strong>description</strong></code> element to give the profile a meaningful description.
+        <figure class="bcls-figure"><img alt="" src="/assets/images/s-admin-img/node18471-edit-profile-name.png" /></figure>
+      </li>
+      <li>Edit the rendition information as needed.</li>
+      <li>Click <span class="button-blue">Save</span>.</li>
     </ol>
-    <p>Regardless of whether you chose option #1 or #2, for each content source that you set up in DFP, you need to provide a unique Account ID. So, you are not reducing the number of content sources that are currently set up in DFP; you're just replacing the read token with the Client ID and Client Secret, which can either be the same across content sources or unique for each.</p>
-    <p>Option #1 takes more time up front. However, if the Client ID and Client Secret are the same across all content sources (as with option #2), it will be a burden to add a new content source because you will need to generate a new Client ID and Client Secret and update all of content sources in DFP. So, Brightcove recommends option #1.</p>
+    <p>The newly created profile will appear in the list of profiles. Custom profiles can be deleted by clicking the delete (<img alt="" src="/assets/images/s-admin-img/icon-delete.png" />) button.</p>
   </section>
 </article>
 

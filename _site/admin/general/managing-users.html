@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Creating Ingest Profiles for Dynamic Delivery</title>
+        <title>Managing Users</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic provides an overview of how to create custom ingest profiles for use with Dynamic Delivery transcoding.">
+        <meta name="description" content="In this topic you will learn how to manage the users that have access to Studio.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -2432,7 +2432,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/creating-ingest-profiles-dynamic-delivery.html" aria-current="page">Creating Ingest Profiles for Dynamic Delivery</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/creating-ingest-profiles-dynamic-delivery.html">Creating Ingest Profiles for Dynamic Delivery</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Creating Ingest Profiles for Dynamic Delivery</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Managing Users</li>
             
             
           </ol>
@@ -2761,146 +2765,106 @@
       
       
 <article class="bcls-article">
-  <h1>Creating Ingest Profiles for Dynamic Delivery</h1>
-  <summary>This topic provides an overview of how to create custom ingest profiles for use with <a href="/general/architecture/overview-dynamic-delivery.html">Dynamic Delivery</a> transcoding.</summary>
+  <h1>Managing Users</h1>
+  <summary>In this topic you will learn how to manage the users that have access to Studio.</summary>
   <section class="bcls-section">
-    <p>Ingest profiles contain the transcode settings that will be used when videos are transcoded. The ingest profile editor that is displayed will change based upon the transcoding options that have been configured for the account.</p>
-    <aside class="bcls-aside bcls-aside--information"> Notes:
-      <ul>
-        <li>The ability to create and edit ingest profiles is available only to publishers with Enterprise and Professional accounts.</li>
-        <li>If you want to be able to retranscode videos ingested with a custom profile, you <strong>must archive the digital master</strong> (as all standard profiles do). See <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">Archiving Masters</a> for details on how to do this.</li>
-      </ul>
-    </aside>
-    <p>To access the Ingest Profiles administration page, click the <strong>Admin</strong> link and then <strong>Ingest Profiles</strong>. A list of ingest profiles will appear.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: To access the Ingest Profiles page, you must be a Video Cloud Studio user with the Administrator role.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node16840-profile-list.png" /></figure>
-    <p>Your Brightcove account will be configured with one or more ingest profiles. All Brightcove accounts are configured with a default set of ingest profiles which can't be edited or deleted. These are marked with a <strong>Type</strong> of <strong>Standard VOD</strong> in the Studio. The <strong>Profile Version</strong> displays the type of transcoding that is used with the profile. For specific details on the renditions provided with the Brightcove supplied ingest profiles, see <a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Standard Ingest Profiles for Dynamic Delivery and Context Aware Encoding</a>.</p>
+    
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4052428130001">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+        
+    <p>The User Management page manages the users who are authorized to use the Studio. Note that to access the User Management page, you must be a user with the Administrator role.</p>
+    <p>To access the User Management page:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Login to Studio.</li>
+      <li>Open the  <strong>Admin</strong> module and then <strong>User Management</strong>.</li>
+    </ol>
+    <p>The User Management page will display:</p>
+    <ul>
+      <li>Last Name, First Name</li>
+      <li>Email address</li>
+      <li>Role - Standard or Administrator</li>
+      <li>Module Access - Each module the user has access to will display a green check mark (<img alt="" src="/assets/images/s-admin-img/node14054-green-check-icon.png" />)</li>
+      <li>Studio Access - Indicates if the user has access to the Marketing Studio UI</li>
+      <li>Last Login - The last date and time the user logged in to Video Cloud Studio. This is the last login for all Video Cloud Studio accounts, not just the current account</li>
+    </ul>
+    
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14054-manage-users-vc.png" /></figure>
+        
+        
+    <p>The User Management page can be used to:</p>
+    <ul>
+      <li><a href="#create">Create new users</a></li>
+      <li><a href="#edit">Edit existing users</a></li>
+      <li><a href="#delete">Delete a user</a></li>
+      <li><a href="#primary">Change the primary user</a></li>
+    </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="create">Creating a new dynamic delivery profile</h2>
-    <p>The Ingest Profiles administration page can be used to create new ingest profiles. Ingest profiles are defined using JSON.</p>
-    <p>To create a new dynamic delivery ingest profile:</p>
+    <h2 id="many">How many users can I have?</h2>
+    <p>The number of users you can create depends on what kind of account you have. If you need to add more users, you can upgrade your plan to one that offers more users. The limit applies only to the total number of users in existence at any time; if you create 10 users, delete 5 of them, and create 3 more users, you are considered to have 8 users. The Users page displays how many users you are entitled to and how many additional users you can create.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="purchase">Purchasing additional users</h2>
+    <p>If you need to add more users, you can upgrade your plan to one that offers more users. Pro and Enterprise level accounts should contact their Customer Success Manager for information on adding additional users.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="create">Creating new users</h2>
+    <p>To create a new user:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click <strong>Ingest Profiles</strong>.</li>
-      <li>Click <strong>New Profile &gt; Dynamic Delivery</strong>. The profile editor will open.</li>
-      <li>Enter a <strong>Name</strong> and <strong>Description</strong> for the profile.</li>
-      <li>Decide whether to <strong>Store master files</strong>. Storing the master keeps a copy of the master file and provides the ability for the video to be retranscoded in the future without the need to upload it again. For additional information on archiving masters, see the <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">Archiving Masters</a> document.</li>
-      <li>Enter the <strong>Width</strong> and <strong>Height</strong> for the <strong>Poster</strong> and <strong>Thumbnail</strong> images.</li>
-      <li>Select a setting for the images:
-        <ul>
-          <li><strong>Capture images automatically at upload time</strong> - Brightcove will capture poster and thumbnail images when the video is uploaded. Images are captured at the 50% point in the video.</li>
-          <li><strong>Don't capture images; I'll upload or capture my own images</strong> - Poster and thumbnail images will be <a href="/media/properties/capturing-poster-and-thumbnail-images.html">captured</a> or <a href="/media/properties/uploading-poster-and-thumbnail-images.html">uploaded</a> using the Media module.</li>
+      <li>Click <span class="button-blue"> Add user</span>.</li>
+      <li>Enter the <strong>Email</strong>, <strong>First Name</strong> and <strong>Last Name</strong> of the user.</li>
+      <aside class="bcls-aside bcls-aside--information">Note: You can not change the email for an existing user.</aside>
+      <li>Assign a <strong>Role</strong> to the user:
+<ul>
+          <li><strong>Administrator</strong> - User has access to the <strong>Admin</strong> menu (i.e. can create user accounts, custom ingest profiles, custom fields, configure media sharing)</li>
+          <li><strong>Standard</strong> - User does not have access to the <strong>Admin</strong> menu</li>
         </ul>
       </li>
-      <li>Add the renditions you need for the profile. Be sure to select both video and audio renditions to ensure your videos play with audio. Also add progressive (MP4) renditions if you want downloadable renditions available for the video. Click <strong>Add Rendition</strong>.
-        <aside class="bcls-aside bcls-aside--information">Notes:
-          <ul>
-            <li>To view the audio and renditions that are available, click the <strong>View Rendition List</strong> link.</li>
-            <li> If you would like to have a 1080p rendition available for download, you will need to <a href="/admin/creating-ingest-profiles-dynamic-delivery.html">create a custom ingest profile</a> and make sure that it includes at least one of the following renditions:
-              <ul>
-                <li>progressive3500</li>
-                <li>progressive4000</li>
-              </ul>
-            </li>
-            <li>While is possible to create a profile that will generate <strong>only</strong> progressive renditions, if you upload videos using that profile, thumbnail and poster images will <strong>not</strong> be captured during transcoding.</li>
-            <li>Custom renditions created by Brightcove Support will not appear in the rendition list. See the <a href="#custom-renditions">Adding custom renditions to an ingest profile</a> section below for details.</li>
-          </ul>
-        </aside>
-      </li>
-      <li>Continue to click <strong>Add Rendition</strong> to add additional renditions.</li>
-      <li>Use the <strong>Codec</strong>, and <strong>Rendition</strong> dropdown lists to select an audio, video (H264, HEVC), or progressive (MP4) rendition to be included. The rendition details will display in the table.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node16840-rendition-list.png" /></figure>
-      </li>
-      <li>Click <span class="button-blue">Save</span> to save the new profile.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="custom-renditions">Adding custom renditions to an ingest profile</h2>
-    <p>Your account may have custom renditions available that were created by Brightcove Support. Custom renditions can be added to new or existing ingest profiles. Typically, renditions are added to an ingest profile using the rendition dropdown list when adding/editing an ingest profile. However, custom renditions are not displayed in the rendition dropdown list. Follow these steps to add custom renditions to an ingest profile.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Click on an ingest profile name to edit it.</li>
-      <li>Click the <strong>Advanced Editor</strong> link at the top of the page.</li>
-      <li>Locate the <code>dynamic_origin</code> entry.</li>
-      <li>Add the custom rendition(s) created by Brightcove Support to the <code>renditions</code> section.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node16840-custom-renditions.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information language-editable">Note: Each item in the <code>rendtions</code> list should end with a comma, except for the last one.</aside>
-        <aside class="bcls-aside bcls-aside--information language-editable">Note: Custom renditions should not contain "default/".</aside>
-      </li>
+      <li>Select the modules the user has access to. Turning off modules only limits which sections of the UI the user has access to.</li>
       <li>Click <span class="button-blue">Save</span>.</li>
     </ol>
+    <p>The user will receive an email message stating that they have been added to the account.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="social">Creating custom profiles for Social clipping</h2>
-    <p>Custom ingest profiles can also be used for Social clipping. Generally, the lower quality renditions included in the Brightcove default ingest profiles aren't necessary for Social distribution use cases, so custom clipping ingest profiles can typically be limited a small number of medium to high quality renditions. For example, a custom clipping ingest profile that includes the video3500, video2000, and video1700 video renditions is more than adequate for most Social distribution use cases. Using a custom profile for Social clipping allows you to apply additional transformations to clips, such as the addition of watermark images. To create a custom profile with a watermark, contact <a href="https://supportportal.brightcove.com/create">Brightcove Support</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating ingest profiles</h2>
-    <p>If you need to create a profile that is similar to an existing profile, you can duplicate an existing profile and then edit it to make the needed changes.</p>
-    <p>To duplicate an ingest profile:</p>
+    <h2 id="edit">Editing existing users</h2>
+    <p>To edit an existing user:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click <strong>Ingest Profiles</strong>.</li>
-      <li>Click on the ingest profile to duplicate.</li>
-      <li>Click <strong>Duplicate</strong>.</li>
-      <li>Use the Profile Editor to edit the profile name and definition. Renditions can be removed by clicking the remove icon (<img alt="" src="/assets/images/admin/node16840-remove-icon.png" />) next to a rendition.</li>
-      <li>Click <span class="button-blue">Save</span>.</li>
+      <li>Click on the user to edit. The user details will appear at the top of the page.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14054-edit-user.png" /></figure>
+      </li>
+      <li>Edit the <strong>Role</strong> or <strong>Module Access </strong>settings.
+        <aside class="bcls-aside bcls-aside--information">Note: The user that you logged in as cannot be edited.</aside>
+        <aside class="bcls-aside bcls-aside--information">Note: Users can update their first and last name by editing their <a href="managing-profile-information.html">profile information</a>.</aside>
+      </li>
+      <li>Click<span class="button-blue">Save</span> to save the changes.</li>
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="drm">DRM support in profiles</h2>
-    <p>Contact Brightcove Support to set defaults for DRM packaging of your videos. You do not need to specify DRM packaging in your ingest profiles. If your account is enabled for DRM and you want to deliver some titles without DRM, edit the video properties in the Media module and set the DRM flag for the video to <strong>No DRM</strong>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node16840-drm-switch.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Note: For information on creating a DRM-enabled Brightcove Player, see the <a href="https://player.support.brightcove.com/plugins/configuring-brightcove-player-drm.html">DRM Plugin</a> topic.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing ingest profiles</h2>
-    <p>The Ingest Profiles administration page can be used to edit ingest profiles. Note that the default set of ingest profiles (marked <strong>Standard VOD</strong>) can't be edited.</p>
-    <p>To edit an ingest profile:</p>
+    <h2 id="delete">Deleting a user</h2>
+    <p>To delete a user:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click <strong>Ingest Profiles</strong>.</li>
-      <li>Click on the ingest profile to edit.</li>
-      <li>Use the Profile Editor to edit the profile definition. Renditions can be removed by clicking the remove icon (<img alt="" src="/assets/images/admin/node16840-remove-icon.png" />) next to a rendition.</li>
-      <li>Click <span class="button-blue">Save</span>.</li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">Note: you can add standard renditions to a profile using the basic editor, but <strong>custom renditions</strong> must be added using the <a href="#using_the_advanced_editor">advanced editor</a>.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting ingest profiles</h2>
-    <p>The Ingest Profiles administration page can be used to delete ingest profiles that are no longer needed. Note that the default set of ingest profiles (marked <strong>Standard VOD</strong>) can't be deleted but <a href="#hide">they can be hidden</a> if they are not needed.</p>
-    <p>To delete an ingest profile:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click <strong>Ingest Profiles</strong> . The Ingest Profiles administration page will open displaying the ingest profiles that have been created for your account.</li>
-      <li>Click the delete icon (<img alt="" src="/assets/images/s-admin-img/node16840-delete-icon.png" />) next to the ingest profile or click the profile name and then click the <strong>Delete </strong>button.</li>
-      <li>Confirm the deletion by clicking <span class="button-red">Delete Profile</span>.</li>
+      <li>Click the delete icon (<img alt="" src="/assets/images/s-admin-img/node14054-trash-icon.png" />) associated with the user.</li>
+      <li>Click <span class="button-blue">OK</span> to confirm the deletion.</li>
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="default">Selecting a default ingest profile</h2>
-    <p>A default ingest profile can be configured for when <a href="/media/manage/uploading-videos-using-upload-module.html">videos are uploaded</a> and when <a href="/social/general/creating-video-clip-using-brightcove-social.html">creating clips using the Social module</a>. The upload default profile is indicated with <img alt="" src="/assets/images/s-admin-img/node16840-upload-default-button.png" /> next to the profile name. The social clipping default profile is indicated with <img alt="" src="/assets/images/s-admin-img/node16840-social-clip-button.png" /> next to the profile name.</p>
-    <p>To select a default ingest profile for uploading/clipping:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click <strong>Ingest Profiles</strong>. The Ingest Profiles administration page will open displaying the ingest profiles that have been created for the account.</li>
-      <li>Click the ingest profile name for the profile you want to set as the default.</li>
-      <li>Click the <strong>Uploading</strong> or <strong>Social clipping</strong> link at the top of the page to set current profile as the default. </li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">Note: Only Dynamic Delivery profiles can be set to be a social clipping default profile. CAE profiles are not supported.</aside>
+    <h2 id="primary">Changing the primary user</h2>
+    <p>One user in each account is designated the primary user. The primary user will always have the <strong>Administrator</strong> role and can only be deleted by Brightcove Support.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14054-primary-user.png" /></figure>
+    <p>If you need to change the primary user at some point, select the new primary user and then click <strong>Make this user the primary administrator for this account</strong>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14054-new-primary-user.png" /></figure>
+    <p>You will be prompted to confirm the primary user change.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14054-confirm-new-primary-user.png" /></figure>
+    <p>If the new primary user has a role of <strong>Standard</strong>, they will be assigned the <strong>Administrator</strong> role when they are made the primary user.</p>
   </section>
+            
   <section class="bcls-section">
-    <h2 id="hide">Hiding and showing ingest profiles</h2>
-    <p>Ingest profiles can be hidden by clicking the slider associated with the profile to the <strong>Hide</strong> position. This is useful to hide default profiles that may not be needed.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node16840-hide-profile.png" /></figure>
-    <p>Ingest profiles that are hidden will not appear in the Ingest Profile list in the Upload module.</p>
+    <h2 id="users">Working with multiple accounts</h2>
+    <p>A common misconception when adding an additional account is that you get an additional 10 users just like you did with your first Video Cloud account. Additional Video Cloud accounts do not include additional user accounts. For example, if 10 users were added to the first account and the same 10 users are added to the second account, the total user count is still 10. The 10 unique users are per the license agreement and a single unique user ID can be used on multiple accounts and still be counted as one user.</p>
+    <p>If you have multiple accounts, users must be added to each account individually. Assume you have 2 accounts, Account A and Account B. If a user is added to Account A, they will not automatically have access to Account B. Users must be added to each account they need access to.</p>
+    <p>To learn more about working with multiple accounts, see <a href="/general/references/working-multiple-video-cloud-accounts.html">Working with Multiple Video Cloud Accounts</a>.</p>
   </section>
-  <section class="bcls-section">
-    <h2 id="using_the_advanced_editor">Using the Advanced Editor</h2>
-    <p>Ingest profiles are defined using JSON. To view the JSON syntax for a profile, edit a profile and then click the <strong>Advanced Editor</strong> tab. The JSON representation of the profile will display.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node16840-json.png" /></figure>
-    <p>While the JSON can be edited here, Brightcove recommends editing profiles using the Simple Editor to reduce the likelihood of mistakes. For information on the available attributes, see the <a href="https://apis.support.brightcove.com/ingest-profiles/references/ingest-profiles-api-fields-reference-dynamic-delivery-and-context-aware-encoding.html">Ingest Profiles API Fields Reference for Dynamic Delivery and Context Aware Encoding</a> topic.</p>
-  </section>
+      
 </article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Media Sharing Settings</title>
+        <title>Viewing Billing Information</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage media sharing settings.">
+        <meta name="description" content="In this topic you will learn how to view the billing information for an account.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -2364,7 +2364,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/managing-media-sharing-settings.html" aria-current="page">Managing Media Sharing Settings</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/managing-media-sharing-settings.html">Managing Media Sharing Settings</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Managing Media Sharing Settings</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Viewing Billing Information</li>
             
             
           </ol>
@@ -2760,72 +2764,112 @@
       <br>
       
       
+<h1>Viewing Billing Information</h1>
 <article class="bcls-article">
-  <h1>Managing Media Sharing Settings</h1>
-  <summary>In this topic you will learn how to manage media sharing settings.</summary>
-  <section class="bcls-section"> 
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4703864538001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js">
-</script> 
-    
-    <p>Media sharing allows publishers to upload videos once and then share the videos to other accounts. The accounts can be your own, corporate accounts or accounts of other publishers. The shared videos can then be used independently in the other Video Cloud accounts. The Media Sharing Settings are used to manage the sharing relationships between accounts.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Media sharing is available only for Video Cloud Enterprise customers. If you are interested in upgrading your Video Cloud account, please contact Brightcove for more information.</aside>
-    <p>Media sharing can also be implemented programmatically using the CMS API. For more information, see <a href="https://apis.support.brightcove.com/cms/managing-videos/media-sharing-cms-api.html">Media Sharing with the CMS API</a>.</p>
-    <p>This topic will use the following terminology:</p>
-    <ul>
-      <li><strong>Master</strong> - The account that created the original video. The Master owns the content and is responsible for setting up, managing and providing content to Affiliates.</li>
-      <li><strong>Affiliate</strong> - The account that is receiving the video. The Affiliate can accept content shared to it from a Master.</li>
-    </ul>
-  </section>
+  <summary>In this topic you will learn how to view the billing information for an account.</summary>
   <section class="bcls-section">
-    <h2 id="enable">Enabling media sharing</h2>
-    <p>To enable media sharing, contact <a href="https://supportportal.brightcove.com">Brightcove Customer Support</a> and have them turn on media sharing for your account.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="add_affiliates">Adding affiliates</h2>
-    <p>To share videos to another Video Cloud account, an affiliate account must be added. An affiliate is an account you want to share videos to. To add an affiliate account, follow these steps:</p>
+    <p>You can use Video Cloud Studio to view the billing information for an account. Note that to access the Billing page, you must be a Video Cloud Studio user with the Administrator role and you must have an annual contract associated with your account.</p>
+    <p>To access the Billing page:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Login to Video Cloud Studio as an Administrator.</li>
-      <li>Open the <strong>Admin</strong> module and then <strong>Media Sharing</strong>. Note that you must be an account administrator to access to the ADMIN menu.</li>
-      <li>The <strong>Manage Affiliates - Accounts I Share Videos With</strong> section will display a list of all the affiliate publishers with which you have established a media sharing relationship.
-        <p><figure class="bcls-figure"><img class="bcls-image" alt="" src="/assets/images/s-admin-img/node18459-manage-affiliates.webp" /></figure></p>
-      </li>
-      <li>To add a new affiliate, enter their Video Cloud account ID in the <strong>Account ID</strong> textbox and then click <span class="button-blue">Add affiliate</span>.</li>
+      <li>Login to Video Cloud Studio.</li>
+      <li>Open the <strong>Admin</strong> module and then <strong>Billing</strong>.</li>
     </ol>
-    <p>The account will be added to the table with a <strong>Relationship Status</strong> of <strong>Pending</strong>. The affiliate account will receive a media sharing notification and be able to <a href="#accept_reject">accept or reject the relationship</a>. If the affiliate accepts the media sharing relationship, the <strong>Relationship Status</strong> will be <strong>Accepted</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The Billing page is not available for trial accounts.</aside>
+    <p>The main Billing page will display.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Main billing page" src="/assets/images/s-admin-img/node16461-billing-main.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Notes:
+      <ul>
+        <li>If a <strong>Billing Account</strong> dropdown list appears at the top of the page, this indicates you have multiple contracts with Brightcove. Use the dropdown to select a contract to view billing details.</li>
+        <li>If you have one or more Zencoder accounts as well as Video Cloud Studio accounts, VOD Zencoder Minutes Used items may appear on your Video Cloud Studio billing statement. The information is included as a convenience, just to give you a complete picture of your billing - these charges are not related to Video Cloud Studio.</li>
+        <li>Updating of billing information: Analytic and usage data is collected continuously and can be viewed in the Analytics Module in Video Cloud Studio.  Daily rollups of usage data are available 2-3 days later to account for late arriving data (such as, but not limited to, bandwidth usage from CDN logs).  Data used specifically for billing is generated from the analytic and usage data on a regular schedule at the time invoices are created.</li>
+      </ul>
+    </aside>
+    <h3>Expired accounts</h3>
+    <p>If you have older, expired accounts, you can also select those from the <strong>Billing Account</strong> dropdown:</p>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" src="/assets/images/s-admin-img/billing-expired-account.png" alt="Expired Accounts"> </figure>
+    <p>With expired accounts, there is an issue where the last period of an expired contract is not available. In the above example, if the expired contract is selected, data for August 2020 will not be available.  Contact your Customer Success Manager or Brightcove Support if this information is needed. </p>
   </section>
   <section class="bcls-section">
-    <h2 id="custom_fields">Custom field matching</h2>
-    <p>To require that affiliate accounts have the same custom fields as the master account, check <strong>Enforce custom field matching</strong> and then click <strong>Update Rules</strong>. When <strong>Enforce custom field matching</strong> is checked, affiliate accounts must have the same custom fields as the master account or any shares will fail.</p>
-    <h3>Notes</h3>
+    <h2 id="metrics">Billing metrics</h2>
+    <p>The data displayed on the Billing page will vary based upon the number of accounts you have and your account entitlements. For example, if you do not use DRM, that information will not be displayed.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Billing information for the previous month will not be available until the 7th of the current month.</aside>
+    <p>The Contract Overview section may display the following billing metrics.</p>
+    <h3>Bandwidth</h3>
+    <p>The Bandwidth metric consists of 2 submetrics which are <strong>VOD</strong> Edge bandwidth plus <strong>Live</strong> Edge bandwidth. It displays total bandwidth / contracted bandwidth. Total bandwidth includes video and player loads. The name for this metric name will match what you see in your billing invoice to track the bandwidth usage (i.e. it may not display as Bandwidth). If the bandwidth amount is over quota, the graphic will appear in red. The bar chart can be used to view the bandwidth <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Bandwidth data is delayed by up to 3-5 days, though usually it is available sooner. The data is partly dependent on information from CDNs, so there may be delays on their side that are beyond our control.</aside>
+    <h3>Streams</h3>
+    <p>The Streams metric displays the total stream starts / contracted stream starts. This should match the number of video views in the Analytics module. If the number of stream starts is over quota, the graphic will appear in red. The bar chart can be used to view the streams (in thousands) <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The number of stream starts corresponds to the number of video views in the Analytics module.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: You may notice discrepancies when comparing billing data to analytics data. This can be due to comparing reconciled billing data to unreconciled analytics data. The reconciliation process requires server logs provided by the CDNs and there may be a delay in getting the server logs and processing the data.</aside>
+    <h3>Encryption Licenses</h3>
+    <p>The Encryption Licenses metric will display the total DRM licenses / contracted licenses. If the number of licenses used is over quota, the graphic will appear in red. The bar chart can be used to view the number of licenses used <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Regardless of the Player Preload setting, encryption is always loaded even before the video is streamed to avoid delay in loading the video. For this reason, you may see more Encryption Licenses than Streams in your billing metrics.</aside>
+    <h3>Auto Captions</h3>
+    <p>The Auto Captions metric will display the total number of auto captioning minutes used / contracted amount.</p>
+    <h3>APS and ANS</h3>
+    <p>Active Paying Subscribers (APS) and Active NonPaying Subscribers (ANS) metrics for  Brightcove Beacon Evergent Billing.</p>
+    <h3>Managed Content/Storage</h3>
+    <p>The Storage metric will display the total storage / contracted storage. If the storage used is over quota, the graphic will appear in red. The bar chart can be used to view the storage used <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">
+      <p>Notes:</p>
+      <ul>
+        <li>Storage is only displayed for Professional and Enterprise accounts</li>
+        <li>Video renditions/assets and digital masters are stored separately, but the Storage metric represents the total combined storage for both renditions/assets and digital masters</li>
+      </ul>
+    </aside>
+    <h3>Transcoding</h3>
+    <p>Transcoding refers to the total amount of output GBs processed by Brightcove in connection with the conversion of a video file to additional video formats or bit rates. If the transcoding used is over quota, the graphic will appear in red. The bar chart can be used to view the transcoding used <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <h3>Origin Serving Bandwidth</h3>
+    <p>Bandwidth usage for bytes delivered only (applies to BYO CDN publishers). This is the bandwidth from the Brightcove Origin. If you are using your own CDN, Brightcove does not track the amount of  bandwidth from that CDN, you will need to ask your CDN for the bandwidth data.</p>
+    <h3>Ads Delivered</h3>
+    <p>Total number of ads delivered. This also ties to the overall value of the product. This metric also provides data for downstream collateral or information regarding ROI for a publisher using the Live module.</p>
+    <h3>Alive Bandwidth</h3>
+    <p>Input hours transcoded of your content.</p>
+    <h3>Brightcove Live Output Tiers</h3>
+    <p>The Brightcove Live Output Tiers metric will display the total live hours/ contracted live hours. If the number of hours is over quota, the graphic will appear in red. The bar chart can be used to view the number of hours used <strong>Contract to Date</strong> or <strong>Month to Date</strong>. When this metric is selected, the output hours for each tier will be displayed above the bar chart.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select metric" src="/assets/images/s-admin-img/node16461-live-output-tiers.png" /></figure>
+    <p>It will take 3 days after an event for the Live module hours used and live bandwidth to appear in the Billing UI. Billing by ingestion tier is as follows:</p>
     <ul>
-      <li>Custom field matching will just verify the internal custom field names in both accounts match. The type of the field (list or text) does not matter.</li>
-      <li>
-        <p>If the channel defined by the master account enforces custom field matching, and then shares a video that has a custom field with a value that is not allowed by the affiliate account, that share attempt will fail.</p>
-        <p>If the channel defined by the master account does not enforce custom field matching, and then shares a video that has a custom field with a value that is not allowed by the affiliate account, then the share attempt will work, but the field with the bad value will not be included on the affiliate copy of the video.</p>
-      </li>
-      <li>Note: If a shared video in the master account is configured with geo filtering, affiliate accounts must also be enabled for geo filtering or the share will fail. Any geo filtering configured on the shared video will also be applied in the affiliate account(s). To enable an account for geo filtering, please <a href="https://supportportal.brightcove.com">contact Brightcove Support</a>.</li>
+      <li>Tier 1 is charged at 1.0x hours</li>
+      <li>Tier 2 is charged at 1.5x hours</li>
+      <li>Tier 3 is charged at 2.0x hours</li>
     </ul>
+    <p>When using <a href="https://live.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html">custom Live ingest profiles</a>, the tier will be decided by the total bitrate of the Live profile. Note that with RTMP outputs, billing begins when a job starts to when it ends, including any Reconnect Timeout if an encoder is  shut off.</p>
+    <h3>Brightcove Live DVR Hours</h3>
+    <p>The <strong> Brightcove Live DVR Hours</strong> displays the input hours transcoded + the Live video hours with DVR enabled. If the number of hours is over quota, the graphic will appear in red.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select metric" src="/assets/images/s-admin-img/node16461-live-dvr-hours.png" /></figure>
+    <h3>Live Origin</h3>
+    <p>Live origin bandwidth is defined as a cache-miss from the CDN and requests that need to be fulfilled by the live origin. It has cost implications on the system when reselling bandwidth and will help assess margins per customer and overall profitability of the platform to drive future pricing discussions.</p>
+    <h3>VOD Origin</h3>
+    <p>Live VOD origin bandwidth (BYO CDN).</p>
   </section>
   <section class="bcls-section">
-    <h2 id="remove_affiliates">Removing affiliates</h2>
-    <p>To remove an affiliate account, locate the account to remove and click the remove icon (<img alt="" src="/assets/images/s-admin-img/node1050-delete-icon.png" />). A dialog will appear confirming that you want to end the sharing relationship.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18459-end-sharing.webp" /></figure>
-    <p>Click <strong>End Sharing</strong> to end the sharing relationship.</p>
+    <h2 id="details">Viewing account details</h2>
+    <p>The Account Details section of the page will display the details for the selected metric. To select a metric to view, click an item in the Contract Overview section or select one using the dropdown list in the Account Details section.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select metric" src="/assets/images/s-admin-img/node16461-select-metric.png" /></figure>
+    <p>The bar chart will update to display the details for the selected metric. Data for the current month and past 12 months will be displayed. Hovering over the chart will display the details for that month.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="graph details" src="/assets/images/s-admin-img/node16461-graph-details.png" /></figure>
+    <p>If you hover over the current month, however, note that this is <strong>not</strong> realtime data. The data for the current month is only as recent as four days prior to the current date, and is only an estimate.</p>
+    <p>A list of all accounts will appear below the bar chart. By default, if you have multiple accounts, the data for all accounts will be displayed. To view data for a single account, select an account by clicking the radio button for the account or by clicking on the row.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="accept_reject">Approving/Rejecting media sharing relationships</h2>
-    <p>If another Video Cloud account has added your account as an affiliate (wants to share videos to your Video Cloud account), a message will be displayed when the <strong>Admin &gt; Media Sharing</strong> page is accessed.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18459-approve-sharing.png" /></figure>
-    <p>If <strong>Enforce custom field matching</strong> is checked, the affiliate account must have the same custom fields as the master account or any shares will fail.</p>
-    <p>Click <strong>Reject</strong> to reject the media sharing relationship. Otherwise, select an <strong>Acceptance Mode</strong>:</p>
+    <h2 id="export">Exporting data</h2>
+    <p>To download <strong>invoiced</strong> billing data in a CSV format, click <strong>CSV</strong> in the page header.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="export data" src="/assets/images/s-admin-img/billing-export.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="deleted_videos">Deleted videos and digital masters</h2>
+    <p>Note that when you delete videos, digital masters, and other assets, the physical files are not removed immediately. We keep the content for 12-14 days (for Dynamic Delivery) and even longer for Legacy. This is done for two reasons:</p>
     <ul>
-      <li><strong>Automatic</strong> - Always accept shared videos from this master account. Shared videos will appear in the Media module list of videos.</li>
-      <li><strong>Manual</strong> - Review shared videos from this master account before adding them to the media library. The Media module will display a <strong>Shares Pending</strong> item in the left navigation.</li>
+      <li>In case the videos were deleted by mistake and you want to restore them</li>
+      <li>So  you can still get the metadata and analytics for the videos</li>
     </ul>
-    <p>Click <strong>Approve</strong> to approve the media sharing relationship. After the relationship is approved it will appear in the <strong>Manage Masters</strong> section of the page.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18459-manage-masters.webp" /></figure>
-    <p>Click <strong>View Contract</strong> to view the media sharing settings. The <strong>Acceptance Mode</strong> slider can be used to change the <strong>Acceptance Mode</strong>. To remove the sharing relationship, click the remove icon (<img alt="" src="/assets/images/s-admin-img/node1050-delete-icon.png" />).</p>
+    <p>As long as the physical files are still in place, you <strong>will</strong> see deleted media assets reflected in your billing.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Brightcove has purge capability allowing customers to skip the 12-14 days grace period for deleted videos. You can ask <a href="https://supportportal.brightcove.com/s/login/?language=en_US&startURL=%2Fs%2F&ec=302l">Support</a> to do it.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="locked_accounts">Locked accounts</h2>
+    <p>Storage for locked accounts will continue to be reflected in the Billing data for up to 60 days.</p>
   </section>
 </article>
 

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Authenticating Studio Users using Single Sign-On</title>
+        <title>Managing Account Settings</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how Studio can be configured to authenticate users using single sign-on.">
+        <meta name="description" content="This topic provides an overview of the Studio account settings options.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -2322,7 +2322,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/authenticating-studio-users-using-single-sign.html" aria-current="page">Authenticating Studio Users using SSO</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/authenticating-studio-users-using-single-sign.html">Authenticating Studio Users using SSO</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Authenticating Studio Users using Single Sign-On</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Managing Account Settings</li>
             
             
           </ol>
@@ -2761,81 +2765,125 @@
       
       
 <article class="bcls-article">
-  <h1>Authenticating Studio Users using Single Sign-On</h1>
-  <summary>In this topic you will learn how Studio can be configured to authenticate users using single sign-on.</summary>
+  <h1>Managing Account Settings</h1>
+  <summary>This topic provides an overview of the Studio account settings options.</summary>
   <section class="bcls-section">
-    <p>Single sign-on (SSO) is a session and user authentication service that permits a user to use one set of login credentials (e.g., username and password) to access multiple applications. The service authenticates the end user for all the applications the user has been given rights to and eliminates further prompts when the user switches applications during the same session.</p>
-    <p>SAML-based single sign-on support is available for Video Cloud Studio which gives publishers access to the Studio via SSO through an Identity Provider (IdP) of your choice. Some of the features include:</p>
+    <p>To access the Studio account settings, open the <strong>Admin</strong> module in the primary navigation.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: You must be an account administrator to access the <strong>Admin</strong> menu.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: Your Studio version and account configuration will determine which Admin menu options are available.</aside>
+    
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14055-account-settings-menu-vc.png" /></figure>
+      
+    
+      <p>The following account settings are available:</p>
     <ul>
-      <li>Video Cloud Studio supports the SAML 2.0 SSO protocol</li>
-      <li>Identity mapping is based on the username (full email address) rather than just a single email domain. This provides more flexibility for publishers who want some users enabled for SSO and others to go through the regular Video Cloud Studio login.</li>
-      <li>Once an account and its existing users are configured for SSO, new users who are added to the account through the Video Cloud Studio UI will inherit the SSO setup of the user who is adding them</li>
-      <li>Video Cloud Studio supports Service Provider initiated login for SSO. We do not support direct IdP initiated at this time but can provide a URL to bypass the Video Cloud Studio login screen that can be linked to from your Identity Provider portal.</li>
+      <li><a href="#account_info">Account Information</a></li>
+      <li><a href="#users">User Management</a></li>
+      <li><a href="#account_settings">Account Settings</a></li>
+      <li><a href="#upload">Upload Settings</a></li>
+      <li><a href="#ingest">Ingest Profiles</a></li>
+      <li><a href="#fields">Video Fields</a></li>
+      <li><a href="#language">Language Settings</a></li>
+      <li><a href="#sharing">Media Sharing</a></li>
+      <li><a href="#ssads">Server-Side Ad Settings</a></li>
+      <li><a href="#player">Player Settings</a></li>
+      <li><a href="#live">Live Settings</a></li>
+      <li><a href="#integrations">Integrations</a></li>
+      <li><a href="#api">API Authentication</a></li>
+      <li><a href="#billing">Billing</a></li>
     </ul>
-    <p>For more information on having your account enabled for SSO, contact your Customer Success Manager.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="benefits">Benefits</h2>
-    <p>Some of the benefits of adding SSO for Video Cloud Studio login include:</p>
-    <ul>
-      <li><strong>Single Login for all Applications</strong> - Remembering multiple usernames and passwords becomes difficult to manage and a headache for IT teams (or account admins of the tools) to deal with. By enabling SSO and adding a Video Cloud Studio login to it, Brightcove account admins no longer have to deal with these issues and users of the tool don’t have to remember a separate username/password for Video Cloud Studio.</li>
-      <li><strong>Security &amp; Password Requirements</strong> - Enterprises have varying user password requirements, i.e. length, duration and complexity. Using SSO allows Brightcove to support to these requirements without having to change Video Cloud Studio's built-in security management to accommodate each individual set of requirements.</li>
-      <li><strong>Disable User Access Quickly &amp; Easily</strong> - Single sign-on enables IT to centrally manage users and remove user access as soon as an employee leaves the company. SSO prevents any disgruntled users from modifying or deleting Brightcove media, players, tokens, etc.</li>
-    </ul>
+    <h2 id="account_info">Account Information</h2>
+    <p>The Account Information option allows you to edit the account name and mailing address and can be used to clone accounts. For more information, see <a href="/admin/general/managing-account-information.html">Managing Account Information</a>.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="limitations">Limitations</h2>
-    <ul>
-      <li>Just-in-time user provisioning for SAML isn't currently supported. Users will still need to be added to accounts through the Studio, and permissions/module access control will be configured through the Studio User Administration UI. When new users are added to an account, they will inherit the SSO setup of the user who is adding them.</li>
-      <li>SSO cannot be enabled for trial accounts.</li>
-    </ul>
+    <h2 id="users">User Management</h2>
+    <p>The User Management option allows you to manage the users who are authorized to use Studio. For more information on managing users, see <a href="/admin/general/managing-users.html">Managing Users</a>.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="faq">FAQ</h2>
-    <dd><details>
-  <summary>I know that SAML based SSO is supported but what about two factor (2FA) or multi-factor auth? Is that supported?</summary>
-      <p>No, we don’t have any plans to support 2FA on regular Studio logins at this time. You can enable login for SAML based SSO and add 2FA to your IdP setup, but that would be configured by your IT team on your own IdP.</p>
-    </dd>
-    <dd><details>
-  <summary>Are there plans to support other SSO protocols like CAS or Kerberos?</summary>
-      <p>Not at this time.</p>
-    </dd>
-    <dd><details>
-  <summary>We have some users on our account that should not go through SSO and others who need to go through SSO. Is this supported?</summary>
-      <p>Yes. SSO is enabled on a per user basis so some users can be enabled for SSO login and others can be enabled for regular Studio login. One thing to note is that there is no way in the Studio user management UI to select which authentication path a user should go through when a new user is being added to the account. Currently the user will inherit whatever auth path that the admin who is adding them is configured for. We do plan to expose an option for selecting this in the Studio at a later date. The workaround for now for mixed authentication flows is to have one admin configured for SSO and one configured for regular Studio login. The admin should log into the appropriate user account when adding new users based on what authentication method they should be setup for.</p>
-      <p>While we support the flexibility of having different users configured for different identity providers, we also have customers who want one single IdP and every user to always be configured for that single IdP. That configuration is also available.</p>
-    </dd>
-    <dd><details>
-  <summary>Is the ability to setup multiple identity providers for users on a single account supported?</summary>
-      <p>Yes. We can set up multiple identity providers for a given org (customer) and we can assign users to either IdP. See the question above regarding the inheritance of auth paths when adding a new user to an account.</p>
-    </dd>
-    <dd><details>
-  <summary>Is local login (Studio auth username/password) directly to Brightcove allowed when SAML SSO is turned on for a user?</summary>
-      <p>No. Once a user is enabled for SSO, that is the only way they can authenticate into their account.</p>
-    </dd>
-    <dd><details>
-  <summary>Does Brightcove support SAML v2.0 with SP-initiated SSO?</summary>
-      <p>Yes</p>
-      <ul>
-        <li>SP-initiated login is supported via a special direct domain login URL that will look like this:<br />
-          <code translate="No">https://signin.brightcove.com/login/ext/saml?behavior=xxxxxxxxx</code></li>
-        <li>It is also possible for users to go to the <code translate="No">signin.brightcove.com</code> page. When they type in username/password on the Brightcove signin page, they will be redirected to your IdP to login (if you are not already signed in). Note the password field gets ignored on the Brightcove login page - we only inspect the email address to see if the user is enabled for SSO.</li>
-      </ul>
-    </dd>
-    <dd><details>
-  <summary>Does Brightcove support the use of RelayState parameter in SAMLRequest/SAMLResponse for direct access to video after SSO?</summary>
-      <p>No. After login via SSO, users will always be taken to the Studio Home dashboard.</p>
-    </dd>
-    <dd><details>
-  <summary>Does the SSO integration support Single Sign-Out?</summary>
-      <p>No.</p>
-    </dd>
-    <dd><details>
-  <summary>What identity providers are supported?</summary>
-      <p>While Brightcove hasn’t tested with all SSO Identity Providers, we are confident that as long as your IdP supports SAML 2.0, there shouldn't be any problems. Some of the common ones we’ve talked to customers about include: Okta, Ping Federated, Ping Identity, Microsoft Active Directory, OneLogin, and Auth0.</p>
-    </dd>
+    <h2 id="account_settings">Account Settings</h2>
+    <p>The Analytics Settings provide access to account-related settings. The <strong>Default Reporting Time Zone</strong> is used to calculate day boundaries for reporting data. Changing the reporting time zone setting only affects data going forward, and changes are not applied retroactively. If you change this setting, you may see a flat spot or a spike in your analytics data when looking at day boundaries where the change was applied. Updates to this setting may not take effect immediately and analytics data may continue to refer to the old setting until the system processes the changes.</p>
+    <p>If <strong>Enable Video Content Type Field</strong> is enabled, the Video Content Type field will be displayed on the Media module homepage. It also allows a Video Content Type to be assigned to videos on the video properties page. For more information on managing users, see <a href="/campaign/get-started/overview-video-content-types.html">Overview of Video Content Types</a>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14055-account-settings.webp" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="upload">Upload Settings</h2>
+    <p><strong>Default to Inactive</strong> - When checked, sets all uploaded videos to be inactive. This option is ignored if the user has access to the Media module. This could be used to let a set of users upload videos but they will remain inactive until someone else approves them and then makes them active.</p>
+    <p><strong>Required Fields</strong> - Select an option for how required fields are handled:</p>
+    <ul>
+      <li><strong>Required for activation</strong> - Required fields must have values before the video can be activated.</li>
+      <li><strong>Required for upload</strong> - Required fields must have values before the video can be processed and uploaded using the Upload module.</li>
+    </ul>
+    <p><strong>Upload Additional Assets</strong> - When checked, allows poster and thumbnail images to be uploaded when videos are uploaded using the Upload module. The upload status dialog will display and provide the ability to select poster and thumbnail images to upload. For more information, see <a href="/media/manage/uploading-videos-using-upload-module.html">Uploading Videos Using the Upload Module</a>.</p>
+    <p><strong>Default Image Dimensions</strong> - These values can be used to set default image sizes for poster and thumbnail images. By configuring sizes as part of the Upload Settings, you can avoid having to set image dimensions in your ingest profiles. When these values are configured and your ingest profiles have image sizes as well, Video Cloud will use the following process to determine what dimensions to use for various types of image ingests:</p>
+    <ol class="bcls-tasklist">
+      <li>When you upload a video using the Upload module, Video Cloud will first look to see if there are image dimensions defined in the selected ingest profile. If the ingest profile has image dimensions, those dimensions will be used. If not, Video Cloud will check for dimensions in the following order:
+        <ul>
+          <li>Use image dimensions specified in the default ingest profile for the account</li>
+          <li>Use image dimensions specified in the Upload settings</li>
+          <li>Use global default image dimensions specified by Video Cloud</li>
+        </ul>
+      </li>
+      <li>If you upload a poster or thumbnail image from the video details page, or capture an image from the video details page, the image dimensions specified as part of the default ingest profile for the account will be used. If the default ingest profile does not have image dimensions, Video Cloud will check for dimensions in the following order:
+        <ul>
+          <li>Use image dimensions specified in the Upload settings</li>
+          <li>Use global default image dimensions specified by Video Cloud</li>
+        </ul>
+      </li>
+    </ol>
+    <p>If you want to always use the image dimensions specified as part of the Upload Settings, Brightcove recommends you set these values appropriately and then remove all image sizing from your ingest profiles.</p>
+    <p><strong>Upload Queueing</strong> - Select an option for how file uploads are handled:</p>
+    <ul>
+      <li><strong>Allow concurrent uploads </strong> - Multiple files are uploaded concurrently</li>
+      <li><strong>Upload one file at a time</strong> - Files are uploaded one at a time; this is recommended when large files are being uploaded</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14055-upload-settings.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="ingest">Ingest Profiles</h2>
+    <p>The Ingest Profiles option allows you to manage the ingest profiles your Video Cloud account. For more information on managing ingest profiles, see <a href="/admin/ingest-profiles/managing-ingest-profiles.html">Managing Ingest Profiles</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="fields">Video Fields</h2>
+    <p>The Video Fields option allows you to mark standard video fields as required and also allows you to view, create, and modify custom metadata fields for your account. For more information on configuring video fields, see <a href="/admin/general/creating-custom-metadata-fields.html">Creating Custom Metadata Fields</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="language">Language Settings</h2>
+    <p>The Language Settings is where you define a Primary Language and then add and manage additional metadata languages. For more information on configuring language settings, see <a href="/admin/general/configuring-language-settings.html">Configuring Language Settings</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sharing">Media Sharing</h2>
+    <p>The Media Sharing option allows you to upload videos once and then share the videos to other Video Cloud accounts. For more information on media sharing, see <a href="/admin/general/managing-media-sharing-settings.html">Managing Media Sharing Settings</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="ssads">Server-Side Ad Settings</h2>
+    <p>The Server-Side Ad Settings allow you to manage both Live and VOD server-side ad configurations. For more information, see <a href="/admin/general/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="player">Player Settings</h2>
+    <p><strong>Basic Authentication</strong> - Provides the option of using basic username and password authentication for access to the Player Management and Delivery System APIs. If this option is not enabled, <a href="/admin/general/managing-api-authentication-credentials.html">API authentication</a> must be used.</p>
+    <p><strong>Player Mapping</strong> - Provides the ability to create player mapping for use in the Directed Migration Tool. The Directed Migration Tool provides a way to specify that a Brightcove Player should be loaded instead of a Smart Player.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node14055-player-service-settings.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="live">Live Settings</h2>
+    <p>The Live Settings allow you to manage the settings for Brightcove Live. For more information, see <a href="https://live.support.brightcove.com/admin/managing-live-settings.html">Managing Live Settings</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="integrations">Integrations</h2>
+    <p>Integrations allows you to integrate with Zoom and broadcast a Zoom meeting using Brightcove Live. For more information, see <a href="https://live.support.brightcove.com/live-module/zoom-live-integration.html">Integrating a Zoom meeting into Brightcove Live</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="api">API Authentication</h2>
+    <p>The API Authentication option allows you to create and manage API credentials. For more information on managing API credentials, see <a href="/admin/general/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="billing">Billing</h2>
+    <p>The Billing option allows you to view billing information for the account. For more information on billing, see <a href="/admin/general/viewing-billing-information.html">Viewing Billing Information</a>.</p>
   </section>
 </article>
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">

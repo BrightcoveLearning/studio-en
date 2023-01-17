@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Ingest Profiles</title>
+        <title>Managing Media Sharing Settings</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic provides an overview of how to create and edit custom ingest profiles.">
+        <meta name="description" content="In this topic you will learn how to manage media sharing settings.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -2450,7 +2450,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/managing-ingest-profiles.html" aria-current="page">Managing Ingest Profiles</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Managing Ingest Profiles</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Managing Media Sharing Settings</li>
             
             
           </ol>
@@ -2761,109 +2765,71 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Ingest Profiles</h1>
-  <summary>This topic provides an overview of how to create and edit custom ingest profiles.</summary>
-  <section class="bcls-section">
-    <p>Ingest profiles contain the transcode settings that will be used when videos are uploaded using the <a href="/media/manage/uploading-videos-using-upload-module.html">Upload module</a> or the <a href="https://apis.support.brightcove.com/dynamic-ingest/references/reference.html">Dynamic Ingest API</a>.</p>
-    <p>To access the Ingest Profiles administration page, open the <strong>Admin</strong> module and then <strong>Ingest Profiles</strong>. Note that to access the Ingest Profiles administration page, you must be a Video Cloud Studio user with the Administrator role.</p>
-    <p>A list of ingest profiles will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node15628-profile-list.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Note: Clicking the <strong>Show API name</strong> link in the header will display the internal name of the ingest profile. The internal name is used when using the ingest profile name in an API call.</aside>
-    <p>The page will display the following information:</p>
+  <h1>Managing Media Sharing Settings</h1>
+  <summary>In this topic you will learn how to manage media sharing settings.</summary>
+  <section class="bcls-section"> 
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4703864538001">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js">
+</script> 
+    
+    <p>Media sharing allows publishers to upload videos once and then share the videos to other accounts. The accounts can be your own, corporate accounts or accounts of other publishers. The shared videos can then be used independently in the other Video Cloud accounts. The Media Sharing Settings are used to manage the sharing relationships between accounts.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Media sharing is available only for Video Cloud Enterprise customers. If you are interested in upgrading your Video Cloud account, please contact Brightcove for more information.</aside>
+    <p>Media sharing can also be implemented programmatically using the CMS API. For more information, see <a href="https://apis.support.brightcove.com/cms/managing-videos/media-sharing-cms-api.html">Media Sharing with the CMS API</a>.</p>
+    <p>This topic will use the following terminology:</p>
     <ul>
-      <li><strong>Profile Name and Description</strong></li>
-      <li><strong>Profile Version</strong> - Indicates the type of transcoding that is used. Note that the types that appear are based upon how your Video Cloud account is configured:
-        <ul>
-          <li><strong>Dynamic Delivery</strong> - Dynamic Delivery transcoding is used. For information on Dynamic Delivery, see <a href="/general/architecture/overview-dynamic-delivery.html">Overview of Dynamic Delivery</a>.</li>
-          <li><strong>Context-Aware</strong>&nbsp;- Context-Aware transcoding is used. For information on Context Aware Encoding, see <a href="/general/architecture/overview-context-aware-encoding.html">Overview of Context Aware Encoding</a>.</li>
-        </ul>
-      </li>
-      <li><strong>Type</strong> - Type of ingest profile
-        <ul>
-          <li><strong>Standard VOD</strong> - Indicates that this is a default profile provided by Video Cloud. This type of profile can't be edited or deleted.</li>
-          <li><strong>Custom VOD</strong> - Indicates that this is a <a href="#create">custom ingest profile</a>.</li>
-          <li><strong>Standard Live</strong> - Indicates that this is a default Live profile provided by Video Cloud. This type of profile can't be edited or deleted.</li>
-          <li><strong>Custom Live</strong> - Indicates that this is a <a href="#create">custom Live ingest profile</a>.</li>
-        </ul>
-      </li>
-      <li><strong>Renditions</strong> - The number of video renditions that may be created.</li>
-      <li><strong>Display</strong> - Determines whether the <a href="#hide">profile is displayed</a> and can be selected in the Upload module.</li>
-    </ul>
-    <p>For specific details on the Brightcove supplied ingest profiles (profiles with a <strong>Type</strong> of <strong>Standard VOD</strong> or <strong>Standard Live</strong>), see one of the following documents:</p>
-    <ul>
-      <li><strong>Dynamic Delivery or Context-Aware Profile Version</strong> - <a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Standard Ingest Profiles for Dynamic Delivery and Context Aware Encoding</a></li>
-      <li><strong>Custom Live Types</strong> - <a href="https://live.support.brightcove.com/admin/standard-live-ingest-profiles.html">Standard Live Ingest Profiles</a></li>
-    </ul>
-    <!-- <aside class="bcls-aside bcls-aside--information">Note: When lower quality source content is uploaded and one of the standard profiles is selected, Video Cloud will only produce renditions that are equal to or lower in quality than the source. When creating your own custom profiles, you may want to use <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/guides/conditional-output.html">conditional output parameters</a> to prevent renditions from being generated if the source doesn't match the quality criteria you specify. This will prevent the dynamic ingest system from creating higher quality renditions when lower quality source files are uploaded.</aside> -->
-    <p>Using the Ingest Profiles administration page, you can:</p>
-    <ul>
-      <li><a href="#create">Create new ingest profiles</a></li>
-      <li><a href="#edit">Edit ingest profiles</a></li>
-      <li><a href="#delete">Delete ingest profiles</a></li>
-      <li><a href="#default">Change the default ingest profile</a></li>
-      <li><a href="#hide">Hide/Show ingest profiles</a></li>
-    </ul>
-  </section>
-  <!-- <section class="bcls-section">
-    <h2 id="archivemasters">Archiving and distributing masters</h2>
-    <p>Ingest profiles can be configured to archive and distribute master (source) files. Archiving the master keeps a copy of the master file and provides the ability for the video to be re-transcoded in the future without the need to upload it again. Distributing the master enables the master to be pushed to the CDN and used as a playable rendition. The <strong>Standard VOD</strong> ingest profiles are configured to archive and not distribute the master. You may wish to change this behavior when creating a custom ingest profile. For additional information on archiving and distributing masters, see the <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">Archiving Masters</a> document. For a list of all the fields that can be configured when creating ingest profiles, see the <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/references/ingest-profiles-api-fields-reference-legacy-ingest.html">Ingest Profiles API Fields Reference</a> developer document.</p>
-  </section> -->
-  <section class="bcls-section">
-    <h2 id="create">Creating a new ingest profile</h2>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create and edit Ingest Profiles is available only to publishers with Enterprise and Professional accounts.</aside>
-    <p>To create a new ingest profile, click <span class="button-blue">New Profile<i class="button-icon" data-feather="chevron-down"></i></span>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node15628-new-profile.png" /></figure>
-    <p>The process to create a new ingest profile will vary based upon the type of profile being created. See one of the following documents for details on how to create a custom ingest profile:</p>
-    <ul>
-      <li><a href="creating-ingest-profiles-dynamic-delivery.html">Creating Ingest Profiles for Dynamic Delivery</a></li>
-      <li><a href="creating-ingest-profiles-context-aware-encoding.html">Creating Ingest Profiles for Context Aware Encoding</a></li>
-      <li><a href="https://live.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a></li>
+      <li><strong>Master</strong> - The account that created the original video. The Master owns the content and is responsible for setting up, managing and providing content to Affiliates.</li>
+      <li><strong>Affiliate</strong> - The account that is receiving the video. The Affiliate can accept content shared to it from a Master.</li>
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="edit">Editing ingest profiles</h2>
-    <p>The Ingest Profiles administration page can be used to edit ingest profiles. Note that the default set of ingest profiles (marked <strong>Standard VOD</strong>) can't be edited.</p>
-    <p>To edit an ingest profile:</p>
+    <h2 id="enable">Enabling media sharing</h2>
+    <p>To enable media sharing, contact <a href="https://supportportal.brightcove.com">Brightcove Customer Support</a> and have them turn on media sharing for your account.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="add_affiliates">Adding affiliates</h2>
+    <p>To share videos to another Video Cloud account, an affiliate account must be added. An affiliate is an account you want to share videos to. To add an affiliate account, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click the <strong>Ingest Profiles</strong> link.</li>
-      <li>Click on the ingest profile to edit.</li>
-      <li>Use the Profile Editor to edit the profile definition.</li>
-      <li>Click <span class="button-blue">Save</span>.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting ingest profiles</h2>
-    <p>The Ingest Profiles administration page can be used to delete ingest profiles that are no longer needed. Note that the default set of ingest profiles (marked <strong>Standard VOD</strong>) can't be deleted but <a href="#hide">they can be hidden</a> if they are not needed.</p>
-    <p>To delete an ingest profile:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click the <strong>Ingest Profiles</strong> link. The Ingest Profiles administration page will open displaying the ingest profiles that have been created for your account.</li>
-      <li>Click the delete icon (<img alt="" src="/assets/images/admin/node15628-delete-icon.png" />) next to the ingest profile or click the profile name and then click <strong>Delete Profile</strong>.</li>
-      <li>Confirm the deletion by clicking <span class="button-red">Delete Profile</span>.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="default">Selecting a default ingest profile</h2>
-    <p>A default ingest profile can be configured for when <a href="/media/manage/uploading-videos-using-upload-module.html">videos are uploaded</a> and when <a href="/social/general/creating-video-clip-using-brightcove-social.html">clipping using the Social module</a>. The upload default profile is indicated with <img alt="" src="/assets/images/s-admin-img/node16840-upload-default-button.png" /> next to the profile name. The social clipping default profile is indicated with <img alt="" src="/assets/images/s-admin-img/node16840-social-clip-button.png" /> next to the profile name.</p>
-    <p>To select a default ingest profile for uploading/clipping:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click the <strong>Ingest Profiles</strong> link. The Ingest Profiles administration page will open displaying the ingest profiles that have been created for the account.</li>
-      <li>Click the ingest profile name for the profile you want to set as the default.</li>
-      <li>Click the <strong>Uploading</strong> or <strong>Social clipping</strong> link at the top of the page to set current profile as the default.
-        <figure class="bcls-figure"><img alt="" src="/assets/images/s-admin-img/node15628-set-default.png" /></figure>
+      <li>Login to Video Cloud Studio as an Administrator.</li>
+      <li>Open the <strong>Admin</strong> module and then <strong>Media Sharing</strong>. Note that you must be an account administrator to access to the ADMIN menu.</li>
+      <li>The <strong>Manage Affiliates - Accounts I Share Videos With</strong> section will display a list of all the affiliate publishers with which you have established a media sharing relationship.
+        <p><figure class="bcls-figure"><img class="bcls-image" alt="" src="/assets/images/s-admin-img/node18459-manage-affiliates.webp" /></figure></p>
       </li>
+      <li>To add a new affiliate, enter their Video Cloud account ID in the <strong>Account ID</strong> textbox and then click <span class="button-blue">Add affiliate</span>.</li>
     </ol>
-    <aside class="bcls-aside bcls-aside--information">Note: When selecting a default ingest profile you should ensure that the profile is <a href="#hide">visible and not hidden</a>.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: Only Dynamic Delivery profiles can be set to be a social clipping default profile. CAE profiles are not supported.</aside>
+    <p>The account will be added to the table with a <strong>Relationship Status</strong> of <strong>Pending</strong>. The affiliate account will receive a media sharing notification and be able to <a href="#accept_reject">accept or reject the relationship</a>. If the affiliate accepts the media sharing relationship, the <strong>Relationship Status</strong> will be <strong>Accepted</strong>.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="hide">Hiding and showing ingest profiles</h2>
-    <p>Ingest profiles can be hidden by clicking the slider associated with the profile to the <strong>Hide</strong> position. This is useful to hide default profiles that may not be needed.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node15628-hide-profile.png" /></figure>
-    <p>Ingest profiles that are hidden will not appear in the Ingest Profile list in the Upload module.</p>
-    <figure class="bcls-figure"></figure>
+    <h2 id="custom_fields">Custom field matching</h2>
+    <p>To require that affiliate accounts have the same custom fields as the master account, check <strong>Enforce custom field matching</strong> and then click <strong>Update Rules</strong>. When <strong>Enforce custom field matching</strong> is checked, affiliate accounts must have the same custom fields as the master account or any shares will fail.</p>
+    <h3>Notes</h3>
+    <ul>
+      <li>Custom field matching will just verify the internal custom field names in both accounts match. The type of the field (list or text) does not matter.</li>
+      <li>
+        <p>If the channel defined by the master account enforces custom field matching, and then shares a video that has a custom field with a value that is not allowed by the affiliate account, that share attempt will fail.</p>
+        <p>If the channel defined by the master account does not enforce custom field matching, and then shares a video that has a custom field with a value that is not allowed by the affiliate account, then the share attempt will work, but the field with the bad value will not be included on the affiliate copy of the video.</p>
+      </li>
+      <li>Note: If a shared video in the master account is configured with geo filtering, affiliate accounts must also be enabled for geo filtering or the share will fail. Any geo filtering configured on the shared video will also be applied in the affiliate account(s). To enable an account for geo filtering, please <a href="https://supportportal.brightcove.com">contact Brightcove Support</a>.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="remove_affiliates">Removing affiliates</h2>
+    <p>To remove an affiliate account, locate the account to remove and click the remove icon (<img alt="" src="/assets/images/s-admin-img/node1050-delete-icon.png" />). A dialog will appear confirming that you want to end the sharing relationship.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18459-end-sharing.webp" /></figure>
+    <p>Click <strong>End Sharing</strong> to end the sharing relationship.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="accept_reject">Approving/Rejecting media sharing relationships</h2>
+    <p>If another Video Cloud account has added your account as an affiliate (wants to share videos to your Video Cloud account), a message will be displayed when the <strong>Admin &gt; Media Sharing</strong> page is accessed.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18459-approve-sharing.png" /></figure>
+    <p>If <strong>Enforce custom field matching</strong> is checked, the affiliate account must have the same custom fields as the master account or any shares will fail.</p>
+    <p>Click <strong>Reject</strong> to reject the media sharing relationship. Otherwise, select an <strong>Acceptance Mode</strong>:</p>
+    <ul>
+      <li><strong>Automatic</strong> - Always accept shared videos from this master account. Shared videos will appear in the Media module list of videos.</li>
+      <li><strong>Manual</strong> - Review shared videos from this master account before adding them to the media library. The Media module will display a <strong>Shares Pending</strong> item in the left navigation.</li>
+    </ul>
+    <p>Click <strong>Approve</strong> to approve the media sharing relationship. After the relationship is approved it will appear in the <strong>Manage Masters</strong> section of the page.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18459-manage-masters.webp" /></figure>
+    <p>Click <strong>View Contract</strong> to view the media sharing settings. The <strong>Acceptance Mode</strong> slider can be used to change the <strong>Acceptance Mode</strong>. To remove the sharing relationship, click the remove icon (<img alt="" src="/assets/images/s-admin-img/node1050-delete-icon.png" />).</p>
   </section>
 </article>
 

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Creating Custom Metadata Fields</title>
+        <title>Configuring Server-Side Ad Settings</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to add custom metadata fields to your videos.">
+        <meta name="description" content="In this topic you will learn how to manage and create Live and VOD server-side ad configurations.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -2340,7 +2340,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/creating-custom-metadata-fields.html" aria-current="page">Creating Custom Metadata Fields</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/creating-custom-metadata-fields.html">Creating Custom Metadata Fields</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Creating Custom Metadata Fields</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Configuring Server-Side Ad Settings</li>
             
             
           </ol>
@@ -2760,151 +2764,121 @@
       <br>
       
       
+<h1>Configuring Server-Side Ad Settings</h1>
 <article class="bcls-article">
-  <h1>Creating Custom Metadata Fields</h1>
-  <summary>In this topic you will learn how to add custom metadata fields to your videos.</summary>
-  <section class="bcls-section"> 
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="731140813001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> 
+  <summary>In this topic you will learn how to manage and create Live and VOD server-side ad configurations.</summary>
+  <section class="bcls-section">
+    <p>Ad configurations define various aspects of ad playback, including ad calls, timing, beacons and other ad configuration options. The Server-Side Ad Settings define the ads that can be requested during video on demand (VOD) videos and during live events. Server-side ads take advantage of Brightcove's Server-Side Ad Insertion (SSAI) technology and provide these main features:</p>
+    <ul>
+      <li>Since ads are stitched into the on-demand or live video stream on the server side, they are not affected by ad blockers</li>
+      <li>For live events, ads are inserted at cue points sent from your encoder or you can create an instant cue point using the 
     
-    <p>Custom metadata can be used to add additional metadata fields to your videos. Custom fields are added as part of your account settings. After the custom fields have been added, the fields can be assigned values using the Media module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Custom fields should not be used to hold confidential or sensitive information.</aside>
+          <a href="/live/live-module/creating-and-managing-live-events-using-live-module.html#ad">Live module Control Room</a>
+        
+           
+        </li>
+      <li>You can configure fill slates to fill any unused ad time</li>
+    </ul>
+    <p>To learn more about server-side advertising, see <a href="https://player.support.brightcove.com/plugins/implementing-server-side-ads-brightcove-player.html">Implementing Server-Side Ads with the Brightcove Player</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note:
+      <ul>
+        <li>Before you can use SSAI, your Video Cloud account needs to be configured for Dynamic Delivery and enabled for SSAI. Contact your Customer Success Manager for details.</li>
+        <li>VMAP for Brightcove Live SSAI is not currently supported.</li>
+        <li>Although there is no prefetch functionality for SSAI ads, we delegate the ad position logic to the ad provider. Dynamic Delivery makes all the add calls up front. If we get an ad from the ad provider and it is transcoded in our system we will insert it into the stream.</li>
+      </ul>
+    </aside>
+    <p>The Server-Side Ad Settings page is used to manage the Live and VOD ad configurations. Note that to access the Server-Side Ad Settings page, you must be a user with the Administrator role.</p>
+    <p>To access the Server-Side Ad Settings page:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Login to Studio.</li>
+      <li>Open the <strong>Admin</strong> module and then<strong> Server-Side Ad Settings</strong>. A list of all ad configurations will be displayed.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18748-list-of-ad-configs.png" /></figure>
+      </li>
+    </ol>
+    <p>To create a new add configuration, click <span class="button-blue">+ Add configuration ∧</span> and then click the specific type of ad to create:</p>
+    <ul>
+      <li><a href="#vod">Video on Demand (VOD)</a></li>
+      <li><a href="#live">Live</a></li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18748-create-ad.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="newUI">Creating custom fields</h2>
-    <p>To create custom fields, follow these steps.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: After you make any changes to custom fields, you may need to clear your browser cache and reload the page to see the changes.</aside>
+    <h2 id="vod">Creating a Video On Demand ad configuration</h2>
+    <aside class="bcls-aside bcls-aside--information">Note: Server-side ad configurations can also be managed using the Server-Side Ad Insertion API. For information, see the <a href="https://ssai.support.brightcove.com/vod/guides/video-cloud-ssai-ad-config-api.html">Video Cloud SSAI Ad Config API</a> topic.</aside>
+    <p>To add a Video On Demand (VOD) ad configuration, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Login to Video Cloud Studio.</li>
-      <li>Open the <strong>Admin</strong> module and then <strong>Video Fields</strong>. Note that you must be an account administrator to access to the Admin menu.</li>
-      <li>The Video Fields page will display your custom fields and all the standard video metadata fields. Review the standard fields before creating any new custom fields. This will help you avoid creating custom fields when a standard field that can do the job already exists.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Video Fields page" src="/assets/images/s-admin-img/node1050-custom-fields-overview.png" /></figure>
+      <li>On the Server-Side Ad Settings page, click <span class="button-blue">+ Add configuration ∧</span> &gt; <strong>VOD</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18748-create-vod-ad.png" /></figure>
       </li>
-      <li>Click <span class="button-blue">Add Custom Field</span>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Adding a field" src="/assets/images/s-admin-img/node1050-new-custom-field.png" /></figure>
-      </li>
-      <aside class="bcls-aside bcls-aside--information">Note: There is no way to set a default value for a custom field.</aside>
-      <li>Enter a <strong>Display Name</strong>. This will appear as the label for the field in the Upload and Media modules. An<strong> Internal Name</strong> will automatically be created for the field based on the display name. The internal name is used when programmatically accessing the field using any of the Brightcove APIs. The internal name can be changed but the internal name cannot include whitespace, double-byte characters or punctuation.
-        <p>Note that internal names never have spaces and are all lower-case. They are generally formed by making the display name lower case and replacing spaces with underscore characters.</p>
-        <p>For example, if you enter <code translate="No">My Field</code> as the display name, the internal name will be <code translate="No">my_field</code>.</p>
-        <aside class="bcls-aside bcls-aside--information">Note: There are some reserved words that <strong>must not</strong> be used as custom field internal names (the display name does not matter). See the <a href="#reserved">Reserved names</a> section for information.</aside>
-      </li>
-      <li>Select a <strong>Type</strong> for the field.
+      <li>Enter a <strong>Name</strong>.</li>
+      <li>Select the <strong>Ad Server Response</strong>:
         <ul>
-          <li><strong>Text</strong> - The user can type anything into the field up to 1024 single-byte characters (or 512 double-byte characters).</li>
-          <li><strong>List</strong> - The user will select from a list of values. Lists can have no more than 150 possible values and each value in the list can be no more than 100 characters long.</li>
+          <li>DFP Ad Rules</li>
+          <li>DFP VMAP</li>
+          <li>Smart XML</li>
+          <li>VAST 3.0</li>
         </ul>
       </li>
-      <li>Enter a <strong>Description</strong>. The description field will appear as a hint in the Studio interface.</li>
-      <li>If the custom field will be required, check <strong>Make this Field Required</strong>.</li>
-      <li>If your field type is <strong>List</strong>, enter a comma-separated list of values and then click <span class="button-blue">Add to List</span>.
-        <aside class="bcls-aside bcls-aside--information">Notes:
-          <ol>
-            <li>The values must not contain quotation marks (example: Animals,Birds,Fish).</li>
-            <li>No value can contain a comma - all commas will be treated as separators of different values.</li>
-          </ol>
-        </aside>
-        <figure class="bcls-figure">
-        <img class="bcls-image--no-border" alt="Adding a field" src="/assets/images/s-admin-img/node1050-new-custom-field-added.webp"/></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: If custom field values have less than three characters, you will <strong>not</strong> be able to search for videos based on that value either in Studio or using the CMS API. For example, if you want to create a boolean-like custom field, <code translate="No">isfeatureitem</code>, make the value list <code translate="No">true</code> and <code translate="No">false</code>, not <code translate="No">yes</code> and <code translate="No">no</code>; if you use the latter values, you will <strong>not</strong> be able to find videos using the search <code translate="No">isfeatureitem:no</code>.</aside>
-      </li>
-      <li>Click <span class="button-blue">Save Field</span> to save the changes. Click <span class="button-blue-text-bordered">Save and add another</span> to save the field and begin creating another field.</li>
+      <li>Enter the<strong> Ad Tag</strong>.</li>
+      <li>Check <strong>Disable server-side beacons</strong> to disable server-side beacons. When disabled, SSAI will not fire any beacons server-side and will include all beacons in the VMAP output.</li>
+      <li>Click <span class="button-blue">Save</span>.</li>
     </ol>
-    <p>Custom fields you create are available immediately&nbsp;and will be visible&nbsp;in the Media module.</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="" src="/assets/images/s-admin-img/node1050-media-module.webp" /></figure>
-    <p>Up to 10 custom fields can be created. If you need more than 10 fields, click the <strong>Need more fields?</strong> link in the Video Fields page to contact Brightcove Customer Support with a request for more. Publishers are limited to 50 custom fields.</p>
+    <p>To edit an ad configuration, click the ad name, make the changes and then click <span class="button-blue">Save</span>. To delete an ad config, check the box next to the ad and then click <strong>Delete</strong>. To duplicate an ad config, check the box next to the ad and then click <strong>Duplicate</strong>.</p>
+    <p>Once VOD ad configurations have been created, open the Players module and click on a player to view the properties. When the <strong>Enable Server-Side (SSAI)</strong> advertising property is enabled, an ad configuration can be selected. For information on configuring player advertising, see 
+        
+        <a href="/players/general/configuring-player-advertising-using-players-module.html">Configuring Player Advertising using the Players Module</a>.
+      
+          
+      </p>
   </section>
   <section class="bcls-section">
-    <h2 id="edit">Editing list values</h2>
-    <p>You can add additional values to a List type custom field. Click the custom field name link, add the values and then click <strong>Add to List</strong>. When done, click <strong>Save Field</strong>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting list values</h2>
-    <p>You can add remove existing values from a List type custom field. Click the custom field name link, click the delete icon (<img alt="" src="/assets/images/s-admin-img/node1050-delete-icon.png" />) associated with the value and then click <strong>Save Field</strong>.</p>
-    <p>When a list value is removed, any videos that were previously assigned that value will keep the value. However, if a video with the deleted value is edited, the value will be cleared and a new value will have to be selected.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="remove">Removing custom fields from an account</h2>
-    <p>To remove a custom field from an account, click the delete icon (<img alt="" src="/assets/images/s-admin-img/node1050-delete-icon.png" />) associated with the  custom field name.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="reserved">Reserved names</h2>
-    <p>There are some reserved words that <strong>must not</strong> be used as custom field internal names (the display name does not matter). One common name is <em>category</em>. If you use a reserved name as the internal name for a custom field, searches on that field will return no results. If you already have a custom field named that uses a reserved name, you should <a href="#remove">remove it</a> and replace it with a different name or contact Brightcove Support for guidance.</p>
-    <p>The following should not be used as internal custom field names.</p>
-    <table class="bcls-table">
-      <tbody class="bcls-table__body">
-        <tr>
-          <td style="text-align:center;width:215px;" translate="No">category</td>
-          <td style="text-align:center;width:215px;" translate="No">complete</td>
-          <td style="text-align:center;width:215px;" translate="No">created_at</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;" translate="No">creationdate</td>
-          <td style="text-align:center;" translate="No">custom_fields</td>
-          <td style="text-align:center;" translate="No">dataimport</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;" translate="No">discriminator</td>
-          <td style="text-align:center;" translate="No">displayname</td>
-          <td style="text-align:center;" translate="No">displayname_analyzed</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;" translate="No">displayname_tokenized</td>
-          <td style="text-align:center;" translate="No">enddate</td>
-          <td style="text-align:center;" translate="No">itemstate</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;" translate="No">lastmodifieddate</td>
-          <td style="text-align:center;" translate="No">mediaid</td>
-          <td style="text-align:center;" translate="No">name</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;" translate="No">playable_now</td>
-          <td style="text-align:center;" translate="No">playstotal</td>
-          <td style="text-align:center;" translate="No">playstrailingweek</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;" translate="No">published_at</td>
-          <td style="text-align:center;" translate="No">publisheddate</td>
-          <td style="text-align:center;" translate="No">publisherid</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;" translate="No">referenceid</td>
-          <td style="text-align:center;" translate="No">referenceid_analyzed</td>
-          <td style="text-align:center;" translate="No">scheduled</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;" translate="No">referenceid_analyzed</td>
-          <td style="text-align:center;" translate="No">schedule.ends_at</td>
-          <td style="text-align:center;" translate="No">schedule.starts_at</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;" translate="No">scheduled</td>
-          <td style="text-align:center;" translate="No">searchtext</td>
-          <td style="text-align:center;" translate="No">searchtext_analyzed</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;" translate="No">startdate</td>
-          <td style="text-align:center;" translate="No">tag</td>
-          <td style="text-align:center;" translate="No">tags</td>
-        </tr>
-        <tr>
-          <td style="text-align:center;" translate="No">text</td>
-          <td style="text-align:center;" translate="No">state</td>
-          <td style="text-align:center;" translate="No">video_type</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  <section class="bcls-section">
-    <h2 id="code">Programmatically accessing custom fields</h2>
-    <p>Custom fields can be accessed programmatically using one of the Brightcove APIs. The following developer documents provide more information.</p>
+    <h2 id="live">Creating a Live ad configuration</h2>
+    <aside class="bcls-aside bcls-aside--information"> Note: Server-side Live ad configurations can also be managed using the Live API. For information, see <a href="https://apis.support.brightcove.com/live-api/ssai/live-api-server-side-ad-insertion-ssai.html#Create_an_ad_configuration">Brightcove Live API: Server-Side Ad Insertion (SSAI)</a>.</aside>
+    <p>To add a Live ad configuration, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>On the Server-Side Ad Settings page, click <span class="button-blue">+ Add configuration ∧</span> &gt; <strong>Live</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18748-create-live-ad.png" /></figure>
+      </li>
+      <li>Enter a <strong>Name</strong>.</li>
+      <li>Select the <strong>Ad Server Response</strong>:
+        <ul>
+          <li>VAST</li>
+          <li>DFP (Ad Rules)</li>
+          <li>Smart XML</li>
+        </ul>
+      </li>
+      <li>Enter the<strong> Ad Tag</strong>.</li>
+      <li>(Optional) Enable <strong>Ad Tracking</strong>. This feature must be configured with the help of Brightcove Support. The Ad Tracking % gives you the ability to select a &quot;sample rate&quot;, this can be useful when you just need to view averages.</li>
+      <li>(Optional) Enable <strong>Client Options</strong>. For information, see the <a href="#player-ssai">Player Enhancements for Live SSAI</a> section below.</li>
+      <li>Click <span class="button-blue">Save</span>.</li>
+    </ol>
+    <p>To edit an ad configuration, click the ad name, make the changes and then click <strong>Save</strong>. To delete an ad config, check the box next to the ad and then click <strong>Delete</strong>. To duplicate an ad config, check the box next to the ad and then click <strong>Duplicate</strong>.</p>
+    <p>Once Live ad configurations have been created, when an event is created with the <strong>Enable Server-Side Ad Insertion (SSAI)</strong> property enabled, an ad configuration can be selected in the Control Room. For information on creating live events, see 
+    
+        <a href="/live/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.
+      
+        
+    </p>
+    <h3 id="player-ssai">Player Enhancements for Live SSAI</h3>
+    <p>Brightcove's Player Enhancements for Live SSAI allows you to add client-side components to live streams, including ad counts, ad countdown timers, click through ads and companion ads. For details, see the <a href="https://apis.support.brightcove.com/live-api/ssai/overview-player-enhancements-live-ssai.html">Overview: Player Enhancements for Live SSAI</a> document.</p>
+    <p>To use this feature, contact your Customer Success Manager to enable your account for:</p>
     <ul>
-      <li><a href="https://player.support.brightcove.com/references/video-metadata-mediainfo.html#displaytagsfields">Getting custom fields for a video in a player</a></li>
-      <li><a href="https://apis.support.brightcove.com/cms/references/reference.html#api-videoGroup-Get_Custom_Fields">Get a list of custom fields for an account</a></li>
-      <li><a href="https://apis.support.brightcove.com/cms/references/reference.html#api-videoGroup-Get_Video_by_ID_or_Reference_ID">Using the CMS API</a></li>
-      <li><a href="https://apis.support.brightcove.com/playback/references/reference_v1.html">Using the Playback API</a></li>
+      <li> Live streams</li>
+      <li>Server-Side Ad Insertion (SSAI)</li>
+      <li>Player Enhancements for Live SSAI</li>
     </ul>
+    <p>To add player enhancements, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>On the Server-Side Ad Settings page, click <span class="button-blue">+ Add configuration ∧</span> &gt; <strong>Live</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Create Live ad configuration" src="/assets/images/s-admin-img/node18748-create-live-ad.png" /></figure>
+      </li>
+      <li>Enter the data as described in the <a href="#live">add a Live ad configuration</a> steps above.</li>
+      <li>Select <strong>Client Options Enabled</strong> to see a list of feature options.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Client Options Enabled" src="/assets/images/s-admin-img/node18748-client-options-enabled.png" /></figure>
+      </li>
+      <li>Select the client-side components that you want to add to your live stream.</li>
+      <li>Click <span class="button-blue">Save</span>.</li>
+    </ol>
   </section>
 </article>
 

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Configuring Language Settings</title>
+        <title>Fields for Custom Live Ingest Profiles</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to define a primary metadata language and add additional metadata languages that are supported.">
+        <meta name="description" content="">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -2328,7 +2328,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/configuring-language-settings.html" aria-current="page">Configuring Language Settings</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/configuring-language-settings.html">Configuring Language Settings</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Configuring Language Settings</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/ingest-profiles/">Ingest profiles</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Fields for Custom Live Ingest Profiles</li>
             
             
           </ol>
@@ -2761,46 +2765,188 @@
       
       
 <article class="bcls-article">
-  <h1>Configuring Language Settings</h1>
-  <summary>In this topic you will learn how to define a primary metadata language and add additional metadata languages that are supported.</summary>
+  <h1>Fields for Custom Live Ingest Profiles</h1>
+  <summary>This topic provides a reference for the fields used in Live ingest profiles.</summary>
   <section class="bcls-section">
-    <aside class="bcls-aside bcls-aside--information">Note: This feature is available to all customers, but it is not enabled by default. Contact your Customer Success Manager if you would like to have it turned on for your account(s).</aside>
-    <p>The Language Settings is where you define a Primary Language and then add and manage additional metadata languages. The Primary Language is the language your account is currently using for video metadata. Before adding additional languages to your account, your existing metadata will be associated with the language you define as the Primary Language. The Primary Language is what is initially displayed when you edit video properties in the Media module. </p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/language-settings.png" /></figure>
+    <h2 id="primaryFields">Profile fields</h2>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Property</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr id="account_id">
+          <td><code translate="No">account_id</code></td>
+          <td>integer</td>
+          <td>The <span translate="No">Video Cloud</span> account id</td>
+          <td>none</td>
+        </tr>
+        <tr id="name">
+          <td><code translate="No">name</code></td>
+          <td>string</td>
+          <td>The profile name - must be unique within the account</td>
+          <td>none</td>
+        </tr>
+        <tr id="name">
+          <td><code translate="No">display_name</code></td>
+          <td>string</td>
+          <td>The a display name for the profile to appear in the Studio Admin page - may be the same as <code translate="No">name</code>, but should be descriptive to help users understand the intended use for the profile</td>
+          <td>none</td>
+        </tr>
+        <tr id="description">
+          <td><code translate="No">description</code></td>
+          <td>string</td>
+          <td>The profile description</td>
+          <td>none</td>
+        </tr>
+        <tr id="description">
+          <td><code translate="No">model_version</code></td>
+          <td>integer</td>
+          <td>Set this to <code translate="No">1</code> to make the profile show up in the Live Module</td>
+          <td>none</td>
+        </tr>
+        <tr id="renditions">
+          <td><a href="#rendition_fields"><code translate="No">renditions</code></a></td>
+          <td>array</td>
+          <td>Array of rendition objects</td>
+          <td>[]</td>
+        </tr>
+        <tr id="packages">
+          <td><code translate="No">packages</code></td>
+          <td>array</td>
+          <td>Array of DRM packages - currently, DRM is not supported, so this should always be an empty array</td>
+          <td>[]</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
   <section class="bcls-section">
-    <h2 id="primary">Setting a Primary Language</h2>
-    <p>To set the Primary Language:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Login to Video Cloud Studio.</li>
-      <li>Open the <strong>Admin</strong> module and then <strong>Language Settings</strong>. Note that you must be an account administrator to access to the Admin menu.</li>
-      <li>Enter your primary language. As you type, a list of matching languages will appear.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/primary-language-list.png" /></figure>
-      </li>
-      <li>Click on a language to select it.</li>
-      <li>Click <span class="button-blue">Save Language</span>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/ primary-language-saved.png" /></figure>
-      </li>
-    </ol>
-    To change the Primary Language, click on the language, select a new language and then click <span class="button-blue">Save</span>.</section>
-  <section class="bcls-section">
-    <h2 id="add_languages">Adding additional languages</h2>
-    <p>After a Primary Language is saved, additional metadata languages can be added. By adding additional languages, you will be able to enter additional, multi-lingual metadata in the Media module. To add additional languages, follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Click <span class="button-blue">+ Add Language</span>.</li>
-      <li>Enter your  language. As you type, a list of matching languages will appear.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/add-additional-language.png" /></figure>
-      </li>
-      <li>Click on a language to select it.</li>
-      <li>Click <span class="button-blue">Save Language</span>. The language will be added to the Additional Languages  table.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/additional-language-table.png" /></figure>
-      </li>
-      <li>Click <span class="button-blue">+ Add Language</span> to add additional languages as needed.</li>
-    </ol>
-    <p>To edit the language name (as it will appear in the Media module), click on it, make any changes and then click <span class="button-blue">Save</span>. To delete a language, click the delete icon (<img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/delete-icon.png" />).</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If you delete a language that is in use, all metadata associated with the language will be hidden. To restore the associated metadata, add the language again.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: A maximum of 40 metadata languages can be added.</aside>
-
+    <h2 id="rendition_fields">Rendition fields</h2>
+    <p>The tables below show fields that can be used in the request body for updating live ingest profiles.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Property</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr id="audio_bitrate">
+          <td><code translate="No">audio_bitrate</code></td>
+          <td>integer</td>
+          <td>audio bitrate in kbps (min: 16, max: 1024)</td>
+          <td>match source</td>
+        </tr>
+        <tr id="audio_codec">
+          <td><code translate="No">audio_codec</code></td>
+          <td>string</td>
+          <td>Audio codec - <code translate="No">aac</code> | <code translate="No">mp3</code></td>
+          <td>Determined by the format or profile, in most cases, <code translate="No">aac</code> will be best</td>
+        </tr>
+        <tr id="decoder_bitrate_cap">
+          <td><code translate="No">decoder_bitrate_cap</code></td>
+          <td>integer</td>
+          <td>in kbps, the max bitrate fed to the decoder via a buffer</td>
+          <td>none</td>
+        </tr>
+        <tr id="decoder_buffer_size">
+          <td><code translate="No">decoder_buffer_size</code></td>
+          <td>integer</td>
+          <td>in kbps, the size of the buffer fed to the decoder when using a <code translate="No">bitrate_cap</code></td>
+          <td>none</td>
+        </tr>
+        <tr id="format">
+          <td><code translate="No">forced_keyframe_rate</code></td>
+          <td>number</td>
+          <td>Forces a keyframe every X frames, but still allows additional keyframes for scene cut, etc.</td>
+          <td>none</td>
+        </tr>
+        <tr id="format">
+          <td><code translate="No">format</code></td>
+          <td>string</td>
+          <td>Video format - <code translate="No">ts</code>, <code translate="No">mp4</code>, <code translate="No">flv</code></td>
+          <td>none</td>
+        </tr>
+        <tr id="h264_profile">
+          <td><code translate="No">h264_profile</code></td>
+          <td>string</td>
+          <td>H.264 has three commonly-used profiles: <code translate="No">Baseline</code> (lowest), <code translate="No">Main</code>, and <code translate="No">High</code>.</td>
+          <td><code translate="No">baseline</code></td>
+        </tr>
+        <tr id="keyframe_interval">
+          <td><code translate="No">keyframe_interval</code></td>
+          <td>integer</td>
+          <td>Maximum number of frames between keyframes</td>
+          <td><code translate="No">250</code></td>
+        </tr>
+        <tr id="keyframe_rate">
+          <td><code translate="No">keyframe_rate</code></td>
+          <td>float</td>
+          <td>Maximum keyframes per second</td>
+          <td><code translate="No">keyframe_interval</code> of 250</td>
+        </tr>
+        <tr id="label">
+          <td><code translate="No">label</code></td>
+          <td>string</td>
+          <td>Image type for image renditions - <code translate="No">poster</code> or <code translate="No">thumbnail</code></td>
+          <td>none</td>
+        </tr>
+        <tr id="live_stream">
+          <td><code translate="No">live_stream</code></td>
+          <td>boolean</td>
+          <td>whether this will be live video stream</td>
+          <td>none</td>
+        </tr>
+        <tr id="live_dvr_sliding_window_duration">
+          <td><code translate="No">live_dvr_sliding_window_duration</code></td>
+          <td>integer</td>
+          <td>Duration of stream to keep available for LiveDVR delivery in seconds</td>
+          <td><code translate="No">300</code></td>
+        </tr>
+        <tr id="max_video_bitrate">
+          <td><code translate="No">max_video_bitrate</code></td>
+          <td>integer</td>
+          <td>in kbps, 123 = 123kbps - h264 only</td>
+          <td>none</td>
+        </tr>
+        <tr id="media_type">
+          <td><code translate="No">media_type</code></td>
+          <td>string</td>
+          <td><code translate="No">video</code> or <code translate="No">audio</code></td>
+          <td>none</td>
+        </tr>
+        <tr id="video_bitrate">
+          <td><code translate="No">video_bitrate</code></td>
+          <td>integer</td>
+          <td>in kbps, 123 = 123kbps (min: 64, max: 10000)</td>
+          <td>none</td>
+        </tr>
+        <tr id="video_codec">
+          <td><code translate="No">video_codec</code></td>
+          <td>string</td>
+          <td>e.g. h264, ts</td>
+          <td>Determined by the format or profile</td>
+        </tr>
+        <tr id="width">
+          <td><code translate="No">width</code></td>
+          <td>integer</td>
+          <td>frame width in pixels</td>
+          <td>none</td>
+        </tr>
+        <tr id="height">
+          <td><code translate="No">height</code></td>
+          <td>integer</td>
+          <td>frame height in pixels</td>
+          <td>none</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 </article>
 

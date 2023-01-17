@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Creating Ingest Profiles for Context Aware Encoding</title>
+        <title>Managing Live Settings</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic provides an overview of how to create  custom ingest profiles for use with Context Aware Encoding.">
+        <meta name="description" content="In this topic you will learn how to manage the settings for Brightcove Live.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -2426,7 +2426,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/creating-ingest-profiles-context-aware-encoding.html" aria-current="page">Creating Ingest Profiles for Context Aware Encoding</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/creating-ingest-profiles-context-aware-encoding.html">Creating Ingest Profiles for Context Aware Encoding</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Creating Ingest Profiles for Context Aware Encoding</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Managing Live Settings</li>
             
             
           </ol>
@@ -2761,135 +2765,80 @@
       
       
 <article class="bcls-article">
-  <h1>Creating Ingest Profiles for Context Aware Encoding</h1>
-  <summary>This topic provides an overview of how to create  custom ingest profiles for use with <a href="/general/architecture/overview-context-aware-encoding.html">Context Aware Encoding</a>.</summary>
+  <h1>Managing Live Settings</h1>
+  <summary>In this topic you will learn how to manage the settings for Brightcove Live.</summary>
   <section class="bcls-section">
-    <p>Ingest profiles contain the transcode settings that will be used when videos are uploaded using the <a href="/media/manage/uploading-videos-using-upload-module.html">Upload module</a> or the <a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-ingest-api-dynamic-delivery.html">Dynamic Ingest API</a>. The ingest profile editor that is displayed will change based upon the transcoding options that have been configured for the account.</p>
-    <aside class="bcls-aside bcls-aside--information">
-      Notes:
-      <ul>
-        <li>The ability to create and edit ingest profiles is available only to publishers with Enterprise and Professional accounts.</li>
-        <li>If you want to be able to retranscode videos ingested with a custom profile, you <strong>must archive the digital master</strong> (as all standard profiles do). See <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">Archiving Masters</a> for details on how to do this.</li>
-        <li>The <code translate="No">dynamic_profile_options</code> block must be less than 8000 characters (there are many online and desktop tools for counting characters - <a href="https://www.charactercountonline.com/">this one, for example</a>.</li>
-      </ul>
-    </aside>
-    <p>To access the Ingest Profiles administration page, click the <strong>Admin</strong>   link and then <strong>Ingest Profiles</strong>. A list of ingest profiles will appear.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: To access the Ingest Profiles page, you must be a Video Cloud Studio user with the Administrator role.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18434-profile-list.png" /></figure>
-    <p>Your Brightcove account will be configured with one or more transcoding options. All Brightcove accounts are configured with a default set of ingest profiles which can't be edited or deleted. These are marked with a <strong>Type</strong> of <strong>Standard VOD</strong> in the Studio. The <strong>Profile Version</strong> displays the type of transcoding that is used with the profile. For specific details on the renditions provided with the Brightcove supplied ingest profiles, see the appropriate document:</p>
-    <ul>
-      <li><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Dynamic Delivery</a></li>
-      <li><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Context Aware</a></li>
-    </ul>
+    <p>The Live settings allow you to manage fill slates and Live credentials.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Server-side ad configurations used by Brightcove Live are configured as part of the Server-Side Ad Settings administration. For information, see <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>.</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="create">Creating a new context aware profile</h2>
-    <p>The Ingest Profiles administration page can be used to create new ingest profiles. Ingest profiles are defined using JSON.</p>
-    <p>To create a new context aware ingest profile:</p>
+    <h2 id="fill_slate">Managing fill slates</h2>
+    <p>Fill slates are content that can be served when there are gaps in a live stream ad break. Slates can be used to provide a "Be right back" message or any other content you want to display. All Zencoder <a href="https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format">input formats</a> are supported.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Fill slates can also be managed using the Live API. For information, see <a href="/live-api/ssai/live-api-server-side-ad-insertion-ssai.html#Managing_slates">Brightcove Live API: Server-Side Ad Insertion (SSAI)</a>.</aside>
+    <p>To add a fill slate, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
       <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click  <strong>Ingest Profiles</strong>.</li>
-      <li>Click <strong>New Profile &gt; Context Aware</strong>. The profile editor will open.</li>
-      <li>Enter a <strong>Name</strong>, <strong>Display Name</strong> and <strong>Description</strong> for the profile.</li>
-      <li>Decide whether to <strong>Store master files</strong>. Storing the master keeps a copy of the master file and provides the ability for the video to be retranscoded in the future without the need to upload it again. For additional information on archiving masters, see the <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">Archiving Masters</a> document.</li>
-      <li>Select a setting for the images:
+      <li>In the left navigation, click <strong> Live Settings</strong>.
+        <aside class="bcls-aside bcls-aside--information">Note: You must be an account administrator to access the Admin menu.</aside>
+      </li>
+      <li>Click <span class="button-blue">+ Add Fill Slate</span>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18588-fill-slate.png" /></figure>
+      </li>
+      <li>Enter a <strong>Name</strong>.</li>
+      <li>Enter the <strong>Source URL</strong> for the slate.</li>
+      <li>Click <span class="button-blue">Save</span>. The ingestion process for the slate will begin.</li>
+    </ol>
+    <p>To delete a fill slate, click the delete button (<img alt="" src="/assets/images/s-admin-img/node1050-delete-icon.png" />) next to the fill slate.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="credentials">Managing credentials</h2>
+    <p>Credentials are used by both the Live API and Live module. If you are creating a new Live Video Cloud credential, you must first create an API Authentication credential. The client ID and client secret that are created will be used when creating the Live Video Cloud credential. When creating FTP, S3 or RTMP credentials, an API Authentication credential is not needed.</p>
+    <p>If you are creating an S3, FTP or RTMP credential, skip to <strong>step 5</strong>. To create a Live Video Cloud credential, start by creating an API credential.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Admin</strong> module.
+        <aside class="bcls-aside bcls-aside--information">Note: You must be an account administrator to access the ADMIN menu.</aside>
+      </li>
+      <li>In the left navigation, click <strong>API Authentication</strong>. The API Authentication page will open displaying your current client registrations.</li>
+      <li>Click <span class="button-blue">+ Add aplication</span> to create a new API credential. The following APIs should be selected.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18588-apis-to-select.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">Note: For information on creating API Authentication Credentials, see <a href="/admin/general/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a>.</aside>
+      </li>
+      <li>When the credential is created, save the <strong>Client ID</strong> and <strong>Client secret</strong> values. These will be needed when creating the Live Video Cloud credential.</li>
+      <li>In the left navigation, click <strong>Live Settings</strong>.</li>
+      <li>Click <span class="button-blue">+ Add Credential</span>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18588-create-credential.png" /></figure>
+      </li>
+      <li>Enter a <strong>Label</strong>. This is the name that will be used internally to refer to the credential.</li>
+      <li>Select a <strong>Type</strong>:
         <ul>
-          <li><strong>Capture images automatically at upload time</strong> - Brightcove will capture poster and thumbnail images when the video is uploaded. Images are captured at the 50% point in the video.</li>
-          <li><strong>Don't capture images; I'll upload or capture my own images</strong> - Poster and thumbnail images will be <a href="/media/properties/capturing-poster-and-thumbnail-images.html">captured</a> or <a href="/media/properties/uploading-poster-and-thumbnail-images.html">uploaded</a> using the Media module.</li>
+          <li><strong>FTP</strong> - Used to save the VOD asset to an ftp location (API use)</li>
+          <li><strong>RTMP</strong> - Used to create RTMP credentials to be used by the encoder</li>
+          <li><strong>S3</strong> - Used to save the VOD asset to an Amazon S3 account (API use)</li>
+          <li><strong>Video Cloud</strong> - Used to save the VOD asset to a Video Cloud account (API use)</li>
         </ul>
       </li>
-      <li>Enter the <strong>Width</strong> and <strong>Height</strong> for the <strong>Poster</strong> and <strong>Thumbnail</strong> images.</li>
-      <li>Use the Codec dropdown list to select the video codec to be used. You can choose between H264 and HEVC, or use a mixed-codec profile which will create renditions using both codecs (H264, HEVC).:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-admin-img/codec-options.png" alt="Codec Options">
-          <figcaption class="bcls-caption--image">Codec Options</figcaption>
-        </figure>
+      <li>For the <strong>Public Key / Username</strong>, enter the following depending on the type of credential:
+        <ul>
+          <li><strong>FTP</strong> - Enter the username for the FTP site</li>
+          <li><strong>RTMP</strong> - Enter the username that the encoder will use to authenticate</li>
+          <li><strong>S3</strong> - Enter the username for the S3 account</li>
+          <li><strong>Video Cloud</strong> - Enter the <strong>Client ID</strong> generated for the API Authentication credential</li>
+        </ul>
       </li>
-      <li>Select a <strong>Minimum Resolution</strong> and <strong>Maximum Resolution</strong> by dragging the slider. This range will be used when creating renditions.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18434-min-max-res.png" /></figure>
+      <li>For the <strong>Private Key / Password</strong>, enter the following depending on the type of credential:
+        <ul>
+          <li><strong>FTP </strong>- Enter the password for the FTP site</li>
+          <li><strong>RTMP</strong> - Enter the password that the encoder will use to authenticate</li>
+          <li><strong>S3</strong> - Enter the password for the S3 account</li>
+          <li><strong>Video Cloud</strong> - Enter the <strong>Client secret</strong> generated for the API Authentication credential</li>
+        </ul>
       </li>
-      <li>Select a <strong>Maximum Bitrate</strong>. Renditions above this bit rate will not be created regardless of the complexity of the content. A lower bitrate can help control costs around storage and bandwidth.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18434-max-bitrate.png" /></figure>
-      </li>
-      <li>Select the <strong>Required Output Resolutions</strong>. Required resolutions will not be created if they are higher than the source file's resolution.</li>
-      <li>Adjust the <strong>Encoding Quality Control</strong> to adjust the video quality and bandwidth use. If you are more concerned about bandwidth usage and wish to optimize for lowest bandwidth consumption, move the slider to the left. If you are more concerned about quality and are okay with potentially using more bandwidth to deliver better picture quality, move the slider to the right.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18434-encoding-quality.png" /></figure>
-      </li>
-      <li>Select a <strong>Progressive MP4 Rendition</strong> to create. At least one MP4 rendition is required to post videos to social media accounts using the Social module or to allow video downloads. Select <strong>None</strong> if an MP4 rendition should not be created.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18434-mp4.png" /></figure>
-      </li>
-      <li>Select the <strong>Audio Renditions</strong> that should be created.</li>
-      <li>Click <span class="button-blue">Save</span> to save the new profile.</li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">Note that if you require renditions with specific resolutions, it is possible to require that in the profile, but not in Studio. Instead, you will need to use the <a href="http://docs.brightcove.com/ingest-profiles-api/v1/doc/index.html#operation/CreateIngestProfile">Ingest Profiles API</a>.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note that requiring renditions is <em>not</em> recommended, as it decreases the efficiency of Context Aware Encoding. If you have several required resolutions, CAE may not be the right option for you.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating ingest profiles</h2>
-    <p>If you need to create a profile that is similar to an existing profile, you can duplicate an existing profile and then edit it to make the needed changes.</p>
-    <p>To duplicate an ingest profile:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click  <strong>Ingest Profiles</strong>.</li>
-      <li>Click on the ingest profile to duplicate.</li>
-      <li>Click <strong>Duplicate</strong>.</li>
-      <li>Use the Profile Editor to edit the profile name and definition.</li>
       <li>Click <span class="button-blue">Save</span>.</li>
     </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing ingest profiles</h2>
-    <p>The Ingest Profiles administration page can be used to edit ingest profiles. Note that the default set of ingest profiles (marked <strong>Standard VOD</strong>) can't be edited.</p>
-    <p>To edit an ingest profile:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click  <strong>Ingest Profiles</strong>.</li>
-      <li>Click on the ingest profile to edit.</li>
-      <li>Use the Profile Editor to edit the profile definition.</li>
-      <li>Click <span class="button-blue">Save</span>.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting ingest profiles</h2>
-    <p>The Ingest Profiles administration page can be used to delete ingest profiles that are no longer needed. Note that the default set of ingest profiles (marked <strong>Standard VOD</strong>) can't be deleted but <a href="#hide">they can be hidden</a> if they are not needed.</p>
-    <p>To delete an ingest profile:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click  <strong>Ingest Profiles</strong>. The Ingest Profiles administration page will open displaying the ingest profiles that have been created for your account.</li>
-      <li>Click the delete icon (<img alt="" src="/assets/images/s-admin-img/node16840-delete-icon.png" />) next to the ingest profile or click the profile name and then click <span class="button-red-text">Delete</span>.</li>
-      <li>Confirm the deletion by clicking <span class="button-red">Delete Profile</span>.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="default">Changing the uploading default ingest profile</h2>
-    <p>All Brightcove accounts have an uploading default ingest profile. The uploading default ingest profile is indicated with <img alt="" src="/assets/images/s-admin-img/node16840-default-button.png" /> next to the profile name.</p>
-    <p>To change the default  profile for the account:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click the <strong>Ingest Profiles</strong> link. The Ingest Profiles administration page will open displaying the ingest profiles that have been created for the account.</li>
-      <li>Click the ingest profile name for the profile you want to set as the default.</li>
-      <li>Click <strong>Uploading</strong> next to  <strong>Use as default</strong> link at the top of the page.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="hide">Hiding and showing ingest profiles</h2>
-    <p>Ingest profiles can be hidden by clicking the slider associated with the profile to the <strong>Hide</strong> position. This is useful to hide default profiles that may not be needed.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18434-hide-profile.png" /></figure>
-    <p>Ingest profiles that are hidden will not appear in the Ingest Profile list in the Upload module.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="drm">DRM support in profiles</h2>
-    <p>Contact Brightcove Support to set defaults for DRM packaging of your videos. You do not need to specify DRM packaging in your ingest profiles. If your account is enabled for DRM and you want to deliver some titles without DRM, edit the video properties in the Media module and set the DRM flag for the video to <strong>No DRM</strong>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18434-drm-switch.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Note: For information on creating a DRM-enabled Brightcove Player, see the <a href="https://player.support.brightcove.com/plugins/configuring-brightcove-player-drm.html">DRM Plugin</a> topic.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="using_the_advanced_editor">Using the Advanced Editor</h2>
-    <p>Ingest profiles are defined using JSON. To view the JSON syntax for a profile, edit a profile and then click the <strong>Advanced Editor</strong> tab. The JSON representation of the profile will display.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18434-json.png" /></figure>
-    <p>While the JSON can be edited here, Brightcove recommends editing profiles using the Simple Editor to reduce the likelihood of mistakes. For information on the available attributes, see the <a href="https://apis.support.brightcove.com/ingest-profiles/references/ingest-profiles-api-fields-reference-dynamic-delivery-and-context-aware-encoding.html">Ingest Profiles API Fields Reference for Dynamic Delivery and Context Aware Encoding</a> topic.</p>
+    <p>The credential will appear in the list of credentials. To delete a credential, click the delete button (<img alt="" src="/assets/images/s-admin-img/node1050-delete-icon.png" />) next to the credential.</p>
   </section>
 </article>
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">

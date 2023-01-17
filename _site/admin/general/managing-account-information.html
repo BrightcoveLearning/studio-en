@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Live Settings</title>
+        <title>Managing Account Information</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage the settings for Brightcove Live.">
+        <meta name="description" content="In this topic you will learn how to manage the Account Information settings.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -2370,7 +2370,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/admin/managing-live-settings.html" aria-current="page">Managing Live Settings</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/admin/managing-live-settings.html">Managing Live Settings</a></li>
                   
                   
                   
@@ -2739,7 +2739,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Managing Live Settings</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Managing Account Information</li>
             
             
           </ol>
@@ -2761,80 +2765,30 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Live Settings</h1>
-  <summary>In this topic you will learn how to manage the settings for Brightcove Live.</summary>
+  <h1>Managing Account Information</h1>
+  <summary>In this topic you will learn how to manage the Account Information settings.</summary>
   <section class="bcls-section">
-    <p>The Live settings allow you to manage fill slates and Live credentials.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Server-side ad configurations used by Brightcove Live are configured as part of the Server-Side Ad Settings administration. For information, see <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>.</aside>
+    <p>The Account Information page manages the account name and mailing address and can be used to clone accounts. Note that to access the Account Administration page, you must be a user with the Administrator role.</p>
+    <p>To access the Account Administration page:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Login to Studio.</li>
+      <li>Open <strong>Admin</strong> and then <strong>Account Information</strong>.</li>
+    </ol>
+    <p>Information about the account will be displayed.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18747-account-info.webp" /></figure>
+    <p>To edit your account information click <strong>Edit Account Information</strong>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18747-edit-account-info.webp" /></figure>
+    <p>Edit the appropriate values and then click <span class="button-blue">Save</span>. Note that the Account ID cannot be changed.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="fill_slate">Managing fill slates</h2>
-    <p>Fill slates are content that can be served when there are gaps in a live stream ad break. Slates can be used to provide a "Be right back" message or any other content you want to display. All Zencoder <a href="https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format">input formats</a> are supported.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Fill slates can also be managed using the Live API. For information, see <a href="/live-api/ssai/live-api-server-side-ad-insertion-ssai.html#Managing_slates">Brightcove Live API: Server-Side Ad Insertion (SSAI)</a>.</aside>
-    <p>To add a fill slate, follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>In the left navigation, click <strong> Live Settings</strong>.
-        <aside class="bcls-aside bcls-aside--information">Note: You must be an account administrator to access the Admin menu.</aside>
-      </li>
-      <li>Click <span class="button-blue">+ Add Fill Slate</span>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18588-fill-slate.png" /></figure>
-      </li>
-      <li>Enter a <strong>Name</strong>.</li>
-      <li>Enter the <strong>Source URL</strong> for the slate.</li>
-      <li>Click <span class="button-blue">Save</span>. The ingestion process for the slate will begin.</li>
-    </ol>
-    <p>To delete a fill slate, click the delete button (<img alt="" src="/assets/images/s-admin-img/node1050-delete-icon.png" />) next to the fill slate.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="credentials">Managing credentials</h2>
-    <p>Credentials are used by both the Live API and Live module. If you are creating a new Live Video Cloud credential, you must first create an API Authentication credential. The client ID and client secret that are created will be used when creating the Live Video Cloud credential. When creating FTP, S3 or RTMP credentials, an API Authentication credential is not needed.</p>
-    <p>If you are creating an S3, FTP or RTMP credential, skip to <strong>step 5</strong>. To create a Live Video Cloud credential, start by creating an API credential.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.
-        <aside class="bcls-aside bcls-aside--information">Note: You must be an account administrator to access the ADMIN menu.</aside>
-      </li>
-      <li>In the left navigation, click <strong>API Authentication</strong>. The API Authentication page will open displaying your current client registrations.</li>
-      <li>Click <span class="button-blue">+ Add aplication</span> to create a new API credential. The following APIs should be selected.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18588-apis-to-select.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: For information on creating API Authentication Credentials, see <a href="/admin/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a>.</aside>
-      </li>
-      <li>When the credential is created, save the <strong>Client ID</strong> and <strong>Client secret</strong> values. These will be needed when creating the Live Video Cloud credential.</li>
-      <li>In the left navigation, click <strong>Live Settings</strong>.</li>
-      <li>Click <span class="button-blue">+ Add Credential</span>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18588-create-credential.png" /></figure>
-      </li>
-      <li>Enter a <strong>Label</strong>. This is the name that will be used internally to refer to the credential.</li>
-      <li>Select a <strong>Type</strong>:
-        <ul>
-          <li><strong>FTP</strong> - Used to save the VOD asset to an ftp location (API use)</li>
-          <li><strong>RTMP</strong> - Used to create RTMP credentials to be used by the encoder</li>
-          <li><strong>S3</strong> - Used to save the VOD asset to an Amazon S3 account (API use)</li>
-          <li><strong>Video Cloud</strong> - Used to save the VOD asset to a Video Cloud account (API use)</li>
-        </ul>
-      </li>
-      <li>For the <strong>Public Key / Username</strong>, enter the following depending on the type of credential:
-        <ul>
-          <li><strong>FTP</strong> - Enter the username for the FTP site</li>
-          <li><strong>RTMP</strong> - Enter the username that the encoder will use to authenticate</li>
-          <li><strong>S3</strong> - Enter the username for the S3 account</li>
-          <li><strong>Video Cloud</strong> - Enter the <strong>Client ID</strong> generated for the API Authentication credential</li>
-        </ul>
-      </li>
-      <li>For the <strong>Private Key / Password</strong>, enter the following depending on the type of credential:
-        <ul>
-          <li><strong>FTP </strong>- Enter the password for the FTP site</li>
-          <li><strong>RTMP</strong> - Enter the password that the encoder will use to authenticate</li>
-          <li><strong>S3</strong> - Enter the password for the S3 account</li>
-          <li><strong>Video Cloud</strong> - Enter the <strong>Client secret</strong> generated for the API Authentication credential</li>
-        </ul>
-      </li>
-      <li>Click <span class="button-blue">Save</span>.</li>
-    </ol>
-    <p>The credential will appear in the list of credentials. To delete a credential, click the delete button (<img alt="" src="/assets/images/s-admin-img/node1050-delete-icon.png" />) next to the credential.</p>
+    <h2 id="cloning">Account cloning</h2>
+    <p>If your account is enabled for account cloning, a <strong>Create New Account</strong> button will appear. The account cloning feature can be used to create new Video Cloud accounts. When a new account is created, Brightcove Support will be notified and then work with your Customer Success Manager to verify the new account (based on your contract). Once verified, the account will be configured with the features outlined in your contract. When the account is fully configured, you will be notified. While the configuration is in progress, new users can be added to the account.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Account cloning is only available to account administrators with Enterprise accounts.</aside>
+    <p>To clone the account, click <span class="button-blue"> + Add account</span>, enter an <strong>Account Name</strong> and then click <span class="button-blue">Save</span>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18747-account-clone.webp" /></figure>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that the new account will be a Trial Account when it is created. After Support verifies the account status with your Customer Success Manager, the account status will be automatically updated to paid with the appropriate options and services.</aside>
   </section>
 </article>
-
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
