@@ -165,7 +165,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/authenticating-studio-users-using-single-sign.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/authenticating-studio-users-using-single-sign.html",
       "oldURL": "/authenticating-studio-users-using-single-sign"
   },
 
@@ -315,7 +315,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/configuring-language-settings.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/configuring-language-settings.html",
       "oldURL": "/configuring-language-settings"
   },
 
@@ -380,7 +380,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/configuring-server-side-ad-settings.html",
       "oldURL": "/configuring-server-side-ad-settings"
   },
 
@@ -480,22 +480,22 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html",
+      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/creating-custom-live-ingest-profiles.html",
       "oldURL": "/creating-custom-live-ingest-profiles"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/creating-custom-metadata-fields.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/creating-custom-metadata-fields.html",
       "oldURL": "/creating-custom-metadata-fields"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/creating-ingest-profiles-context-aware-encoding.html",
+      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/creating-ingest-profiles-context-aware-encoding.html",
       "oldURL": "/creating-ingest-profiles-context-aware-encoding"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/creating-ingest-profiles-dynamic-delivery.html",
+      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/creating-ingest-profiles-dynamic-delivery.html",
       "oldURL": "/creating-ingest-profiles-dynamic-delivery"
   },
 
@@ -710,7 +710,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/fields-custom-live-ingest-profiles.html",
+      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/fields-custom-live-ingest-profiles.html",
       "oldURL": "/fields-custom-live-ingest-profiles"
   },
 
@@ -885,7 +885,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/properties/",
+      "newURL": "https://studio.support.brightcove.com/social/help/",
       "oldURL": "/index"
   },
 
@@ -925,7 +925,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/home/help/",
+      "newURL": "https://studio.support.brightcove.com/players/properties/",
       "oldURL": "/index"
   },
 
@@ -936,6 +936,16 @@
 
   {
       "newURL": "https://studio.support.brightcove.com/players/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/admin/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/",
       "oldURL": "/index"
   },
 
@@ -1000,7 +1010,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/help/",
+      "newURL": "https://studio.support.brightcove.com/home/help/",
       "oldURL": "/index"
   },
 
@@ -1215,7 +1225,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles-best-practices.html",
+      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/ingest-profiles-best-practices.html",
       "oldURL": "/ingest-profiles-best-practices"
   },
 
@@ -1325,42 +1335,42 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/managing-account-information.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/managing-account-information.html",
       "oldURL": "/managing-account-information"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/managing-account-settings.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/managing-account-settings.html",
       "oldURL": "/managing-account-settings"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/managing-api-authentication-credentials.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/managing-api-authentication-credentials.html",
       "oldURL": "/managing-api-authentication-credentials"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/managing-ingest-profiles.html",
+      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/managing-ingest-profiles.html",
       "oldURL": "/managing-ingest-profiles"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/managing-live-settings.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/managing-live-settings.html",
       "oldURL": "/managing-live-settings"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/managing-media-sharing-settings.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/managing-media-sharing-settings.html",
       "oldURL": "/managing-media-sharing-settings"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/managing-playback-rights.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/managing-playback-rights.html",
       "oldURL": "/managing-playback-rights"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/managing-profile-information.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/managing-profile-information.html",
       "oldURL": "/managing-profile-information"
   },
 
@@ -1380,7 +1390,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/managing-users.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/managing-users.html",
       "oldURL": "/managing-users"
   },
 
@@ -1445,12 +1455,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/organize/organizing-videos-using-folders.html",
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/organizing-videos-using-folders.html",
       "oldURL": "/organizing-videos-using-folders"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/organizing-videos-using-folders.html",
+      "newURL": "https://studio.support.brightcove.com/media/organize/organizing-videos-using-folders.html",
       "oldURL": "/organizing-videos-using-folders"
   },
 
@@ -1585,12 +1595,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/get-started/training/register-training.html",
+      "newURL": "https://studio.support.brightcove.com/register-training.html",
       "oldURL": "/register-training"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/register-training.html",
+      "newURL": "https://studio.support.brightcove.com/get-started/training/register-training.html",
       "oldURL": "/register-training"
   },
 
@@ -1730,12 +1740,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html",
+      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html",
       "oldURL": "/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/standard-live-ingest-profiles.html",
+      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/standard-live-ingest-profiles.html",
       "oldURL": "/standard-live-ingest-profiles"
   },
 
@@ -1905,7 +1915,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/using-directed-migration-tool-migrate-brightcove-smart-players.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/using-directed-migration-tool-migrate-brightcove-smart-players.html",
       "oldURL": "/using-directed-migration-tool-migrate-brightcove-smart-players"
   },
 
@@ -1985,7 +1995,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/viewing-billing-information.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/viewing-billing-information.html",
       "oldURL": "/viewing-billing-information"
   },
 
