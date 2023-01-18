@@ -8,62 +8,32 @@ parent: Home
     <p>General information about Video Cloud Studio and working with videos in Video Cloud.</p>
   </summary>
   <section class="bcls-section">
-    <table width="100%" border="0">
-      <tbody>
-        <tr>
-          <th width="50%" scope="col"> <h4>References</h4></th>
-          <th width="1%" scope="col">&nbsp;</th>
-          <th width="49%" scope="col"> <h4>Architecture</h4></th>
-        </tr>
-        <tr>
-          <td valign="top"><ul class="bcls-topic-list">
-              <li><a  href="/general/references/best-practices-video-creating-transcoding-and-uploading-workflow.html">Best Practices: The Video Creating, Transcoding, and Uploading Workflow</a></li>
-              <li><a  href="/general/references/creating-audio-only-renditions-low-bandwidth-delivery.html">Creating Audio-Only Renditions</a></li>
-              <li><a  href="/general/references/making-your-video-content-indexable.html">Making Your Video Content Indexable</a></li>
-              <li><a  href="/general/references/optimal-video-dimensions.html">Optimal Video Dimensions</a></li>
-              <li><a  href="/general/references/china-delivery-overview.html">Overview: China Delivery</a></li>
-              <li><a  href="/general/references/resetting-your-studio-password.html">Resetting Your Studio Password</a></li>
-              <li><a  href="/general/references/studio-system-requirements.html">Studio System Requirements</a></li>
-              <li><a  href="/general/references/supported-video-and-audio-formats-codecs-and-containers.html">Supported Video and Audio Formats, Codecs, and Containers</a></li>
-              <li><a  href="/general/references/video-source-file-specifications-and-recommendations.html">Video Source File Specifications and Recommendations</a></li>
-              <li><a  href="/general/references/working-360deg-videos.html">Working with 360° Videos</a></li>
-              <li><a  href="/general/references/working-audio-content.html">Working with Audio-Only Content</a></li>
-              <li><a  href="/general/references/working-multiple-video-cloud-accounts.html">Working with Multiple Video Cloud Accounts</a></li>
-            </ul></td>
-          <td>&nbsp;</td>
-          <td valign="top"><ul class="bcls-topic-list">
-              <li><a  href="/general/architecture/content-delivery-options.html">Content Delivery Options</a></li>
-              <li><a  href="/general/architecture/domains-and-ports-must-be-accessible-video-cloud.html">Domains and Ports that Must Be Accessible to Video Cloud</a></li>
-              <li><a  href="/general/architecture/overview-context-aware-encoding.html">Overview of Context Aware Encoding</a></li>
-              <li><a  href="/general/architecture/overview-dynamic-delivery.html">Overview of Dynamic Delivery</a></li>
-              <li><a  href="/general/architecture/migration-dynamic-delivery.html">Migration of Static Videos to Dynamic Delivery</a></li>
-              <li><a  href="/general/architecture/moving-to-dynamic-delivery.html">Moving to Dynamic Delivery</a></li>
-              <li><a  href="/general/architecture/video-cloud-architecture-overview.html">Video Cloud Architecture Overview</a></li>
-              <li><a  href="/general/architecture/video-cloud-studio-cookies.html">Video Cloud Studio Cookies</a></li>
-            </ul></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  <section class="bcls-section">
-    <table width="100%" border="0">
-      <tbody>
-        <tr>
-          <th width="50%" scope="col"> <h4>Content Protection</h4></th>
-          <th width="1%" scope="col">&nbsp;</th>
-          <th width="49%" scope="col"> <h4>&nbsp;</h4></th>
-        </tr>
-        <tr>
-          <td valign="top"><ul class="bcls-topic-list">
-              <li><a  href="/general/content-protection/drm-output-protection-settings.html">DRM Output Protection Settings</a></li>
-              <li><a  href="/general/content-protection/overview-digital-rights-management-drm-video-cloud.html">Overview: Digital Rights Management (DRM)</a></li>
-              <li><a  href="/general/content-protection/protecting-videos-hls-encryption.html">Protecting Videos with HLS Encryption</a></li>
-              <li><a  href="/general/content-protection/tls-media-player-and-api-urls.html">TLS for Media, Player, and API URLs</a></li>
-            </ul></td>
-          <td>&nbsp;</td>
-          <td valign="top">&nbsp;</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="row">
+    {% for item in site.data.navigation %}
+    {% if item.name == page.title %}
+    {% for entry in item.docs %}
+    <div class="col-12 col-lg-4 py-3">
+      <div class="card shadow-sm" style="background: white">
+        <div class="card-body">
+          <div>
+            {% if entry.docs %}
+            <h5 class="card-title text-center m-2">{{ entry.name }}</h5>
+            <ul class="list-group list-group-flush">
+              {% for subdoc in entry.docs %}
+              <li class="list-group-item"><a href="{{ subdoc.url }}" style="text-decoration: none;">{{ subdoc.name }}</a></li>
+              {% endfor %}
+            </ul>
+            {% else %}
+            <h5 class="card-title">{{ entry.name }}</h5>
+            {% endif %}
+        </div>
+        <a class="card-link-mask" href="{{ entry.url }}"></a>
+      </div>
+    </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+  </div>
   </section>
 </article>
