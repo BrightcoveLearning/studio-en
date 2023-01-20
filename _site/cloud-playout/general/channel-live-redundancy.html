@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Adding Bumpers to Cloud Playout</title>
+        <title>Using Live Redundancy with Channels</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how add bumpers (in-house ads) to VOD videos and live events in a Cloud Playout channel.">
+        <meta name="description" content="Cloud Playout allows you to make use of Live Redundancy using either Studio module or Channels API. This topic covers Live redundancy integration using Studio.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1813,111 +1813,181 @@
               <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
               
               
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/cloud-playout-overview.html">Overview: Cloud Playout</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/cloud-playout-stream-vod.html">Creating a Cloud Playout Channel</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/configuring-s3-buckets.html">Configuring S3 Buckets</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/cloud-playout-add-content.html">Managing the Channel Program</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/managing-programs.html">Managing Programs</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/static-image-overlays.html">Adding Static Image Overlays</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/dynamic-overlays.html">Adding Dynamic Overlays</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/import-captions.html">Importing Captions</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/adding-bumpers-to-vod.html" aria-current="page">Adding Bumpers to Cloud Playout</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/enabling-server-side-ads.html">Monetizing Cloud Playout</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/managing-slates.html">Managing Slates</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/mid-roll-ad-insertion.html">Adding Mid-Roll Ads to a Channel</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/hard-start.html">Setting a Hard Start for a Channel</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/searching-for-channels.html">Searching for Channels</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/using-channel-actions.html">Using Channel Actions</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/channel-live-redundancy.html">Using Live Redundancy with Channels</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/generating-channel-embed-code.html">Generating the Channel Embed Code</a></li>
-              
-              
-              
-              
-              
-              <li class="nav-item"><a class="nav-link" href="/cloud-playout/viewing-channel-output-and-analytics.html">Viewing Channel Output and Analytics</a></li>
-              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/cloud-playout/getting-started/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Getting Started</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/getting-started/cloud-playout-overview.html">Overview: Cloud Playout</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/getting-started/cloud-playout-stream-vod.html">Creating a Cloud Playout Channel</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/cloud-playout/general/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;General Information</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/configuring-s3-buckets.html">Configuring S3 Buckets</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/managing-slates.html">Managing Slates</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/searching-for-channels.html">Searching for Channels</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/channel-live-redundancy.html">Using Live Redundancy with Channels</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/cloud-playout/managing-content/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Managing Channel Content</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/cloud-playout-add-content.html">Managing the Channel Program</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/managing-programs.html">Managing Programs</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/static-image-overlays.html">Adding Static Image Overlays</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/dynamic-overlays.html">Adding Dynamic Overlays</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/import-captions.html">Importing Captions</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/adding-bumpers-to-vod.html">Adding Bumpers to Cloud Playout</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/cloud-playout/monetization/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Monetizing Channels</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/enabling-server-side-ads.html">Monetizing Cloud Playout</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/mid-roll-ad-insertion.html">Adding Mid-Roll Ads to a Channel</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/cloud-playout/publishing/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Publishing Channels</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/using-channel-actions.html">Using Channel Actions</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/hard-start.html">Setting a Hard Start for a Channel</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/generating-channel-embed-code.html">Generating the Channel Embed Code</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/cloud-playout/viewing-channel-output-and-analytics.html">Viewing Channel Output and Analytics</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
               
               
             </ul>
@@ -2739,7 +2809,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Adding Bumpers to Cloud Playout</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/cloud-playout/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Using Live Redundancy with Channels</li>
             
             
           </ol>
@@ -2760,74 +2834,40 @@
       <br>
       
       
-<h1>Adding Bumpers to Cloud Playout</h1>
+
+<h1>Using Live Redundancy with Channels</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn how add bumpers (in-house ads) to VOD videos and live events in a Cloud Playout channel.</summary>
+  <summary>Cloud Playout allows you to make use of Live Redundancy using either Studio module or Channels API. This topic covers Live redundancy integration using Studio.</summary>
   <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>If you are not enabling Server-Side Ads (SSAI) for your channel, you may still want to include bumpers - pre- or post-roll short videos which might be in-house ads or some other kind of announcement or promotion. You might also use bumpers to create buffers for your live programming segments.</p>
-    <p>There is nothing you need to do in the initial channel creation - the option to <span class="button-blue">Insert Bumpers</span> will appear automatically after the channel is created. This applies to all channels, including those enabled for Live streams or SSAI</p>
-    <p>You can add multiple bumpers to the same video, and you can rearrange bumpers in the program order, just as you can videos. However, some care needs to be taken in doing this or you may end up with an inaccurate EPG. See <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html#epg_bumpers">The EPG and Bumpers</a> for full details.</p>
-    <p>Bumpers will <strong>not</strong> appear in the <a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG</a> but the duration of the bumper will be added to the video before or after (depending on whether it is pre-roll or post-roll).</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Enabling_bumper_content">Enabling bumper content</h2>
-    <p>The bumpers can be any video in your account, but it must have <strong>one of</strong> the following tags:</p>
-    <ul>
-      <li><code translate="no">cp-preroll-bumper</code></li>
-      <li><code translate="no">cp-postroll-bumper</code></li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--warning">Potential problems:
-      <ul>
-        <li>If you add both of these tags to the same video, it will still work as a bumper, but the <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">EPG</a> will be inaccurate.</li>
-        <li>Similarly, for SSAI-enabled channels, ad placeholders are treated as post-roll ads. You should not have a pre-roll bumper followed by an ad placeholder, as this effectively creates a pre-roll<i data-feather="arrow-right"></i>post-roll sequence that will cause the EPG to be inaccurate.</li>
-      </ul>
-      </aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="inserting-bumpers">Inserting bumpers</h2>
-    <ol class="bcls-tasklist-restart">
-      <li>Before you can insert bumpers, you must <a href="/cloud-playout/cloud-playout-stream-vod.html#add_videos">add videos and/or live events to the channel</a> and <strong>save</strong> the changes.</li>
-      <li>Go to <strong>Program Items</strong> (if this is <a href="/cloud-playout/managing-programs.html">non-looping channel with multiple programs</a>, you will need to select the program you want to edit).</li>
-      <li>
-        Select one or more videos and/or live events and click <span class="button-blue-text-bordered">Insert Bumpers</span>.<sup><strong><a href="#note1-1">[1-1]</a></strong></sup>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/select-videos-for-bumper.webp" alt="Select Videos for Bumper">
-          <figcaption class="bcls-caption--image">Select Videos for Bumper</figcaption>
-        </figure>
-      </li>
-      <li>
-        In the <strong>Bumpers</strong> dialog select <strong>Pre-Roll</strong> or <strong>Post-Roll</strong> and then click <span class="button-blue">Insert</span> beside the bumper video you want to insert.<sup><strong><a href="#note1-2">[1-2]</a></strong></sup>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/bumper-dialog.webp" alt="Bumper Dialog">
-          <figcaption class="bcls-caption--image">Bumper Dialog</figcaption>
-        </figure>
-      </li>
-      <li>
-        You will now see the bumpers appear in the program list:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/bumper-in-program-list.webp" alt="Bumper in Program List">
-          <figcaption class="bcls-caption--image">Bumper in Program List</figcaption>
-        </figure>
-      </li>
-    </ol>
-    <h3>Notes</h3>
-    <ul style="list-style: none;">
-      <li id="note1-1" style="list-style: none;"><sup><strong>[1-1]</strong></sup> If you select multiple items, the same bumper will be added to each one. If you want different bumpers for different items, add them one by one.</li>
-      <li id="note1-2" style="list-style: none;"><sup><strong>[1-2]</strong></sup> Remember that only videos that have been <a href="#Enabling_bumper_content">tagged as bumpers</a> will appear in the list.</li>
-  </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="removing_bumpers">Moving or removing bumpers</h2>
-    <p>Drag and drop bumpers to move them to new locations in the program list.</p>
-    <p>To remove a bumper, just select it, click <strong>Delete</strong>, and then click <strong>Delete</strong> again in the confirmation dialog.</p>
+    <h2 id="live_redundancy">Live redundancy</h2>
+    <p>Live redundancy allows you to combine two or more live jobs into a single stream with automatic failover for uninterrupted, reliable playback.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that integration with Live Redundancy is not turned by default. If you would like to have it turned on for your account, contact your Customer Success Manager.</aside>
+    <p>The simplest way to get redundancy is to let Cloud Playout create the group:</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/delete-bumper.webp" alt="Delete Bumper">
-      <figcaption class="bcls-caption--image">Delete Bumper</figcaption>
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/create-redundancy-group.webp" alt="Cloud Playout Creates Redundant Group">
+      <figcaption class="bcls-caption--image">Cloud Playout Creates Redundant Group</figcaption>
+    </figure>
+    <p>If you prefer to create the redundant group yourself, see <a href="https://live.support.brightcove.com/live-module/live-redundancy.html">Using Live Redundancy</a>. Once redundant groups are created using the above document you can use them in Cloud Playout.</p>
+    <h3>Redundant groups eligibility criteria</h3>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that if you have Cloud Playout create the redundant group, it will meet the necessary criteria automatically.</aside>
+    <p>To be available for use as a Cloud Playout channel destination, a redundant group must meet the following criteria:</p>
+    <ul>
+      <li>The redundant group should contain exactly 2 live jobs.</li>
+      <li>Both live jobs in the redundant group must be of <strong>Static Entry Point</strong> type.</li>
+      <li>Set the region for <strong>one</strong> of the jobs to the region that you think will be closest to the majority of your viewers. This will be the "primary region", which you should also select as the <strong>Output Region</strong> in the Destination settings when you create the channel. Brightcove will automatically set the region for the 2nd live job to the region closest to the primary region.</li>
+      <li>The redundant group (and the jobs in it) must be in <strong>standby</strong> state.</li>
+      <li>If the Cloud Playout channel is SSAI-enabled then the redundant group must also be SSAI-enabled with <strong>RTP-FEC</strong> protocol. See <a href="https://live.support.brightcove.com/live-module/implementing-server-side-ads-live-module.html">Implementing Server-Side Ads in the Live Module</a> for more information.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="">Using Live redundancy with a channel</h2>
+    <p>A redundant group can be set as the destination for a channel either in the <strong>New Channel</strong> dialog when you create a new channel, or in the <strong>Edit Channel</strong>:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/live-redundancy-destination.webp" alt="Destination: Redundant Group">
+      <figcaption class="bcls-caption--image">Destination: Redundant Group</figcaption>
     </figure>
   </section>
 </article>
-
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">

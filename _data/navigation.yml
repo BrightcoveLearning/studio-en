@@ -538,42 +538,57 @@
   url: /cloud-playout/index.html
   icon: fa-regular fa-cloud-bolt
   docs:
-    - name: 'Overview: Cloud Playout'
-      url: /cloud-playout/cloud-playout-overview.html
-    - name: Creating a Cloud Playout Channel
-      url: /cloud-playout/cloud-playout-stream-vod.html
-    - name: Configuring S3 Buckets
-      url: /cloud-playout/configuring-s3-buckets.html
-    - name: Managing the Channel Program
-      url: /cloud-playout/cloud-playout-add-content.html
-    - name: Managing Programs
-      url: /cloud-playout/managing-programs.html
-    - name: Adding Static Image Overlays
-      url: /cloud-playout/static-image-overlays.html
-    - name: Adding Dynamic Overlays
-      url: /cloud-playout/dynamic-overlays.html
-    - name: Importing Captions
-      url: /cloud-playout/import-captions.html
-    - name: Adding Bumpers to Cloud Playout
-      url: /cloud-playout/adding-bumpers-to-vod.html
-    - name: Monetizing Cloud Playout
-      url: /cloud-playout/enabling-server-side-ads.html
-    - name: Managing Slates
-      url: /cloud-playout/managing-slates.html
-    - name: Adding Mid-Roll Ads to a Channel
-      url: /cloud-playout/mid-roll-ad-insertion.html
-    - name: Setting a Hard Start for a Channel
-      url: /cloud-playout/hard-start.html
-    - name: Searching for Channels
-      url: /cloud-playout/searching-for-channels.html
-    - name: Using Channel Actions
-      url: /cloud-playout/using-channel-actions.html
-    - name: Using Live Redundancy with Channels
-      url: /cloud-playout/channel-live-redundancy.html
-    - name: Generating the Channel Embed Code
-      url: /cloud-playout/generating-channel-embed-code.html
-    - name: Viewing Channel Output and Analytics
-      url: /cloud-playout/viewing-channel-output-and-analytics.html
+    - name: Getting Started
+      url: /cloud-playout/getting-started/index.html
+      docs:
+      - name: 'Overview: Cloud Playout'
+        url: /cloud-playout/getting-started/cloud-playout-overview.html
+      - name: Creating a Cloud Playout Channel
+        url: /cloud-playout/getting-started/cloud-playout-stream-vod.html
+    - name: General Information
+      url: /cloud-playout/general/index.html
+      docs:
+      - name: Configuring S3 Buckets
+        url: /cloud-playout/configuring-s3-buckets.html
+      - name: Managing Slates
+        url: /cloud-playout/managing-slates.html
+      - name: Searching for Channels
+        url: /cloud-playout/searching-for-channels.html
+      - name: Using Live Redundancy with Channels
+        url: /cloud-playout/channel-live-redundancy.html
+    - name: Managing Channel Content
+      url: /cloud-playout/managing-content/index.html
+      docs:
+      - name: Managing the Channel Program
+        url: /cloud-playout/cloud-playout-add-content.html
+      - name: Managing Programs
+        url: /cloud-playout/managing-programs.html
+      - name: Adding Static Image Overlays
+        url: /cloud-playout/static-image-overlays.html
+      - name: Adding Dynamic Overlays
+        url: /cloud-playout/dynamic-overlays.html
+      - name: Importing Captions
+        url: /cloud-playout/import-captions.html
+      - name: Adding Bumpers to Cloud Playout
+        url: /cloud-playout/adding-bumpers-to-vod.html
+    - name: Monetizing Channels
+      url: /cloud-playout/monetization/index.html
+      docs:
+      - name: Monetizing Cloud Playout
+        url: /cloud-playout/enabling-server-side-ads.html
+      - name: Adding Mid-Roll Ads to a Channel
+        url: /cloud-playout/mid-roll-ad-insertion.html
+    - name: Publishing Channels
+      url: /cloud-playout/publishing/index.html
+      docs:
+      - name: Using Channel Actions
+        url: /cloud-playout/using-channel-actions.html
+      - name: Setting a Hard Start for a Channel
+        url: /cloud-playout/hard-start.html
+      - name: Generating the Channel Embed Code
+        url: /cloud-playout/generating-channel-embed-code.html
+      - name: Viewing Channel Output and Analytics
+        url: /cloud-playout/viewing-channel-output-and-analytics.html
 - section:
   name: Marketing Automation
   url: /campaign/index.html
