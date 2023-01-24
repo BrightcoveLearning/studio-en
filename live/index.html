@@ -3,38 +3,38 @@ title: Live Streaming
 parent: Home
 description: The Live module is used to broadcast live events to both desktop and mobile devices. After entering your event information into the Live module, you will be provided with a set of encoder settings that you plug into your on-site encoder. All transcoding is done in the cloud so you don't need a hardware-based transcoder.
 ---
-<article class="bcls-article">
-  <h1><i class="fa-regular fa-satellite-dish"></i> {{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
+<!-- Template for section that just has sub-sections -->
+{% for item in site.data.navigation %}
+  {% if item.name == page.title %}
+    <h1><i class="{{ item.icon }}"></i> {{ page.title }}</h1>
+    <article class="bcls-article">
+    <summary>{{ page.description }}</summary>
     <div class="row">
-    {% for item in site.data.navigation %}
-    {% if item.name == page.title %}
-    {% for entry in item.docs %}
-    <div class="col-12 col-lg-4 py-3">
-      <div class="card shadow-sm" style="background: white">
-        <div class="card-body">
-          <div>
-            {% if entry.docs %}
-            <h5 class="card-title text-center m-2">{{ entry.name }}</h5>
-            <ul class="list-group list-group-flush">
-              {% for subdoc in entry.docs %}
-              <li class="list-group-item"><a href="{{ subdoc.url }}" style="text-decoration: none;">{{ subdoc.name }}</a></li>
-              {% endfor %}
-            </ul>
-            {% else %}
-            <h5 class="card-title">{{ entry.name }}</h5>
-            {% endif %}
+      {% for entry in item.docs %}
+        <div class="col-12 col-lg-4 py-3">
+          <div class="card shadow-sm" style="background: white" onclick="window.location.href = '{{ entry.url }}'">
+            <div class="card-body">
+              <div>
+                {% if entry.docs %}
+                <h5 class="card-title text-center m-2">{{ entry.name }}</h5>
+                <ul class="list-group list-group-flush">
+                  {% for subdoc in entry.docs %}
+                  <li class="list-group-item"><a href="{{ subdoc.url }}" style="text-decoration: none;">{{ subdoc.name }}</a></li>
+                  {% endfor %}
+                </ul>
+                {% else %}
+                <h5 class="card-title">{{ entry.name }}</h5>
+                {% endif %}
+            </div>
+          </div>
         </div>
-        <a class="card-link-mask" href="{{ entry.url }}"></a>
       </div>
+      {% endfor %}
     </div>
-    </div>
-    {% endfor %}
-    {% endif %}
-    {% endfor %}
-  </div>
-  </section>
+  </article>
+  {% endif %}
+{% endfor %}
+
   <section class="bcls-section">
     <h4 id="videos">Related Videos</h4>
     <div data-experience="599358c7e7588f000f8a6b5f" data-playlist-id="4767300478001">&nbsp;</div>
