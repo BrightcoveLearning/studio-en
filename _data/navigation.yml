@@ -62,6 +62,7 @@
   name: Managing Videos
   url: /media/index.html
   icon: fa-regular fa-photo-film
+  description: Learn how to manage the videos in your account.
   docs:
   - name: Using the Media Module
     url: /media/module/index.html
