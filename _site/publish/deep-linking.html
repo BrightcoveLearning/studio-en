@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Deep Linking</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="Deep linking is a feature that allows a user to start viewing a video from a specific time offset. This is a very useful feature for sharing a video like a newscast where the user may want people to view a certain segment of the program without having to watch everything that precedes it.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/publish/">Publish</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Deep Linking</li>
             
             
           </ol>
@@ -2848,48 +2844,46 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
-    
+  <h1>Deep Linking</h1>
+  <summary>Deep linking is a feature that allows a user to start viewing a video from a specific time offset. This is a very useful feature for sharing a video like a newscast where the user may want people to view a certain segment of the program without having to watch everything that precedes it.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
-  </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
+    <h2 id="Overview">Overview</h2>
+    <p >You can implement deep linking with both the Standard (iframe) and Advanced (in-page) player implementations. For the Standard implementation you use a <code translate="No">t</code> query parameter:</p>
+    <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;iframe src="https://players.brightcove.net/1507807800001/
+    SJgrJZnuAz_default/index.html?videoId=5637008067001&amp;<span class="bcls-highlight">t=70s</span>"
+  allowfullscreen
+  webkitallowfullscreen
+  mozallowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+    <p >For the Advanced implementation use the attribute <code translate="No">data-start-time</code>:</p>
+    <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;video-js data-video-id="5637008067001"
+  data-account="1507807800001"
+  data-player="SJgrJZnuAz"
+  data-embed="default"
+  data-application-id
+  class="video-js"
+  controls
+  <span class="bcls-highlight">data-start-time="70"</span>&gt;&lt;/video-js&gt;
+&lt;script src="https://players.brightcove.net/1507807800001/SJgrJZnuAz_default/index.min.js"&gt;&lt;/script&gt;</code></pre>
   </section>
   <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
+    <h2 id="Time_formats">Time formats</h2>
+    <p>Two possible time formats can be used for specifying the start time:</p>
     <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
+      <li>Simple time in seconds: This is what used in the examples above, showing start the video <span translate="No">70</span> seconds in (translated into <span translate="No">1:10</span> in the video). You cannot use <strong>min:seconds</strong> format.</li>
+      <li>The <strong>hms</strong> format: Here the time can be indicated in hours/minutes/seconds. For instance, to start the video <span translate="No">1</span> hour, <span translate="No">1</span> minute and <span translate="No">1</span> second in use the <strong translate="No">1h1m1s</strong> syntax.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Social_media_use">Social media use</h2>
+    <p>Unfortunately, most social services do not allow deep linking as shown above. Instead, the services substitute a native player which does not support deep linking. As of July 2014 only one major social network, Twitter, supports direct inclusion of the Brightcove player in the social feed using an iframe, making deep linking possible.</p>
+    <p >For details about deep linking with Twitter, see the <a href="https://player.support.brightcove.com/plugins/social-sharing-plugin.html">Social Media Plugin</a> document.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Known_issues">Known issues</h2>
+    <ul>
+      <li>The <code translate="No">data-start-time</code> attribute and <code translate="No">t</code> query parameter only work for players <span translate="No">v6.19.0+</span>.</li>
     </ul>
   </section>
 </article>

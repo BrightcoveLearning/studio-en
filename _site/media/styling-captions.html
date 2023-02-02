@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Styling Captions</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="In this topic you will learn ways to style captions.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/media/">Media</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Styling Captions</li>
             
             
           </ol>
@@ -2848,48 +2844,176 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
-    
+  <h1>Styling Captions</h1>
+  <summary>In this topic you will learn ways to style captions.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
-  </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
+    <p>The default look and feel of the captions is subject to change so you may wish to style the captions. When styling captions, be cautious to preserve <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=122#contrast-minimum" title="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=122#contrast-minimum">adequate color contrast to meet WCAG accessibility guidelines</a> and consider  end viewers when making styling changes. </p>
+    <p>There are a few ways that captions can be styled:</p>
     <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
+      <li><a href="#infile">By adding styling options to the WebVTT file</a></li>
+      <li><a href="#cssguide">CSS style guide</a></li>
+      <li><a href="#user">User styling options</a></li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">Note:  Never use <code translate="no">!important</code> or any other CSS tricks to override user preferences (those set in the Captions Settings dialog).</aside>
+    <aside class="bcls-aside bcls-aside--information">Note:  Safari uses native captions on the device and the device settings take precedence over vtt styles.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note:  Currently, only in-line styling is supported.  Style blocks are not supported.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="infile">Adding styling options to the WebVTT file</h2>
+    <p>Style options can be applied directly to the WebVTT file that allow you to change the location and orientation of the captions as well as the text. Here are a few examples:</p>
+    <ul>
+      <li>Bold text
+        <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;b&gt;Lorem ipsum&lt;/b&gt;</code></pre>
+      </li>
+      <li>Italic text
+        <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;i&gt;dolor sit amet&lt;/i&gt;</code></pre>
+      </li>
+      <li>Underlined text
+        <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;u&gt;consectetuer adipiscing&lt;/u&gt;</code></pre>
+      </li>
+    </ul>
+    <p>Because the Brightcove Player manages the positioning of captions, you can not use styles to change the location or orientation of the captions. The inline styles don't provide many styling options. For a greater variety of styling options, you can use a CSS file as described in the next section.</p>
+    <p>For details about inline styles, see <a href="https://www.w3.org/TR/webvtt1/#styling">this link</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="cssguide">CSS Style Guide</h2>
+    <p>This table shows which CSS properties are and are not supported for styling captions with the Brightcove Player:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>CSS Property</th>
+          <th>Supported</th>
+          <th>Not Supported</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No"> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family </a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"></code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">color</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">background</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity">opacity</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility">visibility</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration">text-decoration</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow">text-shadow</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No">width</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">height</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">line-height</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">white-space</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">word-wrap</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">top</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">left</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">display</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">direction</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>For more information on styling options for caption files, see the <a href="https://www.w3.org/TR/webvtt1/">W3C WebVTT specification document</a> or see <a href="http://html5doctor.com/video-subtitling-and-webvtt/">Video Subtitling and WebVTT</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="user">User styling of captions</h2>
+    <p>For users on iOS devices, caption styling is controlled through the iOS Settings. To access the settings select <strong>Settings</strong> &gt; <strong>General</strong> &gt; <strong>Accessibility</strong> &gt; <strong>Subtitles &amp; Captioning</strong> &gt; <strong>Style</strong>. Here you can select a predefined style or create new styles.</p>
+    <p>Viewers on desktop and Android devices can change the appearance of the captions by using the captions settings menu.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/node15481-caption-settings-menu.png" /></figure>
+    <p>Clicking on the captions settings menu will display an overlay which allows the following caption properties to be set:</p>
+    <ul>
+      <li>Foreground color and opacity</li>
+      <li>Background color and opacity</li>
+      <li>Window color and opacity</li>
+      <li>Font size</li>
+      <li>Text edge style</li>
+      <li>Font family</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/node15481-caption-settings.png" /></figure>
+    <p>Click <strong>Defaults</strong> to return the captions to their default styling.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="limitations">Limitations</h2>
+    <p>Captions are supported on the following device types and operating systems.</p>
+    <ul>
+      <li>iOS 10+</li>
+      <li>Android 7+</li>
+      <li>Internet Explorer 11+</li>
+      <li>The latest Edge, Chrome, Safari, and Firefox browsers on desktops</li>
     </ul>
   </section>
 </article>

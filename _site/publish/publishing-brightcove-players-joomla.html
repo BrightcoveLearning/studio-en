@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Publishing Brightcove Players in Joomla</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="In this topic you will learn how to publish Brightcove Players to Joomla.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/publish/">Publish</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Publishing Brightcove Players in Joomla</li>
             
             
           </ol>
@@ -2848,49 +2844,58 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
-    
+  <h1>Publishing Brightcove Players in Joomla</h1>
+  <summary>In this topic you will learn how to publish Brightcove Players to Joomla.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
-  </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
+    <p>Joomla is a popular, open-source, content management system (CMS), which enables you to build Web sites and powerful online applications. You can learn more about Joomla <a href="http://www.joomla.org">here</a>. This topic shows you how you can easily publish Brightcove Players to your Joomla pages.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The steps and images in this topic were taken using Joomla 3.9.6.</aside>
+    <p>To publish a Brightcove Player to a Joomla page, the following steps are required:</p>
     <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
+      <li><a href="#settings">Check the Joomla editor settings</a></li>
+      <li><a href="#pubcode">Paste in the player embed&nbsp;code</a></li>
     </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="settings">Checking the Joomla editor settings</h2>
+    <p>By default, Joomla is configured to use the TinyMCE editor. The TinyMCE editor is configured to strip certain HTML tags when they are pasted into the editor. In order to paste in the Standard (iframe) player publishing code into the Joomla editor, you need to make sure that the <code translate="No">&lt;iframe&gt;</code> tag will not be removed by the editor.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Login as administrator into your Joomla backend.</li>
+      <li>Select <strong>Extensions &gt; Plugins</strong>.</li>
+      <li>Enter <span class="BCL-userInput"><strong>tinymce</strong></span> in the search box and click the search button.</li>
+      <li>Confirm that one item is returned, <strong>Editor - TinyMCE</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/third-party/node11013-search-plugin.png" /></figure>
+      </li>
+      <li>Click on the <strong>Editor - TinyMCE</strong> plugin link to edit its settings.</li>
+      <li>Locate the <strong>Prohibited Elements</strong> section and make sure <strong>iframe</strong> is not listed. If <strong>iframe</strong> is listed, remove it from the list.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/third-party/node11013-prohibited-elements.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">Note: Joomla requires that there be a value in the <strong>Prohibited Elements</strong> field. If removing the <code translate="No">iframe</code> entry will leave this field blank, enter <span class="BCL-userInput">"none"</span> in this field.</aside>
+      </li>
+      <li>Click <strong>Save</strong> at the top of the page to save your changes.</li>
+    </ol>
+    <p>The TinyMCE editor will also strip out the <code translate="No">&lt;script&gt;</code> tag when using the Advanced (in-page) player publishing code. One way around this is to configure your Joomla instance to not use the TinyMCE editor. To select another editor, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Go to&nbsp;<strong>System</strong>&nbsp;&gt;&nbsp;<strong>Global Configuration</strong>.</li>
+      <li>Click the&nbsp;<strong>Site</strong>&nbsp;tab.</li>
+      <li>Find the&nbsp;<strong>Default Editor</strong>&nbsp;option.</li>
+      <li>Set this&nbsp;option to&nbsp;<strong>Editor - None</strong>. We have also found selecting <strong>Editor - CodeMirror</strong> will not strip the <code translate="No">&lt;script&gt;</code> tag.</li>
+      <li>Click <strong>Save &amp; Close</strong>.</li>
+    </ol>
+    <p>If your Joomla installation is configured to use another editor, you need to make sure that the player publishing code is not edited by the editor when you paste and save the code in Joomla. This may require you to change other Joomla settings or possibly use an extension (<a href="https://extensions.joomla.org/extensions/core-enhancements/coding-a-scripts-integration/custom-code-in-content/1023">Jumi</a> or <a href="https://extensions.joomla.org/extensions/core-enhancements/coding-a-scripts-integration/custom-code-in-content/5051">Sourcerer</a>) to allow you to paste in JavaScript code into your editor.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="pubcode">Paste in the player embed code</h2>
+    <p>Once your editor is configured so that it will not edit the code, you can generate the player embed code.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Media</strong> module to generate the embed code for the video you want to publish.</li>
+      <li>Open the page you want to edit in Joomla.</li>
+      <li>Click the <strong>Toggle editor</strong> button at the bottom of the editor to go into HTML mode.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/third-party/node11013-toggle-editor.png" /></figure>
+      </li>
+      <li>Paste in your player publishing code and click <strong>Save &amp; Close</strong>.</li>
+      <li>Verify that the video appears and plays on your page.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/third-party/node11013-final.png" /></figure>
+      </li>
+    </ol>
   </section>
 </article>
 

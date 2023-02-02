@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Choosing the Correct Embed Code</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="This topic provides an overview of the types of embed code that are available when publishing videos using the Brightcove Player.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/publish/">Publish</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Choosing the Correct Embed Code</li>
             
             
           </ol>
@@ -2847,53 +2843,65 @@
       <br>
       
       
-<article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
-    
+<h1>Choosing the Correct Embed Code</h1>
+ <article class="bcls-article">
+  <summary>This topic provides an overview of the types of embed code that are available when publishing videos using the Brightcove Player.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
+    <p>When publishing videos using the Media module, you can use the player URL to preview the video or copy the iframe or In-Page embed code to paste into your web page or application.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Click the <strong>Shorten</strong> button next to the preview URL to generate&nbsp;a shortened preview URL.</aside>
+    <p >The <strong>Standard</strong> link displays the iframe embed code and the <strong>Advanced</strong> link displays the In-Page embed code. From the Player Management API perspective, you will also see the <strong>Advanced</strong> player code referred to as the <strong>embed_in_page</strong> implementation.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-publish-img/publishing/node15622-pub-code-options.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Note: For information on working with responsive players, see the <a href="https://player.support.brightcove.com/styling/responsive-sizing-brightcove-player.html">Responsive Sizing for the Brightcove Player</a> developer document.</aside>
   </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
-    <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
-    </ul>
-  </section>
-</article>
 
+  <section class="bcls-section">
+    <h2 id="iframe">iframe embed code (Standard)</h2>
+    <p>Typical iframe embed code will appear as follows:</p>
+    <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;iframe src=&quot;https://players.brightcove.net/1507807800001/rf1BTdKk6M_default/index.html?videoId=6116779877001&quot;
+  allowfullscreen=&quot;&quot;
+  allow=&quot;encrypted-media&quot;
+  width=&quot;960&quot; height=&quot;540&quot;&gt;&lt;/iframe&gt;</code></pre>
+    <p>Some advantages of using the iframe embed code</p>
+    <ul>
+      <li>No collisions with existing JavaScript and/or CSS</li>
+      <li>Automatically responsive</li>
+      <li>The iframe eases use in social media apps or whenever the video will need to be used in an outside environment; for instance, Facebook will perceive the security threat is much less when the iframe is used versus putting the <code translate="No">&lt;video&gt;</code> tag and associated JavaScript on their site (which Facebook does not allow)</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: If the selected player has been configured with the <a href="https://studio.support.brightcove.com/campaign/general/creating-campaign-enabled-player.html">Campaign plugin</a>, the iFrame code will not be displayed as the JavaScript code must be used.</aside>
+
+    <aside class="bcls-aside bcls-aside--information">Note: The iframe will be able to access the parent page's full URL as long as the parent page has the header <code translate="No">referrer-policy: no-referrer-when-downgrade</code>. This means that the header <code translate="No">referrer</code> will be sent to the iframe with the full parent page's URL because both protocols match.</aside>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="inpage">In-Page embed code (Advanced)</h2>
+    <p>Typical in-page embed code will appear as follows:</p>
+    <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;video-js data-account=&quot;1507807800001&quot;
+  data-player=&quot;rf1BTdKk6M&quot;
+  data-embed=&quot;default&quot;
+  controls=&quot;&quot;
+  data-video-id=&quot;6116779877001&quot;
+  data-playlist-id=&quot;&quot;
+  data-application-id=&quot;&quot;
+  width=&quot;960&quot; height=&quot;540&quot;&gt;&lt;/video-js&gt;
+&lt;script src=&quot;https://players.brightcove.net/1507807800001/rf1BTdKk6M_default/index.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <p>Although integrating the In-Page publishing code can be more complex, using the In-Page code is best when the page containing the player needs to communicate with the player. Some examples of when to use the In-Page embed code include:</p>
+    <ul>
+      <li>The code in the containing page needs to listen for and act on player events</li>
+      <li>The player uses styles from the parent page</li>
+      <li>The iframe code will cause application logic to fail, like a redirect from the parent page</li>
+    </ul>
+    <p>Even if your final implementation does not use the iframe embed&nbsp;code, you can still use the In-Page code with a plugin for your JavaScript and a separate file for your CSS. This encapsulates your logic so that you can easily use it in multiple players.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: If you selected the iframe implementation when publishing from Studio, you will see the option <code translate="No">allowfullscreen</code> added in the iframe. If you are ever manually placing a Brightcove Player, either the in-page embed or iframe implementation, in an iframe you should also include this option for proper fullscreen functionality. If for some reason you nest a player in multiple iframes, all iframes should have the option added.</aside>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="recommend">Recommendation</h2>
+    <p>It is considered a best practice to use the Standard (iframe)) implementation unless some application logic requires the use of the Advanced (in-page) code. If you are using the Audience module to track viewer engagement, the Advanced (in-page)) embed code must be used.</p>
+  </section>
+
+</article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">

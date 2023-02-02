@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Managing Ingest Profiles</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="This topic provides an overview of how to create and edit custom ingest profiles.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/">Admin</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Managing Ingest Profiles</li>
             
             
           </ol>
@@ -2848,49 +2844,109 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
-    
+  <h1>Managing Ingest Profiles</h1>
+  <summary>This topic provides an overview of how to create and edit custom ingest profiles.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
-  </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
+    <p>Ingest profiles contain the transcode settings that will be used when videos are uploaded using the <a href="/media/manage/uploading-videos-using-upload-module.html">Upload module</a> or the <a href="https://apis.support.brightcove.com/dynamic-ingest/references/reference.html">Dynamic Ingest API</a>.</p>
+    <p>To access the Ingest Profiles administration page, open the <strong>Admin</strong> module and then <strong>Ingest Profiles</strong>. Note that to access the Ingest Profiles administration page, you must be a Video Cloud Studio user with the Administrator role.</p>
+    <p>A list of ingest profiles will appear.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/ingest-profiles/node15628-profile-list.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Note: Clicking the <strong>Show API name</strong> link in the header will display the internal name of the ingest profile. The internal name is used when using the ingest profile name in an API call.</aside>
+    <p>The page will display the following information:</p>
     <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
+      <li><strong>Profile Name and Description</strong></li>
+      <li><strong>Profile Version</strong> - Indicates the type of transcoding that is used. Note that the types that appear are based upon how your Video Cloud account is configured:
+        <ul>
+          <li><strong>Dynamic Delivery</strong> - Dynamic Delivery transcoding is used. For information on Dynamic Delivery, see <a href="/general/architecture/overview-dynamic-delivery.html">Overview of Dynamic Delivery</a>.</li>
+          <li><strong>Context-Aware</strong>&nbsp;- Context-Aware transcoding is used. For information on Context Aware Encoding, see <a href="/general/architecture/overview-context-aware-encoding.html">Overview of Context Aware Encoding</a>.</li>
+        </ul>
+      </li>
+      <li><strong>Type</strong> - Type of ingest profile
+        <ul>
+          <li><strong>Standard VOD</strong> - Indicates that this is a default profile provided by Video Cloud. This type of profile can't be edited or deleted.</li>
+          <li><strong>Custom VOD</strong> - Indicates that this is a <a href="#create">custom ingest profile</a>.</li>
+          <li><strong>Standard Live</strong> - Indicates that this is a default Live profile provided by Video Cloud. This type of profile can't be edited or deleted.</li>
+          <li><strong>Custom Live</strong> - Indicates that this is a <a href="#create">custom Live ingest profile</a>.</li>
+        </ul>
+      </li>
+      <li><strong>Renditions</strong> - The number of video renditions that may be created.</li>
+      <li><strong>Display</strong> - Determines whether the <a href="#hide">profile is displayed</a> and can be selected in the Upload module.</li>
     </ul>
+    <p>For specific details on the Brightcove supplied ingest profiles (profiles with a <strong>Type</strong> of <strong>Standard VOD</strong> or <strong>Standard Live</strong>), see one of the following documents:</p>
+    <ul>
+      <li><strong>Dynamic Delivery or Context-Aware Profile Version</strong> - <a href="/admin/ingest-profiles/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Standard Ingest Profiles for Dynamic Delivery and Context Aware Encoding</a></li>
+      <li><strong>Custom Live Types</strong> - <a href="https://live.support.brightcove.com/admin/ingest-profiles/standard-live-ingest-profiles.html">Standard Live Ingest Profiles</a></li>
+    </ul>
+    <!-- <aside class="bcls-aside bcls-aside--information">Note: When lower quality source content is uploaded and one of the standard profiles is selected, Video Cloud will only produce renditions that are equal to or lower in quality than the source. When creating your own custom profiles, you may want to use <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/guides/conditional-output.html">conditional output parameters</a> to prevent renditions from being generated if the source doesn't match the quality criteria you specify. This will prevent the dynamic ingest system from creating higher quality renditions when lower quality source files are uploaded.</aside> -->
+    <p>Using the Ingest Profiles administration page, you can:</p>
+    <ul>
+      <li><a href="#create">Create new ingest profiles</a></li>
+      <li><a href="#edit">Edit ingest profiles</a></li>
+      <li><a href="#delete">Delete ingest profiles</a></li>
+      <li><a href="#default">Change the default ingest profile</a></li>
+      <li><a href="#hide">Hide/Show ingest profiles</a></li>
+    </ul>
+  </section>
+  <!-- <section class="bcls-section">
+    <h2 id="archivemasters">Archiving and distributing masters</h2>
+    <p>Ingest profiles can be configured to archive and distribute master (source) files. Archiving the master keeps a copy of the master file and provides the ability for the video to be re-transcoded in the future without the need to upload it again. Distributing the master enables the master to be pushed to the CDN and used as a playable rendition. The <strong>Standard VOD</strong> ingest profiles are configured to archive and not distribute the master. You may wish to change this behavior when creating a custom ingest profile. For additional information on archiving and distributing masters, see the <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">Archiving Masters</a> document. For a list of all the fields that can be configured when creating ingest profiles, see the <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/references/ingest-profiles-api-fields-reference-legacy-ingest.html">Ingest Profiles API Fields Reference</a> developer document.</p>
+  </section> -->
+  <section class="bcls-section">
+    <h2 id="create">Creating a new ingest profile</h2>
+    <aside class="bcls-aside bcls-aside--information">Note: The ability to create and edit Ingest Profiles is available only to publishers with Enterprise and Professional accounts.</aside>
+    <p>To create a new ingest profile, click <span class="button-blue">New Profile<i class="button-icon" data-feather="chevron-down"></i></span>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/ingest-profiles/node15628-new-profile.png" /></figure>
+    <p>The process to create a new ingest profile will vary based upon the type of profile being created. See one of the following documents for details on how to create a custom ingest profile:</p>
+    <ul>
+      <li><a href="creating-ingest-profiles-dynamic-delivery.html">Creating Ingest Profiles for Dynamic Delivery</a></li>
+      <li><a href="creating-ingest-profiles-context-aware-encoding.html">Creating Ingest Profiles for Context Aware Encoding</a></li>
+      <li><a href="https://live.support.brightcove.com/admin/ingest-profiles/creating-custom-live-ingest-profiles.html">Creating Custom Live Ingest Profiles</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit">Editing ingest profiles</h2>
+    <p>The Ingest Profiles administration page can be used to edit ingest profiles. Note that the default set of ingest profiles (marked <strong>Standard VOD</strong>) can't be edited.</p>
+    <p>To edit an ingest profile:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Admin</strong> module.</li>
+      <li>Click the <strong>Ingest Profiles</strong> link.</li>
+      <li>Click on the ingest profile to edit.</li>
+      <li>Use the Profile Editor to edit the profile definition.</li>
+      <li>Click <span class="button-blue">Save</span>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="delete">Deleting ingest profiles</h2>
+    <p>The Ingest Profiles administration page can be used to delete ingest profiles that are no longer needed. Note that the default set of ingest profiles (marked <strong>Standard VOD</strong>) can't be deleted but <a href="#hide">they can be hidden</a> if they are not needed.</p>
+    <p>To delete an ingest profile:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Admin</strong> module.</li>
+      <li>Click the <strong>Ingest Profiles</strong> link. The Ingest Profiles administration page will open displaying the ingest profiles that have been created for your account.</li>
+      <li>Click the delete icon (<img alt="" src="/assets/images/s-admin-img/ingest-profiles/node15628-delete-icon.png" />) next to the ingest profile or click the profile name and then click <strong>Delete Profile</strong>.</li>
+      <li>Confirm the deletion by clicking <span class="button-red">Delete Profile</span>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="default">Selecting a default ingest profile</h2>
+    <p>A default ingest profile can be configured for when <a href="/media/manage/uploading-videos-using-upload-module.html">videos are uploaded</a> and when <a href="/social/general/creating-video-clip-using-brightcove-social.html">clipping using the Social module</a>. The upload default profile is indicated with <img alt="" src="/assets/images/s-admin-img/ingest-profiles/node16840-upload-default-button.png" /> next to the profile name. The social clipping default profile is indicated with <img alt="" src="/assets/images/s-admin-img/ingest-profiles/node16840-social-clip-button.png" /> next to the profile name.</p>
+    <p>To select a default ingest profile for uploading/clipping:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Admin</strong> module.</li>
+      <li>Click the <strong>Ingest Profiles</strong> link. The Ingest Profiles administration page will open displaying the ingest profiles that have been created for the account.</li>
+      <li>Click the ingest profile name for the profile you want to set as the default.</li>
+      <li>Click the <strong>Uploading</strong> or <strong>Social clipping</strong> link at the top of the page to set current profile as the default.
+        <figure class="bcls-figure"><img alt="" src="/assets/images/s-admin-img/ingest-profiles/node15628-set-default.png" /></figure>
+      </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">Note: When selecting a default ingest profile you should ensure that the profile is <a href="#hide">visible and not hidden</a>.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: Only Dynamic Delivery profiles can be set to be a social clipping default profile. CAE profiles are not supported.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="hide">Hiding and showing ingest profiles</h2>
+    <p>Ingest profiles can be hidden by clicking the slider associated with the profile to the <strong>Hide</strong> position. This is useful to hide default profiles that may not be needed.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/ingest-profiles/node15628-hide-profile.png" /></figure>
+    <p>Ingest profiles that are hidden will not appear in the Ingest Profile list in the Upload module.</p>
+    <figure class="bcls-figure"></figure>
   </section>
 </article>
 

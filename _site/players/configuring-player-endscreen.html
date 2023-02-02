@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Configuring the Player Endscreen</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="This topic covers how to configure the player end screens.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/players/">Players</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Configuring the Player Endscreen</li>
             
             
           </ol>
@@ -2848,49 +2844,55 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
-    
+  <h1>Configuring the Player Endscreen</h1>
+  <summary>This topic covers how to configure the player end screens.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
+
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4162679408001">&nbsp;</div>
     <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
-  </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
+      
+    <p>Players can be configured so that an end screen will be displayed when a video ends. The end screen can be configured to show the replay and sharing icons or can be customized to include HTML. A custom end screen is shown below.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node15267-sample-endscreen.png" /></figure>
+    <p>Icons are displayed to allow the viewer to replay the video or share the video out to popular social media sites.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: If a player endscreen is configured it will not show up on an iOS device if the player is in native fullscreen mode.</aside>
+    <p>To configure a player end screen, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the  <strong>Players</strong>  module.</li>
+      <li>Click the link for the player you want to configure.</li>
+      <li>Click <strong>End Screens</strong> in the left navigation menu.
+    
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="style menu" src="/assets/images/s-players-img/appearance/node15267-endscreen-options-vc.png" /></figure>
+    
+    
+      </li>
+      <li>Select the <strong>Player End Screen</strong> option. The following options are available:
+        <ul>
+          <li>None - No end screen will be displayed</li>
+          <li><a href="#social_sharing">Social</a> - Display the social sharing dialog when video ends</li>
+          <li><a href="#custom_endscreen">Custom</a> - Display a custom end screen when video ends</li>
+        </ul>
+      </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">Note: Any changes made to a player may take up to 5 minutes to appear in published players.</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
-    <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
-    </ul>
+    <h2 id="social_sharing">Social end screen</h2>
+    <p>When the <strong>Social </strong> option is selected, the social sharing dialog will display when the video ends.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node15267-social-sharing-endscreen.png" /></figure>
+    <p>Social sharing for the player must be enabled to use the social sharing end screen. If the <strong>Social</strong> option is selected, social sharing will be enabled automatically. The social sharing options that are displayed are based upon what was configured as part of the social settings. For more information on social settings, see <a href="/players/appearance/configuring-social-properties-player.html">Configuring the Social&nbsp;Properties for a Player</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="custom_endscreen">Custom end screen</h2>
+    <p>When the <strong>Custom</strong> option is selected, custom HTML can be used to display additional text or images above the replay and sharing icons. To configure a custom end screen, select <strong>Custom</strong> and paste in HTML to be displayed in the <strong>Custom HTML</strong> property.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: A video can be used by adding a <code>&lt;video&gt;</code> html element to  custom HTML.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: Sharing must be enabled for the sharing icon to appear on the end screen.</aside>
+    <p>The following code will display an image on the player endscreen.</p>
+    <pre class="line-numbers"><code class="language-html" translate="No">&lt;div style=&quot;text-align:center&quot;&gt;
+&lt;p&gt;This video sponsored by&lt;/p&gt;&lt;br/&gt;
+&lt;img src=&quot;http://support.brightcove.com/site-assets/images/site/SVG/COVE004_Brightcove_Logo_093020_RGB_Blue.svg&quot;/&gt;
+&lt;/div&gt;</code></pre>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/appearance/node15267-custom-endscreen-html.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Note: If the <strong>Custom</strong> option is selected and no HTML is provided, the replay button will be displayed when the video ends.</aside>
   </section>
 </article>
 

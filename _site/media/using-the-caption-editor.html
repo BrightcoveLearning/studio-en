@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Using the Caption Editor</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="In this topic you will learn how to edit captions using the caption editor.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/media/">Media</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Using the Caption Editor</li>
             
             
           </ol>
@@ -2848,48 +2844,73 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
-    
+  <h1>Using the Caption Editor</h1>
+  <summary>In this topic you will learn how to edit captions using the caption editor.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
-  </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
+    <p>Captions can be added to videos and provide additional or interpretive information to individuals who wish to access it. Captions are associated with videos as part of the <strong>Text Track</strong> properties. Video Cloud provides the ability to <a href="generating-captions-videos.html">auto-generate captions</a> for a video or captions can be <a href="adding-captions-videos-using-media-module.html">manually associated</a> with videos. </p>
+    <p>Once captions have been added to videos, the caption editor can be used to edit the caption files. The text tracks properties can be configured to provide captions for a video. </p>
+    <aside class="bcls-aside bcls-aside--information">Note: The caption editor can't be used with videos that have been ingested using a Legacy profile (a grey cloud icon <img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/node14464-dd-icon-grey.png" /> will appear next to the video name).</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: Any type of text tracks (i.e. <a href="adding-chapters-video.html">chapters</a>) can be edited using the caption editor as long as it is a VTT file. When editing, the text will appear in the preview player as a caption but that is not necessarily how it will display to the end viewer.</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
+    <h2 id="open">Opening the caption editor</h2>
+    <p>To open the caption editor, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Media</strong>  module.</li>
+      <li>Click a video name  to open the video properties page.</li>
+      <li>Icons above the preview player can be used to display the preview player or the caption editor. Click the <strong>CC</strong> icon to open the caption editor.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/capedit-cc-icon.png" /></figure>
+      </li>
+    </ol>
+    <p>The first text track will be loaded into the editor. If there are no text tracks, the editor will be empty.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/capedit-captions-loaded.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Note: If you would like to disable the caption editor for your account, contact Brightcove Support.</aside>
   </section>
   <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
+    <h2 id="edit">Editing a caption file</h2>
+    <p>To edit a caption file, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the caption editor.</li>
+      <li>The caption editor will load the first text track into the editor. If you need to edit a different text track, click <span class="button-blue">Choose text track ˇ</span> and select the text track to edit. The editor will display the tracks and the associated start and end times.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/capedit-choose-track.png" /></figure>
+      </li>
+      <li>Edit the text track content as needed. The preview player can be used to preview changes to the text track.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/capedit-captions-edited.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">Note: You must click out of the caption line and then back in to view your changes in the preview player.</aside>
+        <aside class="bcls-aside bcls-aside--information">Note: For videos longer than one hour, the timecode format will change to 00:00:00:000.</aside>
+      </li>
+      <li>Click <span class="button-blue">Publish text track</span> to save the changes. Video Cloud will upload the updated text tracks file.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/capedit-status-published.png" /></figure>
+      </li>
+      <aside class="bcls-aside bcls-aside--information">Note: There will be a slight delay before  updates to text tracks appear in players.</aside>
+    </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
+    <h2 id="auto-caption">Generating captions</h2>
+    <p>The caption editor can be used to generate captions for a video. To generate captions for a video, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the caption editor.</li>
+      <li>Click <span class="button-blue">Auto caption</span>.</li>
+      <li>Select the <strong>Language</strong> to generate the captions in. If a <strong>Language</strong> is not selected, the video language is auto-detected. Selecting a language will improve the caption file generation time and may improve overall accuracy.</li>
+      <li>Enter a <strong>Label</strong>. The label is typically set to the language used in the video. The label will be displayed in the CC dropdown in the video player and will be used by viewers to select the captions to be displayed.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/capedit-caption-settings.png" /></figure>
+      </li>
+      <li>Click <span class="button-blue">Done</span>.</li>
+    </ol>
+    <p>The page will need to be refreshed when the captions are complete for them to populate in the caption editor. The generated captions will have a <strong>Published</strong> status after they are generated.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
+    <h2 id="draft">Saving drafts</h2>
+    <p>When a caption file is saved as a draft, it will not be displayed to viewers. Drafts are useful when you are in the process of editing or reviewing a caption file. To save a caption file as a draft, open caption editor and click <span class="button-blue">Save draft</span>. The caption editor will display a status of <strong>Draft</strong>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/capedit-status-draft.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
+    <h2 id="issues">Known issues and feature gaps</h2>
+    <p>Because the caption Editor is not yet a finished feature, there are some known issues/feature gaps that you may want to be aware of. These are listed below and will be resolved in the coming weeks. </p>
     <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
+      <li><strong>Publish and Unsave workflow</strong> - We recognize that it is not ideal to have to publish a text track and then unpublish separately to hide the captions from end viewers. We are working on making this a single action.</li>
+      <li><strong>Overlapping captions</strong> - If one caption has a start time with the same timecode as the previous caption’s end time, they will appear to overlap in the caption player. It will not appear that way to end viewers - the caption line with the same start timecode will win the conflict.</li>
+      <li><strong>Timecode errors</strong> - Only numbers and colons are allowed in the timecode field. If you enter in any other character-types (e.g. letters, commas), it will result in an error. To fix this, replace the disallowed characters with a number or colon. </li>
     </ul>
   </section>
 </article>
