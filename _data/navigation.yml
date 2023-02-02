@@ -100,8 +100,6 @@
       url: /media/properties/editing-video-properties-using-quick-edit.html
     - name: Capturing Poster and Thumbnail Images
       url: /media/properties/capturing-poster-and-thumbnail-images.html
-    - name: Increasing the Quality of Poster Images
-      url: /media/properties/increasing-quality-poster-and-thumbnail-images.html
     - name: Uploading Poster and Thumbnail Images
       url: /media/properties/uploading-poster-and-thumbnail-images.html
     - name: Configuring Video Availability
@@ -137,7 +135,9 @@
   - name: General Information
     url: /media/general/index.html
     icon: fa-regular fa-diamond"
-    docs:      
+    docs:
+    - name: Increasing the Quality of Poster Images
+      url: /media/general/increasing-quality-poster-and-thumbnail-images.html
     - name: Media Sharing
       url: /media/general/media-sharing-using-media-module.html
     - name: Setting Required Fields

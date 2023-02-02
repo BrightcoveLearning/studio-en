@@ -399,15 +399,6 @@
         
           <url>
             
-              <loc>https://studio.support.brightcove.com/media/properties/increasing-quality-poster-and-thumbnail-images.html</loc>
-            
-            <lastmod>2023-02-02</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
               <loc>https://studio.support.brightcove.com/media/properties/uploading-poster-and-thumbnail-images.html</loc>
             
             <lastmod>2023-02-02</lastmod>
@@ -543,6 +534,15 @@
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/media/general/increasing-quality-poster-and-thumbnail-images.html</loc>
+            
+            <lastmod>2023-02-02</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
         
           <url>
             
