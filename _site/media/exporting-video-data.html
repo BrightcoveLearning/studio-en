@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Exporting Video Data</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="In this topic you will learn how to export video data inside of the Media module.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/media/">Media</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Exporting Video Data</li>
             
             
           </ol>
@@ -2848,49 +2844,193 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
-    
+  <h1>Exporting Video Data</h1>
+  <summary>In this topic you will learn how to export video data inside of the Media module.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
-  </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
+    <p>The Media module provides the ability to export video metadata for all of your videos or a subset of videos. When using this feature, keep the following in mind:</p>
     <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
+      <li>Brightcove recommends exporting less than 15K videos at a time. If you need to export more than 15K videos, use the search feature to return a subset of videos and export multiple "batches" at a time.</li>
+      <li>URLs for renditions and images are not fixed. Brightcove reconfigures the storage of media assets from time to time and when this happens, URLs for specific assets will change. If you are relying on hard-coded URLs to these assets, the links may break at some point. The best way to prevent links to media from breaking is to retrieve them from Video Cloud at runtime using the <a href="https://apis.support.brightcove.com/cms/getting-started/overview-cms-api.html">CMS API</a>.</li>
+      <li>Double-byte characters such as Korean and Japanese will not display properly if opened in Excel. This is caused by the fact that the generated .csv file is encoded by UTF-8 and Excel does not support it properly. To fix this, the .csv file should be re-encoded by ANSI, then, it will be displayed properly in Excel.</li>
     </ul>
+    <p>To export video metadata, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Media</strong>  module.</li>
+      <li>If you want to export data for specific videos, check the checkbox next to the videos.</li>
+      <li>Click <strong>Export</strong> at the top of the page.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/node18703-export-data.png" /></figure>
+      </li>
+      <li>Select the videos to export:
+        <ul>
+          <li><strong>All videos in this list</strong> - Exports video metadata for all videos in the account</li>
+          <li><strong>x selected videos</strong> - Exports video metadata for only the selected videos</li>
+        </ul>
+      </li>
+      <li>Check <strong>Include current URLs for video renditions</strong> to include the video rendition URLs. Checking this option with a large number of videos selected will increase the time required to generate the export file.
+        <aside class="bcls-aside bcls-aside--information">Note: When this option is selected, video metadata for a maximum of 1000 videos can be exported.</aside>
+      </li>
+      <li>Click <strong>Export Data</strong>. The data export will begin.</li>
+      <li>When the export file is ready, click <strong>Download File</strong> to download the video data file to your local computer.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/node18703-export-done.png" /></figure>
+      </li>
+    </ol>
+    <p>The .csv file will be named with the Video Cloud account number. A third-party spreadsheet program can be used to view the exported video data.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="add">Exported video data details</h2>
+    <p>The table below outlines the video data fields that are exported. For more information on the video data fields, see the <a href="https://apis.support.brightcove.com/cms/references/cms-api-video-fields-reference.html">CMS API Video Fields Reference</a>.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th width="12%" style="width: 24%;">Field</th>
+          <th width="88%" style="width: 33%;"><strong>Description</strong></th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>id</td>
+          <td valign="top"><p>Video ID</p></td>
+        </tr>
+        <tr>
+          <td>account_id</td>
+          <td valign="top"><p>Video Cloud account ID</p></td>
+        </tr>
+        <tr>
+          <td>ad_keys</td>
+          <td valign="top">String representing the ad key/value pairs assigned to the video.</td>
+        </tr>
+        <tr>
+          <td>clip_source_video_id</td>
+          <td valign="top">Source video ID used to create this video clip</td>
+        </tr>
+        <tr>
+          <td>complete</td>
+          <td valign="top">Indicates whether processing is complete</td>
+        </tr>
+        <tr>
+          <td>created_at</td>
+          <td valign="top">When the video was created in the Video Cloud system</td>
+        </tr>
+        <tr>
+          <td>created_by</td>
+          <td valign="top">Information about the user who created the video:
+            <ul>
+              <li>if created by API, the <code translate="No">type</code> will be <code translate="No">api_key</code></li>
+              <li>if created before the auditing feature was enabled on December 7, 2018, the <code translate="No">type</code> will be <code translate="No">unknown</code></li>
+              <li>if created by a user and the user has been removed from the account, their user ID will still appear here</li>
+            </ul></td>
+        </tr>
+        <tr>
+          <td>cue_points</td>
+          <td valign="top">Video cue points</td>
+        </tr>
+        <tr>
+          <td>custom_fields</td>
+          <td valign="top">Video custom fields</td>
+        </tr>
+        <tr>
+          <td>delivery_type</td>
+          <td valign="top">Defines how the video is delivered</td>
+        </tr>
+        <tr>
+          <td>description</td>
+          <td valign="top">Video short description</td>
+        </tr>
+        <tr>
+          <td>digital_master_id</td>
+          <td valign="top">System ID for the digital master</td>
+        </tr>
+        <tr>
+          <td>duration</td>
+          <td valign="top">Duration of the video in milliseconds</td>
+        </tr>
+        <tr>
+          <td>economics</td>
+          <td valign="top">Either "AD_SUPPORTED" (default) or "FREE"</td>
+        </tr>
+        <tr>
+          <td>folder_id</td>
+          <td valign="top">ID of folder to which video belongs</td>
+        </tr>
+        <tr>
+          <td>geo</td>
+          <td valign="top">Geo-restriction properties for the video</td>
+        </tr>
+        <tr>
+          <td>has_digital_master</td>
+          <td valign="top">Whether video has an archived master than can be used for retranscoding</td>
+        </tr>
+        <tr>
+          <td>images</td>
+          <td valign="top">Information about the poster and thumbnail images</td>
+        </tr>
+        <tr>
+          <td>link</td>
+          <td valign="top">Related link</td>
+        </tr>
+        <tr>
+          <td>long_description</td>
+          <td valign="top">Video long description</td>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td valign="top">Video name</td>
+        </tr>
+        <tr>
+          <td>original_filename</td>
+          <td valign="top">Original filename when video was uploaded</td>
+        </tr>
+        <tr>
+          <td>projection</td>
+          <td valign="top">The mapping projection for 360° videos</td>
+        </tr>
+        <tr>
+          <td>published_at</td>
+          <td valign="top">Date/Time the video was published</td>
+        </tr>
+        <tr>
+          <td>reference_id</td>
+          <td valign="top">Video reference ID</td>
+        </tr>
+        <tr>
+          <td>schedule</td>
+          <td valign="top">Map of start and end date-times for the video availability</td>
+        </tr>
+        <tr>
+          <td>sharing</td>
+          <td valign="top">Map of the sharing properties for the video</td>
+        </tr>
+        <tr>
+          <td>state</td>
+          <td valign="top">ACTIVE, INACTIVE, PENDING, DELETED</td>
+        </tr>
+        <tr>
+          <td>tags</td>
+          <td valign="top">Array of tags assigned to the video</td>
+        </tr>
+        <tr>
+          <td>text_tracks</td>
+          <td valign="top">Array of text tracks (WebVTT files) assigned to the video</td>
+        </tr>
+        <tr>
+          <td>updated_at</td>
+          <td valign="top">Date/Time the video was updated</td>
+        </tr>
+        <tr>
+          <td>updated_by</td>
+          <td valign="top">Information about the user last updated the video:
+            <ul>
+              <li>if created by API, the <code translate="No">type</code> will be <code translate="No">api_key</code></li>
+              <li>if created before the auditing feature was enabled on December 7, 2018, the <code translate="No">type</code> will be <code translate="No">unknown</code></li>
+              <li>if the video was not modified after ingestion, the <code translate="No">type</code> will be <code translate="No">internal</code></li>
+            </ul></td>
+        </tr>
+        <tr>
+          <td>offline_enabled</td>
+          <td valign="top">Whether the video is enabled for offline playback</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 </article>
 

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Configuring Language Settings</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="In this topic you will learn how to define a primary metadata language and add additional metadata languages that are supported.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/">Admin</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Configuring Language Settings</li>
             
             
           </ol>
@@ -2848,49 +2844,46 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
-    
+  <h1>Configuring Language Settings</h1>
+  <summary>In this topic you will learn how to define a primary metadata language and add additional metadata languages that are supported.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
-  </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Note: This feature is available to all customers, but it is not enabled by default. Contact your Customer Success Manager if you would like to have it turned on for your account(s).</aside>
+    <p>The Language Settings is where you define a Primary Language and then add and manage additional metadata languages. The Primary Language is the language your account is currently using for video metadata. Before adding additional languages to your account, your existing metadata will be associated with the language you define as the Primary Language. The Primary Language is what is initially displayed when you edit video properties in the Media module. </p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/language-settings.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
-  </section>
+    <h2 id="primary">Setting a Primary Language</h2>
+    <p>To set the Primary Language:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Login to Video Cloud Studio.</li>
+      <li>Open the <strong>Admin</strong> module and then <strong>Language Settings</strong>. Note that you must be an account administrator to access to the Admin menu.</li>
+      <li>Enter your primary language. As you type, a list of matching languages will appear.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/primary-language-list.png" /></figure>
+      </li>
+      <li>Click on a language to select it.</li>
+      <li>Click <span class="button-blue">Save Language</span>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/primary-language-saved.png" /></figure>
+      </li>
+    </ol>
+    To change the Primary Language, click on the language, select a new language and then click <span class="button-blue">Save</span>.</section>
   <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
-    <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
-    </ul>
+    <h2 id="add_languages">Adding additional languages</h2>
+    <p>After a Primary Language is saved, additional metadata languages can be added. By adding additional languages, you will be able to enter additional, multi-lingual metadata in the Media module. To add additional languages, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click <span class="button-blue">+ Add Language</span>.</li>
+      <li>Enter your  language. As you type, a list of matching languages will appear.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/add-additional-language.png" /></figure>
+      </li>
+      <li>Click on a language to select it.</li>
+      <li>Click <span class="button-blue">Save Language</span>. The language will be added to the Additional Languages  table.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/additional-language-table.png" /></figure>
+      </li>
+      <li>Click <span class="button-blue">+ Add Language</span> to add additional languages as needed.</li>
+    </ol>
+    <p>To edit the language name (as it will appear in the Media module), click on it, make any changes and then click <span class="button-blue">Save</span>. To delete a language, click the delete icon (<img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/delete-icon.png" />).</p>
+    <aside class="bcls-aside bcls-aside--information">Note: If you delete a language that is in use, all metadata associated with the language will be hidden. To restore the associated metadata, add the language again.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: A maximum of 40 metadata languages can be added.</aside>
+
   </section>
 </article>
 

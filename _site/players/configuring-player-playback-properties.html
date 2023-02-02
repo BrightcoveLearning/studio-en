@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Configuring Player Playback Properties</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="In this topic you will learn how to configure the playback properties for a player.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/players/">Players</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Configuring Player Playback Properties</li>
             
             
           </ol>
@@ -2848,48 +2844,73 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
+  <h1>Configuring Player Playback Properties</h1>
+  <summary>In this topic you will learn how to configure the playback properties for a player.</summary>
+  <section class="bcls-section">
+    <p>The <strong>Playback</strong> properties can be used to configure how video playback is handled in the player.</p>
+    <p>To configure the <strong>Playback</strong> properties, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the  <strong>Players</strong>  module.</li>
+      <li>Click the link for the player you want to configure.</li>
+      <li>Click <strong>Playback</strong> in the left navigation menu.</li>
+    </ol>
     
-  <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
-  </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="playback properties" src="/assets/images/s-players-img/properties/node18510-playback-props-vc.png" /></figure>
+  
+    
+    <aside class="bcls-aside bcls-aside--information">Note: Any changes made to a player may take up to 5 minutes to appear in published players.</aside>
+    <p>The following playback properties can be configured:</p>
     <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
+      <li><a href="#start">Auto-Play Video on Player Load</a></li>
+      <li><a href="#muted">Play Muted</a></li>
+      <li><a href="#preload">Preload Video Before Playback</a></li>
+      <li><a href="#drm">Enable DRM</a></li>
+      <li><a href="#playlist">Playlist properties</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="start">Auto-Play Video on Player Load</h2>
+    <p>The <strong>Auto-Play Video on Player Load</strong> setting controls whether the video will start playing when the player is loaded. This setting may function differently depending on the browser. For more detailed information, see <a href="https://player.support.brightcove.com/playback/autoplay-considerations.html">Autoplay Considerations</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="muted">Play Muted</h2>
+    <p>The <strong>Play Muted</strong> setting controls whether the video's audio will be muted.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="preload">Preload Video Before Playback</h2>
+    <p>The <strong>Preload Video Before Playback</strong> setting controls whether the player will preload video content before the user initiates playback.</p>
+    <aside class="bcls-aside bcls-aside--warning">Note: For more details, see the <a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html#preload_details">preload details section</a> of the Available Options for the Advanced (in-page) Embed Code document.</aside>
+    <p>The following options are available:</p>
+    <ul>
+      <li><strong>Preload Video (fastest)</strong> - Indicates that the whole video file could be downloaded, even if the user does not eventually watch the video. On the positive side, if the viewer plays the video, it can start playing immediately. On the negative side, this option will increase bandwidth consumption as the preload/load happens even if the viewer does not play the video.</li>
+      <li><strong>Preload Metadata</strong> - Only the video metadata is preloaded. <em>This is the default.</em></li>
+      <li><strong>Do not preload</strong> - None of the video is preloaded</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">
+      <p>Notes:</p>
+      <ul>
+        <li>When using Server-Side Ad Insertion (SSAI), Brightcove recommends setting <code translate="No">preload=none</code>. If <code translate="No">preload</code> is set to <code translate="No">auto</code> or <code translate="No">metadata</code>, the first frames of the video stream will be requested, which counts the ad as delivered even if the user does not start playback.</li>
+        <li>The value for the preload setting in Studio will override the value of the <code translate="No">preload</code> attribute value in the <a href="https://player.support.brightcove.com/publish/available-options-advanced-page-embed-code.html">Advanced (In-Page) Embed Code</a>.</li>
+      </ul>
+    </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="drm">Enable DRM</h2>
+    <p>The <strong>Enable DRM</strong> setting, when checked, enables the ability for DRM-protected content to play in the player.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="playlist">Playlist properties</h2>
+    <p>When a <strong>Player Type</strong> of <strong>Playlist </strong>is selected as part of the <strong>Player Information</strong> properties, some additional <strong>Playback</strong> properties will be displayed.</p>
+    <ul>
+      <li><strong>Randomize play order</strong> - Videos will be played in a random order</li>
+      <li><strong>Play video when selected</strong> - Clicking a thumbnail in the playlist menu will cause the video to play when loaded, even if the previous video in the player was paused</li>
+      <li><strong>Continuous play mode</strong> - Videos will advance automatically and repeat indefinitely</li>
+      <li><strong>Video Countdown</strong> - Only enabled when <strong>Continuous play mode</strong> is checked
+        <ul>
+          <li><strong>Up next card (auto advance)</strong> - An up next card is displayed in the player</li>
+          <li><strong>Up next endscreen (countdown)</strong> - An end screen countdown is displayed in the player</li>
+        </ul>
+      </li>
     </ul>
   </section>
 </article>

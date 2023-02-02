@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Authenticating Studio Users using Single Sign-On</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="In this topic you will learn how Studio can be configured to authenticate users using single sign-on.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/">Admin</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Authenticating Studio Users using Single Sign-On</li>
             
             
           </ol>
@@ -2848,52 +2844,81 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
-    
+  <h1>Authenticating Studio Users using Single Sign-On</h1>
+  <summary>In this topic you will learn how Studio can be configured to authenticate users using single sign-on.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
-  </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
+    <p>Single sign-on (SSO) is a session and user authentication service that permits a user to use one set of login credentials (e.g., username and password) to access multiple applications. The service authenticates the end user for all the applications the user has been given rights to and eliminates further prompts when the user switches applications during the same session.</p>
+    <p>SAML-based single sign-on support is available for Video Cloud Studio which gives publishers access to the Studio via SSO through an Identity Provider (IdP) of your choice. Some of the features include:</p>
     <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
+      <li>Video Cloud Studio supports the SAML 2.0 SSO protocol</li>
+      <li>Identity mapping is based on the username (full email address) rather than just a single email domain. This provides more flexibility for publishers who want some users enabled for SSO and others to go through the regular Video Cloud Studio login.</li>
+      <li>Once an account and its existing users are configured for SSO, new users who are added to the account through the Video Cloud Studio UI will inherit the SSO setup of the user who is adding them</li>
+      <li>Video Cloud Studio supports Service Provider initiated login for SSO. We do not support direct IdP initiated at this time but can provide a URL to bypass the Video Cloud Studio login screen that can be linked to from your Identity Provider portal.</li>
+    </ul>
+    <p>For more information on having your account enabled for SSO, contact your Customer Success Manager.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="benefits">Benefits</h2>
+    <p>Some of the benefits of adding SSO for Video Cloud Studio login include:</p>
+    <ul>
+      <li><strong>Single Login for all Applications</strong> - Remembering multiple usernames and passwords becomes difficult to manage and a headache for IT teams (or account admins of the tools) to deal with. By enabling SSO and adding a Video Cloud Studio login to it, Brightcove account admins no longer have to deal with these issues and users of the tool don’t have to remember a separate username/password for Video Cloud Studio.</li>
+      <li><strong>Security &amp; Password Requirements</strong> - Enterprises have varying user password requirements, i.e. length, duration and complexity. Using SSO allows Brightcove to support to these requirements without having to change Video Cloud Studio's built-in security management to accommodate each individual set of requirements.</li>
+      <li><strong>Disable User Access Quickly &amp; Easily</strong> - Single sign-on enables IT to centrally manage users and remove user access as soon as an employee leaves the company. SSO prevents any disgruntled users from modifying or deleting Brightcove media, players, tokens, etc.</li>
     </ul>
   </section>
+  <section class="bcls-section">
+    <h2 id="limitations">Limitations</h2>
+    <ul>
+      <li>Just-in-time user provisioning for SAML isn't currently supported. Users will still need to be added to accounts through the Studio, and permissions/module access control will be configured through the Studio User Administration UI. When new users are added to an account, they will inherit the SSO setup of the user who is adding them.</li>
+      <li>SSO cannot be enabled for trial accounts.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="faq">FAQ</h2>
+    <dd><details>
+  <summary>I know that SAML based SSO is supported but what about two factor (2FA) or multi-factor auth? Is that supported?</summary>
+      <p>No, we don’t have any plans to support 2FA on regular Studio logins at this time. You can enable login for SAML based SSO and add 2FA to your IdP setup, but that would be configured by your IT team on your own IdP.</p>
+    </dd>
+    <dd><details>
+  <summary>Are there plans to support other SSO protocols like CAS or Kerberos?</summary>
+      <p>Not at this time.</p>
+    </dd>
+    <dd><details>
+  <summary>We have some users on our account that should not go through SSO and others who need to go through SSO. Is this supported?</summary>
+      <p>Yes. SSO is enabled on a per user basis so some users can be enabled for SSO login and others can be enabled for regular Studio login. One thing to note is that there is no way in the Studio user management UI to select which authentication path a user should go through when a new user is being added to the account. Currently the user will inherit whatever auth path that the admin who is adding them is configured for. We do plan to expose an option for selecting this in the Studio at a later date. The workaround for now for mixed authentication flows is to have one admin configured for SSO and one configured for regular Studio login. The admin should log into the appropriate user account when adding new users based on what authentication method they should be setup for.</p>
+      <p>While we support the flexibility of having different users configured for different identity providers, we also have customers who want one single IdP and every user to always be configured for that single IdP. That configuration is also available.</p>
+    </dd>
+    <dd><details>
+  <summary>Is the ability to setup multiple identity providers for users on a single account supported?</summary>
+      <p>Yes. We can set up multiple identity providers for a given org (customer) and we can assign users to either IdP. See the question above regarding the inheritance of auth paths when adding a new user to an account.</p>
+    </dd>
+    <dd><details>
+  <summary>Is local login (Studio auth username/password) directly to Brightcove allowed when SAML SSO is turned on for a user?</summary>
+      <p>No. Once a user is enabled for SSO, that is the only way they can authenticate into their account.</p>
+    </dd>
+    <dd><details>
+  <summary>Does Brightcove support SAML v2.0 with SP-initiated SSO?</summary>
+      <p>Yes</p>
+      <ul>
+        <li>SP-initiated login is supported via a special direct domain login URL that will look like this:<br />
+          <code translate="No">https://signin.brightcove.com/login/ext/saml?behavior=xxxxxxxxx</code></li>
+        <li>It is also possible for users to go to the <code translate="No">signin.brightcove.com</code> page. When they type in username/password on the Brightcove signin page, they will be redirected to your IdP to login (if you are not already signed in). Note the password field gets ignored on the Brightcove login page - we only inspect the email address to see if the user is enabled for SSO.</li>
+      </ul>
+    </dd>
+    <dd><details>
+  <summary>Does Brightcove support the use of RelayState parameter in SAMLRequest/SAMLResponse for direct access to video after SSO?</summary>
+      <p>No. After login via SSO, users will always be taken to the Studio Home dashboard.</p>
+    </dd>
+    <dd><details>
+  <summary>Does the SSO integration support Single Sign-Out?</summary>
+      <p>No.</p>
+    </dd>
+    <dd><details>
+  <summary>What identity providers are supported?</summary>
+      <p>While Brightcove hasn’t tested with all SSO Identity Providers, we are confident that as long as your IdP supports SAML 2.0, there shouldn't be any problems. Some of the common ones we’ve talked to customers about include: Okta, Ping Federated, Ping Identity, Microsoft Active Directory, OneLogin, and Auth0.</p>
+    </dd>
+  </section>
 </article>
-
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">

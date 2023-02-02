@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Viewing Videos Published to Social Media</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="In this topic you will learn how to monitor the status of videos that have been posted, or are scheduled to be posted, to your social media accounts using Brightcove Social.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/social/">Social</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Viewing Videos Published to Social Media</li>
             
             
           </ol>
@@ -2848,49 +2844,70 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
+  <h1>Viewing Videos Published to Social Media</h1>
+  <summary>In this topic you will learn how to monitor the status of videos that have been posted, or are scheduled to be posted, to your social media accounts using Brightcove Social.</summary>
+  <section class="bcls-section">
     
-  <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5018179071001">&nbsp;</div>
     <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
-  </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
+      
+    <p>When you open Brightcove Social, or click <strong>Published</strong> in the left navigation, a list of videos published using Brightcove Social will appear.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16343-publish-streams.png" /></figure>
+    <p>Note that if Auto Sync is being used and the sync rules are configured to update video metadata on the social platform, multiple entries for the same video may appear in the list. For example, an entry will appear when the video is first synced and then additional entries will appear if the video metadata is updated and synced to a social platform.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
+    <h2 id="view">Viewing the publishing status</h2>
+    <p>The body of the page will list all videos that have been published to a social media destination. For each video, the following will be displayed:</p>
     <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
+      <li>Status</li>
+      <li>Time of the event</li>
+      <li>Video thumbnail</li>
+      <li>Video name and short description</li>
+      <li>Link to social media account and site where the video was published</li>
     </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="filter">Filtering the published list</h2>
+    <p>The top of the page provides the option of filtering the list based upon publishing status or destination. The following publishing statuses are available:</p>
+    <ul>
+      <li><strong>All Status Types</strong> - Displays all status types</li>
+      <li><strong>Deleted</strong> - Displays videos that have been published and deleted from a social platform</li>
+      <li><strong>Error</strong> - Displays posts that resulted in an error</li>
+      <li><strong>Hidden</strong> - Displays posts where the video is private, unlisted or expired on social media</li>
+      <li><strong>Processing</strong> - Displays videos that are in the process of being posted to a social platform</li>
+      <li><strong>Published</strong> - Displays videos that were successfully posted to a social platform</li>
+      <li><strong>Scheduled</strong> - Displays videos that are scheduled to be posted to a social platform</li>
+      <li><strong>Synced</strong> - Displays videos that were synced with Auto Sync</li>
+      <li><strong>Abandoned</strong> - Displays videos that were Auto Synced out to a social platform and then either:
+        <ul>
+          <li>Deleted from Video Cloud with the video being left on the social platform due to Auto Sync being configured to take no actions when a video is deleted</li>
+          <li>Untagged so that it doesn’t match the autosync any more but is left on the social platform due to Auto Sync being configured to take no actions when video metadata changes</li>
+        </ul>
+      </li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16343-filter-streams.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="search">Searching for videos</h2>
+    <p>The Search field can be used to search the videos in your account. When searching, the following fields are searched:</p>
+    <ul>
+      <li>Video ID</li>
+      <li>Name</li>
+      <li>Short description</li>
+      <li>Long description</li>
+      <li>Tags</li>
+      <li>Reference ID</li>
+      <li>Custom fields</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="errors">Common publishing errors</h2>
+    <p>Below is a list of common publishing errors that may be encountered.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>YouTube - <strong>Upload rejection: Video was a duplicate</strong>. YouTube doesn't allow the same video (as determined by comparing digital fingerprints of the uploaded video binary, not by Video Cloud video ID) to be uploaded to a channel more than once, and fails attempts after the first with this error.</li>
+      <li><strong>NO_RENDITION_FOR_SOCIAL_PLATFORM_ERROR</strong>. The Social module couldn't find a Video Cloud video rendition that meets the platform's video requirements. The most common cause of these by far is publishers with Twitter auto syncs tagging videos that are greater than 140 seconds (Twitter's maximum allowed duration).</li>
+      <li>YouTube - <strong>The request metadata specifies an invalid or empty video title (as part of a longer error message)</strong>. YouTube has a maximum title length of 100 characters, so when using auto sync, if the Video Cloud video metadata that gets mapped to the YouTube title is too long, this error will result.</li>
+    </ol>
   </section>
 </article>
 

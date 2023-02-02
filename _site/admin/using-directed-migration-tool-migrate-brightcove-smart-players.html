@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Using the Directed Migration Tool</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="In this topic you will learn how to use the Directed Migration Tool to migrate Brightcove Smart Players to Brightcove Players.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/admin/">Admin</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Using the Directed Migration Tool</li>
             
             
           </ol>
@@ -2847,53 +2843,104 @@
       <br>
       
       
+<h1>Using the Directed Migration Tool</h1>
 <article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
-    
+  <summary>In this topic you will learn how to use the Directed Migration Tool to migrate Brightcove Smart Players to Brightcove Players.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
-  </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
+    <p>The Directed Migration Tool provides a way to specify that a Brightcove Player should be loaded instead of a Smart Player. The tool provides an easy way to publish videos inside of Brightcove Players instead of using legacy Smart Players. No changes to your existing publishing code is required.</p>
+    <p>This topic contains the following sections:</p>
     <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
+      <li> <a href="#req">Directed migration requirements</a> </li>
+      <li> <a href="#create">Creating a mapping</a> </li>
+      <li> <a href="#test">Testing player mappings</a> </li>
+      <li> <a href="#edit">Editing player mappings</a> </li>
+      <li> <a href="#delete">Deleting player mappings</a> </li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">Note: The Smart Player to Brightcove Player mappings will continue to function after the Smart Player end of life at the end of 2017.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="req">Directed Migration requirements</h2>
+    <p>The following requirements apply when using the Directed Migration Tool:</p>
+    <ul>
+      <li>The Directed Migration UI only shows up when you have 3 or more Smart Players in your account</li>
+      <li>You should create a new Brightcove Player that has the styling, customizations and plugins that are compatible with the Brightcove Player</li>
+      <li>The Directed Migration Tool is not supported for players with playlists.</li>
+      <li>Any Smart Player API code in your existing page will no longer function once the player is replaced.</li>
     </ul>
   </section>
+  <section class="bcls-section">
+    <h2 id="limitations">Limitations</h2>
+    <p>Note the following limitations of the Directed Migration Tool:</p>
+    <ul>
+      <li>Directed Migration will work when using the Smart Player embed publishing code or with shortened or custom URLs (bcove.me or link.brightcove.com).</li>
+      <li>Directed Migration will not work with the Flash-only embed code from the Legacy Studio.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="create">Creating a mapping</h2>
+    <p>Mappings are used to specify that a Smart Player should be replaced with a Brightcove Player. To create a new mapping, follow these steps:</p>
+    <ol class="bcls-tasklist">
+      <li> Open the  <strong>Admin</strong> module. </li>
+      <li> Click  <strong>Player Settings</strong>. </li>
+      <li> Click <strong>Create Mapping</strong> . A list of Smart Players in the account will be displayed.
+        <div> <img class="bcls-image--no-border" alt="Create mapping" src="/assets/images/s-admin-img/general/node16627-create-mapping.png" /> </div>
+      </li>
+      <li> Select one or more Smart Players to replace with a Brightcove Player. Click <strong>Next</strong> . </li>
+      <li> Select a Brightcove Player to use in place of the Smart Player(s). When a Brightcove Player is selected, a preview of the player will be displayed.
+        <div> <img class="bcls-image--no-border" alt="Select Brightcove Player" src="/assets/images/s-admin-img/general/node16627-select-bc-player.png" /> </div>
+      </li>
+      <li> Click <strong>Next</strong> . Instructions for <a href="#test">testing player mappings</a> will be displayed.
+        <p class="BCL-aside">Note: Player mappings can take up to 5 minutes to take effect.</p>
+      </li>
+      <li> Click<span class="button-blue">Save</span> . A list of current mappings will be displayed.
+        <div> <img class="bcls-image--no-border" alt="Player mappings" src="/assets/images/s-admin-img/general/node16627-mappings-list.png" /> </div>
+      </li>
+    </ol>
+    <p> After creating a mapping, the status will be <strong>Testing</strong> . Once the <a href="#test">mapping has been tested</a> and committed, the status will be <strong>Committed</strong>. Mappings marked with a status of <strong>Committed</strong> will render a Brightcove Player instead of the Smart Player. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="test">Testing player mappings</h2>
+    <p>You should test any player mappings that are created before they are committed. To test a player mapping, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li> Find a page that displays your legacy Smart Player.
+        <div> <img class="bcls-image--no-border" alt="Smart Player Example" src="/assets/images/s-admin-img/general/node16627-smart-player.png" /> </div>
+      </li>
+      <li> Add the <code translate="No">enableMapping=true</code> parameter to the page URL.
+        <ul>
+          <li> If the page URL doesn't have URL parameters, add <code translate="No">?enableMapping=true</code> to the end of the URL. For example: <br />
+            <code translate="No">http://www.mysite.com/videos.html?enableMapping=true</code> </li>
+          <li> If the page URL has URL parameters, add <code translate="No">&amp;enableMapping=true</code> to the end of the URL. For example: <br />
+            <code translate="No">http://www.mysite.com/videos.html?myparams=true&amp;enableMapping=true</code> </li>
+        </ul>
+        <p>The newly mapped Brightcove Player should display and the video should play.</p>
+        <div> <img class="bcls-image--no-border" alt="Brightcove  Player Example" src="/assets/images/s-admin-img/general/node16627-brightcove-player.png" /> </div>
+        <p>When you are satisfied with how the player is working, return to Video Cloud Studio.</p>
+      </li>
+      <li> Select the checkbox next to the player mapping and click <strong>Commit Mapping</strong> to make the new Brightcove Player visible to all site visitors. </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit">Editing player mappings</h2>
+    <p>To edit a player mapping, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li> Open the <strong>Admin</strong> module. </li>
+      <li> Click  <strong>Player Settings</strong>. A list of player mappings will be displayed. </li>
+      <li> Select the checkbox next to the player mapping to edit. Click <strong>Edit Mapping</strong> . </li>
+      <li> Select a new Brightcove Player to map to. Click <strong>Next</strong> and then <span class="button-blue">Save</span> to save the changes. </li>
+    </ol>
+    <p> Make sure you <a href="#test">test any changes to player mappings</a>. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="delete">Deleting player mappings</h2>
+    <p>To delete a player mapping, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li> Open the <strong>Admin</strong> module. </li>
+      <li> Click  <strong>Player Settings</strong>. A list of player mappings will be displayed. </li>
+      <li> Select the checkbox next to the player mapping to delete. Click <strong>Delete Mapping</strong> . </li>
+      <li> Confirm the delete by clicking <span class="button-red-text">Delete</span>. </li>
+    </ol>
+  </section>
 </article>
-
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">

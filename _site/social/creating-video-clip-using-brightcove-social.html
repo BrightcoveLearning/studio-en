@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing Scheduled Reports</title>
+        <title>Creating a Video Clip Using Brightcove Social</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to manage scheduled custom reports using the Analytics module.">
+        <meta name="description" content="In this topic you will learn how to create a video clip using Brightcove Social.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -1077,7 +1077,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html" aria-current="page">Managing Scheduled Reports</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/analytics/reports/managing-scheduled-reports.html">Managing Scheduled Reports</a></li>
                   
                   
                   
@@ -2818,15 +2818,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/social/">Social</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/reports/">Reports</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing Scheduled Reports</li>
+            <li class="breadcrumb-item active" aria-current="page">Creating a Video Clip Using Brightcove Social</li>
             
             
           </ol>
@@ -2848,49 +2844,99 @@
       
       
 <article class="bcls-article">
-  <h1>Managing Scheduled Reports</h1>
-  <summary>In this topic you will learn how to manage scheduled custom reports using the Analytics module.</summary>
-    
+  <h1>Creating a Video Clip Using Brightcove Social</h1>
+  <summary>In this topic you will learn how to create a video clip using Brightcove Social.</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4506580708001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
-    <aside class="bcls-aside bcls-aside--information">Note: The ability to create custom reports in the Analytics module is only available to Enterprise and Professional accounts.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: The scheduled custom reports in the Analytics Module can only be seen by the user who created them in the Scheduled Reports UI.</aside>
-  </section>
- 
-  <section class="bcls-section">
-    <p>The Analytics module can be used to generate custom, ad-hoc analytics reports that can be run one-time or on a recurring basis. For information on creating custom reports, see <a href="/analytics/reports/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a>. Any report that is set to be run on a recurring basis will appear in the <strong>Scheduled Reports</strong> section of the Analytics module.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: Enterprise accounts can have up to 20 scheduled reports. Professional accounts are limited to 5 reports.</aside>
-    <p>To view a list of all scheduled reports, open the Analytics module, click on the <strong>Custom Reports</strong> link in the side navigation and then the <strong>Scheduled Reports</strong> link. A list of scheduled reports will appear.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-scheduled-reports.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="view">Viewing report details</h2>
-    <p>To view report details, click the <strong>+</strong> next to the report name.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/reports/node15730-report-details.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing reports</h2>
-    <p>To edit a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Edit </strong>link. Make the appropriate changes to the report definition and then click <strong>Save Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple  accounts, you must have access to all the accounts in order to edit the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="duplicate">Duplicating reports</h2>
-    <p>To duplicate a report definition, click <strong>+</strong> next to the report name to open the report details and then click the<strong> Duplicate </strong>link. A copy of the report definition will be displayed. Make the appropriate changes to the report definition. Update the <strong>Report Name</strong> and then click <strong>Schedule Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When duplicating a report, the report type can be changed from <strong>Recurring</strong> to <strong>One-time</strong> allowing you to run the report immediately.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting reports</h2>
-    <p>To delete a report, click + next to the report name to open the report details and then click the<strong> Delete</strong> link. Confirm the deletion by clicking <strong>Delete Report</strong>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If the report includes multiple accounts, you must have access to all the accounts in order to delete the report.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="status">Changing the report status</h2>
-    <p>To set the status for a report, use the slider associated with the report:</p>
+    <p>Brightcove Social provides the ability to create video clips from existing videos in your Video Cloud account. There are several reasons you might want to create a clip:</p>
     <ul>
-      <li><strong>Active</strong> - The report is scheduled to be processed</li>
-      <li><strong>Inactive</strong> - The report will not be processed</li>
+      <li>To create a short, teaser clip that can be posted to social media</li>
+      <li>To limit the length of a video that you want to post (most platforms limit the length of videos)</li>
+      <li>You have found that shorter videos perform better on social media</li>
     </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="create">Creating a clip</h2>
+    After a clip is saved, it will be saved as a video in your Video Cloud account. Follow these steps to create a clip.
+    <ol class="bcls-tasklist-restart">
+      <li>Open the<strong> Social </strong>Module.</li>
+      <li>Click <strong>Videos</strong> in the left navigation. A list of videos in your Video Cloud account will display.</li>
+      <li>Click on the video to create a clip from and then click <strong> Clip</strong>. The clip editor will open.
+        <aside class="bcls-aside bcls-aside--information">
+          <ul>
+        <li>In order to create a clip, the source video must have at least one MP4 rendition available. If the <strong> Clip</strong> button is disabled, the video may not have an MP4 rendition available.</li>
+        <li>You cannot create a clip from another clip. If you selected a clipped video, the <strong> Clip</strong> button will be disabled.</li>
+        <li>You cannot create a clip from a video that has DRM enabled (lock appears in the video thumbnail) and was transcoded using a legacy ingest profile. DRM enabled videos transcoded using a Dynamic Delivery ingest profile can be clipped. If a clip can't be created, the <strong> Clip</strong> button will be disabled.</li>
+        <li>Videos with closed captions can be clipped via Social, but the resulting clipped video will not have captions. You will need to upload new captions to the clipped video, and Social will use those when publishing.</li>
+      </ul>
+      </aside>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16672-create-clip.png" /></figure>
+      </li>
+      <li>Enter a <strong>Clip Name</strong>.</li>
+      <li>Drag the handles that appear on the timeline to trim the beginning and end of your video. You can also enter specific start and end times using the edit fields. More precise control when editing may be achieved using the <a href="#keys">keyboard shortcuts</a>. When you are done, click <span class="button-blue">Continue</span>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16672-clipped-video.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">Note: The player in the clipping modal will scrub to within a frame or two of the actual frame at the time displayed. The behavior is the same whether you use the mouse to drag the sliders or use the keyboard shortcuts to set the clip points. The clip editor clips at exactly the times provided.</aside>
+      </li>
+      <li>Review the clip information. The Clip Name, Tags and any custom fields created for the account can be edited.
+        <aside class="bcls-aside bcls-aside--information">Note: You may want to remove tags that will cause the clip to appear on your existing playlists or to be auto-synced to a social destination.</aside>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16672-clip-info.png" /></figure>
+      </li>
+      <li>When done, select an option:
+        <ul>
+          <li><span class="button-blue">Save</span> - Starts transcoding and then saves the clip in your Video Cloud account.</li>
+          <li><span class="button-blue">Save &amp; Publish...</span> - Starts transcoding and then saves the clip in your Video Cloud account. You also can select the destination(s) to publish the video to. There may be a delay for published clips to appear on your social media sites as the video must be transcoded.</li>
+          <li><span class="button-blue">Cancel</span> - Discards the clip.</li>
+        </ul>
+      </li>
+    </ol>
+    <p>Clips that are saved are transcoded using the ingest profile designated as the <strong>Social clipping default</strong> for the account. For information on setting default ingest profiles, see <a href="/admin/ingest-profiles/managing-ingest-profiles.html">Managing Ingest Profiles</a>.</p>
+    <p>Note that when creating clips, the entire source video must be downloaded. For longer source videos, it may take longer before the clip is available in your Video Cloud account.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The clip source file name will be set to the same source file name as the source video.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="keys">Using keyboard shortcut keys</h2>
+    <p>More precise control over the clipping can be done using the keyboard shortcut keys:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th scope="col">Shortcut</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td >J <em>or</em> ←</td>
+          <td >Back one frame</td>
+        </tr>
+        <tr>
+          <td >K</td>
+          <td >Play / Pause</td>
+        </tr>
+        <tr>
+          <td >L <em>or</em> →</td>
+          <td >Forward one frame</td>
+        </tr>
+        <tr>
+          <td >I</td>
+          <td >Mark current frame as in point</td>
+        </tr>
+        <tr>
+          <td >O</td>
+          <td >Mark current frame as out point</td>
+        </tr>
+        <tr>
+          <td >Space bar</td>
+          <td >Play / Pause</td>
+        </tr>
+        <tr>
+          <td >⇧ + I</td>
+          <td >Go to in point</td>
+        </tr>
+        <tr>
+          <td >⇧ + O</td>
+          <td >Go to out point</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 </article>
 
