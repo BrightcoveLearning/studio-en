@@ -10,11 +10,11 @@
         <meta name="description" content="In this topic you will learn how to use the 3Play Plugin to add an interactive transcript to a Brightcove Player.">
         
         <!-- Google Font -->
+        <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
         <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
         <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
         
         <!-- FontAwesome JS-->
-        
         <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
         
         <!-- Plugins CSS -->
@@ -37,7 +37,7 @@
         gtag('config', 'G-XBJC11HF8Z');
         </script>
         <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
-        <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
 
     </head> 
 
@@ -2852,7 +2852,7 @@
   <summary>In this topic you will learn how to use the 3Play Plugin to add an interactive transcript to a Brightcove Player.</summary>
   <section class="bcls-section">
     <p>An interactive transcript can be displayed next to a player to display the spoken text in a video. As the user hears the words being spoken, the matching words in the transcript are underlined or highlighted. Interactive transcripts can be used to control the viewing experience. For example, viewers can search the transcript of the video and navigate to an exact point by clicking on any word.</p>
-    <p>If you are publishing videos using a Gallery In-Page experience, a 3Play component can be added to the experience to display video transcripts. For information, see <a href="https://gallery.support.brightcove.com/experiences/inpage/customizing/adding-components-page-experience.html">Adding Components to an In-Page Experience</a>.</p>
+    <p>If you are publishing videos using a Gallery In-Page experience, a 3Play component can be added to the experience to display video transcripts. For information, see <a href="https://gallery.support.brightcove.com/experiences/inpage/adding-components-page-experience.html#3play">Adding Components to an In-Page Experience</a>.</p>
     <aside class="bcls-aside bcls-aside--information">Note: This topic uses the <a href="https://www.3playmedia.com/solutions/features/plugins/3play-plugin/">3Play Plugin</a> and assumes you are using 3Play Media to generate your captions/transcripts. Brightcove also has other partners that can generate captions/transcripts. For a list of partners, check <a href="https://www.brightcove.com/en/partners">this page</a>.</aside>
     <aside class="bcls-aside bcls-aside--information">Note: For complete details on working with 3Play Media interactive transcripts with the Brightcove Player, see the <a href="https://www.3playmedia.com/solutions/features/integrations/brightcove-integration/">3Play Media site</a>.</aside>
     <p>Below is a sample video with associated transcript.</p>
@@ -3043,7 +3043,7 @@
     project: "1588255093746585379", // Set this to your project.
     collection: "brightcove-documentation", // Set this to your collection.
     instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder,
+    inputPlaceholder: "Search in the docs...", // Input element placeholder,
     styling: {
       components: {
         
