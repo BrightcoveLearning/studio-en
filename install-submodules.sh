@@ -3,7 +3,6 @@ git submodule add https://github.com/BrightcoveLearning/s-doc-updates
 cd _data
 git submodule add https://github.com/BrightcoveLearning/s-site-assets-data
 cd ../_includes
-cd _includes
 git submodule add https://github.com/BrightcoveLearning/s-jekyll-page-includes
 git submodule add https://github.com/BrightcoveLearning/s-admin
 git submodule add https://github.com/BrightcoveLearning/s-cloudplayout

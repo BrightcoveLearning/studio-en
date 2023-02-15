@@ -169,3 +169,4 @@
 [submodule "assets/images/s-integrations-img"]
   path = assets/images/s-integrations-img
   url = https://github.com/BrightcoveLearning/s-integrations-img
+  branch = main
