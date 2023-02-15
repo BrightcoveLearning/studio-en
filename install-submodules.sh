@@ -40,7 +40,7 @@ git submodule add https://github.com/BrightcoveLearning/s-audience-insights-img
 git submodule add https://github.com/BrightcoveLearning/s-live-img
 git submodule add https://github.com/BrightcoveLearning/s-web-conferencing-img
 git submodule add https://github.com/BrightcoveLearning/s-brightcove-interactivity-img
-git submodule add https://github.com/brightcovelearning/s-integrations-img
+git submodule add https://github.com/BrightcoveLearning/s-integrations-img
 cd ..
 echo 'Adding site assets'
 git submodule add https://github.com/BrightcoveLearning/s-site-assets-favicons
