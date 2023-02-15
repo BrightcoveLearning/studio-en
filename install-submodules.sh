@@ -20,7 +20,7 @@ git submodule add https://github.com/BrightcoveLearning/s-audience-insights
 git submodule add https://github.com/BrightcoveLearning/s-live
 git submodule add https://github.com/BrightcoveLearning/s-web-conferencing
 git submodule add https://github.com/BrightcoveLearning/s-brightcove-interactivity
-git submodule add https://github.com/brightcovelearning/s-integrations
+git submodule add https://github.com/BrightcoveLearning/s-integrations
 git submodule add https://github.com/BrightcoveLearning/s-template-page-includes
 cd ..
 cd assets/images
