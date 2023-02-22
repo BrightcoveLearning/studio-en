@@ -1,0 +1,7 @@
+---
+title: 'Salesforce Marketing Cloud Integration'
+description: 
+parent: Integrations
+---
+
+{% include s-integrations/salesforce-marketing-cloud/overview-sfmc-integration.html %}
