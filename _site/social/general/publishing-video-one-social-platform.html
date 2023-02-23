@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Overview: Ad Analytics</title>
+        <title>Publishing a Video to One Social Media Platform</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic, you will learn about analytics associated with Server-side Advertising (SSAI).">
+        <meta name="description" content="In this topic you will learn how to publish a video to a social site using the new Social module publish flow.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -2820,15 +2820,15 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/social/">Social</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/module/">Module</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/social/general/">General</a></li>
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Overview: Ad Analytics</li>
+            <li class="breadcrumb-item active" aria-current="page">Publishing a Video to One Social Media Platform</li>
             
             
           </ol>
@@ -2849,128 +2849,213 @@
       <br>
       
       
-<h1>Overview: Ad Analytics</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn about analytics associated with Server-side Advertising (SSAI).</summary>
-
-  <section class="bcls-section"> 
-    <h2 id="Introduction">Introduction</h2>
-    <p>Ad analytics is a free-of-charge offering that provides Brightcove customers with a transparent, meaningful, and comprehensive set of ad metrics. These metrics will focus on the following:</p>
-    <ul>
-      <li> <strong>Troubleshooting:</strong> What ad configurations and partners are serving ads more efficiently? What are the technical errors preventing ad impressions?</li>
-      <li> <strong>Reporting/Impact:</strong> Tracking Ad Impressions, fill rate, and how the audience consumes the impressions. What are the impact of ad blockers and firewalls on your ad operation?</li>
-    </ul>
-
-    <h3>Supported metrics</h3>
-    <p>Ad metrics are available for the following:</p>
-    <ul>
-      <li>Video On Demand (VOD) content</li>
-      <li>Ads served using Brightcove's Server-side Advertising (SSAI)</li>
-    </ul>
-
-    <h3 id="Availability">Availability</h3>
-    <p>Ad Analytics are available free of charge to Brightcove customers to provide transparent, meaningful and comprehensive set of ad metrics. You can find them on the following platforms:</p>
-    <ul>
-      <li>Video Cloud Studio</li>
-      <li>Beacon Studio</li>
-    </ul>
-  </section>
-
+  <h1>Publishing a Video to One Social Media Platform</h1>
+  <summary>In this topic you will learn how to publish a video to a social site using the new Social module publish flow.</summary>
   <section class="bcls-section">
-    <h2 id="Navigation">Navigation</h2>
-    <ol class="bcls-tasklist">
-      <li>Open Video Cloud Studio.</li>
-      <li>In the primary navigation, click <strong>Analytics</strong>.</li>
-      <li>In the panel navigation, click <strong>Ad analytics</strong>.</li>
-    </ol>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="QoE analytics" src="/assets/images/s-analytics-img/module/ad-analytics/ad-analytics.png" />
-      <figcaption class="bcls-caption--image">Ad analytics</figcaption> 
-    </figure>
-  </section>
-  
-  <section class="bcls-section">
-    <h2 id="Glossary_of_terms">Glossary of terms</h2>
-    <p>Here is the glossary of terms for Ad analytics metrics:</p>
-    <h3>Data availability</h3>
-    <p>Data availability for these metrics is as follows:</p>
-    <ul>
-      <li>The data must be retained and available for at least three years.</li>
-      <li>The data is available via queryable APIs in CSV or JSON format.</li>
-      <li>The data can be exported from the UI based on the filters and aggregations at an export time in CSV format.</li>
-    </ul>
-    <h3>Response time</h3>
-    <p>All the data must be one hour fresh.</p>
-    <h3>Metrics</h3>
-    <p>Ad analytics should be able to collect and report on the following metrics:
-    </p>
-    <ul>
-      <li><strong>Ads scheduled:</strong> Total number of scheduled ads across all the breaks.</li>
-      <li><strong>Ads inserted:</strong>  Number of creatives stitched into a VOD or Live Stream.</li>
-      <li><strong>Ad impressions:</strong> Number of creatives that were played.</li>
-      <li><strong>Ad completion:</strong> Number of creatives watched until completion.</li>
-      <li><strong>Ad impression rate:</strong> Ad Impressions/Ad Slots.</li>
-      <li><strong>Last ad view:</strong>  The time of the most recent ad impression.</li>
-    </ul>
-    <h3>Dimensions</h3>
-    <p>Ad Analytics must be able to collect, aggregate and filter on the following metrics:</p>
-    <ul>
-      <li><strong>Account:</strong> Account level metrics showing the total across all dimensions.</li>
-      <li><strong>Video:</strong>  Aggregation by video ID.</li>
-      <li><strong>Ad config:</strong> SSAI Ad Configuration identifier. The UI should display the AdConfig Name and should be enriched with the adTag’s domain.</li>
-      <li><strong>Ad provider:</strong> The domain of the ad server.</li>
-    </ul>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="VOD_Ad_Performance">VOD Ad Performance</h2>
-    <p>VOD Ad Performance metrics help users get information about the performance of their ads.</p>
-    <h3>Charts</h3>
-    <p>The following charts trend over time, at a daily or hourly interval (depending on time range). Only one graph will display at a time, with totals for each metric displayed at top.</p>
-    <!-- <h3>Ad Slots</h3>
-    <h3>Ads Inserted</h3>
-    <h3>Ad Impressions</h3>
-    <h3>Impression Rate</h3>
-    <h3>Performance by dimension</h3> -->
-    <h3>Funnel by Ad Completion</h3>
-    <p>This chart illustrates the drop-off of viewing from initial impressions to ad completion. The funnel presentation will show the following step functions:</p>
-    <ul>
-      <li>Impressions</li>
-      <li>1st ad quartile</li>
-      <li>Ad midpoint</li>
-      <li>3rd ad quartile</li>
-      <li>Ad completion</li>
-    </ul>
-    <!-- <h3>Account Applicability</h3> -->
-
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="SSAI_performances">SSAI performance</h2>
-    <p>SSAI performance metrics help users track their ad information.</p>
-    <h3>Metrics</h3>
-    <p>SSAI performance metrics must be able to collect and report on the following metrics:</p>
-    <ul>
-      <li><strong>Ads request call count:</strong> Number of Ad request HTTP calls.</li>
-      <li><strong>Ads tracking call count:</strong>  Number of Ad Tracking HTTP calls.</li>
-      <li><strong>Ad error call counts:</strong> Number of HTTP.</li>
-      <li><strong>Ad error code:</strong> HTTP Error Response code.</li>
-    </ul>
-    <h3>Dimensions</h3>
-    <p>SSAI performance metrics must be able to collect, aggregate and filter on the following metrics:</p>
-    <ul>
-      <li><strong>Ad config:</strong> SSAI <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">Ad Configuration</a> identifier. The UI displays the AdConfig Name and should be enriched with the adTag’s domain.
+    <p>Marketing Studio makes it easy to publish  videos out to YouTube, Facebook, Twitter and LinkedIn. Before you can publish videos, you must create publishing destinations using Video Cloud Studio for the social accounts you wish to publish videos to. For information on creating publishing destinations, see <a href="/social/module/creating-social-media-publishing-destinations.html">Creating Social Media Publishing Destinations</a>. </p>
+    <p>To publish a video to a social media site, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>In the primary  navigation, click <strong>Media</strong>.</li>
+      <li>Do one of the following:
+        <ul>
+          <li>In card view, hover over a video card, click the action button (...) and then click <strong>Publish to Social</strong></li>
+          <li>In list view, click the action menu (...) next to the video to publish and then click<strong> Publish to Social</strong></li>
+          <li>Click on a video to open the video details page and click <span class="button-blue-text-bordered">Publish to Social</span></li>
+        </ul>
+        <aside class="bcls-aside bcls-aside--information">Note: Videos must have at least one MP4 rendition to be published to a social media site<a href="https://studio.support.brightcove.com/get-started/basics/video-cloud-basics-activating-and-deactivating-video.html"></a>.</aside>
       </li>
-      <li><strong>Ad provider:</strong> The domain of the Ad server.</li>
-    </ul>
-    <h3>Granularity</h3>
-    <p>Here is the granularity for SSAI performances metrics: </p>
+      <li>The <strong>Choose Destination</strong> page
+        will display a list of all publishing destinations that have been created.  Click on a destination and click <span class="button-blue">Next <i data-feather="arrow-right"></i> </span>.
+        <aside class="bcls-aside bcls-aside--information">Note: Click <strong>Add Destination</strong> to <a href="/social/module/creating-social-media-publishing-destinations.html">create a new publishing destination</a> using Video Cloud Studio.</aside>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/module/publish-social/choose-dest.png" /></figure>
+      </li>
+      <li>Enter the content for the post. The video fields that are displayed will differ depending on the social media platform you are publishing to. For more information, see the sections for each social media platform:
+        <ul>
+          <li><a href="#youtube">YouTube</a></li>
+          <li><a href="#facebook">Facebook</a></li>
+          <li><a href="#twitter">Twitter</a></li>
+          <li><a href="#linkedin">LinkedIn</a></li>
+          <li><a href="#instagram">Instagram</a></li>
+        </ul>
+      </li>
+      <li>Click <span class="button-blue">Next <i data-feather="arrow-right"></i></span>.</li>
+      <li>Review the post and click <span class="button-blue-text-bordered">Publish <i data-feather="arrow-right"></i></span>.</li>
+    </ol>
+    <p>You can monitor the posting status using Video Cloud Studio. Open the <strong>Social</strong> module and then click <strong>Published</strong> in the left navigation. For information on viewing the status of publishing streams, see <a href="https://studio.support.brightcove.com/social/viewing-videos-published-social-media.html">Viewing Your Social Media Publishing Streams</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="youtube">Creating a post for YouTube</h2>
+    <p>By default, videos that are up to 15 minutes long can be uploaded to YouTube. For information on uploading longer videos, see <a href="https://studio.support.brightcove.com/general/enabling-longer-videos-youtube.html">Enabling Longer Videos In YouTube</a>.</p>
+    <p>When choosing a YouTube destination, the following video details can be entered:</p>
     <ul>
-      <li><strong>Time aggregation:</strong> Hour, day, month.</li>
-      <li><strong>Ads:</strong> 1K, 1M. </li>
+      <li><strong>Title</strong> - Title of the video (defaults to Marketing Studio title). YouTube supports up to 100 characters.</li>
+      <li><strong>Description</strong> - Description of the video (defaults to Marketing Studio short description). YouTube supports up to 5000 characters.</li>
+      <li><strong>Tags</strong> - Tags for the video (defaults to Marketing Studio tags). There's no specific tag count limit; you can use max 30 characters per tag, and the text field accepts up to 500 characters.</li>
+      <li><strong>Schedule Post</strong>
+        <ul>
+          <li><strong>Publish Immediately</strong> - To publish the video immediately</li>
+          <li><strong>Schedule Publish Date</strong> - To choose a publish date and time for the video</li>
+        </ul>
+      </li>
+      <li><strong>Privacy Settings</strong> - </li>
+      <li><strong>Notify subscribers when video is posted to YouTube</strong> - If checked, your subscribers will see your videos in their Subscriptions feed and may receive a notification that the video was uploaded.</li>
+      <li><strong>License and rights ownership</strong>
+        <ul>
+          <li>Standard YouTube License</li>
+          <li>Creative Commons - Attribution</li>
+        </ul>
+        <aside class="bcls-aside bcls-aside--information language-editable">Note: For more information on YouTube License and Rights Ownership, see the <a href="https://support.google.com/youtube/answer/2797468">YouTube documentation</a>.</aside>
+      </li>
+      <li><strong>Captions</strong>
+        <ul>
+          <li><strong>Use Marketing Studio captions</strong> - Use the captions associated with the video in Marketing Studio</li>
+          <li><strong>No captions</strong> - No captions are sent to Facebook</li>
+          <li><strong>Upload captions</strong> - Allows you to <a href="#captions">manually upload a captions file</a></li>
+        </ul>
+      </li>
     </ul>
-  </section> 
-
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/module/publish-social/youtube-post.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information"> Notes:
+      <ul>
+        <li><a href="https://studio.support.brightcove.com/social/creating-social-media-publishing-destinations.html#youtube_defaults">Default video properties for YouTube</a> can be set by editing the destination.</li>
+        <li>Avoid special characters in the name and description of the video: using "&lt;" or "&gt;" are known to cause failure, but other special characters may cause problems as well.</li>
+        <li>Updates to thumbnail images in Video Cloud Studio will not update the thumbnail image on the YouTube side.</li>
+        <li>After a video is published to YouTube, any updates to the source video using Video Cloud Studio will not update on the YouTube side.</li>
+      </ul>
+    </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="facebook">Creating a post for Facebook</h2>
+    <p>When choosing a Facebook destination, the following video details can be entered:</p>
+    <ul>
+      <li><strong>Title</strong> - Title of the video (defaults to Marketing Studio title). Facebook will truncate after 65 characters.</li>
+      <li><strong>Status message</strong> - Description of the video (defaults to Marketing Studio short description).</li>
+      <li><strong>Facebook Tags</strong> - Enter Facebook tag(s) from the list. Note that Facebook manages the tags so they will be checked when typing into the <strong>Facebook Tags</strong> field.</li>
+      <li><strong>Schedule publish date</strong>
+        <ul>
+          <li><strong>Publish immediately</strong> - To publish the video immediately</li>
+          <li><strong>Schedule</strong> - To choose a publish date and time for the video</li>
+        </ul>
+      </li>
+      <li><strong>Schedule expiration date</strong>
+        <ul>
+          <li><strong>Post never expires</strong> - The post will never expire</li>
+          <li><strong>Schedule</strong> - To choose an expiration date and time for the video</li>
+        </ul>
+      </li>
+      <li><strong>Captions</strong>
+        <ul>
+          <li><strong>Use Marketing Studio captions</strong> - Use the captions associated with the video in Marketing Studio</li>
+          <li><strong>No captions</strong> - No captions are sent to Facebook</li>
+          <li><strong>Upload captions</strong> - Allows you to <a href="#captions">manually upload a captions file</a></li>
+        </ul>
+      </li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/module/publish-social/facebook-post.png" /></figure>
+    <h3>Configuring advanced settings</h3>
+    <ul>
+      <li><strong>Audience Optimization Interests</strong> - Add tags to describe the interests of people who are most likely to enjoy your post. For more information, see the <a href="https://www.facebook.com/facebookmedia/get-started/interest-targeting">Facebook documentation</a>.</li>
+      <li><strong>Location Restrictions</strong> - Add countries to include or exclude from seeing the post</li>
+      <li><strong>Business partner for posts to this destination</strong> - Add a business partner for branded content posts. As you type, a list of matching businesses will appear. For information on Facebook branded content, see the <a href="https://www.facebook.com/facebookmedia/solutions/branded-content">Facebook documentation</a>.</li>
+      <li><strong>Allow business partner to boost posts</strong></li>
+      <li><strong>Detect Matching Content</strong> - Check to enable Facebook rights management. For information, see the <a href="https://rightsmanager.fb.com">Facebook documentation</a>.</li>
+      <li><strong>Show in News Feed</strong> - Shows video in News Feed</li>
+      <li><strong>International Media</strong></li>
+      <li><strong>Add as Secret Video</strong> - Videos will be accessible only via a direct URL and are not searchable for people on Facebook
+        <ul>
+          <li><strong>Turn off Reactions, Comments and Shares</strong> - Disallows likes and comments</li>
+        </ul>
+      </li>
+      <li><strong>Tracking</strong> - Assigns a universal ID to track the video across systems. The following <strong>Universal ID</strong> options are available:
+        <ul>
+          <li>Do not assign a Universal ID</li>
+          <li>Use Video ID from Marketing Studio</li>
+          <li> Use Reference ID from Marketing Studio</li>
+        </ul>
+      </li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/module/publish-social/facebook-advanced-settings.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information"> Notes:
+      <ul>
+        <li><a href="file:///Macintosh HD/Users/bbailey/git/mstudio/media/creating-social-media-publishing-destinations.html#facebook_defaults">Default video properties for Facebook</a> can be set by editing the destination.</li>
+        <li>Updates to thumbnail images in Video Cloud Studio will not update the thumbnail image on the Facebook side.</li>
+        <li> After a video is published to Facebook, any updates to the source video using Video Cloud Studio will not update on the Facebook side.</li>
+        <li>The schedule date and time are sent to Facebook only once, when the video is sent to Facebook. If the schedule date and/or time needs to be changed, they must be changed in Facebook.</li>
+      </ul>
+    </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="twitter">Creating a post for Twitter</h2>
+    <p>When choosing a Twitter destination, the following video details can be entered:</p>
+    <ul>
+      <li><strong>Tweet</strong> - Text to tweet</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/module/publish-social/twitter-post.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information"> Notes:
+      <ul>
+        <li><a href="file:///Macintosh HD/Users/bbailey/git/mstudio/media/creating-social-media-publishing-destinations.html#twitter_defaults"> Default video properties for Twitter</a> can be set by editing the destination.</li>
+        <li><span class="BCL-aside">After a video is published to Twitter, any updates to the source video in Studio will not update on the Twitter side.</span></li>
+      </ul>
+    </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="linkedin">Creating a post for LinkedIn</h2>
+    <p>When choosing a LinkedIn destination, the following video details can be entered:</p>
+    <ul>
+      <li><strong>Title</strong> - Title of the video (defaults to Marketing Studio title). YouTube supports up to 100 characters.</li>
+      <li><strong>Description</strong> - Description of the video (defaults to Marketing Studio short description). LinkedIn supports up to 255 characters.</li>
+      <li><strong>Captions</strong>
+        <ul>
+          <li><strong>Use Marketing Studio captions</strong> - Use the captions associated with the video in Marketing Studio</li>
+          <li><strong>No captions</strong> - No captions are sent to Facebook</li>
+          <li><strong>Upload captions</strong> - Allows you to <a href="#captions">manually upload a captions file</a></li>
+        </ul>
+        <aside class="bcls-aside bcls-aside--information language-editable">Note: LinkedIn only supports English captions.</aside>
+      </li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/module/publish-social/linkedin-post.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information"> Notes:
+      <ul>
+        <li>Avoid special characters in the name and description of the video: using "&lt;" or "&gt;" are known to cause failure, but other special characters may cause problems as well.</li>
+        <li>Updates to thumbnail images in Video Cloud Studio will not update the thumbnail image on the LinkedIn side.</li>
+        <li>After a video is published to LinkedIn, any updates to the source video using Video Cloud Studio will not update on the LinkedIn side.</li>
+      </ul>
+    </aside>
+  </section>
+<section class="bcls-section">
+    <h2 id="instagram">Creating a post for Instagram</h2>
+    <p>When choosing an Instagram destination, the following video details can be entered:</p>
+    <ul>
+      <li><strong>Title</strong> - Title of the video (defaults to Marketing Studio title). YouTube supports up to 100 characters.</li>
+      <li><strong>Description</strong> - Description of the video (defaults to Marketing Studio short description). LinkedIn supports up to 255 characters.</li>
+      <li><strong>Captions</strong>
+        <ul>
+          <li><strong>Use Marketing Studio captions</strong> - Use the captions associated with the video in Marketing Studio</li>
+          <li><strong>No captions</strong> - No captions are sent to Facebook</li>
+          <li><strong>Upload captions</strong> - Allows you to <a href="#captions">manually upload a captions file</a></li>
+        </ul>
+        <aside class="bcls-aside bcls-aside--information language-editable">Note: LinkedIn only supports English captions.</aside>
+      </li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/publish-social/linkedin-post.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="captions">Manually uploading a captions file</h2>
+    <p>Some social destinations provide the option of upload captions when a video is being published to social media. Follow these steps to upload a caption file.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>When creating a social post, select the <strong>Upload captions</strong> option.</li>
+      <li>Click <span class="button-blue-text-bordered"> <i data-feather="upload-cloud"></i> Upload</span>.</li>
+      <li>Browse and select a captions file. The captions file should be in .VTT or .SRT format.</li>
+      <li>Select the caption <strong>Language</strong>.</li>
+      <li> Click <span class="button-blue"> <i data-feather="plus"></i> Add caption file</span>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/module/publish-social/upload-captions.png" /></figure>
+      </li>
+    </ol>
+    <p>Caption files can be removed by clicking the ellipsis next to the file and then by clicking <strong>Remove</strong>.</p>
+  </section>
 </article>
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
