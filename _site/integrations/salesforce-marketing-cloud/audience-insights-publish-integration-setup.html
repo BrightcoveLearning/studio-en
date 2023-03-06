@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
+        <meta name="description" content="Once a connected app has been created in Salesforce, a Salesforce publish integration can be added to the Audience Insights system. This topic will cover how to create that publish integration.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -2849,7 +2849,46 @@
       <br>
       
       
-
+<h1>Audience Insights Salesforce Integration Setup</h1>
+<article class="bcls-article">
+  <summary>Once a connected app has been created in Salesforce, a Salesforce publish integration can be added to the Audience Insights system. This topic will cover how to create that publish integration.</summary>
+  <section class="bcls-section">
+    <h2 id="Requirements">Requirements</h2>
+    <ul>
+      <li>Must be an admin for the Audience Insights account</li>
+      <li>Salesforce account</li>
+      <li>Salesforce Connected App set up: <a href="/_includes/s-integrations/salesforce-marketing-cloud/salesforce-connected-app-setup.html">Salesforce Connected App Setup</a></li>
+      <li>Must be a Salesforce user with permissions to authorize access to a connected app</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="add_publish_integration">Add Publish Integration</h2>
+    <ol class="bcls-tasklist-restart">
+      <li>From a logged in Audience Insights scorecard, navigate to the <strong>Settings</strong> page.</li>
+      <li>
+        Scroll down to the Publish Integrations section and click <strong>Add Integration</strong>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-marketing-cloud/audience-insights-publish-integration-setup/add-integration.webp" alt="Add Integration">
+          <figcaption class="bcls-caption--image">Add Integration</figcaption>
+        </figure>
+      </li>
+      <li>
+        In the modal dialog, select Salesforce from the Destination dropdown:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-marketing-cloud/audience-insights-publish-integration-setup/add-integration-dialog.webp" alt="Add Integration Dialog">
+          <figcaption class="bcls-caption--image">Add Integration Dialog</figcaption>
+        </figure>
+      </li>
+      <li>
+        Fill out the form with the values that were created when setting up the Connected App.
+        <ul>
+          <li>The Consumer Key and Consumer Secret will be the values from the Manage Consumer Details section of the Salesforce connected app.</li>
+          <li>The Automated Export option controls how often there should be an automated publish to the Salesforce integration.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+</article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
