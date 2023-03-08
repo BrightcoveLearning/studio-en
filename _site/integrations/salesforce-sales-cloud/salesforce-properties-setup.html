@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Salesforce Marketing Cloud Integration</title>
+        <title>Salesforce Properties Setup</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This integration">
+        <meta name="description" content="This topic will cover how to set up the properties in Salesforce that will be updated by the Audience Insights Salesforce publish integration.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -2824,11 +2824,11 @@
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/integrations/salesforce-marketing-cloud/">Salesforce marketing cloud</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/integrations/salesforce-sales-cloud/">Salesforce sales cloud</a></li>
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Salesforce Marketing Cloud Integration</li>
+            <li class="breadcrumb-item active" aria-current="page">Salesforce Properties Setup</li>
             
             
           </ol>
@@ -2849,47 +2849,556 @@
       <br>
       
       
-
-<h1>Salesforce Marketing Cloud Integration</h1>
+<h1>Salesforce Properties Setup</h1>
 <article class="bcls-article">
-  <summary>This integration</summary>
+  <summary>This topic will cover how to set up the properties in Salesforce that will be updated by the Audience Insights Salesforce publish integration.</summary>
   <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>The Video Cloud integration with Salesforce Marketing Cloud uses Brightcove's Audience Insights technology to provide data on the online interactions of your Salesforce Marketing Cloud (SFMC) contacts with Video Cloud videos. The integration is set up as an SFMC publish integration for the Audience Insights system.</p>
-
-    <p>Audience Insights generates daily data aggregated at the user level for both subscription-based accounts and accounts that do not require a subscription. For subscription-based accounts the user rolls up based on the subscriberId and customerId. For accounts without subscriptions, the customerId is inferred from the <code translate="No">views</code> object instead. These non-subscription accounts are sometimes referred to as TV Everywhere (TVE) accounts, or registered user accounts.</p>
-
-    <p>These aggregated values are present on reports that can be generated manually via the Audience Insights scorecard, or automatically generated on a daily or weekly basis depending on your settings.</p>
-
-    <p>The reports containing these values can then be published to your publish integrations, such as Salesforce. Publishing a report will update the values for the users in the report that align with users that are tracked in Salesforce. This process can be automated from the settings page.</p>
-
-    <p>The end results is that the Contacts object in Salesforce will be updated.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="userid_alignment">UserID alignment</h2>
-    <p>Publish integrations can only update users that exist in both systems. It will not create new contacts in Salesforce.</p>
-
-      <p>The Salesforce integration identifies users by looking at their primary email (the Email field on the Contact object in Salesforce). That email is hashed, and if the hashed value matches any of the hashed emails stored for Audience Insights users, that contact can be updated.</p>
-      
-      <p>Users that do not have an email in Salesforce, or do not have an email hash in Audience Insights cannot be identified, and therefore cannot be updated.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="prerequisites">Prerequisites</h2>
-    <p>In order to use this integration, you must meet the following requirements.</p>
+    <h2 id="Overview">Overview</h2>
+    <p>This publish integration updates the Contact object in Salesforce. What Audience Insights calls <code translate="No">properties</code> are referred to as <code translate="No">fields</code> by Salesforce.</p>
+    <p>The Audience Insights publish integration will send values to Salesforce as custom fields. These custom fields must first be created in Salesforce. <strong>Only the fields that exist in Salesforce can be set and updated.</strong> This allows customers to limit fields to only ones that they use.</p>
+    <h3>Requirements</h3>
     <ul>
-      <li>Have you Video Cloud account enabled to identify users by Brightcove Support</li>
-      <li>Have Audience Insights enabled for your account - and the integration must be set up by an Admin for Audience Insights</li>
-      <li>Have a Salesforce account</li>
-      <li>The person who sets up the integration must have permissions to add new connected apps and edit the Contact object in Salesforce</li>
+      <li>Salesforce account</li>
+      <li>The Salesforce user must have permissions to edit the Contact object in the Object Manager</li>
     </ul>
+    <h3 id="supported_fields">Supported fields</h3>
+    <p>Below are the fields supported by the Brightcove integration.</p>
+    <table data-number-column="false" class="bcls-table">
+      <colgroup>
+        <col style="width: 387px;">
+        <col style="width: 382px;">
+        <col style="width: 166px;">
+      </colgroup>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td rowspan="1" colspan="1" data-colwidth="397" style="background-color: rgb(243, 243, 243);">
+            <p data-renderer-start-pos="300"><strong data-renderer-mark="true">Label</strong></p>
+          </td>
+          <td rowspan="1" colspan="1" data-colwidth="392" style="background-color: rgb(243, 243, 243);">
+            <p data-renderer-start-pos="309"><strong data-renderer-mark="true">Internal Name</strong></p>
+          </td>
+          <td rowspan="1" colspan="1" data-colwidth="171" style="background-color: rgb(243, 243, 243);">
+            <p data-renderer-start-pos="326"><strong data-renderer-mark="true">Field Type</strong></p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="342">Days Since Last Video View</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="372">dayssincelastengagement_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="406">Number</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="418">Devices Used (Last 3 Months)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="450">devicesusedlastthreemonths_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="487">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="509">Email Hash (MD5)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="529">emailhashmd5_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="552">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="574">Email Hash (SHA2)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="595">emailhashsha2_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="619">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="641">Engagement Status</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="662">engagementStatus_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="689">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="711">Fan of Series</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="728">fanofseries_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="750">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="772">Hours Viewed (Last 3 Months)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="804">hoursviewedlastthreemonths_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="841">Number</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="853">Involuntary Cancellations</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="882">involuntarycancellations_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="917">Number</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="929">Is Reconnect</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="945">isreconnect_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="967">Single checkbox</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="988">Last Video View Date</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="1012">lastviewdate_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="1035">Date picker</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="1052">Primary Device Used (Last 3 Months)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="1091">primarydevicelastthreemonths_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="1130">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="1152">Primary Device Used (Lifetime)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="1186">primarydevicelifetime_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="1218">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="1240">Primary Viewing Location (Last 3 Months)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="1284">primaryviewinglocationlastthreemonths_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="1332">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="1354">Primary Viewing Location (Lifetime)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="1393">primaryviewinglocationlifetime_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="1434">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="1456">Series Sampled</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="1474">seriessampled_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="1498">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="1520">Customer ID</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="1535">customerid_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="1556">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="1578">Subscription Channel</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="1602">channel_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="1620">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="1642">Subscription Currency</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="1667">unitpricecurrency_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="1695">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="1717">Subscription End Date</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="1742">activeenddate_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="1766">Date picker</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="1783">Subscription ID</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="1802">subscriptionid_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="1827">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="1849">Subscriber Lifetime Value</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="1878">totalpayments_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="1902">Number</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="1914">Subscription Product</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="1938">productname_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="1960">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="1982">Subscription Special Offer Used</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2017">usedspecialoffer_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="2044">Single checkbox&nbsp;</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="2066">Subscription Start Date</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2093">activestartdate_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="2119">Date picker</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="2136">Subscription Trial Start Date</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2169">trialstartdate_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="2194">Date picker</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="2211">Subscription Unit</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2232">subscriptionunit_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="2259">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="2281">Subscription Unit Price</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2308">unitprice_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="2328">Number</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="2340">Subscription Tenure (in Days)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2373">tenure_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="2390">Number</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="2402">Voluntary Cancellations</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2429">voluntarycancellations_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="2462">Number</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="2474">Export Context</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2492">exportcontext_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="2516">Single-line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="2538">Customer Subscription Count</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2569">customersubscriptioncount_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="2605">Number</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="2617">Customer Tenure (in Days)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2646">customertenure_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="2671">Number</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="2683">Customer Voluntary Cancellation Count</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2724">customervoluntarycancellationcount_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="2769">Number</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="2781">Most Recent Videos</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2803">mostrecentvideos_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="2830">Single line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="2852">Most Recent Entertaining Videos</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2887">mostrecententertainingvideos_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="2926">Single line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="2948">First Watched Videos</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="2972">firstwatchedvideos_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="3001">Single line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="3023">Top 3 Genres (Last 3 Months)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="3055">genretop3lastthreemonths_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="3090">Single line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="3112">Top 3 Genres (Lifetime)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="3139">genretop3lifetime_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="3167">Single line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="3189">Customer Hours Viewed</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="3214">customerhoursviewed_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="3244">Number</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="3256">Entertainment Index (Last 3 Months)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="3295">entertainmentindexlastthreemonths_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="3339">Number</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="3351">Entertainment Index (Lifetime)</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="3385">entertainmentindexlifetime_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="3422">Number</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="3434">Segment Ids</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="3449">segmentids_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="3470">Single line text</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="397">
+            <p data-renderer-start-pos="3492">Segment Names</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="392">
+            <p data-renderer-start-pos="3509">segmentnames_v1_0_0</p>
+          </td>
+          <td rowspan="1" colspan="1" colorname="" data-colwidth="171">
+            <p data-renderer-start-pos="3532">Single line text</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </section>
   <section class="bcls-section">
-    <h2 id="Setup_process">Setup process</h2>
-    <p>There are three parts to the setup process, which are detailed in the documents linked below:</p>
-    <ol>
-      <li><a href="/integrations/salesforce-marketing-cloud/salesforce-connected-app-setup.html">Salesforce Connected App Setup</a>: For a third party integration to update content content within Salesforce, there needs to be a connected app set up in the Salesforce account to manage access to the Salesforce data.</li>
-      <li><a href="/integrations/salesforce-marketing-cloud/audience-insights-publish-integration-setup.html">Audience Insights Publish Integration Setup</a>: Once a connected app has been created in Salesforce, a publish integration can be added to the Audience Insights system.</li>
-      <li><a href="/integrations/salesforce-marketing-cloud/salesforce-properties-setup.html">Salesforce Properties Setup</a>: The Audience Insights publish integration will send values to Salesforce as custom fields. These custom fields must first be created in Salesforce. Only the fields that exist in Salesforce can be set and updated.</li>
+    <h2 id="create_custom_fields_in_salesforce">Create Custom Fields in Salesforce</h2>
+    <h3>Object Manager - Contacts</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        From the Salesforce dashboard, click the <strong>gear icon</strong> in the top right corner and navigate to the setup page:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-properties-setup/navigate-to-setup.webp" alt="Navigate to Setup">
+          <figcaption class="bcls-caption--image">Navigate to Setup</figcaption>
+        </figure>
+        <p>This will take you to the setup home page.</p>
+      </li>
+      <li>
+        There will be a menu on the left hand side of the page. Under the Platform Tools section, expand Objects and Fields, and click on <strong>Object Manager</strong>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-properties-setup/navigate-to-object-manager.webp" alt="Navigate to Object Manager">
+          <figcaption class="bcls-caption--image">Navigate to Object Manager</figcaption>
+        </figure>
+      </li>
+      <li>This will take you to a list of the Objects defined in the account. From this list, select <strong>Contact</strong>. This will take you to the Contact page of the Object Manager.</li>
+      <li>
+        Click on Fields and Relationships in the menu on the left hand side:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-properties-setup/fields-and-relationships.webp" alt="Navigate to Fields and Relationships">
+          <figcaption class="bcls-caption--image">Navigate to Fields and Relationships</figcaption>
+        </figure>
+      </li>
+      <li>This will show a list of fields that have been configured for the Contact Object.</li>
+    </ol>
+    <h3>Add a new field</h3>
+    <ol class="bcls-tasklist">
+      <li>From the Fields and Relationships page, click the New button in the upper right. This will kick off a wizard to set up a new field. (See <a href="#supported_fields">Supported fields</a> above for the fields that can be configured for Video Cloud reports.)</li>
+      <li>
+        For this example, we will set up the “Subscription Product” field.
+      </li>
+      <li>
+        Select a data type for the field:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-properties-setup/select-data-type-for-field.webp" alt="Select Data Type">
+          <figcaption class="bcls-caption--image">Select Data Type</figcaption>
+        </figure>
+      </li>
     </ol>
   </section>
 </article>

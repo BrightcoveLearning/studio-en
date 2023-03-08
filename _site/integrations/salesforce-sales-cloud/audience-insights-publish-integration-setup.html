@@ -2824,7 +2824,7 @@
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/integrations/salesforce-marketing-cloud/">Salesforce marketing cloud</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/integrations/salesforce-sales-cloud/">Salesforce sales cloud</a></li>
             
             
             
@@ -2857,7 +2857,7 @@
     <ul>
       <li>Must be an admin for the Audience Insights account</li>
       <li>Salesforce account</li>
-      <li>Salesforce Connected App set up: <a href="/_includes/s-integrations/salesforce-marketing-cloud/salesforce-connected-app-setup.html">Salesforce Connected App Setup</a></li>
+      <li>Salesforce Connected App set up: <a href="/_includes/s-integrations/salesforce-sales-cloud/salesforce-connected-app-setup.html">Salesforce Connected App Setup</a></li>
       <li>Must be a Salesforce user with permissions to authorize access to a connected app</li>
     </ul>
   </section>
@@ -2868,14 +2868,14 @@
       <li>
         Scroll down to the Publish Integrations section and click <strong>Add Integration</strong>:
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-marketing-cloud/audience-insights-publish-integration-setup/add-integration.webp" alt="Add Integration">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/audience-insights-publish-integration-setup/add-integration.webp" alt="Add Integration">
           <figcaption class="bcls-caption--image">Add Integration</figcaption>
         </figure>
       </li>
       <li>
         In the modal dialog, select Salesforce from the Destination dropdown:
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-marketing-cloud/audience-insights-publish-integration-setup/add-integration-dialog.webp" alt="Add Integration Dialog">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/audience-insights-publish-integration-setup/add-integration-dialog.webp" alt="Add Integration Dialog">
           <figcaption class="bcls-caption--image">Add Integration Dialog</figcaption>
         </figure>
       </li>
@@ -2886,6 +2886,41 @@
           <li>The Automated Export option controls how often there should be an automated publish to the Salesforce integration.</li>
         </ul>
       </li>
+      <li>
+        Clicking <strong>Create</strong> will redirect the user to Salesforce. If they are not logged in already, they will be prompted to log into Salesforce. There will be a prompt from within Salesforce asking the user to authorize access for the application. If they accept, they will be redirected back to the scorecard.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/audience-insights-publish-integration-setup/allow-access-to-sf.webp" alt="Authorize in Salesforce">
+          <figcaption class="bcls-caption--image">Authorize in Salesforce</figcaption>
+        </figure>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/audience-insights-publish-integration-setup/integration-successful.webp" alt="Integration Successful">
+          <figcaption class="bcls-caption--image">Integration Successful</figcaption>
+        </figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="publish_manual_report">Publish Manual Report</h2>
+    <li>To use the newly added publish integration the user can manually publish a report. 
+      <ol class="bcls-tasklist-restart">
+        <li>
+          Generate a report from the Audience Insight scorecard UI and navigate to the <strong>Reports</strong> page:
+        </li>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/audience-insights-publish-integration-setup/publish-report.webp" alt="Reports Page">
+          <figcaption class="bcls-caption--image">Reports Page</figcaption>
+        </figure>
+      </li>
+      <li>Click on the menu icon next for the report to manually publish. Select Publish to Salesforce.</li>
+      <li>
+        The report will first move into the sync <strong>pending</strong> state where it sync contacts, joining contacts based on their email hash:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/audience-insights-publish-integration-setup/publish-to-sf.webp" alt="Publish Pending">
+          <figcaption class="bcls-caption--image">Publish Pending</figcaption>
+        </figure>
+      </li>
+      <li>Then it will enter the <strong>publish</strong> state where it updates the contacts in Salesforce.</li>
+      <li>Finally it will move to the <strong>completed</strong> state.</li>
     </ol>
   </section>
 </article>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Salesforce Marketing Cloud</title>
+        <title>Salesforce Connected App Setup</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
+        <meta name="description" content="For a third party integration to update content content within Salesforce, there needs to be a connected app set up in the Salesforce account to manage access to the Salesforce data. This topic covers how to set that up.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -2824,7 +2824,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Salesforce Marketing Cloud</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/integrations/salesforce-sales-cloud/">Salesforce sales cloud</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Salesforce Connected App Setup</li>
             
             
           </ol>
@@ -2837,40 +2841,96 @@
   <div class="container">
     <div class="docs-overview py-5">
       
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br>
       
-<!-- Template for sub-section that has just pages -->
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
+      
+<h1>Salesforce Connected App Setup</h1>
+<article class="bcls-article">
+  <summary>For a third party integration to update content content within Salesforce, there needs to be a connected app set up in the Salesforce account to manage access to the Salesforce data. This topic covers how to set that up.</summary>
+  <aside class="bcls-aside bcls-aside--information language-editable">This approach uses the OAuth 2.0 authentication flow which defines a series of steps used to coordinate the authentication process between Audience Insights and Salesforce.  It follows the <a href="https://developer.salesforce.com/docs/atlas.en-us.196.0.api_rest.meta/api_rest/intro_understanding_web_server_oauth_flow.htm">web server flow</a>.</aside>
+  <section class="bcls-section">
+    <h2 id="create_new_connected_app">Create a new <a href="http://developer.salesforce.com/docs/atlas.en-us.196.0.api_rest.meta/api_rest/intro_defining_remote_access_applications.htm">connected app</a></h2>
+    <h3>Steps</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        From Setup, navigate to the App Manager page and click the <strong>New Connected App</strong> button:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-connected-app-setup/new-connected-app-button.webp" alt="New Connected App Button">
+          <figcaption class="bcls-caption--image">New Connected App Button</figcaption>
+        </figure>
+      </li>
+      <li>
+        On the New Connected App screen, enter the required fields of <strong>Connected App Name</strong> and <strong>Contact Email</strong> as well as any other appropriate information.  The API Name will automatically be generated from the Connected App Name:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-connected-app-setup/new-connected-app-dialog.webp" alt="New Connected App Screen">
+          <figcaption class="bcls-caption--image">New Connected App Screen</figcaption>
+        </figure>
+      </li>
+      <li>
+        Select <strong>Enable OAuth Settings</strong>.
+      </li>
+      <li>
+        Enter <code translate="No">https://insights.wicketlabs.com/authorization-complete</code> for the Callback URL and select the following OAuth Scopes:
+        <ul>
+          <li>Manage user data via APIs (api)</li>
+          <li>Perform requests at any time (refresh_token, offline_access)</li>
+          <li>Manage Customer Data Platform profile data (cdp_profile_api)</li>
+        </ul>
+        <p>Leave both <strong>Require Secret for Web Server Flow</strong> and <strong>Require Secret for Refresh Token Flow</strong> checked.</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-connected-app-setup/oauth-setup.webp" alt="OAuth Setup">
+          <figcaption class="bcls-caption--image">OAuth Setup</figcaption>
+        </figure>
+      </li>
+      <li>
+        Click the <strong>Save</strong> button and the <strong>Continue</strong> button on the next page:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-connected-app-setup/save-new-connected-app.webp" alt="Continue to Next Page">
+          <figcaption class="bcls-caption--image">Continue to Next Page</figcaption>
+        </figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="consumer_key_and_consumer_secret_values">Consumer Key and Consumer Secret values</h2>
+    <p>You next need to retrieve the Consumer Key and Consumer Secret values.</p>
+    <h3>Steps</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        From the <strong>App Manager</strong> page, click the down arrow next to the app you created and click <strong>View</strong>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-connected-app-setup/consumer-key-secret.webp" alt="App Manager">
+          <figcaption class="bcls-caption--image">App Manager</figcaption>
+        </figure>
+      </li>
+      <li>
+        Click the <strong>Manage Consumer Details</strong> button:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-connected-app-setup/manage-consumer-details.webp" alt="Manage Consumer Details">
+          <figcaption class="bcls-caption--image">Manage Consumer Details</figcaption>
+        </figure>
+      </li>
+      <li>
+        Click the <strong>Copy</strong> button next to both the <strong>Consumer Key</strong> and <strong>Consumer Secret</strong> and <strong></strong><em>save these values elsewhere</em>.  You will need to enter both values when adding the <a href="/integrations/salesforce-sales-cloud/audience-insights-publish-integration-setup.html">Salesforce Publish Integration</a>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-connected-app-setup/copy-key-secret.webp" alt="Copy Key and Secret">
+          <figcaption class="bcls-caption--image">Copy Key and Secret</figcaption>
+        </figure>
+      </li>
+    </ol>
+  </section>
+</article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">Page Contents</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
   
 <!-- </div> -->
 </div>

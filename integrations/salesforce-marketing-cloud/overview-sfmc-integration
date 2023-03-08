@@ -1,7 +1,0 @@
----
-title: 'Salesforce Marketing Cloud Integration'
-description: This integration 
-parent: Salesforce Marketing Cloud
----
-
-{% include s-integrations/salesforce-marketing-cloud/overview-sfmc-integration.html %}
