@@ -3380,7 +3380,7 @@
       <li>
         Click on Fields and Relationships in the menu on the left hand side:
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-properties-setup/fields-and-relationships.webp" alt="Navigate to Fields and Relationships">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-properties-setup/fields-and-relationships.webp" alt="Navigate to Fields and Relationships">The type should match what is specified in the supported fields document.
           <figcaption class="bcls-caption--image">Navigate to Fields and Relationships</figcaption>
         </figure>
       </li>
@@ -3390,13 +3390,43 @@
     <ol class="bcls-tasklist">
       <li>From the Fields and Relationships page, click the New button in the upper right. This will kick off a wizard to set up a new field. (See <a href="#supported_fields">Supported fields</a> above for the fields that can be configured for Video Cloud reports.)</li>
       <li>
-        For this example, we will set up the “Subscription Product” field.
+        <em>For this example, we will set up the “Subscription Product” field.</em>
       </li>
       <li>
         Select a data type for the field:
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-properties-setup/select-data-type-for-field.webp" alt="Select Data Type">
           <figcaption class="bcls-caption--image">Select Data Type</figcaption>
+        </figure>
+        <p>Note: the type should match what is specified in the <a href="#supported_fields">supported fields table</a>.</p>
+      </li>
+      <li>For the Subscription Product example, the data type is “Single-line text”. Select the text option and click the Next button.</li>
+      <li>
+        Enter field details:
+        <ul>
+          <li>Enter the field label and name, and optionally a description.</li>
+          <li>The label can be any helpful label the user wants, but <strong>the name must exactly match the internal name from the <a href="#supported_fields">Supported Fields Table</a>.</strong> If it does not match, it will not be updated.</li>
+          <li>For the Subscription Product example, the name will be “productname_v1_0_0”</li>
+        </ul>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-properties-setup/fieldname-match-internalname.webp" alt="Field Details">
+          <figcaption class="bcls-caption--image">Field Details</figcaption>
+        </figure>
+      </li>
+      <li>
+        Establish field-level security - Set appropriate access levels for this field. This may vary depending on user requirements, but our recommendation is to make it visible most places:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-properties-setup/set-access-control.webp" alt="Access Control">
+          <figcaption class="bcls-caption--image">Access Control</figcaption>
+        </figure>
+      </li>
+      <li>Add to page layouts - set where the field should appear.</li>
+      <li>Click <strong>Save</strong> to finish adding the field.</li>
+      <li>
+        The new field should be visible in the <strong>Fields and Relationships page</strong>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/salesforce-sales-cloud/salesforce-properties-setup/view-created-property.webp" alt="Sample Field Created">
+          <figcaption class="bcls-caption--image">Sample Field Created</figcaption>
         </figure>
       </li>
     </ol>
