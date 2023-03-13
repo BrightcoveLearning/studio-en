@@ -717,6 +717,22 @@
     url: 'https://apis.support.brightcove.com/audience/index.html'
     icon: fa-regular fa-rectangle-code
 - section:
+  name: Integrations
+  url: /integrations/index.html
+  icon: fa-regular fa-puzzle-piece-simple
+  docs:
+  - name: Salesforce Sales Cloud
+    url: /integrations/salesforce-sales-cloud/index.html
+    docs:
+      - name: 'Overview: Salesforce Sales Cloud Integration'
+        url: /integrations/salesforce-sales-cloud/overview-sfsc-integration.html
+      - name: Salesforce Connected App Setup
+        url: /integrations/salesforce-sales-cloud/salesforce-connected-app-setup.html
+      - name: Audience Insights Salesforce Integration Setup
+        url: /integrations/salesforce-sales-cloud/audience-insights-publish-integration-setup.html
+      - name: Salesforce Properties Setup
+        url: /integrations/salesforce-sales-cloud/salesforce-properties-setup.html
+- section:
   name: Administering Accounts
   url: /admin/index.html
   icon: fa-regular fa-gear
