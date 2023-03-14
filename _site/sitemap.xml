@@ -2937,6 +2937,25 @@
           </url>
         
       
+        <url>
+          
+            <loc>https://studio.support.brightcove.com/general/advertising/index.html</loc>
+          
+            <lastmod>2023-03-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/general/advertising/bc-ad-monetization.html</loc>
+            
+            <lastmod>2023-03-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
     
       <url>
         <loc>https://studio.support.brightcove.com/release-notes/index.html</loc>

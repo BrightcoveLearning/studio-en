@@ -851,7 +851,13 @@
     - name: Video Cloud Architecture Overview
       url: /general/architecture/video-cloud-architecture-overview.html
     - name: Video Cloud Studio Cookies
-      url: /general/architecture/video-cloud-studio-cookies.html      
+      url: /general/architecture/video-cloud-studio-cookies.html
+  - name: Advertising
+    url: /general/advertising/index.html
+    icon: fa-regular fa-cubes
+    docs:
+    - name: Brightcove Ad Monetization
+      url: /general/advertising/bc-ad-monetization.html
 - section:
   name: Release Notes
   url: /release-notes/index.html
