@@ -573,7 +573,7 @@
         - name: 'Working with Folders'
           url: '/interactivity/general/working-with-folders.html'
         - name: 'Understanding SCORM Integration'
-          url: '/interactivity/analytics/understanding-scorm-integration.html'
+          url: '/interactivity/general/understanding-scorm-integration.html'
     - name: 'Settings'
       url: '/interactivity/settings/index.html'
       icon: fa-regular fa-gear
