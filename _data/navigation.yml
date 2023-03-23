@@ -500,7 +500,7 @@
           url: '/interactivity/annotations/using-dynamic-annotations.html'
     - name: 'Widgets'
       url: '/interactivity/widgets/index.html'
-      icon: fa-regular fa-bookmark
+      icon: fa-regular fa-grid-2
       docs:
         - name: 'Adding a Poll to a Video'
           url: '/interactivity/widgets/adding-poll-video.html'
