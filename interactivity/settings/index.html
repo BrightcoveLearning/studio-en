@@ -1,0 +1,43 @@
+---
+title: Settings
+parent: Interactivity
+grandparent: Home
+description: This section contains information on Interactivity settings.
+---
+
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <h3 id="Topics_in_this_section">Topics in {{ page.title }}</h3>
+  <br>
+  {% for item in site.data.navigation %}
+{% if item.name == page.title %}
+  <div class="col-12 col-lg-4 py-3">
+    <div class="card shadow-sm" style="background: white" onclick="window.location.href = '{{ item.url }}'">
+      <div class="card-body">
+        <section class="flex-container">
+          <div>
+            <ul class="list-group list-group-flush">
+              {% for entry in item.docs %}
+              <li class="list-group-item"><a href="{{ entry.url }}" style="text-decoration: none;">{{ entry.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% endfor %}
+  <!-- <section id="page_wrapper">
+    {% for item in site.data.navigation %}
+    {% if item.name == page.title %}
+    <ul>
+      {% for entry in item.docs %}
+          <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% endfor %}
+  </section> -->
+</article>
