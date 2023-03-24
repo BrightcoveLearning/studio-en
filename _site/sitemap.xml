@@ -2649,6 +2649,24 @@
             <priority>0.5</priority>
         </url>
         
+          <url>
+            
+              <loc>https://apis.support.brightcove.com/audience/getting-started/index.html</loc>
+            
+            <lastmod>2023-03-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://apis.support.brightcove.com/audience/references/index.html</loc>
+            
+            <lastmod>2023-03-24</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
       
     
       <url>

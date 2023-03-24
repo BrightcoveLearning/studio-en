@@ -776,6 +776,11 @@
   - name: Developers (Audience API)
     url: 'https://apis.support.brightcove.com/audience/index.html'
     icon: fa-regular fa-rectangle-code
+    docs:
+      - name: Getting Started
+        url: 'https://apis.support.brightcove.com/audience/getting-started/index.html'
+      - name: References
+        url: 'https://apis.support.brightcove.com/audience/references/index.html'
 - section:
   name: Integrations
   url: /integrations/index.html
