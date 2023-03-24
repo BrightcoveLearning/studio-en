@@ -582,6 +582,20 @@
           url: '/interactivity/settings/configuring-settings.html'
         - name: 'Using the Style Editor'
           url: '/interactivity/settings/using-style-editor.html'
+    - name: 'Developers'
+      url: 'https://apis.support.brightcove.com/interactivity/index.html'
+      icon: fa-regular fa-rectangle-code
+      docs:
+        - name: 'Addon API'
+          url: 'https://apis.support.brightcove.com/interactivity/addon-api/reference.html'
+        - name: 'Annotations API'
+          url: 'https://apis.support.brightcove.com/interactivity/annotation-api/reference.html'
+        - name: 'Embed API'
+          url: 'https://apis.support.brightcove.com/interactivity/embed-api/reference.html'
+        - name: 'Extension API'
+          url: 'https://apis.support.brightcove.com/interactivity/extension-api/reference.html'
+        - name: 'Accessing Reporting Endpoints'
+          url: 'https://apis.support.brightcove.com/interactivity/accessing-reporting-endpoints.html'
 - section:
   name: Managing Channels
   url: /channels/index.html
