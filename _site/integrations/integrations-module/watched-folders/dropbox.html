@@ -3138,8 +3138,27 @@
 <article class="bcls-article">
   <summary>This topic explains how to set up a connection to Dropbox and select a folder that Video Cloud will watch to automatically ingest videos placed in the folder.</summary>
   <section class="bcls-section">
-    <h2 id="Introduction"></h2>
-    <p></p>
+    <h2 id="Introduction">Introduction</h2>
+    <p>Brightcove allows you to select a folder on the popular cloud storage platform Dropbox that we will automatically ingest videos from. Brightcove will monitor the folder, checking it about every 10 minutes, and automatically ingest new videos it finds using your default ingest profile.</p>
+    <h3>Notes</h3>
+    <ul>
+      <li>Currently, Brightcove will only ingest videos from the Dropbox folder. If items other than video files are put in the folder, Brightcove will try to ingest them and those ingests will fail. Everything in the folder will be ingested, so do not include any files that Brightcove should not have access to</li>
+      <li>You need to create a folder specific to Brightcove only</li>
+      <li>Only one Dropbox folder is allowed for the connection.</li>
+      <li>Once ingestion of a video has begun, it will finish even if the video is removed.</li>
+      <li>Access cannot be disabled in Studio - to remove Brightcove's access to the folder, you will need to disable that in Dropbox settings.</li>
+      <li></li>
+
+There is 
+
+You can’t retract privileges through Brightcove screens. User would need to go to Google Drive to disable.
+
+No changing times, ingestion in progress will finish.
+
+Delta ingestion only. Assets are not deleted from source google drive.
+
+There is an additional step that user will have to activate each video that is ingested.  Icon will be red before it turns green.
+    </ul>
   </section>
 </article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
