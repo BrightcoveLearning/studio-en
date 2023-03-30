@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Brightcove QoE Analytics</title>
+        <title>Brightcove Ad Insights</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic, you will learn about Quality of Experience (QoE) analytics associated with Brightcove Player.">
+        <meta name="description" content="In this topic, you will learn how advertising insights can help you optimize your ad monetization plans.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3109,7 +3109,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Brightcove QoE Analytics</li>
+            <li class="breadcrumb-item active" aria-current="page">Brightcove Ad Insights</li>
             
             
           </ol>
@@ -3130,43 +3130,35 @@
       <br>
       
       <h2 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h2>
-<h1>Brightcove QoE Analytics</h1>
+<h1>Brightcove Ad Insights</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn about Quality of Experience (QoE) analytics associated with Brightcove Player.</summary>
-  <aside class="bcls-aside bcls-aside--information">QoE Analytics are currently available to a limited number of customers.</aside>
+  <summary>In this topic, you will learn how advertising insights can help you optimize your ad monetization plans.</summary>
+  <aside class="bcls-aside bcls-aside--information">Ad insights are currently available to a limited number of customers.</aside>
 
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>Quality of Experience (QoE) analytics provide information to help understand the user's video streaming experience, including playback success, startup time, rebuffering, and visual quality. </p>
-    <p>QoE focuses on metrics that provide a sense of the viewing experience from a user's perspective. It is Brightcove's goal to provide customers with a transparent, meaningful, and well-curated set of metrics focused on the following:</p>
+    <p>Ad insights help you understand how many viewers watch ads with your content and whether these are engaged or new viewers.</p>
+    <p>Ad insights will show the relationships between ad frequency/intensity and session length/frequency to help customers understand the most effective ad loads.</p>
+    <p>Ad insights are integrated with Brightcove Server-Side Ad Insertion (SSAI), video delivery, and analytics. These insights include:</p>
     <ul>
       <li>
-        <strong>Troubleshooting</strong>:   
+        <strong>Ad Tolerance</strong>:   
         <ul>
-          <!-- <li>What nuances are viewers experiencing?</li> -->
-          <li>Which devices and players have a lower quality of experience?</li>
-          <li>Are issues related to the player, device, or geographic region?</li>
-          <li>Can I mitigate these issues?</li>
+          <li>Help you reduce ad abandonment based on their audience's behavior</li>
+          <li>Find the optimal number of ad breaks and number/length of ad pods for different playback conditions</li>
         </ul>
       </li>
       <li>
-        <strong>Reporting</strong>: 
+        <strong>Revenue Optimization</strong>: 
         <ul>
-          <li>How is my service performing across key QoE metrics?</li>
-          <li>Are there trends that I should be aware of and address?</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Monitoring</strong>:
-        <ul>
-          <li>You can track video metrics that show how viewers are impacted.</li>
+          <li>Produce the best CPM rate based on ad configuration, time of the day, ad partner and tagging</li>
         </ul>
       </li>
     </ul>
-    <p>For a list of QoE terms and definitions, see the <a href="#Glossary">Glossary</a> section.</p>
+    <p>For a list of ad insight terms and definitions, see the <a href="#Glossary">Glossary</a> section.</p>
 
     <h3 id="Setup">Setup</h3>
-    <p>QoE Analytics are available to Media Video Cloud customers at no extra charge. Contact your Customer Success Manager to enable your account.</p>
+    <p>Ad insights are available to Media Video Cloud customers at no extra charge. Contact your Customer Success Manager to enable your account.</p>
     
   </section>
 
@@ -3176,14 +3168,24 @@
     <ol class="bcls-tasklist">
       <li>Open Video Cloud Studio.</li>
       <li>In the primary navigation, click <strong>Analytics</strong>.</li>
-      <li>In the panel navigation, click <strong>QOE</strong>.</li>
+      <li>In the panel navigation, click <strong>Insights</strong>.</li>
+      <li>Scroll down till you see the <strong>Ad Insights</strong> section.</li>
     </ol>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="QoE analytics" src="/assets/images/s-analytics-img/module/qoe/qoe-analytics.webp" />
-      <figcaption class="bcls-caption--image">QoE analytics</figcaption> 
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Ad insights" src="/assets/images/s-analytics-img/module/ad-insights/ad-insights.webp" />
+      <figcaption class="bcls-caption--image">Ad insights</figcaption> 
     </figure>
   </section>
 
   <section class="bcls-section">
+    <h2 id="Ad_Consumption">Ad Consumption</h2>
+    <p>The error rate is the number of errors reported by the player divided by the number of play requests.</p>
+   
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Ad Consumption" src="/assets/images/s-analytics-img/module/ad-insights/ad-consumption.webp" />
+      <figcaption class="bcls-caption--image">Ad Consumption</figcaption> 
+    </figure>
+  </section>
+
+  <!-- <section class="bcls-section">
     <h2 id="Time_range_and_dimensions">Time range and dimensions</h2>
     <p>Use time range and dimension to filter the data displayed in the charts below.</p>
     <h3 id="Time_range">Time range</h3>
@@ -3197,9 +3199,9 @@
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Dimension" src="/assets/images/s-analytics-img/module/qoe/dimension.webp" />
       <figcaption class="bcls-caption--image">Dimension</figcaption> 
     </figure>
-    <p>Dimensions include:</p>
+    <p>Dimensions include:</p> -->
      
-        <h4><strong>Account</strong></h4>
+        <!-- <h4><strong>Account</strong></h4>
         <p>The Account view provides an overall number for all streams in your account across all platforms.</p>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Account" src="/assets/images/s-analytics-img/module/qoe/account-dimension.webp" />
           <figcaption class="bcls-caption--image">Account</figcaption> 
@@ -3210,78 +3212,42 @@
         <p>The Device type view makes it easier to see device-specific issues and trends over time. The imaginary example below shows a spike in error rate for Android devices that could correlate to a recent app update.</p>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Device type" src="/assets/images/s-analytics-img/module/qoe/device-type.webp" />
           <figcaption class="bcls-caption--image">Device type</figcaption> 
-        </figure>
+        </figure> -->
       
       <!-- <li>Domain and subdomain</li> -->
       
-        <h4><strong>Stream type</strong> (VOD)</h4>
-        <p>The Stream type view currently compares all content in your account and VOD metrics.</p>
+        <!-- <h4><strong>Stream type</strong> (VOD)</h4>
+        <p>The Stream type view currently compares all content in your account and VOD metrics.</p> -->
         <!-- <p>Live QoE metrics will be coming soon, allowing you to isolate mode-specific issues or trends.  In the fictional example below, there was a jump in upscaling around a live event, which resolved quickly.</p> -->
         <!-- <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Stream type" src="/assets/images/s-analytics-img/module/qoe/stream-type.webp" />
           <figcaption class="bcls-caption--image">Stream type</figcaption> 
         </figure> -->
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Stream type" src="/assets/images/s-analytics-img/module/qoe/stream-type-vod.webp" />
+        <!-- <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Stream type" src="/assets/images/s-analytics-img/module/qoe/stream-type-vod.webp" />
           <figcaption class="bcls-caption--image">Stream type</figcaption> 
-        </figure>
+        </figure> -->
       
       
-        <h4><strong>Player</strong></h4>
+        <!-- <h4><strong>Player</strong></h4>
         <p>The Player view shows specific players' performance and allows you to isolate and troubleshoot players where QoE is underperforming.</p>
-        <p>Modifications to chunk size and buffer size can be measured using this metric.</p>
+        <p>Modifications to chunk size and buffer size can be measured using this metric.</p> -->
         <!-- <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Device type" src="/assets/images/s-analytics-img/module/qoe/device-type.webp" />
           <figcaption class="bcls-caption--image">Device type</figcaption> 
         </figure> -->
       
       
-        <h4><strong>Country</strong></h4>
+        <!-- <h4><strong>Country</strong></h4>
         <p>For international customers, viewing QoE metrics by country can assist in isolating regional issues. In the fictional example below, the customer adopted a new content delivery network (CDN) for their Asian consumers. The chart shows that the CDN underperformed when looking at the stall rate.</p>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Country" src="/assets/images/s-analytics-img/module/qoe/country-dimension.webp" />
           <figcaption class="bcls-caption--image">Country</figcaption> 
-        </figure>
+        </figure> -->
      
       <!-- <li>Day</li> -->
-  </section>
+  <!-- </section> -->
 
-  <section class="bcls-section">
-    <h2 id="Error_rate">Error rate</h2>
-    <p>The error rate is the number of errors reported by the player divided by the number of play requests.</p>
-    <!-- <p>Brightcove Player reports errors that prevent video playback. These errors often happen before playback begins. Low error rates mean that viewers can watch their selected content.</p> -->
-    <p>Here we focus on the errors that prevent playback since some errors occur in the background without affecting the viewer experience. Brightcove Player reports errors that prevent video playback, but some of these errors happen before playback begins. Low error rates mean that viewers can watch their selected content.</p>
-    <aside class="bcls-aside bcls-aside--information">Error rate cannot be broken down by Stream type. The chart below shows account-level data.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Error rate" src="/assets/images/s-analytics-img/module/qoe/error-rate.webp" />
-      <figcaption class="bcls-caption--image">Error rate</figcaption> 
-    </figure>
-  </section>
+  
 
-  <section class="bcls-section">
-    <h2 id="Video_start_time">Video start time</h2>
-    <p>The video start time is the average time between play request and stream start.</p>
-    <aside class="bcls-aside bcls-aside--information">Video start time does not consider pre-roll time.</aside>
-    <p>This metric is helpful because long load times cause abandonment before streaming starts. Long load times can point to issues with CDN, player plug-ins, and initial stream bitrate where intervention makes sense. Low video start times mean your viewers can start watching their videos quickly, which is what they expect.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Video start time" src="/assets/images/s-analytics-img/module/qoe/video-start-time.webp" />
-      <figcaption class="bcls-caption--image">EVideo start time</figcaption> 
-    </figure>
-  </section>
 
-  <section class="bcls-section">
-    <h2 id="Stall_rate">Stall rate</h2>
-    <p>The stall rate is the total number of stalls divided by the total number of hours streamed.</p>
-    <p>We focus on actual video stalls instead of all rebuffering events because rebuffering may or may not impact playback, depending on the platform. Stalls affect the viewer experience, including single stalls of significant length or frequent stalls of varying lengths. Low stall rates provide smoother playback and a better viewer experience.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Stall rate" src="/assets/images/s-analytics-img/module/qoe/stall-rate.webp" />
-      <figcaption class="bcls-caption--image">Stall rate</figcaption> 
-    </figure>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Upscale_time">Upscale time</h2>
-    <p>The upscale time is the average number of seconds per hour of viewing that is spent in an upscaled state (seconds per hour).</p>
-    <p>Upscaling occurs when a video rendition is streamed in a lower resolution than the current player size. Upscaling can result in fuzziness or video pixelation. One area where upscaling is common is when content is streamed to a 4K TV. In this case, the stream may be available at a high resolution but not encoded at 4k. While technically, this is upscaling, most viewers will not notice. Low upscaling time is associated with smooth, crisp video playback.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Upscale time" src="/assets/images/s-analytics-img/module/qoe/upscale-time.webp" />
-      <figcaption class="bcls-caption--image">Upscale time</figcaption> 
-    </figure>
-  </section>
-
-  <section class="bcls-section">
+  <!-- <section class="bcls-section">
     <h2 id="Summary table">Summary table</h2>
     <p>The summary table makes it easy to explore and identify anomalies.</p>
     <p>The date range and dimensions that you set for the page, also applies to the data in the summary table. For example, if you select the <strong>Device</strong> dimension, you will see a <strong>Summary by Device</strong>.</p>
@@ -3298,7 +3264,7 @@
       <li>Avg Bitrate</li>
     </ul>
     <p>For details about the column data, see the <a href="#Glossary">Glossary</a></p>
-  </section>
+  </section> -->
 
   <section class="bcls-section">
     <h2 id="Glossary">Glossary</h2>
@@ -3323,8 +3289,7 @@
     <p><strong>Views</strong> - The number of times a video started playing, recorded when the stream is started (does not include rewind or replay); it is not a measure of individual viewers</p>
   </section>
 
-</article>   
-
+</article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
