@@ -3143,23 +3143,16 @@
     <h3>Notes</h3>
     <ul>
       <li>Currently, Brightcove will only ingest videos from the Dropbox folder. If items other than video files are put in the folder, Brightcove will try to ingest them and those ingests will fail. Everything in the folder will be ingested, so do not include any files that Brightcove should not have access to</li>
+      <li>Videos ingested from your Dropbox folder will be added as <strong>inactive</strong>. You will need to activate them in the Media module (or via the CMS API) before they will be playable. (If you are a Beacon customer, note that the videos will also need to activated before they will be synced to your Beacon account.)</li>
       <li>You need to create a folder specific to Brightcove only</li>
       <li>Only one Dropbox folder is allowed for the connection.</li>
       <li>Once ingestion of a video has begun, it will finish even if the video is removed.</li>
       <li>Access cannot be disabled in Studio - to remove Brightcove's access to the folder, you will need to disable that in Dropbox settings.</li>
-      <li></li>
-
-There is 
-
-You can’t retract privileges through Brightcove screens. User would need to go to Google Drive to disable.
-
-No changing times, ingestion in progress will finish.
-
-Delta ingestion only. Assets are not deleted from source google drive.
-
-There is an additional step that user will have to activate each video that is ingested.  Icon will be red before it turns green.
     </ul>
     <h3>Requirements</h3>
+    <ul>
+      <li>You must have a Dropbox account.</li>
+    </ul>
   </section>
 </article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
