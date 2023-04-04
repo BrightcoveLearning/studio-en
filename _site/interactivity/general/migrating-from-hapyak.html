@@ -3139,17 +3139,22 @@
     <ol class="bcls-tasklist-restart">
       <li>Enable Brightcove Interactivity on any players you are currently using to serve HapYak-enabled interactivity.
         <ul>
-          <li> Open the Players module</li>
-          <li>Select the player</li>
-          <li>In <strong>Additional Features</strong> &gt; <strong>Interactivity</strong>, check the <strong>Enable Interactivity</strong> option</li>
+          <li> Open the <strong>Players</strong> module</li>
+          <li>Click on a <strong>Name</strong></li>
+          <li>In <strong>Additional Features</strong> &gt; <strong>Interactivity</strong>, check the <strong>Enable Interactivity</strong> option
+            <figure class="bcls-figure"> <img alt="" src="/assets/images/s-brightcove-interactivity-img/getting-started/plugin-config.png"> </figure>
+          </li>
         </ul>
-        <p>The checkbox to <strong>Enable Interactivity</strong> will replace the need for entering any API key data. 
+        <aside class="bcls-aside bcls-aside--tip language-editable">Note: For more information, see <a href="/interactivity/getting-started/configuring-player-plugin.html">Configuring a Brightcove Player with the Interactivity Plugin</a>.</aside>
+        <p>The checkbox to <strong>Enable Interactivity</strong> will replace the need for entering any API key data.</p>
       </li>
       <li>If any custom tracking scripts were being used, enable the <strong>Options (JSON)</strong> checkbox and enter the script.</li>
       <li><strong>(Optional)</strong> If you would like to have projects auto-created when they are played with an Interactivity-enabled Brightcove Player (similar to functionality from the HapYak/Brightcove plugin), you will need to enable project auto-creation on your player. To do this, add the following to the <strong>Options(JSON)</strong>.
         <figure class="bcls-figure"> <img alt="" src="/assets/images/s-brightcove-interactivity-img/general/migrate/auto-create.png"> </figure>
       </li>
-      <li>Delete the existing <strong>hapyak</strong> plugin on the player (click <strong>Plugins</strong> in the navigation).</li>
+      <li>Delete the existing <strong>hapyak</strong> plugin on the player (click <strong>Plugins</strong> in the navigation).
+        <figure class="bcls-figure"> <img alt="" src="/assets/images/s-brightcove-interactivity-img/general/migrate/delete-plugin.png"> </figure>
+      </li>
       <li>Save the changes and publish  the player.</li>
     </ol>
     <p>After caching clears, the Brightcove Interactivity versions of the interactive content should automatically replace the HapYak versions. Customer-facing experiences should continue functioning seamlessly on the new platform.</p>
@@ -3159,11 +3164,14 @@
     <aside class="bcls-aside bcls-aside--information">Note: To facilitate a smooth update process, we recommend that you upload versions of any non-Brightcove videos used as source files for HapYak content into Video Cloud before starting this process.</aside>
     <p>If your interactive content was not published using a Brightcove embed code via the HapYak plugin (typical examples include direct publishing from HapYak embed code and non-Brightcove based projects) you will still have a path to easily update your content. During the HapYak content migration, Brightcove Interactivity versions of all your interactive content will be generated. In cases where a non-Brightcove video was used as the video source file, the migration will create a &quot;headless&quot; project retaining all of your interactive content. You will be required you to update the project settings and select a valid Brightcove video source file (that exists in the Media module).</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the Interactivity module.</li>
+      <li>Open the <strong>Interactivity</strong> module.</li>
       <li>Click on a project title.</li>
       <li>Click <span class="button-blue-text-bordered">Settings</span>.</li>
       <li>Click <span class="button-blue-text-bordered"><i data-feather="edit-3"></i> Replace Video</span>.</li>
-      <li>Select a  video and click <span class="button-blue-text-bordered">Replace</span>.</li>
+      <li>Select a  video and click <span class="button-blue-text-bordered">Replace</span>.
+        <figure class="bcls-figure"> <img alt="" src="/assets/images/s-brightcove-interactivity-img/general/migrate/select-video.png"> </figure>
+        <aside class="bcls-aside bcls-aside--tip language-editable">Note: For more information on project settings, see <a href="/interactivity/projects/configuring-project-settings.html">Configuring Project Settings</a>.</aside>
+      </li>
       <li>Verify the timing and functionality of any interactive elements in the annotation editor or by previewing the project.</li>
     </ol>
   </section>
