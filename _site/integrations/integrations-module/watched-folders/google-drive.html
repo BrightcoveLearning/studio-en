@@ -3205,7 +3205,21 @@
             The Brightcove app should be found - click the <strong>Select</strong> button beside it.
           </li>
           <li>
-            This will display a new dialog showing the client id for 
+            This will display a new dialog showing the client id for the Brightcove app - select it and click <strong>Select</strong>:
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/select-client-id-for-found-app.webp" alt="Select the App">
+              <figcaption class="bcls-caption--image">Select the App</figcaption>
+            </figure>
+          </li>
+          <li>
+            A new screen opens where you can configure the app access - select <strong>Trusted: Can access all Google services</strong> and click <strong>Configure</strong>:
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/configure-app-access.webp" alt="Configure App Access">
+              <figcaption class="bcls-caption--image">Configure App Access</figcaption>
+            </figure>
+          </li>
+          <li>
+            The app will now show up in the list of configured apps as Trusted but Not Google Verified. That completes the whitelisting of the app for your Google Drive account.
           </li>
         </ol>
       </li>
@@ -3301,12 +3315,47 @@
       <li>Videos ingested from your Google Drive folder will be added as <strong>inactive</strong>. You will need to activate them in the Media module (or via the CMS API) before they will be playable. (If you are a Beacon customer, note that the videos will also need to activated before they will be synced to your Beacon account.) See <a href="/get-started/basics/activating-and-deactivating-video.html">Activating and Deactivating Videos</a> for details on how to activate the videos.</li>
       <li>You need to create a folder specific to Brightcove only.</li>
       <li>Only one Google Drive folder is allowed for the connection.</li>
-      <li>Once ingestion of a video has begun, it will finish even if the video is removed.</li>
+      <li>Once ingestion of a video has begun, it will finish even if the video is removed or the folder disconnected.</li>
+      <li>If you remove a video from the folder and later add it back (or add another video with the same file name), it will be ingested <strong>as a new video</strong>. You cannot replace an existing video by adding a new version to the folder.</li>
     </ul>
   </section>
   <section class="bcls-section">
     <h2 id="disconnecting_a_folder">Disconnecting a folder</h2>
     <p>If you wish to disconnect the folder, follow the steps below.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Go to the Integrations module and click on <strong>Google Drive</strong>.</li>
+      <li>
+        Click on the email address of the connection creator:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/click-on-email-for-folder-configuration.webp" alt="Click on Email Address">
+          <figcaption class="bcls-caption--image">Click on Email Address</figcaption>
+        </figure>
+      </li>
+      <li>
+        The connected folder will appear - click on the three dots to the right of it and select <strong>Disconnect folder</strong>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/disconnect-folder.webp" alt="Disconnect Folder">
+          <figcaption class="bcls-caption--image">Disconnect Folder</figcaption>
+        </figure>
+      </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that any user can do this, but only the user who connected the Google Drive account can reconnect the folder (or connect a different one).</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="disconnecting_an_account">Disconnecting an account</h2>
+    <p>To disconnect your Google Drive account, follow the steps below.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>First <strong><a href="#disconnecting_a_folder">disconnect the folder</a></strong> using the instructions in the previous section. Disconnecting the account will fail unless the folder is disconnected first.</li>
+      <li>Go to the Integrations module and click on <strong>Google Drive</strong>.</li>
+      <li>
+        Click on the three dots to right of the email address of the user who connected the account and select <strong>Disconnect account</strong>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/disconnect-account.webp" alt="Disconnect the Account">
+          <figcaption class="bcls-caption--image">Disconnect the Account</figcaption>
+        </figure>
+      </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information language-editable">Any user can reconnect the Google Drive account or a different one.</aside>
   </section>
 </article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
