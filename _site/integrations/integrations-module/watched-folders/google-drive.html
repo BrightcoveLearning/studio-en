@@ -3314,7 +3314,8 @@
       </li>
       <li>Videos ingested from your Google Drive folder will be added as <strong>inactive</strong>. You will need to activate them in the Media module (or via the CMS API) before they will be playable. (If you are a Beacon customer, note that the videos will also need to activated before they will be synced to your Beacon account.) See <a href="/get-started/basics/activating-and-deactivating-video.html">Activating and Deactivating Videos</a> for details on how to activate the videos.</li>
       <li>You need to create a folder specific to Brightcove only.</li>
-      <li>Only one Google Drive folder is allowed for the connection.</li>
+      <li>For each Brightcove account, only one Google Drive folder is allowed for the connection.</li>
+      <li>A Google drive folder can only be connected to one Brightcove account. You can connect different Google Drive folders to different Brightcove accounts.</li>
       <li>
         If you have (or add) a large number of videos to the folder, they will be ingested in batches of 50 until ingestion is complete. If you have one or two videos that you need to ingest immediately, you can add those using Studio or the Dynamic Ingest API, and those videos will be prioritized ahead of the ones in your folder. 
         <aside class="bcls-aside bcls-aside--information language-editable">Also note that once ingestion has begun, all videos in the folder will be ingested, even if the folder or even the account is disconnected.</aside>
