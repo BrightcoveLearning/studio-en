@@ -249,7 +249,7 @@ layout: landing_page
         
       </div><!--//row-->
       <div class="row justify-content-center" style="width: 100%;">
-        <button class="btn btn-primary" id="show_more_btn" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2" style="background-color:#4EA9D1;width: 150px;">Show more</button>
+        <button class="btn btn-outline-dark" id="show_more_btn" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2" style="border: 2px solid black; width: 200px; border-radius: 50px;">SHOW MORE</button>
       </div>
 
       <script>
@@ -258,10 +258,10 @@ layout: landing_page
 
         btn.addEventListener('click', () => {
           if (flag === true) {
-            btn.textContent = 'Show Less'
+            btn.textContent = 'SHOW LESS'
             flag = false;
           } else {
-            btn.textContent = 'Show More'
+            btn.textContent = 'SHOW MORE'
             flag = true;
           }
         });
