@@ -36,13 +36,13 @@ body {
 
 .theme-icon-holder {
     background: #fff !important;
-    color: #000000 !important;
+    color: #4EA9D1 !important;
 }
 
 .form-select:focus {
-    border-color: #000000 !important;
+    border-color: #4EA9D1 !important;
     outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(114, 116, 118, 0.25) !important;
+    box-shadow: 0 0 0 .25rem rgba(146, 216, 248, 0.25) !important;
 }
 
 [aria-current="page"] {
@@ -181,7 +181,7 @@ a:hover {
 
 .span-icon {
     text-align: center;
-    color: #000000;
+    color: #4EA9D1;
 }
 
 .card-body {
