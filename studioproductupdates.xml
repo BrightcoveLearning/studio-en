@@ -17,6 +17,14 @@
     <pubDate>Thu, 15 Jun 2017 15:53:15 GMT</pubDate>
     <lastBuildDate>Tue, 14 Jul 2021 11:29:57 GMT</lastBuildDate>
     <item>
+      <title>New Interactivity Module</title>
+      <link>https://studio.support.brightcove.com/interactivity/index.html</link>
+      <description>The Interactivity module makes it easy to add interactivity to videos.</description>
+      <author>author</author>
+      <pubDate>Mon, 17 Apr 2023 11:00:00 GMT</pubDate>
+      <source url="https://studio.support.brightcove.com/interactivity/index.html">Interactivity Documentation</source>
+    </item>
+    <item>
       <title>Publish to Instagram</title>
       <link>https://studio.support.brightcove.com/social/general/publishing-videos-social-media-platforms.html</link>
       <description>The Social module now supports publishing to Instagram.</description>
@@ -48,7 +56,7 @@
       <pubDate>Tue, 5 Apr 2022 21:00:00 GMT</pubDate>
       <source url="https://studio.support.brightcove.com/release-notes/video-cloud-studio-release-notes.html">Studio Product Updates</source>
     </item>
-   <item>
+    <item>
       <title>New Caption Editor</title>
       <link>https://studio.support.brightcove.com/release-notes/video-cloud-studio-release-notes.html</link>
       <description>The Media module now provides a caption editor for editing video captions.</description>
