@@ -197,6 +197,8 @@
     url: /players/general/index.html
     icon: fa-regular fa-play
     docs:
+    - name: Configuring a Player with the Interactivity Plugin
+      url: /interactivity/getting-started/configuring-player-plugin.html
     - name: Configuring Adobe Analytics Event Tracking
       url: /players/general/configuring-adobe-analytics-event-tracking.html
     - name: Configuring Google Analytics Event Tracking
@@ -205,6 +207,8 @@
       url: /players/general/configuring-player-advertising-using-players-module.html
     - name: Configuring Player Plugins
       url: /players/general/configuring-player-plugins.html
+    - name: Creating a Campaign-enabled Player
+      url: /campaign/general/creating-campaign-enabled-player.html
     - name: Generating Player Embed Code
       url: /players/general/generating-player-embed-code.html
     - name: 'Support for Brightcove Player 5'
