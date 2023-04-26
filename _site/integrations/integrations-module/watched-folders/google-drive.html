@@ -3159,22 +3159,22 @@
     <h2 id="Introduction">Introduction</h2>
     <p>Brightcove allows you to select a folder on the popular cloud storage platform Google Drive that we will
       automatically ingest videos from.</p>
-      <p>A watched folder allows you to have users who can upload videos without having to go to Studio, and even if they don't have access to Studio. This is ideal if you need a UGC (user-generated content) solution.</p>
-    </section>
+    <p>A watched folder allows you to have users who can upload videos without having to go to Studio, and even if they don't have access to Studio. This is ideal if you need a UGC (user-generated content) solution.</p>
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="1764260024649955877">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> 
+  </section>
   <section class="bcls-section">
     <h2 id="Requirements">Requirements</h2>
     <ul>
       <li>You must have a Google Drive account.</li>
       <li>You must create a folder specifically for the Brightcove integration.</li>
-      <li>
-        You must <a href="/admin/creating-custom-metadata-fields.html">create a custom metadata field</a> with these values:
+      <li> You must <a href="/admin/creating-custom-metadata-fields.html">create a custom metadata field</a> with these values:
         <ul>
           <li><strong>Display Name:</strong> Ingestion GUID</li>
           <li><strong>Internal Name:</strong> ingestion_guid</li>
           <li><strong>Type: Text</strong></li>
         </ul>
-        <aside class="bcls-aside bcls-aside--information language-editable">
-          Notes:
+        <aside class="bcls-aside bcls-aside--information language-editable"> Notes:
           <ul>
             <li>Do <strong>not</strong> give a value to the field - this will be done by the Brightcove system.</li>
             <li>Do <strong>not</strong> make this a required field.</li>
@@ -3182,58 +3182,41 @@
           </ul>
         </aside>
       </li>
-      <li>
-        You must whitelist the Brightcove app in your Google Cloud console (this must be done by an admin for the Google account):
+      <li> You must whitelist the Brightcove app in your Google Cloud console (this must be done by an admin for the Google account):
         <ol>
           <li><a href="https://supportportal.brightcove.com/">Submit a Support request</a> to get the Client ID for the Brightcove Google Cloud app.</li>
-          <li>
-            Once you have the client id from Support, in the Google Cloud Console Admin, go to <strong>Security &gt; Access and data control &gt; API controls</strong>:
-            <figure class="bcls-figure">
-              <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/google-cloud-admin-security-api-access.webp" alt="Google Cloud Console Admin">
+          <li> Once you have the client id from Support, in the Google Cloud Console Admin, go to <strong>Security &gt; Access and data control &gt; API controls</strong>:
+            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/google-cloud-admin-security-api-access.webp" alt="Google Cloud Console Admin">
               <figcaption class="bcls-caption--image">Google Cloud Console Admin</figcaption>
             </figure>
           </li>
-          <li>
-            Click on <strong>MANAGE THIRD PARTY APP ACCESS</strong>
-            <figure class="bcls-figure">
-              <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/google-cloud-security-manage-3rd-party-access.webp" alt="Third Party App Access">
+          <li> Click on <strong>MANAGE THIRD PARTY APP ACCESS</strong>
+            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/google-cloud-security-manage-3rd-party-access.webp" alt="Third Party App Access">
               <figcaption class="bcls-caption--image">Third Party App Access</figcaption>
             </figure>
           </li>
-          <li>
-            Click on <strong>Add app</strong> and select <strong>OAuth App Name or Client ID</strong>:
-            <figure class="bcls-figure">
-                <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/add-app-for-access.webp" alt="Add App">
-                <figcaption class="bcls-caption--image">Add App</figcaption>
-              </figure>
+          <li> Click on <strong>Add app</strong> and select <strong>OAuth App Name or Client ID</strong>:
+            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/add-app-for-access.webp" alt="Add App">
+              <figcaption class="bcls-caption--image">Add App</figcaption>
+            </figure>
           </li>
-          <li>
-            Enter the client id given to you by Support and search for app:
-            <figure class="bcls-figure">
-                <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/search-for-app-by-client-id.webp" alt="Search for App by Client ID">
-                <figcaption class="bcls-caption--image">Search for App by Client ID</figcaption>
-              </figure>
+          <li> Enter the client id given to you by Support and search for app:
+            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/search-for-app-by-client-id.webp" alt="Search for App by Client ID">
+              <figcaption class="bcls-caption--image">Search for App by Client ID</figcaption>
+            </figure>
           </li>
-          <li>
-            The Brightcove app should be found - click the <strong>Select</strong> button beside it.
-          </li>
-          <li>
-            This will display a new dialog showing the client id for the Brightcove app - select it and click <strong>Select</strong>:
-            <figure class="bcls-figure">
-              <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/select-client-id-for-found-app.webp" alt="Select the App">
+          <li> The Brightcove app should be found - click the <strong>Select</strong> button beside it. </li>
+          <li> This will display a new dialog showing the client id for the Brightcove app - select it and click <strong>Select</strong>:
+            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/select-client-id-for-found-app.webp" alt="Select the App">
               <figcaption class="bcls-caption--image">Select the App</figcaption>
             </figure>
           </li>
-          <li>
-            A new screen opens where you can configure the app access - select <strong>Trusted: Can access all Google services</strong> and click <strong>Configure</strong>:
-            <figure class="bcls-figure">
-              <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/configure-app-access.webp" alt="Configure App Access">
+          <li> A new screen opens where you can configure the app access - select <strong>Trusted: Can access all Google services</strong> and click <strong>Configure</strong>:
+            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/configure-app-access.webp" alt="Configure App Access">
               <figcaption class="bcls-caption--image">Configure App Access</figcaption>
             </figure>
           </li>
-          <li>
-            The app will now show up in the list of configured apps as Trusted but Not Google Verified. That completes the whitelisting of the app for your Google Drive account.
-          </li>
+          <li> The app will now show up in the list of configured apps as Trusted but Not Google Verified. That completes the whitelisting of the app for your Google Drive account. </li>
         </ol>
       </li>
     </ul>
@@ -3244,9 +3227,7 @@
       <li>Login to Video Cloud Studio.</li>
       <li>In the left navigation, click <strong>Integrations</strong>.
         <p>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/integrations-module.webp" alt="integrations module">
-        </figure>
+          <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/integrations-module.webp" alt="integrations module"> </figure>
         </p>
       </li>
       <li>Click <span class="button-blue-text">Google Drive</span>.</li>
@@ -3254,58 +3235,41 @@
         <ol>
           1. Click <span class="button-blue-text">Connect account</span>.
           <p>
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/conect-account-1.webp" alt="Option one">
-          </figure>
+            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/conect-account-1.webp" alt="Option one"> </figure>
           </p>
         </ol>
         <ol>
           2. Click <span class="button-blue">Connect account</span>.
           <p>
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/connect-account-2.webp" alt="Option two">
-          </figure>
+            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/connect-account-2.webp" alt="Option two"> </figure>
           </p>
         </ol>
       </li>
       <li>A dialog opens requesting permission to access your Google account. After selecting the account you want
-        to work with, set all permissions for Brightcove to access Google Drive data. Click
-        <strong>Continue</strong>.
+        to work with, set all permissions for Brightcove to access Google Drive data. Click <strong>Continue</strong>.
         <p>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/dialog-access-window.webp" alt="dialogo access">
-        </figure>
+          <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/dialog-access-window.webp" alt="dialogo access"> </figure>
         </p>
       </li>
       <li>Select the folder where the videos you want to work on are located. Click <strong>Select</strong>.
         <p>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/select-video.webp" alt="select video">
-        </figure>
+          <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/select-video.webp" alt="select video"> </figure>
         </p>
       </li>
-      <li>A dialog confirms that the folder has been successfully ingested, and the files are now available in the
-        <strong>Media</strong> module.
+      <li>A dialog confirms that the folder has been successfully ingested, and the files are now available in the <strong>Media</strong> module.
         <p>
-        <figure class="bcls-figure">
-          <img class="bcls-image" alt="" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/connected-successfully-dialog.webp" alt="connected dialog">
-        </figure>
+          <figure class="bcls-figure"> <img class="bcls-image" alt="" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/connected-successfully-dialog.webp" alt="connected dialog"> </figure>
         </p>
       </li>
-      <li>The files are now synchronized with the <strong>Media</strong> module in <strong>inactive</strong>
-        status. For more information about the behavior of the videos in the Media module, see <a href="https://studio.support.brightcove.com/media/module/getting-started-media-module.html"> Getting
-          Started with the Media Module.</a>
+      <li>The files are now synchronized with the <strong>Media</strong> module in <strong>inactive</strong> status. For more information about the behavior of the videos in the Media module, see <a href="https://studio.support.brightcove.com/media/module/getting-started-media-module.html"> Getting
+        Started with the Media Module.</a>
         <p>
-        <figure class="bcls-figure">
-          <img class="bcls-image" alt="" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/docs-sync.webp" alt="account sync">
-        </figure>
+          <figure class="bcls-figure"> <img class="bcls-image" alt="" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/docs-sync.webp" alt="account sync"> </figure>
         </p>
         <ul>
           <li>How videos are shown in the media module:
             <p>
-            <figure class="bcls-figure">
-              <img class="bcls-image" alt="" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/videos-media-module.webp" alt="videos in media module">
-            </figure>
+              <figure class="bcls-figure"> <img class="bcls-image" alt="" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/videos-media-module.webp" alt="videos in media module"> </figure>
             </p>
           </li>
         </ul>
@@ -3315,11 +3279,9 @@
   <section class="bcls-section">
     <h2 id="notes_and_limitations">Notes and limitations</h2>
     <ul>
-      <li>
-        Currently, Brightcove will only ingest videos from the Google Drive folder. Everything in the folder will be ingested, so do not include any files that Brightcove should not have access to.
+      <li> Currently, Brightcove will only ingest videos from the Google Drive folder. Everything in the folder will be ingested, so do not include any files that Brightcove should not have access to.
         <p>If items other than video files are put in the folder, Brightcove will try to ingest them and those ingests will fail, but video objects will be created and show up in the Media module for these non-videos:</p>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/non-video-files.png" alt="Non-Video Items Ingested">
+        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/non-video-files.png" alt="Non-Video Items Ingested">
           <figcaption class="bcls-caption--image">Non-Video Items Ingested</figcaption>
         </figure>
         <p>These items can be safely deleted.</p>
@@ -3328,8 +3290,7 @@
       <li>You need to create a folder specific to Brightcove only.</li>
       <li>For each Brightcove account, only one Google Drive folder is allowed for the connection.</li>
       <li>A Google drive folder can only be connected to one Brightcove account. You can connect different Google Drive folders to different Brightcove accounts.</li>
-      <li>
-        If you have (or add) a large number of videos to the folder, they will be ingested in batches of 50 until ingestion is complete. If you have one or two videos that you need to ingest immediately, you can add those using Studio or the Dynamic Ingest API, and those videos will be prioritized ahead of the ones in your folder. 
+      <li> If you have (or add) a large number of videos to the folder, they will be ingested in batches of 50 until ingestion is complete. If you have one or two videos that you need to ingest immediately, you can add those using Studio or the Dynamic Ingest API, and those videos will be prioritized ahead of the ones in your folder.
         <aside class="bcls-aside bcls-aside--information language-editable">Also note that once ingestion has begun, all videos in the folder will be ingested, even if the folder or even the account is disconnected.</aside>
       </li>
       <li>If you remove a video from the folder and later add it back (or add another video with the same file name), it will be ingested <strong>as a new video</strong>. You cannot replace an existing video by adding a new version to the folder.</li>
@@ -3340,17 +3301,13 @@
     <p>If you wish to disconnect the folder, follow the steps below.</p>
     <ol class="bcls-tasklist-restart">
       <li>Go to the Integrations module and click on <strong>Google Drive</strong>.</li>
-      <li>
-        Click on the email address of the connection creator:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/click-on-email-for-folder-configuration.webp" alt="Click on Email Address">
+      <li> Click on the email address of the connection creator:
+        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/click-on-email-for-folder-configuration.webp" alt="Click on Email Address">
           <figcaption class="bcls-caption--image">Click on Email Address</figcaption>
         </figure>
       </li>
-      <li>
-        The connected folder will appear - click on the three dots to the right of it and select <strong>Disconnect folder</strong>:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/disconnect-folder.webp" alt="Disconnect Folder">
+      <li> The connected folder will appear - click on the three dots to the right of it and select <strong>Disconnect folder</strong>:
+        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/disconnect-folder.webp" alt="Disconnect Folder">
           <figcaption class="bcls-caption--image">Disconnect Folder</figcaption>
         </figure>
       </li>
@@ -3363,10 +3320,8 @@
     <ol class="bcls-tasklist-restart">
       <li>First <strong><a href="#disconnecting_a_folder">disconnect the folder</a></strong> using the instructions in the previous section. Disconnecting the account will fail unless the folder is disconnected first.</li>
       <li>Go to the Integrations module and click on <strong>Google Drive</strong>.</li>
-      <li>
-        Click on the three dots to right of the email address of the user who connected the account and select <strong>Disconnect account</strong>:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/disconnect-account.webp" alt="Disconnect the Account">
+      <li> Click on the three dots to right of the email address of the user who connected the account and select <strong>Disconnect account</strong>:
+        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/disconnect-account.webp" alt="Disconnect the Account">
           <figcaption class="bcls-caption--image">Disconnect the Account</figcaption>
         </figure>
       </li>
@@ -3374,6 +3329,7 @@
     <aside class="bcls-aside bcls-aside--information language-editable">Any user can reconnect the Google Drive account or a different one.</aside>
   </section>
 </article>
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
