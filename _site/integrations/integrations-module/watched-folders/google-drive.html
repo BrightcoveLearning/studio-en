@@ -3182,44 +3182,65 @@
           </ul>
         </aside>
       </li>
-      <li> You must whitelist the Brightcove app in your Google Cloud console (this must be done by an admin for the Google account):
-        <ol>
-          <li><a href="https://supportportal.brightcove.com/">Submit a Support request</a> to get the Client ID for the Brightcove Google Cloud app.</li>
-          <li> Once you have the client id from Support, in the Google Cloud Console Admin, go to <strong>Security &gt; Access and data control &gt; API controls</strong>:
-            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/google-cloud-admin-security-api-access.webp" alt="Google Cloud Console Admin">
-              <figcaption class="bcls-caption--image">Google Cloud Console Admin</figcaption>
-            </figure>
-          </li>
-          <li> Click on <strong>MANAGE THIRD PARTY APP ACCESS</strong>
-            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/google-cloud-security-manage-3rd-party-access.webp" alt="Third Party App Access">
-              <figcaption class="bcls-caption--image">Third Party App Access</figcaption>
-            </figure>
-          </li>
-          <li> Click on <strong>Add app</strong> and select <strong>OAuth App Name or Client ID</strong>:
-            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/add-app-for-access.webp" alt="Add App">
-              <figcaption class="bcls-caption--image">Add App</figcaption>
-            </figure>
-          </li>
-          <li> Enter the client id given to you by Support and search for app:
-            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/search-for-app-by-client-id.webp" alt="Search for App by Client ID">
-              <figcaption class="bcls-caption--image">Search for App by Client ID</figcaption>
-            </figure>
-          </li>
-          <li> The Brightcove app should be found - click the <strong>Select</strong> button beside it. </li>
-          <li> This will display a new dialog showing the client id for the Brightcove app - select it and click <strong>Select</strong>:
-            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/select-client-id-for-found-app.webp" alt="Select the App">
-              <figcaption class="bcls-caption--image">Select the App</figcaption>
-            </figure>
-          </li>
-          <li> A new screen opens where you can configure the app access - select <strong>Trusted: Can access all Google services</strong> and click <strong>Configure</strong>:
-            <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/configure-app-access.webp" alt="Configure App Access">
-              <figcaption class="bcls-caption--image">Configure App Access</figcaption>
-            </figure>
-          </li>
-          <li> The app will now show up in the list of configured apps as Trusted but Not Google Verified. That completes the whitelisting of the app for your Google Drive account. </li>
-        </ol>
+      <li>
+        You must whitelist the Brightcove app in your Google Cloud console - instructions follow in the <a href="#whitelisting_app">next section</a>.
       </li>
     </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="whitelisting_app">Whitelist the Brightcove app</h2>
+    <p>You must whitelist the Brightcove app in your Google Cloud console (this must be done by an admin for the Google account):</p>
+    <ol>
+      <li><a href="https://supportportal.brightcove.com/">Submit a Support request</a> to get the Client ID for the Brightcove Google Cloud app.</li>
+      <li>
+        Once you have the client id from Support, in the Google Cloud Console Admin, go to <strong>Security &gt; Access and data control &gt; API controls</strong>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/google-cloud-admin-security-api-access.webp" alt="Google Cloud Console Admin">
+          <figcaption class="bcls-caption--image">Google Cloud Console Admin</figcaption>
+        </figure>
+      </li>
+      <li>
+        Click on <strong>MANAGE THIRD PARTY APP ACCESS</strong>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/google-cloud-security-manage-3rd-party-access.webp" alt="Third Party App Access">
+          <figcaption class="bcls-caption--image">Third Party App Access</figcaption>
+        </figure>
+      </li>
+      <li>
+        Click on <strong>Add app</strong> and select <strong>OAuth App Name or Client ID</strong>:
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/add-app-for-access.webp" alt="Add App">
+            <figcaption class="bcls-caption--image">Add App</figcaption>
+          </figure>
+      </li>
+      <li>
+        Enter the client id given to you by Support and search for app:
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/search-for-app-by-client-id.webp" alt="Search for App by Client ID">
+            <figcaption class="bcls-caption--image">Search for App by Client ID</figcaption>
+          </figure>
+      </li>
+      <li>
+        The Brightcove app should be found - click the <strong>Select</strong> button beside it.
+      </li>
+      <li>
+        This will display a new dialog showing the client id for the Brightcove app - select it and click <strong>Select</strong>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/select-client-id-for-found-app.webp" alt="Select the App">
+          <figcaption class="bcls-caption--image">Select the App</figcaption>
+        </figure>
+      </li>
+      <li>
+        A new screen opens where you can configure the app access - select <strong>Trusted: Can access all Google services</strong> and click <strong>Configure</strong>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/configure-app-access.webp" alt="Configure App Access">
+          <figcaption class="bcls-caption--image">Configure App Access</figcaption>
+        </figure>
+      </li>
+      <li>
+        The app will now show up in the list of configured apps as Trusted but Not Google Verified. That completes the whitelisting of the app for your Google Drive account.
+      </li>
+    </ol>
   </section>
   <section class="bcls-section">
     <h2 id="Setting_title">Setting Up Google Drive</h2>
