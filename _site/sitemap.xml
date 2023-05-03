@@ -1082,6 +1082,15 @@
         
           <url>
             
+              <loc>https://studio.support.brightcove.com/analytics/module/qoe-analytics.html</loc>
+            
+            <lastmod>2023-05-03</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
               <loc>https://studio.support.brightcove.com/analytics/module/how-search-videos-analytics-module.html</loc>
             
             <lastmod>2023-05-03</lastmod>

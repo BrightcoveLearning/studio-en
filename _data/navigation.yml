@@ -281,6 +281,8 @@
       url: /analytics/module/getting-started-analytics-module.html
     - name: Analytics Module UI Glossary
       url: /analytics/module/analytics-module-ui-glossary.html
+    - name: Brightcove QoE Analytics
+      url: /analytics/module/qoe-analytics.html
     - name: How to Search for Videos
       url: /analytics/module/how-search-videos-analytics-module.html
     - name: 'FAQ: Analytics Module'
