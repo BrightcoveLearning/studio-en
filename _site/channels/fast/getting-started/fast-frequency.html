@@ -1,31 +1,33 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en"> 
     <head>
-        <title>Video Cloud Studio Documentation</title>
+        <title>Using Brightcove with Frequency for FAST</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
-        <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
-
+        <meta name="description" content="You can combine the power of Brightcove's video management system with Frequency's channel management tools to easily create FAST (free ad supported tv) channels for multiple platforms.">
+        
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
         <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+        <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
         
         <!-- FontAwesome JS-->
         <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
-
-        <!-- <script defer src="/assets/s-site-assets-template-stylesheets/fontawesome/js/all.min.js"></script> -->
+        
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
 
         <!-- Theme CSS -->  
         <link id="theme-style" rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/css/theme.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
         <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/custom-css/styles.css">
-        
+
+
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
         <script translate="no">
@@ -36,12 +38,14 @@
         gtag('config', 'G-XBJC11HF8Z');
         </script>
         <script src="/assets/s-site-assets-scripts/sixth-sense.js"></script>
-        <script src="assets/s-site-assets-scripts/sajari-head.js"></script>
+        <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
         <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
 
     </head> 
 
-    <body> 
+    <body class="docs-page">
+
+
 <header class="header fixed-top">
   <div class="branding docs-branding">
     <div class="container-fluid position-relative py-2">
@@ -64,103 +68,103 @@
 
       <div class="docs-top-utilities d-flex justify-content-end
         align-items-center">
+        
+        <!-- Search bar -->
+        <div id="nav-search-box" class="top-search-box d-none d-lg-flex" style="margin-right: 10px ;"></div>
 
-         <!-- Search bar -->
-         <div id="nav-search-box" class="top-search-box d-none d-lg-flex" style="margin-right: 10px ;"></div>
-
-        <select id="site_select" class="form-select select-focus" style="width:
+<select id="site_select" class="form-select select-focus" style="width:
           20%; margin-right: 10px;" translate="no">
           <option value="">Other Brightcove Docs</option>
           
           
-          <option value="https://support.brightcove.com">Documentation Home</option>
+          <option value="https://support.brightcove.com" translate="no">Documentation Home</option>
           
           
           
-          <option value="https://support.brightcove.com/">-- VIDEO CLOUD --</option>
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD --</option>
           
           
           
-          <option value="https://studio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+          <option value="https://studio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
           
           
           
-          <option value="https://mstudio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+          <option value="https://mstudio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
           
           
           
-          <option value="https://player.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+          <option value="https://player.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
           
           
           
-          <option value="https://apis.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+          <option value="https://apis.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
           
           
           
-          <option value="https://sdks.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+          <option value="https://sdks.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
           
           
           
-          <option value="https://integrations.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+          <option value="https://integrations.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
           
           
           
-          <option value="https://general.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+          <option value="https://general.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
           
           
           
-          <option value="https://support.brightcove.com/">-- VIDEO ESSENTIALS --</option>
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO ESSENTIALS --</option>
           
           
           
-          <option value="https://audience-insights.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+          <option value="https://audience-insights.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
           
           
           
-          <option value="https://beacon-help.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+          <option value="https://beacon-help.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
           
           
           
-          <option value="https://beacon.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+          <option value="https://beacon.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
           
           
           
-          <option value="https://corptv.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+          <option value="https://corptv.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
           
           
           
-          <option value="https://live.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+          <option value="https://live.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
           
           
           
-          <option value="https://zencoder.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+          <option value="https://zencoder.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
           
           
           
-          <option value="https://support.brightcove.com/">-- VIDEO CLOUD ADD-ONS --</option>
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD ADD-ONS --</option>
           
           
           
-          <option value="https://gallery.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+          <option value="https://gallery.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
           
           
           
-          <option value="https://studio.support.brightcove.com/social/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+          <option value="https://studio.support.brightcove.com/social/index.html" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
           
           
           
-          <option value="https://ssai.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+          <option value="https://ssai.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
           
           
           
-          <option value="https://campaign.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+          <option value="https://campaign.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
           
           
         </select>
 
         <select id="language_select" class="form-select select-focus" style="width: 10%;"
           onchange="doGTranslate(this);" translate="no">
-          <option value="">Select Language</option>
+          <!-- <option value="">Select Language</option> -->
           <option value="en|en" translate="No">English</option>
           <option value="en|zh-TW" translate="No">繁體中文</option>
           <option value="en|fr" translate="No">Français</option>
@@ -169,6 +173,7 @@
           <option value="en|ko" translate="No">한국어</option>
           <option value="en|es" translate="No">Español</option>
         </select>
+
         <script translate="no">
           /* <![CDATA[ */
           function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
@@ -177,15 +182,14 @@
       </div>
     </div>
   </div>
-</header>
+</header><!--//header-->
 
 <div class="docs-wrapper">
   <div id="docs-sidebar" class="docs-sidebar" style="padding-right: 15px;">
-    <!-- <div id="nav-search-box" class="top-search-box d-lg-none p-3" style="margin-left: 5px;"></div> -->
+    <div id="nav-search-box" class="top-search-box d-lg-none p-3"></div>
     <div class="row">
       
-        <div id="side_nav" style="margin-left: 1em;display:
-          inline-block;border-right: 1px solid #e5e5e6;padding-right: 1em;">
+        <div id="side_nav" style="margin-left: 1em; display: inline-block; border-right: 1px solid #e5e5e6; padding-right: 1em;">
           
           <nav class="docs-nav sidenav" aria-label="Main">
             <ul class="site-nav" style="list-style-type: none;">
@@ -3107,474 +3111,66 @@
   </div>
 </div>
 
-<div class="page-header theme-bg-dark text-center position-relative"
-    style="background:#000000; padding-top: 100px; padding-bottom: 100px;">
-    <div class="theme-bg-shapes-right"></div>
-    <div class="theme-bg-shapes-left"></div>
+<div style="margin-top: 20px;">
+  <div class="docs-content" style="padding-bottom: 0px;">
     <div class="container">
-        <!-- <h1 class="page-heading single-col-max mx-auto" style="color: transparent; -webkit-text-stroke: 2px white; text-transform:uppercase;">Video Cloud Studio
-            </h1> -->
-        <h1 class="page-heading single-col-max mx-auto" style="text-transform: uppercase;">Video Cloud Studio Documentation</h1>
-        <div class="page-intro single-col-max mx-auto">With Video Cloud you can deliver fast, innovative, TV-like experiences out-of-the-box, dynamically insert server-side ads to maximize revenue, and reach your audiences wherever they are.
-
-Video Cloud Studio allows you to manage your video publishing workflow across desktop, tablet and mobile devices.</div>
-            <!-- Search bar -->
-        <!-- <div id="nav-search-box" class="main-search-box pt-3 d-block mx-auto"></div> -->
+      <div class="docs-overview">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/channels/">Channels</a></li>
+            
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/channels/fast/">Fast</a></li>
+            
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/channels/fast/getting-started/">Getting started</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Using Brightcove with Frequency for FAST</li>
+            
+            
+          </ol>
+        </nav>
+      </div>
     </div>
-</div><!--//page-header-->
-<!-- begin main contents -->
-<div class="page-content">
-    <div class="container">
-      <div class="docs-overview py-5">
-  
-      <div class="row justify-content-center">
-        
-        <div class="col-12 col-lg-4 py-3">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                  <i class="fa-solid fa-map-pin"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">Getting Started</span>
-              </h5>
-              <div class="card-text">
-                Just getting started with Video Cloud Studio?
-              </div>
-              
-              <a class="card-link-mask" href="/get-started/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->         
-        </div><!--//col-->
-
-        <div class="col-12 col-lg-4 py-3">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                    <i class="fa-regular fa-photo-film"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">Managing Videos</span>
-              </h5>
-              <div class="card-text">
-                Learn how to upload and manage videos.
-              </div>
-              <a class="card-link-mask" href="/media/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
-
-        <div class="col-12 col-lg-4 py-3">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                    <i class="fa-regular fa-play"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">Managing Players</span>
-              </h5>
-              <div class="card-text">
-                Learn how to create and style players.              
-            </div>
-              <a class="card-link-mask" href="/players/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
-
-        <div class="col-12 col-lg-4 py-3">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                    <i class="fa-regular fa-display-code"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">Publishing Videos & Players</span>
-              </h5>
-              <div class="card-text">
-                Learn different ways of publishing your videos and players.   
-            </div>
-              <a class="card-link-mask" href="/publish/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
-          
-        <div class="col-12 col-lg-4 py-3">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                    <i class="fa-regular fa-gear"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">Reviewing Analytics</span>
-              </h5>
-              <div class="card-text">
-                Learn about the types of analytics that are available.            
-            </div>
-              <a class="card-link-mask" href="/analytics/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
-
-        <div class="col-12 col-lg-4 py-3">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                    <i class="fa-regular fa-share-nodes"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">Social Sharing</span>
-              </h5>
-              <div class="card-text">
-                Learn how to share videos out to social media accounts.         
-            </div>
-              <a class="card-link-mask" href="/social/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
-
-        <div class="col-12 col-lg-4 py-3">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                    <i class="fa-regular fa-satellite-dish"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">Live Streaming</span>
-              </h5>
-              <div class="card-text">
-                The Live module is used to broadcast live events to both desktop and mobile devices.          
-            </div>
-              <a class="card-link-mask" href="/live/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
-
-        <div class="col-12 col-lg-4 py-3">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                    <i class="fa-regular fa-hand-back-point-up"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">Interactivity</span>
-              </h5>
-              <div class="card-text">Brightcove Interactivity allows you to add interactivity to videos, including calls to action, chapters, click-to-buy, branching, and polls.</div>
-              <a class="card-link-mask" href="/interactivity/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
-          
-        <div class="col-12 col-lg-4 py-3">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                  <i class="fa-light fa-calendar-week"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">Managing Channels</span>
-              </h5>
-              <div class="card-text">
-                Learn how to create and manage linear channels of video and live programs.
-              </div>
-              <a class="card-link-mask" href="/channels/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
-
-        <div class="col-12 col-lg-4 py-3 collapse multi-collapse">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                    <i class="fa-regular fa-chart-network"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">Marketing Automation</span>
-              </h5>
-              <div class="card-text">
-                Learn how to connect Video Cloud with popular marketing automation platforms to track viewer engagement.            
-            </div>
-              <a class="card-link-mask" href="/campaign/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
-
-        <div class="col-12 col-lg-4 py-3 collapse multi-collapse">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                    <i class="fa-regular fa-puzzle-piece-simple"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">Integrations</span>
-              </h5>
-              <div class="card-text">
-                Learn about Video Cloud integrations with other platforms.            
-            </div>
-              <a class="card-link-mask" href="/integrations/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
-
-        <div class="col-12 col-lg-4 py-3 collapse multi-collapse">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                    <i class="fa-regular fa-gear"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">Administration</span>
-              </h5>
-              <div class="card-text">
-                Learn how to connect Video Cloud with popular marketing automation platforms to track viewer engagement.            
-            </div>
-              <a class="card-link-mask" href="/admin/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
-
-        <div class="col-12 col-lg-4 py-3 collapse multi-collapse">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                    <i class="fa-regular fa-circle-info"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">General Information</span>
-              </h5>
-              <div class="card-text">
-                General information about Video Cloud Studio and working with videos in Video Cloud       
-            </div>
-              <a class="card-link-mask" href="/general/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
-
-        <div class="col-12 col-lg-4 py-3 collapse multi-collapse">
-          <div class="card card-hover shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title mb-3">
-                <span class="span-icon card-icon-holder icon-theme me-2" >
-                    <i class="fa-regular fa-memo-pad"></i>
-                  </span><!--//card-icon-holder-->
-                  <span class="card-title-text">Release Notes</span>
-              </h5>
-              <div class="card-text">
-                Learn how to connect Video Cloud with popular marketing automation platforms to track viewer engagement.            
-            </div>
-              <a class="card-link-mask" href="/release-notes/index.html"></a>
-            </div><!--//card-body-->
-          </div><!--//card-->
-        </div><!--//col-->
-        
-
-
-       
-        
-      </div><!--//row-->
-      <div class="row justify-content-center" style="width: 100%;">
-        <button class="btn btn-outline-dark" id="show_more_btn" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2" style="border: 2px solid black; width: 200px; border-radius: 50px;">SHOW MORE</button>
-      </div>
-
-      <script>
-        const btn = document.getElementById('show_more_btn');
-        let flag = true;
-
-        btn.addEventListener('click', () => {
-          if (flag === true) {
-            btn.textContent = 'SHOW LESS'
-            flag = false;
-          } else {
-            btn.textContent = 'SHOW MORE'
-            flag = true;
-          }
-        });
-      </script>
+  </div>
+</div>
+<div class="docs-content">
+  <div class="container">
+    <div class="docs-overview py-5">
       
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br>
+      
+      <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
 
-<!-- <h1>Video Cloud Studio Documentation</h1>
+<h1>Using Brightcove with Frequency for FAST</h1>
 <article class="bcls-article">
-  <section class="card-wrapper">
-    <section onclick="window.location.pathname = '/get-started/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/get-started/index.html">Getting Started</a></h2>
-        <p>Just getting started with Video Cloud Studio?</p>
-        <ul>
-          <li><a href="/get-started/getting-started-video-cloud-studio.html">Getting Started with Video Cloud Studio</a></li>
-          <li><a href="/get-started/step-step-video-cloud-studio-publishing-workflow.html">Step-by-Step:  Video Cloud Studio Publishing Workflow</a></li>
-          <li><a href="get-started/training/register-training.html">Instructor-led Training</a></li>
-        </ul>
-        <p><a href="/get-started/index.html">View All...</a></p>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/media/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/media/index.html">Managing Videos</a></h2>
-        <p>Learn how to upload and manage videos.</p>
-        <ul>
-          <li><a href="/media/getting-started-media-module.html">Getting Started with the Media Module</a></li>
-          <li><a href="/media/editing-video-properties-using-media-module.html">Editing Video Properties</a></li>
-          <li><a href="/media/organizing-videos-using-folders.html">Organizing Videos Using Folders</a></li>
-          <li><a href="/media/uploading-poster-and-thumbnail-images.html">Uploading Poster and Thumbnail Images</a></li>
-        </ul>
-        <p><a href="/media/index.html">View All...</a></p>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/cloud-playout/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/cloud-playout/index.html">Managing Cloud Playout Channels</a></h2>
-        <p>Learn how to create and manage linear channels using Cloud Playout.</p>
-        <ul>
-          <li><a href="/cloud-playout/cloud-playout-overview.html">Overview: Cloud Playout</a></li>
-          <li><a href="/cloud-playout/cloud-playout-stream-vod.html">Creating a Cloud Playout Channel</a></li>
-          <li><a href="/cloud-playout/publishing/using-channel-actions.html">Using Channel Actions</a></li>
-        </ul>
-        <p><a href="/cloud-playout/index.html">View All...</a></p>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/players/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/players/index.html">Managing Players</a></h2>
-        <p>Learn how to create and style players.</p>
-        <ul>
-          <li><a href="/players/getting-started-players-module.html">Getting Started with the Players Module</a></li>
-          <li><a href="/players/styling-players.html">Styling Players</a></li>
-          <li><a href="/players/configuring-player-controls.html">Configuring Player Controls</a></li>
-          <li><a href="/players/configuring-social-properties-player.html">Configuring the Social Properties</a></li>
-        </ul>
-        <p><a href="/players/index.html">View All...</a></p>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/publish/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/publish/index.html">Publishing Videos & Players</a></h2>
-        <p>Learn how to publish videos to the web and to social media.</p>
-        <ul>
-          <li><a href="/publish/publishing-videos-and-playlists-media-module.html">Publishing Videos and Playlists</a></li>
-          <li><a href="/publish/publishing-video-email.html">Publishing a Video to Email</a></li>
-          <li><a href="/publish/choosing-correct-embed-code.html">Choosing the Correct Embed Code</a></li>
-        </ul>
-        <p><a href="/publish/index.html">View All...</a></p>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/social/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/social/index.html">Social Sharing</a></h2>
-        <p>Learn how to share videos out to social media accounts.</p>
-        <ul>
-          <li><a href="/social/creating-social-media-publishing-destinations.html">Creating Social Media Publishing Destinations</a></li>
-          <li><a href="/social/publishing-videos-social-media-platforms.html">Publishing Videos to Social Media Platforms</a></li>
-          <li><a href="/social/using-auto-sync-synchronize-videos-social-media-accounts.html">Using Auto Sync to Synchronize Videos to Social Media Accounts</a></li>
-        </ul>
-        <p><a href="/social/index.html">View All...</a></p>
-      </div>
-    </section>
-<section onclick="window.location.pathname = '/live/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/live/index.html">Live Streaming</a></h2>
-        <p>Learn how to deliver live streaming video.</p>
-        <ul>
-          <li><a href="/live/get-started/delivering-live-streams.html">Delivering Live Streams</a></li>
-          <li><a href="/live/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a></li>
-          <li><a href="/live/live-module/creating-video-clip-using-live-module.html">Creating a Video Clip</a></li>
-        </ul>
-        <p><a href="/live/index.html">View All...</a></p>
-      </div>
-    </section>
-<section onclick="window.location.pathname = '/interactivity/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/interactivity/index.html">Interactivity</a></h2>
-        <p>Learn how to add interactivity to videos.</p>
-        <ul>
-          <li><a href="/interactivity/getting-started/configuring-player-plugin.html">Configuring a Player with the HapYak plugin</a></li>
-          <li><a href="/interactivity/getting-started/getting-started-interactivity.html">Getting Started with Interactivity</a></li>
-          <li><a href="/interactivity/getting-started/interactive-video-types.html">Interactive Video Types</a></li>
-        </ul>
-        <p><a href="/interactivity/index.html">View All...</a></p>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/campaign/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/campaign/index.html">Marketing Automation</a></h2>
-        <p>Learn how to track video engagement and integrate with marketing automation platforms.</p>
-        <ul>
-          <li><a href="/campaign/get-started/getting-started-campaign-module.html">Getting Started with the Campaign Module</a></li>
-          <li><a href="/campaign/general/creating-campaign-enabled-player.html">Creating a Campaign-enabled Player</a></li>
-          <li><a href="/campaign/integrations/index.html">Marketing Automation Platform Integrations</a></li>
-        </ul>
-        <p><a href="/campaign/index.html">View All...</a></p>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/analytics/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/analytics/index.html">Reviewing Analytics</a></h2>
-        <p>Learn how to view video analytics to see how your videos are performing.</p>
-        <ul>
-          <li><a href="/analytics/performance-report-reference.html">Performance Report Reference</a></li>
-          <li><a href="/analytics/engagement-report-reference.html">Engagement Report Reference</a></li>
-          <li><a href="/analytics/creating-custom-analytics-reports.html">Creating Custom Analytics Reports</a></li>
-        </ul>
-        <p><a href="/analytics/index.html">View All...</a></p>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/admin/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/admin/index.html">Administering Accounts</a></h2>
-        <p>Learn how to administer a Video Cloud account.</p>
-        <ul>
-          <li><a href="/admin/managing-users.html">Managing Users</a></li>
-          <li><a href="/admin/managing-account-settings.html">Managing Account Settings</a></li>
-          <li><a href="/admin/creating-custom-metadata-fields.html">Creating Custom Metadata Fields</a></li>
-        </ul>
-        <p><a href="/admin/index.html">View All...</a></p>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/general/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/general/index.html">General Information</a></h2>
-        <p>General information about Video Cloud Studio.</p>
-        <ul>
-          <li><a href="/general/architecture/overview-dynamic-delivery.html">Overview of Dynamic Delivery</a></li>
-          <li><a href="/general/architecture/overview-context-aware-encoding.html">Overview of Context Aware Encoding</a></li>
-          <li><a href="/general/architecture/video-cloud-architecture-overview.html">Video Cloud Architecture Overview</a></li>
-          <li><a href="/general/references/video-source-file-specifications-and-recommendations.html">Video Source File Recommendations</a></li>
-        </ul>
-        <p><a href="/general/index.html">View All...</a></p>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/get-started/training/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2 id="training"><a href="/get-started/training/index.html">Training</a></h2>
-        <p>On-Demand training and  product training videos.</p>
-        <ul>
-          <li><a href="/get-started/training/training-demand-video-cloud-basics.html">Training on Demand: Video Cloud Basics</a></li>
-          <li><a href="/get-started/training/training-demand-introduction-video-cloud.html">Training on Demand: Introduction to Video Cloud</a></li>
-          <li><a href="/get-started/training/training-demand-introduction-video-cloud-analytics.html">Training on Demand:  Introduction to Video Cloud Analytics</a></li>
-          <li><a href="/get-started/training/video-cloud-studio-training-videos.html">Video Cloud Studio Training Videos</a></li>
-        </ul>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/release-notes/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/release-notes/index.html">Release Notes</a></h2>
-        <p>Learn about new product features and updates.</p>
-        <ul>
-          <li><a href="https://support.brightcove.com/product-updates.html#video_cloud">Video Cloud Studio Release Notes</a></li>
-        </ul>
-      </div>
-    </section>
-    <section onclick="window.location.pathname = '/support/index.html';" class="bcls-card">
-      <div class="card-content">
-        <h2><a href="/support/index.html">Support</a></h2>
-        <p>Have a question or need help?</p>
-        <ul>
-          <li><a href="/support/viewing-brightcove-system-status-page.html">View Brightcove System Status</a></li>
-          <li><a href="/support/opening-case-with-brightcove-support.html">Open a Support Case</a></li>
-        </ul>
-      </div>
-    </section>
+  <summary>You can combine the power of Brightcove's video management system with Frequency's channel management tools to easily create FAST (free ad supported tv) channels for multiple platforms.</summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
+    <p>FAST (free ad supported tv) is an increasingly popular way of stream recorded and live content to large audiences at no charge, while getting revenue from ads. The Brightcove-Frequency solution allows you to combine a powerful platform for managing your video content with Frequencies tools for building and maintaining channels that can be delivered to the platform(s) of your choice.</p>
   </section>
-</article> -->
-
+</article>
+<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">Page Contents</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
+  
+<!-- </div> -->
 </div>
 </div>
 </div>
@@ -3595,6 +3191,7 @@ Video Cloud Studio allows you to manage your video publishing workflow across de
           <h5 class="h5-text">Training</h5>
           <ul class="list-unstyled text-small">
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li>
+            <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a></li>
             <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
           </ul>
         </div>
@@ -3636,8 +3233,8 @@ Video Cloud Studio allows you to manage your video publishing workflow across de
   </div>
 </div>
 
+
 <script translate="no">
-      
   var searchBox = sajari.init({
     mode: "search-box",
     project: "1588255093746585379", // Set this to your project.
@@ -3668,73 +3265,77 @@ Video Cloud Studio allows you to manage your video publishing workflow across de
   
   </script>
   
-    <!-- Javascript -->          
-    <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
-    <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-    
-    <!-- Page Specific JS -->
-    <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-    <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script> 
-    <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
-    <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
-    <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
-    
-    <!-- original footer components -->
+  <!-- Javascript -->          
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    
-    <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
-    <script src="/assets/s-site-assets-scripts/setDate.js"></script>
-    <script src="/assets/s-site-assets-scripts/selector.js"></script>
-    
-    <script src="/assets/s-site-assets-scripts/prism.js"></script>
-    
-    <script src="/assets/s-site-assets-scripts/site.js"></script>
-    <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
-    <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
-    <script src="/assets/s-site-assets-scripts/tabs.js"></script>
-    <!-- <script src="/assets/s-site-assets-scripts/hide-nav.js"></script> -->
-    <script src="/assets/js/sites_nav.js"></script>
-    <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
-    <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
-    <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
-    <script src="/assets/js/feedback.js"></script>
-    
-    <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
-    
-    <script translate="no">
-      feather.replace()
-    </script>
-    <!-- <script src="/assets/js/sajari-index.js"></script> -->
-    <script src="/assets/s-site-assets-scripts/in-app.js"></script>
-    <style translate="no">
-      a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
-        background-color: lightblue;
-      }
-      div.sj-tabs__tab {
-        margin-top: 3rem;
-        margin-left: .3rem;
-        border-top-left-radius: .4rem;
-        border-top-right-radius: .4rem;
-        background-color:#e8e8e8;
-      }
 
-      div.sj-tabs__tab.sj-tabs__tab--selected {
-        border-bottom-color: crimson;
-        background-color: #f8f8f8;
-      }
+  <!-- Page Specific JS -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+  <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+  <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
 
-      p.sj-results__result__description.css-p9jvyt {
-        font-size: 1rem;
-      }
+  <!-- original footer components -->
 
-      .sj-result__text.css-31l7gp h3 {
-        color: navy;
-        font-size: 1.4rem;
-      }
-      </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  <script src="/assets/s-site-assets-scripts/selector.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
 
   </body>
 </html> 
