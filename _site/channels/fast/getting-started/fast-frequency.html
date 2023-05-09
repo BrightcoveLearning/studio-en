@@ -3160,8 +3160,151 @@
   <summary>You can combine the power of Brightcove's video management system with Frequency's channel management tools to easily create FAST (free ad supported tv) channels for multiple platforms.</summary>
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>FAST (free ad supported tv) is an increasingly popular way of stream recorded and live content to large audiences at no charge, while getting revenue from ads. The Brightcove-Frequency solution allows you to combine a powerful platform for managing your video content with Frequencies tools for building and maintaining channels that can be delivered to the platform(s) of your choice.</p>
+    <p>FAST (free ad supported tv) is an increasingly popular way of stream recorded and live content to large audiences at no charge, while getting revenue from ads. The Brightcove-Frequency solution allows you to combine a powerful platform for managing your video content with Frequencies tools for building and maintaining channels that can be delivered to the platform(s) of your choice. Below is a high-level view of the process, and the steps will be explained in detail in the sections that follow:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/Brightcove-Frequency.svg" alt="Brightcove-Frequency Process Map">
+      <figcaption class="bcls-caption--image">Brightcove-Frequency Process Map</figcaption>
+    </figure>
   </section>
+  <section class="bcls-section">
+    <h2 id="Upload_videos_to_Brightcove">Upload videos to Brightcove</h2>
+    <p>The easiest way to upload videos to Brightcove is to use the Upload module in Studio.</p>
+    <h3>Steps</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>In a browser window, navigate to <a href="https://studio.brightcove.com">https://studio.brightcove.com</a>.</li>
+      <li>Enter your credentials and click <strong>Sign In</strong>.</li>
+      <li>Click <strong>Upload</strong> to open the Upload module.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Go to Upload Module" src="/assets/images/get-started/node18825-upload-menu.png" /></figure>
+      </li>
+      <li>
+        In the Upload module, select an ingest profile.
+        <aside class="bcls-aside bcls-aside--information language-editable">Note that FAST channels require a particular set of renditions to provide optimum viewing on different devices. Brightcove Support will have created a custom profile for your account that meets these requirements - <strong>be sure to use this profile for videos that you want transferred to frequency.com.</strong>. If you are only going to be uploading videos to be transferred to frequency.com, you should <a href="/admin/ingest-profiles/managing-ingest-profiles.html#default">set this as the default profile for your account</a>.</aside>
+      </li>
+      <li>Click <span class="button-blue">Browse for Videos</span> and browse and select your videos or all of the sample videos that were provided.</li>
+      <li>The page will display all the videos and the upload progress.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-upload-progress.png" /></figure>
+        <p><strong>While uploads are in a processing state, do not close or move away from the browser window.</strong> Doing so may cause an incomplete upload.</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-video-processing.png" /></figure>
+        <p>When the upload is complete, a <strong>Processing Complete</strong> status will display. This indicates the processing has completed and it is safe to navigate from the Upload module.</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-video-processing-complete.png" /></figure>
+        <aside class="bcls-aside bcls-aside--information">Note: It is possible to click the <strong>Edit</strong> button next to the filename to edit some of the video metadata. Adding video metadata is covered in the next section</aside>
+      </li>
+    </ol>
+    <p>If you need more details, see <a href="/media/manage/uploading-videos-using-upload-module.html">Uploading Videos Using the Upload Module</a>.</p>
+    <p>If you would rather use Brightcove's APIs to add videos, see the <a href="https://apis.support.brightcove.com/dynamic-ingest/index.html">Dynamic Ingest API</a>.</p>
+  </section>
+  <section class="bcls-section">
+  <h2 id="Edit_video_metadata">Edit video metadata</h2>
+  <p>There are many items of video metadata that you can edit if you wish to. General instructions on editing video metadata can be found in <a href="/media/properties/index.html">Video Properties</a>.</p>
+  <p>In this section, we will only cover the custom fields that contain data that is supported on frequency.com:</p>
+  <figure class="bcls-figure">
+  <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/custom-fields.webp" alt="Custom Fields for Brightcove-Frequency">
+  <figcaption class="bcls-caption--image">Custom Fields for Brightcove-Frequency</figcaption>
+</figure>
+<aside class="bcls-aside bcls-aside--information language-editable">Note that these fields are all <strong>optional</strong>, except for <strong>Publish for FAST</strong>, which is used to tell Brightcove to <a href="#push_to_frequency">send the video to frequency.com</a> as explained in a later section.</aside>
+<p>To edit the custom fields:</p>
+<ol class="bcls-tasklist-restart">
+  <li>In Video Cloud Studio, click <strong>Media</strong> to open the Media module.</li>
+  <li>Click the video title you want to edit to open its metadata properties.</li>
+  <li>
+    Find the <strong>Custom Fields</strong> section and click <strong>Edit</strong> to edit the fields:
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/edit-custom-fields.webp" alt="Edit Custom Fields">
+      <figcaption class="bcls-caption--image">Edit Custom Fields</figcaption>
+    </figure>
+  </li>
+</ol>
+<dl>
+  <dt>Content Format</dt>
+  <dd>
+    The general kind of content the video contains
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/content-format-options.webp" alt="Content Format Options">
+      <figcaption class="bcls-caption--image">Content Format Options</figcaption>
+    </figure>
+  </dd>
+  <dt>Content Type</dt>
+  <dd>
+    A set of common TV content types:
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/content-type-options.webp" alt="Content Type Options">
+      <figcaption class="bcls-caption--image">Content type Options</figcaption>
+    </figure>
+  </dd>
+  <dt>Cut</dt>
+  <dd>
+    A set of options to indicate whether this a full episode, clip, etc.:
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/cut-options.webp" alt="Cut Options">
+      <figcaption class="bcls-caption--image">Cut Options</figcaption>
+    </figure>
+  </dd>
+  <dt>Episode Number</dt>
+  <dd>
+    If this is an episode in a season, you can indicate which one (an integer).
+  </dd>
+  <dt>FAST Keywords</dt>
+  <dd>
+    A comma-delimited list of keywords - the primary purpose of these is to help surface the content in the results of viewer searches.
+  </dd>
+  <dt>Genre</dt>
+  <dd>
+    A set of options to specify the genre of the video:
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/genre-options.webp" alt="Genre Options">
+      <figcaption class="bcls-caption--image">Genre Options</figcaption>
+    </figure>
+  </dd>
+  <dt>Parental Rating</dt>
+  <dd>
+    A set of options to specify the Parental Rating of the video:
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/parental-rating-options.webp" alt="Parental Rating Options">
+      <figcaption class="bcls-caption--image">Parental Rating Options</figcaption>
+    </figure>
+  </dd>
+  <dt>Periodicity</dt>
+  <dd>
+    A set of options to specify how this video repeats:
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/periodicity-options.webp" alt="Periodicity Options">
+      <figcaption class="bcls-caption--image">Periodicity Options</figcaption>
+    </figure>
+  </dd>
+  <dt>Publish for FAST</dt>
+  <dd>
+    You should <strong>not</strong> set this to <code translate="No">true</code> until you are ready for the video to be sent to frequency.com
+  </dd>
+  <dt>Region</dt>
+  <dd>
+    A set of country/territory codes to indicate the country of origin or the intended country of distribution.
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/region-options.webp" alt="Region Options">
+      <figcaption class="bcls-caption--image">Region Options</figcaption>
+    </figure>
+  </dd>
+  <dt>Season Number</dt>
+  <dd>
+    Enter a number to indicate which season this episode belongs to.
+  </dd>
+  <dt>Series Description</dt>
+  <dd>
+    A description of the <em>series</em> appropriate for IMDB or similar databases. Remember that if you have a collection of videos that make up a series, the description for series should be used for each of them.
+  </dd>
+  <dt>Series GUID</dt>
+  <dd>
+    A universally unique identifier for the <em>series</em> - if you do not have your own system for generating GUIDs, there are several online apps you can use such as <a href="https://guidgenerator.com/">Online GUID / UUID Generator</a>. Remember that if you have a collection of videos that make up a series, the GUID for series should be used for each of them.
+  </dd>
+  <dt>Series Title</dt>
+  <dd>
+    A Title of the <em>series</em> appropriate for IMDB or similar databases. Remember that if you have a collection of videos that make up a series, the title for series should be used for each of them.
+  </dd>
+</dl>
+</section>
+<section class="bcls-section">
+  <h2 id="push_to_frequency">Send videos to Frequency</h2>
+  <p>Set the <strong>Publish for FAST</strong> custom field to <code translate="No">true</code> when you are ready to have the video sent to Frequency. Note that it will take a little time for the information to be sent and processed by frequency.com, but you should expect to see them show up there within 30 minutes.</p>
+</section>
 </article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
