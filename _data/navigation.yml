@@ -804,6 +804,21 @@
   url: /integrations/index.html
   icon: fa-regular fa-puzzle-piece-simple
   docs:
+  - name: Integrations Module
+    url: /integrations/integrations-module/index.html
+    docs:
+      - name: Getting Started
+        url: /integrations/integrations-module/getting-started/index.html
+        docs: 
+          - name: Overview of the Integrations Module
+            url: /integrations/integrations-module/getting-started/getting-started-integrations-module.html
+      - name: Watched Folders
+        url: /integrations/integrations-module/watched-folders/index.html
+        docs:
+          - name: Setting Up an Automatic Ingestion Folder on Dropbox
+            url: /integrations/integrations-module/watched-folders/dropbox.html
+          - name: Setting Up an Automatic Ingestion Folder on Google Drive
+            url: /integrations/integrations-module/watched-folders/google-drive.html
   - name: Salesforce Sales Cloud
     url: /integrations/salesforce-sales-cloud/index.html
     docs:
