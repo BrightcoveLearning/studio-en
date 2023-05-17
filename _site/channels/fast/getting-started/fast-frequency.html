@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Using Brightcove with Frequency for FAST</title>
+        <title></title>
         
         <!-- Meta -->
         <meta charset="utf-8">
-        <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="You can combine the power of Brightcove's video management system with Frequency's channel management tools to easily create FAST (free ad supported tv) channels for multiple platforms.">
+        <meta name="description" content="">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -16,6 +15,7 @@
         <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
         
         <!-- FontAwesome JS-->
+        
         <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
         
         <!-- Plugins CSS -->
@@ -44,7 +44,7 @@
     </head> 
 
     <body class="docs-page">
-
+        
 
 <header class="header fixed-top">
   <div class="branding docs-branding">
@@ -3193,7 +3193,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Using Brightcove with Frequency for FAST</li>
+            <li class="breadcrumb-item active" aria-current="page"></li>
             
             
           </ol>
@@ -3213,13 +3213,13 @@
       </div>
       <br>
       
-      <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
-<h1>Using Brightcove with Frequency for FAST</h1>
+      
+<h1></h1>
 <article class="bcls-article">
-  <summary>You can combine the power of Brightcove's video management system with Frequency's channel management tools to easily create FAST (free ad supported tv) channels for multiple platforms.</summary>
+  <summary></summary>
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>FAST (free ad supported tv) is an increasingly popular way of stream recorded and live content to large audiences at no charge, while getting revenue from ads. The Brightcove-Frequency solution allows you to combine a powerful platform for managing your video content with Frequencies tools for building and maintaining channels that can be delivered to the platform(s) of your choice. Below is a high-level view of the process, and the steps will be explained in detail in the sections that follow:</p>
+    <p>FAST (free ad supported tv) is an increasingly popular way to stream recorded and live content to large audiences at no charge, while getting revenue from ads. The Brightcove-Frequency solution allows you to combine a powerful platform for managing your video content with Frequency's tools for building and maintaining channels that can be delivered to the platform(s) of your choice. Below is a high-level view of the process, and the steps will be explained in detail in the sections that follow:</p>
     <figure class="bcls-figure">
       <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/Brightcove-Frequency.svg" alt="Brightcove-Frequency Process Map">
       <figcaption class="bcls-caption--image">Brightcove-Frequency Process Map</figcaption>
@@ -3227,8 +3227,12 @@
   </section>
   <section class="bcls-section">
     <h2 id="Upload_videos_to_Brightcove">Upload videos to Brightcove</h2>
-    <p>The easiest way to upload videos to Brightcove is to use the Upload module in Studio.</p>
-    <h3>Steps</h3>
+    <p>There are two ways to add videos to Brightcove:</p>
+    <ul>
+      <li>Use the Upload module in Studio (following the steps below)</li>
+      <li>Use the <a href="https://apis.support.brightcove.com/dynamic-ingest/index.html">Dynamic Ingest API</a></li>
+    </ul>
+    <h3>Steps for uploading videos in Studio</h3>
     <ol class="bcls-tasklist-restart">
       <li>In a browser window, navigate to <a href="https://studio.brightcove.com">https://studio.brightcove.com</a>.</li>
       <li>Enter your credentials and click <strong>Sign In</strong>.</li>
@@ -3237,7 +3241,7 @@
       </li>
       <li>
         In the Upload module, select an ingest profile.
-        <aside class="bcls-aside bcls-aside--information language-editable">Note that FAST channels require a particular set of renditions to provide optimum viewing on different devices. Brightcove Support will have created a custom profile for your account that meets these requirements - <strong>be sure to use this profile for videos that you want transferred to frequency.com.</strong>. If you are only going to be uploading videos to be transferred to frequency.com, you should <a href="/admin/ingest-profiles/managing-ingest-profiles.html#default">set this as the default profile for your account</a>.</aside>
+        <aside class="bcls-aside bcls-aside--information language-editable">Note that FAST channels require a particular set of renditions to provide optimum viewing on different devices. Brightcove Support will have created a custom profile for your account that meets these requirements - <strong>be sure to use this profile for videos that you want transferred to Frequency.</strong>. If you are only going to be uploading videos to be transferred to Frequency, you should <a href="/admin/ingest-profiles/managing-ingest-profiles.html#default">set this as the default profile for your account</a>.</aside>
       </li>
       <li>Click <span class="button-blue">Browse for Videos</span> and browse and select your videos or all of the sample videos that were provided.</li>
       <li>The page will display all the videos and the upload progress.
@@ -3250,7 +3254,6 @@
       </li>
     </ol>
     <p>If you need more details, see <a href="/media/manage/uploading-videos-using-upload-module.html">Uploading Videos Using the Upload Module</a>.</p>
-    <p>If you would rather use Brightcove's APIs to add videos, see the <a href="https://apis.support.brightcove.com/dynamic-ingest/index.html">Dynamic Ingest API</a>.</p>
   </section>
   <section class="bcls-section">
     <h2 id="Edit_video_metadata">Edit video metadata</h2>
@@ -3259,26 +3262,22 @@
     <ul>
       <li>Poster and thumbnail images</li>
       <li>
-        Custom fields that created specifically for FAST (these are supported by frequency.com):
-     <figure class="bcls-figure">
-       <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/custom-fields.webp" alt="Custom Fields for Brightcove-Frequency">
-       <figcaption class="bcls-caption--image">Custom Fields for Brightcove-Frequency</figcaption>
-     </figure>
-     <aside class="bcls-aside bcls-aside--information language-editable">Note that these fields are all <strong>optional</strong>, except for <strong>Publish for FAST</strong>, which is used to tell Brightcove to <a href="#push_to_frequency">send the video to frequency.com</a> as explained in a later section.</aside>
+        Custom fields that created specifically for FAST (these are supported by Frequency). Note that the field names may be different for your account based on your configuration:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/custom-fields.webp" alt="Custom Fields for Brightcove-Frequency">
+          <figcaption class="bcls-caption--image">Custom Fields for Brightcove-Frequency</figcaption>
+        </figure>
+        <aside class="bcls-aside bcls-aside--information language-editable">Note that the <strong>Publish for FAST</strong> field is used to tell Brightcove to <a href="#push_to_frequency">send the video to Frequency</a> as explained in a later section.</aside>
       </li>
     </ul>
-    <h3>Poster and Thumbnail images</h3>
-    <p>By default, Brightcove captures the poster and thumbnail images at the midpoint of the video during processing. If these images are satisfactory for use in your FAST channel, you do not need to do anything. If you wish to change the images, you have two options:</p>
+    <h3>Poster image</h3>
+    <p>By default, Brightcove captures the poster image at the midpoint of the video during processing. If this image are satisfactory for use in your FAST channel, you do not need to do anything. If you wish to change the images, you have two options:</p>
     <ul>
       <li><a href="/media/properties/capturing-poster-and-thumbnail-images.html">Capture a different image from the video</a></li>
       <li>
         Upload new images by clicking the upload icon on the poster and thumbnail.
         <aside class="bcls-aside bcls-aside--information language-editable">
-          Note that for uploaded images, the aspect ratio must be 16:9, and the minimum sizes are:
-          <ul>
-            <li>poster: 1280px x 720px</li>
-            <li>thumbnail: 160px x 90px</li>
-          </ul>
+          Note that for uploaded images, the aspect ratio must be 16:9, and the minimum size is 1280px x 720px.
           <p>JPG and PNG formats are accepted.</p>
         </aside>
       </li>
@@ -3339,7 +3338,7 @@
       </dd>
       <dt>Parental Rating</dt>
       <dd>
-        A set of options to specify the Parental Rating of the video:
+        A set of options to specify the Parental Rating of the video - the options vary for different countries:
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/parental-rating-options.webp" alt="Parental Rating Options">
           <figcaption class="bcls-caption--image">Parental Rating Options</figcaption>
@@ -3355,7 +3354,7 @@
       </dd>
       <dt>Publish for FAST</dt>
       <dd>
-        You should <strong>not</strong> set this to <code translate="No">true</code> until you are ready for the video to be sent to frequency.com
+        You should <strong>not</strong> set this to <code translate="No">true</code> until you are ready for the video to be sent to Frequency or if the video is <strong>not</strong> for FAST.
       </dd>
       <dt>Region</dt>
       <dd>
@@ -3371,7 +3370,7 @@
       </dd>
       <dt>Series Description</dt>
       <dd>
-        A description of the <em>series</em> appropriate for IMDB or similar databases. Remember that if you have a collection of videos that make up a series, the description for series should be used for each of them.
+        A description of the <em>series</em> that will be displayed in the FAST platform experience. Remember that if you have a collection of videos that make up a series, the description for series should be used for each of them.
       </dd>
       <dt>Series GUID</dt>
       <dd>
@@ -3379,17 +3378,18 @@
       </dd>
       <dt>Series Title</dt>
       <dd>
-        A Title of the <em>series</em> appropriate for IMDB or similar databases. Remember that if you have a collection of videos that make up a series, the title for series should be used for each of them.
+        A Title of the <em>series</em> that will be displayed in the FAST platform experience. Remember that if you have a collection of videos that make up a series, the title for series should be used for each of them.
       </dd>
     </dl>
   </section>
   <section class="bcls-section">
     <h2 id="push_to_frequency">Send videos to Frequency</h2>
-    <p>Set the <strong>Publish for FAST</strong> custom field to <code translate="No">true</code> when you are ready to have the video sent to Frequency. Note that it will take a little time for the information to be sent and processed by frequency.com, but you should expect to see them show up there within 30 minutes.</p>
+    <p>Set the <strong>Publish for FAST</strong> custom field to <code translate="No">true</code> when you are ready to have the video sent to Frequency. Note that it will take a little time for the information to be sent and processed by Frequency, but you should expect to see them show up there within 30 minutes.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Remember <strong>not</strong> to set this field to <code translate="No">true</code> if this video will not be part of a FAST channel.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="create_edit_channels">Create and edit FAST channels</h2>
-    <p>Once your videos are pushed to frequency.com, you can create and edit your FAST channel(s) by logging into your account there. See the Frequency <a href="https://docs.frequency.com/en/user-guides.html">User Guides</a> for instructions.</p>
+    <p>Once your videos are pushed to Frequency, you can create and edit your FAST channel(s) by logging into your account there. See the Frequency <a href="https://docs.frequency/en/user-guides.html">User Guides</a> for instructions.</p>
   </section>
 </article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
