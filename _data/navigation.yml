@@ -573,6 +573,8 @@
           url: '/interactivity/analytics/gradebook-report-reference.html'
         - name: 'Interactive Video Tracking Events'
           url: '/interactivity/analytics/interactive-video-tracking-events.html'
+        - name: 'Brightcove Interactivity Heartbeat Module Update'
+          url: '/interactivity/analytics/getting-up-to-the-minute-data.html'
     - name: 'General Information'
       url: '/interactivity/general/index.html'
       icon: fa-regular fa-circle-info
