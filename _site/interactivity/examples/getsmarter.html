@@ -3223,61 +3223,63 @@
       
       
 <style>
-* {
-  box-sizing: border-box;
-}
+    * {
+        box-sizing: border-box;
+    }
 
-/* Create two unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 10px;
-}
+    /* Create two unequal columns that floats next to each other */
+    .column {
+        float: left;
+        padding: 10px;
+    }
 
-.left {
-  width: 75%;
-}
+    .left {
+        width: 75%;
+    }
 
-.right {
-  width: 25%;
-}
+    .right {
+        width: 25%;
+    }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
 </style>
 <h1>Getsmarter</h1>
 <article class="bcls-article">
-  <summary></summary>
-  <section class="bcls-section">
-    <div class="row">
-      <div class="column left">
-        <div style="max-width: 960px;">
-          <style>
-video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode) {padding-top: 56.25%;}
-</style>
-          <video-js data-account="1752604059001" data-player="tTstQb2r7E" data-embed="default"  id="myPlayerID" controls="" data-video-id="1742506884277922912" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
+    <summary></summary>
+    <section class="bcls-section">
+        <div class="row">
+            <div class="column left">
+                <div style="width: 960px;"><video-js data-account="1752604059001" data-player="UivhMH9oq"
+                        data-embed="default" controls="" data-video-id="1742506884277922912"
+                        data-interactivity-project-id="646f8dcbb01c1800170e4c14" data-application-id="" width="960"
+                        height="540" class="vjs-fluid"></video-js></div>
+                <script src="https://players.brightcove.net/1752604059001/UivhMH9oq_default/index.min.js"></script>
+            </div>
+            <div class="column right"> <img
+                    src="/assets/images/s-brightcove-interactivity-img/examples/Logo_GetSmarter.png">
+                <p><br />
+                    <strong>Categories:</strong> Training & Education
+                </p>
+                <p><strong>Featured Annotations:</strong></p>
+                <p><button type="button" class="bcls-button" onclick="myPlayer.currentTime(9);">Quiz</button></p>
+            </div>
         </div>
-        <script src="https://players.brightcove.net/1752604059001/tTstQb2r7E_default/index.min.js"></script> 
-      </div>
-      <div class="column right"> <img src="/assets/images/s-brightcove-interactivity-img/examples/Logo_GetSmarter.png">
-        <p><br/>
-          <strong>Categories:</strong> Training & Education</p>
-        <p><strong>Featured Annotations:</strong></p>
-        <p><button type="button" class="bcls-button" onclick="myPlayer.currentTime(9);">Quiz</button></p>
-      </div>
-    </div>
-  </section>
+    </section>
 </article>
 <script>
-  var myPlayer;
-  videojs('myPlayerID').ready(function () {
-    myPlayer = this;
-  });
+    var myPlayer;
+    videojs('myPlayerID').ready(function () {
+        myPlayer = this;
+    });
 
 </script>
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
