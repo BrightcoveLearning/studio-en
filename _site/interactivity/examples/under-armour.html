@@ -3255,10 +3255,18 @@
     <section class="bcls-section">
         <div class="row">
             <div class="column left">
-                <div style="width: 960px;"><video-js data-account="1752604059001" data-player="UivhMH9oq"
-                        data-embed="default" controls="" data-video-id="1742506883763014353"
-                        data-interactivity-project-id="646f8dcd54410b001c0417ea" data-application-id="" width="960"
-                        height="540" class="vjs-fluid"></video-js></div>
+                <div style="max-width: 960px;">
+                    <style>video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode) {padding-top: 56.25%;}</style>
+                    <video-js data-account="1752604059001" 
+                            data-player="UivhMH9oq" 
+                            data-embed="default" 
+                            controls="" 
+                            data-video-id="1742506883763014353" 
+                            data-playlist-id="" 
+                            data-application-id="" 
+                            class="vjs-fluid">
+                    </video-js>
+                </div>
                 <script src="https://players.brightcove.net/1752604059001/UivhMH9oq_default/index.min.js"></script>
             </div>
             <div class="column right"> <img
@@ -3267,17 +3275,21 @@
                     <strong>Categories:</strong> eCommerce
                 </p>
                 <p><strong>Featured Annotations:</strong></p>
-                <p><button type="button" class="bcls-button" onclick="myPlayer.currentTime(3);">Add to Cart</button></p>
+                <p><button type="button" class="bcls-button" id="addToCart">Add to Cart</button></p>
             </div>
         </div>
     </section>
 </article>
 <script>
     var myPlayer;
-    videojs('myPlayerID').ready(function () {
-        myPlayer = this;
+    videojs.getPlayer('myPlayerID').ready(function() {
+        var myPlayer = this;
     });
 
+    document.getElementById('addToCart').addEventListener('click', function(){
+        // myPlayer.currentTime(3);
+        console.log('player',myPlayer);
+    });
 </script>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
