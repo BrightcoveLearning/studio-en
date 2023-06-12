@@ -36,39 +36,20 @@ parent: Getting Started
     <section class="bcls-section">
         <div class="row">
             <div class="column left">
-                <div style="max-width: 960px;">
-                    <style>video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode) {padding-top: 56.25%;}</style>
-                    <video-js data-account="1752604059001" 
-                            data-player="UivhMH9oq" 
-                            data-embed="default" 
-                            controls="" 
-                            data-video-id="1742506883763014353" 
-                            data-playlist-id="" 
-                            data-application-id="" 
-                            class="vjs-fluid">
-                    </video-js>
-                </div>
-                <script src="https://players.brightcove.net/1752604059001/UivhMH9oq_default/index.min.js"></script>
+                <iframe src="https://players.brightcove.net/1752604059001/UivhMH9oq_default/index.html?videoId=1742506883763014353&interactivityProjectId=646f8dcd54410b001c0417ea" allowfullscreen="" allow="encrypted-media" width="960" height="540"></iframe>    
             </div>
-            <div class="column right"> <img
-                    src="/assets/images/s-brightcove-interactivity-img/examples/underarmour-logo.png">
+            <div class="column right"> 
+                <img src="/assets/images/s-brightcove-interactivity-img/examples/underarmour-logo.png">
                 <p><br />
                     <strong>Categories:</strong> eCommerce
                 </p>
-                <p><strong>Featured Annotations:</strong></p>
-                <p><button type="button" class="bcls-button" id="addToCart">Add to Cart</button></p>
+                <p><strong>Featured Annotations with estimated minutes:</strong></p>
+                <ul>
+                    <li><p><strong>Add to Cart:</strong> min 0:03</p></li>
+                </ul>
+                
+                <!-- <p><button type="button" class="bcls-button" id="addToCart">Add to Cart</button></p> -->
             </div>
         </div>
     </section>
 </article>
-<script>
-    var myPlayer;
-    videojs.getPlayer('myPlayerID').ready(function() {
-        var myPlayer = this;
-    });
-
-    document.getElementById('addToCart').addEventListener('click', function(){
-        // myPlayer.currentTime(3);
-        console.log('player',myPlayer);
-    });
-</script>

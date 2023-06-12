@@ -35,29 +35,19 @@ parent: Getting Started
   <section class="bcls-section">
     <div class="row">
       <div class="column left">
-                <div style="max-width: 960px;">
-          <style>
-video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode) {padding-top: 56.25%;}
-</style>
-          <video-js data-account="1752604059001"  id="myPlayerID" data-player="tTstQb2r7E" data-embed="default" controls="" data-video-id="1742506884274719444" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
+        <iframe src="https://players.brightcove.net/1752604059001/UivhMH9oq_default/index.html?videoId=1742506884274719444&interactivityProjectId=646f8dc754410b001c0416fd" allowfullscreen="" allow="encrypted-media" width="960" height="540"></iframe>
         </div>
-        <script src="https://players.brightcove.net/1752604059001/tTstQb2r7E_default/index.min.js"></script>
-      </div>
       <div class="column right"> <img src="/assets/images/s-brightcove-interactivity-img/examples/hp.png">
         <p><br/>
           <strong>Categories:</strong> Marketing</p>
-        <p><strong>Featured Annotations:</strong></p>
-        <p><button type="button" class="bcls-button" onclick="myPlayer.currentTime(7);">Branching</button></p>
-        <p><button type="button" class="bcls-button" onclick="myPlayer.currentTime(27);">Links</button></p>
-        <p><button type="button" class="bcls-button" onclick="myPlayer.currentTime(136);">Call to Action</button></p>
+        <p><strong>Featured Annotations with estimated minutes: </strong></p>
+        <ul>
+          <li> <p><strong>Branching:</strong>  min 0:09 - min 16:00</p></li>
+          <li><p><strong>Links:</strong> min 0:09</p></li>
+          <li><p><strong>Call to Action:</strong> min 14:15</p></li>
+        </ul>
+        
       </div>
     </div>
   </section>
 </article>
-<script>
-  var myPlayer;
-  videojs('myPlayerID').ready(function () {
-    myPlayer = this;
-  });
-
-</script>
