@@ -5,6 +5,7 @@
         
         <!-- Meta -->
         <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="In this topic you will learn about integrating Audience Insights with S3,">
@@ -15,7 +16,6 @@
         <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
         
         <!-- FontAwesome JS-->
-        
         <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
         
         <!-- Plugins CSS -->
@@ -44,7 +44,7 @@
     </head> 
 
     <body class="docs-page">
-        
+
 
 <header class="header fixed-top">
   <div class="branding docs-branding">
@@ -3221,19 +3221,16 @@
       </div>
       <br>
       
-      
+      <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
 <h1>Integration: S3</h1>
 <article class="bcls-article">
   <summary>In this topic you will learn about integrating Audience Insights with S3,</summary>
 
-  <h1>Integration: S3</h1>
-<article class="bcls-article">
-  <summary>In this topic you will learn about integrating Audience Insights with S3,</summary>
-  <section class="bcls-section">
+    <section class="bcls-section">
     <h2 id="About_the_S3_integration">About the S3 integration</h2>
     <p>When the S3 integration is set up, Brightcove creates an AWS S3 bucket that Audience Insights reports are automatically exported to on a daily or weekly basis (depending on the setup). One or more AWS admins in the customer Brightcove account are given access to the S3 bucket and can grant access to other users so that they can review the reports.</p>
   </section>
-</article>
+
 
   <section class="bcls-section">
   <h2 id="Overview">Overview</h2>
@@ -3258,39 +3255,114 @@
     <li>
       Use the left navigation to go to the Integrations module:
       <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integrations-module-home.png" alt="Go to Integrations Module">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integrations-module-home.webp" alt="Go to Integrations Module">
         <figcaption class="bcls-caption--image">Go to Integrations Module</figcaption>
+      </figure>
+    </li>
+    <li>
+      Click <strong>Customer Data Platforms</strong> to open it:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/customer-data-platforms-home.webp" alt="Custom Data Platforms Home">
+        <figcaption class="bcls-caption--image">Custom Data Platforms Home</figcaption>
+      </figure>
+    </li>
+    <li>Click <span class="button-blue">Add Integration</span></li>
+    <li>
+      Select S3 from the <strong>Destination</strong> dropdown:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/destination-dropdown.webp" alt="Destination Dropdown">
+        <figcaption class="bcls-caption--image">Destination Dropdown</figcaption>
+      </figure>
+    </li>
+    <li>
+      In the Add Integration dialog, enter your AWS account id, choose daily or weekly report exports, and enter one or more email addresses to be notified in case of export errors:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/add-integration-dialog.webp" alt="Add Integration Dialog">
+        <figcaption class="bcls-caption--image">Add Integration Dialog</figcaption>
+      </figure>
+    </li>
+    <li>Click <span class="button-blue">Save</span> to create the integration.</li>
+  </ol>
+  <p>Note that you can edit the integration details later by returning the Customer Data Services home page and clicking the <img src="/assets/images/s-integrations-img/customer-data-playforms/s3/edit-icon.webp" alt="Edit Icon">.</p>
+</section>
+
+
+  
+  <section class="bcls-section">
+  <h2 id="Setting_up_user_permissions">Set up user permissions</h2>
+  <p>Follow the steps below to set up user permissions to view the S3 bucket that reports are exported to.</p>
+  <h3>Create policy</h3>
+  <ol class="bcls-tasklist-restart">
+    <li>
+      Log into your AWS account and navigate to the IAM page. From there click Policies, then Create Policy as shown below:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/policies-create-policy-button.webp" alt="Create AWS Policy">
+        <figcaption class="bcls-caption--image">Create AWS Policy</figcaption>
+      </figure>
+    </li>
+    <li>
+      On the policy page, switch to the JSON policy editor and paste the following policy as shown in the image below:
+      <h4>JSON for policy</h4>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Effect": "Allow",
+          "Action": [
+              "s3:GetObject"
+          ],
+          "Resource": [
+          <span class="bcls-highlight">"arn:aws:s3:::reports.wicketlabs.com/*"</span>
+          ]
+      },
+      {
+          "Effect": "Allow",
+          "Action": "s3:ListBucket",
+          "Resource": <span class="bcls-highlight">"arn:aws:s3:::reports.wicketlabs.com"</span>
+      }
+  ]
+}</code></pre>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/create-policy-json.webp" alt="Paste JSON into Policy Editor">
+        <figcaption class="bcls-caption--image">Paste JSON into Policy Editor</figcaption>
+      </figure>
+    </li>
+    <li>
+      Name the policy, add a description, and create the policy:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/review-and-create-policy.webp" alt="Add Name/Description">
+        <figcaption class="bcls-caption--image">Add Name/Description</figcaption>
+      </figure>
+    </li>
+  </ol>
+  <h3>Attach policy to users</h3>
+  <ol class="bcls-tasklist">
+    <li>
+      From the IAM page, click on the Users tab and select the user to be updated. From the user details page pictured below, click  <span class="button-blue">Add Permissions</span>:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/iam-users-page.webp" alt="IAM Users">
+        <figcaption class="bcls-caption--image">IAM Users</figcaption>
+      </figure>
+    </li>
+    <li>
+      From the permissions page, click on the button to <strong>Attach existing policies directly</strong>. Use the filter to find the policy created earlier. Attach this policy and save the user. The user will now have access to the Wicket Labs report s3 bucket:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/s3/add-permissions-to-user.webp" alt="Attach Existing Policy">
+        <figcaption class="bcls-caption--image">Attach Existing Policy</figcaption>
       </figure>
     </li>
   </ol>
 </section>
 
-
-
-  <h1>Integration: S3</h1>
-<article class="bcls-article">
-  <summary>In this topic you will learn about integrating Audience Insights with S3,</summary>
-  <section class="bcls-section">
-    <h2 id="setup">Setup</h2>
-    <h3>Requirements</h3>
-    <ul>
-      <li>The person following this guide is an admin user in the Audience Insights scorecard.</li>
-      <li>The person following this guide has access to the AWS account specified when setting up the publishing integration and has permissions to update user permissions.</li>
-    </ul>
-    <h3>Steps</h3>
-    <ol class="bcls-tasklist-restart">
-      <li>
-        Log in to the Scorecard and click the <strong>gear</strong> icon at the top right and then click <strong>Settings</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/" alt="Scorecard Settings">
-          <figcaption class="bcls-caption--image">Scorecard Settings</figcaption>
-        </figure>
-      </li>
-    </ol>
+    <section class="bcls-section">
+    <h2 id="Viewing_reports">Viewing exported reports</h2>
+    <p>Reports are stored in an S3 bucket located at <code translate="No">s3://reports.wicketlabs.com/production/<span class="bcls-input">yourWicketLabsAccountId</span>/</code>.  Reports can be accessed through the AWS console using the link provided in the Wicket Labs setting page. To locate the link, navigate to the settings page, edit the S3 publish integration, and click on the link as shown below:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/" alt="Link to Published Reports">
+      <figcaption class="bcls-caption--image">Link to Published Reports</figcaption>
+    </figure>
   </section>
-</article>
-  
-  <!-- include s-audience-insights/integration/s3-setup-user-permissions.html -->
+
   
   </article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
