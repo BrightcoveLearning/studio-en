@@ -43,15 +43,19 @@ parent: Managing Videos
       <li><a href="#categorization">Categorization</a></li>
       <li><a href="#videofiles">Video Files</a></li>
       <li><a href="#mediasharing">Media Sharing</a></li>
+      <!-- COMMENT THIS ONE ONCE THE UI IS RELEASED -->
       <li><a href="#audiotracks">Audio Tracks</a></li>
       <li><a href="#images">Images</a></li>
+      <!-- COMMENT THIS ONE ONCE THE UI IS RELEASED -->
       <li><a href="#videoviews">Video Views</a></li>
       <li><a href="#customfields">Custom Fields</a></li>
       <li><a href="#availability">Availability</a></li>
       <li><a href="#playback">Playback Restrictions</a></li>
-      <li><a href="#texttracks">Tracks</a></li>
-      <!-- <li><a href="#analytics">Analytics</a></li>
-      <li><a href="#social">Social</a></li> -->
+      <!-- COMMENT THIS ONE ONCE THE UI IS RELEASED -->
+      <li><a href="#texttracks">Text Tracks</a></li>
+      <li><a href="#tracks">Tracks</a></li>
+      <li><a href="#analytics">Analytics</a></li>
+      <li><a href="#social">Social Activity</a></li>
     </ul>
     <p>To edit the video properties, click the <strong>Edit</strong> button in the section or double-click in the section. Some sections allow properties to be edited directly (i.e. Categorization).</p>
   </section>
@@ -143,6 +147,7 @@ parent: Managing Videos
     <p>If the video has been shared to an affiliate account, the Media Sharing section will be displayed and list the affiliates the video has been shared to. For more information on media sharing, see <a href="/media/general/media-sharing-using-media-module.html">Media Sharing using the Media Module</a>.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-media-sharing.png" /></figure>
   </section>
+  <!-- COMMENT OUT THIS SECTION WHEN THE RELEASE IS DONE -->
   <section class="bcls-section">
     <h2 id="audiotracks">Audio Tracks</h2>
     <p>If the video was uploaded and transcoded using a Dynamic Delivery or Context Aware Encoding ingest profile, the Audio Tracks section will be displayed and contain information on the audio renditions that are available. For information on adding additional audio tracks to a video, see <a href="/media/captions/adding-audio-tracks-videos-using-media-module.html">Adding Audio Tracks to Videos using the Media Module</a>.</p>
@@ -154,6 +159,7 @@ parent: Managing Videos
     <p>The Images section displays the poster and thumbnail images for the video. Poster and thumbnail images are created automatically by taking a snapshot from the source video at the midway point. If you don't like the default images that were captured, you can <a href="/media/properties/capturing-poster-and-thumbnail-images.html">capture new images</a> or <a href="/media/properties/uploading-poster-and-thumbnail-images.html">upload other images</a> to use as the poster and thumbnail. Hover over the Poster/Thumbnail image and click the view icon (<img alt="" src="/assets/images/media/view-icon.png" />) to open the image in a new browser tab.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-images.png" /></figure>
   </section>
+  <!-- COMMENT OUT THIS SECTION WHEN THE RELEASE IS DONE -->
   <section class="bcls-section">
     <h2 id="videoviews">Video Views</h2>
     <p>The Video Views section displays the number of video views for the past 30 days. Click the links to open the Performance or Engagement Reports for more information.</p>
@@ -175,9 +181,41 @@ parent: Managing Videos
     <p>The Playback Restrictions section displays any playback restrictions. For more information on configuring playback restrictions, see <a href="/admin/general/managing-playback-rights.html">Managing Playback Rights</a>.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-playback-rights.png" /></figure>
   </section>
+  <!-- COMMENT OUT THIS SECTION WHEN THE RELEASE IS DONE -->
   <section class="bcls-section">
     <h2 id="texttracks">Text Tracks</h2>
     <p>The Text Tracks section can be used to add text tracks to the video. For more information on configuring text tracks, see <a href="/media/captions/adding-captions-videos-using-media-module.html">Adding Captions to Videos using the Media Module</a>.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-text-tracks.png" /></figure>
   </section>
+
+<!-- UNCOMMENT THESE SECTIONS WHEN THE RELEASE IS DONE -->
+  <!-- <section class="bcls-section">
+    <h2 id="tracks">Tracks</h2>
+    <p>Below the <strong>Tracks</strong> tab are the <strong>Text Tracks</strong> and <strong>Audio Tracks</strong> sections.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details/tracks-tab.webp" /></figure>
+
+    <h3>Text Tracks</h3>
+    <p>The Text Tracks section can be used to add text tracks to the video. For more information on configuring text tracks, see <a href="/media/captions/adding-captions-videos-using-media-module.html">Adding Captions to Videos using the Media Module</a>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details/text-tracks.webp" /></figure>
+
+    <h3>Audio Tracks</h3>
+    <p>If the video was uploaded and transcoded using a Dynamic Delivery or Context Aware Encoding ingest profile, the Audio Tracks section will be displayed and contain information on the audio renditions that are available. For information on adding additional audio tracks to a video, see <a href="/media/captions/adding-audio-tracks-videos-using-media-module.html">Adding Audio Tracks to Videos using the Media Module</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The Audio Tracks section will not be displayed if the video was transcoded using a Legacy ingest profile.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details/audio-tracks.webp" /></figure>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="analytics">Analytics</h2>
+    <p>Below the <strong>Analytics</strong> tab, the <strong>Video Views</strong> section displays the number of video views for the past 30 days. Click the links to open the Performance or Engagement Reports for more information.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-views.png" /></figure>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="social">Social Activity</h2>
+    <p>Below the <strong>Social activity</strong> tab, you can find information about your social activity, destinations, and status. You can also access to see the post and delete it.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details/social-tab.webp" /></figure>
+    <p>For more information about Social, see <a href="https://studio.support.brightcove.com/social/module/getting-started-brightcove-social.html">Getting Started with Brightcove Social</a>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details/social.webp" /></figure>
+  </section> -->
+
 </article>
