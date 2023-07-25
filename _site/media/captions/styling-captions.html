@@ -156,10 +156,6 @@
           <option value="https://ssai.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
           
           
-          
-          <option value="https://campaign.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
-          
-          
         </select>
 
         <select id="language_select" class="form-select select-focus" style="width: 10%;"
@@ -3230,6 +3226,9 @@
     <p>There are a few ways that captions can be styled:</p>
     <ul>
       <li><a href="#infile">By adding styling options to the WebVTT file</a></li>
+       <!-- if site.product_short == "Video Cloud" -->
+      <!-- <li><a href="#studio">By adding styling options in the Video Properties section.</a></li> -->
+       <!-- endif  -->
       <li><a href="#cssguide">CSS style guide</a></li>
       <li><a href="#user">User styling options</a></li>
     </ul>
@@ -3257,6 +3256,22 @@
     <p>Because the Brightcove Player manages the positioning of captions, you can not use styles to change the location or orientation of the captions. The inline styles don't provide many styling options. For a greater variety of styling options, you can use a CSS file as described in the next section.</p>
     <p>For details about inline styles, see <a href="https://www.w3.org/TR/webvtt1/#styling">this link</a>.</p>
   </section>
+   <!-- if site.product_short == "Video Cloud"  -->
+  <!-- <section class="bcls-section">
+    <h2 id="studio">Adding styling options in the Video Properties section</h2>
+    <p>Style options can be added in the <a href="https://studio.support.brightcove.com/media/properties/editing-video-properties-using-media-module.html">Video Properties</a> section. Here are the steps to style captions:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Media</strong> module.</li>
+      <li>Click the link for the video you want to edit to open the video properties.</li>
+      <li>Locate the preview player at the top of the page, play the video, and click <img src="/assets/images/media/video-details/captions-option.webp" alt=""> on the player controls.
+      </li>
+      <li>Select the <strong>captions settings</strong> option.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details/caption-settings.webp" /></figure>
+      </li>
+      <li>Edit the style as needed. Click <strong>Done</strong>.</li>
+    </ol>
+  </section> -->
+   <!-- else  -->
   <section class="bcls-section">
     <h2 id="cssguide">CSS Style Guide</h2>
     <p>This table shows which CSS properties are and are not supported for styling captions with the Brightcove Player:</p>
@@ -3372,19 +3387,20 @@
     <h2 id="user">User styling of captions</h2>
     <p>For users on iOS devices, caption styling is controlled through the iOS Settings. To access the settings select <strong>Settings</strong> &gt; <strong>General</strong> &gt; <strong>Accessibility</strong> &gt; <strong>Subtitles &amp; Captioning</strong> &gt; <strong>Style</strong>. Here you can select a predefined style or create new styles.</p>
     <p>Viewers on desktop and Android devices can change the appearance of the captions by using the captions settings menu.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/node15481-caption-settings-menu.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details/caption-settings.webp" /></figure>
     <p>Clicking on the captions settings menu will display an overlay which allows the following caption properties to be set:</p>
     <ul>
-      <li>Foreground color and opacity</li>
-      <li>Background color and opacity</li>
-      <li>Window color and opacity</li>
-      <li>Font size</li>
-      <li>Text edge style</li>
+      <li>Tect</li>
+      <li>Font Size</li>
+      <li>Background</li>
+      <li>Text Edge Style</li>
+      <li>Window</li>
       <li>Font family</li>
     </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/node15481-caption-settings.png" /></figure>
-    <p>Click <strong>Defaults</strong> to return the captions to their default styling.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details/captions-menu.webp" /></figure>
+    <p>Click <strong>Reset</strong> to return the captions to their default styling.</p>
   </section>
+  <!--  endif  -->
   <section class="bcls-section">
     <h2 id="limitations">Limitations</h2>
     <p>Captions are supported on the following device types and operating systems.</p>

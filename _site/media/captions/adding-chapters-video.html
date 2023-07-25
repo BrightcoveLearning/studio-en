@@ -156,10 +156,6 @@
           <option value="https://ssai.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
           
           
-          
-          <option value="https://campaign.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
-          
-          
         </select>
 
         <select id="language_select" class="form-select select-focus" style="width: 10%;"
@@ -3228,8 +3224,8 @@
   <section class="bcls-section">
       <p>Chapters make it easier for viewers to go to a specific point in a video.  This is especially helpful for longer form videos.  Rather than scrubbing through the video, a chapter menu can be used to jump to a specific point in the video.</p>
     
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5167166949001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+    <!-- <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="5167166949001">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> -->
    
     <aside class="bcls-aside bcls-aside--information language-editable">Note: The Interactivity module can also be used to easily add chapters to a video. For information, see the <a href="/interactivity/annotations/adding-chapters-video.html">Adding Chapters to a Video</a> topic in the Interactivity documentation.</aside>
 </section>
@@ -3244,7 +3240,6 @@
   </section>
   <section class="bcls-section">
     <h2 id="code">How it works</h2>
-    <aside class="bcls-aside bcls-aside--information">Please take into account that to have the chapters name displayed in upper case, the Player would need to be set to version 6.18.3+.</aside>
     <p>Chaptered video requires:</p>
     <ul>
       <li>A Brightcove player - no special properties, styling, or plugins required</li>
@@ -3285,10 +3280,13 @@ Dolphins</code></pre>
       <p>The WebVTT file can be associated with a video in any of three ways:</p>
       <ol>
         <li>Upload the WebVTT file using the <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">Ingesting WebVTT Files</a> document in the <span translate="No">Dynamic Ingest API</span> information.</li>
+        
+        
         <li>Add the URL for the WebVTT file in the <a href="/media/captions/adding-captions-videos-using-media-module.html">Text Track properties for the video in Studio</a> - be sure to set the <code translate="No">Kind</code> to <code translate="No">Chapters</code>:
-          <figure class="bcls-figure"><img class="bcls-image" alt="studio text track settings" src="/assets/images/s-media-img/captions/node18078-text-tracks-studio.png" /></figure>
+          <figure class="bcls-figure"><img class="bcls-image" alt="studio text track settings" src="/assets/images/media/video-details/adding-chapters.webp" /></figure>
           <aside class="bcls-aside bcls-aside--information">Note that the <code translate="No">default</code> value is not per track, but set to <code translate="No">true</code> for all tracks of the same language (<code translate="No">srclang</code>)</aside>
         </li>
+        
         <li>Reference the WebVTT file URL in a <code translate="No">&lt;track&gt;</code> tag to the in-page embed code:
           <pre class="line-numbers">
             <code class="language-html" translate="No">&lt;video-js
@@ -3326,6 +3324,7 @@ Dolphins</code></pre>
     <p class="player-only">Since you will need to add a <code translate="No">track</code> tag to the <code translate="No">video</code> for the .vtt file, you will need to use the in-page embed for chaptered video.</p>
     <p>No additional plugins, CSS, or JavaScript code is required.</p>
   </section>
+  
 </article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
