@@ -3223,25 +3223,21 @@
         box-sizing: border-box;
     }
 
-    /* Create two unequal columns that floats next to each other */
-    .column {
-        float: left;
-        padding: 10px;
+    .wrapper {
+        position: relative;
+        overflow: hidden;
+        
     }
 
-    .left {
-        width: 75%;
-    }
-
-    .right {
-        width: 25%;
-    }
-
-    /* Clear floats after the columns */
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
+    .wrapper iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
     }
 
 </style>
@@ -3250,14 +3246,16 @@
     <summary></summary>
     <section class="bcls-section">
         <div class="row">
-            <div class="column left">
-                <div style="width: 960px;"><video-js data-account="1752604059001" data-player="UivhMH9oq"
+            <div class="col-sm-12 col-md-9">
+                <div class="wrapper">
+                    <video-js data-account="1752604059001" data-player="UivhMH9oq"
                         data-embed="default" controls="" data-video-id="1742506884277922912"
-                        data-interactivity-project-id="646f8dcbb01c1800170e4c14" data-application-id="" width="960"
-                        height="540" class="vjs-fluid"></video-js></div>
-                <script src="https://players.brightcove.net/1752604059001/UivhMH9oq_default/index.min.js"></script>
+                        data-interactivity-project-id="646f8dcbb01c1800170e4c14" data-application-id="" class="vjs-fluid"></video-js>
+                </div>
+                    <script src="https://players.brightcove.net/1752604059001/UivhMH9oq_default/index.min.js"></script>
+                
             </div>
-            <div class="column right"> <img
+            <div class="col-6 col-md-3 mt-5 mt-md-0"> <img
                     src="/assets/images/s-brightcove-interactivity-img/examples/Logo_GetSmarter.png">
                 <p><br />
                     <strong>Categories:</strong> Training & Education

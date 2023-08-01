@@ -3223,25 +3223,21 @@
         box-sizing: border-box;
     }
 
-    /* Create two unequal columns that floats next to each other */
-    .column {
-        float: left;
-        padding: 10px;
+    .wrapper {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
     }
 
-    .left {
-        width: 75%;
-    }
-
-    .right {
-        width: 25%;
-    }
-
-    /* Clear floats after the columns */
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
+    .wrapper iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
     }
 
 </style>
@@ -3250,11 +3246,13 @@
     <summary></summary>
     <section class="bcls-section">
         <div class="row">
-            <div class="column left">
-                <iframe src="https://players.brightcove.net/1752604059001/UivhMH9oq_default/index.html?videoId=1742506884173089111&interactivityProjectId=646f8dcdb01c1800170e4c42" allowfullscreen="" allow="encrypted-media" width="960" height="540"></iframe>
+            <div class="col-sm-12 col-md-9">
+                <div class="wrapper">
+                    <iframe src="https://players.brightcove.net/1752604059001/UivhMH9oq_default/index.html?videoId=1742506884173089111&interactivityProjectId=646f8dcdb01c1800170e4c42" allowfullscreen="" allow="encrypted-media"></iframe>
+                </div>
             </div>
-            <div class="column right"> <img
-                    src="/assets/images/s-brightcove-interactivity-img/examples/konica-thumbnail.png">
+            <div class="col-6 col-md-3 mt-5 mt-md-0"> <img
+                    src="/assets/images/s-brightcove-interactivity-img/examples/Konica-Minolta-Logo.png">
                 <p><br />
                     <strong>Categories:</strong> Training & Education
                 </p>
