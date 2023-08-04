@@ -17,12 +17,28 @@
     <pubDate>Thu, 15 Jun 2017 15:53:15 GMT</pubDate>
     <lastBuildDate>Tue, 14 Jul 2021 11:29:57 GMT</lastBuildDate>
     <item>
+      <title>Analytics Segments</title>
+      <link>https://studio.support.brightcove.com/analytics/reports/segments-report.html</link>
+      <description>The Segments feature, found in Custom Reports, allows you to create audience segments of your audience based on video viewing/engagement metrics.</description>
+      <author>author</author>
+      <pubDate>Tue, 1 Aug 2023 11:00:00 GMT</pubDate>
+      <source url="https://studio.support.brightcove.com/analytics/reports/segments-report.html">Analytics Documentation</source>
+    </item>
+    <item>
+      <title>New Video Details UI</title>
+      <link>https://studio.support.brightcove.com/media/properties/editing-video-properties-using-media-module.html</link>
+      <description>In this topic you will learn how to edit video properties using the Media module.</description>
+      <author>author</author>
+      <pubDate>Mon, 31 Jul 2023 11:00:00 GMT</pubDate>
+      <source url="https://studio.support.brightcove.com/media/properties/editing-video-properties-using-media-module.html">Video Cloud Studio Documentation</source>
+    </item>
+    <item>
       <title>New Interactivity Module</title>
       <link>https://studio.support.brightcove.com/interactivity/index.html</link>
       <description>The Interactivity module makes it easy to add interactivity to videos.</description>
       <author>author</author>
       <pubDate>Mon, 17 Apr 2023 11:00:00 GMT</pubDate>
-      <source url="https://studio.support.brightcove.com/interactivity/index.html">Interactivity Documentation</source>
+      <source url="https://studio.support.brightcove.com/interactivity/index.html"></source>
     </item>
     <item>
       <title>Publish to Instagram</title>

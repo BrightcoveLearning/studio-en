@@ -307,6 +307,8 @@
       url: /analytics/reports/managing-scheduled-reports.html
     - name: Performance Report Reference
       url: /analytics/reports/performance-report-reference.html
+    - name: Segment Sync
+      url: /analytics/reports/segments-report.html
     # - name: Trending Now Report Reference
     #   url: /analytics/reports/trending-now-report-reference.html
   - name: General Information
