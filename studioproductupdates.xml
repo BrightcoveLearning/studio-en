@@ -17,7 +17,7 @@
     <pubDate>Thu, 15 Jun 2017 15:53:15 GMT</pubDate>
     <lastBuildDate>Tue, 14 Jul 2021 11:29:57 GMT</lastBuildDate>
     <item>
-      <title>Analytics Segments</title>
+      <title>Segment Sync</title>
       <link>https://studio.support.brightcove.com/analytics/reports/segments-report.html</link>
       <description>The Segments feature, found in Custom Reports, allows you to create audience segments of your audience based on video viewing/engagement metrics.</description>
       <author>author</author>
@@ -25,12 +25,12 @@
       <source url="https://studio.support.brightcove.com/analytics/reports/segments-report.html">Analytics Documentation</source>
     </item>
     <item>
-      <title>New Video Details UI</title>
-      <link>https://studio.support.brightcove.com/media/properties/editing-video-properties-using-media-module.html</link>
-      <description>In this topic you will learn how to edit video properties using the Media module.</description>
+      <title>Audience sync</title>
+      <link>https://studio.support.brightcove.com/integrations/integrations-module/customer-data-platforms/audience-sync-configuration.html</link>
+      <description>User sync uses Brightcove's Audience Insights technology to integrate with marketing automation platforms (MAPs) and customer relationship management (CRMs) systems to provide you actionable insights into viewer behavior, allowing you to run better targeted marketing campaigns.</description>
       <author>author</author>
       <pubDate>Mon, 31 Jul 2023 11:00:00 GMT</pubDate>
-      <source url="https://studio.support.brightcove.com/media/properties/editing-video-properties-using-media-module.html">Video Cloud Studio Documentation</source>
+      <source url="https://studio.support.brightcove.com/integrations/integrations-module/customer-data-platforms/audience-sync-configuration.html">Integrations Documentation</source>
     </item>
     <item>
       <title>New Interactivity Module</title>
