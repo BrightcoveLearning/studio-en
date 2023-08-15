@@ -1,0 +1,46 @@
+---
+title: "Known Issues: Brightcove QoE"
+description: "In this topic, you will learn about the current known issues for Quality of Experience (QoE)."
+parent: Reviewing Analytics
+---
+
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <aside class="bcls-aside bcls-aside--information">Please note that the resolution differs depending on the issue, so if you want to mitigate the multiple problems, you should update the player and plugin versions to the latest within both resolutions.</aside>
+        
+  <section class="bcls-section">
+    <h2 id="Video_Start_Time">Video Start Time</h2>
+    <p>When IMA3 is configured, regardless of whether there's a preroll, the Analytics emitter in Brightcove Player falls back to <code translate="no">loadstart</code> when calculating Video Start Time. In click-to-play player configurations, this inflates Video Start Time incorrectly. </p>
+    <h3>Resolution</h3>
+    <ul>
+        <li>For player v6, update the player version to 6.67.5 or  higher.</li>
+        <li>For player v7, update the player version to 7.9.0 or higher.</li>
+    </ul>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Rebuffering_Time">Rebuffering Time</h2>
+    <h3>Rebuffering when empty VAST ads are returned for postrolls</h3>
+    <p>At the end of the main video, you can see 4 seconds of buffering, which can decrease the QoE score.</p>
+    <h3>Rebuffering seconds set to 10 by the analytics emitter in iOS when IMA3 plugin is used</h3>
+    <p>When the IMA3 plugin is active, the analytics emitter in Brightcove Player consistently sets <code translate="no">rebuffering_seconds</code> to 10 on every engagement beacon in iOS, even in cases when there’s no rebuffering or actual rebuffering time is much shorter. As a result, this can lead to skewed/inflated rebuffering time in QoE.</p>
+    <h3>Buffering seconds set to 10 seconds in iOS mobile devices.</h3>
+    <p>When a player is set to loop and has the scrolling player into view plugin, the analytics emitter in Brightcove Player consistently sets <code translate="no">buffering_seconds</code> to 10 on every engagement beacon in iOS when switching between apps. As a result, this can lead to skewed/inflated rebuffering time in QoE.</p>
+    <h3>Rebuffering seconds are not always set in engagement beacons when buffering occurs</h3>
+    <p>Rebuffering time metrics are not always set in engagement beacons when buffering occurs.</p>
+    <h3>Resolution</h3>
+    <ul>
+        <li>For player v6, update the player version to 6.67.6 or higher. Use IMA v3.8.2 for IMA3 version 3, and use IMA v4.3.1 for IMA3 version 4.</li>
+        <li><p>For player v7, update the player version to 7.7.0 or higher. Use the IMA version 5 if you're using player v7.0.0 or higher but less than v7.7.0.</p>
+        <aside class="bcls-aside bcls-aside--information">Note: There is no issue for player v7.7.0 or higher.</aside>
+        </li>
+    </ul>
+</section>
+
+  <section class="bcls-section">
+    <h2 id="Upscale_time">Upscale Time</h2>
+    <p>Safari browsers do not report rendition information. There is an opt-in mechanism to gather this information in player v7.5.0 and later. It requires a second manifest request.</p>
+  </section>
+
+</article>

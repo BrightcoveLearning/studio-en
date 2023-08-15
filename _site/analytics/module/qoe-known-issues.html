@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Adding Bumpers to Cloud Playout</title>
+        <title>Known Issues: Brightcove QoE</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how add bumpers (in-house ads) to VOD videos and live events in a Cloud Playout channel.">
+        <meta name="description" content="In this topic, you will learn about the current known issues for Quality of Experience (QoE).">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -1039,7 +1039,7 @@
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/analytics/module/qoe-known-issues.html">Known Issues: Brightcove QoE</a></li>
+                  <li class="nav-item section-doc"><a class="nav-link" href="/analytics/module/qoe-known-issues.html" aria-current="page">Known Issues: Brightcove QoE</a></li>
                   
                   
                   
@@ -2162,8 +2162,8 @@
                       
                       
                       
-                      <li class="nav-item">
-                        <a class="nav-link" href="/channels/cloud-playout/managing-content/adding-bumpers-to-vod.html" aria-current="page">Adding Bumpers to Cloud Playout</a>
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/channels/cloud-playout/managing-content/adding-bumpers-to-vod.html">Adding Bumpers to Cloud Playout</a>
                       </li>
                       
                       
@@ -3201,19 +3201,15 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/channels/">Channels</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/">Analytics</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/channels/cloud-playout/">Cloud playout</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/analytics/module/">Module</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/channels/cloud-playout/managing-content/">Managing content</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Adding Bumpers to Cloud Playout</li>
+            <li class="breadcrumb-item active" aria-current="page">Known Issues: Brightcove QoE</li>
             
             
           </ol>
@@ -3234,74 +3230,46 @@
       <br>
       
       
-<h1>Adding Bumpers to Cloud Playout</h1>
+<h1>Known Issues: Brightcove QoE</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn how add bumpers (in-house ads) to VOD videos and live events in a Cloud Playout channel.</summary>
+  <summary>In this topic, you will learn about the current known issues for Quality of Experience (QoE).</summary>
+  <aside class="bcls-aside bcls-aside--information">Please note that the resolution differs depending on the issue, so if you want to mitigate the multiple problems, you should update the player and plugin versions to the latest within both resolutions.</aside>
+        
   <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>If you are not enabling Server-Side Ads (SSAI) for your channel, you may still want to include bumpers - pre- or post-roll short videos which might be in-house ads or some other kind of announcement or promotion. You might also use bumpers to create buffers for your live programming segments.</p>
-    <p>There is nothing you need to do in the initial channel creation - the option to <span class="button-blue">Insert Bumpers</span> will appear automatically after the channel is created. This applies to all channels, including those enabled for Live streams or SSAI</p>
-    <p>You can add multiple bumpers to the same video, and you can rearrange bumpers in the program order, just as you can videos. However, some care needs to be taken in doing this or you may end up with an inaccurate EPG. See <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html#epg_bumpers">The EPG and Bumpers</a> for full details.</p>
-    <p>Bumpers will <strong>not</strong> appear in the <a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG</a> but the duration of the bumper will be added to the video before or after (depending on whether it is pre-roll or post-roll).</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Enabling_bumper_content">Enabling bumper content</h2>
-    <p>The bumpers can be any video in your account, but it must have <strong>one of</strong> the following tags:</p>
+    <h2 id="Video_Start_Time">Video Start Time</h2>
+    <p>When IMA3 is configured, regardless of whether there's a preroll, the Analytics emitter in Brightcove Player falls back to <code translate="no">loadstart</code> when calculating Video Start Time. In click-to-play player configurations, this inflates Video Start Time incorrectly. </p>
+    <h3>Resolution</h3>
     <ul>
-      <li><code translate="no">cp-preroll-bumper</code></li>
-      <li><code translate="no">cp-postroll-bumper</code></li>
+        <li>For player v6, update the player version to 6.67.5 or  higher.</li>
+        <li>For player v7, update the player version to 7.9.0 or higher.</li>
     </ul>
-    <aside class="bcls-aside bcls-aside--warning">Potential problems:
-      <ul>
-        <li>If you add both of these tags to the same video, it will still work as a bumper, but the <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">EPG</a> will be inaccurate.</li>
-        <li>Similarly, for SSAI-enabled channels, ad placeholders are treated as post-roll ads. You should not have a pre-roll bumper followed by an ad placeholder, as this effectively creates a pre-roll<i data-feather="arrow-right"></i>post-roll sequence that will cause the EPG to be inaccurate.</li>
-      </ul>
-      </aside>
   </section>
-  <section class="bcls-section">
-    <h2 id="inserting-bumpers">Inserting bumpers</h2>
-    <ol class="bcls-tasklist-restart">
-      <li>Before you can insert bumpers, you must <a href="/channels/cloud-playout/getting-started/cloud-playout-stream-vod.html#add_videos">add videos and/or live events to the channel</a> and <strong>save</strong> the changes.</li>
-      <li>Go to <strong>Program Items</strong> (if this is <a href="/channels/cloud-playout/managing-content/managing-programs.html">non-looping channel with multiple programs</a>, you will need to select the program you want to edit).</li>
-      <li>
-        Select one or more videos and/or live events and click <span class="button-blue-text-bordered">Insert Bumpers</span>.<sup><strong><a href="#note1-1">[1-1]</a></strong></sup>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/select-videos-for-bumper.webp" alt="Select Videos for Bumper">
-          <figcaption class="bcls-caption--image">Select Videos for Bumper</figcaption>
-        </figure>
-      </li>
-      <li>
-        In the <strong>Bumpers</strong> dialog select <strong>Pre-Roll</strong> or <strong>Post-Roll</strong> and then click <span class="button-blue">Insert</span> beside the bumper video you want to insert.<sup><strong><a href="#note1-2">[1-2]</a></strong></sup>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/bumper-dialog.webp" alt="Bumper Dialog">
-          <figcaption class="bcls-caption--image">Bumper Dialog</figcaption>
-        </figure>
-      </li>
-      <li>
-        You will now see the bumpers appear in the program list:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/bumper-in-program-list.webp" alt="Bumper in Program List">
-          <figcaption class="bcls-caption--image">Bumper in Program List</figcaption>
-        </figure>
-      </li>
-    </ol>
-    <h3>Notes</h3>
-    <ul style="list-style: none;">
-      <li id="note1-1" style="list-style: none;"><sup><strong>[1-1]</strong></sup> If you select multiple items, the same bumper will be added to each one. If you want different bumpers for different items, add them one by one.</li>
-      <li id="note1-2" style="list-style: none;"><sup><strong>[1-2]</strong></sup> Remember that only videos that have been <a href="#Enabling_bumper_content">tagged as bumpers</a> will appear in the list.</li>
-  </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="removing_bumpers">Moving or removing bumpers</h2>
-    <p>Drag and drop bumpers to move them to new locations in the program list.</p>
-    <p>To remove a bumper, just select it, click <strong>Delete</strong>, and then click <strong>Delete</strong> again in the confirmation dialog.</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/delete-bumper.webp" alt="Delete Bumper">
-      <figcaption class="bcls-caption--image">Delete Bumper</figcaption>
-    </figure>
-  </section>
-</article>
 
+  <section class="bcls-section">
+    <h2 id="Rebuffering_Time">Rebuffering Time</h2>
+    <h3>Rebuffering when empty VAST ads are returned for postrolls</h3>
+    <p>At the end of the main video, you can see 4 seconds of buffering, which can decrease the QoE score.</p>
+    <h3>Rebuffering seconds set to 10 by the analytics emitter in iOS when IMA3 plugin is used</h3>
+    <p>When the IMA3 plugin is active, the analytics emitter in Brightcove Player consistently sets <code translate="no">rebuffering_seconds</code> to 10 on every engagement beacon in iOS, even in cases when there’s no rebuffering or actual rebuffering time is much shorter. As a result, this can lead to skewed/inflated rebuffering time in QoE.</p>
+    <h3>Buffering seconds set to 10 seconds in iOS mobile devices.</h3>
+    <p>When a player is set to loop and has the scrolling player into view plugin, the analytics emitter in Brightcove Player consistently sets <code translate="no">buffering_seconds</code> to 10 on every engagement beacon in iOS when switching between apps. As a result, this can lead to skewed/inflated rebuffering time in QoE.</p>
+    <h3>Rebuffering seconds are not always set in engagement beacons when buffering occurs</h3>
+    <p>Rebuffering time metrics are not always set in engagement beacons when buffering occurs.</p>
+    <h3>Resolution</h3>
+    <ul>
+        <li>For player v6, update the player version to 6.67.6 or higher. Use IMA v3.8.2 for IMA3 version 3, and use IMA v4.3.1 for IMA3 version 4.</li>
+        <li><p>For player v7, update the player version to 7.7.0 or higher. Use the IMA version 5 if you're using player v7.0.0 or higher but less than v7.7.0.</p>
+        <aside class="bcls-aside bcls-aside--information">Note: There is no issue for player v7.7.0 or higher.</aside>
+        </li>
+    </ul>
+</section>
+
+  <section class="bcls-section">
+    <h2 id="Upscale_time">Upscale Time</h2>
+    <p>Safari browsers do not report rendition information. There is an opt-in mechanism to gather this information in player v7.5.0 and later. It requires a second manifest request.</p>
+  </section>
+
+</article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
