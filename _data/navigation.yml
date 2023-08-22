@@ -285,6 +285,8 @@
       url: /analytics/module/ad-insights.html
     - name: Brightcove QoE Analytics
       url: /analytics/module/qoe-analytics.html
+    - name: Brightcove QoE Insights
+      url: /analytics/module/qoe-insights.html
     - name: 'Known Issues: Brightcove QoE'
       url: /analytics/module/qoe-known-issues.html
     - name: How to Search for Videos

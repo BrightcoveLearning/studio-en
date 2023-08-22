@@ -1100,6 +1100,15 @@
         
           <url>
             
+              <loc>https://studio.support.brightcove.com/analytics/module/qoe-insights.html</loc>
+            
+            <lastmod>2023-08-22</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
               <loc>https://studio.support.brightcove.com/analytics/module/qoe-known-issues.html</loc>
             
             <lastmod>2023-08-22</lastmod>
