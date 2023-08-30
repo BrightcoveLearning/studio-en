@@ -948,8 +948,8 @@
     docs:
     - name: Content Delivery Options
       url: /general/architecture/content-delivery-options.html
-    # - name: Domains and Ports that Must Be Accessible
-    #   url: /general/architecture/domains-and-ports-must-be-accessible-video-cloud.html
+    - name: Domains and Ports that Must Be Accessible
+      url: /general/architecture/domains-and-ports-must-be-accessible-video-cloud.html
     - name: Overview of Context Aware Encoding
       url: /general/architecture/overview-context-aware-encoding.html
     - name: Overview of Dynamic Delivery
