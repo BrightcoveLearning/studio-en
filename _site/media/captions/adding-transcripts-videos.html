@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Adding Audio Tracks to Videos using the Media Module</title>
+        <title>Adding Transcripts to Videos using the Media Module</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to add audio tracks to videos using the Media module.">
+        <meta name="description" content="In this topic you will learn how to add transcripts to videos using the Media module.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -15,7 +16,6 @@
         <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
         
         <!-- FontAwesome JS-->
-        
         <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
         
         <!-- Plugins CSS -->
@@ -44,7 +44,7 @@
     </head> 
 
     <body class="docs-page">
-        
+
 
 <header class="header fixed-top">
   <div class="branding docs-branding">
@@ -550,7 +550,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/media/captions/adding-audio-tracks-videos-using-media-module.html" aria-current="page">Adding Audio Tracks to Videos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/media/captions/adding-audio-tracks-videos-using-media-module.html">Adding Audio Tracks to Videos</a></li>
                   
                   
                   
@@ -3215,7 +3215,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Adding Audio Tracks to Videos using the Media Module</li>
+            <li class="breadcrumb-item active" aria-current="page">Adding Transcripts to Videos using the Media Module</li>
             
             
           </ol>
@@ -3235,144 +3235,69 @@
       </div>
       <br>
       
-      
+      <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
 <article class="bcls-article">
-  <h1>Adding Audio Tracks to Videos using the Media Module</h1>
-  <summary>In this topic you will learn how to add audio tracks to videos using the Media module.</summary>
-  <section class="bcls-section">
-    <p>Videos can be configured with multiple audio tracks. Multiple audio tracks can be used to:</p>
-    <ul>
-      <li>Play back the same video in different languages </li>
-      <li>Provide audio with descriptions for the visually challenged</li>
-      <li>Provide stereo vs. multi-channel (surround sound) audio</li>
-    </ul>
-    <p>Multiple audio tracks are supported for HLS V4+ and DASH - with and without DRM protection. Videos with multiple audio tracks will display a headphone icon (<img alt="" src="/assets/images/s-media-img/captions/node18591-headphone-icon.png" />) in the controlbar. When the icon is clicked, the viewer can select between audio tracks.</p>
-    <h4>Notes:</h4>
-      <ul>
-        <li>Audio source files can be in MP3, M4A, or WAV format.</li>
-        <li>Your account must be enabled for multiple audio tracks. Contact your Customer Success Manager for details.</li>
-        <li>All audio tracks must be added using the same <strong>ingest profile</strong> that was used to upload the video.</li>
-        <li>By default, the audio <strong>Language</strong> is set to <strong>English</strong> with a <strong>Variant</strong> type of <strong>main</strong>. The default can be changed by checking the default option (<img alt="" src="/assets/images/media/default-button.png" />) when editing the Audio Track.</li>
-        <li>When you add additional audio tracks to a video, they must all have the same bitrate/rendition profile to ensure successful playback in HLS (DASH playback will still work).</li>
-        <li>Only one active ingest job is allowed on a video. Do not add an audio track until processing of the video has finished, and if you are adding multiple tracks, wait till each one has finished processing before adding another.</li>
-      </ul>
-    </aside>
-    <p>Below is an example of a video that has been configured with multiple audio tracks.</p>
-    <p>
-      <!-- <iframe src="//players.brightcove.net/1752604059001/default_default/index.html?videoId=6033855353001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" allow="encrypted-media" width="640" height="360"></iframe> -->
-      <div style="position: relative; display: block; max-width: 640px;"><div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/57838016001/default_default/index.html?videoId=5413700943001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
-    </p>
-    <aside class="bcls-aside bcls-aside--information">Note: Multiple audio tracks can also be added to videos using the APIs. For information, see <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/implementing-multiple-audio-tracks-using-apis.html">Implementing Multiple Audio Tracks Using the APIs</a>.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="audiotrack">Adding a transcript file</h2>
-    <p>Audio track files can be uploaded and hosted by Brightcove or reside at an internet accessible URL. To view and edit the audio track properties for a video, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Media</strong> module.</li>
-      
-      <li>Click the video title link and, select the <strong>Tracks</strong> tab, then locate the <strong>Audio Tracks</strong> section. The audio track for the source video will appear.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/node18591-audio-tracks-section.png" /></figure>
-      </li>
-      
-      <li>Click <span class="button-blue-text-bordered"> <i data-feather="edit-3"></i> Edit</span> or double-click in the section.</li>
-      <li>Click <span class="button-blue"> Add Audio Track</span> </li>
-      <li>Select if the audio track file will be uploaded from the local file system or from an external URL.
+    <h1>Adding Transcripts to Videos using the Media Module</h1>
+    <summary>In this topic you will learn how to add transcripts to videos using the Media module.</summary>
+
+    <section class="bcls-section">
+        <h2 id="Adding_a_transcript_file">Adding a transcript file</h2>
+        <p>The transcript files can be uploaded using the Media module. To upload a transcript for a video, follow these steps:</p>
+        <ol class="bcls-tasklist-restart">
+            <li>Open the <strong>Media</strong> module.</li>
+           
+            <li>Click the video title link and, select the <strong>Tracks</strong>
+                tab, then locate the <strong>Transcripts</strong> section. 
+                <!-- <figure class="bcls-figure"><img class="bcls-image--no-border"
+                        alt
+                        src="/assets/images/s-media-img/captions/node18591-audio-tracks-section.png" /></figure> -->
+            </li>
+        </ol>
+    </section>
+
+    <section class="bcls-section">
+        <h2 id="Updating_a_transcript_file">Updating a transcript file</h2>
+        <p>The transcript files can be updated using the Media module. To update a transcript for a video, follow these steps:</p>
+        <ol class="bcls-tasklist-restart">
+            <li>Open the <strong>Media</strong> module.</li>
+           
+            <li>Click the video title link and, select the <strong>Tracks</strong>
+                tab, then locate the <strong>Transcripts</strong> section. 
+                <!-- <figure class="bcls-figure"><img class="bcls-image--no-border"
+                        alt
+                        src="/assets/images/s-media-img/captions/node18591-audio-tracks-section.png" /></figure> -->
+            </li>
+        </ol>
+    </section>
+
+    <section class="bcls-section">
+        <h2 id="Deleting_a_transcript_file">Deleting a transcript file</h2>
+        <p>The transcript files can be deleted using the Media module. To delete a transcript for a video, follow these steps:</p>
+        <ol class="bcls-tasklist-restart">
+            <li>Open the <strong>Media</strong> module.</li>
+           
+            <li>Click the video title link and, select the <strong>Tracks</strong>
+                tab, then locate the <strong>Transcripts</strong> section. 
+                <!-- <figure class="bcls-figure"><img class="bcls-image--no-border"
+                        alt
+                        src="/assets/images/s-media-img/captions/node18591-audio-tracks-section.png" /></figure> -->
+            </li>
+        </ol>
+    </section>
+
+    <section class="bcls-section">
+        <h2 id="Limitations">Limitations</h2>
         <ul>
-          <li><strong>File Upload</strong> - Click <strong>Browse</strong> and select the audio track file from the local file system. The file will be uploaded to Video Cloud.</li>
-          <li><strong>URL Upload</strong> - Enter the public URL where the audio track file resides and then click <span class="button-blue">Upload</span>. The file will be uploaded to Video Cloud.
-            <aside class="bcls-aside bcls-aside--information">Note: Audio track file names with parentheses, question marks, quotation marks, spaces and other special characters will silently fail when uploading. Brightcove recommends using file names without special characters.</aside>
-          </li>
+            <li>Formats other than <strong>.txt</strong> or <strong>JSON</strong>
+                on upload are not supported.</li>
+            <li>If you are using Auto Captioning, the transcript will show, but
+                this will be in a JSON structure with auto transcription errors.
+                Note that there is no way to correct these errors without
+                downloading, fixing, and uploading the transcripts again.</li>
+
         </ul>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/node18591-audio-track-properties.png" /></figure>
-      </li>
-      <li>The <strong>Language</strong> field should contain the <a href="https://www.w3schools.com/tags/ref_language_codes.asp">language code</a> that specifies the language of the track text data.</li>
-      <li>Select the <strong>Variant</strong> of text track. The <strong>Variant</strong> describes the kind of audio track. Options include:
-        <ul>
-          <li><strong translate="No">main</strong> - The main track, usually the one muxed into the video file</li>
-          <li><strong translate="No">alternate</strong> - An alternate audio track</li>
-          <li><strong translate="No">commentary</strong> - An audio track that provides commentary on the video track</li>
-          <li><strong translate="No">dub</strong> - A track containing a dubbed version of spoken words in a different language</li>
-          <li><strong translate="No">descriptive</strong> - The track is descriptive of the video content in some way</li>
-        </ul>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/node18591-spanish-audio.png" /></figure>
-      </li>
-      <li>Click<span class="button-blue"> Add Audio Track</span> to save the audio track information.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/node18591-spanish-audio-added.png" /></figure>
-      </li>
-      <li>Click <span class="button-blue"> Add Audio Track</span> to add another audio track or <span class="button-blue"> Save</span> to save the audio tracks. The newly added audio tracks will appear in the list when processing is finished.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/node18591-tracks-added.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: Changes made to the audio track properties may take up to 15 minutes to appear in published players.</aside>
-      </li>
-    </ol>
-    <p>To delete an audio track, click the delete icon (<img alt="" src="/assets/images/s-media-img/captions/node18591-delete-icon.png" />) next to the audio track. Note that there may be a delay before the UI is updated and the audio track no longer appears.</p>
-    <p>When a video with multiple audio tracks is published, a headphone button (<img alt="" src="/assets/images/s-media-img/captions/node18591-headphone-icon.png" />) will appear on the player chrome. Click the<strong> </strong>button to select an audio track.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/node18591-headphone-icon-in-player.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="defaulttrack">Setting a default audio track</h2>
-    <p>When a video is uploaded, the source audio will be set as the main (default) track. To set an audio track to be the default track, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Click <span class="button-blue-text-bordered"> <i data-feather="edit-3"></i> Edit</span> or double-click in the <strong>Audio Tracks</strong> section.</li>
-      <li>Click on the track that is currently the default audio track.</li>
-      <li>Uncheck the <strong>Default</strong> option.</li>
-      <li>Click on the track that will be set as the default audio track.</li>
-      <li>Check the <strong>Default</strong> option.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/node18591-set-default-track.png" /></figure>
-      </li>
-      <li>Click <span class="button-blue"> Update Audio Track</span>.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="limitations">Limitations</h2>
-    <p>The following limitations apply when using multiple audio tracks</p>
-    <dl>
-      <dt>Audio masters not stored</dt>
-      <dd>If you retranscode the video from the video master, the additional audio tracks will be lost, and must be re-added</dd>
-      <dt>Audio-only files must be used</dt>
-      <dd>Audio tracks must be audio-only files without video tracks</dd>
-      <dt>HLSv3, HLS with audio and video in the same segment</dt>
-      <dd>
-        <ul>
-          <li>The playback API will not return HLSv3 manifests</li>
-          <li>All HLS manifests will include de-muxed video/audio</li>
-        </ul>
-      </dd>
-      <dt>Smooth Streaming</dt>
-      <dd>Smooth Streaming URLs will not be available.</dd>
-      <dt>Social Distribution</dt>
-      <dd>It is not possible to select which audio track will be used for distribution. The track included in the video source (the muxed in audio) will be used, always.</dd>
-      <dt>Ordering of audio tracks beyond the one "default" track</dt>
-      <dd>
-        <ul>
-          <li>You can pick a default audio track with <span translate="No">CMS API</span> per title by setting the <code translate="No">is_default</code> field to <code translate="No">true</code></li>
-          <li>There is also an account default, which can be set by Support</li>
-          <li>This will only affect the "default" track in HLS manifests</li>
-          <li>No other ordering is possible</li>
-        </ul>
-      </dd>
-      <dt>Ingesting more than one audio track from a single source</dt>
-      <dd>We support <strong>one audio track from the source supplied in the source video.</strong>. Additional audio tracks must be ingested as separate audio files.</dd>
-      <dt>DRM protection on videos that include only audio</dt>
-      <dd>As soon as a video track is added, DRM protection will be enabled.</dd>
-      <dt>End-user friendly labels</dt>
-      <dd>We do not support custom labels for audio tracks. If you require that, you will need to make the change on the client side via the Player API.</dd>
-      <dt>In some instances, switching tracks may cause the Brightcove Player to become unstable</dt>
-      <dd>
-        <ul>
-          <li>Track switching before all audio segments have been downloaded</li>
-          <li>If the audio and video are different durations, the player will may stop whenever the shorter one runs out.</li>
-        </ul>
-      </dd>
-      <dt>Video "duration"</dt>
-      <dd>The video <code translate="No">duration</code> reported by the catalog/Playback API may be incorrect if the audio tracks have different durations.</dd>
-      <dt>Videos shared from other accounts</dt>
-      <dd>Audio tracks cannot be added to videos shared from other accounts, as this involves re-transcoding. Audio tracks need to be added to the account the video was shared from.</dd>
-      <dt>Safari</dt>
-      <dd>Brightcove has seen cases where Safari will not always load ng the audio track marked as default. Due to Safari loading content natively, the language settings of the device will take priority when determining the audio track to load.</dd>
-      <dt>Cloud Playout</dt>
-        <dd>Cloud Playout doesn't support <strong>Multiple Audio Track</strong>.</dd>
-    </dl>
-  </section>
+    </section>
+
 </article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
