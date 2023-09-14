@@ -313,8 +313,31 @@
       url: /analytics/reports/performance-report-reference.html
     - name: Segment Sync
       url: /analytics/reports/segments-report.html
-    # - name: Trending Now Report Reference
-    #   url: /analytics/reports/trending-now-report-reference.html
+  - name: Engagement
+    url: /analytics/engagement/index.html
+    icon: fa-regular fa-chart-line-up
+    docs:
+    - name: 'Engagement: Overview'
+      url: '/analytics/engagement/engagement-overview.html'
+    - name: 'Engagement: Usage Trends'
+      url: '/analytics/engagement/engagement-usage-trends.html'
+    - name: 'Engagement: Status Over Time'
+      url: '/analytics/engagement/engagement-status-over-time.html'
+    - name: 'Engagement: Sessions Over Time'
+      url: '/analytics/engagement/engagement-sessions-over-time.html'
+    - name: 'Engagement: Hours Viewed By'
+      url: '/analytics/engagement/engagement-hours-viewed-by.html'
+  - name: 'Content'
+    url: '/analytics/content/index.html'
+    docs:
+      - name: 'Content: Overview'
+        url: '/analytics/content/content-overview.html'
+      - name: 'Content: Catalog and Explorer'
+        url: '/analytics/content/content-catalog-by.html'
+      - name: 'Content: Popular Content'
+        url: '/analytics/content/content-pupular-content-by.html'
+      - name: 'Content: Trial Drivers and Library Breakdown'
+        url: '/analytics/content/content-trial-drivers-library.html'
   - name: General Information
     url: /analytics/general/index.html
     icon: fa-regular fa-chart-line-up

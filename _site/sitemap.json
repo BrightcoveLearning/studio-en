@@ -30,12 +30,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/adding-3play-media-interactive-transcript-video.html",
+      "newURL": "https://studio.support.brightcove.com/publish/general/adding-3play-media-interactive-transcript-video.html",
       "oldURL": "/adding-3play-media-interactive-transcript-video"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/general/adding-3play-media-interactive-transcript-video.html",
+      "newURL": "https://studio.support.brightcove.com/publish/adding-3play-media-interactive-transcript-video.html",
       "oldURL": "/adding-3play-media-interactive-transcript-video"
   },
 
@@ -50,22 +50,22 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/captions/adding-audio-tracks-videos-using-media-module.html",
-      "oldURL": "/adding-audio-tracks-videos-using-media-module"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/media/adding-audio-tracks-videos-using-media-module.html",
       "oldURL": "/adding-audio-tracks-videos-using-media-module"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/third-party/adding-brightcove-player-facebook-fan-page.html",
-      "oldURL": "/adding-brightcove-player-facebook-fan-page"
+      "newURL": "https://studio.support.brightcove.com/media/captions/adding-audio-tracks-videos-using-media-module.html",
+      "oldURL": "/adding-audio-tracks-videos-using-media-module"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/publish/adding-brightcove-player-facebook-fan-page.html",
+      "oldURL": "/adding-brightcove-player-facebook-fan-page"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/publish/third-party/adding-brightcove-player-facebook-fan-page.html",
       "oldURL": "/adding-brightcove-player-facebook-fan-page"
   },
 
@@ -80,13 +80,18 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/media/adding-captions-videos-using-media-module.html",
+      "oldURL": "/adding-captions-videos-using-media-module"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/media/captions/adding-captions-videos-using-media-module.html",
       "oldURL": "/adding-captions-videos-using-media-module"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/adding-captions-videos-using-media-module.html",
-      "oldURL": "/adding-captions-videos-using-media-module"
+      "newURL": "https://studio.support.brightcove.com/interactivity/annotations/adding-chapters-video.html",
+      "oldURL": "/adding-chapters-video"
   },
 
   {
@@ -100,22 +105,17 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/annotations/adding-chapters-video.html",
-      "oldURL": "/adding-chapters-video"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/interactivity/annotations/adding-drawing.html",
       "oldURL": "/adding-drawing"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/general/adding-facebook-button-brightcove-player.html",
+      "newURL": "https://studio.support.brightcove.com/social/adding-facebook-button-brightcove-player.html",
       "oldURL": "/adding-facebook-button-brightcove-player"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/adding-facebook-button-brightcove-player.html",
+      "newURL": "https://studio.support.brightcove.com/social/general/adding-facebook-button-brightcove-player.html",
       "oldURL": "/adding-facebook-button-brightcove-player"
   },
 
@@ -190,22 +190,22 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/module/analytics-module-ui-glossary.html",
-      "oldURL": "/analytics-module-ui-glossary"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/analytics/analytics-module-ui-glossary.html",
       "oldURL": "/analytics-module-ui-glossary"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/reports/analytics-report-reference.html",
-      "oldURL": "/analytics-report-reference"
+      "newURL": "https://studio.support.brightcove.com/analytics/module/analytics-module-ui-glossary.html",
+      "oldURL": "/analytics-module-ui-glossary"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/analytics/analytics-report-reference.html",
+      "oldURL": "/analytics-report-reference"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/reports/analytics-report-reference.html",
       "oldURL": "/analytics-report-reference"
   },
 
@@ -255,12 +255,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/authenticating-studio-users-using-single-sign.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/authenticating-studio-users-using-single-sign.html",
       "oldURL": "/authenticating-studio-users-using-single-sign"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/general/authenticating-studio-users-using-single-sign.html",
+      "newURL": "https://studio.support.brightcove.com/admin/authenticating-studio-users-using-single-sign.html",
       "oldURL": "/authenticating-studio-users-using-single-sign"
   },
 
@@ -280,12 +280,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/best-practices-video-creating-transcoding-and-uploading-workflow.html",
+      "newURL": "https://studio.support.brightcove.com/general/references/best-practices-video-creating-transcoding-and-uploading-workflow.html",
       "oldURL": "/best-practices-video-creating-transcoding-and-uploading-workflow"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/references/best-practices-video-creating-transcoding-and-uploading-workflow.html",
+      "newURL": "https://studio.support.brightcove.com/general/best-practices-video-creating-transcoding-and-uploading-workflow.html",
       "oldURL": "/best-practices-video-creating-transcoding-and-uploading-workflow"
   },
 
@@ -365,12 +365,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/help/channel-edit.html",
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/help/channel-edit.html",
       "oldURL": "/channel-edit"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/help/channel-edit.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/help/channel-edit.html",
       "oldURL": "/channel-edit"
   },
 
@@ -385,12 +385,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/help/channel.html",
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/help/channel.html",
       "oldURL": "/channel"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/help/channel.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/help/channel.html",
       "oldURL": "/channel"
   },
 
@@ -420,18 +420,13 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/managing-content/cloud-playout-add-content.html",
-      "oldURL": "/cloud-playout-add-content"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-add-content.html",
       "oldURL": "/cloud-playout-add-content"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-overview.html",
-      "oldURL": "/cloud-playout-overview"
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/managing-content/cloud-playout-add-content.html",
+      "oldURL": "/cloud-playout-add-content"
   },
 
   {
@@ -440,13 +435,8 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
-      "oldURL": "/cloud-playout-stream-vod"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/general/references/cloud-playout-stream-vod.html",
-      "oldURL": "/cloud-playout-stream-vod"
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-overview.html",
+      "oldURL": "/cloud-playout-overview"
   },
 
   {
@@ -456,6 +446,16 @@
 
   {
       "newURL": "https://studio.support.brightcove.com/general/cloud-playout-stream-vod.html",
+      "oldURL": "/cloud-playout-stream-vod"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/general/references/cloud-playout-stream-vod.html",
+      "oldURL": "/cloud-playout-stream-vod"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
       "oldURL": "/cloud-playout-stream-vod"
   },
 
@@ -500,18 +500,13 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/general/configuring-player-advertising-using-players-module.html",
-      "oldURL": "/configuring-player-advertising-using-players-module"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/players/configuring-player-advertising-using-players-module.html",
       "oldURL": "/configuring-player-advertising-using-players-module"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/configuring-player-content-restrictions.html",
-      "oldURL": "/configuring-player-content-restrictions"
+      "newURL": "https://studio.support.brightcove.com/players/general/configuring-player-advertising-using-players-module.html",
+      "oldURL": "/configuring-player-advertising-using-players-module"
   },
 
   {
@@ -520,12 +515,17 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/configuring-player-controls.html",
-      "oldURL": "/configuring-player-controls"
+      "newURL": "https://studio.support.brightcove.com/players/configuring-player-content-restrictions.html",
+      "oldURL": "/configuring-player-content-restrictions"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/players/appearance/configuring-player-controls.html",
+      "oldURL": "/configuring-player-controls"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/players/configuring-player-controls.html",
       "oldURL": "/configuring-player-controls"
   },
 
@@ -540,18 +540,13 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/configuring-player-localization.html",
-      "oldURL": "/configuring-player-localization"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/players/appearance/configuring-player-localization.html",
       "oldURL": "/configuring-player-localization"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/configuring-player-overlay-using-overlay-plugin.html",
-      "oldURL": "/configuring-player-overlay-using-overlay-plugin"
+      "newURL": "https://studio.support.brightcove.com/players/configuring-player-localization.html",
+      "oldURL": "/configuring-player-localization"
   },
 
   {
@@ -560,12 +555,17 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/configuring-player-playback-properties.html",
-      "oldURL": "/configuring-player-playback-properties"
+      "newURL": "https://studio.support.brightcove.com/players/configuring-player-overlay-using-overlay-plugin.html",
+      "oldURL": "/configuring-player-overlay-using-overlay-plugin"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/players/properties/configuring-player-playback-properties.html",
+      "oldURL": "/configuring-player-playback-properties"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/players/configuring-player-playback-properties.html",
       "oldURL": "/configuring-player-playback-properties"
   },
 
@@ -575,12 +575,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/general/configuring-player-plugins.html",
+      "newURL": "https://studio.support.brightcove.com/players/configuring-player-plugins.html",
       "oldURL": "/configuring-player-plugins"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/configuring-player-plugins.html",
+      "newURL": "https://studio.support.brightcove.com/players/general/configuring-player-plugins.html",
       "oldURL": "/configuring-player-plugins"
   },
 
@@ -635,18 +635,23 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/properties/configuring-video-availability.html",
+      "newURL": "https://studio.support.brightcove.com/media/configuring-video-availability.html",
       "oldURL": "/configuring-video-availability"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/configuring-video-availability.html",
+      "newURL": "https://studio.support.brightcove.com/media/properties/configuring-video-availability.html",
       "oldURL": "/configuring-video-availability"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/support/contact-sales.html",
       "oldURL": "/contact-sales"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/content/content-catalog-by.html",
+      "oldURL": "/content-catalog-by"
   },
 
   {
@@ -657,6 +662,21 @@
   {
       "newURL": "https://studio.support.brightcove.com/general/architecture/content-delivery-options.html",
       "oldURL": "/content-delivery-options"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/content/content-overview.html",
+      "oldURL": "/content-overview"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/content/content-pupular-content-by.html",
+      "oldURL": "/content-pupular-content-by"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/content/content-trial-drivers-library.html",
+      "oldURL": "/content-trial-drivers-library"
   },
 
   {
@@ -695,12 +715,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/general/creating-and-publishing-high-quality-screencasts.html",
+      "newURL": "https://studio.support.brightcove.com/publish/creating-and-publishing-high-quality-screencasts.html",
       "oldURL": "/creating-and-publishing-high-quality-screencasts"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/creating-and-publishing-high-quality-screencasts.html",
+      "newURL": "https://studio.support.brightcove.com/publish/general/creating-and-publishing-high-quality-screencasts.html",
       "oldURL": "/creating-and-publishing-high-quality-screencasts"
   },
 
@@ -735,12 +755,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/reports/creating-custom-analytics-reports.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/creating-custom-analytics-reports.html",
       "oldURL": "/creating-custom-analytics-reports"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/creating-custom-analytics-reports.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/reports/creating-custom-analytics-reports.html",
       "oldURL": "/creating-custom-analytics-reports"
   },
 
@@ -770,12 +790,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/creating-custom-live-ingest-profiles.html",
+      "newURL": "https://studio.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html",
       "oldURL": "/creating-custom-live-ingest-profiles"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html",
+      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/creating-custom-live-ingest-profiles.html",
       "oldURL": "/creating-custom-live-ingest-profiles"
   },
 
@@ -845,12 +865,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/creating-social-media-publishing-destinations.html",
+      "newURL": "https://studio.support.brightcove.com/social/module/creating-social-media-publishing-destinations.html",
       "oldURL": "/creating-social-media-publishing-destinations"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/module/creating-social-media-publishing-destinations.html",
+      "newURL": "https://studio.support.brightcove.com/social/creating-social-media-publishing-destinations.html",
       "oldURL": "/creating-social-media-publishing-destinations"
   },
 
@@ -910,18 +930,13 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/architecture/domains-and-ports-must-be-accessible-video-cloud.html",
-      "oldURL": "/domains-and-ports-must-be-accessible-video-cloud"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/general/domains-and-ports-must-be-accessible-video-cloud.html",
       "oldURL": "/domains-and-ports-must-be-accessible-video-cloud"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/manage/downloading-videos-video-cloud.html",
-      "oldURL": "/downloading-videos-video-cloud"
+      "newURL": "https://studio.support.brightcove.com/general/architecture/domains-and-ports-must-be-accessible-video-cloud.html",
+      "oldURL": "/domains-and-ports-must-be-accessible-video-cloud"
   },
 
   {
@@ -930,8 +945,8 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/general/driving-video-views-through-email.html",
-      "oldURL": "/driving-video-views-through-email"
+      "newURL": "https://studio.support.brightcove.com/media/manage/downloading-videos-video-cloud.html",
+      "oldURL": "/downloading-videos-video-cloud"
   },
 
   {
@@ -940,12 +955,17 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/content-protection/drm-output-protection-settings.html",
-      "oldURL": "/drm-output-protection-settings"
+      "newURL": "https://studio.support.brightcove.com/publish/general/driving-video-views-through-email.html",
+      "oldURL": "/driving-video-views-through-email"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/general/drm-output-protection-settings.html",
+      "oldURL": "/drm-output-protection-settings"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/general/content-protection/drm-output-protection-settings.html",
       "oldURL": "/drm-output-protection-settings"
   },
 
@@ -955,12 +975,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/dynamic-overlays.html",
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/managing-content/dynamic-overlays.html",
       "oldURL": "/dynamic-overlays"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/managing-content/dynamic-overlays.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/dynamic-overlays.html",
       "oldURL": "/dynamic-overlays"
   },
 
@@ -985,22 +1005,22 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/properties/editing-video-properties-using-media-module.html",
-      "oldURL": "/editing-video-properties-using-media-module"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/media/editing-video-properties-using-media-module.html",
       "oldURL": "/editing-video-properties-using-media-module"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/editing-video-properties-using-quick-edit.html",
-      "oldURL": "/editing-video-properties-using-quick-edit"
+      "newURL": "https://studio.support.brightcove.com/media/properties/editing-video-properties-using-media-module.html",
+      "oldURL": "/editing-video-properties-using-media-module"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/media/properties/editing-video-properties-using-quick-edit.html",
+      "oldURL": "/editing-video-properties-using-quick-edit"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/editing-video-properties-using-quick-edit.html",
       "oldURL": "/editing-video-properties-using-quick-edit"
   },
 
@@ -1010,22 +1030,22 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/third-party/embedding-brightcove-player-google-sites-page.html",
-      "oldURL": "/embedding-brightcove-player-google-sites-page"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/publish/embedding-brightcove-player-google-sites-page.html",
       "oldURL": "/embedding-brightcove-player-google-sites-page"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/embedding-captions-videos.html",
-      "oldURL": "/embedding-captions-videos"
+      "newURL": "https://studio.support.brightcove.com/publish/third-party/embedding-brightcove-player-google-sites-page.html",
+      "oldURL": "/embedding-brightcove-player-google-sites-page"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/media/captions/embedding-captions-videos.html",
+      "oldURL": "/embedding-captions-videos"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/embedding-captions-videos.html",
       "oldURL": "/embedding-captions-videos"
   },
 
@@ -1060,6 +1080,16 @@
   },
 
   {
+      "newURL": "https://studio.support.brightcove.com/analytics/engagement/engagement-hours-viewed-by.html",
+      "oldURL": "/engagement-hours-viewed-by"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/engagement/engagement-overview.html",
+      "oldURL": "/engagement-overview"
+  },
+
+  {
       "newURL": "https://studio.support.brightcove.com/analytics/engagement-report-reference.html",
       "oldURL": "/engagement-report-reference"
   },
@@ -1067,6 +1097,21 @@
   {
       "newURL": "https://studio.support.brightcove.com/analytics/reports/engagement-report-reference.html",
       "oldURL": "/engagement-report-reference"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/engagement/engagement-sessions-over-time.html",
+      "oldURL": "/engagement-sessions-over-time"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/engagement/engagement-status-over-time.html",
+      "oldURL": "/engagement-status-over-time"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/engagement/engagement-usage-trends.html",
+      "oldURL": "/engagement-usage-trends"
   },
 
   {
@@ -1085,12 +1130,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/exporting-data-analytics-module.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/general/exporting-data-analytics-module.html",
       "oldURL": "/exporting-data-analytics-module"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/general/exporting-data-analytics-module.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/exporting-data-analytics-module.html",
       "oldURL": "/exporting-data-analytics-module"
   },
 
@@ -1110,12 +1155,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/references/fallback-hdcp.html",
+      "newURL": "https://studio.support.brightcove.com/general/fallback-hdcp.html",
       "oldURL": "/fallback-hdcp"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/fallback-hdcp.html",
+      "newURL": "https://studio.support.brightcove.com/general/references/fallback-hdcp.html",
       "oldURL": "/fallback-hdcp"
   },
 
@@ -1170,12 +1215,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/projects/generating-embed-code.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/experiences/generating-embed-code.html",
       "oldURL": "/generating-embed-code"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/experiences/generating-embed-code.html",
+      "newURL": "https://studio.support.brightcove.com/interactivity/projects/generating-embed-code.html",
       "oldURL": "/generating-embed-code"
   },
 
@@ -1195,12 +1240,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/module/getting-started-analytics-module.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/getting-started-analytics-module.html",
       "oldURL": "/getting-started-analytics-module"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/getting-started-analytics-module.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/module/getting-started-analytics-module.html",
       "oldURL": "/getting-started-analytics-module"
   },
 
@@ -1230,12 +1275,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/getting-started-media-module.html",
+      "newURL": "https://studio.support.brightcove.com/media/module/getting-started-media-module.html",
       "oldURL": "/getting-started-media-module"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/module/getting-started-media-module.html",
+      "newURL": "https://studio.support.brightcove.com/media/getting-started-media-module.html",
       "oldURL": "/getting-started-media-module"
   },
 
@@ -1330,12 +1375,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/module/how-search-videos-and-playlists-media-module.html",
+      "newURL": "https://studio.support.brightcove.com/media/how-search-videos-and-playlists-media-module.html",
       "oldURL": "/how-search-videos-and-playlists-media-module"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/how-search-videos-and-playlists-media-module.html",
+      "newURL": "https://studio.support.brightcove.com/media/module/how-search-videos-and-playlists-media-module.html",
       "oldURL": "/how-search-videos-and-playlists-media-module"
   },
 
@@ -1365,12 +1410,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/import-captions.html",
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/managing-content/import-captions.html",
       "oldURL": "/import-captions"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/managing-content/import-captions.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/import-captions.html",
       "oldURL": "/import-captions"
   },
 
@@ -1420,257 +1465,22 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/integrations/integrations-module/watched-folders/",
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/help/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/get-started/",
+      "newURL": "https://studio.support.brightcove.com/interactivity/settings/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/",
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/sample-overlays/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/analytics/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/general/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/analytics/reports/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/players/help/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/social/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/analytics/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/integrations/integrations-module/customer-data-platforms/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/players/properties/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/players/module/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/integrations/integrations-module/getting-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/players/appearance/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/media/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/players/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/channels/fast/getting-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/publish/publishing/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/general/content-protection/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/channels/fast/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/integrations/salesforce-sales-cloud/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/publishing/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/admin/help/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/interactivity/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/publish/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/managing-content/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/interactivity/analytics/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/publish/third-party/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/help/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/interactivity/widgets/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/help/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/admin/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/interactivity/templates/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/publish/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/media/help/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/get-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/media/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/home/help/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/social/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/analytics/module/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/admin/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/analytics/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/upload/help/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/social/module/",
+      "newURL": "https://studio.support.brightcove.com/interactivity/general/",
       "oldURL": "/index"
   },
 
@@ -1685,12 +1495,57 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/help/",
+      "newURL": "https://studio.support.brightcove.com/integrations/integrations-module/watched-folders/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/captions/",
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/monetization/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/training/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/general/architecture/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/publish/publishing/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/help/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/help/",
       "oldURL": "/index"
   },
 
@@ -1700,17 +1555,282 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/live/live-module/",
+      "newURL": "https://studio.support.brightcove.com/get-started/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/",
+      "newURL": "https://studio.support.brightcove.com/publish/general/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/campaign/general/",
+      "newURL": "https://studio.support.brightcove.com/admin/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/integrations/integrations-module/customer-data-platforms/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/integrations/integrations-module/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/admin/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/managing-content/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/publish/third-party/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/module/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/publishing/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/integrations/salesforce-sales-cloud/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/channels/fast/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/properties/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/publish/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/eloqua/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/interactivity/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/channels/fast/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/general/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/salesforce/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/interactivity/analytics/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/players/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/interactivity/widgets/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/manage/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/interactivity/templates/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/upload/help/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/content/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/campaign/integrations/marketo/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/players/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/live/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/social/module/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/home/help/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/organize/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/social/help/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/social/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/social/analytics/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/captions/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/channels/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/general/content-protection/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/release-notes/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/social/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/live/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/players/properties/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/admin/help/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/interactivity/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/analytics/engagement/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/interactivity/experiences/",
       "oldURL": "/index"
   },
 
@@ -1720,7 +1840,17 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/organize/",
+      "newURL": "https://studio.support.brightcove.com/campaign/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/help/",
       "oldURL": "/index"
   },
 
@@ -1735,42 +1865,7 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/live/get-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/eloqua/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/salesforce/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/general/architecture/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/campaign/integrations/marketo/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/media/manage/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/getting-started/",
+      "newURL": "https://studio.support.brightcove.com/live/web-conferencing/",
       "oldURL": "/index"
   },
 
@@ -1780,12 +1875,17 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/support/",
+      "newURL": "https://studio.support.brightcove.com/analytics/general/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/interactivity/examples/",
+      "newURL": "https://studio.support.brightcove.com/analytics/reports/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/live/live-module/",
       "oldURL": "/index"
   },
 
@@ -1795,87 +1895,42 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/monetization/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/release-notes/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/campaign/admin/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/live/general/",
+      "newURL": "https://studio.support.brightcove.com/analytics/module/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/properties/",
+      "newURL": "https://studio.support.brightcove.com/interactivity/examples/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/sample-overlays/",
+      "newURL": "https://studio.support.brightcove.com/players/appearance/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/module/",
+      "newURL": "https://studio.support.brightcove.com/players/module/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/help/",
+      "newURL": "https://studio.support.brightcove.com/players/help/",
       "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/interactivity/settings/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/live/web-conferencing/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/interactivity/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/interactivity/getting-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/interactivity/experiences/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/channels/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles-best-practices.html",
-      "oldURL": "/ingest-profiles-best-practices"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/ingest-profiles-best-practices.html",
+      "oldURL": "/ingest-profiles-best-practices"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles-best-practices.html",
       "oldURL": "/ingest-profiles-best-practices"
   },
 
@@ -1890,12 +1945,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/insights.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/reports/insights.html",
       "oldURL": "/insights"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/reports/insights.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/insights.html",
       "oldURL": "/insights"
   },
 
@@ -1975,12 +2030,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/introduction-playlists.html",
+      "newURL": "https://studio.support.brightcove.com/media/organize/introduction-playlists.html",
       "oldURL": "/introduction-playlists"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/organize/introduction-playlists.html",
+      "newURL": "https://studio.support.brightcove.com/media/introduction-playlists.html",
       "oldURL": "/introduction-playlists"
   },
 
@@ -2065,12 +2120,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/general/managing-account-settings.html",
+      "newURL": "https://studio.support.brightcove.com/admin/managing-account-settings.html",
       "oldURL": "/managing-account-settings"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/managing-account-settings.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/managing-account-settings.html",
       "oldURL": "/managing-account-settings"
   },
 
@@ -2095,22 +2150,22 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/general/managing-live-settings.html",
-      "oldURL": "/managing-live-settings"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/admin/managing-live-settings.html",
       "oldURL": "/managing-live-settings"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/general/managing-media-sharing-settings.html",
-      "oldURL": "/managing-media-sharing-settings"
+      "newURL": "https://studio.support.brightcove.com/admin/general/managing-live-settings.html",
+      "oldURL": "/managing-live-settings"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/admin/managing-media-sharing-settings.html",
+      "oldURL": "/managing-media-sharing-settings"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/admin/general/managing-media-sharing-settings.html",
       "oldURL": "/managing-media-sharing-settings"
   },
 
@@ -2145,12 +2200,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/reports/managing-scheduled-reports.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/managing-scheduled-reports.html",
       "oldURL": "/managing-scheduled-reports"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/managing-scheduled-reports.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/reports/managing-scheduled-reports.html",
       "oldURL": "/managing-scheduled-reports"
   },
 
@@ -2215,12 +2270,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/migration-dynamic-delivery.html",
+      "newURL": "https://studio.support.brightcove.com/general/architecture/migration-dynamic-delivery.html",
       "oldURL": "/migration-dynamic-delivery"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/architecture/migration-dynamic-delivery.html",
+      "newURL": "https://studio.support.brightcove.com/general/migration-dynamic-delivery.html",
       "oldURL": "/migration-dynamic-delivery"
   },
 
@@ -2265,12 +2320,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/references/optimal-video-dimensions.html",
+      "newURL": "https://studio.support.brightcove.com/general/optimal-video-dimensions.html",
       "oldURL": "/optimal-video-dimensions"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/optimal-video-dimensions.html",
+      "newURL": "https://studio.support.brightcove.com/general/references/optimal-video-dimensions.html",
       "oldURL": "/optimal-video-dimensions"
   },
 
@@ -2280,22 +2335,22 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/get-started/basics/organizing-videos-using-folders.html",
-      "oldURL": "/organizing-videos-using-folders"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/media/organizing-videos-using-folders.html",
       "oldURL": "/organizing-videos-using-folders"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/captions/overview-adding-captions-video.html",
-      "oldURL": "/overview-adding-captions-video"
+      "newURL": "https://studio.support.brightcove.com/get-started/basics/organizing-videos-using-folders.html",
+      "oldURL": "/organizing-videos-using-folders"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/media/overview-adding-captions-video.html",
+      "oldURL": "/overview-adding-captions-video"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/captions/overview-adding-captions-video.html",
       "oldURL": "/overview-adding-captions-video"
   },
 
@@ -2325,12 +2380,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/architecture/overview-dynamic-delivery.html",
+      "newURL": "https://studio.support.brightcove.com/general/overview-dynamic-delivery.html",
       "oldURL": "/overview-dynamic-delivery"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/overview-dynamic-delivery.html",
+      "newURL": "https://studio.support.brightcove.com/general/architecture/overview-dynamic-delivery.html",
       "oldURL": "/overview-dynamic-delivery"
   },
 
@@ -2350,12 +2405,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/reports/performance-report-reference.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/performance-report-reference.html",
       "oldURL": "/performance-report-reference"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/performance-report-reference.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/reports/performance-report-reference.html",
       "oldURL": "/performance-report-reference"
   },
 
@@ -2380,12 +2435,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/protecting-videos-hls-encryption.html",
+      "newURL": "https://studio.support.brightcove.com/general/content-protection/protecting-videos-hls-encryption.html",
       "oldURL": "/protecting-videos-hls-encryption"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/content-protection/protecting-videos-hls-encryption.html",
+      "newURL": "https://studio.support.brightcove.com/general/protecting-videos-hls-encryption.html",
       "oldURL": "/protecting-videos-hls-encryption"
   },
 
@@ -2410,22 +2465,22 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/publishing-brightcove-players-joomla.html",
-      "oldURL": "/publishing-brightcove-players-joomla"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/publish/third-party/publishing-brightcove-players-joomla.html",
       "oldURL": "/publishing-brightcove-players-joomla"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/general/publishing-live-event-facebook.html",
-      "oldURL": "/publishing-live-event-facebook"
+      "newURL": "https://studio.support.brightcove.com/publish/publishing-brightcove-players-joomla.html",
+      "oldURL": "/publishing-brightcove-players-joomla"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/social/publishing-live-event-facebook.html",
+      "oldURL": "/publishing-live-event-facebook"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/social/general/publishing-live-event-facebook.html",
       "oldURL": "/publishing-live-event-facebook"
   },
 
@@ -2470,18 +2525,13 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/publishing-videos-and-playlists-media-module.html",
-      "oldURL": "/publishing-videos-and-playlists-media-module"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/publish/publishing/publishing-videos-and-playlists-media-module.html",
       "oldURL": "/publishing-videos-and-playlists-media-module"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/publishing-videos-page-experience.html",
-      "oldURL": "/publishing-videos-page-experience"
+      "newURL": "https://studio.support.brightcove.com/publish/publishing-videos-and-playlists-media-module.html",
+      "oldURL": "/publishing-videos-and-playlists-media-module"
   },
 
   {
@@ -2490,12 +2540,17 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/publishing-videos-social-media-platforms.html",
-      "oldURL": "/publishing-videos-social-media-platforms"
+      "newURL": "https://studio.support.brightcove.com/publish/publishing-videos-page-experience.html",
+      "oldURL": "/publishing-videos-page-experience"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/social/general/publishing-videos-social-media-platforms.html",
+      "oldURL": "/publishing-videos-social-media-platforms"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/social/publishing-videos-social-media-platforms.html",
       "oldURL": "/publishing-videos-social-media-platforms"
   },
 
@@ -2530,12 +2585,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/register-training.html",
+      "newURL": "https://studio.support.brightcove.com/get-started/training/register-training.html",
       "oldURL": "/register-training"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/get-started/training/register-training.html",
+      "newURL": "https://studio.support.brightcove.com/register-training.html",
       "oldURL": "/register-training"
   },
 
@@ -2575,12 +2630,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/manage/retranscoding-videos-using-media-module.html",
+      "newURL": "https://studio.support.brightcove.com/media/retranscoding-videos-using-media-module.html",
       "oldURL": "/retranscoding-videos-using-media-module"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/retranscoding-videos-using-media-module.html",
+      "newURL": "https://studio.support.brightcove.com/media/manage/retranscoding-videos-using-media-module.html",
       "oldURL": "/retranscoding-videos-using-media-module"
   },
 
@@ -2595,12 +2650,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/general/reviewing-player-event-data-google-analytics.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/reviewing-player-event-data-google-analytics.html",
       "oldURL": "/reviewing-player-event-data-google-analytics"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/analytics/reviewing-player-event-data-google-analytics.html",
+      "newURL": "https://studio.support.brightcove.com/analytics/general/reviewing-player-event-data-google-analytics.html",
       "oldURL": "/reviewing-player-event-data-google-analytics"
   },
 
@@ -2670,12 +2725,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/searching-for-channels.html",
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/general/searching-for-channels.html",
       "oldURL": "/searching-for-channels"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/general/searching-for-channels.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/searching-for-channels.html",
       "oldURL": "/searching-for-channels"
   },
 
@@ -2695,22 +2750,22 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/properties/setting-player-properties.html",
-      "oldURL": "/setting-player-properties"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/players/setting-player-properties.html",
       "oldURL": "/setting-player-properties"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/players/properties/setting-player-update-mode-and-version.html",
-      "oldURL": "/setting-player-update-mode-and-version"
+      "newURL": "https://studio.support.brightcove.com/players/properties/setting-player-properties.html",
+      "oldURL": "/setting-player-properties"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/players/setting-player-update-mode-and-version.html",
+      "oldURL": "/setting-player-update-mode-and-version"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/players/properties/setting-player-update-mode-and-version.html",
       "oldURL": "/setting-player-update-mode-and-version"
   },
 
@@ -2780,22 +2835,22 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html",
-      "oldURL": "/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html",
       "oldURL": "/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/standard-live-ingest-profiles.html",
-      "oldURL": "/standard-live-ingest-profiles"
+      "newURL": "https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html",
+      "oldURL": "/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/admin/ingest-profiles/standard-live-ingest-profiles.html",
+      "oldURL": "/standard-live-ingest-profiles"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/admin/standard-live-ingest-profiles.html",
       "oldURL": "/standard-live-ingest-profiles"
   },
 
@@ -2825,12 +2880,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/step-step-using-players-module-create-and-publish-player.html",
+      "newURL": "https://studio.support.brightcove.com/publish/general/step-step-using-players-module-create-and-publish-player.html",
       "oldURL": "/step-step-using-players-module-create-and-publish-player"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/publish/general/step-step-using-players-module-create-and-publish-player.html",
+      "newURL": "https://studio.support.brightcove.com/publish/step-step-using-players-module-create-and-publish-player.html",
       "oldURL": "/step-step-using-players-module-create-and-publish-player"
   },
 
@@ -2855,12 +2910,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/captions/styling-captions.html",
+      "newURL": "https://studio.support.brightcove.com/media/styling-captions.html",
       "oldURL": "/styling-captions"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/styling-captions.html",
+      "newURL": "https://studio.support.brightcove.com/media/captions/styling-captions.html",
       "oldURL": "/styling-captions"
   },
 
@@ -2885,12 +2940,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/references/supported-video-and-audio-formats-codecs-and-containers.html",
+      "newURL": "https://studio.support.brightcove.com/general/supported-video-and-audio-formats-codecs-and-containers.html",
       "oldURL": "/supported-video-and-audio-formats-codecs-and-containers"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/supported-video-and-audio-formats-codecs-and-containers.html",
+      "newURL": "https://studio.support.brightcove.com/general/references/supported-video-and-audio-formats-codecs-and-containers.html",
       "oldURL": "/supported-video-and-audio-formats-codecs-and-containers"
   },
 
@@ -2905,12 +2960,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/content-protection/tls-media-player-and-api-urls.html",
+      "newURL": "https://studio.support.brightcove.com/general/tls-media-player-and-api-urls.html",
       "oldURL": "/tls-media-player-and-api-urls"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/tls-media-player-and-api-urls.html",
+      "newURL": "https://studio.support.brightcove.com/general/content-protection/tls-media-player-and-api-urls.html",
       "oldURL": "/tls-media-player-and-api-urls"
   },
 
@@ -2970,12 +3025,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/properties/uploading-poster-and-thumbnail-images.html",
+      "newURL": "https://studio.support.brightcove.com/media/uploading-poster-and-thumbnail-images.html",
       "oldURL": "/uploading-poster-and-thumbnail-images"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/uploading-poster-and-thumbnail-images.html",
+      "newURL": "https://studio.support.brightcove.com/media/properties/uploading-poster-and-thumbnail-images.html",
       "oldURL": "/uploading-poster-and-thumbnail-images"
   },
 
@@ -2985,12 +3040,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/manage/uploading-videos-remote-urls.html",
+      "newURL": "https://studio.support.brightcove.com/media/uploading-videos-remote-urls.html",
       "oldURL": "/uploading-videos-remote-urls"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/uploading-videos-remote-urls.html",
+      "newURL": "https://studio.support.brightcove.com/media/manage/uploading-videos-remote-urls.html",
       "oldURL": "/uploading-videos-remote-urls"
   },
 
@@ -3015,12 +3070,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/using-auto-sync-synchronize-videos-social-media-accounts.html",
+      "newURL": "https://studio.support.brightcove.com/social/general/using-auto-sync-synchronize-videos-social-media-accounts.html",
       "oldURL": "/using-auto-sync-synchronize-videos-social-media-accounts"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/social/general/using-auto-sync-synchronize-videos-social-media-accounts.html",
+      "newURL": "https://studio.support.brightcove.com/social/using-auto-sync-synchronize-videos-social-media-accounts.html",
       "oldURL": "/using-auto-sync-synchronize-videos-social-media-accounts"
   },
 
@@ -3030,12 +3085,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/cloud-playout/using-channel-actions.html",
+      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/publishing/using-channel-actions.html",
       "oldURL": "/using-channel-actions"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/channels/cloud-playout/publishing/using-channel-actions.html",
+      "newURL": "https://studio.support.brightcove.com/cloud-playout/using-channel-actions.html",
       "oldURL": "/using-channel-actions"
   },
 
@@ -3125,12 +3180,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/architecture/video-cloud-architecture-overview.html",
+      "newURL": "https://studio.support.brightcove.com/general/video-cloud-architecture-overview.html",
       "oldURL": "/video-cloud-architecture-overview"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/video-cloud-architecture-overview.html",
+      "newURL": "https://studio.support.brightcove.com/general/architecture/video-cloud-architecture-overview.html",
       "oldURL": "/video-cloud-architecture-overview"
   },
 
@@ -3190,12 +3245,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/viewing-billing-information.html",
+      "newURL": "https://studio.support.brightcove.com/admin/general/viewing-billing-information.html",
       "oldURL": "/viewing-billing-information"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/admin/general/viewing-billing-information.html",
+      "newURL": "https://studio.support.brightcove.com/admin/viewing-billing-information.html",
       "oldURL": "/viewing-billing-information"
   },
 
@@ -3260,12 +3315,12 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/general/working-cue-points-media-module.html",
+      "newURL": "https://studio.support.brightcove.com/media/working-cue-points-media-module.html",
       "oldURL": "/working-cue-points-media-module"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/working-cue-points-media-module.html",
+      "newURL": "https://studio.support.brightcove.com/media/general/working-cue-points-media-module.html",
       "oldURL": "/working-cue-points-media-module"
   },
 
@@ -3280,22 +3335,22 @@
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/general/working-multiple-video-cloud-accounts.html",
-      "oldURL": "/working-multiple-video-cloud-accounts"
-  },
-
-  {
       "newURL": "https://studio.support.brightcove.com/general/references/working-multiple-video-cloud-accounts.html",
       "oldURL": "/working-multiple-video-cloud-accounts"
   },
 
   {
-      "newURL": "https://studio.support.brightcove.com/media/manage/working-remote-asset-videos.html",
-      "oldURL": "/working-remote-asset-videos"
+      "newURL": "https://studio.support.brightcove.com/general/working-multiple-video-cloud-accounts.html",
+      "oldURL": "/working-multiple-video-cloud-accounts"
   },
 
   {
       "newURL": "https://studio.support.brightcove.com/media/working-remote-asset-videos.html",
+      "oldURL": "/working-remote-asset-videos"
+  },
+
+  {
+      "newURL": "https://studio.support.brightcove.com/media/manage/working-remote-asset-videos.html",
       "oldURL": "/working-remote-asset-videos"
   },
 

@@ -1219,6 +1219,107 @@
       
         <url>
           
+            <loc>https://studio.support.brightcove.com/analytics/engagement/index.html</loc>
+          
+            <lastmod>2023-09-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/analytics/engagement/engagement-overview.html</loc>
+            
+            <lastmod>2023-09-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/analytics/engagement/engagement-usage-trends.html</loc>
+            
+            <lastmod>2023-09-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/analytics/engagement/engagement-status-over-time.html</loc>
+            
+            <lastmod>2023-09-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/analytics/engagement/engagement-sessions-over-time.html</loc>
+            
+            <lastmod>2023-09-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/analytics/engagement/engagement-hours-viewed-by.html</loc>
+            
+            <lastmod>2023-09-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
+            <loc>https://studio.support.brightcove.com/analytics/content/index.html</loc>
+          
+            <lastmod>2023-09-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/analytics/content/content-overview.html</loc>
+            
+            <lastmod>2023-09-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/analytics/content/content-catalog-by.html</loc>
+            
+            <lastmod>2023-09-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/analytics/content/content-pupular-content-by.html</loc>
+            
+            <lastmod>2023-09-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/analytics/content/content-trial-drivers-library.html</loc>
+            
+            <lastmod>2023-09-14</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
             <loc>https://studio.support.brightcove.com/analytics/general/index.html</loc>
           
             <lastmod>2023-09-14</lastmod>

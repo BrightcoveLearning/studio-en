@@ -1,9 +1,39 @@
 ---
 title: Engagement
 description: 'These topics provide guides to the Engagement reports.'
-parent: Guides
+parent: Reviewing Analytics
+grandparent: Home
 ---
-<!-- Template for sub-section that has just pages -->
+<article class="bcls-article">
+  <h1><i class="fa-regular fa-chart-line-up"></i> {{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <div class="row">
+    <div class="col-12 col-lg-4 py-3">
+      <div class="card card-hover shadow-sm" onclick="location.href='/analytics/module/index.html';">
+        <div class="card-body">
+          <div class="card-text">
+            <ul class="list-group list-group-flush">
+              {% for item in site.data.navigation %}
+              {% if item.name == page.parent %}
+              {% for entry in item.docs %}
+              {% if entry.name == page.title %}
+              {% for doc in entry.docs %}
+              <li class="list-group-item"><a href="{{ doc.url }}">{{ doc.name }}</a></li>
+              {% endfor %}
+              {% endif %}
+              {% endfor %}
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <!--//card-body--> 
+      </div>
+      <!--//card--> 
+    </div>
+  </div>
+</article>
+<!-- Template for sub-section that has just pages
 {% for item in site.data.navigation %}
   {% if item.name == page.parent %}
     {% for section in item.docs %}
@@ -31,4 +61,4 @@ parent: Guides
       {% endif %}
     {% endfor %}
   {% endif %}
-{% endfor %}
+{% endfor %} -->
