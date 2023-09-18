@@ -3326,46 +3326,83 @@
         <h2 id="Adding_a_transcript_file">Adding a transcript file</h2>
         <p>The transcript files can be uploaded using the Media module. To upload a transcript for a video, follow these steps:</p>
         <ol class="bcls-tasklist-restart">
-            <li>Open the <strong>Media</strong> module.</li>
            
-            <li>Click the video title link and, select the <strong>Tracks</strong>
-                tab, then locate the <strong>Transcripts</strong> section. 
-                <!-- <figure class="bcls-figure"><img class="bcls-image--no-border"
-                        alt
-                        src="/assets/images/s-media-img/captions/node18591-audio-tracks-section.png" /></figure> -->
-            </li>
-        </ol>
+                  <li>Open the <strong>Media</strong> module.</li>
+                  <li>Click the video title link.</li>
+                  <li>Select the <strong>Tracks</strong> tab, locate the <strong>Transcripts</strong> section, click <span class="button-blue-text-bordered"> + Add</span></li>
+                    <li>Select if the transcript file will be uploaded to Video Cloud or hosted on an external URL.
+                      <ul>
+                        <li><strong>Select files</strong> - Select the transcript file from the file system. The file will be uploaded to Video Cloud.</li>
+                        <li><strong>Upload from URL</strong> - Enter the public URL where the transcript file resides. The file will be uploaded to Video Cloud.</li>
+                     </ul>
+                      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/captions/transcripts/add-transcripts.png" /></figure>
+                    </li>
+                    <li>Select the <strong>Language</strong> of the transcript data.</li>
+                  <li>The <strong>Label</strong> will be added automatically for the transcript file, but you can also edit it as needed.</li>
+                  </li>
+                  <li>Select a <strong>Status</strong>:
+                    <ul>
+                      <li><strong>Publish</strong> - Transcript will appear in the video.</li>
+                      <li><strong>Draft</strong> - Transcript will not appear in the video.</li>
+                    </ul>
+                  </li>
+                  <li>Click <span class="button-blue"> Add</span> to save the transcript information.
+                     </li>
+                </ol>
     </section>
 
     <section class="bcls-section">
-        <h2 id="Updating_a_transcript_file">Updating a transcript file</h2>
-        <p>The transcript files can be updated using the Media module. To update a transcript for a video, follow these steps:</p>
+        <h2 id="editing_details">Editing transcript details</h2>
+        <p>The Media module provides the option to edit transcript details. To edit
+          transcript details, follow these steps.</p>
         <ol class="bcls-tasklist-restart">
             <li>Open the <strong>Media</strong> module.</li>
-           
-            <li>Click the video title link and, select the <strong>Tracks</strong>
-                tab, then locate the <strong>Transcripts</strong> section. 
-                <!-- <figure class="bcls-figure"><img class="bcls-image--no-border"
-                        alt
-                        src="/assets/images/s-media-img/captions/node18591-audio-tracks-section.png" /></figure> -->
-            </li>
+            <li>Click the link for the video you want to edit.</li>
+            <li>At the top of the page, select the <strong>Tracks</strong> tab.</li>
+            <li>Locate the <strong>Transcripts</strong> section and click on <img
+              src="/assets/images/media/video-details/three-dots-button.webp" alt>
+            and select the <strong>Edit transcript details</strong> option.
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt
+                src="/assets/images/s-media-img/captions/transcripts/edit-transcript.png" /></figure>
+          </li>
+          <li>Edit the transcript details as needed.</li>
+          <li>Click <span class="button-blue">Save</span>.</li>
         </ol>
-    </section>
+      </section>
 
-    <section class="bcls-section">
-        <h2 id="Deleting_a_transcript_file">Deleting a transcript file</h2>
-        <p>The transcript files can be deleted using the Media module. To delete a transcript for a video, follow these steps:</p>
+      <section class="bcls-section">
+        <h2 id="download">Downloading transcript files</h2>
+        <p>The Media module provides the ability to download transcript files. To
+          download a transcript file, follow these steps.</p>
+        <ol class="bcls-tasklist-restart">
+          <li>Open the <strong>Media</strong> module.</li>
+          <li>Click the link for the video you want to edit.</li>
+          <li>At the top of the page, select the <strong>Tracks</strong> tab.</li>
+          <li>Locate the <strong>Transcripts</strong> section and click <img
+              src="/assets/images/media/video-details/three-dots-button.webp" alt>
+            and select the <strong>Download</strong> option.
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt
+                src="/assets/images/s-media-img/captions/transcripts/download-transcript.png" /></figure>
+          </li>
+        </ol>
+      </section>
+
+      <section class="bcls-section">
+        <h2 id="delete">Deleting transcript files</h2>
+        <p>The Media module provides the option to delete transcripts. To delete
+          transcripts, follow these steps.</p>
         <ol class="bcls-tasklist-restart">
             <li>Open the <strong>Media</strong> module.</li>
-           
-            <li>Click the video title link and, select the <strong>Tracks</strong>
-                tab, then locate the <strong>Transcripts</strong> section. 
-                <!-- <figure class="bcls-figure"><img class="bcls-image--no-border"
-                        alt
-                        src="/assets/images/s-media-img/captions/node18591-audio-tracks-section.png" /></figure> -->
-            </li>
+            <li>Click the link for the video you want to edit.</li>
+            <li>At the top of the page, select the <strong>Tracks</strong> tab.</li>
+            <li>Locate the <strong>Transcripts</strong> section and click on <img
+              src="/assets/images/media/video-details/three-dots-button.webp" alt>
+            and select the <strong>Delete</strong> option
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt
+                src="/assets/images/s-media-img/captions/transcripts/delete-transcript.png" /></figure>
+          </li>
         </ol>
-    </section>
+      </section>
 
     <section class="bcls-section">
         <h2 id="Limitations">Limitations</h2>
@@ -3376,7 +3413,9 @@
                 this will be in a JSON structure with auto transcription errors.
                 Note that there is no way to correct these errors without
                 downloading, fixing, and uploading the transcripts again.</li>
-
+            <li>No Brightcove Player plugin currently shows the transcript and enables player control/interaction.</li>
+            <li>Remote Transcripts are not initially supported.</li>
+            <li>Transcript upload on shared assets is not supported.</li>
         </ul>
     </section>
 
