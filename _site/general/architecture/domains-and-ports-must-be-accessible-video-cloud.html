@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Ports that Must Be Accessible to Video Cloud</title>
+        <title>Domains and Ports that Must Be Accessible to Video Cloud</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In order to use Video Cloud Studio from within your network, your browser client needs to be able to access a number of required ports through the firewall. If you can not access the ports below, you may experience issues using Video Cloud players, Studio and modules.">
+        <meta name="description" content="In order to use Video Cloud Studio from within your network, your browser client needs to be able to access a number of required ports and domains through the firewall. If you can not access the ports and domains below, you may experience issues using Video Cloud players, Studio and modules.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3155,7 +3155,7 @@
                   
                   
                   
-                  <li class="nav-item section-doc"><a class="nav-link" href="/general/architecture/domains-and-ports-must-be-accessible-video-cloud.html" aria-current="page">Ports that Must Be Accessible</a></li>
+                  <li class="nav-item section-doc"><a class="nav-link" href="/general/architecture/domains-and-ports-must-be-accessible-video-cloud.html" aria-current="page">Domains and Ports that Must Be Accessible</a></li>
                   
                   
                   
@@ -3297,7 +3297,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Ports that Must Be Accessible to Video Cloud</li>
+            <li class="breadcrumb-item active" aria-current="page">Domains and Ports that Must Be Accessible to Video Cloud</li>
             
             
           </ol>
@@ -3318,9 +3318,9 @@
       <br>
       
       
-<h1>Ports that Must Be Accessible to Video Cloud</h1>
+<h1>Domains and Ports that Must Be Accessible to Video Cloud</h1>
 <article class="bcls-article">
-  <summary>In order to use Video Cloud Studio from within your network, your browser client needs to be able to access a number of required ports through the firewall. If you can not access the ports below, you may experience issues using Video Cloud players, Studio and modules.</summary>
+  <summary>In order to use Video Cloud Studio from within your network, your browser client needs to be able to access a number of required ports and domains through the firewall. If you can not access the ports and domains below, you may experience issues using Video Cloud players, Studio and modules.</summary>
   <section class="bcls-section">
     <h2 id="Note_on_managed_player_releases">Note on managed player releases</h2>
     <p>Brightcove generally allows about a week for customers to try a pre-release before a managed release begins. Managed release is the process of running a controlled A/B test across production web sites. The managed release system allows loading the new version of the player on a small percentage of page loads for a short period - usually a few hours. During this time, Brightcove collects data so the performance of the old and new versions can be compared. The distribution of number of errors, number of minutes viewed, number of ad starts, and several other metrics are all examined. Brightcove looks at distributional counts and summaries of the data, but also at outliers, sites that have greater than average differences in the tracked metrics. After careful review of all the data, either the update is committed or rolled back. If it is decided to roll it back, small updates may be made to fix an identified problem and then the managed release is re-run.</p> <aside class="bcls-aside bcls-aside--information">
@@ -3345,7 +3345,7 @@
   <section class="bcls-section">
     <p>The list of key URLs for Video Cloud operations are (all over http port 80 and https port 443):</p>
   </section>
-  <!-- <section class="bcls-section">
+  <section class="bcls-section">
     <h2 id="Keydomains_wildcarded">Key domains - wildcards</h2>
     <p>The table below list key domains for Brightcove with wilcards.</p>
     <table class="bcls-table">
@@ -3411,10 +3411,10 @@
           <td translate="no">*.boltdns.net</td>
           <td>Dynamic Delivery</td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td translate="no">brightcove.vo.llnwd.net</td>
           <td>Source for video renditions and assets</td>
-        </tr>
+        </tr> -->
         <tr>
           <td translate="no">*.llnw.net</td>
           <td>Source for video renditions and assets</td>
@@ -3474,7 +3474,7 @@
         </tr>
       </tbody>
     </table>
-  </section> -->
+  </section>
 
   <section class="bcls-section">
     <h2 id="Protocols_for_Live">Protocols for Live</h2>
@@ -3505,7 +3505,7 @@
     </table>
   </section>
 
-  <!-- <section class="bcls-section">
+  <section class="bcls-section">
     <h2 id="specific_domains">Specfic domains</h2>
     <p>If wildcarding is not possible, individually list the following domains (all over http port 80 and https port
       443):</p>
@@ -3548,10 +3548,10 @@
           <td translate="no">bcove.video</td>
           <td>Social sharing, shortened video URLs</td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td translate="no">bcsecure01-a.akamaihd.net</td>
           <td>For some secure streaming</td>
-        </tr>
+        </tr> -->
         <tr>
           <td translate="no">bcvid.brightcove.com</td>
           <td>Used by the Studio home page</td>
@@ -3588,19 +3588,19 @@
           <td translate="no">brightcove04.brightcove.com</td>
           <td>Video streams and assets</td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td translate="no">brightcove.vo.llnwd.net</td>
           <td>Source for video assets</td>
-        </tr>
-        <tr>
+        </tr> -->
+        <!-- <tr>
           <td translate="no">brightcove-01.fcod.llnwd.net, brightcove-02.fcod.llnwd.net,
             brightcove-03.fcod.llnwd.net,...</td>
           <td>...and so forth, through brightcove-199.fcod.llnwd.net; additional sources for video assets</td>
-        </tr>
-        <tr>
+        </tr> -->
+        <!-- <tr>
           <td translate="no">brightcove04.o.brightcove.com</td>
           <td>Video streams and assets</td>
-        </tr>
+        </tr> -->
         <tr>
           <td translate="no">c.brightcove.com</td>
           <td>Domain for HLS delivery</td>
@@ -3737,10 +3737,10 @@
           <td translate="no">smartplayers.api.brightcove.com</td>
           <td>Used by Studio for player management</td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td translate="no">uds.ak.o.brightcove.com</td>
           <td>Video stream source</td>
-        </tr>
+        </tr> -->
         <tr>
           <td translate="no">vjs.zencdn.net</td>
           <td>Used by Brightcove player to play videos on some versions of IE</td>
@@ -3761,10 +3761,10 @@
           <td translate="no">docs.brightcove.com</td>
           <td>Documentation - API References</td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td translate="no">a139.vi5g5.akafms.net</td>
           <td>Source for some streaming videos</td>
-        </tr>
+        </tr> -->
         <tr>
           <td translate="no">images.gallerysites.net</td>
           <td>Used to deliver Gallery images</td>
@@ -3773,7 +3773,7 @@
     </table>
     <p>Please understand that specific IP addresses are not available, as they may change at any time without notice. In
       addition, as we add new features or modify existing features, this list may change. </p>
-  </section> -->
+  </section>
   <section class="bcls-section">
     <h2 id="content_security_policies">Content security policies</h2>
     <p>Brightcove's current set of CSPs:</p>
