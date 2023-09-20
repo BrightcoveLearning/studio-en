@@ -122,6 +122,8 @@
       url: /media/captions/overview-adding-captions-video.html
     - name: Adding Captions to Videos
       url: /media/captions/adding-captions-videos-using-media-module.html
+    - name: Adding Transcripts to Videos
+      url: /media/captions/adding-transcripts-videos.html
     - name: Adding Audio Tracks to Videos
       url: /media/captions/adding-audio-tracks-videos-using-media-module.html
     - name: Adding Chapters to a Video

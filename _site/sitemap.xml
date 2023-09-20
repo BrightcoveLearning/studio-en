@@ -482,6 +482,15 @@
         
           <url>
             
+              <loc>https://studio.support.brightcove.com/media/captions/adding-transcripts-videos.html</loc>
+            
+            <lastmod>2023-09-20</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
               <loc>https://studio.support.brightcove.com/media/captions/adding-audio-tracks-videos-using-media-module.html</loc>
             
             <lastmod>2023-09-20</lastmod>
