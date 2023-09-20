@@ -3330,7 +3330,7 @@
                   <li>Open the <strong>Media</strong> module.</li>
                   <li>Click the video title link.</li>
                   <li>Select the <strong>Tracks</strong> tab, locate the <strong>Transcripts</strong> section, click <span class="button-blue-text-bordered"> + Add</span></li>
-                    <li>Select if the transcript file will be uploaded to Video Cloud or hosted on an external URL.
+                    <li>Select if the transcript file will be uploaded to Video Cloud from your computer or a URL.
                       <ul>
                         <li><strong>Select files</strong> - Select the transcript file from the file system. The file will be uploaded to Video Cloud.</li>
                         <li><strong>Upload from URL</strong> - Enter the public URL where the transcript file resides. The file will be uploaded to Video Cloud.</li>
@@ -3342,8 +3342,8 @@
                   </li>
                   <li>Select a <strong>Status</strong>:
                     <ul>
-                      <li><strong>Publish</strong> - Transcript will appear in the video.</li>
-                      <li><strong>Draft</strong> - Transcript will not appear in the video.</li>
+                      <li><strong>Publish</strong> - Transcript will appear on the Playback API for the video.</li>
+                      <li><strong>Draft</strong> - Transcript will not appear on the Playback API for the video.</li>
                     </ul>
                   </li>
                   <li>Click <span class="button-blue"> Add</span> to save the transcript information.
@@ -3407,15 +3407,15 @@
     <section class="bcls-section">
         <h2 id="Limitations">Limitations</h2>
         <ul>
-            <li>Formats other than <strong>.txt</strong> or <strong>JSON</strong>
-                on upload are not supported.</li>
-            <li>If you are using Auto Captioning, the transcript will show, but
-                this will be in a JSON structure with auto transcription errors.
-                Note that there is no way to correct these errors without
-                downloading, fixing, and uploading the transcripts again.</li>
-            <li>No Brightcove Player plugin currently shows the transcript and enables player control/interaction.</li>
-            <li>Remote Transcripts are not initially supported.</li>
-            <li>Transcript upload on shared assets is not supported.</li>
+         <li>There is no current transcript experience in the Brightcove Player.</li> 
+
+         <li>Formats other than .txt on upload in the Media Module are not supported.</li>
+          
+         <li>If you are using auto-captioning, the JSON transcript will display in the list, however there is no current ability to edit the contents of the transcript.</li>
+          
+         <li>Remote transcripts are not initially supported.</li> 
+          
+         <li>Uploading a transcript for shared assets is not supported.</li>
         </ul>
     </section>
 
