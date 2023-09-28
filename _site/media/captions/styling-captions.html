@@ -3336,7 +3336,7 @@
       <li><a href="#studio">By adding styling options in the Video Properties section.</a></li>
         
       <li><a href="#cssguide">CSS style guide</a></li>
-      <li><a href="#user">User styling options</a></li>
+      <!-- <li><a href="#user">User styling options</a></li> -->
     </ul>
     <aside class="bcls-aside bcls-aside--information">Note:  Never use <code translate="no">!important</code> or any other CSS tricks to override user preferences (those set in the Captions Settings dialog).</aside>
     <aside class="bcls-aside bcls-aside--information">Note:  Safari uses native captions on the device and the device settings take precedence over vtt styles.</aside>
@@ -3374,8 +3374,131 @@
       <li>Select the <strong>captions settings</strong> option.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details/caption-settings.webp" /></figure>
       </li>
-      <li>Edit the style as needed. Click <strong>Done</strong>.</li>
+      <li><p>Clicking on the captions settings menu will display an overlay which allows the following caption properties to be set:</p>
+        <ul>
+          <li>Text</li>
+          <li>Font Size</li>
+          <li>Background</li>
+          <li>Text Edge Style</li>
+          <li>Window</li>
+          <li>Font family</li>
+        </ul>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details/captions-menu.webp" /></figure>
+      </li>
+      <li>Click <strong>Reset</strong> to return the captions to their default styling or <strong>Done</strong> to save the changes.</li>
     </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="cssguide">CSS Style Guide</h2>
+    <p>This table shows which CSS properties are and are not supported for styling captions with the Brightcove Player:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>CSS Property</th>
+          <th>Supported</th>
+          <th>Not Supported</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No"> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family </a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">font-size</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">color</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">background</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity">opacity</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility">visibility</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration">text-decoration</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow">text-shadow</a></code></td>
+          <td style="text-align:center">✔</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><code translate="No">width</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">height</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">line-height</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">white-space</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">word-wrap</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">top</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">left</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">display</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+        <tr>
+          <td><code translate="No">direction</code></td>
+          <td>&nbsp;</td>
+          <td style="text-align:center">✔</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>For more information on styling options for caption files, see the <a href="https://www.w3.org/TR/webvtt1/">W3C WebVTT specification document</a> or see <a href="https://html5doctor.com/video-subtitling-and-webvtt/">Video Subtitling and WebVTT</a>.</p>
   </section>
   
   <section class="bcls-section">
