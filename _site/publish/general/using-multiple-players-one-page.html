@@ -3322,8 +3322,8 @@
 <article class="bcls-article">
     <h1>Using Multiple Players on One Page</h1>
     <summary>In this topic, you will learn how to use multiple Brightcove Players on a single HTML page.</summary>
-    <section id="multipleplayers" class="bcls-section">
-        <h2>Multiple players</h2>
+    <section class="bcls-section">
+        <h2 id="multipleplayers">Multiple players</h2>
         <p>If you are using multiple players on the same page, there is nothing special you need to do. For instance, it is perfectly acceptable to have the following players on the same page.</p>
         <pre class="line-numbers">
 <code class="language-html" translate="No">&lt;video-js data-video-id="4093372393001"
@@ -3347,8 +3347,8 @@
         <aside class="bcls-aside bcls-aside--information">Note: If you are a Brightcove Player customer, you will not use the <code translate="No">data-video-id</code> attribute to assign a video to your player. You would either assign the video in the <strong>Players</strong> module or using curl.</aside>
         <aside class="bcls-aside bcls-aside--tip">You can use the <strong>Standard (iframe)</strong> code for multiple players on the same page also.</aside>
     </section>
-    <section id="Special_considerations" class="bcls-section">
-        <h2>Special considerations</h2>
+    <section class="bcls-section">
+        <h2 id="Special_considerations">Special considerations</h2>
         <p>Be aware of the following when placing multiple players on the same HTML page:</p>
         <ul>
             <li>You can use multiple instances of the same player on same page, using a single <strong>index.min.js</strong> file. We strongly recommend using one <strong>index.min.js</strong> file if possible, as this saves considerable amounts of page load time.</li>
@@ -3363,7 +3363,7 @@
             <li>If multiple players have the same id on one page and specify different size inside <code translate="No">&lt;video&gt;</code> tag using <code translate="No">width</code> and <code translate="No">height</code> attributes, the player CSS from the last player is applied to all players.
                 <p><strong>Workarounds</strong></p>
                 <ul>
-                    <li>Use players with a different player ids if you want them to have different sizes or styling</li>
+                    <li>Use players with different player IDs if you want them to have different sizes or styling</li>
                     <li>Define a classes for the players that provide the player sizing using CSS, and add the classes to the video tags for the different players</li>
                 </ul>
             </li>
