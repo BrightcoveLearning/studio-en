@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Creating a Sprinklr Destinations</title>
+        <title>Creating a Sprinklr Destination</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
@@ -3298,7 +3298,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Creating a Sprinklr Destinations</li>
+            <li class="breadcrumb-item active" aria-current="page">Creating a Sprinklr Destination</li>
             
             
           </ol>
@@ -3320,7 +3320,7 @@
       
       
 <article class="bcls-article">
-    <h1>Creating a Sprinklr Destinations</h1>
+    <h1>Creating a Sprinklr Destination</h1>
     <summary>In this topic you will learn how to create a Sprinklr destination using Brightcove Social.</summary>
     <p>A publishing destination is a social media account/page that you wish to publish Video Cloud videos to. Before you can send videos to your Sprinklr account using Brightcove Social, you have to create a Sprinklr app and then a Sprinklr destination.</p>
     <section class="bcls-section">
@@ -3363,8 +3363,8 @@
         </section>
     <section class="bcls-section">
       <h2 id="sprinklr-destination">Creating a Sprinklr destination</h2>
-      <p>Creating a Sprinklr destination when you want to send videos to Sprinklr so that you can find them in your assets library inside Sprinklr and publish them to their final destinations from Sprinklr directly. To create a Sprinklr destination, you first need to <a target="_blank" href="https://studio.support.brightcove.com/social/module/creating-sprinklr-app.html">create a Sprinklr app</a>.</p>
-      <aside class="bcls-aside bcls-aside--tip">Note: Once you have <a target="_blank" href="https://studio.support.brightcove.com/social/module/creating-sprinklr-app.html">created a Sprinklr app</a> , please continue with the steps below.</aside>
+      <p>Creating a Sprinklr destination when you want to send videos to Sprinklr so that you can find them in your assets library inside Sprinklr and publish them to their final destinations from Sprinklr directly. To create a Sprinklr destination, you first need to <a target="_blank" href="#sprinklr-app">create a Sprinklr app</a>.</p>
+      <aside class="bcls-aside bcls-aside--tip">Note: Once you have <a target="_blank" href="#sprinklr-app">created a Sprinklr app</a> , please continue with the steps below.</aside>
       <ol class="bcls-tasklist-restart">
         <li>Open the<strong> Social </strong>Module.</li>
         <li>Click <strong>Destinations</strong> in the left navigation.</li>
@@ -3398,7 +3398,7 @@
     </section>
     <section class="bcls-section">
       <h2 id="sprinklr_defaults">Setting Sprinklr defaults</h2>
-      <p>The destination default values will be used as the default video properties when <a href="/social/general/publishing-videos-social-media-platforms.html">sending videos to Sprinklr</a>. To configure publishing defaults for Sprinklr destination, click on the destination name and then click <span class="button-blue">Edit</span> in the <strong>Defaults for this destination</strong> section. The following video properties can be configured:</p>
+      <p>The destination default values will be used as the default video properties when sending videos to Sprinklr. To configure publishing defaults for Sprinklr destination, click on the destination name and then click <span class="button-blue">Edit</span> in the <strong>Defaults for this destination</strong> section. The following video properties can be configured:</p>
       <ul>
         <li><a href="#sprinklrpostinfo">Post Info</a></li>
         <li><a href="#sprinklrschedule">Schedule</a></li>
@@ -3437,11 +3437,61 @@
       <aside class="bcls-aside bcls-aside--tip">Note: One of the use cases for <strong>Expired</strong> is to enable automatic deletion of published posts from Sprinklr. For that, you first need a rule in Brightcove that expires videos in Sprinklr upon untagging or deleting them in Brightcove. If that video in Sprinklr has the <strong>Delete all posts associated to this asset upon the expiry of asset</strong> option enabled in the Sprinklr UI, then setting a video as <strong>Expired</strong> from Brightcove will delete those posts. However, Sprinklr only supports this deletion feature with Facebook, Twitter, and YouTube.</aside>
     </section>
     <section class="bcls-section">
-      <h2 id="related-documentation">Related Documentation</h2>
-      <ul>
-        <li><a target="_blank" href="https://studio.support.brightcove.com/social/general/using-auto-sync-synchronize-videos-social-media-accounts.html">Auto Sync</a>.</li>
-      </ul>
+      <h2 id="configure">Configuring Auto Sync</h2>
+      <p>To configure Auto Sync, follow these steps.</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Open the<strong> Social </strong>Module.</li>
+        <li>Click <strong>Auto Sync</strong> in the left navigation. A list of all Auto Sync names that have been created will be displayed.
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/node16642-autosync-list.png" /></figure>
+          <aside class="bcls-aside bcls-aside--information">Note: The thumbnail image will populate once videos have been synced.</aside>
+        </li>
+        <li>Click <span class="button-blue">Set up Auto Sync</span>.</li>
+        <li>Enter a <strong>Name</strong> for the sync.</li>
+        <li>Select the videos to distribute.
+          <ul>
+            <li><strong>Videos with all these tags</strong> - Videos with <strong>ALL</strong> of the tags listed should be synced</li>
+            <li><strong>Videos with any of these tags</strong> - Videos with <strong>ANY</strong> of the tags listed should be synced</li>
+            <li><strong>All videos in this account</strong> - All videos in the account should be synced</li>
+          </ul>
+        </li>
+        <li>Unless <strong>All videos in this account</strong> was selected, enter a comma separated list of tags. After tags have been entered, the number of videos with these tags will be displayed.
+          <aside class="bcls-aside bcls-aside--information">Note: Any existing videos with the specified tags will not be automatically synchronized. Any new videos with these tags will be automatically synchronized. To get your existing videos to synchronize, change the video metadata to trigger an Auto Sync.</aside>
+        </li>
+        <li>Select any videos that should be excluded.
+          <ul>
+            <li><strong>Inactive</strong> - Inactive videos will not be synced (default)</li>
+            <li><strong>Schedule restricted</strong> - Scheduled videos will not be synced</li>
+            <li><strong>Geographically restricted</strong> - Videos with gauge-restrictions will not be synced</li>
+          </ul>
+          
+        </li>
+        <li>Click <span class="button-blue">Next</span>.</li>
+        <li>Choose the Sprinklr destination.
+          <aside class="bcls-aside bcls-aside--information">Note: Destination defaults can be changed by editing the destination properties.</aside>
+        </li>
+        <li>Click <span class="button-blue">Next</span>.</li>
+        <li>Select what happens when a video is untagged or deleted from Video Cloud:
+          <ul>
+            <li><strong>Delete distributed video on Sprinklr</strong> - The video will be deleted from Sprinklr</li>
+            <li><strong>Expire distributed video on Sprinklr</strong> - The video will be expired on Sprinklr</li>
+            <li><strong>No action</strong> - Nothing happens to the Sprinklr video</li>
+          </ul>
+        </li>
+        <li>Select what happens when the video metadata is changed:
+          <ul>
+            <li><strong>Update video metadata on Sprinklr</strong> - Changes to video metadata on the Video Cloud side will be synchronized to Sprinklr</li>
+            <li><strong>No action</strong> - No action is taken</li>
+          </ul>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/auto-sync-set-up.webp" /></figure>
+        </li>
+        <li>Click <span class="button-blue">Next</span>.</li>
+        <li>Confirm the Auto Sync settings.
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/general/auto-sync-finish.webp" /></figure>
+        </li>
+        <li><span class="button-blue">Finish</span></li>
+      </ol>
     </section>
+    
     
   </article>
   
