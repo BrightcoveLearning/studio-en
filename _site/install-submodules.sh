@@ -21,6 +21,7 @@ git submodule add https://github.com/BrightcoveLearning/s-web-conferencing
 git submodule add https://github.com/BrightcoveLearning/s-brightcove-interactivity
 git submodule add https://github.com/BrightcoveLearning/s-integrations
 git submodule add https://github.com/BrightcoveLearning/s-template-page-includes
+git submodule add https://github.com/BrightcoveLearning/s-publishing-apps
 cd ..
 cd assets/images
 git submodule add https://github.com/BrightcoveLearning/s-admin-img
@@ -40,6 +41,7 @@ git submodule add https://github.com/BrightcoveLearning/s-live-img
 git submodule add https://github.com/BrightcoveLearning/s-web-conferencing-img
 git submodule add https://github.com/BrightcoveLearning/s-brightcove-interactivity-img
 git submodule add https://github.com/BrightcoveLearning/s-integrations-img
+git submodule add https://github.com/BrightcoveLearning/s-publishing-apps-img
 cd ..
 echo 'Adding site assets'
 git submodule add https://github.com/BrightcoveLearning/s-site-assets-favicons

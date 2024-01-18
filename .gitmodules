@@ -170,3 +170,9 @@
 	path = assets/images/s-integrations-img
 	url = https://github.com/BrightcoveLearning/s-integrations-img
   branch = main
+[submodule "_includes/s-publishing-apps"]
+	path = _includes/s-publishing-apps
+	url = https://github.com/BrightcoveLearning/s-publishing-apps
+[submodule "assets/images/s-publishing-apps-img"]
+	path = assets/images/s-publishing-apps-img
+	url = https://github.com/BrightcoveLearning/s-publishing-apps-img
