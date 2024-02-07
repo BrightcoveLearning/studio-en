@@ -1,0 +1,60 @@
+---
+title: MAPs Section
+description: In this topic you will learn how to configure MAP integrations in the Players module.
+parent: General Information
+grandparent: Managing Players
+layout: staging
+---
+
+<article class="bcls-article">
+    <h1>{{ page.title }}</h1>
+    <summary>{{ page.description }}</summary>
+    <section class="bcls-section">
+        <h2 id="overview">Overview</h2>
+        <p>The MAPs section allows you to seamlessly connect your Brightcove Player to either Marketo Munchkin or Hubspot Clientside </p>
+    </section>
+
+    <section class="bcls-section">
+        <h2 id="workflow">Workflow</h2>
+        <p>This integration will send the next information over to your desired account:</p>
+        <ul>
+            <li>provider=brightcove</li>
+            <li>videoId={VIDEO_ID}</li>
+            <li>videoName={URL_ENCODED_VIDEO_NAME}</li>
+            <li>account={BC_ACCOUNT_ID}</li>
+            <li>player={BC_PLAYER_ID}</li>
+            <li>timeWatched={SECONDS_WATCHED}</li>
+            <li>percentile={25|50|75|95}</li>
+        </ul>
+
+        <p>Once setup, the Player will send out calls to the respective API at the following percentiles:</p>
+        <ul>
+            <li>25%</li>
+            <li>50%</li>
+            <li>75%</li>
+            <li>95%</li>
+        </ul>
+        <aside class="bcls-aside bcls-aside--information language-editable">If a viewer skips to the 75% mark of a video the API will be called for every quarter up to that point (25%,50%,75%).</aside>
+        <aside class="bcls-aside bcls-aside--information language-editable">These calles are triggered once per video and viewer. If a viewer returns to a previewsly triggered percentile the event will not be triggered again for that viewing.</aside>
+
+    </section>
+
+    <section class="bcls-section">
+        <h2 id="configuring">Configuring the MAPs section</h2>
+        <p>To Configure the MAPs integration follow the next steps:</p>
+        <ol class="bcls-tasklist">
+            <li>Log in to <strong>Video Cloud</strong></li>
+            <li>Navigate to the <strong>Players</strong> Module.</li>
+            <li>Select your <strong>Player</strong></li>
+            <li>Click <strong>MAPs</strong></li>
+            <li>Check <strong>Enable MAPs</strong></li>
+            <li>Choose between <strong>Marketo</strong> or <strong>Hubspot</strong> and enter your <strong>Account ID</strong>.</li>
+            <li>Click <span class="button-blue">Save</span> </li>
+
+        </ol>
+    </section>
+
+
+
+  </article>
+  
