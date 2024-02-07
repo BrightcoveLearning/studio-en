@@ -1,6 +1,6 @@
 ---
 title: MAPs Section
-description: In this topic you will learn how to configure MAP integrations in the Players module.
+description: In this topic, you will learn how to configure MAP integrations in the Players module.
 parent: General Information
 grandparent: Managing Players
 layout: staging
@@ -11,12 +11,12 @@ layout: staging
     <summary>{{ page.description }}</summary>
     <section class="bcls-section">
         <h2 id="overview">Overview</h2>
-        <p>The MAPs section allows you to seamlessly connect your Brightcove Player to either Marketo Munchkin or Hubspot Clientside </p>
+        <p>The MAPs section allows you to seamlessly connect your Brightcove Player to either Marketo Munchkin or Hubspot Clientside. <br>This is achieved by contacting your desired service every time a viewer reaches a certain percentile of a video using your configured Player.</p>
     </section>
 
     <section class="bcls-section">
         <h2 id="workflow">Workflow</h2>
-        <p>This integration will send the next information over to your desired account:</p>
+        <p>This integration will send the following information over to your desired account:</p>
         <ul>
             <li>provider=brightcove</li>
             <li>videoId={VIDEO_ID}</li>
@@ -27,21 +27,20 @@ layout: staging
             <li>percentile={25|50|75|95}</li>
         </ul>
 
-        <p>Once setup, the Player will send out calls to the respective API at the following percentiles:</p>
+        <p>Once set, the Player will send out calls to the respective API at the following percentiles:</p>
         <ul>
             <li>25%</li>
             <li>50%</li>
             <li>75%</li>
             <li>95%</li>
         </ul>
-        <aside class="bcls-aside bcls-aside--information language-editable">If a viewer skips to the 75% mark of a video the API will be called for every quarter up to that point (25%,50%,75%).</aside>
-        <aside class="bcls-aside bcls-aside--information language-editable">These calles are triggered once per video and viewer. If a viewer returns to a previewsly triggered percentile the event will not be triggered again for that viewing.</aside>
-
+        <!-- <aside class="bcls-aside bcls-aside--information language-editable">If a viewer skips to the 75% mark of a video the API will be called for every quarter up to that point (25%,50%,75%).</aside>
+        <aside class="bcls-aside bcls-aside--information language-editable">These calls are triggered once per video and viewer. If a viewer returns to a previewsly triggered percentile the event will not be triggered again for that viewing.</aside> -->
     </section>
 
     <section class="bcls-section">
         <h2 id="configuring">Configuring the MAPs section</h2>
-        <p>To Configure the MAPs integration follow the next steps:</p>
+        <p>To Configure the MAPs integration, follow the next steps:</p>
         <ol class="bcls-tasklist">
             <li>Log in to <strong>Video Cloud</strong></li>
             <li>Navigate to the <strong>Players</strong> Module.
@@ -65,6 +64,15 @@ layout: staging
                 <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/players/json.webp" /></figure>
             </li>
         </ol>
+    </section>
+    <section class="bcls-section">
+        <h2 id="additional_notes">Additional Notes</h2>
+        <ul>
+            <li>If a viewer skips to the 75% mark of a video, the API will be called for every quarter up to that point (25%,50%,75%).</li>
+            <li>These calls are triggered once per viewing session. If a viewer returns to a previously triggered percentile, the event will not be triggered again for that session.</li>
+            <li>If the user rewinds and watches a portion of the video before it completes, <strong>timeWatched</strong> will continue to increment. This could lead to a larger <strong>timeWatched</strong> value than the video's duration.</li>
+            <li>Once the user completes a video, clicks Replay, or refreshes, then we will restart tracking as a fresh session.</li>
+        </ul>
     </section>
 
 
