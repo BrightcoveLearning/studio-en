@@ -3329,7 +3329,7 @@
     <summary>In this topic, you will learn how to configure MAP integrations in the Players module.</summary>
     <section class="bcls-section">
         <h2 id="overview">Overview</h2>
-        <p>The MAPs section allows you to seamlessly connect your Brightcove Player to either Marketo Munchkin or Hubspot Clientside. <br>This is achieved by contacting your desired service every time a viewer reaches a certain percentile of a video using your configured Player.</p>
+        <p>The MAPs section allows you to seamlessly connect your Brightcove Player to either Marketo Munchkin or Hubspot <a href="https://corptv.support.brightcove.com/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html">Client-Side APIs</a>. <br><br>This is achieved by contacting your desired service every time a viewer reaches a certain percentile of a video using your configured Player.</p>
     </section>
 
     <section class="bcls-section">
@@ -3398,7 +3398,7 @@
     <section class="bcls-section">
         <h2 id="additional_notes">Additional Notes</h2>
         <ul>
-            <li>If a viewer skips to the 75% mark of a video, the API will be called for every quarter up to that point (25%,50%,75%).</li>
+            <li>Skipping past a milestone will trigger the API for each percentile that was skipped. For example, If a viewer skips to the 80% mark of a video, the API will be called for every milestone up to that point (25%, 50%, 75%).</li>
             <li>These calls are triggered once per viewing session. If a viewer returns to a previously triggered percentile, the event will not be triggered again for that session.</li>
             <li>If the user rewinds and watches a portion of the video before it completes, <strong>timeWatched</strong> will continue to increment. This could lead to a larger <strong>timeWatched</strong> value than the video's duration.</li>
             <li>Once the user completes a video, clicks Replay, or refreshes, then we will restart tracking as a fresh session.</li>
