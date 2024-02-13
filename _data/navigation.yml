@@ -311,6 +311,8 @@
       url: /analytics/reports/engagement-report-reference.html
     - name: Analytics Insights Essentials
       url: /analytics/reports/overview-audience-insights-essentials.html
+    - name: Publisher Insights
+      url: /analytics/reports/publisher-insights.html
     - name: Managing Scheduled Reports
       url: /analytics/reports/managing-scheduled-reports.html
     - name: Performance Report Reference
