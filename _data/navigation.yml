@@ -4,7 +4,7 @@
 - section:
   name: Getting Started
   url: /get-started/index.html
-  icon: fa-regular fa-map-pin
+  icon: fa-solid fa-map-pin
   docs:
     - name: Getting Started with Video Cloud Studio
       url: /get-started/getting-started-video-cloud-studio.html
@@ -12,7 +12,7 @@
       url: /get-started/getting-started-your-video-cloud-trial.html
     - name: Learn the Basics
       url:  /get-started/basics/index.html
-      icon: fa-regular fa-cubes
+      icon: fa-solid fa-cubes
       docs:
         - name: Activating and Deactivating a Video
           url:  /get-started/basics/activating-and-deactivating-video.html
@@ -61,12 +61,12 @@
 - section:
   name: Managing Videos
   url: /media/index.html
-  icon: fa-regular fa-photo-film
+  icon: fa-solid fa-photo-film
   description: Learn how to manage the videos in your account.
   docs:
   - name: Using the Media Module
     url: /media/module/index.html
-    icon: fa-regular fa-photo-film
+    icon: fa-solid fa-photo-film
     docs:
     - name: Getting Started with the Media Module
       url: /media/module/getting-started-media-module.html
@@ -74,7 +74,7 @@
       url: /media/module/how-search-videos-and-playlists-media-module.html
   - name: Managing Video Files
     url: /media/manage/index.html
-    icon: fa-regular fa-photo-film
+    icon: fa-solid fa-photo-film
     docs:
     - name: Uploading Videos
       url: /media/manage/uploading-videos-using-upload-module.html
@@ -92,7 +92,7 @@
       url: /media/manage/exporting-video-data.html
   - name: Video Properties
     url: /media/properties/index.html
-    icon: fa-regular fa-photo-film
+    icon: fa-solid fa-photo-film
     docs:
     - name: Editing Video Properties
       url: /media/properties/editing-video-properties-using-media-module.html
@@ -106,7 +106,7 @@
       url: /media/properties/configuring-video-availability.html
   - name: Organizing Videos
     url: /media/organize/index.html
-    icon: fa-regular fa-folder-tree
+    icon: fa-solid fa-folder-tree
     docs:
     - name: Introduction to Playlists
       url: /media/organize/introduction-playlists.html
@@ -116,7 +116,7 @@
       url: /media/organize/organizing-videos-using-folders.html
   - name: Captions and Audio Files
     url: /media/captions/index.html
-    icon: fa-regular fa-closed-captioning
+    icon: fa-solid fa-closed-captioning
     docs:
     - name: 'Overview: Adding Captions to a Video'
       url: /media/captions/overview-adding-captions-video.html
@@ -136,7 +136,7 @@
       url: /media/captions/using-the-caption-editor.html
   - name: General Information
     url: /media/general/index.html
-    icon: fa-regular fa-diamond"
+    icon: fa-solid fa-diamond"
     docs:
     - name: Increasing the Quality of Poster Images
       url: /media/general/increasing-quality-poster-and-thumbnail-images.html
@@ -151,11 +151,11 @@
 - section:
   name: Managing Players
   url: /players/index.html
-  icon: fa-regular fa-play
+  icon: fa-solid fa-play
   docs:
   - name: Using the Players Module
     url: /players/module/index.html
-    icon: fa-regular fa-play
+    icon: fa-solid fa-play
     docs:
     - name: Getting Started with the Players Module
       url: /players/module/getting-started-players-module.html
@@ -163,7 +163,7 @@
       url: /publish/general/step-step-using-players-module-create-and-publish-player.html
   - name: Player Properties
     url: /players/properties/index.html
-    icon: fa-regular fa-play
+    icon: fa-solid fa-play
     docs:
     - name: Setting Player Properties
       url: /players/properties/setting-player-properties.html    
@@ -177,7 +177,7 @@
       url: /players/properties/setting-player-update-mode-and-version.html
   - name: Appearance and Controls
     url: /players/appearance/index.html
-    icon: fa-regular fa-play
+    icon: fa-solid fa-play
     docs:
     - name: Adding Thumbnail Seeking
       url: /players/appearance/adding-thumbnail-seeking-player.html
@@ -197,7 +197,7 @@
       url: /players/appearance/styling-players.html
   - name: General Information
     url: /players/general/index.html
-    icon: fa-regular fa-play
+    icon: fa-solid fa-play
     docs:
     - name: Configuring a Player with the Interactivity Plugin
       url: /interactivity/getting-started/configuring-player-plugin.html
@@ -218,11 +218,11 @@
 - section:
   name: 'Publishing Videos & Players'
   url: /publish/index.html
-  icon: fa-regular fa-display-code
+  icon: fa-solid fa-laptop-code
   docs:
   - name: Publishing
     url: /publish/publishing/index.html
-    icon: fa-regular fa-display-code
+    icon: fa-solid fa-display-code
     docs:
     - name: Adding an Application ID to the Embed Code
       url: /publish/publishing/adding-application-id-player-embed-code.html
@@ -240,7 +240,7 @@
       url: /publish/publishing/publishing-videos-page-experience.html
   - name: Publishing to Third-Party Apps
     url: /publish/third-party/index.html
-    icon: fa-regular fa-display-code
+    icon: fa-solid fa-display-code
     docs:
     - name: Adding a Player to a Facebook Fan Page
       url: /publish/third-party/adding-brightcove-player-facebook-fan-page.html
@@ -254,7 +254,7 @@
       url: /publish/third-party/publishing-brightcove-players-joomla.html
   - name: General Information
     url: /publish/general/index.html
-    icon: fa-regular fa-circle-info
+    icon: fa-solid fa-circle-info
     docs:
     - name: Adding a 3Play Media Interactive Transcript
       url: /publish/general/adding-3play-media-interactive-transcript-video.html
@@ -275,11 +275,11 @@
 - section:
   name: Reviewing Analytics
   url: /analytics/index.html
-  icon: fa-regular fa-chart-line-up
+  icon: fa-solid fa-gear
   docs:
   - name: Using the Analytics Module
     url: /analytics/module/index.html
-    icon: fa-regular fa-chart-line-up
+    icon: fa-solid fa-chart-line-up
     docs:
     - name: Getting Started with the Analytics Module
       url: /analytics/module/getting-started-analytics-module.html
@@ -301,7 +301,7 @@
       url: /analytics/module/insights-glossary.html
   - name: Analytics Reports
     url: /analytics/reports/index.html
-    icon: fa-regular fa-chart-line-up
+    icon: fa-solid fa-chart-line-up
     docs:
     - name: Analytics Report Reference
       url: /analytics/reports/analytics-report-reference.html
@@ -321,7 +321,7 @@
       url: /analytics/reports/segments-report.html
   - name: Engagement
     url: /analytics/engagement/index.html
-    icon: fa-regular fa-chart-line-up
+    icon: fa-solid fa-chart-line-up
     docs:
     - name: 'Engagement: Overview'
       url: '/analytics/engagement/engagement-overview.html'
@@ -346,7 +346,7 @@
         url: '/analytics/content/content-trial-drivers-library.html'
   - name: General Information
     url: /analytics/general/index.html
-    icon: fa-regular fa-chart-line-up
+    icon: fa-solid fa-chart-line-up
     docs:      
     - name: Calculating Video Engagement Score
       url: /analytics/general/calculating-video-engagement-score.html
@@ -359,11 +359,11 @@
 - section:
   name: Social Sharing
   url: /social/index.html
-  icon: fa-regular fa-share-nodes
+  icon: fa-solid fa-share-nodes
   docs:
   - name: Getting Started
     url: /social/module/index.html
-    icon: fa-regular fa-map-pin
+    icon: fa-solid fa-map-pin
     docs:
     - name: Getting Started with Social
       url: /social/module/getting-started-brightcove-social.html
@@ -371,7 +371,7 @@
       url: /social/module/creating-social-media-publishing-destinations.html
   - name: General Information
     url: /social/general/index.html
-    icon: fa-regular fa-circle-info
+    icon: fa-solid fa-circle-info
     docs:    
     - name: Adding a Facebook Like Button to a Player
       url: /social/general/adding-facebook-button-brightcove-player.html
@@ -397,7 +397,7 @@
       url: /social/general/viewing-videos-published-social-media.html
   - name: Reviewing Analytics
     url: /social/analytics/index.html
-    icon: fa-regular fa-chart-line-up
+    icon: fa-solid fa-chart-line-up
     docs:
     - name: Reviewing Social Analytics
       url: /social/analytics/reviewing-social-analytics.html
@@ -407,7 +407,7 @@
       url: /social/analytics/reviewing-social-views-analytics.html
   - name: Developers
     url: /social/index.html
-    icon: fa-regular fa-rectangle-code
+    icon: fa-solid fa-rectangle-code
     docs:
     - name: 'Quick Start: Social API'
       url: 'https://apis.support.brightcove.com/social/getting-started/quick-start-social-api.html'
@@ -418,11 +418,11 @@
 - section:
   name: Live Streaming
   url: /live/index.html
-  icon: fa-regular fa-satellite-dish
+  icon: fa-solid fa-satellite-dish
   docs:
   - name: Getting Started
     url: /live/get-started/index.html
-    icon: fa-regular fa-map-pin
+    icon: fa-solid fa-map-pin
     docs:
     - name: Delivering Live Streams
       url: /live/get-started/delivering-live-streams.html
@@ -436,7 +436,7 @@
       url: /live/get-started/step-step-using-live-module-telestream-wirecast.html
   - name: Using the Live Module
     url: /live/live-module/index.html
-    icon: fa-regular fa-satellite-dish
+    icon: fa-solid fa-satellite-dish
     docs:
     - name: Client-Side Pre-roll Ads with Live SSAI
       url: /live/live-module/client-side-preroll-with-live-ssai.html
@@ -464,7 +464,7 @@
       url: /live/live-module/zoom-live-integration.html
   - name: General Information
     url: /live/general/index.html
-    icon: fa-regular fa-circle-info
+    icon: fa-solid fa-circle-info
     docs:
     - name: Captions with Live Streams
       url: /live/general/captions-with-live-streams.html
@@ -478,7 +478,7 @@
       url: /live/general/supported-encoders-live-events.html
   - name: Web Conferencing
     url: /live/web-conferencing/index.html
-    icon: fa-regular fa-camera-web
+    icon: fa-solid fa-camera-web
     docs:
     - name: Hosting an Avaya Conference
       url: /live/web-conferencing/host-avaya-conference-brightcove-live.html
@@ -491,12 +491,12 @@
 - section:
   name: Interactivity
   url: /interactivity/index.html
-  icon: fa-regular fa-hand-back-point-up
+  icon: fa-regular fa-hand
   description: Learn how to add interactivity to videos, including calls to action, chapters, click-to-buy, branching, and polls.
   docs:
     - name: 'Getting Started'
       url: '/interactivity/getting-started/index.html'
-      icon: fa-regular fa-map-pin
+      icon: fa-solid fa-map-pin
       docs:
         - name: 'Getting Started with the Interactivity Module'
           url: '/interactivity/getting-started/getting-started-interactivity-module.html'
@@ -514,7 +514,7 @@
           url: '/interactivity/getting-started/interactivity-training-videos.html'
     - name: 'Annotations'
       url: '/interactivity/annotations/index.html'
-      icon: fa-regular fa-bookmark
+      icon: fa-solid fa-bookmark
       docs:
         - name: 'Adding an Text Overlay'
           url: '/interactivity/annotations/adding-text-overlay.html'
@@ -544,7 +544,7 @@
           url: '/interactivity/annotations/using-dynamic-annotations.html'
     - name: 'Widgets'
       url: '/interactivity/widgets/index.html'
-      icon: fa-regular fa-grid-2
+      icon: fa-solid fa-grid-2
       docs:
         - name: 'Adding a Poll to a Video'
           url: '/interactivity/widgets/adding-poll-video.html'
@@ -558,7 +558,7 @@
           url: '/interactivity/widgets/using-custom-widget-library.html'
     - name: 'Projects'
       url: '/interactivity/projects/index.html'
-      icon: fa-regular fa-object-group
+      icon: fa-solid fa-object-group
       docs:
         - name: 'Creating and Managing Projects'
           url: '/interactivity/projects/creating-and-managing-projects.html'
@@ -572,7 +572,7 @@
           url: '/interactivity/projects/generating-embed-code.html'
     - name: 'Templates'
       url: '/interactivity/templates/index.html'
-      icon: fa-regular fa-clone
+      icon: fa-solid fa-clone
       docs:
         - name: 'Creating and Managing Templates'
           url: '/interactivity/templates/creating-and-managing-templates.html'
@@ -580,7 +580,7 @@
           url: '/interactivity/templates/applying-templates-projects.html'
     - name: 'Experiences'
       url: '/interactivity/experiences/index.html'
-      icon: fa-regular fa-browsers
+      icon: fa-solid fa-browsers
       docs:
         - name: 'Overview of Experiences'
           url: '/interactivity/experiences/experiences-overview.html'
@@ -598,7 +598,7 @@
           url: '/interactivity/experiences/generating-embed-code.html'
     - name: 'Analytics'
       url: '/interactivity/analytics/index.html'
-      icon: fa-regular fa-chart-line-up
+      icon: fa-solid fa-chart-line-up
       docs:
         - name: 'Interactivity Reports Reference'
           url: '/interactivity/analytics/interactivity-reports-reference.html'
@@ -614,7 +614,7 @@
           url: '/interactivity/analytics/getting-up-to-the-minute-data.html'
     - name: 'General Information'
       url: '/interactivity/general/index.html'
-      icon: fa-regular fa-circle-info
+      icon: fa-solid fa-circle-info
       docs:
         - name: 'Working with Folders'
           url: '/interactivity/general/working-with-folders.html'
@@ -624,7 +624,7 @@
           url: '/interactivity/general/migrating-from-hapyak.html'
     - name: 'Settings'
       url: '/interactivity/settings/index.html'
-      icon: fa-regular fa-gear
+      icon: fa-solid fa-gear
       docs:
         - name: 'Configuring Interactivity Settings'
           url: '/interactivity/settings/configuring-settings.html'
@@ -632,7 +632,7 @@
           url: '/interactivity/settings/using-style-editor.html'
     - name: 'Developers'
       url: 'https://apis.support.brightcove.com/interactivity/index.html'
-      icon: fa-regular fa-rectangle-code
+      icon: fa-solid fa-rectangle-code
       docs:
         - name: 'Addon API'
           url: 'https://apis.support.brightcove.com/interactivity/addon-api/reference.html'
@@ -647,7 +647,7 @@
 - section:
   name: Managing Channels
   url: /channels/index.html
-  icon: fa-light fa-calendar-week
+  icon: fa-regular fa-calendar
   description: Create and manage linear channels of video and live programs.
   docs:
 #  - name: Managing FAST Channels
@@ -661,7 +661,7 @@
 #          url: /channels/fast/getting-started/fast-frequency.html
   - name: Managing Cloud Playout Channels
     url: /channels/cloud-playout/index.html
-    icon: fa-regular fa-cloud-bolt
+    icon: fa-solid fa-cloud-bolt
     docs:
       - name: Getting Started
         url: /channels/cloud-playout/getting-started/index.html
@@ -717,11 +717,11 @@
 - section:
   name: Marketing Automation
   url: /campaign/index.html
-  icon: fa-regular fa-chart-network
+  icon: fa-solid fa-chart-network
   docs:
   - name: Getting Started
     url: /campaign/get-started/index.html
-    icon: fa-regular fa-map-pin
+    icon: fa-solid fa-map-pin
     docs:
       - name: Getting Started with Campaign
         url: /campaign/get-started/getting-started-campaign-module.html
@@ -733,7 +733,7 @@
       #   url: /campaign/get-started/using-hud.html
   - name: General Information
     url: /campaign/general/index.html
-    icon: fa-regular fa-circle-info
+    icon: fa-solid fa-circle-info
     docs:
       - name: Campaign FAQ
         url: /campaign/general/campaign-faq.html
@@ -768,7 +768,7 @@
     docs:
       - name: Eloqua
         url: /campaign/integrations/eloqua/index.html
-        icon: fa-regular fa-puzzle-piece-simple
+        icon: fa-solid fa-puzzle-piece-simple
         docs:
           - name: Creating Custom Lead Forms
             url: /campaign/integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html
@@ -820,7 +820,7 @@
             url: /campaign/integrations/salesforce/integrating-video-cloud-salesforce.html
   - name: Administering Campaign
     url: /campaign/admin/index.html
-    icon: fa-regular fa-gear
+    icon: fa-solid fa-gear
     docs:
       - name: Exporting Data from Campaign
         url: /campaign/admin/exporting-campaign-data-campaign-module.html
@@ -832,7 +832,7 @@
         url: /campaign/admin/troubleshooting-campaign-issues.html
   - name: Developers (Audience API)
     url: 'https://apis.support.brightcove.com/audience/index.html'
-    icon: fa-regular fa-rectangle-code
+    icon: fa-solid fa-rectangle-code
     docs:
       - name: Getting Started
         url: 'https://apis.support.brightcove.com/audience/getting-started/index.html'
@@ -841,7 +841,7 @@
 - section:
   name: Integrations
   url: /integrations/index.html
-  icon: fa-regular fa-puzzle-piece-simple
+  icon: fa-solid fa-puzzle-piece-simple
   docs:
   - name: Integrations Module
     url: /integrations/integrations-module/index.html
@@ -872,11 +872,11 @@
 - section:
   name: Administration
   url: /admin/index.html
-  icon: fa-regular fa-gear
+  icon: fa-solid fa-gear
   docs:
   - name: General Information
     url: /admin/general/index.html
-    icon: fa-regular fa-circle-info
+    icon: fa-solid fa-circle-info
     docs:
     - name: Authenticating Studio Users using SSO
       url: /admin/general/authenticating-studio-users-using-single-sign.html
@@ -908,7 +908,7 @@
       url: /admin/general/viewing-billing-information.html
   - name: Managing Ingest Profiles
     url: /admin/ingest-profiles/index.html
-    icon: fa-regular fa-sliders
+    icon: fa-solid fa-sliders
     docs:
     - name: Creating Custom Live Ingest Profiles
       url: /admin/ingest-profiles/creating-custom-live-ingest-profiles.html
@@ -929,11 +929,11 @@
 - section:
   name: General Information
   url: /general/index.html
-  icon: fa-regular fa-circle-info
+  icon: fa-solid fa-circle-info
   docs:
   - name: Content Protection
     url: /general/content-protection/index.html
-    icon: fa-regular fa-lock
+    icon: fa-solid fa-lock
     docs:
     - name: DRM Output Protection Settings
       url: /general/content-protection/drm-output-protection-settings.html
@@ -945,7 +945,7 @@
       url: /general/content-protection/tls-media-player-and-api-urls.html
   - name: References
     url: /general/references/index.html
-    icon: fa-regular fa-books
+    icon: fa-solid fa-books
     docs:
     - name: 'Best Practices: Transcoding and Uploading'
       url: /general/references/best-practices-video-creating-transcoding-and-uploading-workflow.html
@@ -975,7 +975,7 @@
       url: /general/references/working-multiple-video-cloud-accounts.html
   - name: Architecture
     url: /general/architecture/index.html
-    icon: fa-regular fa-cubes
+    icon: fa-solid fa-cubes
     docs:
     - name: Content Delivery Options
       url: /general/architecture/content-delivery-options.html
@@ -993,21 +993,21 @@
       url: /general/architecture/video-cloud-studio-cookies.html
   - name: Advertising
     url: /general/advertising/index.html
-    icon: fa-regular fa-cubes
+    icon: fa-solid fa-cubes
     docs:
     - name: Brightcove Ad Monetization
       url: /general/advertising/bc-ad-monetization.html
 - section:
   name: Release Notes
   url: /release-notes/index.html
-  icon: fa-regular fa-memo-pad
+  icon: fa-solid fa-memo-pad
   docs:
     - name: Video Cloud Studio Release Notes
       url: 'https://support.brightcove.com/product-updates.html#video_cloud'
 - section:
   name: Support
   url: /support/index.html
-  icon: fa-regular fa-comments-question-check
+  icon: fa-solid fa-comments-question-check
   docs:
     - name: 'Contact Sales'
       url: '/support/contact-sales.html'
