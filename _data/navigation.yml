@@ -860,6 +860,20 @@
             url: /integrations/integrations-module/watched-folders/dropbox.html
           - name: Setting Up an Automatic Ingestion Folder on Google Drive
             url: /integrations/integrations-module/watched-folders/google-drive.html
+      - name: Custom Data Platforms
+        url: /integrations/integrations-module/customer-data-platforms/index.html
+        docs:
+          - name: Audience Sync Configuration
+            url: /integrations/integrations-module/customer-data-platforms/audience-sync-configuration.html
+          - name: 'Integration Spotlight: Blueshift'
+            url: /integrations/integrations-module/customer-data-platforms/integration_spotlight_blueshift.html
+          - name: 'Integration Spotlight: Braze'
+            url: /integrations/integrations-module/customer-data-platforms/integration_spotlight_braze.html
+          - name: 'Integration: Custom S3'
+            url: /integrations/integrations-module/customer-data-platforms/integration-custom-s3.html
+          - name: 'Integration: S3'
+            url: /integrations/integrations-module/customer-data-platforms/integration-s3.html
+
   - name: Salesforce Sales Cloud
     url: /integrations/salesforce-sales-cloud/index.html
     docs:
