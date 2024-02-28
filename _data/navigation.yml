@@ -388,7 +388,9 @@
     - name: Publishing a Live Event to YouTube
       url: /social/general/publishing-live-event-youtube.html
     - name: Setting the Privacy Status for a Video
-      url: /social/general/setting-privacy-status-video.html
+      url: /social/general/setting-privacy-status-video.
+    - name: Creating a Sprinklr Destination
+      url: /social/module/sprinklr.html
     - name: Sharing Videos to Twitter Player Cards
       url: /social/general/sharing-videos-twitter-player-cards.html
     - name: Using Auto Sync
