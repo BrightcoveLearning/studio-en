@@ -8,7 +8,7 @@
         <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic, you will learn how to edit and transform your media content using the Brightcove Video Editor. This editor is ideal for a variety of enterprise short form use cases.">
+        <meta name="description" content="In this topic, you will learn how to edit and transform your media content using the Brightcove Video Editor. This editor is ideal for a variety of short form use cases.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3383,7 +3383,7 @@
 
 <article class="bcls-article">
     <h1>Brightcove Video Editor</h1>
-    <summary>In this topic, you will learn how to edit and transform your media content using the Brightcove Video Editor. <br>This editor is ideal for a variety of enterprise short form use cases.</summary>
+    <summary>In this topic, you will learn how to edit and transform your media content using the Brightcove Video Editor. <br>This editor is ideal for a variety of short form use cases.</summary>
 
     <section class="bcls-section">
       <h2 id="ingest_profile">Using the Correct Ingest Profile</h2>
@@ -3391,12 +3391,12 @@
       <p></p>
       <aside class="bcls-aside bcls-aside--information language-editable">MP4 renditions are needed to use the video editor. <br>"Video Editing-MP4" renditions are specifically optimized to perform better with the video editor.</aside>
       <p></p>
-      <h3>Upload a video with the Video Editing-MP4 Ingest profile:</h3>
+      <h3>A. Upload a video with the Video Editing-MP4 Ingest profile:</h3>
       <p>When <a href="https://studio.support.brightcove.com/media/manage/uploading-videos-using-upload-module.html">uploading your video</a>, select the <strong>Video Editing-MP4</strong> ingest profile.</p>
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/upload-profile.webp" /></figure>
       
-      <h3>A. Adding MP4 renditions to existing ones:</h3>
-      <p>To add the MP4 renditions needed to work with the video editor; you have a couple of choices. You may either retranscode your renditions using the video editor profile or create MP4 renditions and add them to your existing renditions. </p>
+      <h3>B. Adding MP4 renditions to existing ones:</h3>
+      <p>To add the necessary MP4 renditions needed to work with the editor for an existing asset, please use the Create MP4 button.</p>
       <ol class="bcls-tasklist">
         <li>Navigate to the <strong>Media</strong> module.</li>
         <li>Select the video you would like to work with.</li>
@@ -3413,8 +3413,10 @@
         <li>Click <span class="button-blue">Create</span></li>
       </ol>
 
-      <h3>B. Retranscoding your video:</h3>
+      <h3>C. Retranscoding your video:</h3>
       <p>You can <a href="https://studio.support.brightcove.com/media/manage/retranscoding-videos-using-media-module.html">retranscode an existing video</a> with a profile that generates MP4 renditions. <strong>Video Editing-MP4</strong> is our recommended profile for editing purposes.</p>
+      <p></p>
+      <p>However, this will wipe out any existing renditions and create new ones, which may impact videos that are already published live on your site with HLS/Dash. Learn more about re-transcoding <a href="https://studio.support.brightcove.com/media/manage/retranscoding-videos-using-media-module.html">here</a>.</p>
       <aside class="bcls-aside bcls-aside--information language-editable">If you don't see options to retranscode or create MP4s, please talk to your Admin and/or to our <a href="https://supportportal.brightcove.com/">support team</a>.</aside>
     </section>
 
@@ -3612,6 +3614,15 @@
     </li>
 
     <li>
+        <h4>Crop and change color</h4>
+        <p>Click <i class="fa-solid fa-palette"></i> to apply another color combination to a particular scene.</p>
+        <p>Click <i class="fa-solid fa-crop-simple"></i> to crop and select what you would like to showcase in your scene.</p>
+        <p></p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/crop-style.webp" /></figure>
+        <p></p>
+   </li>
+
+    <li>
          <h4>Add Music</h4>
          <p>Here, you can add music to your video.</p>
         <ul>
@@ -3629,9 +3640,17 @@
         <aside class="bcls-aside bcls-aside--information language-editable">The system will automatically adjust the different audio levels.</aside>
     </li>
     </ul>
-    
     </section>
 
+    <section class="bcls-section">
+        <h2 id="notes">Additional Notes</h2>
+        <ul>
+            <li>When you leave an editing session, the system will save a draft for you, which you may recover from Video Cloud.</li>
+            <li>If you were editing an existing video, you would see that asset in Draft status. When you publish it, a new asset will be created, and the original will remain the same.</li>
+            <li>If you were editing from a template, your draft will lack complete Video Cloud functionality until the final video is published.</li>
+        </ul>
+    </section>
+</article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
