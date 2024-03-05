@@ -652,15 +652,13 @@
   icon: fa-regular fa-calendar
   description: Create and manage linear channels of video and live programs.
   docs:
-#  - name: Managing FAST Channels
-#    url: /channels/fast/index.html
-#    icon: fa-light fa-tv
-#    docs:
-#      - name: Getting Started
-#        url: /channels/fast/getting-started/index.html
-#        docs:
-#        - name: 'Using Brightcove with Frequency for FAST'
-#          url: /channels/fast/getting-started/fast-frequency.html
+  - name: FAST Channels
+    url: /channels/fast/index.html
+    docs:
+     - name: 'Getting Started with Scheduled Channels'
+       url: /channels/fast/getting-started.html
+     - name: Managing a Schedule Channel
+       url: /channels/fast/scheduled-calendar.html
   - name: Managing Cloud Playout Channels
     url: /channels/cloud-playout/index.html
     icon: fa-solid fa-cloud-bolt

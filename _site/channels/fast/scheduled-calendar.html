@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Using Brightcove with Frequency for FAST</title>
+        <title>Managing a Schedule Channel</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic explains how to use Brightcove's integration with Frequency (frequency.com) to create and publish FAST (free ad supported tv) channels. You can combine the power of Brightcove's video management system with Frequency's channel management tools to easily create FAST channels for multiple platforms.">
+        <meta name="description" content="This topic explains how to use the Schedule Channel feature to manage the specific dates and times to publish content for your viewers.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -2163,6 +2163,32 @@
 
               <li class="nav-item subsection-title">
                 
+                <a class="nav-link" href="/channels/fast/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;FAST Channels</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/channels/fast/getting-started.html">Getting Started with Scheduled Channels</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item section-doc"><a class="nav-link" href="/channels/fast/scheduled-calendar.html" aria-current="page">Managing a Schedule Channel</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
                 <a class="nav-link" href="/channels/cloud-playout/index.html">
                   <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Managing Cloud Playout Channels</a>
                 
@@ -3359,11 +3385,7 @@
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/channels/fast/getting-started/">Getting started</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Using Brightcove with Frequency for FAST</li>
+            <li class="breadcrumb-item active" aria-current="page">Managing a Schedule Channel</li>
             
             
           </ol>
@@ -3384,185 +3406,211 @@
       <br>
       
       <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
-<h1>Using Brightcove with Frequency for FAST</h1>
+<h1>Managing a Schedule Channel</h1>
 <article class="bcls-article">
-  <summary>This topic explains how to use Brightcove's integration with Frequency (<a href='frequency.com'>frequency.com</a>) to create and publish FAST (free ad supported tv) channels. You can combine the power of Brightcove's video management system with Frequency's channel management tools to easily create FAST channels for multiple platforms.</summary>
+  <summary>This topic explains how to use the Schedule Channel feature to manage the specific dates and times to publish content for your viewers.</summary>
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>FAST (free ad supported tv) is an increasingly popular way to stream recorded and live content to large audiences at no charge, while getting revenue from ads. The Brightcove-Frequency solution allows you to combine a powerful platform for managing your video content with Frequency's tools for building and maintaining channels that can be delivered to the platform(s) of your choice. Below is a high-level view of the process, and the steps will be explained in detail in the sections that follow:</p>
-
-    <!-- @Shantal - the original for the diagram below is in lucid Chart
-    https://lucid.app/lucidchart/500d3dc3-6f35-4b46-b925-841ac7d25c24/edit?invitationId=inv_349f6137-e52c-4505-936b-b9c8540d69b6&page=0_0# -->
-
+    <p>The Schedule Channel is a calendar based visual tool that helps you plan, organize, and schedule your media content in advance. Here, you can see how to manage the calendar and add and re-order content items.</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/Brightcove-Frequency.svg" alt="Brightcove-Frequency Process Map">
-      <figcaption class="bcls-caption--image">Brightcove-Frequency Process Map</figcaption>
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/scheduled-channels-menu2.png" alt="Scheduled Channels with Rundown view" style="width: 965px;">
+      <figcaption class="bcls-caption--image">Scheduled Channels view example.</figcaption>
     </figure>
   </section>
+
   <section class="bcls-section">
-    <h2 id="Upload_videos_to_Brightcove">Upload videos to Brightcove</h2>
-    <p>There are two ways to add videos to Brightcove:</p>
-    <ul>
-      <li>Use the Upload module in Studio (following the steps below)</li>
-      <li>Use the <a href="https://apis.support.brightcove.com/dynamic-ingest/index.html">Dynamic Ingest API</a></li>
-    </ul>
-    <h3>Steps for uploading videos in Studio</h3>
-    <ol class="bcls-tasklist-restart">
-      <li>Login to <strong><a href="https://studio.brightcove.com"> Video Cloud Studio</a></strong> .</li>
-      <li>Open the <strong>Upload</strong> module.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Go to Upload Module" src="/assets/images/get-started/node18825-upload-menu.png" /></figure>
+    <h2 id="open">Schedule Content</h2>
+    <p>To start scheduling content, follow these steps:</p>
+      <ol class="bcls-tasklist-restart" style="--s:1">
+        <li>
+          <p>After you <a href="/channels/fast/getting-started/getting-started.html">create your channel</a>, click <span class="button-blue-text-bordered">Schedule</span>.</p>
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/Scheduled-UI.png" alt="Schedule channel menu" style="width: 910px;">
+              <figcaption class="bcls-caption--image">Scheduled channel menu.</figcaption>
+            </figure>
+        </li>
+        <li>
+          <p>Notice how the main pointers help you locate where and when to add your content in the calendar section. </p>
+          <ol type="a">
+            <li>The <strong>green division</strong> reflects the <strong>current time</strong> on the calendar timeline. This division can't be moved or selected.</li>
+            <li>The <strong>yellow division</strong> reflects the <strong>selected time</strong> on the calendar timeline. This division helps you select the time when you want to add content. You can move this division as long as it is greater than the current time.</li>
+            <br>
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/calendar-pointers.png" alt="Schedule Calendar pointers example" style="width: 875px;">
+              <figcaption class="bcls-caption--image">Schedule Calendar pointers example.</figcaption>
+            </figure>
+          </ol>
+        </li>
+        <li>
+          <p>The calendar view allows you to change the time displayed between <strong>hours</strong> and <strong>minutes</strong>.</p>
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/schedule-time-viewer.png" alt="Schedule view example" style="width: 900px;">
+              <figcaption class="bcls-caption--image">Schedule view.</figcaption>
+            </figure>
+        </li>
+        <li>
+          <p>On the right side you can add videos, playlists, or live events. Once content is added and selected, the action options above are enabled to copy, paste, move, or delete an asset.</p>
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/add-actions-section.png" alt="Actions & add example" style="width: 900px;">
+            <figcaption class="bcls-caption--image">Actions & Add sections.</figcaption>
+          </figure>
+        </li>
+      </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="open">Adding content</h2>
+    <p>Videos and playlists (manual or smart) can be added to the schedule. In addition, you can add live events. The following sections provide steps for adding each kind of content. </p>
+    <h3>Adding Videos (VOD)</h3>
+    <p>To learn how to add Videos, follow these steps:</p>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>Click the <strong>video</strong> option on the right side to select a video.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/video-option.png" alt="Select video option" style="width: 875px;">
+          <figcaption class="bcls-caption--image">Select video option</figcaption>
+        </figure>
       </li>
       <li>
-        Select an <strong>ingest profile</strong>.
-        <aside class="bcls-aside bcls-aside--information language-editable">Note that FAST channels require a particular set of renditions to provide optimum viewing on different devices. Brightcove Support has created a custom profile for your account that meets these requirements - <strong>be sure to use this profile for videos that you want transferred to Frequency.</strong>. If you are only going to be uploading videos to be transferred to Frequency, you should <a href="/admin/ingest-profiles/managing-ingest-profiles.html#default">set this as the default profile for your account</a>.</aside>
+        <p>Use the <strong>Search tab</strong> to find the videos you want. In addition to searching on general terms, you can filter by <strong>Tags</strong> or <strong>Dates</strong>.</p>
+         <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/search-options.png" alt="Search options" style="width: 875px;">
+          <figcaption class="bcls-caption--image">Search options</figcaption>
+        </figure>
       </li>
-      <li>Click <span class="button-blue">Browse for Videos</span> and browse and select your videos or all of the sample videos that were provided.</li>
-      <li>The page displays all the videos and the upload progress.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-upload-progress.png" /></figure>
-        <p><strong>While uploads are in a processing state, do not close or move away from the browser window.</strong> Doing so may cause an incomplete upload.</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-video-processing.png" /></figure>
-        <p>When the upload is complete, a <strong>Processing Complete</strong> status will display. This indicates the processing has completed and it is safe to navigate from the Upload module.</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/get-started/node18825-video-processing-complete.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: It is possible to click the <strong>Edit</strong> button next to the filename to edit some of the video metadata. Adding video metadata is covered in the next section</aside>
+      <li>
+        <p>Add your selected video to the schedule by clicking on the plus icon.</p>
+         <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/add-video.png" alt="Adding a video" style="width: 875px;">
+          <figcaption class="bcls-caption--image">Adding a video</figcaption>
+         </figure>
+         <aside class="bcls-aside bcls-aside--information language-editable">Note: Only videos with MP4 rendition can be added to the schedule.</aside>
       </li>
-    </ol>
-    <p>If you need more details, see <a href="/media/manage/uploading-videos-using-upload-module.html">Uploading Videos Using the Upload Module</a>.</p>
+    <li>
+      <p>Once the video is added, it appears in the calendar at the specified time. If you click on the video slot, you can perform several actions such as <strong>copy, paste, move,</strong> or <strong>delete</strong> on the top right side. Below the content tab is the video information, such as <strong>name, description, start date,</strong> and <strong>start time</strong>.</p>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/video-info.png" alt="Video info and options" style="width: 875px;">
+        <figcaption class="bcls-caption--image">Video info and options</figcaption>
+      </figure>
+      <aside class="bcls-aside bcls-aside--information language-editable">Notes:
+        <ul>
+          <li>
+            You can also select multiple slots by applying bulk with <strong>Cmd + Shift</strong> commands. This will only enable the actions panel.
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/video-bulk.png" alt="Video bulk example" style="width: 850px;">
+              <figcaption class="bcls-caption--image">Multiple slot selection example</figcaption>
+            </figure>
+          </li>
+          <li><strong>^ v</strong> shift a slot in the calendar:
+            <ul>
+              <li><strong>Incrementally</strong>: By +/- 15 min jumps.</li>
+              <li><strong>Close gap</strong>: If content are less than 15 mins apart.</li>
+              <li><strong>Swap position</strong>: If content are connected.</li>
+            </ul>
+            </li>
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/move-arrows.png" alt="Move arrows example" style="width: 850px;">
+              <figcaption class="bcls-caption--image">Move arrows example</figcaption>
+            </figure>
+        </ul>
+      </aside>
+      <aside class="bcls-aside bcls-aside--warning">A schedule can not be published with overlapping slots.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/overlap.png" alt="overlapping example" style="width: 875px;">
+          <figcaption class="bcls-caption--image">Overlapping example</figcaption>
+        </figure>
+      </aside>
+    </li>
+    <li>
+      <p>If you want to add <strong>ad pods</strong> or <strong>pre/post bumpers</strong> go to the <strong>Rundown</strong> tab.</p>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/rundown-tab.png" alt="Rundown view example" style="width: 875px;">
+        <figcaption class="bcls-caption--image">Rundown view example</figcaption>
+      </figure>
+      <aside class="bcls-aside bcls-aside--information language-editable">Ad pods cannot exceed more than 5 minutes in length.</aside>
+    </li>
+    <li>
+      <p>Click <span class="button-blue">Publish</span>.</p>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/publish-video.png" alt="Publish video" style="width: 875px;">
+        <figcaption class="bcls-caption--image">Publish video</figcaption>
+      </figure>
+    </li>
+    <li>Once you have added and published your videos, playlists, or live events, click <span class="button-blue">Monitor</span> to check a rundown view of your scheduled content.</li>
   </section>
   <section class="bcls-section">
-    <h2 id="Edit_video_metadata">Edit video metadata</h2>
-    <p>There are many items of video metadata that you can edit if you wish to. General instructions on editing video metadata can be found in <a href="/media/properties/index.html">Video Properties</a>.</p>
-    <p>In this section, we will only cover two parts of the video metadata that are relevant to FAST:</p>
-    <ul>
-      <li>Poster and thumbnail images</li>
-      <li>
-        Custom fields that created specifically for FAST (these are supported by Frequency). Note that the field names may be different for your account based on your configuration:
+    <h3>Adding Playlists</h3>
+    <p>To learn how to add Playlists, follow these steps:</p>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>Click the <strong>playlist</strong> option on the right side to select a playlist.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/custom-fields.webp" alt="Custom Fields for Brightcove-Frequency">
-          <figcaption class="bcls-caption--image">Custom Fields for Brightcove-Frequency</figcaption>
-        </figure>
-        <aside class="bcls-aside bcls-aside--information language-editable">Note that the <strong>Publish for FAST</strong> field is used to tell Brightcove to <a href="#push_to_frequency">send the video to Frequency</a> as explained in a later section.</aside>
-      </li>
-    </ul>
-    <h3>Poster image</h3>
-    <p>By default, Brightcove captures the poster image at the midpoint of the video during processing. If this image are satisfactory for use in your FAST channel, you do not need to do anything. If you wish to change the images, you have two options:</p>
-    <ul>
-      <li><a href="/media/properties/capturing-poster-and-thumbnail-images.html">Capture a different image from the video</a></li>
-      <li>
-        Upload new images by clicking the upload icon on the poster and thumbnail.
-        <aside class="bcls-aside bcls-aside--information language-editable">
-          Note that for uploaded images, the aspect ratio must be 16:9, and the minimum size is 1280px x 720px.
-          <p>JPG and PNG formats are accepted.</p>
-        </aside>
-      </li>
-    </ul>
-    <h3>Custom fields for FAST</h3>
-    <p>To edit the custom fields:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>In Video Cloud Studio, open the <strong>Media</strong> module.</li>
-      <li>Click the video title you want to edit to open its metadata properties.</li>
-      <li>
-        Find the <strong>Custom Fields</strong> section and click <strong>Edit</strong> to edit the fields:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/edit-custom-fields.webp" alt="Edit Custom Fields">
-          <figcaption class="bcls-caption--image">Edit Custom Fields</figcaption>
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/playlist-option.png" alt="Select playlist option" style="width: 875px;">
+          <figcaption class="bcls-caption--image">Select playlist option</figcaption>
         </figure>
       </li>
-    </ol>
-    <dl>
-      <dt>Content Format</dt>
-      <dd>
-        The general kind of content the video contains
+      <li>
+        <p>Use the <strong>Search tab</strong> to find the playlists you want.</p>
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/content-format-options.webp" alt="Content Format Options">
-          <figcaption class="bcls-caption--image">Content Format Options</figcaption>
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/search-playlist.png" alt="Search options" style="width: 875px;">
+          <figcaption class="bcls-caption--image">Search options</figcaption>
         </figure>
-      </dd>
-      <dt>Content Type</dt>
-      <dd>
-        A set of common TV content types:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/content-type-options.webp" alt="Content Type Options">
-          <figcaption class="bcls-caption--image">Content type Options</figcaption>
-        </figure>
-      </dd>
-      <dt>Cut</dt>
-      <dd>
-        A set of options to indicate whether this a full episode, clip, etc.:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/cut-options.webp" alt="Cut Options">
-          <figcaption class="bcls-caption--image">Cut Options</figcaption>
-        </figure>
-      </dd>
-      <dt>Episode Number</dt>
-      <dd>
-        If this is an episode in a season, you can indicate which one (an integer).
-      </dd>
-      <dt>FAST Keywords</dt>
-      <dd>
-        A comma-delimited list of keywords - the primary purpose of these is to help surface the content in the results of viewer searches.
-      </dd>
-      <dt>Genre</dt>
-      <dd>
-        A set of options to specify the genre of the video:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/genre-options.webp" alt="Genre Options">
-          <figcaption class="bcls-caption--image">Genre Options</figcaption>
-        </figure>
-      </dd>
-      <dt>Parental Rating</dt>
-      <dd>
-        A set of options to specify the Parental Rating of the video - the options vary for different countries:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/parental-rating-options.webp" alt="Parental Rating Options">
-          <figcaption class="bcls-caption--image">Parental Rating Options</figcaption>
-        </figure>
-      </dd>
-      <dt>Periodicity</dt>
-      <dd>
-        A set of options to specify how this video repeats:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/periodicity-options.webp" alt="Periodicity Options">
-          <figcaption class="bcls-caption--image">Periodicity Options</figcaption>
-        </figure>
-      </dd>
-      <dt>Publish for FAST</dt>
-      <dd>
-        You should <strong>not</strong> set this to <code translate="No">true</code> until you are ready for the video to be sent to Frequency or if the video is <strong>not</strong> for FAST.
-      </dd>
-      <dt>Region</dt>
-      <dd>
-        A set of country/territory codes to indicate the country of origin or the intended country of distribution.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/region-options.webp" alt="Region Options">
-          <figcaption class="bcls-caption--image">Region Options</figcaption>
-        </figure>
-      </dd>
-      <dt>Season Number</dt>
-      <dd>
-        Enter a number to indicate which season this episode belongs to.
-      </dd>
-      <dt>Series Description</dt>
-      <dd>
-        A description of the <em>series</em> that will be displayed in the FAST platform experience. Remember that if you have a collection of videos that make up a series, the description for series should be used for each of them.
-      </dd>
-      <dt>Series GUID</dt>
-      <dd>
-        A universally unique identifier for the <em>series</em> - if you do not have your own system for generating GUIDs, there are several online apps you can use such as <a href="https://guidgenerator.com/">Online GUID / UUID Generator</a>. Remember that if you have a collection of videos that make up a series, the GUID for series should be used for each of them.
-      </dd>
-      <dt>Series Title</dt>
-      <dd>
-        A Title of the <em>series</em> that will be displayed in the FAST platform experience. Remember that if you have a collection of videos that make up a series, the title for series should be used for each of them.
-      </dd>
-    </dl>
+      </li>
+      <li>
+        <p>Add your selected playlist to the schedule by clicking on the plus icon.</p>
+         <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/add-playlist.png" alt="Adding a playlist" style="width: 875px;">
+          <figcaption class="bcls-caption--image">Adding a playlist</figcaption>
+         </figure>
+         <aside class="bcls-aside bcls-aside--information language-editable">Note: When adding a playlist, if a video in the playlist doesn't have an MP4 rendition, this video will not appear in the schedule.</aside>
+      </li>
+    <li>
+      <p>Once the playlist is added, all the videos included in the playlist are added to the schedule at the specified time. If you click on the video slot, you can perform several actions such as <strong>copy, paste, move,</strong> or <strong>delete</strong> on the top right side. Below the content tab is the video information, such as <strong>name, description, start date,</strong> and <strong>start time</strong>.</p>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/playlist-info.png" alt="Playlist info and options" style="width: 875px;">
+        <figcaption class="bcls-caption--image">Playlist info and options</figcaption>
+      </figure>
+    </li>
+    <li>
+      <p>Click <span class="button-blue">Publish</span>.</p>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/publish-playlist.png" alt="Publish video" style="width: 875px;">
+        <figcaption class="bcls-caption--image">Publish playlist</figcaption>
+      </figure>
+    </li>
+    <li>Once you have added and published your videos, playlists, or live events, click <span class="button-blue">Monitor</span> to check a rundown view of your scheduled content.</li>
   </section>
   <section class="bcls-section">
-    <h2 id="push_to_frequency">Send videos to Frequency</h2>
-    <p>Set the <strong>Publish for FAST</strong> custom field to <code translate="No">true</code> when you are ready to have the video sent to Frequency. Note that it will take a little time for the information to be sent and processed by Frequency, but you should expect to see them show up there within 30 minutes.</p>
-    <aside class="bcls-aside bcls-aside--information language-editable">Remember <strong>not</strong> to set this field to <code translate="No">true</code> if this video will not be part of a FAST channel.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="create_edit_channels">Create and edit FAST channels</h2>
-    <p>Once your videos are pushed to Frequency, you can create and edit your FAST channel(s) by logging into your account there. See the Frequency <a href="https://docs.frequency/en/user-guides.html">User Guides</a> for instructions.</p>
+    <h3>Adding Live Event</h3>
+    <p>To learn how to add Live Events, follow these steps:</p>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>Click the <strong>Live Event</strong> option on the right side to create a live event.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/live-event-option.png" alt="Select live event option" style="width: 875px;">
+          <figcaption class="bcls-caption--image">Select live event option</figcaption>
+        </figure>
+      </li>
+      <li>Enter the Live Event <strong>configuration</strong> details:
+        <ul>
+          <li><strong>Event Name</strong> - Name for the live event.</li>
+          <li><strong>Start Date/Time</strong> - Time when the live event will start playing out. This time can be updated only when the channel is not in running state.</li>
+          <li><strong>Duration</strong> - Add the duration of your live event. </li>
+        </ul>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/configure-live-event.png" alt="Configure new live event" style="width: 875px;">
+          <figcaption class="bcls-caption--image">Configure new live event</figcaption>
+        </figure>
+      </li>
+      <li>Click <span class="button-blue">Add to Schedule</span>.</li>
+    <li>
+      <p>When the live event is added, it is shown in the schedule at the specified time. If you click on the live event slot, you can edit the content tab such as <strong>name, description, start date,</strong> and <strong>start time</strong> before the event begins. You can also change to the <strong>metadata</strong> tab to view more information. </p>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/fast/getting-started/live-event-info.png" alt="Playlist info and options" style="width: 875px;">
+        <figcaption class="bcls-caption--image">Playlist info and options</figcaption>
+      </figure>
+    </li>
+    <li>
+      <p>Click <span class="button-blue">Publish</span>.</p>
+    </li>
+    <li>Once you have added and published your videos, playlists, or live events, click <span class="button-blue">Monitor</span> to check a rundown view of your scheduled content.</li>
   </section>
 </article>
 
