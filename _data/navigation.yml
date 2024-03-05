@@ -652,7 +652,7 @@
   icon: fa-regular fa-calendar
   description: Create and manage linear channels of video and live programs.
   docs:
-  - name: FAST Channels
+  - name: Scheduled Channels
     url: /channels/fast/index.html
     docs:
      - name: 'Getting Started with Scheduled Channels'
