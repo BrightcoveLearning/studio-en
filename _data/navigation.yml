@@ -319,6 +319,8 @@
       url: /analytics/reports/performance-report-reference.html
     - name: Segment Sync
       url: /analytics/reports/segments-report.html
+    - name: Video Editor Analytics 
+      url: /analytics/reports/video-editor-analytics.html
   - name: Engagement
     url: /analytics/engagement/index.html
     icon: fa-solid fa-chart-line-up

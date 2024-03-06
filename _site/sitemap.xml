@@ -1243,6 +1243,15 @@
             <priority>0.5</priority>
           </url>
         
+          <url>
+            
+              <loc>https://studio.support.brightcove.com/analytics/reports/video-editor-analytics.html</loc>
+            
+            <lastmod>2024-03-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
       
         <url>
           
