@@ -1,0 +1,122 @@
+---
+title: Managing Users
+description: In this topic you will learn how to manage the users that have access to Studio.
+parent: Administration
+layout: staging
+---
+
+<article class="bcls-article">
+    <h1>{{ page.title }}</h1>
+    <summary>{{ page.description }}</summary>
+    <section class="bcls-section">
+      <!-- {% if site.product_short == "Video Cloud" %}
+      <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4052428130001">&nbsp;</div>
+      <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+          {% endif %} -->
+      <p>The User Management page manages the users who are authorized to use the Studio. Note that to access the User Management page, you must be a user with the Administrator role.</p>
+      <p>To access the User Management page:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Login to Studio.</li>
+        <li>Open the <strong>Admin</strong> module <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+          </svg>.</li>
+        <li>Click <strong>User Management</strong>.</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/admin-module-v2.png" style="width: 875px;" /></figure>
+      </ol>
+      <p>The Users tab will display:</p>
+      <ul>
+        <li>Last Name, First Name.</li>
+        <li>Email address.</li>
+        <li>Role - Standard, Administrator or Custom role.</li>
+        <li>Module Access - Each module the user has access to will display a  check mark (<img alt="" src="/assets/images/s-admin-img/general/node14054-green-check-icon.png" />).</li>
+        <li>Last Login - The last date and time the user logged in to {{ site.product }}. This is the last login for all {{ site.product }} accounts, not just the current account.</li>
+        <li>Configuration (<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+          </svg>) - Here, you can personalize which tab displays or not. Also, you can edit or delete a user with the three-dot option.</li>
+      </ul>
+      {% if site.product_short == "Video Cloud" %}
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14054-manage-users-vc.png" /></figure>
+          {% endif %}
+          {% if site.product_short == "Beacon" %}
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14054-manage-users-beacon.png" /></figure>
+          {% endif %}
+      <aside class="bcls-aside bcls-aside--information language-editable">Note: The information displayed in the UI can't be exported to a spreadsheet directly.</aside>
+      <aside class="bcls-aside bcls-aside--information language-editable">Note: The Last Login information of each user is not saved by Brightcove.</aside>
+      <p>The User Management page can be used to:</p>
+      <ul>
+        <li><a href="#create">Create new users</a></li>
+        <li><a href="#edit">Edit existing users</a></li>
+        <li><a href="#delete">Delete a user</a></li>
+        <li><a href="#primary">Change the primary user</a></li>
+      </ul>
+    </section>
+    <section class="bcls-section">
+      <h2 id="many">How many users can I have?</h2>
+      <p>The number of users you can create depends on what kind of account you have. If you need to add more users, you can upgrade your plan to one that offers more users. The limit applies only to the total number of users in existence at any time; if you create 10 users, delete 5 of them, and create 3 more users, you are considered to have 8 users. The Users page displays how many users you are entitled to and how many additional users you can create.</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="purchase">Purchasing additional users</h2>
+      <p>If you need to add more users, you can upgrade your plan to one that offers more users. Pro and Enterprise level accounts should contact their Customer Success Manager for information on adding additional users.</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="create">Creating new users</h2>
+      <p>To create a new user:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Click <span class="button-blue"> Add user</span>.</li>
+        <li>Enter the <strong>Email</strong>, <strong>First Name</strong> and <strong>Last Name</strong> of the user.</li>
+        <aside class="bcls-aside bcls-aside--information">Note: You can not change the email for an existing user.</aside>
+        <li>Assign a <strong>Role</strong> to the user:
+  <ul>
+            <li><strong>Administrator</strong> - User has access to the <strong>Admin</strong> menu (i.e. can create user accounts, custom ingest profiles, custom fields, configure media sharing)</li>
+            <li><strong>Standard</strong> - User does not have access to the <strong>Admin</strong> menu</li>
+          </ul>
+        </li>
+        <li>Select the modules the user has access to. Turning off modules only limits which sections of the UI the user has access to.</li>
+        <li>Click <span class="button-blue">Save</span>.</li>
+      </ol>
+      <p>The user will receive an email message stating that they have been added to the account.</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="edit">Editing existing users</h2>
+      <p>To edit an existing user:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Click on the user to edit. The user details will appear at the top of the page.
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14054-edit-user.png" /></figure>
+        </li>
+        <li>Edit the <strong>Role</strong> or <strong>Module Access </strong>settings.
+          <aside class="bcls-aside bcls-aside--information">Note: The user that you logged in as cannot be edited.</aside>
+          <aside class="bcls-aside bcls-aside--information">Note: Users can update their first and last name by editing their <a href="managing-profile-information.html">profile information</a>.</aside>
+        </li>
+        <li>Click <span class="button-blue">Save</span> to save the changes.</li>
+      </ol>
+    </section>
+    <section class="bcls-section">
+      <h2 id="delete">Deleting a user</h2>
+      <p>To delete a user:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Click the delete icon (<img alt="" src="/assets/images/s-admin-img/general/node14054-trash-icon.png" />) associated with the user.</li>
+        <li>Click <span class="button-blue">OK</span> to confirm the deletion.</li>
+      </ol>
+    </section>
+    <section class="bcls-section">
+      <h2 id="primary">Changing the primary user</h2>
+      <p>One user in each account is designated the primary user. The primary user will always have the <strong>Administrator</strong> role and can only be deleted by Brightcove Support.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14054-primary-user.png" /></figure>
+      <p>If you need to change the primary user at some point, select the new primary user and then click <strong>Make this user the primary administrator for this account</strong>.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14054-new-primary-user.png" /></figure>
+      <p>You will be prompted to confirm the primary user change.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14054-confirm-new-primary-user.png" /></figure>
+      <p>If the new primary user has a role of <strong>Standard</strong>, they will be assigned the <strong>Administrator</strong> role when they are made the primary user.</p>
+    </section>
+              {% if site.product_short == "Video Cloud" %}
+    <section class="bcls-section">
+      <h2 id="users">Working with multiple accounts</h2>
+      <p>A common misconception when adding an additional account is that you get an additional 10 users just like you did with your first {{ site.product_short }} account. Additional {{ site.product_short }} accounts do not include additional user accounts. For example, if 10 users were added to the first account and the same 10 users are added to the second account, the total user count is still 10. The 10 unique users are per the license agreement and a single unique user ID can be used on multiple accounts and still be counted as one user.</p>
+      <p>If you have multiple accounts, users must be added to each account individually. Assume you have 2 accounts, Account A and Account B. If a user is added to Account A, they will not automatically have access to Account B. Users must be added to each account they need access to.</p>
+      <p>To learn more about working with multiple accounts, see <a href="/general/references/working-multiple-video-cloud-accounts.html">Working with Multiple Video Cloud Accounts</a>.</p>
+    </section>
+        {% endif %}
+  </article>
+  
