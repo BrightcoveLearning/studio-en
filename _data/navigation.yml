@@ -82,6 +82,8 @@
       url: /media/manage/replacing-video-source-file.html
     - name: Retranscoding Videos
       url: /media/manage/retranscoding-videos-using-media-module.html
+    - name: Brightcove Video Editor
+      url: /media/manage/video-editor.html
     - name: Downloading Videos from Video Cloud
       url: /media/manage/downloading-videos-video-cloud.html
     - name: Uploading Videos Remote URLs
