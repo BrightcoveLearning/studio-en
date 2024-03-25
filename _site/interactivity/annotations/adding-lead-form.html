@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Embedding a Lead Form in a Video</title>
+        <title>Adding a Lead Form to a video</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to embed a lead form during video playback.">
+        <meta name="description" content="In this topic you will learn how to add a lead form to a video.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -15,10 +16,8 @@
         <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
         
         <!-- FontAwesome JS-->
-        
         <!-- <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>   -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
         <!-- Plugins CSS -->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
         <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
@@ -45,7 +44,7 @@
     </head> 
 
     <body class="docs-page">
-        
+
 
 <header class="header fixed-top">
   <div class="branding docs-branding">
@@ -3394,11 +3393,11 @@
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/interactivity/widgets/">Widgets</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/interactivity/annotations/">Annotations</a></li>
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Embedding a Lead Form in a Video</li>
+            <li class="breadcrumb-item active" aria-current="page">Adding a Lead Form to a video</li>
             
             
           </ol>
@@ -3418,61 +3417,55 @@
       </div>
       <br>
       
-      
+      <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
 
-<h1>Embedding a Lead Form in a Video</h1>
-<p>In this topic you will learn how to embed a lead form during video playback.</p>
+<h1>Adding a Lead Form to a video</h1>
+<p>In this topic you will learn how to add a lead form to a video.</p>
 <article class="bcls-article">
   <section class="bcls-section">
-    <h2>Introduction</h2>
-    <!-- <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="1761620969472788620">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> -->
-    <p>The Lead Form Annotation allows you to embed a form from systems like Eloqua, Salesforce, Marketo, Google, and others. Clicking the call to action text will open a form over the video in the following example.</p>
-    <!-- <div style="position: relative; display: block; max-width: 960px;">
-      <div style="padding-top: 56.25%;">
-        <iframe src="https://players.brightcove.net/1752604059001/UivhMH9oq_default/index.html?videoId=1726110077752947878" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
-      </div>
-    </div> -->
+    <p>The Interactivity module allows adding different types of interactive annotations to videos. The Lead Form Annotation will enable you to embed a form from systems like Eloqua, Salesforce, Marketo, and HubSpot.</p>
+    <!-- <div style="width: 960px;"><video-js data-account="1752604059001" data-player="NjP2CDaWFx" data-embed="default" controls="" data-video-id="70723291243113" data-application-id="" class="vjs-16-9"></video-js></div><script src="https://bc-players-qa.s3.amazonaws.com/1752604059001/NjP2CDaWFx_default/index.min.js"></script> -->
   </section>
   <section class="bcls-section">
     <h2 id="configure-player">Before you get started</h2>
     <p>Before you can add interactivity to a player, you need an Interactivity-enabled Brightcove Player and you need to make sure an Interactivity project has been created. See <a href="/interactivity/getting-started/getting-started-interactivity-module.html">Getting Started with the Interactivity Module</a> and <a href="/interactivity/getting-started/configuring-player-plugin.html">Configuring a Brightcove Player with the Interactivity Plugin</a> for more information.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="custom-form">Adding a custom form widget</h2>
-    <p>The Lead Form widget can display a form during video playback. During playback, call-to-action text will be displayed, and when clicked, the state will slide in and be displayed. Using an external form (like a Google Form) has the advantage of sending all the submitted data straight to that system. Note that no data submitted to the form will show up in the standard Brightcove Interactivity reports as it's routed directly to the external system.</p>
-    <p>Follow these steps to add a Lead Form widget to a project:</p>
-    <ol class="bcls-tasklist-restart">
+    <h2 id="Adding_a_Lead_Form">Adding a Lead Form</h2>
+    <p>Follow these steps to add a Lead Form to a project:</p>
+    <ol class="bcls-tasklist">
       <li>Login to Video Cloud Studio.</li>
       <li>Open the <strong>Interactivity</strong> module.</li>
-      <li> Click on a project <strong>Title</strong> to open it.</li>
-      <li>In the bottom toolbar, click on the widget icon.
-        <!-- <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/widgets/form/add-widget.png"> </figure> -->
+      <li>Click <span class="button-blue">New project</span>.</li>
+      <li>Enter a <strong>Project Title</strong>.</li>
+      <li>Select a video to use.</li>
+      <li> Click <span class="button-blue">Create</span>.</li>
+      <li>Play the video to the point where the Lead Form should be displayed.</li>
+      <li>In the bottom toolbar, click on the Lead Form icon.
+        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/add-lead-form.webp"> </figure>
       </li>
-      <li>Click the <strong>Lead Form </strong> widget.
-        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/widgets/form/custom-form-widget.png"> </figure>
+      <li>Click on the <strong>Edit</strong> link in the menu.
+        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/lead-form-edit-dialog .webp"> </figure>
       </li>
-      <!-- <li>Click <strong>ADD</strong>. The widget is added on top of the project video.</li>
-      <li>Click and drag the widget to where you would like the text to appear over the video.</li>
-      <li>Click on the <strong>Done</strong> link in the menu.
-        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/widgets/form/form-editor-overlay.png"> </figure>
+      <li>Click on the <strong>Form source</strong> tab to add the Lead Form Code. On this screen, you can also click on the options <strong>Require submission</strong> and <strong>Show form everytime</strong>. You should see something similar to this:
+        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/edit-lead-form.webp"> </figure>
       </li>
-      <li>Hover over the <strong>Your Text Here</strong> text and click <strong>CONFIGURE</strong>.</li>
-      <li>In the <strong>FORM SOURCE</strong> field, paste in the form URL. Make sure the URL is publicly accessible.</li>
-      <li>Update the <strong>Button Text</strong>, this is the call-to-action text that the viewer will click to open the form.
-        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/widgets/form/form-config.png"> </figure>
+      <li>Click on the <strong>Time</strong>  tab to enter the start time.
+        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/start-time-edition.webp"> </figure>
       </li>
-      <li>Click <strong>SAVE</strong>.</li>
-      <li>Click <strong>Edit</strong> to open the editor.</li>
-      <li>Click the <strong>Start Time</strong> menu.</li>
-      <li>Enter a <strong>Start time</strong> in seconds, as a percentage or in time format. Click <span class="button-blue">SAVE</span>.
-        <aside class="bcls-aside bcls-aside--tip language-editable">Tip: Consider setting the start time to 5 or 10 seconds (near the beginning) and setting the duration to <strong>Until the end of the video</strong>. This will allow the viewer to click the call-to-action text at any point in the video while keeping the form out of sight.</aside>
+      <li>Click <span class="button-blue">Done</span> to finish or <span class="button-red">Delete</span> to delete the annotation.
       </li>
-      <li>Click the clock icon to set the duration of the overlay. Click <span class="button-blue">SUBMIT</span>.</li>
-      <li>Click <strong>Done</strong>.</li>
+      <li>Click on the <strong>Resize</strong> link in the menu to drag the Lead Form to where you want it to appear on the video.
+        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/resize-leadform.webp"> </figure>
+
+        <aside class="bcls-aside bcls-aside--information">Note: Make sure the Lead Form isn't placed at the bottom of the player where it may be covered up by the control bar.</aside>
+      </li>
+      <li>You can also click <img src="/assets/images/s-brightcove-interactivity-img/annotations/edit-icon.webp" alt=""> to edit, or click <img src="/assets/images/s-brightcove-interactivity-img/annotations/3-dots.webp" alt=""> to <strong>Duplicate</strong>, <strong>Delete</strong>, or <strong>Edit</strong> the annotation in the section under the player preview:
+        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/table-leadform.webp"> </figure> 
+      </li>
+      <li>Click <span class="button-blue">Embed</span>.</li>
+      <li>Click <strong>Preview</strong>, play the video and confirm that the Lead Form appears.</li>
     </ol>
-    <p>Get a preview link to the video  and confirm that the call-to-action and form appear.</p> -->
-    <!-- <aside class="bcls-aside bcls-aside--information language-editable">Note: There may be a short delay before the Custom Form widget will appear in published videos.</aside> -->
   </section>
   
 </article>
