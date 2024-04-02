@@ -3499,6 +3499,10 @@
         <p></p>
         <li>Enter your <strong><a href="https://nation.marketo.com/t5/knowledgebase/how-to-find-your-munchkin-id-for-a-marketo-instance/ta-p/248432">Account ID</a></strong></li>
         <p></p>
+        <li>Enter your <strong>Domain Level Override</strong>
+        <aside class="bcls-aside bcls-aside--information">Please note that this field can remain empty, and Marketo will detect the level at which to drop the cookie, but you can also override and determine if the cookie should be dropped at the 2nd-level domain <code translate="no">*brightcove.com</code>, third-level domain <code translate="no">subdomain.brightcove.com</code>, or further down.</aside>
+        </li>
+        <p></p>
         <li>Click <span class="button-blue">Save</span></li>
         <p></p>
         <li>Click <span class="button-blue">Publish</span></li>
@@ -3541,6 +3545,8 @@
       <h5 id="adobe">Adobe:</h5>
       <ul>
         <li>Select <strong>Adobe</strong></li>
+        <p></p>
+        <li>Enter the <strong>Organization ID</strong>. For more information on how to locate the Organization ID, see <a href="https://experienceleague.adobe.com/en/docs/core-services/interface/administration/admin-getting-started">here</a>.</li>
         <p></p>
         <li>Click <span class="button-blue">Save</span></li>
         <p></p>
@@ -3615,7 +3621,8 @@
           <pre class="line-numbers">
             <code class="language-json" translate="No">"viewer_id_source": {
     "source": "marketo",
-    "account_id: "account1234"
+    "account_id": "account1234",
+    "domain_level": "1"
 }</code></pre>
         </li>
         <li>
@@ -3634,7 +3641,8 @@
         <li>Adobe
           <pre class="line-numbers">
             <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "adobe"
+    "source": "adobe",
+    "marketing_cloud_org_id": "test@AdobeOrg"
 }</code></pre>
         </li>
         <li>Gtag
