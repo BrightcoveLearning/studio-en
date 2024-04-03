@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Configuring Viewer ID Tracking</title>
+        <title>General Information</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to configure the Viewer ID Tracking for a player.">
+        <meta name="description" content="General information about the Campaign migration.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3389,15 +3389,11 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/players/">Players</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/campaign-eol/">Campaign eol</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/players/properties/">Properties</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Configuring Viewer ID Tracking</li>
+            <li class="breadcrumb-item active" aria-current="page">General Information</li>
             
             
           </ol>
@@ -3410,273 +3406,32 @@
   <div class="container">
     <div class="docs-overview py-5">
       
-      <div class="centered-inpage-nav" id="centered_inpage_nav">
-        <nav id="centered_toc">
-          <select id="centered_in_page_toc" class="form-select select-focus"></select>
-        </nav>
-      </div>
-      <br>
-      
       <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
-<article class="bcls-article">
-    <h1>Configuring Viewer ID Tracking</h1>
-    <summary>In this topic you will learn how to configure the Viewer ID Tracking for a player.</summary>
-    <section class="bcls-section">
-      <h2 id="Overview">Overview</h2>
-        <p>The <strong>Viewer ID Tracking</strong> property can be used to capture/collect <strong>viewerIDs</strong> of known users from various marketing integrations by leverages 3rd party cookie tracking.</p>
-    </section> 
-    <section class="bcls-section">
-      <h2 id="Requirements">Requirements</h2>
-      <p>The following requirements are needed for the Viewer ID Tracking:</p>
-      <ul>
-        <li>Brightcove Player v7.18.0 or newer</li>
-      </ul>
+    <h1><i class=""></i> General Information</h1>
+    <article class="bcls-article">
+    <summary>General information about the Campaign migration.</summary>
 
-    </section>
-      <section class="bcls-section">
-        <h2 id="Implement_using_Players_module">Implement using Players module</h2>
-      <p>To configure the <strong>Viewer ID Tracking</strong> property, follow these steps:</p>
-      <ol class="bcls-tasklist-restart">
-        <li>Open the  <strong>Players</strong>  module.</li>
-        <li>Click the link for the player you want to configure.</li>
-        <li>Click <strong>Viewer ID Tracking</strong> option in the left navigation menu.</li>
-      </ol>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="playback properties" src="/assets/images/s-players-img/properties/node14053-js-file.webp" /></figure>
-      <aside class="bcls-aside bcls-aside--information">Note: Any changes made to a player may take up to 5 minutes to appear in published players.</aside>
-      <p>The following integrations can be configured with this property:</p>
-      <ul>
-        <li><a href="#eloqua">Oracle Eloqua</a></li>
-        <li><a href="#hubspot">Hubspot</a></li>
-        <li><a href="#marketo">Marketo</a></li>
-        <li><a href="#salesforce">Salesforce</a></li>
-        <li><a href="#sailthru">Sailthru</a></li>
-        <li><a href="#adobe">Adobe</a></li>
-        <li><a href="#gtag">Gtag</a></li>
-        <li><a href="#braze">Braze</a></li>
-      </ul>
-    </section>
+    <!-- <div class="row">
+      
+    </div> -->
+    <div class="row">
+        <div class="col-12 col-lg-4 py-3">
+          <div class="card shadow-sm" style="background: white" onclick="window.location.href = ''">
+            <div class="card-body">
+              <div>
+                <!-- <h5 class="card-title text-center m-2">General Information</h5> -->
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a href="" style="text-decoration: none;">Campaign 2.0</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
-    <section class="bcls-section">
-      <h2 id="connect_your_integration">Connect your Integration</h2>
-      <h5 id="eloqua">Oracle Eloqua:</h5>
-      <ul>
-        <li>Select <strong>Eloqua</strong></li>
-        <p></p>
-        <li>Enter your <strong>Account ID</strong></li>
-        <p></p>
-        <p></p>
-        <li>Enter your <strong>Endpoint</strong></li>
-        <p></p>
-        <p></p>
-        <li>Enter your <strong><a href="https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/VerifyingCompanyDefaultInformation.htm">Site ID</a></strong></li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-        <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/eloqua.webp" /></figure>
-        <p></p>
-        </ul>
-      <p></p>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--warning language-editable">Using the Eloqua service via our Viewer ID tracking feature will cause 3rd party cookies to be dropped. <br> <br> Please review <a href="https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/EloquaAsynchronousTrackingScripts/Tasks/BasicPageTrackingFirst.htm">implement page view tracking with first-party cookies</a> to ensure cookie-browser compatibility before connecting your account.</aside>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="hubspot">Hubspot:</h5>
-      <ul>
-        <li>Select <strong>Hubspot</strong></li>
-        <p></p>
-        <li>Enter your <strong><a href="https://knowledge.hubspot.com/account-management/manage-multiple-hubspot-accounts#:~:text=Check%20your%20current%20account,name%20and%20unique%20Hub%20ID.">Account ID</a></strong></li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-        <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/hubspot.webp" /></figure>
-        <p></p>
-        </ul>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="marketo">Marketo:</h5>
-      <ul>
-        <li>Select <strong>Marketo</strong></li>
-        <p></p>
-        <li>Enter your <strong><a href="https://nation.marketo.com/t5/knowledgebase/how-to-find-your-munchkin-id-for-a-marketo-instance/ta-p/248432">Account ID</a></strong></li>
-        <p></p>
-        <li>Enter your <strong>Domain Level Override</strong>
-        <aside class="bcls-aside bcls-aside--information">Please note that this field can remain empty, and Marketo will detect the level at which to drop the cookie, but you can also override and determine if the cookie should be dropped at the 2nd-level domain <code translate="no">*brightcove.com</code>, third-level domain <code translate="no">subdomain.brightcove.com</code>, or further down.</aside>
-        </li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-        <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/marketo.webp" /></figure>
-        <p></p>
-        </ul>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="salesforce">Salesforce:</h5>
-      <ul>
-        <li>Select <strong>Salesforce</strong></li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-      </ul>
-      <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/salesforce.webp" /></figure>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="sailthru">Sailthru:</h5>
-      <ul>
-        <li>Select <strong>Sailthru</strong></li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-      </ul>
-      <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/sailthru.webp" /></figure>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="adobe">Adobe:</h5>
-      <ul>
-        <li>Select <strong>Adobe</strong></li>
-        <p></p>
-        <li>Enter the <strong>Organization ID</strong>. For more information on how to locate the Organization ID, see <a href="https://experienceleague.adobe.com/en/docs/core-services/interface/administration/admin-getting-started">here</a>.</li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-      </ul>
-      <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/adobe.webp" /></figure>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="gtag">Gtag:</h5>
-      <ul>
-        <li>Select <strong>Gtag</strong></li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-      </ul>
-      <p></p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/gtag.webp" /></figure>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="braze">Braze:</h5>
-      <ul>
-        <li>Select <strong>Braze</strong></li>
-        <p></p>
-        <li>Enter your <strong>API Key</strong></li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-      </ul>
-      <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/braze.webp" /></figure>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-    </section>
-    <section class="bcls-section">
-        <h2 id="Implement_using_JSON_Editor">Implement using JSON Editor</h2>
-        <p>To configure the <strong>Viewer ID Tracking</strong> property in the JSON Editor, follow these steps:</p>
-        <ol class="bcls-tasklist-restart">
-            <li>Open the  <strong>Players</strong>  module.</li>
-            <li>Click the link for the player you want to configure.</li>
-            <li>Click <strong>JSON Editor</strong> option in the left navigation menu.</li>
-            <li>Edit the JSON Editor object to add the <code translate="no">viewer_id_source</code> property. It should look similar to this: 
-                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="playback properties" src="/assets/images/s-players-img/properties/viewer-json.webp" /></figure>
-            </li>
-          </ol>
-    <p>Here are some examples to implement all the integrations:</p>
-    <ul>
-        <li>Oracle Eloqua
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "eloqua",
-    "endpoint": "endpointXYZ",
-    "site": "siteXYZ"
-}</code></pre>
-        </li>
-        <li>Hubspot
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "hubspot",
-    "account_id": "account1234"
-}</code></pre>
-        </li>
-        <li>Marketo
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "marketo",
-    "account_id": "account1234",
-    "domain_level": "1"
-}</code></pre>
-        </li>
-        <li>
-          Salesforce
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "salesforce"
-}</code></pre>
-        </li>
-        <li>Sailthru
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "sailthru"
-}</code></pre>
-        </li>
-        <li>Adobe
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "adobe",
-    "marketing_cloud_org_id": "test@AdobeOrg"
-}</code></pre>
-        </li>
-        <li>Gtag
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "gtag",
-    "tag_id": "G-123"
-}</code></pre>
-        </li>
-        <li>Braze
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "braze",
-    "api_key": "123XYZ"
-}</code></pre>
-        </li>
-      </ul>
-    </section>
   </article>
-  
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
-  
-  <nav class="right-side-nav" id="right_side_nav">
-    <h6 class="toc">Page Contents</h6>
-    <ul id="in_page_nav" class="list-none"></ul>
-  </nav>
   
 <!-- </div> -->
 </div>

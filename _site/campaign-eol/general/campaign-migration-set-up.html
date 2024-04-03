@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Configuring Viewer ID Tracking</title>
+        <title>Campaign 2.0 migration set up</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
-        <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to configure the Viewer ID Tracking for a player.">
+        <meta name="description" content="This topic provides a comprehensive understanding of how to migrate to Campaign 2.0 to integrate with marketing automation platforms (MAPs) and customer relationship management (CRMs) systems to provide you actionable insights into viewer behavior, allowing you to run better targeted marketing campaigns.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -16,8 +15,10 @@
         <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
         
         <!-- FontAwesome JS-->
+        
         <!-- <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>   -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
         <!-- Plugins CSS -->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
         <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
@@ -44,7 +45,7 @@
     </head> 
 
     <body class="docs-page">
-
+        
 
 <header class="header fixed-top">
   <div class="branding docs-branding">
@@ -3389,15 +3390,15 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/players/">Players</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/campaign-eol/">Campaign eol</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/players/properties/">Properties</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/campaign-eol/general/">General</a></li>
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Configuring Viewer ID Tracking</li>
+            <li class="breadcrumb-item active" aria-current="page">Campaign 2.0 migration set up</li>
             
             
           </ol>
@@ -3417,260 +3418,240 @@
       </div>
       <br>
       
-      <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
+      
+<h1>Campaign 2.0 migration set up</h1>
 <article class="bcls-article">
-    <h1>Configuring Viewer ID Tracking</h1>
-    <summary>In this topic you will learn how to configure the Viewer ID Tracking for a player.</summary>
-    <section class="bcls-section">
-      <h2 id="Overview">Overview</h2>
-        <p>The <strong>Viewer ID Tracking</strong> property can be used to capture/collect <strong>viewerIDs</strong> of known users from various marketing integrations by leverages 3rd party cookie tracking.</p>
-    </section> 
-    <section class="bcls-section">
-      <h2 id="Requirements">Requirements</h2>
-      <p>The following requirements are needed for the Viewer ID Tracking:</p>
-      <ul>
-        <li>Brightcove Player v7.18.0 or newer</li>
-      </ul>
-
-    </section>
-      <section class="bcls-section">
-        <h2 id="Implement_using_Players_module">Implement using Players module</h2>
-      <p>To configure the <strong>Viewer ID Tracking</strong> property, follow these steps:</p>
-      <ol class="bcls-tasklist-restart">
-        <li>Open the  <strong>Players</strong>  module.</li>
-        <li>Click the link for the player you want to configure.</li>
-        <li>Click <strong>Viewer ID Tracking</strong> option in the left navigation menu.</li>
-      </ol>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="playback properties" src="/assets/images/s-players-img/properties/node14053-js-file.webp" /></figure>
-      <aside class="bcls-aside bcls-aside--information">Note: Any changes made to a player may take up to 5 minutes to appear in published players.</aside>
-      <p>The following integrations can be configured with this property:</p>
-      <ul>
-        <li><a href="#eloqua">Oracle Eloqua</a></li>
-        <li><a href="#hubspot">Hubspot</a></li>
-        <li><a href="#marketo">Marketo</a></li>
-        <li><a href="#salesforce">Salesforce</a></li>
-        <li><a href="#sailthru">Sailthru</a></li>
-        <li><a href="#adobe">Adobe</a></li>
-        <li><a href="#gtag">Gtag</a></li>
-        <li><a href="#braze">Braze</a></li>
-      </ul>
-    </section>
-    
-    <section class="bcls-section">
-      <h2 id="connect_your_integration">Connect your Integration</h2>
-      <h5 id="eloqua">Oracle Eloqua:</h5>
-      <ul>
-        <li>Select <strong>Eloqua</strong></li>
-        <p></p>
-        <li>Enter your <strong>Account ID</strong></li>
-        <p></p>
-        <p></p>
-        <li>Enter your <strong>Endpoint</strong></li>
-        <p></p>
-        <p></p>
-        <li>Enter your <strong><a href="https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/VerifyingCompanyDefaultInformation.htm">Site ID</a></strong></li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-        <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/eloqua.webp" /></figure>
-        <p></p>
-        </ul>
-      <p></p>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--warning language-editable">Using the Eloqua service via our Viewer ID tracking feature will cause 3rd party cookies to be dropped. <br> <br> Please review <a href="https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/EloquaAsynchronousTrackingScripts/Tasks/BasicPageTrackingFirst.htm">implement page view tracking with first-party cookies</a> to ensure cookie-browser compatibility before connecting your account.</aside>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="hubspot">Hubspot:</h5>
-      <ul>
-        <li>Select <strong>Hubspot</strong></li>
-        <p></p>
-        <li>Enter your <strong><a href="https://knowledge.hubspot.com/account-management/manage-multiple-hubspot-accounts#:~:text=Check%20your%20current%20account,name%20and%20unique%20Hub%20ID.">Account ID</a></strong></li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-        <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/hubspot.webp" /></figure>
-        <p></p>
-        </ul>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="marketo">Marketo:</h5>
-      <ul>
-        <li>Select <strong>Marketo</strong></li>
-        <p></p>
-        <li>Enter your <strong><a href="https://nation.marketo.com/t5/knowledgebase/how-to-find-your-munchkin-id-for-a-marketo-instance/ta-p/248432">Account ID</a></strong></li>
-        <p></p>
-        <li>Enter your <strong>Domain Level Override</strong>
-        <aside class="bcls-aside bcls-aside--information">Please note that this field can remain empty, and Marketo will detect the level at which to drop the cookie, but you can also override and determine if the cookie should be dropped at the 2nd-level domain <code translate="no">*brightcove.com</code>, third-level domain <code translate="no">subdomain.brightcove.com</code>, or further down.</aside>
-        </li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-        <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/marketo.webp" /></figure>
-        <p></p>
-        </ul>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="salesforce">Salesforce:</h5>
-      <ul>
-        <li>Select <strong>Salesforce</strong></li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-      </ul>
-      <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/salesforce.webp" /></figure>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="sailthru">Sailthru:</h5>
-      <ul>
-        <li>Select <strong>Sailthru</strong></li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-      </ul>
-      <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/sailthru.webp" /></figure>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="adobe">Adobe:</h5>
-      <ul>
-        <li>Select <strong>Adobe</strong></li>
-        <p></p>
-        <li>Enter the <strong>Organization ID</strong>. For more information on how to locate the Organization ID, see <a href="https://experienceleague.adobe.com/en/docs/core-services/interface/administration/admin-getting-started">here</a>.</li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-      </ul>
-      <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/adobe.webp" /></figure>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="gtag">Gtag:</h5>
-      <ul>
-        <li>Select <strong>Gtag</strong></li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-      </ul>
-      <p></p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/gtag.webp" /></figure>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-      <h5 id="braze">Braze:</h5>
-      <ul>
-        <li>Select <strong>Braze</strong></li>
-        <p></p>
-        <li>Enter your <strong>API Key</strong></li>
-        <p></p>
-        <li>Click <span class="button-blue">Save</span></li>
-        <p></p>
-        <li>Click <span class="button-blue">Publish</span></li>
-      </ul>
-      <p></p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" src="/assets/images/s-players-img/properties/braze.webp" /></figure>
-      <p></p>
-      <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
-      <p></p>
-
-    </section>
-    <section class="bcls-section">
-        <h2 id="Implement_using_JSON_Editor">Implement using JSON Editor</h2>
-        <p>To configure the <strong>Viewer ID Tracking</strong> property in the JSON Editor, follow these steps:</p>
-        <ol class="bcls-tasklist-restart">
-            <li>Open the  <strong>Players</strong>  module.</li>
-            <li>Click the link for the player you want to configure.</li>
-            <li>Click <strong>JSON Editor</strong> option in the left navigation menu.</li>
-            <li>Edit the JSON Editor object to add the <code translate="no">viewer_id_source</code> property. It should look similar to this: 
-                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="playback properties" src="/assets/images/s-players-img/properties/viewer-json.webp" /></figure>
-            </li>
-          </ol>
-    <p>Here are some examples to implement all the integrations:</p>
+  <summary>This topic provides a comprehensive understanding of how to migrate to Campaign 2.0 to integrate with marketing automation platforms (MAPs) and customer relationship management (CRMs) systems to provide you actionable insights into viewer behavior, allowing you to run better targeted marketing campaigns.</summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
+    <p>MAP and CRM systems are great at storing data about user behavior. They are generally less effective at analyzing that data and identifying patterns that you can act on. This is where Brightcove's Audience Insights technology can provide valuable insights into your data to help you make good business decisions.</p>
+    <p>Here are some examples of the kind of campaigns you might run based on the insights Brightcove provides:</p>
     <ul>
-        <li>Oracle Eloqua
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "eloqua",
-    "endpoint": "endpointXYZ",
-    "site": "siteXYZ"
-}</code></pre>
-        </li>
-        <li>Hubspot
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "hubspot",
-    "account_id": "account1234"
-}</code></pre>
-        </li>
-        <li>Marketo
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "marketo",
-    "account_id": "account1234",
-    "domain_level": "1"
-}</code></pre>
-        </li>
-        <li>
-          Salesforce
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "salesforce"
-}</code></pre>
-        </li>
-        <li>Sailthru
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "sailthru"
-}</code></pre>
-        </li>
-        <li>Adobe
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "adobe",
-    "marketing_cloud_org_id": "test@AdobeOrg"
-}</code></pre>
-        </li>
-        <li>Gtag
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "gtag",
-    "tag_id": "G-123"
-}</code></pre>
-        </li>
-        <li>Braze
-          <pre class="line-numbers">
-            <code class="language-json" translate="No">"viewer_id_source": {
-    "source": "braze",
-    "api_key": "123XYZ"
-}</code></pre>
-        </li>
+      <li><strong>Lead Qualification</strong>: Set different Segment tags to build a Lead Score in your Marketing Platform. Qualify them and move them along the funnel.</li>
+      <li><strong>Ideal Customer Persona (ICP)</strong>: Identify your ICP and create a segment that will report every viewer with similar behavior to run a targeted campaign. Identify viewer preferences, patterns, and engagement to cater to the specific cohort through targeted messaging and campaigns.</li>
+      <li><strong>Content promotion</strong>: Engage a prospect that has watched a specific video with related content.</li>
+      <li><strong>Subscription Management</strong>: Identify different segments of customers to lead them through their subscription or upgrade journey. Examples of Subscription management campaigns based on Segments are: Engage trialist, Updated Onboarding Flow, Idle users, Annual Plan Upgrades, Scheduled Cancellation Win-backs, Lost Customer Win-backs.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="supported_platforms">Supported third-party platforms</h2>
+    <p>The following third-party platforms are currently supported for this integration:</p>
+    <ul>
+      <li>Salesforce Sales Cloud</li>
+      <li>Blueshift</li>
+      <li>Braze</li>
+      <li>S3</li>
+      <li>Custom S3</li>
+      <li>Marketo</li>
+      <li>Sailthru</li>
+      <li>Segment NodeJS</li>
+      <li>HubSpot</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="requirements">Requirements</h2>
+    <p>To use this data platform integration, you must have at least one of the following:</p>
+    <ul>
+      <li>Marketing Studio Essential or Premium</li>
+      <li>Access to Campaign</li>
+      <li>Brightcove Beacon</li>
+      <li>Full Audience Insights</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Set_up_an_integration">Set up an integration</h2>
+    <p>Setting up an integration is straightforward. However, you will need some information from the third-party vendor - exactly what you need will vary for different services, but will be clearly indicated by input fields in the setup dialog. Typical requirements are "Account id", "API key", and/or "Secret key". If you are unsure how to find or obtain a required piece of information, consult the vendor's documentation or support service.</p>
+    <h3>Steps</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>Login to Studio</li>
+      <li>
+        Click the Integrations icon in the left-side navigation to open the Integrations module:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integrations-module-home.webp" alt="Integrations Module">
+          <figcaption class="bcls-caption--image">Integrations Module</figcaption>
+        </figure>
+      </li>
+      <li>
+        Click <strong>Customer Data Platforms</strong> to go to the data platform integrations:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/add-or-modify-integration.webp" alt="Customer Data Platform Integrations">
+          <figcaption class="bcls-caption--image">Customer Data Platform Integrations</figcaption>
+        </figure>
+      </li>
+      <li>As you see in the screenshot above, any existing integrations will be shown as a list and can be modified (see the next section). Here we will click <span class="button-blue">Add Integration</span> to create a new integration.</li>
+      <li>
+        In the <strong>Add Integration</strong> dialog, first select the service you want to integrate:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/add-integration.webp" alt="Add Integration Dialog">
+          <figcaption class="bcls-caption--image">Add Integration Dialog</figcaption>
+        </figure>
+      </li>
+      <li>
+        Next, fill in the required information according to the service you are integrating:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integration-setup-screen.webp" alt="Add Information for Integration Sample">
+          <figcaption class="bcls-caption--image">Add Information for Integration Sample</figcaption>
+        </figure>
+      </li>
+      <li>
+        Click <span class="button-blue">Save</span> to complete the setup.
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Modify-an-integration">Modify an integration</h2>
+    <p>
+      As shown above, in the list of existing integrations, there are three icons that allow you to:
+      <ul>
+        <li>Edit the integration</li>
+        <li>Test the integration</li>
+        <li>Delete the integration</li>
       </ul>
-    </section>
-  </article>
-  
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/modify-integration.webp" alt="Modify an Integration">
+        <figcaption class="bcls-caption--image">Modify an Integration</figcaption>
+      </figure>
+    </p>
+    <aside class="bcls-aside bcls-aside--information language-editable">In some cases the Test icon will be grayed out, indicating that this functionality is not available for that particular integration.</aside>
+    <p>If you click the <strong>Edit</strong> icon, a dialog similar to the Add Integration dialog will appear:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integration-edit-screen.webp" alt="Edit Integration Sample">
+      <figcaption class="bcls-caption--image">Edit Integration Sample</figcaption>
+    </figure>
+    <p>Note the additional <strong>Integrations Properties</strong> tab. For some services, there will be additional properties you can set here; for others there are no additional properties.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="viewer-id">Viewer ID Tracking plugin</h2>
+    <p>The Brightcove Viewer ID tracking plugin is a key feature for content creators and video platform owners aiming to gain in-depth insights into their audience by assigning and tracking viewers through unique IDs. This tool is vital for analyzing viewer behavior, content preferences, and engagement patterns, enabling tailored content and targeted marketing strategies for enhanced viewer experience and engagement.</p>
+    <h3>Create a new Player or Edit an existing Player</h3>
+    <p>If you are editing an existing Campaign player, you will also want to remove the existing <strong>Campaign plugin</strong>. However, you could also create a <strong>New Player</strong>.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Campaign</strong> module.</li>
+      <li>Deselect the Enable <strong>Campaign</strong> checkbox.</li>
+      <li>Click <span class="button-blue">Save</span> and <span class="button-blue">Publish</span> your player.</li>
+    </ol>
+
+    <h3>Enable the Viewer ID Tracking Plugin</h3>
+    <p>You can enable the Viewer ID Tracking Plugin by taking the following steps from the player details view:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Viewer ID Tracking</strong> tab.</li>
+      <li>Select the Enable <strong>Viewer ID Tracking</strong> checkbox.</li>
+      <li>Choose the 3rd Party Service from the Service dropdown.</li>
+      <li>Input any additional required fields.</li>
+      <li>Click <span class="button-blue">Save</span> and <span class="button-blue">Publish</span> your player.</li>
+    </ol>
+
+  </section>
+  <section class="bcls-section">
+    <h2 id="setuo-interactivity-player">Setup your Interactivity Player</h2>
+    <p>We first have to enable your Player for Interactivity and ensure that any videos played inside of this player have “Interactivity Projects” that can receive Lead Forms. To do this follow the next steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <em>Interactivity</em> tab in the Player Details section on the <strong>Players Module</strong>.</li>
+      <li>Select the <strong>Enable Interactivity</strong> checkbox.</li>
+      <li>To enable the auto-creation of Interactivity projects, select the <strong>Options (JSON)</strong> checkbox. This reveals a textarea where you can insert a JSON configuration.</li>
+      <li>Inside the textarea, insert the following JSON.
+        <pre class="line-numbers"><code class="language-json" translate="No">{
+   "create": true
+ }
+         </code></pre>
+      </li>
+      <li>Click <span class="button-blue">Save</span> and <span class="button-blue">Publish</span> your player.</li>
+      
+    </ol>
+    <p>Once the changes have taken effect, any video played within this Player has a Project created automatically.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: When Projects are created from videos, any tags defined in the <em>Media Module</em> are also copied over to the new Project. It’s worth taking an extra step here to come up with a unique tag for any videos you’d like to apply a lead form to and apply them to your videos inside of the Media Module.</aside>
+
+  </section>
+
+
+  <section class="bcls-section">
+    <h2 id="setuo-lead-form">Setup your Lead Form</h2>
+    <p>Now that you have an <em>Interactivity Player</em>, we need to create a <em>Lead Form</em> to apply to the videos you load in the <em>Interactivity Player</em>. To create a <em>Lead Form</em> follow the next steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Interactivity Module</strong>.</li>
+      <li>Click to <strong>Templates > All Templates</strong>.</li>
+      <li>Click <span class="button-blue">New template</span> and provide a descriptive name.</li>
+      <li>On the Template details screen, you are presented with a 1-minute dummy video that you can work on.
+        <ul>
+          <li>If you just plan on having the lead form opening at the start of every video, or within 1 minute of playback, then you can continue with the existing dummy video.</li>
+          <li>If you would like a lead form to appear at a specific time above 60 seconds (such as 5 minutes into a video), then you will need to use the <strong>Replace Video</strong> button to select a video of the correct length to create your template.</li>
+        </ul>
+      </li>
+      <li>Use the player control bar to create a new <strong>Lead Form Annotation</strong>.
+      <ul>
+        <li>On the <strong>Form Source</strong> tab, copy & paste the lead form code you previously used in Campaign - or directly from your <em>MAP</em>.
+          <ul>
+            <li>Select whether or not you wish to <strong>Require Submission</strong>.
+            <ul>
+              <li>Selecting this option will require viewers to fill out the form before playback resumes.</li>
+              <li>Not selecting this option will display a `Close` button in the upper right corner of the lead form, where viewers can resume playback without filling out the form</li>
+              
+            </ul>
+            </li>
+            <li>Select whether or not you wish to <strong>Show form everytime</strong>.
+            <ul>
+              <li>If unselected, the lead form will only display if it’s determined that the viewer is not yet known.</li>
+            </ul></li>
+          </ul>
+        </li>
+        <li>Use the <strong>Time</strong> Tab to modify the time at which the Lead Form should appear.
+        <ul>
+          <li>This can be an exact playback time in hh:mm:ss or a percentage of playback.</li>
+          <li>Video playback will pause and seek the user back to this time until the user has successfully closed or submitted the lead form annotation at which point the main content will resume</li>
+        </ul></li>
+        <li>Click <span class="button-blue">Save</span></li>
+      </ul>
+      </li>
+
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="apply-lead-form">Apply the Lead Form across multiple projects</h2>
+    <p>To apply the Lead Form across multiple projects / videos follow these steps:
+    </p>
+    <ol class="bcls-tasklist-restart">
+      <li>Edit your Lead Form template and click to the <strong>Settings</strong> panel.</li>
+      <li>On <strong>Apply Templates to Projects by Tag</strong>. Define a unique tag that dictates which projects receive your <em>Lead Form Template</em>.
+      </li>
+      <li>Use the <strong>Apply Templates to Projects by Tag</strong> field to define a unique <em>tag</em> that dictates which projects receive your <em>Lead Form Template</em>.
+        <aside class="bcls-aside bcls-aside--information"><p>Note: If you have chosen a unique <em>tag</em> to apply to your videos in the <strong>Media Module</strong>. Then, use the same <em>tag</em> in this field to ensure your <em>Lead Form Template</em> is applied to the Project created by your <em>Interactivity Player</em>.</p>
+          <p><strong>Scenario: I already have Projects in my account and they don’t have my <em>Lead Form</em> applied or <em>Tags</em> associated with them</strong>.</p>
+          <ul>
+            <li>If you already have projects based on your videos without tags, add the <em>tag</em> to these projects. The <em>Lead Form</em> should now appear in your <em>Interactivity Player</em>. Make sure the corresponding video has the <em>tag</em> in the <strong>Media Module</strong>.</li>
+          </ul>
+          <p><strong>Scenario: I’ve applied a tag to my template, but I don’t have a Project based off of my video.</strong></p>
+          <ul>
+            <li>If you don’t have a project based on your video, add the <em>tag</em> you created to the video inside the <strong>Media Module</strong> and playback the video in your <em>Interactivity Player</em>. An <em>Interactivity Project</em> that contains its tags is automatically generated from your video, and your <em>Lead Form</em> template is automatically applied upon playback.</li>
+          </ul>
+          </aside>
+      </li>
+    </ol>
+    
+  </section>
+  <section class="bcls-section">
+    <h2 id="maps-tracking">Setup MAPs Tracking (Marketo & HubSpot Client-Side Only)</h2>
+    <p>To Setup MAPs Tracking follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>On <strong>Players Module</strong> edit your <em>Interactivity Player</em>.</li>
+      <li>In your Player Settings, click to the <strong>MAPs</strong> tab on the left menu navigation.</li>
+      <li>On the MAPs page, select the <strong>Enable MAPs</strong> checkbox.</li>
+      <li>Select your Service (<strong>Marketo</strong> or <strong>Hubspot</strong>) and enter Your <strong>Account ID</strong>.</li>
+      <li>Click <span class="button-blue">Save</span> and <span class="button-blue">Publish</span> your player.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="publishing-player">Publishing your Player</h2>
+    <p>To access your Publishing Code from the <strong>Interactivity Module</strong>, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>On <strong>Interactivity Module</strong>, select the <em>Project</em> you want to publish.</li>
+      <li>On the Project Details page you can preview how the <em>Lead Form</em> would look in player.</li>
+      <li>Click <strong>Embed</strong> from the top-right to open the embed code modal.</li>
+      <li>Select the <em>Interactivity Player</em> you’d like to embed your project.</li>
+      <li>Copy the <em>JavaScript</em> code snippet from this window and paste it into your page.</li>
+    </ol>
+  </section>
+</article>
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
