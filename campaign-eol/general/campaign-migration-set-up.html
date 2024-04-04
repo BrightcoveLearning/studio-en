@@ -1,6 +1,6 @@
 ---
-title: Campaign 2.0 migration set up
-description: "This topic provides a comprehensive understanding of how to migrate to Campaign 2.0 to integrate with marketing automation platforms (MAPs) and customer relationship management (CRMs) systems to provide you actionable insights into viewer behavior, allowing you to run better targeted marketing campaigns."
+title: Step by Step Campaign 2.0 Set Up
+description: "This topic provides a comprehensive understanding of how to migrate to Campaign 2.0 to integrate Marketo or Hubspot client side event-based data to provide you actionable insights into viewer behavior, allowing you to run better targeted marketing campaigns."
 parent: general
 grandparent: campaign-eol
 ---
@@ -9,40 +9,25 @@ grandparent: campaign-eol
 <article class="bcls-article">
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>MAP and CRM systems are great at storing data about user behavior. They are generally less effective at analyzing that data and identifying patterns that you can act on. This is where Brightcove's Audience Insights technology can provide valuable insights into your data to help you make good business decisions.</p>
-    <p>Here are some examples of the kind of campaigns you might run based on the insights Brightcove provides:</p>
-    <ul>
-      <li><strong>Lead Qualification</strong>: Set different Segment tags to build a Lead Score in your Marketing Platform. Qualify them and move them along the funnel.</li>
-      <li><strong>Ideal Customer Persona (ICP)</strong>: Identify your ICP and create a segment that will report every viewer with similar behavior to run a targeted campaign. Identify viewer preferences, patterns, and engagement to cater to the specific cohort through targeted messaging and campaigns.</li>
-      <li><strong>Content promotion</strong>: Engage a prospect that has watched a specific video with related content.</li>
-      <li><strong>Subscription Management</strong>: Identify different segments of customers to lead them through their subscription or upgrade journey. Examples of Subscription management campaigns based on Segments are: Engage trialist, Updated Onboarding Flow, Idle users, Annual Plan Upgrades, Scheduled Cancellation Win-backs, Lost Customer Win-backs.</li>
-    </ul>
+    <h2 id="overview">Overview</h2>
+    <p>The Campaign 2.0 migration involves updating existing video marketing campaigns to leverage the enhanced capabilities of the latest Brightcove features. These include a new <em>Player</em> plugin for enriched video experiences, updated client-side data capture for marketing tools such as Marketo and Hubspot, and new interactivity options through <em>Lead Forms</em> integrated directly within the Brightcove Player.</p>
+
+    <aside class="bcls-aside bcls-aside--tip">
+      <strong>Note:</strong> The features and integrations discussed in this document apply only to Video On Demand (VOD) content. They are not available for live-streaming events within the Brightcove platform.
+  </aside>
+  
   </section>
   <section class="bcls-section">
     <h2 id="supported_platforms">Supported third-party platforms</h2>
-    <p>The following third-party platforms are currently supported for this integration:</p>
+    <p>The following third-party platforms are currently supported for this workflow:</p>
     <ul>
-      <li>Salesforce Sales Cloud</li>
-      <li>Blueshift</li>
-      <li>Braze</li>
-      <li>S3</li>
-      <li>Custom S3</li>
-      <li>Marketo</li>
-      <li>Sailthru</li>
-      <li>Segment NodeJS</li>
-      <li>HubSpot</li>
+      <li><strong>Marketo</strong></li>
+      <li><strong>Hubspot</strong></li>
     </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="requirements">Requirements</h2>
-    <p>To use this data platform integration, you must have at least one of the following:</p>
-    <ul>
-      <li>Marketing Studio Essential or Premium</li>
-      <li>Access to Campaign</li>
-      <li>Brightcove Beacon</li>
-      <li>Full Audience Insights</li>
-    </ul>
+
+    <aside class="bcls-aside bcls-aside--information">
+      <strong>Note:</strong> There are multiple methods to collect <strong>viewer ID</strong> and viewer's <em>data</em> within the Brightcove ecosystem. For instance, the <strong>setUser function</strong> or set the <strong>Player Plugin</strong>. In this documentation, we will concentrate on the <strong>Player Plugin</strong> in conjunction with <strong>Interactive Lead forms</strong>.
+  </aside>
   </section>
   <section class="bcls-section">
     <h2 id="Set_up_an_integration">Set up an integration</h2>
@@ -106,134 +91,118 @@ grandparent: campaign-eol
     </figure>
     <p>Note the additional <strong>Integrations Properties</strong> tab. For some services, there will be additional properties you can set here; for others there are no additional properties.</p>
   </section>
-  <section class="bcls-section">
-    <h2 id="viewer-id">Viewer ID Tracking plugin</h2>
-    <p>The Brightcove Viewer ID tracking plugin is a key feature for content creators and video platform owners aiming to gain in-depth insights into their audience by assigning and tracking viewers through unique IDs. This tool is vital for analyzing viewer behavior, content preferences, and engagement patterns, enabling tailored content and targeted marketing strategies for enhanced viewer experience and engagement.</p>
-    <h3>Create a new Player or Edit an existing Player</h3>
-    <p>If you are editing an existing Campaign player, you will also want to remove the existing <strong>Campaign plugin</strong>. However, you could also create a <strong>New Player</strong>.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Campaign</strong> module.</li>
-      <li>Deselect the Enable <strong>Campaign</strong> checkbox.</li>
-      <li>Click <span class="button-blue">Save</span> and <span class="button-blue">Publish</span> your player.</li>
-    </ol>
 
-    <h3>Enable the Viewer ID Tracking Plugin</h3>
-    <p>You can enable the Viewer ID Tracking Plugin by taking the following steps from the player details view:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Viewer ID Tracking</strong> tab.</li>
-      <li>Select the Enable <strong>Viewer ID Tracking</strong> checkbox.</li>
-      <li>Choose the 3rd Party Service from the Service dropdown.</li>
-      <li>Input any additional required fields.</li>
-      <li>Click <span class="button-blue">Save</span> and <span class="button-blue">Publish</span> your player.</li>
-    </ol>
+    <section class="bcls-section">
+      <h2 id="disable-campaign">Disable Campaign</h2>
+      <p>If you are editing an existing Campaign player, you have to remove the existing <strong>Campaign</strong> plugin since <strong>Campaign 2.0</strong> doesn’t work with <em>Campaign Enabled players</em>.</p>
+      <p>Follow these steps to disable your <em>Campaign Enabled players</em>:</p>
+      <ol class="bcls-tasklist">
+        <li>Login to Video Cloud Studio.</li>
+        <li>Open the <strong>Players</strong> module.</li>
+        <li>Click the link for the <strong>Player</strong> you want to open the player properties page.</li>
+        <li>Click <strong>Campaign</strong> in the left navigation menu.
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/campaign.webp">
+          </figure>
+        </li>
+        <li>Disable the <strong>Enable Campaign</strong> checkbox.
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/disable-campaign.webp">
+          </figure>
+        </li>
+        <li><span class="button-blue">Save</span></li>
+        <li><span class="button-blue">Publish</span></li>
+      </ol>
+    </section>
 
-  </section>
-  <section class="bcls-section">
-    <h2 id="setuo-interactivity-player">Setup your Interactivity Player</h2>
-    <p>We first have to enable your Player for Interactivity and ensure that any videos played inside of this player have “Interactivity Projects” that can receive Lead Forms. To do this follow the next steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <em>Interactivity</em> tab in the Player Details section on the <strong>Players Module</strong>.</li>
-      <li>Select the <strong>Enable Interactivity</strong> checkbox.</li>
-      <li>To enable the auto-creation of Interactivity projects, select the <strong>Options (JSON)</strong> checkbox. This reveals a textarea where you can insert a JSON configuration.</li>
+    <section class="bcls-section">
+      <h2 id="viewer-id">Enable the Viewer ID Tracking</h2>
+      <p>Follow these steps to enable the <strong>Viewer ID Tracking</strong> plugin from the player details view:</p>
+      <ol class="bcls-tasklist">
+        <li>Click the <strong>Viewer ID Tracking</strong> in the left navigation menu.
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/viewer-id.webp">
+          </figure>
+        </li>
+        <li><ol type="a">
+          <li>Click the <strong>Enable Viewer ID Tracking</strong> checkbox.</li>
+          <li>Choose the 3rd Party Service from the <strong>Service</strong> dropdown (Hubspot, Marketo).</li>
+          <li>Provide your respective <strong>Account ID</strong>.</li>
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/viewer-id-steps.webp">
+          </figure>
+        </ol></li>
+        
+        <li><span class="button-blue">Save</span></li>
+        <li><span class="button-blue">Publish</span></li>
+      </ol>
+    </section>
+  
+   <section class="bcls-section">
+     <h2 id="maps">Set up MAPs Tracking</h2>
+      <p>To Setup MAPs (Marketo & Hubspot Client-Side Only) from the player details view, follow these steps:</p>
+      <ol class="bcls-tasklist">
+        <li>Click the <strong>MAPs</strong> in the left navigation menu.
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/maps.webp">
+          </figure>
+        </li>
+        <li><ol type="a">
+          <li>On the MAPs page, select the <strong>Enable MAPs</strong> checkbox.</li>
+          <li>Select your Service.</li>
+          <li>Provide your respective <strong>Account ID</strong>.</li>
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/maps-steps.webp">
+          </figure>
+        </ol></li>
+        
+        <li><span class="button-blue">Save</span></li>
+        <li><span class="button-blue">Publish</span></li>
+      </ol>
+   </section>
+
+<section class="bcls-section">
+  <h2 id="interactivity-player">Interactivity Player Set Up</h2>
+  <p>To Set Up your <strong>Player</strong> to automatically create <strong>Interactive Projects</strong> that can receive <strong><a target="_blank" href="https://studio.support.brightcove.com/interactivity/annotations/adding-lead-form.html">Lead Forms</a></strong>, from the player details view, follow these steps:</p>
+  <ol class="bcls-tasklist">
+    <li>Click <strong>Interactivity</strong> in the left navigation menu.
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/interactivity.webp">
+      </figure>
+    </li>
+    <li><ol type="a">
+      <li>Check <strong>Enable Interactivity</strong>.</li>
+      <li>Check <strong>Options (JSON)</strong> to enable Interactivity projects auto-creation. This reveals a textarea where you can insert a JSON configuration.</li>
       <li>Inside the textarea, insert the following JSON.
         <pre class="line-numbers"><code class="language-json" translate="No">{
    "create": true
- }
+  }
          </code></pre>
       </li>
-      <li>Click <span class="button-blue">Save</span> and <span class="button-blue">Publish</span> your player.</li>
-      
-    </ol>
-    <p>Once the changes have taken effect, any video played within this Player has a Project created automatically.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: When Projects are created from videos, any tags defined in the <em>Media Module</em> are also copied over to the new Project. It’s worth taking an extra step here to come up with a unique tag for any videos you’d like to apply a lead form to and apply them to your videos inside of the Media Module.</aside>
-
-  </section>
-
-
-  <section class="bcls-section">
-    <h2 id="setuo-lead-form">Setup your Lead Form</h2>
-    <p>Now that you have an <em>Interactivity Player</em>, we need to create a <em>Lead Form</em> to apply to the videos you load in the <em>Interactivity Player</em>. To create a <em>Lead Form</em> follow the next steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Interactivity Module</strong>.</li>
-      <li>Click to <strong>Templates > All Templates</strong>.</li>
-      <li>Click <span class="button-blue">New template</span> and provide a descriptive name.</li>
-      <li>On the Template details screen, you are presented with a 1-minute dummy video that you can work on.
-        <ul>
-          <li>If you just plan on having the lead form opening at the start of every video, or within 1 minute of playback, then you can continue with the existing dummy video.</li>
-          <li>If you would like a lead form to appear at a specific time above 60 seconds (such as 5 minutes into a video), then you will need to use the <strong>Replace Video</strong> button to select a video of the correct length to create your template.</li>
-        </ul>
-      </li>
-      <li>Use the player control bar to create a new <strong>Lead Form Annotation</strong>.
-      <ul>
-        <li>On the <strong>Form Source</strong> tab, copy & paste the lead form code you previously used in Campaign - or directly from your <em>MAP</em>.
-          <ul>
-            <li>Select whether or not you wish to <strong>Require Submission</strong>.
-            <ul>
-              <li>Selecting this option will require viewers to fill out the form before playback resumes.</li>
-              <li>Not selecting this option will display a `Close` button in the upper right corner of the lead form, where viewers can resume playback without filling out the form</li>
-              
-            </ul>
-            </li>
-            <li>Select whether or not you wish to <strong>Show form everytime</strong>.
-            <ul>
-              <li>If unselected, the lead form will only display if it’s determined that the viewer is not yet known.</li>
-            </ul></li>
-          </ul>
-        </li>
-        <li>Use the <strong>Time</strong> Tab to modify the time at which the Lead Form should appear.
-        <ul>
-          <li>This can be an exact playback time in hh:mm:ss or a percentage of playback.</li>
-          <li>Video playback will pause and seek the user back to this time until the user has successfully closed or submitted the lead form annotation at which point the main content will resume</li>
-        </ul></li>
-        <li>Click <span class="button-blue">Save</span></li>
-      </ul>
-      </li>
-
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="apply-lead-form">Apply the Lead Form across multiple projects</h2>
-    <p>To apply the Lead Form across multiple projects / videos follow these steps:
-    </p>
-    <ol class="bcls-tasklist-restart">
-      <li>Edit your Lead Form template and click to the <strong>Settings</strong> panel.</li>
-      <li>On <strong>Apply Templates to Projects by Tag</strong>. Define a unique tag that dictates which projects receive your <em>Lead Form Template</em>.
-      </li>
-      <li>Use the <strong>Apply Templates to Projects by Tag</strong> field to define a unique <em>tag</em> that dictates which projects receive your <em>Lead Form Template</em>.
-        <aside class="bcls-aside bcls-aside--information"><p>Note: If you have chosen a unique <em>tag</em> to apply to your videos in the <strong>Media Module</strong>. Then, use the same <em>tag</em> in this field to ensure your <em>Lead Form Template</em> is applied to the Project created by your <em>Interactivity Player</em>.</p>
-          <p><strong>Scenario: I already have Projects in my account and they don’t have my <em>Lead Form</em> applied or <em>Tags</em> associated with them</strong>.</p>
-          <ul>
-            <li>If you already have projects based on your videos without tags, add the <em>tag</em> to these projects. The <em>Lead Form</em> should now appear in your <em>Interactivity Player</em>. Make sure the corresponding video has the <em>tag</em> in the <strong>Media Module</strong>.</li>
-          </ul>
-          <p><strong>Scenario: I’ve applied a tag to my template, but I don’t have a Project based off of my video.</strong></p>
-          <ul>
-            <li>If you don’t have a project based on your video, add the <em>tag</em> you created to the video inside the <strong>Media Module</strong> and playback the video in your <em>Interactivity Player</em>. An <em>Interactivity Project</em> that contains its tags is automatically generated from your video, and your <em>Lead Form</em> template is automatically applied upon playback.</li>
-          </ul>
-          </aside>
-      </li>
-    </ol>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/interactivity-steps.webp">
+      </figure>
+    </ol></li>
     
+    <li><span class="button-blue">Save</span></li>
+    <li><span class="button-blue">Publish</span></li>
+  </ol>
+  <aside class="bcls-aside bcls-aside--information"><p><strong>Note</strong>: Once the changes have taken effect, any video played within this Player will have a Project created automatically.</p>
+  <p>When creating Projects from videos, any existing tags in the Media Module are copied to the Project. To better manage videos with lead forms, consider assigning them a unique tag in the Media Module.</p>
+  </aside>
+
+</section>
   </section>
   <section class="bcls-section">
-    <h2 id="maps-tracking">Setup MAPs Tracking (Marketo & HubSpot Client-Side Only)</h2>
-    <p>To Setup MAPs Tracking follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>On <strong>Players Module</strong> edit your <em>Interactivity Player</em>.</li>
-      <li>In your Player Settings, click to the <strong>MAPs</strong> tab on the left menu navigation.</li>
-      <li>On the MAPs page, select the <strong>Enable MAPs</strong> checkbox.</li>
-      <li>Select your Service (<strong>Marketo</strong> or <strong>Hubspot</strong>) and enter Your <strong>Account ID</strong>.</li>
-      <li>Click <span class="button-blue">Save</span> and <span class="button-blue">Publish</span> your player.</li>
-    </ol>
+    <h2 id="related">Related documentation</h2>
+    <ul>
+      <li><p><a target="_blank" href="https://studio.support.brightcove.com/publish/general/step-step-using-players-module-create-and-publish-player.html">Create and Publish a Player</a></p></li>
+      
+        <li><p><a target="_blank" href="https://studio.support.brightcove.com/interactivity/annotations/adding-lead-form.html">Adding a Lead Form to a video</a></p></li>
+        <li><p><a target="_blank" href="https://studio.support.brightcove.com/interactivity/templates/applying-templates-projects.html">Applying Templates to Projects</a></p></li>
+      
+    </ul>
+
   </section>
-  <section class="bcls-section">
-    <h2 id="publishing-player">Publishing your Player</h2>
-    <p>To access your Publishing Code from the <strong>Interactivity Module</strong>, follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>On <strong>Interactivity Module</strong>, select the <em>Project</em> you want to publish.</li>
-      <li>On the Project Details page you can preview how the <em>Lead Form</em> would look in player.</li>
-      <li>Click <strong>Embed</strong> from the top-right to open the embed code modal.</li>
-      <li>Select the <em>Interactivity Player</em> you’d like to embed your project.</li>
-      <li>Copy the <em>JavaScript</em> code snippet from this window and paste it into your page.</li>
-    </ol>
-  </section>
+
 </article>
