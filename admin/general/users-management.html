@@ -53,6 +53,7 @@ layout: staging
         <li><a href="#primary">Change the primary user</a></li>
         <li><a href="#add">Add roles</a></li>
         <li><a href="#assign">Assign roles</a></li>
+        <li><a href="#legacy">Replace legacy roles</a></li>
       </ul>
     </section>
     <section class="bcls-section">
@@ -123,7 +124,7 @@ layout: staging
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Primary user UI" src="/assets/images/s-admin-img/general/primary-user.png" style="width: 875px;" /></figure>
       <p>Click on <strong>Make this user the primary administrator for this account</strong>.You will be prompted to confirm the primary user change.</p>
       <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Confirm primary user change" src="/assets/images/s-admin-img/general/primary-user-prompt.png" style="width: 875px;" /></figure>
-      <p>If the new primary user has a role of <strong>Standard</strong>, they will be assigned the <strong>Administrator</strong> role when they are made the primary user.</p>
+      <aside class="bcls-aside bcls-aside--information language-editable">When a user is designated primary, that user is assigned the Admin role automatically. The Admin role gives the user access to all the account's functionalities. For example, if the new primary user has a role of <strong>Standard</strong>, they will be assigned the <strong>Administrator</strong> role when they are made the primary user.</aside>
     </section>
               {% if site.product_short == "Video Cloud" %}
     <section class="bcls-section">
@@ -132,7 +133,7 @@ layout: staging
       <ol class="bcls-tasklist-restart">
         <li>Select the <strong>Roles</strong> tab on the navigation bar.</li>
         <li>Click <span class="button-blue"> Add roles</span>.</li>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Add role UI" src="" style="width: 875px;" /></figure>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Add role UI" src="/assets/images/s-admin-img/general/add-role.png" style="width: 875px;" /></figure>
         <li>Enter the following role details:
           <ul>
             <li><strong>Role name</strong> - Assign a name that better describes the role of the user.</li>
@@ -144,7 +145,7 @@ layout: staging
               Upload Videos)</li>
             </ul>
         <aside class="bcls-aside bcls-aside--information">Note: You can create up to 8 different roles.</aside></li>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Cretae user role UI" src="" style="width: 875px;" /></figure>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Create user role UI" src="/assets/images/s-admin-img/general/create-role.png" style="width: 875px;" /></figure>
         <li>Click <span class="button-blue">Save</span>.</li>
       </ol>
       <p>Notice how the Roles tab displays:</p>
@@ -157,26 +158,45 @@ layout: staging
             <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
           </svg>) - Here, you can personalize which tab displays or not.</li>
       </ul>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/admin-module-v2.png" style="width: 875px;"/></figure>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/role-ui.png" style="width: 875px;"/></figure>
     </section>
     <section class="bcls-section">
       <h2 id="assign">Assigning roles</h2>
       <p>To assign a new role, follow these steps:</p>
       <ol class="bcls-tasklist-restart">
         <li>Select one or more users for whom you want to assign a new role.</li>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14054-primary-user.png" /></figure>
         <li>Click <strong>Assign roles</strong>.</li>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14054-primary-user.png" /></figure>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/assign-role.png" style="width: 875px;" /></figure>
         <li>Choose one or more existing roles for the selected user(s).</li>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14054-primary-user.png" /></figure>
-        <li>Check the required condition to <strong>Replace Legacy Roles</strong>.</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/choose-role.png" style="width: 875px;" /></figure>
         <li>Click <span class="button-blue">Assign roles</span>.</li>
+    </section>
+    <section class="bcls-section">
+      <h2 id="legacy">Replacing legacy roles</h2>
+      <p>To replace a legacy role for a new role, follow these steps:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Click on the legacy user three-dot below the <strong>Configuration tab</strong>(<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+          <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+          <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+        </svg>) for whom you want to replace with a new role. Click on the <strong>Edit</strong> option to show the user details.
+        </li>
+        <li>Click <strong>Assign roles</strong>.</li>
+        <li>Choose one or more existing roles for the selected user(s).</li>
+        <li>Check the required condition to <strong>Replace Legacy Roles</strong>.</li>
     </section>
     <section class="bcls-section">
       <h2 id="users">Working with multiple accounts</h2>
       <p>A common misconception when adding an additional account is that you get an additional 10 users just like you did with your first {{ site.product_short }} account. Additional {{ site.product_short }} accounts do not include additional user accounts. For example, if 10 users were added to the first account and the same 10 users are added to the second account, the total user count is still 10. The 10 unique users are per the license agreement and a single unique user ID can be used on multiple accounts and still be counted as one user.</p>
       <p>If you have multiple accounts, users must be added to each account individually. Assume you have 2 accounts, Account A and Account B. If a user is added to Account A, they will not automatically have access to Account B. Users must be added to each account they need access to.</p>
       <p>To learn more about working with multiple accounts, see <a href="/general/references/working-multiple-video-cloud-accounts.html">Working with Multiple Video Cloud Accounts</a>.</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="limit">Limitations</h2>
+      <ul>
+        <li>Trying to bulk edit legacy roles with new roles is not possible. In case you try to do so, a popup message will show up like this:</p>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/bulk-edit-error.png" style="width: 875px;" /></figure>
+          <aside class="bcls-aside bcls-aside--information">Note: With this restriction, the type of user opposite to the one that has been selected is disabled, this happens until the second user is selected.</aside>
+      </ul>
     </section>
         {% endif %}
   </article>
