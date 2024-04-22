@@ -8,7 +8,7 @@
         <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic covers how to ingest for SCTE-35 directly into CloudPlayout via RTP">
+        <meta name="description" content="This topic covers how to ingest SCTE-35 directly into CloudPlayout via RTP.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3424,16 +3424,11 @@
       <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
 <h1>Ingest SCTE-35</h1>
 <article class="bcls-article">
-  <summary>This topic covers how to ingest for SCTE-35 directly into CloudPlayout via RTP</summary>
-
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    
-  </section>
+  <summary>This topic covers how to ingest SCTE-35 directly into CloudPlayout via RTP.</summary>
 
   <section class="bcls-section">
     <h2 id="creation">Channel creation</h2>
-    <p>To create SSAI + RTP Live Input channel follow the next steps</p>
+    <p>To create an SSAI + RTP Live Input channel, follow the next steps:</p>
     <ol class="bcls-tasklist">
         <li>Navigate to the <strong>Cloud playout </strong>module.</li>
         <li>Click <span class="button-blue">Add New</span></li>
@@ -3443,30 +3438,57 @@
             </figure>
         </li>
         <li>Enter the rest of your channel information and click <span class="button-blue">Create Channel</span></li>
+        <aside class="bcls-aside bcls-aside--information language-editable">The Ingest Point is the RTP ingest point for the channel.</aside>
     </ol>
-  
-   
-    
-  </section>
+</section>
 
-  <section class="bcls-section">
-    <h2 id="details">Channel details</h2>
-    <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/ingest-point.webp">
-    </figure>
-  </section>
+    <section class="bcls-section">
 
-  <section class="bcls-section">
-    <h2 id="live">Add live asset</h2>
-    <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-live-event.webp">
-    </figure>
+        <h2 id="details">Channel details</h2>
+        <p>To review the channel details, Select the channel in question.</p>
+        
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-cloudplayout-img/ingest-point.webp">
+        </figure>
+        <p></p>
+        <aside class="bcls-aside bcls-aside--information language-editable">In rare cases, the CNAME mapping for the ingest point may not be complete, and the channel may end up showing an IP Address.</aside>
+        <p></p>
+        <aside class="bcls-aside bcls-aside--warning language-editable">Please check the ingest point before starting a live stream to the channel.</aside>
+    </section>
+
+     <section class="bcls-section">
+        <h2 id="live">Adding a live event</h2>
+        <p></p>
+        <ol class="bcls-tasklist-restart">
+        <li>To add a live asset to the playlist, Select the <strong>Program Items</strong> tab and Click <span class="button-blue">Add Live Event.</span>
+        <p></p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-live-event-button.webp">
+        </figure>
+        <p></p>
+        </li>
+        
+        <li>After entering the details, Click <span class="button-blue">Save</span> to create the Live asset.
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-live-event.webp">
+            </figure>
+            <p></p>
+        </li>
+</ol>
     
   </section>
 
   <section class="bcls-section">
     <h2 id="additional-info">Additional information</h2>
-    
+    <ul>
+        <li>Live Input for SSAI channels is supported.</li>
+        <li>Cloud Playout SSAI channels accept RTP PUSH as an input source feed. </li>
+        <li>With a push input, the upstream system must push the video source to the input when starting the channel. The upstream system does not need to be pushed before then.</li>
+        <li>SCTE-35 cue points are supported in RTP inputs.</li>
+        <li>All the SCTE-35 messages from the input are passed through to the output.</li>
+        <li>All SCTE-35 messages are expected to have the spliceTime and breakDuration.</li>
+    </ul>
   </section>
 
 
