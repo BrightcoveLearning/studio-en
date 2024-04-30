@@ -723,7 +723,7 @@
 - section:
   name: Marketing Automation
   url: /campaign/index.html
-  icon: fa-solid fa-chart-network
+  icon: fa-solid fa-ranking-star
   docs:
   - name: Getting Started
     url: /campaign/get-started/index.html
@@ -847,7 +847,7 @@
 - section:
   name: Integrations
   url: /integrations/index.html
-  icon: fa-solid fa-puzzle-piece-simple
+  icon: fa-solid fa-puzzle-piece
   docs:
   - name: Integrations Module
     url: /integrations/integrations-module/index.html
@@ -1020,14 +1020,14 @@
 - section:
   name: Release Notes
   url: /release-notes/index.html
-  icon: fa-solid fa-memo-pad
+  icon: fa-solid fa-book
   docs:
     - name: Video Cloud Studio Release Notes
       url: 'https://support.brightcove.com/product-updates.html#video_cloud'
 - section:
   name: Support
   url: /support/index.html
-  icon: fa-solid fa-comments-question-check
+  icon: fa-solid fa-comments
   docs:
     - name: 'Contact Sales'
       url: '/support/contact-sales.html'
