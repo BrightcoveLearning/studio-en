@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Step by Step Campaign 2.0 Set Up</title>
+        <title>Campaign 2.0 Setup and Integration Manual</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic provides a comprehensive understanding of how to migrate to Campaign 2.0 to integrate Marketo or Hubspot client side event-based data to provide you actionable insights into viewer behavior, allowing you to run better targeted marketing campaigns.">
+        <meta name="description" content="This document provides a detailed walkthrough for setting up and managing integrations with third-party platforms such as Marketo, HubSpot, Salesforce, and Eloqua within Brightcove Campaign 2.0.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3404,7 +3404,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Step by Step Campaign 2.0 Set Up</li>
+            <li class="breadcrumb-item active" aria-current="page">Campaign 2.0 Setup and Integration Manual</li>
             
             
           </ol>
@@ -3425,12 +3425,12 @@
       <br>
       
       
-<h1>Step by Step Campaign 2.0 Set Up</h1>
+<h1>Campaign 2.0 Setup and Integration Manual</h1>
 <article class="bcls-article">
-  <summary>This topic provides a comprehensive understanding of how to migrate to Campaign 2.0 to integrate Marketo or Hubspot client side event-based data to provide you actionable insights into viewer behavior, allowing you to run better targeted marketing campaigns.</summary>
+  <summary>This document provides a detailed walkthrough for setting up and managing integrations with third-party platforms such as Marketo, HubSpot, Salesforce, and Eloqua within Brightcove Campaign 2.0.</summary>
   <section class="bcls-section">
     <h2 id="overview">Overview</h2>
-    <p>The Campaign 2.0 migration involves updating existing video marketing campaigns to leverage the enhanced capabilities of the latest Brightcove features. These include a new <em>Player</em> plugin for enriched video experiences, updated client-side data capture for marketing tools such as Marketo and Hubspot, and new interactivity options through <em>Lead Forms</em> integrated directly within the Brightcove Player.</p>
+    <p>The Campaign 2.0 migration involves updating existing video marketing campaigns to leverage the enhanced capabilities of the latest Brightcove features. These include a new <em>Player</em> plugin for enriched video experiences and new interactivity options through <em>Lead Forms</em> integrated directly within the Brightcove Player.</p>
 
     <aside class="bcls-aside bcls-aside--tip">
       <strong>Note:</strong> The features and integrations discussed in this document apply only to Video On Demand (VOD) content. They are not available for live-streaming events within the Brightcove platform.
@@ -3441,77 +3441,26 @@
     <h2 id="supported_platforms">Supported third-party platforms</h2>
     <p>The following third-party platforms are currently supported for this workflow:</p>
     <ul>
-      <li><strong>Marketo</strong></li>
-      <li><strong>Hubspot</strong></li>
+      <li>client-side data capture (<a href="#maps">MAPs Tracking</a>)
+        <ul>
+          <li><strong>Marketo</strong></li>
+          <li><strong>Hubspot</strong></li>
+        </ul>
+      </li>
+      <li>server-side data capture (<a href="#Set_up_an_integration">Integration Set Up</a>)
+        <ul>
+          <li><strong>Marketo</strong></li>
+          <li><strong>Hubspot</strong></li>
+          <li><strong>Salesforce</strong></li>
+          <li><strong>Eloqua</strong></li>
+        </ul>
+      </li>
     </ul>
 
     <aside class="bcls-aside bcls-aside--information">
       <strong>Note:</strong> There are multiple methods to collect <strong>viewer ID</strong> and viewer's <em>data</em> within the Brightcove ecosystem. For instance, the <strong>setUser function</strong> or set the <strong>Player Plugin</strong>. In this documentation, we will concentrate on the <strong>Player Plugin</strong> in conjunction with <strong>Interactive Lead forms</strong>.
   </aside>
   </section>
-  <section class="bcls-section">
-    <h2 id="Set_up_an_integration">Set up an integration</h2>
-    <p>Setting up an integration is straightforward. However, you will need some information from the third-party vendor - exactly what you need will vary for different services, but will be clearly indicated by input fields in the setup dialog. Typical requirements are "Account id", "API key", and/or "Secret key". If you are unsure how to find or obtain a required piece of information, consult the vendor's documentation or support service.</p>
-    <h3>Steps</h3>
-    <ol class="bcls-tasklist-restart">
-      <li>Login to Studio</li>
-      <li>
-        Click the Integrations icon in the left-side navigation to open the Integrations module:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integrations-module-home.webp" alt="Integrations Module">
-          <figcaption class="bcls-caption--image">Integrations Module</figcaption>
-        </figure>
-      </li>
-      <li>
-        Click <strong>Customer Data Platforms</strong> to go to the data platform integrations:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/add-or-modify-integration.webp" alt="Customer Data Platform Integrations">
-          <figcaption class="bcls-caption--image">Customer Data Platform Integrations</figcaption>
-        </figure>
-      </li>
-      <li>As you see in the screenshot above, any existing integrations will be shown as a list and can be modified (see the next section). Here we will click <span class="button-blue">Add Integration</span> to create a new integration.</li>
-      <li>
-        In the <strong>Add Integration</strong> dialog, first select the service you want to integrate:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/add-integration.webp" alt="Add Integration Dialog">
-          <figcaption class="bcls-caption--image">Add Integration Dialog</figcaption>
-        </figure>
-      </li>
-      <li>
-        Next, fill in the required information according to the service you are integrating:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integration-setup-screen.webp" alt="Add Information for Integration Sample">
-          <figcaption class="bcls-caption--image">Add Information for Integration Sample</figcaption>
-        </figure>
-      </li>
-      <li>
-        Click <span class="button-blue">Save</span> to complete the setup.
-      </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Modify-an-integration">Modify an integration</h2>
-    <p>
-      As shown above, in the list of existing integrations, there are three icons that allow you to:
-      <ul>
-        <li>Edit the integration</li>
-        <li>Test the integration</li>
-        <li>Delete the integration</li>
-      </ul>
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/modify-integration.webp" alt="Modify an Integration">
-        <figcaption class="bcls-caption--image">Modify an Integration</figcaption>
-      </figure>
-    </p>
-    <aside class="bcls-aside bcls-aside--information language-editable">In some cases the Test icon will be grayed out, indicating that this functionality is not available for that particular integration.</aside>
-    <p>If you click the <strong>Edit</strong> icon, a dialog similar to the Add Integration dialog will appear:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integration-edit-screen.webp" alt="Edit Integration Sample">
-      <figcaption class="bcls-caption--image">Edit Integration Sample</figcaption>
-    </figure>
-    <p>Note the additional <strong>Integrations Properties</strong> tab. For some services, there will be additional properties you can set here; for others there are no additional properties.</p>
-  </section>
-
     <section class="bcls-section">
       <h2 id="disable-campaign">Disable Campaign</h2>
       <p>If you are editing an existing Campaign player, you have to remove the existing <strong>Campaign</strong> plugin since <strong>Campaign 2.0</strong> doesn’t work with <em>Campaign Enabled players</em>.</p>
@@ -3557,29 +3506,6 @@
         <li><span class="button-blue">Publish</span></li>
       </ol>
     </section>
-  
-   <section class="bcls-section">
-     <h2 id="maps">Set up MAPs Tracking</h2>
-      <p>To Setup MAPs (Marketo & Hubspot Client-Side Only) from the player details view, follow these steps:</p>
-      <ol class="bcls-tasklist">
-        <li>Click the <strong>MAPs</strong> in the left navigation menu.
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/maps.webp">
-          </figure>
-        </li>
-        <li><ol type="a">
-          <li>On the MAPs page, select the <strong>Enable MAPs</strong> checkbox.</li>
-          <li>Select your Service.</li>
-          <li>Provide your respective <strong>Account ID</strong>.</li>
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/maps-steps.webp">
-          </figure>
-        </ol></li>
-        
-        <li><span class="button-blue">Save</span></li>
-        <li><span class="button-blue">Publish</span></li>
-      </ol>
-   </section>
 
 <section class="bcls-section">
   <h2 id="interactivity-player">Interactivity Player Set Up</h2>
@@ -3611,6 +3537,93 @@
   <p>When creating Projects from videos, any existing tags in the Media Module are copied to the Project. To better manage videos with lead forms, consider assigning them a unique tag in the Media Module.</p>
   </aside>
 
+</section>
+
+<section class="bcls-section">
+  <h2 id="maps">Set up MAPs Tracking</h2>
+  <aside class="bcls-aside bcls-aside--information">Note: <strong>MAPs tracking</strong> is required solely for <strong>client-side integrations</strong>. This tracking enables the capture and analysis of viewer interactions directly through the video player.</aside>
+   <p>To Setup MAPs (Marketo & Hubspot Client-Side Only) from the player details view, follow these steps:</p>
+   <ol class="bcls-tasklist">
+     <li>Click the <strong>MAPs</strong> in the left navigation menu.
+       <figure class="bcls-figure">
+         <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/maps.webp">
+       </figure>
+     </li>
+     <li><ol type="a">
+       <li>On the MAPs page, select the <strong>Enable MAPs</strong> checkbox.</li>
+       <li>Select your Service.</li>
+       <li>Provide your respective <strong>Account ID</strong>.</li>
+       <figure class="bcls-figure">
+         <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/maps-steps.webp">
+       </figure>
+     </ol></li>
+     
+     <li><span class="button-blue">Save</span></li>
+     <li><span class="button-blue">Publish</span></li>
+   </ol>
+</section>
+<section class="bcls-section">
+  <h2 id="Set_up_an_integration">Integration Set Up</h2>
+  <aside class="bcls-aside bcls-aside--information">Note: Follow the <strong>Integration Set Up</strong> steps only if you are implementing <strong>server-side</strong> connections.</aside>
+  <p>Setting up an integration is straightforward. However, you will need some information from the third-party vendor - exactly what you need will vary for different services, but will be clearly indicated by input fields in the setup dialog. Typical requirements are "Account id", "API key", and/or "Secret key". If you are unsure how to find or obtain a required piece of information, consult the vendor's documentation or support service.</p>
+  <h3>Steps</h3>
+  <ol class="bcls-tasklist-restart">
+    <li>Login to Studio</li>
+    <li>
+      Click the Integrations icon in the left-side navigation to open the Integrations module:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integrations-module-home.webp" alt="Integrations Module">
+        <figcaption class="bcls-caption--image">Integrations Module</figcaption>
+      </figure>
+    </li>
+    <li>
+      Click <strong>Customer Data Platforms</strong> to go to the data platform integrations:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/add-or-modify-integration.webp" alt="Customer Data Platform Integrations">
+        <figcaption class="bcls-caption--image">Customer Data Platform Integrations</figcaption>
+      </figure>
+    </li>
+    <li>As you see in the screenshot above, any existing integrations will be shown as a list and can be modified (see the next section). Here we will click <span class="button-blue">Add Integration</span> to create a new integration.</li>
+    <li>
+      In the <strong>Add Integration</strong> dialog, first select the service you want to integrate:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/add-integration.webp" alt="Add Integration Dialog">
+        <figcaption class="bcls-caption--image">Add Integration Dialog</figcaption>
+      </figure>
+    </li>
+    <li>
+      Next, fill in the required information according to the service you are integrating:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integration-setup-screen.webp" alt="Add Information for Integration Sample">
+        <figcaption class="bcls-caption--image">Add Information for Integration Sample</figcaption>
+      </figure>
+    </li>
+    <li>
+      Click <span class="button-blue">Save</span> to complete the setup.
+    </li>
+  </ol>
+</section>
+<section class="bcls-section">
+  <h2 id="Modify-an-integration">Modify an integration</h2>
+  <p>
+    As shown above, in the list of existing integrations, there are three icons that allow you to:
+    <ul>
+      <li>Edit the integration</li>
+      <li>Test the integration</li>
+      <li>Delete the integration</li>
+    </ul>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/modify-integration.webp" alt="Modify an Integration">
+      <figcaption class="bcls-caption--image">Modify an Integration</figcaption>
+    </figure>
+  </p>
+  <aside class="bcls-aside bcls-aside--information language-editable">In some cases the Test icon will be grayed out, indicating that this functionality is not available for that particular integration.</aside>
+  <p>If you click the <strong>Edit</strong> icon, a dialog similar to the Add Integration dialog will appear:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integration-edit-screen.webp" alt="Edit Integration Sample">
+    <figcaption class="bcls-caption--image">Edit Integration Sample</figcaption>
+  </figure>
+  <p>Note the additional <strong>Integrations Properties</strong> tab. For some services, there will be additional properties you can set here; for others there are no additional properties.</p>
 </section>
   </section>
   <section class="bcls-section">
