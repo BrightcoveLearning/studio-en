@@ -3446,6 +3446,26 @@
       </ul>
     </p>
   </section>
+  <section class="bcls-section">
+    <h2 id="Recommendations">Recommendations</h2>
+    <ol>
+     <li>The slate for the gap must be longer than the ad pod duration. For example, if you set the ad pod duration to 2 minutes, the slate length must be longer than 2 minutes</li>
+     <li>Should be a publicly accessible MP4 URL (open CDN/ non-time bound/ always available)</li>
+     <li>It should be dynamic, with motion</li>
+     <li>Duration should equal the max ad pod duration used within the channel</li>
+     <li>CP uses the default slate video (30 minutes long, coming back shortly) if not provided by the user</li>
+     <li>It must be a minimum of 5 seconds for a gap. Gaps less than 5 seconds will not be filled with slate - Short videos < 5 seconds are not supported</li>
+     <li>A minimum of 15 minutes is needed to represent a slot on an EPG</li>
+     <li>MP4 is a must for playback:
+      <ul>
+        <li>Handling of MP4 unavailability - depends on the last asset</li>
+        <li>If the last asset was a gap filler, that will continue to loop; if not, black frames are used to fill the duration of the asset</li>
+      </ul>
+     </li>
+     <li>16x9 images are a must for EPG</li>
+     <li>There should be at least 10 minutes between the first slot and the channel start time</li>
+     <li>A channel can take a maximum of 10 minutes to start.</li>
+  </section> 
 
   <section class="bcls-section">
     <h2 id="Creating_Scheduled_Channels">Creating Scheduled Channels</h2>
