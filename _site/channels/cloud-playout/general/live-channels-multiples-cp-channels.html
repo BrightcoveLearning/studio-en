@@ -5,6 +5,7 @@
         
         <!-- Meta -->
         <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="This topic explains how to use Live Channels with Cloud Playout Schedules.">
@@ -15,10 +16,8 @@
         <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
         
         <!-- FontAwesome JS-->
-        
         <!-- <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>   -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
         <!-- Plugins CSS -->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
         <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
@@ -45,7 +44,7 @@
     </head> 
 
     <body class="docs-page">
-        
+
 
 <header class="header fixed-top">
   <div class="branding docs-branding">
@@ -3428,41 +3427,460 @@
       </div>
       <br>
       
-      
+      <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
 <h1>Using Live Channels with Cloud Playout Schedules</h1>
 <article class="bcls-article">
   <summary>This topic explains how to use Live Channels with Cloud Playout Schedules.</summary>
   
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    
+    <p>This feature allows the creation of an additional channel or the use of an existing one, for example, a Brightcove Live Channel or a Job, when selecting Brightcove as a destination. </p>
   </section>
 
   <section class="bcls-section">
-    <h2 id="Get_eligible_BC_Live_jobs_for_linking">Get eligible BC Live jobs for linking</h2>
-  </section>
+    <h2 id="Get_eligible_BC_Live_jobs_for_linking">Get eligible Live jobs for linking</h2>
+    <p>Use the Cloud Playout API to list the Live jobs eligible to be linked with a Cloud Playout Channel.</p>
+    <h3>Request</h3>
+    <p>Make a <code translate="no">GET</code> request to:</p>
+    
+    <pre><code class="language-javascript">https://cm.cloudplayout.brightcove.com/accounts/{account_id}/bc_channels?ssai={ssai_flag}</code></pre>
+    
+    <p>True or false can be passed for the <code>ssai_flag</code> query parameter. This should be based on the <code>ssai_enabled</code> flag set in the channel configuration. You will get a response like the following:</p>
+  
+    <pre class="line-numbers"><code class="language-json">
+{
+  "jobs": [
+      {
+          "id": "5ba2b95e8c704b59a4436f0a8c985851",
+          "videocloud": {
+              "video": {
+                  "name": "bc_live_channel",
+                  "description": "Event created for CloudPlayout",
+                  "tags": [
+                      "cloud-playout:ce5e9d29:432f7757561c41d29a38de85a20ef337"
+                  ]
+              }
+          },
+          "state": "standby",
+          "static": true,
+          "ad_insertion": false,
+          "region": "us-east-1",
+          "reconnect_time": 600,
+          "submitted_at": "2024-04-02T07:11:42.838Z"
+      },
+      {
+          "id": "7a23bbabfafc486abb03afe3b6b631d2",
+          "videocloud": {
+              "video": {
+                  "name": "Subscription_channel",
+                  "description": "Event created for CloudPlayout",
+                  "tags": [
+                      "cloud-playout:ce5e9d29:c75db62049dd4f26a15d4794efe72f87"
+                  ]
+              }
+          },
+          "state": "standby",
+          "static": true,
+          "ad_insertion": false,
+          "region": "us-east-1",
+          "reconnect_time": 600,
+          "submitted_at": "2024-03-19T14:25:05.196Z"
+      },
+      {
+          "id": "07f6184da76b40ca9d5b1c10cffeed3e",
+          "videocloud": {
+              "video": {
+                  "name": "bc_live_channel",
+                  "description": "Event created for CloudPlayout",
+                  "tags": [
+                      "cloud-playout:ce5e9d29:e6511576b88f4b75a1fd6dd6252fa0bc"
+                  ]
+              }
+          },
+          "state": "standby",
+          "static": true,
+          "ad_insertion": false,
+          "region": "us-east-1",
+          "reconnect_time": 600,
+          "submitted_at": "2024-03-28T12:27:17.854Z"
+      }
+  ]
+}</code></pre>
+<ul>
+  <li>The jobs can be both SEP & non-SEP.
+    <ul>
+      <li>If non-SEP, the Cloud Playout channel must be started before the reconnect time exhausts on the Live job.</li>
+    </ul>
+  </li>
+  <li>The Live Job or channel must be in standby or waiting state.</li>
+  <li>The Live Job or channel protocol must match the SSAI setting of the channel.</li>
+</ul>  
+</section>
 
   <section class="bcls-section">
     <h2 id="Create_a_channel">Create a channel</h2>
+    <p>The payload shown below makes it possible to link an existing Live job to a FAST/Subscription channel. The Live job can only be linked to Brightcove destination, and the Job ID can be passed via the field <code>location_id</code>.
+    </p>
+    <h3>Live Job criteria</h3>
+    <p>The Live job must satisfy the channel's <code>ssai_enabled</code> setting. If <code>ssai_enabled</code> is true, then the Live job must also enable Ad Insertion. The same applies when <code>ssai_enabled</code> is false.</p>
+    <h3>Request payload</h3>
+    <pre class="line-numbers"><code class="language-json">
+{
+  "name": "bc_live_channel",
+  "description": "CP channel",
+  "type": "fast",
+  "start_time": "2024-04-01T22:50:00+0530",
+  "ssai_enabled": true,
+  "input_group": [
+      {
+          "input_type": "showtime"
+      },
+      {
+          "input_type": "slate",
+          "input_id": "https://syndication.cloudplayout.qa.brightcove.com/slate/ad-slate.mp4"
+      }
+  ],
+  "image_id": "https://picsum.photos/1280/720",
+  "channel_class": "single-pipeline",
+  "output_group": [
+      {
+          "type": "fast",
+          "ingest_locations": [
+              {
+                  "location": "brightcove",
+                  "location_id": "d3f929a415af46b9829d3d19042993e9"
+              }
+          ]
+      }
+  ],
+  "region": "us-east-1",
+  "additional_metadata": {
+      "genres": [
+          {
+              "genre": "TV",
+              "sub_genre": "Education"
+          }
+      ],
+      "country_code": "US",
+      "parental_rating": "PG",
+      "language_code": "en",
+      "branded_thumbnail": "https://picsum.photos/1280/720",
+      "long_description": "Cloudplayout channel"
+  }
+}</code></pre>
+
+<p>Also, a channel can be created with linked Live jobs for Brightcove destinations while still attaching other destinations that create a new Live job managed by Cloud Playout.</p>
   </section>
 
   <section class="bcls-section">
     <h2 id="Update_a_channel">Update a channel</h2>
-  </section>
+    <p>A FAST/Subscription channel can be updated with an existing Live job only in DRAFT state.</p>
+    <h3>Channel switched (SSAI to Non-SSAI)</h3>
+    <p>The live job must still satisfy the channel's <code>ssai_enabled</code> flag. For example, you can update a channel with <code>ssai_enabled</code> as false with a Live job with Ad Insertion enabled. We recommend passing <code>input_group</code> and <code>output_group</code> (or the complete channel creation payload) to update channel API when SSAI is toggled, as shown below:</p>
+    <pre class="line-numbers"><code class="language-json">
+{
+  "ssai_enabled": false,
+  "input_group": [
+      {
+          "input_type": "showtime"
+      },
+      {
+          "input_type": "slate",
+          "input_id": "https://syndication.cloudplayout.qa.brightcove.com/slate/ad-slate.mp4"
+      }
+  ],
+  "output_group": [
+      {
+          "type": "fast",
+          "ingest_locations": [
+              {
+                  "location": "brightcove",
+                  "location_id": "7a23bbabfafc486abb03afe3b6b631d2"
+              }
+          ]
+      }
+  ]
+}</code></pre>
 
+<p>If SSAI is not toggled, we can pass the <code>output_group</code> alone (or the complete channel creation payload) as shown below:</p>
+
+<pre class="line-numbers"><code class="language-json">
+{
+  "output_group": [
+      {
+          "type": "fast",
+          "ingest_locations": [
+              {
+                  "location": "brightcove",
+                  "location_id": "7a23bbabfafc486abb03afe3b6b631d2"
+              }
+          ]
+      }
+  ]
+}
+</code></pre>
+
+<h3>Channels switches (Linked to non-Linked)</h3>
+<p>To switch to a new Live job integration, we can remove the <code>location_id</code> field, as shown below. This will return to the default behavior, where Cloud Playout creates a new Live job and manages it by itself.</p>
+<pre class="line-numbers"><code class="language-json">
+{
+  "output_group": [
+      {
+          "type": "fast",
+          "ingest_locations": [
+              {
+                  "location": "brightcove"
+              }
+          ]
+      }
+  ]
+}
+</code></pre>
+
+
+</section>
 
   <section class="bcls-section">
     <h2 id="Channel_activation">Channel activation</h2>
+    <p>When a channel with the linked Live job is created, a static profile is assigned to it, and the same configuration is used to make the outputs in the encoder settings.</p>
+    <p>Cloud Playout-specific tags will be added to the linked Live job during channel activation to identify the job.</p>
+    <p><code>"cloud-playout:#{group_id}:#{channel_public_id}"</code></p>
   </section>
 
   <section class="bcls-section">
-    <h2 id="GET_channel_response_in_active_states">GET channel response in non-active states
-    </h2>
+    <h2 id="GET_channel_response_in_active_states">GET channel response in non-active states</h2>
+    <p>Below is the response for the GET channel with linked Live jobs in non-active states. </p>
+    <aside class="bcls-aside bcls-aside--information">Note: The <code>location_id</code> in the <code>output_groups</code>  indicates that the destination is linked to an existing Live job.</aside>
+    <pre class="line-numbers"><code class="language-json">
+{
+  "public_id": "67da3b5a91694a19b949c181cf394bec",
+  "name": "bc_live_channel",
+  "description": "CP channel",
+  "account_id": "70701684277202",
+  "state": "DRAFT",
+  "status": null,
+  "start_time": "2024-04-01 17:20:00 UTC",
+  "stop_time": null,
+  "input_groups": "showtime:rtp:slate",
+  "output_groups": "brightcove",
+  "channel_class": "single-pipeline",
+  "ssai_enabled": true,
+  "aws_region": "us-east-1",
+  "message": null,
+  "created_at": "2024-04-01 14:25:05 UTC",
+  "updated_at": "2024-04-01 14:25:05 UTC",
+  "image_url": "https://picsum.photos/1280/720",
+  "output_destinations": [
+      "Brightcove"
+  ],
+  "channel_created_at": "2024-04-01 14:25:05 UTC",
+  "channel_updated_at": "2024-04-01 14:25:05 UTC",
+  "channel_created_by": "Created by API",
+  "channel_updated_by": "Updated by API",
+  "mid_roll_import_enabled": true,
+  "import_captions_enabled": true,
+  "type": "fast",
+  "ad_slot_time": 30,
+  "schedule_ids": {
+      "draft": "231600101",
+      "published": "231590101"
+  },
+  "additional_metadata": {
+      "country_code": "US",
+      "country": "United States",
+      "parental_rating": "PG",
+      "language_code": "en",
+      "language": "English",
+      "long_description": "Cloudplayout channel",
+      "branded_thumbnail": "https://picsum.photos/1280/720",
+      "genres": [
+          {
+              "genre": "TV",
+              "sub_genre": "Education"
+          }
+      ]
+  },
+  "channel_data": {
+      "input_group": [
+          {
+              "input_type": "showtime",
+              "value": {
+                  "schedule_ids": {
+                      "draft": "231600101"
+                  }
+              }
+          },
+          {
+              "input_type": "rtp",
+              "value": {
+                  "type": "RTP_PUSH",
+                  "url": "rtp://67da3b5a91694a19b949c181cf394bec.cloudplayout.qa.brightcove.com:5000"
+              }
+          },
+          {
+              "input_type": "slate",
+              "value": "https://syndication.cloudplayout.qa.brightcove.com/slate/ad-slate.mp4",
+              "public_id": "b9f7aa4ff997467a828e91e460b79d26"
+          }
+      ],
+      "output_groups": [
+          {
+              "type": "fast",
+              "destination": "brightcove",
+              "details": {
+                  "epg_url": "https://syndication.cloudplayout.qa.brightcove.com/67da3b5a91694a19b949c181cf394bec/epg/xmltv/epg_xmltv.xml"
+              },
+              "location_id": "d3f929a415af46b9829d3d19042993e9",
+              "location": "FAST_channel"
+          }
+      ]
+  }
+}</code></pre>
+
+
   </section>
 
   <section class="bcls-section">
-    <h2 id="GET_channel_response_in_active_states">GET channel response in active states
-    </h2>
+    <h2 id="GET_channel_response_in_active_states">GET channel response in active states</h2>
+    <p>Below the response for the GET channel with linked live jobs in active states is shown.</p>
+    <pre class="line-numbers"><code class="language-json">
+{
+  "public_id": "ba5fe99ecf754055aa7e4f09878fb91e",
+  "name": "bc_live_channel",
+  "description": "CP channel",
+  "account_id": "70701684277202",
+  "state": "SCHEDULED",
+  "status": "Scheduled for start",
+  "start_time": "2024-04-01 17:20:00 UTC",
+  "stop_time": null,
+  "input_groups": "showtime:rtp:slate",
+  "output_groups": "brightcove",
+  "channel_class": "single-pipeline",
+  "ssai_enabled": true,
+  "aws_region": "us-east-1",
+  "message": "",
+  "created_at": "2024-04-01 11:00:21 UTC",
+  "updated_at": "2024-04-01 11:01:51 UTC",
+  "image_url": "https://picsum.photos/1280/720",
+  "output_destinations": [
+      "Brightcove"
+  ],
+  "channel_created_at": "2024-04-01 11:00:21 UTC",
+  "channel_updated_at": "2024-04-01 11:00:21 UTC",
+  "channel_created_by": "Created by API",
+  "channel_updated_by": "Updated by API",
+  "mid_roll_import_enabled": true,
+  "import_captions_enabled": true,
+  "type": "fast",
+  "ad_slot_time": 30,
+  "schedule_ids": {
+      "draft": "231460101",
+      "published": "231450101"
+  },
+  "additional_metadata": {
+      "country_code": "US",
+      "country": "United States",
+      "parental_rating": "PG",
+      "language_code": "en",
+      "language": "English",
+      "long_description": "Cloudplayout channel",
+      "branded_thumbnail": "https://picsum.photos/1280/720",
+      "genres": [
+          {
+              "genre": "TV",
+              "sub_genre": "Education"
+          }
+      ]
+  },
+  "channel_data": {
+      "destinations": [
+          {
+              "id": "framecapture",
+              "url": "s3://cloud-playout-qa/framecapture/ba5fe99ecf754055aa7e4f09878fb91e/image",
+              "stream_name": null
+          },
+          {
+              "id": "dest-rtp-4f8334f8-0",
+              "url": "rtp://d3f929a415af46b9829d3d19042993e9.sep-qa.a-live.io:15525",
+              "stream_name": null
+          },
+          {
+              "id": "dest-rtp-fab53818-0",
+              "url": "rtp://23a57cf93df846cc9bd5dc29a5e50201.sep-qa.a-live.io:13455",
+              "stream_name": null
+          }
+      ],
+      "input_specification": {
+          "codec": "AVC",
+          "maximum_bitrate": "MAX_20_MBPS",
+          "resolution": "HD"
+      },
+      "output_groups": [
+          {
+              "type": "preview",
+              "destination_url": "s3://cloud-playout-qa/framecapture/ba5fe99ecf754055aa7e4f09878fb91e/image",
+              "encoder_settings": [
+                  {
+                      "width": 640,
+                      "height": 360,
+                      "capture_interval": 5,
+                      "capture_interval_units": "SECONDS"
+                  }
+              ]
+          },
+          {
+              "type": "fast",
+              "destination": "brightcove",
+              "details": {
+                  "playback_url": "https://playback-qa.a-live.io/d3f929a415af46b9829d3d19042993e9/us-east-1/NA/playlist.m3u8",
+                  "playback_url_dvr": "https://playback-qa.a-live.io/d3f929a415af46b9829d3d19042993e9/us-east-1/NA/playlist_dvr.m3u8",
+                  "ssai_playback_urls": {
+                      "ced8754e6e6f42feb870e6d5900c3eee": {
+                          "playback_url": "https://playback-qa.a-live.io/d3f929a415af46b9829d3d19042993e9/us-east-1/NA/ced8754e6e6f42feb870e6d5900c3eee/playlist_ssaiM.m3u8",
+                          "playback_url_dvr": "https://playback-qa.a-live.io/d3f929a415af46b9829d3d19042993e9/us-east-1/NA/ced8754e6e6f42feb870e6d5900c3eee/playlist_dvr_ssaiM.m3u8",
+                          "playback_added_cdns": [],
+                          "description": "House Ads - 0039c773a6154dd6aebc97535f3e3829",
+                          "type": "ads"
+                      }
+                  },
+                  "video_id": "1792789620483623792",
+                  "epg_url": "https://syndication.cloudplayout.qa.brightcove.com/ba5fe99ecf754055aa7e4f09878fb91e/epg/xmltv/epg_xmltv.xml",
+                  "live_job_id": "d3f929a415af46b9829d3d19042993e9"
+              },
+              "location": "FAST_channel",
+              "location_id": "d3f929a415af46b9829d3d19042993e9"
+          }
+      ],
+      "input_group": [
+          {
+              "input_type": "showtime",
+              "value": {
+                  "schedule_ids": {
+                      "draft": "231460101"
+                  }
+              }
+          },
+          {
+              "input_type": "rtp",
+              "value": {
+                  "type": "RTP_PUSH",
+                  "url": "rtp://ba5fe99ecf754055aa7e4f09878fb91e.cloudplayout.qa.brightcove.com:5000",
+                  "security_groups": [
+                      "4028594"
+                  ]
+              }
+          },
+          {
+              "input_type": "slate",
+              "value": "https://syndication.cloudplayout.qa.brightcove.com/slate/ad-slate.mp4",
+              "public_id": "b9f7aa4ff997467a828e91e460b79d26"
+          }
+      ]
+  }
+}
+    </code></pre>
+
+
   </section>
 
   <section class="bcls-section">
