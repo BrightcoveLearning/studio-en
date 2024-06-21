@@ -474,8 +474,8 @@
     url: /live/general/index.html
     icon: fa-solid fa-circle-info
     docs:
-    - name: Captions with Live Streams
-      url: /live/general/captions-with-live-streams.html
+    # - name: Captions with Live Streams
+    #   url: /live/general/captions-with-live-streams.html
     - name: Live DRM
       url: /live/general/live-drm.html
     - name: Live Video Glossary

@@ -1614,12 +1614,6 @@
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/live/general/captions-with-live-streams.html">Captions with Live Streams</a></li>
-                  
-                  
-                  
-                  
-                  
                   <li class="nav-item"><a class="nav-link" href="/live/general/live-drm.html">Live DRM</a></li>
                   
                   
@@ -3668,6 +3662,8 @@
     <p>Latency refers to the delay between when a video is captured and when it&rsquo;s displayed on a viewer&rsquo;s device. When creating a new live event, there is an option to use <strong>Low Latency</strong>.</p>
     <figure class="bcls-figure"> <img src="/assets/images/s-live-img/live-module/node18470-streaming-latency.png"> </figure>
     <aside class="bcls-aside bcls-aside--information">Note: If low latency is not enabled for your account, contact your Brightcove Customer Success Manager.</aside>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: The <strong>Low Latency Playback URL</strong>uses a unique delivery format known as LL-HLS: <a href="https://developer.apple.com/documentation/http-live-streaming/enabling-low-latency-http-live-streaming-hls">Enabling Low-Latency HTTP Live Streaming (HLS) | Apple Developer Documentation</a>. There are unique limitations for low-latency enabled jobs in Brightcove Live, you can learn more about this in this section. The regular, not low latency,<strong>Playback URL</strong> can still be used on a Low Latency job. To enable the LL-HLS delivery functionality through the Live origin, you must use the <strong>Low Latency Playback URL</strong>. It is important to note that the complete end-to-end latency will depend on several factors, including the contribution encoder, input protocol, player/device compatibility, and end-user location. Some may use the regular “Playback URL” for improved playback stability and cacheability. 
+    </aside>
     <p>Low latency provides  near real-time streaming with streaming delays reduced to approximately 5-10 seconds. Low latency is recommended when faster interactions are needed but may provide an inferior quality of experience. There are factors outside of Brightcove's control that may determine whether a low latency feed can be delivered (encoder, viewer bandwidth, etc.).</p>
     <p data-renderer-start-pos="32">For low latency source encoder setup, the following is required.</p>
     <ul>
