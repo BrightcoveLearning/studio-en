@@ -3456,7 +3456,7 @@
       <li>Click on the <strong>Time</strong>  tab to enter the start time.
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/start-time-edition.webp"> </figure>
       </li>
-      <li>Click <span class="button-blue">Done</span> to finish or <span class="button-red">Delete</span> to delete the annotation.
+      <li>Click <span class="button-blue">Done</span> to finish or <span class="button-red-text">Delete</span> to delete the annotation.
       </li>
       <li>Click on the <strong>Resize</strong> link in the menu to drag the Lead Form to where you want it to appear on the video.
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/resize-leadform.webp"> </figure>
@@ -3474,7 +3474,7 @@
   <section class="bcls-section">
     <h2 id="Adding_a_Lead_Form">Adding a Lead Form as a template</h2>
     <p>Follow these steps to add a Lead Form as a template:</p>
-    <ol class="bcls-tasklist">
+    <ol class="bcls-tasklist-restart">
       <li>Login to Video Cloud Studio.</li>
       <li>Open the <strong>Interactivity</strong> module.</li>
       <li>In the left navigation, click <strong>Templates</strong> &gt; <strong>All templates</strong>.</li>
@@ -3483,7 +3483,7 @@
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/templates/create-templates/create-new-template.png"> </figure>
       </li>
       <li><p>Click <span class="button-blue">Create</span>.</p>
-        <aside class="bcls-aside bcls-aside--information">Brightcove Interactivity automatically loads a sample video source. You can change this video by clicking <span class="button-blue">Replace Video</span> and by selecting a new video.</aside>
+        <aside class="bcls-aside bcls-aside--information">Brightcove Interactivity automatically loads a one-minute sample video source. If the Lead Form will appear at the beginning of every video or within one minute of playback, continue with the existing sample video. If it will appear at a specific time above 60 seconds (such as 5 minutes into a video), click <span class="button-blue">Replace Video</span> to select a video of the correct length to create your template.</aside>
       </li>
       <li>Play the video to the point where the Lead Form should be displayed.</li>
       <li>In the bottom toolbar, click on the Lead Form icon.
@@ -3498,7 +3498,7 @@
       <li>Click on the <strong>Time</strong>  tab to enter the start time.
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/start-time-edition.webp"> </figure>
       </li>
-      <li>Click <span class="button-blue">Done</span> to finish or <span class="button-red">Delete</span> to delete the annotation.
+      <li>Click <span class="button-blue">Done</span> to finish or <span class="button-red-text">Delete</span> to delete the annotation.
       </li>
       <li>Click on the <strong>Resize</strong> link in the menu to drag the Lead Form to where you want it to appear on the video.
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/resize-leadform.webp"> </figure>
@@ -3508,8 +3508,12 @@
       <li>You can also click <img src="/assets/images/s-brightcove-interactivity-img/annotations/edit-icon.webp" alt=""> to edit, or click <img src="/assets/images/s-brightcove-interactivity-img/annotations/3-dots.webp" alt=""> to <strong>Duplicate</strong>, <strong>Delete</strong>, or <strong>Edit</strong> the annotation in the section under the player preview:
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/table-leadform.webp"> </figure> 
       </li>
-      <li>Click <span class="button-blue">Embed</span>.</li>
-      <li>Click <strong>Preview</strong>, play the video and confirm that the Lead Form appears.</li>
+      <li>To apply the Lead Form Template across multiple projects or videos, click <span class="button-blue-text">Settings</span>.</li>
+      <li>Use the <strong>Apply Templates to Projects by Tag</strong> input to define a unique tag. The tag will be assigned to the videos in the Media Module. Publish the video using a player and confirm that the Lead Form appears.
+        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/template-settings.png"> </figure> 
+        <aside class="bcls-aside bcls-aside--information">If you have projects based on your videos in the Interactivity Module, you can add the tag defined previously to these Projects. The lead form should appear in the Interactivity Player (Make sure the corresponding video has the tag in the Media Module). If you don’t have a project based on your videos, add the tag created previously to the video in the Media Module and playback the video in the new player. An Interactivity Project will be generated automatically from the video that contains its tags, and the Lead Form Template will automatically be applied upon playback.
+        </aside>
+      </li>
     </ol>
   </section>
 
