@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic covers how to create a video using the Brightcove screen and camera recorder.">
+        <meta name="description" content="This topic covers how to create a video using the Brightcove Screen and Camera Recorder.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3421,104 +3421,51 @@
       
 <article class="bcls-article">
   <h1>Creating Videos with Brightcove Screen and Camera Recorder</h1>
-  <summary>This topic covers how to create a video using the Brightcove screen and camera recorder.</summary>
+  <summary>This topic covers how to create a video using the Brightcove Screen and Camera Recorder.</summary>
   <section class="bcls-section">
     <h2 id="open">Accessing the Screen Recorder</h2>
-    <p>To access the tool, follow these steps:</p>
+    <p>To access the feature, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
         <li>Login to <a href="https://studio.brightcove.com">Video Cloud Studio</a> and open the <i data-feather="video"></i> <strong>Media</strong> module.
             <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/media-module.png" style="width: 900px;" /></figure>
         </li>
+        <li>Click the <span class="button-blue">Add video</span> dropdown and select the <strong>Screen and Camera Recorder</strong> option.
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/screen-option.png" style="width: 900px;" /></figure>
+        </li>
+        <li>If this is your first time accessing the Screen Recorder,<strong> Terms of Use</strong> disclaimer will be displayed. Please read and accept the terms by checking the box and clicking <span class="button-blue">Accept</span>.
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/terms-of-use.png" style="width: 900px;" /></figure>
+        </li>
+        <li>Once the Terms of Use are accepted, the Screen Recorder is displayed in another tab.</li>
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="audit">Created and updated date and time information</h2>
-    <p>The user ID of the user who created and/or updated the video will be displayed in the Created Date/Updated Date columns. If the action was taken via the CMS API, <strong>Updated by API</strong> will be displayed. Note that if a user who performed an action is removed from an account, their ID will still appear.</p>
-    <p>There are cases where changes made to a video will not record a user ID and cases where a user ID may not be displayed:</p>
-    <ul>
-      <li>When a video is retranscoded or if the video source is replaced, the updated date for the video will be updated but the user who initiated the action will not be recorded</li>
-      <li>When the images (poster/thumbnail) and/or text tracks are updated, the updated date for the video will be updated but the user who initiated the action will not be recorded</li>
-      <li>When a video is shared to an affiliate account, the created date will not display an associated user ID</li>
-      <li>When a video clip is created using the Social or Live modules, the created date will not display an associated user ID</li>
-    </ul>
-    <p>This feature was enabled on December 7, 2018. Any videos uploaded or edited after this date will display user information.</p>
+    <h2>Screen Recorder Overview</h2>
+    <p>The Screen Recorder panel displays different options for the theme, background style, and recording configuration. Here, you will learn about each kind of action.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/screen-overview.png" style="width: 900px;" /></figure>
+        <ol type="a">
+          <li><strong>Theme</strong> - Here you can choose between different themes or customize your own. Also, you can define the padding percentage.</li>
+          <li><strong>Background style</strong> - Customize the background by selecting different design styles.</li>
+          <li><strong>Recording</strong> - Configure your camera, microphone and choose what you want to record. Also, you can select the Canvas Size and Recording FPS.</li>
+        </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="sidenavpanel">Accessing the side navigation panel</h2>
-    <p>The side navigation panel displays video, folder and playlist information. Remote videos can also be added. The side navigation panel is displayed by default.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-side-nav.png" /></figure>
-    <p>The side navigation button <img alt="" src="/assets/images/media/node14464-side-nav-button.png" /> can be used to hide and show the side navigation panel. The size of the side navigation panel can be changed by clicking on the black border and dragging.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing video properties</h2>
-    <p>To edit the video properties, click on the video name to open the video properties page. See <a href="/media/properties/editing-video-properties-using-media-module.html">Editing Video Properties with the Media Module</a> for information on editing video properties using the Media module. To edit video properties for multiple videos at the same time, use the <a href="/media/properties/editing-video-properties-using-quick-edit.html">Quick Edit</a> feature.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="delete">Deleting videos</h2>
-    <p>To delete videos, click the checkboxes next to the video thumbnails of the videos to delete and then click the delete button (<img alt="" src="/assets/images/media/node14464-delete-icon.png" />). Confirm the delete by clicking <span class="button-red-text">Delete</span>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-confirm-delete.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Note: When videos are deleted, they are removed from the Media module but Brightcove will keep the files for 12-14 days (for Dynamic Delivery). For more information on how deleted videos are processed, see the information on <a href="/admin/general/viewing-billing-information.html#deleted_videos">deleted videos and digital masters</a>.</aside>
-    <p>If the video has been added to any manual playlists, that will be indicated.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-delete-error.png" /></figure>
-    <p>To see which manual playlists the videos is in, click the video title to open the video properties. The <strong>Categorization</strong> properties will display the manual playlists that the video has been added to.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-manual-playlist.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="upload">Uploading videos</h2>
-    <p>Click <span class="button-blue">Upload</span> to go to the Upload module to upload videos. For more information on uploading videos, see <a href="/media/manage/uploading-videos-using-upload-module.html">Uploading Videos Using the Upload Module</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="folder">Adding videos to folders</h2>
-    <p>Videos can be added to folders to help organize content. For more information on working with folders, see <a href="/media/organize/organizing-videos-using-folders.html">Organizing Videos Using Folders</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="remote">Adding remote videos</h2>
-    <p>With remote videos, you maintain your video files on your own or a third-party system and then provide Video Cloud with the URL of the video files. For more information on adding remote videos, see <a href="/media/manage/working-remote-asset-videos.html">Working with Remote Asset Videos</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="addplaylist">Adding videos to playlists</h2>
-    <p>Playlists can be created to group related video content. For more information on working with playlists, see <a href="/media/organize/creating-and-managing-playlists.html">Creating and Managing Playlists</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="publish2">Publishing videos and playlists</h2>
-    <p>Videos can be published to different destinations:</p>
-    <ul>
-      <li><a href="/publish/publishing/publishing-videos-and-playlists-media-module.html">Web Player</a> - Provides a URL to the video or generate the publishing code that can be added to a web page or application</li>
-      <li><a href="/publish/publishing/publishing-video-email.html">Email Landing Page</a> - Provides the ability to embed the video poster image into an email, and when clicked, opens the video in a browser tab</li>
-      <li><a href="/social/general/publishing-videos-social-media-platforms.html">Social Networks</a> - Opens a new browser tab where the video can be published using Brightcove Social</li>
-      <li><a href="/publish/publishing/publishing-videos-page-experience.html">Gallery In-Page Experience</a> - Creates a new in-page experience using Brightcove Gallery</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="sharevideo">Sharing videos to other accounts</h2>
-    <p>Media sharing allows publishers to upload videos once and then share the videos to other accounts. The accounts can be your own, corporate accounts or accounts of other publishers. For more information on sharing videos to other accounts, see <a href="/media/general/media-sharing-using-media-module.html">Media Sharing using the Media Module</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="export">Exporting video data</h2>
-    <p>The Media module provides the ability to export video metadata for all of your videos or a subset of videos to a .csv file. For more information, see <a href="/media/manage/exporting-video-data.html">Exporting Video Data</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="quickview">Using Quick View</h2>
-    <p>The Quick View panel can be used to quickly view video properties. To open and close the Quick View panel, click <strong>Quick View</strong>. The panel will display a subset of the video properties for the selected video.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-quick-view.png" /></figure>
-    <p>Note that the Quick View panel is read-only. If multiple videos are selected, Quick View will display the properties for the last video selected.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="search">Searching for videos</h2>
-    <p>The Search field can be used to search the videos and playlists in your account. For more information, see <a href="/media/module/how-search-videos-and-playlists-media-module.html">How to Search for Videos and Playlists in the Media Module</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="columns">Customizing the column display</h2>
-    <p>The columns that appear in the body of the page can be customized by clicking on the columns button (<img alt="" src="/assets/images/media/node14464-columns-icon.png" />) and then selecting the columns that should be displayed.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-select-columns.png" /></figure>
-    <p>Note that the list of columns will also include any custom fields that have been created for the account. As more columns are selected, it is possible to horizontally scroll to see all of the columns.</p>
-    <aside class="bcls-aside bcls-aside--information">Please note that the <strong>Last Viewed Date</strong> feature was implemented in mid-July 2022. For this reason, the data in the column is displayed only if videos were watched after that date.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="keyboard">Keyboard shortcuts</h2>
-    <p>Pressing the <strong>?</strong> key in the Media module will open a list of the shortcut keys that are available.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-keyboard-shortcuts.png" /></figure>
-  </section>
+    <h2>Using the Screen Recorder</h2>
+    <p>To learn how to use the Screen Recorder tool, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+        <li>Select 1 or more screens to record.</li>
+        <li>In you use a microphone or camera, configure which you will use to record.</li>
+        <li>Choose the Canvas Size and Record FPS.</li>
+        <li>Configure the theme and background style that you prefer.</li>
+        <li>Click on the red record button to begin the screen recording.
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/record.png" style="width: 900px;" /></figure>
+        </li>
+        <li>Once the recording has finished, you can review and name the video, give a short description, and, if needed, add tags.</li>
+        <li>Click <span class="button-blue">Upload</span> to save the video to your Media module.</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/upload-record.png" style="width: 900px;" /></figure>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information language-editable">When you stop recording, a video file of your recording will automatically be downloaded to your computer. The format and encoding of this file are chosen depending on your browser and its version. </aside>
+    <aside class="bcls-aside bcls-aside--information language-editable">Brightcove recommends keeping the tab with the recorder open while screen sharing in a separate window or monitor to ensure everything is captured appropriately.</aside>
+    <aside class="bcls-aside bcls-aside--tip language-editable">It may not automatically open on your local Quicktime Player without the installation of additional video and audio codecs. To playback the video, it is recommended that you open the file in the same browser that you recorded it. The video should have no problem uploading and encoding into Brightcove.</aside>
 </article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
