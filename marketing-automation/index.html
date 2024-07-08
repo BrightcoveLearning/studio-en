@@ -4,13 +4,12 @@ parent: null
 description: 'Learn how to connect Video Cloud with popular marketing automation platforms to track viewer engagement.'
 layout: staging
 ---
-
+{% for item in site.data.navigation %}
+  {% if item.name == page.title %}
     <h1><i class="{{ item.icon }}"></i> {{ page.title }}</h1>
     <article class="bcls-article">
     <summary>{{ page.description }}</summary>
-    <aside class="bcls-aside bcls-aside--warning">Please note that this document is for internal purposes and should not be distributed publicly.</aside>
-
-    <!-- <div class="row">
+    <div class="row">
       {% for entry in item.docs %}
         <div class="col-12 col-lg-4 py-3">
           <div class="card shadow-sm" style="background: white" onclick="window.location.href = '{{ entry.url }}'">
@@ -31,7 +30,20 @@ layout: staging
         </div>
       </div>
       {% endfor %}
-    </div> -->
+    </div>
+  </article>
+  {% endif %}
+{% endfor %}
+
+
+
+
+    <!-- <h1><i class="{{ item.icon }}"></i> {{ page.title }}</h1>
+    <article class="bcls-article">
+    <summary>{{ page.description }}</summary>
+    <aside class="bcls-aside bcls-aside--warning">Please note that this document is for internal purposes and should not be distributed publicly.</aside>
+
+    
     <div class="row">
         <div class="col-12 col-lg-4 py-3">
           <div class="card shadow-sm" style="background: white" onclick="window.location.href = 'https:&#47;&#47;studio.support.brightcove.com/campaign-eol/general/index.html'">
@@ -63,4 +75,4 @@ layout: staging
     </div>
   </div>
     
-  </article>
+  </article> -->
