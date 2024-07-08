@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Integration Spotlight: Blueshift</title>
+        <title>Integration Spotlight: Braze</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn about Blueshift, this integration allows external imports via an S3 bucket.">
+        <meta name="description" content="In this topic you will learn about Braze, this integration allows you to automate customer contact.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -2856,31 +2856,13 @@
                       
                       
                       <li class="nav-item subsection-doc">
-                        <a class="nav-link" href="/integrations/integrations-module/customer-data-platforms/audience-sync-configuration.html">Audience Sync Configuration</a>
-                      </li>
-                      
-                      
-                      
-                      <li class="nav-item">
-                        <a class="nav-link" href="/integrations/integrations-module/customer-data-platforms/integration_spotlight_blueshift.html" aria-current="page">Integration Spotlight: Blueshift</a>
+                        <a class="nav-link" href="/integrations/integrations-module/customer-data-platforms/data-integration/index.html">Viewing Data Integration</a>
                       </li>
                       
                       
                       
                       <li class="nav-item subsection-doc">
-                        <a class="nav-link" href="/integrations/integrations-module/customer-data-platforms/integration_spotlight_braze.html">Integration Spotlight: Braze</a>
-                      </li>
-                      
-                      
-                      
-                      <li class="nav-item subsection-doc">
-                        <a class="nav-link" href="/integrations/integrations-module/customer-data-platforms/integration-custom-s3.html">Integration: Custom S3</a>
-                      </li>
-                      
-                      
-                      
-                      <li class="nav-item subsection-doc">
-                        <a class="nav-link" href="/integrations/integrations-module/customer-data-platforms/integration-s3.html">Integration: S3</a>
+                        <a class="nav-link" href="/integrations/integrations-module/customer-data-platforms/contact-integration/index.html">Contact Integration</a>
                       </li>
                       
                       
@@ -3402,7 +3384,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Integration Spotlight: Blueshift</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/integrations/integrations-module/customer-data-platforms/contact-integration/">Contact integration</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Integration Spotlight: Braze</li>
             
             
           </ol>
@@ -3423,76 +3409,30 @@
       <br>
       
       
-<h1>Integration Spotlight: Blueshift</h1>
+<h1>Integration Spotlight: Braze</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn about Blueshift, this integration allows external imports via an S3 bucket.</summary>
+  <summary>In this topic you will learn about Braze, this integration allows you to automate customer contact.</summary>
 
   <section class="bcls-section">
-    <h2 id="Overview">Overview</h2>
-    <p>Blueshift allows external imports via an S3 bucket. Blueshift hosts the bucket and creates credentials to enable files to be uploaded. Users can set up an automated task within the Blueshift app to check that bucket and import the latest CSV file. It then maps the file's columns to customer attributes and imports the data.</p>
-    <h3>Requirements</h3>
-    <ul>
-        <li>Access to Blueshift</li>
-        <li>Access to a Video Cloud Account</li>
-    </ul>
+    <h2 id="About_evergent">About Braze</h2>
+    <p><a href="https://www.braze.com/solutions/media-entertainment">Braze</a> offers a full platform of multi-channel CRM tools that enables their customers to automate customer contact to drive conversion, improve engagement, and reduce churn.</p>
+    <b>Category:</b> CRM & Marketing
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Integration_overview">Integration overview</h2>
+    <p>With this integration, you can automatically sync user records from Audience Insights directly into Braze. With every hashed user ID, Brightcove includes information about tenure, subscription plan, content consumed, devices used, geography of views, engagement status, and more. </p>
+    <p>In addition, it's easy to segment users by user attributes like tenure, engagement status, viewing frequency, and content consumption. Segment tags are appended to each user record that matches the segment's criteria. These can be used for performing more targeted automated or ad hoc campaigns.</p>
 </section>
 
   <section class="bcls-section">
-    <h2 id="Setup_process">Setup process</h2>
-    <p>There are three parts to the setup process, which are detailed in the steps listed below:</p>
-    <h3>Enable S3 access</h3>
-    <ol class="bcls-tasklist">
-        <li>Log In into your <a href="https://blueshift.com/">Blueshift</a> account.</li>
-        <li>
-            From the <strong>Account Settings page</strong>, click on the <strong>Amazon S3 Folder Details</strong> section. There will be access details. The blocked-out lines contain the account-specific details needed for granting access to the Blueshift S3 bucket.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Amazon S3 Folder Details" src="/assets/images/s-audience-insights-img/integrations/blueshift/enable-s3-access.webp"></figure>
-            <aside class="bcls-aside bcls-aside--information">Please note that this information is confidential.</aside>
-        </li>
-    </ol>
-    <h3>Integrating with Brightcove</h3>
-    <ol class="bcls-tasklist">
-        <li>Log In into your Video Cloud account.</li>
-        <li>Open the <strong>Admin</strong> module and then click <strong>Integrations</strong>.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Integration Section" src="/assets/images/s-audience-insights-img/integrations/blueshift/integration-module.webp"></figure>
-        </li>
-        <li>Click the <strong>Add integration</strong> button.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Integration Button" src="/assets/images/s-audience-insights-img/integrations/blueshift/integration-button.webp"></figure>
-        </li>
-        <li><p>Select <strong>Blueshift</strong> from the dropdown. Use the <strong>Access Key</strong> and <strong>Secret Access Key</strong> from the Blueshift folder details page.</p> 
-            <p>The <strong>S3 Path</strong> field follows the following pattern with the customer-specific name inserted:  <code translate="no">bsft-customers/<span class="bcls-highlight">{BLUESHIFT_SITE_NAME}</span>/customer_attributes/</code></p>
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Blusehift" src="/assets/images/s-audience-insights-img/integrations/blueshift/blusehift-dropdown.webp"></figure>
-        </li>
-        <li>Click <strong>Save</strong>.
-            <aside class="bcls-aside bcls-aside--information">Please note that once the Blueshift integration is saved, you must export a report to Blueshift to ensure everything is set up correctly.</aside>
-        </li>
-    </ol>
-    <h3>Configure integration with Blueshift</h3>
-    <ol class="bcls-tasklist">
-        <li>Log In into your <a href="https://blueshift.com/">Blueshift</a> account.</li>
-        <li>On the left-hand side menu, click on <strong>Customer Data</strong> and then select <strong>Attributes</strong>.
-            
-        </li>
-        <li>From that page, click <strong>+Customers</strong> button in the top right corner and select <strong>Upload CSV</strong> from the dropdown.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="+Customer" src="/assets/images/s-audience-insights-img/integrations/blueshift/+customer.webp"></figure>
-        </li>
-        <li><p>You will see the following page:</p>
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="CSV Upload" src="/assets/images/s-audience-insights-img/integrations/blueshift/csv-upload.webp"></figure>
-            <p>When setting up the S3 Path, the file name must be <code translate="no">WicketLabs_Export.csv</code>. This is the file name that Audience Insights uses when writing to the Blueshift bucket, and it must match exactly.</p>
-            <p>Other options in this section include how frequently to check this bucket for a new file. If using the daily automated export in Audience Insights, setting the Update Frequency to Daily and the time to 5 AM is recommended.</p>
-        </li>
-    </ol>
-    <h4>Mapping fields</h4>
-    <ol class="bcls-tasklist">
-        <li>Clicking the <strong>Fetch Sample S3 File</strong> will pull the latest exported report. It will pull up a table mapping column names from the Audience Insights report to Blueshift properties. New properties can also be created from this screen.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Fetch sample" src="/assets/images/s-audience-insights-img/integrations/blueshift/fetch-sample.webp"></figure>
-        </li>
-        <li>Here is a sampling of the report file mapped to the Blueshift fields.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Fetch sample" src="/assets/images/s-audience-insights-img/integrations/blueshift/sampling-report.webp"></figure>
-        </li>
-        <li>Click <strong>Save</strong>, and the upload should begin.</li>
-    </ol>
+    <h2 id="What_it_means">What it means</h2>
+    <p>
+      If you are using or plan to use Braze for customer campaigns, Brightcove can help to improve this effort. Brightcove provides exports of hashed subscriber IDs that include important context about the user's experience. With the ID, Brightcove appends fields from our customer data platform that leverage our harmonization of subscriber data,  content metadata, visit & viewing analytics, and 3rd party app store data. This data enables specific targeting based on engagement frequency, intensity, content consumed, devices used, etc.
+    </p> 
 </section>
 
+  
 
   </article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->

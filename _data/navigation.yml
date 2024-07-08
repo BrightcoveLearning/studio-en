@@ -908,33 +908,41 @@
             url: /integrations/integrations-module/watched-folders/dropbox.html
           - name: Setting Up an Automatic Ingestion Folder on Google Drive
             url: /integrations/integrations-module/watched-folders/google-drive.html
-      # - name: Custom Data Platforms
-      #   url: /integrations/integrations-module/customer-data-platforms/index.html
-      #   icon: fa-solid fa-cloud-bolt
-      #   docs:
-      #    - name: Viewing Data Integration
-      #      url: /integrations/integrations-module/customer-data-platforms/data-integration/index.html
-      #      docs:
-      #       - name: 'Overview: Cloud Playout'
-      #         url: /channels/cloud-playout/getting-started/cloud-playout-overview.html
-      #    - name: Contact Integration
-      #      url: /integrations/integrations-module/customer-data-platforms/contact-integration/index.html
-      #      docs:
-      #       - name: Configuring S3 Buckets
-      #         url: /channels/cloud-playout/general/configuring-s3-buckets.html
       - name: Custom Data Platforms
         url: /integrations/integrations-module/customer-data-platforms/index.html
+        icon: fa-solid fa-cloud-bolt
         docs:
-          - name: Audience Sync Configuration
-            url: /integrations/integrations-module/customer-data-platforms/audience-sync-configuration.html
-          - name: 'Integration Spotlight: Blueshift'
-            url: /integrations/integrations-module/customer-data-platforms/integration_spotlight_blueshift.html
-          - name: 'Integration Spotlight: Braze'
-            url: /integrations/integrations-module/customer-data-platforms/integration_spotlight_braze.html
-          - name: 'Integration: Custom S3'
-            url: /integrations/integrations-module/customer-data-platforms/integration-custom-s3.html
-          - name: 'Integration: S3'
-            url: /integrations/integrations-module/customer-data-platforms/integration-s3.html
+          - name: Viewing Data Integration
+            url: /integrations/integrations-module/customer-data-platforms/data-integration/index.html
+            docs:
+            - name: 'Overview: Cloud Playout'
+              url: /channels/cloud-playout/getting-started/cloud-playout-overview.html
+          - name: Contact Integration
+            url: /integrations/integrations-module/customer-data-platforms/contact-integration/index.html
+            docs:
+            - name: Audience Sync Configuration
+              url: /integrations/integrations-module/customer-data-platforms/contact-integration/audience-sync-configuration.html
+            - name: 'Integration Spotlight: Blueshift'
+              url: /integrations/integrations-module/customer-data-platforms/contact-integration/integration_spotlight_blueshift.html
+            - name: 'Integration Spotlight: Braze'
+              url: /integrations/integrations-module/customer-data-platforms/contact-integration/integration_spotlight_braze.html
+            - name: 'Integration: Custom S3'
+              url: /integrations/integrations-module/customer-data-platforms/contact-integration/integration-custom-s3.html
+            - name: 'Integration: S3'
+              url: /integrations/integrations-module/customer-data-platforms/contact-integration/integration-s3.html
+      # - name: Custom Data Platforms
+      #   url: /integrations/integrations-module/customer-data-platforms/index.html
+      #   docs:
+      #     - name: Audience Sync Configuration
+      #       url: /integrations/integrations-module/customer-data-platforms/audience-sync-configuration.html
+      #     - name: 'Integration Spotlight: Blueshift'
+      #       url: /integrations/integrations-module/customer-data-platforms/integration_spotlight_blueshift.html
+      #     - name: 'Integration Spotlight: Braze'
+      #       url: /integrations/integrations-module/customer-data-platforms/integration_spotlight_braze.html
+      #     - name: 'Integration: Custom S3'
+      #       url: /integrations/integrations-module/customer-data-platforms/integration-custom-s3.html
+      #     - name: 'Integration: S3'
+      #       url: /integrations/integrations-module/customer-data-platforms/integration-s3.html
 
   - name: Salesforce Sales Cloud
     url: /integrations/salesforce-sales-cloud/index.html
