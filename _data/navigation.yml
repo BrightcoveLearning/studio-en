@@ -722,48 +722,61 @@
           url: /channels/cloud-playout/publishing/generating-channel-embed-code.html
         - name: Viewing Channel Output and Analytics
           url: /channels/cloud-playout/publishing/viewing-channel-output-and-analytics.html
-# - section:
-#   name: Marketing Automation 2.0
-#   url: /marketing-automation/index.html
-#   icon: fa-solid fa-ranking-star
-#   docs:
-#   - name: Getting Started
-#     url: /marketing-automation/getting-started/index.html
-#     icon: <i class="fa-solid fa-map-pin"></i>
-#     docs:
-#       - name: Campaign 2.0 Setup and Integration Manual
-#         url: /marketing-automation/getting-started/campaign-migration-set-up.html  
-#   - name: General Information
-#     url: /marketing-automation/general/index.html
-#     icon: fa-solid fa-circle-info
-#     docs:
-#       - name: Collecting Viewer ID
-#         url: /marketing-automation/general/viewer-id/index.html
-#         docs: 
-#           - name: Overview of the Integrations Module
-#             url: /integrations/integrations-module/getting-started/getting-started-integrations-module.html
-#       - name: External Systems
-#         url: /marketing-automation/general/data-to-external-systems/index.html
-#         docs: 
-#           - name: Overview of the Integrations Module
-#             url: /integrations/integrations-module/getting-started/getting-started-integrations-module.html
-#       - name: Lead Forms
-#         url: /marketing-automation/general/lead-forms/index.html
-#         docs:
-#           - name: Setting Up an Automatic Ingestion Folder on Dropbox
-#             url: /integrations/integrations-module/watched-folders/dropbox.html
-#           - name: Setting Up an Automatic Ingestion Folder on Google Drive
-#             url: /integrations/integrations-module/watched-folders/google-drive.html
-#       - name: Data Fields
-#         url: /marketing-automation/general/data-fields/index.html
-#         docs:
-#           - name: Setting Up an Automatic Ingestion Folder on Dropbox
-#             url: /integrations/integrations-module/watched-folders/dropbox.html
-#       - name: Troubleshooting
-#         url: /marketing-automation/general/troubleshooting/index.html
-#         docs:
-#           - name: Setting Up an Automatic Ingestion Folder on Dropbox
-#             url: /integrations/integrations-module/watched-folders/dropbox.html
+- section:
+  name: Marketing Automation 2.0
+  url: /marketing-automation/index.html
+  icon: fa-solid fa-ranking-star
+  docs:
+  - name: Getting Started
+    url: /marketing-automation/getting-started/index.html
+    icon: <i class="fa-solid fa-map-pin"></i>
+    docs:
+      - name: Campaign 2.0 Setup and Integration Manual
+        url: /marketing-automation/getting-started/campaign-migration-set-up.html  
+  - name: General Information
+    url: /marketing-automation/general/index.html
+    icon: fa-solid fa-circle-info
+    docs:
+      - name: Collecting Viewer ID
+        url: /marketing-automation/general/viewer-id/index.html
+        docs: 
+          - name: Configuring Viewer ID Tracking
+            url: /marketing-automation/general/viewer-id/viewer-id-tracking.html
+          - name: Utilizing SetUser
+            url: /marketing-automation/general/viewer-id/analytics-api-unique-users.html
+      - name: External Systems
+        url: /marketing-automation/general/data-to-external-systems/index.html
+        docs: 
+          - name: 'Overview: Passing Data to External Systems'
+            url: /marketing-automation/general/data-to-external-systems/overview-passing-data-to-external-systems.html
+          - name: Client-side connections
+            url: /marketing-automation/general/data-to-external-systems/client-side/index.html
+            docs: 
+              - name: MAPs
+                url: /marketing-automation/general/data-to-external-systems/client-side/maps.html
+          - name: Server-side connections
+            url: /marketing-automation/general/data-to-external-systems/server-side/index.html
+            docs: 
+              - name: Eloqua
+                url: /marketing-automation/general/data-to-external-systems/server-side/eloqua-integration.html
+              - name: S3 Integration
+                url: /marketing-automation/general/data-to-external-systems/server-side/s3-integration.html
+
+      - name: Lead Forms
+        url: /marketing-automation/general/lead-forms/index.html
+        docs:
+          - name: Adding a Lead Form
+            url: /marketing-automation/general/lead-forms/adding-lead-form.html
+      - name: Data Fields
+        url: /marketing-automation/general/data-fields/index.html
+        docs:
+          - name: 
+            url: 
+      - name: Troubleshooting
+        url: /marketing-automation/general/troubleshooting/index.html
+        docs:
+          - name: 
+            url: 
 - section:
   name: Marketing Automation
   url: /campaign/index.html
