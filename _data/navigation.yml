@@ -742,25 +742,43 @@
         docs: 
           - name: Configuring Viewer ID Tracking
             url: /marketing-automation/general/viewer-id/viewer-id-tracking.html
-          - name: Utilizing SetUser
+          - name: 'Utilizing <code>setUser</code>'
             url: /marketing-automation/general/viewer-id/analytics-api-unique-users.html
       - name: External Systems
         url: /marketing-automation/general/data-to-external-systems/index.html
         docs: 
-          - name: 'Overview: Passing Data to External Systems'
-            url: /marketing-automation/general/data-to-external-systems/overview-passing-data-to-external-systems.html
-          - name: Client-side connections
+          # - name: 'Overview: Passing Data to External Systems'
+          #   url: /marketing-automation/general/data-to-external-systems/overview-passing-data-to-external-systems.html
+          - name: Client-side Connections
             url: /marketing-automation/general/data-to-external-systems/client-side/index.html
             docs: 
-              - name: MAPs
+              - name: 'Client-side: MAPs Connection'
                 url: /marketing-automation/general/data-to-external-systems/client-side/maps.html
-          - name: Server-side connections
+              - name: Integrating Video Cloud with HubSpot Using the Client-Side APIs
+                url: /marketing-automation/general/data-to-external-systems/client-side/integrating-video-cloud-hubspot-using-client-side-apis.html
+              - name: Integrating Video Cloud with Marketo using Munchkin
+                url: /marketing-automation/general/data-to-external-systems/client-side/integrating-video-cloud-marketo-using-munchkin.html
+          - name: Server-side Connections
             url: /marketing-automation/general/data-to-external-systems/server-side/index.html
             docs: 
-              - name: Eloqua
+              - name: 'Eloqua'
                 url: /marketing-automation/general/data-to-external-systems/server-side/eloqua-integration.html
-              - name: S3 Integration
+              - name: 'S3'
                 url: /marketing-automation/general/data-to-external-systems/server-side/s3-integration.html
+              - name: 'Salesforce Sales Cloud'
+                url: https://audience-insights.support.brightcove.com/integrations/salesforce-sales-cloud/index.html
+              - name: 'Marketo'
+                url: https://audience-insights.support.brightcove.com/integrations/integration_marketo.html
+              - name: 'HubSpot'
+                url: https://audience-insights.support.brightcove.com/integrations/integration_spotlight_hubspot.html
+              - name: 'Eloqua'
+                url: https://audience-insights.support.brightcove.com/integrations/integration_eloqua.html
+              - name: 'Braze'
+                url: https://audience-insights.support.brightcove.com/integrations/integration_spotlight_braze.html
+              - name: 'Blueshift'
+                url: https://audience-insights.support.brightcove.com/integrations/integration_spotlight_blueshift.html
+              - name: 'S3'
+                url: https://audience-insights.support.brightcove.com/integrations/integration-s3.html
 
       - name: Lead Forms
         url: /marketing-automation/general/lead-forms/index.html
@@ -770,12 +788,12 @@
       - name: Data Fields
         url: /marketing-automation/general/data-fields/index.html
         docs:
-          - name: 
-            url: 
+          - name: Viewing Data Integration Properties
+            url: /marketing-automation/general/data-fields/viewing-data-integration-properties.html
       - name: Troubleshooting
         url: /marketing-automation/general/troubleshooting/index.html
         docs:
-          - name: 
+          - name:
             url: 
 - section:
   name: Marketing Automation
