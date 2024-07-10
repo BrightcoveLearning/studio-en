@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Server-Side Data Properties</title>
+        <title>Client-Side Data Properties</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic, you will learn about the different properties used used for the Server-Side connection of the viewing data integration.">
+        <meta name="description" content="In this topic, you will learn about the different properties used for the Client-Side connection of the viewing data integration.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -2511,8 +2511,8 @@
                     <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
                       
                       
-                      <li class="nav-item">
-                        <a class="nav-link" href="/marketing-automation/general/data-fields/viewing-data-integration-properties.html" aria-current="page">Viewing Data Integration Properties</a>
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/marketing-automation/general/data-fields/viewing-data-integration-properties.html">Viewing Data Integration Properties</a>
                       </li>
                       
                       
@@ -3538,7 +3538,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Server-Side Data Properties</li>
+            <li class="breadcrumb-item active" aria-current="page">Client-Side Data Properties</li>
             
             
           </ol>
@@ -3559,65 +3559,57 @@
       <br>
       
       <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
-<h1>Server-Side Data Properties</h1>
+<h1>Client-Side Data Properties</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn about the different properties used used for the Server-Side connection of the viewing data integration.</summary>
+  <summary>In this topic, you will learn about the different properties used for the Client-Side connection of the viewing data integration.</summary>
 
   <section class="bcls-section">
     <h2 id="overview">Overview</h2>
-    <p>This document details the properties used the Server-Side connection of the viewing data integration.</p>
+    <p>This document details the properties used by the Client-Side connection of the viewing data integration.</p>
   </section>  
 
   <section class="bcls-section">
-    <h2 id="properties">Server-Side Properties</h2>
+    <h2 id="properties">Client-Side Properties</h2>
     <br>
         <table class="bcls-table">
             <thead class="bcls-table__head">
                 <tr>
-                    <th>Integration Property</th>
+                    <th>Field</th>
                     <th>Description</th>
                 </tr>
             </thead>
             <tbody class="bcls-table__body">
                 <tr>
-                    <td>accountId</td>
-                    <td>Brightcove Account ID.</td>
+                    <td>provider=brightcove</td>
+                    <td>Brightcove will be displayed as the provider.</td>
                 </tr>
                 <tr>
-                    <td>CustomerId</td>
-                    <td>Value for the unique viewer ID. (e.g., Eloqua viewer ID, Hubspot viewer ID, custom viewer ID, etc.)</td>
+                    <td>videoId={VIDEO_ID}</td>
+                    <td>Brightcove video asset ID.</td>
                 </tr>
                 <tr>
-                    <td>videoId</td>
-                    <td>Brightcove Video ID.</td>
+                    <td>videoName={URL_ENCODED_VIDEO_NAME}</td>
+                    <td>Title of the video asset.</td>
                 </tr>
                 <tr>
-                    <td>videoName</td>
-                    <td>Brightcove Video Name.</td>
+                    <td>account={BC_ACCOUNT_ID}</td>
+                    <td>Brightcove account ID.</td>
                 </tr>
                 <tr>
-                    <td>VideoDuration</td>
-                    <td>Total length of the video in seconds.</td>
+                    <td>player={BC_PLAYER_ID}</td>
+                    <td>Brightcove player ID.</td>
                 </tr>
                 <tr>
-                    <td>player</td>
-                    <td>Brightcove Player ID.</td>
+                    <td>timeWatched={SECONDS_WATCHED}</td>
+                    <td>Number of seconds watched by the viewer.</td>
                 </tr>
                 <tr>
-                    <td>ViewDate</td>
-                    <td>Date when viewing activity occurred.</td>
+                    <td>percentile={25|50|75|95}</td>
+                    <td>For each segment (25%/50%/75%/95%) is an event sent as a custom object.</td>
                 </tr>
                 <tr>
-                    <td>MaxPercentagewatched</td>
-                    <td>Highest completion percent for this video by this user on a particular day.</td>
-                </tr>
-                <tr>
-                    <td>TotalWatchDuration</td>
-                    <td>User's total watch time for this video on this day in Seconds.</td>
-                </tr>
-                <tr>
-                    <td>WatchCount</td>
-                    <td>Number of times a user started this video on this day.</td>
+                    <td>Page URL is obtained by the MAP</td>
+                    <td>The page URL is not passed through the Brightcove plugin; it is obtained directly by the map from the site.</td>
                 </tr>
             </tbody>
         </table>

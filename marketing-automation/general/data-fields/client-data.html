@@ -1,0 +1,67 @@
+---
+title: Client-Side Data Properties
+description: "In this topic, you will learn about the different properties used for the Client-Side connection of the viewing data integration."
+parent: Data Fields
+grandparent: General
+layout: staging
+---
+
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+  <section class="bcls-section">
+    <h2 id="overview">Overview</h2>
+    <p>This document details the properties used by the Client-Side connection of the viewing data integration.</p>
+  </section>  
+
+  <section class="bcls-section">
+    <h2 id="properties">Client-Side Properties</h2>
+    <br>
+        <table class="bcls-table">
+            <thead class="bcls-table__head">
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody class="bcls-table__body">
+                <tr>
+                    <td>provider=brightcove</td>
+                    <td>Brightcove will be displayed as the provider.</td>
+                </tr>
+                <tr>
+                    <td>videoId={VIDEO_ID}</td>
+                    <td>Brightcove video asset ID.</td>
+                </tr>
+                <tr>
+                    <td>videoName={URL_ENCODED_VIDEO_NAME}</td>
+                    <td>Title of the video asset.</td>
+                </tr>
+                <tr>
+                    <td>account={BC_ACCOUNT_ID}</td>
+                    <td>Brightcove account ID.</td>
+                </tr>
+                <tr>
+                    <td>player={BC_PLAYER_ID}</td>
+                    <td>Brightcove player ID.</td>
+                </tr>
+                <tr>
+                    <td>timeWatched={SECONDS_WATCHED}</td>
+                    <td>Number of seconds watched by the viewer.</td>
+                </tr>
+                <tr>
+                    <td>percentile={25|50|75|95}</td>
+                    <td>For each segment (25%/50%/75%/95%) is an event sent as a custom object.</td>
+                </tr>
+                <tr>
+                    <td>Page URL is obtained by the MAP</td>
+                    <td>The page URL is not passed through the Brightcove plugin; it is obtained directly by the map from the site.</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+  </section>
+
+</article>
