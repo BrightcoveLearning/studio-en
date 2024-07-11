@@ -788,13 +788,15 @@
       - name: Data Fields
         url: /marketing-automation/general/data-fields/index.html
         docs:
-          - name: Viewing Data Integration Properties
+          - name: Client-Side Data Properties
+            url: /marketing-automation/general/data-fields/client-data.html
+          - name: Server-Side Data Properties
             url: /marketing-automation/general/data-fields/viewing-data-integration-properties.html
       - name: Troubleshooting
         url: /marketing-automation/general/troubleshooting/index.html
         docs:
-          - name:
-            url: 
+          - name: Client-Side Troubleshooting for Marketo Munchkin and HubSpot
+            url: /marketing-automation/general/troubleshooting/client-side-ts.html
 - section:
   name: Marketing Automation
   url: /campaign/index.html
