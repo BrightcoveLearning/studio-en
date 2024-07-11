@@ -1,0 +1,135 @@
+---
+title: 'Viewing Data Integration: Eloqua'
+description: 'In this topic, you will learn how to set up the Eloqua integration in the Viewing Data Integration section.'
+parent: Integration
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+  <section class="bcls-section">
+    <h2 id="Overview" >Overview</h2>
+   <p>Setting up the Eloqua integration using the Viewing Data Integration section exports additional granular (event-based) data. This viewing data is bound to a custom object and appended, not overwritten, on each contact sync.</p>
+    <aside class="bcls-aside bcls-aside--information">For more information on the Contact Integration setup, see <a href="https://audience-insights.support.brightcove.com/integrations/integration_eloqua.html">Contact Integration: Eloqua</a>.</aside>
+
+</section>
+<section class="bcls-section">
+  <h2 id="Requirements" >Requirements</h2>
+  <ul>
+    <li>Have viewer tracking enabled on your Video Cloud account.</li>
+    <li>Being a user with an admin role in Audience Insights.</li>
+    <li>Have an Eloqua account and user with access to install applications.</li>
+    <li>Install one of the two possible applications in your Eloqua instance.</li>
+  </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Instalation"> Installing the application on your Eloqua Instance </h2>
+    <p>To Install the Brightcove Publish Integration to your Eloqua account, Click the appropriate link and follow the onscreen instructions.</p>
+    <a href="https://cloudmarketplace.oracle.com/marketplace/en_US/listing/155597776 ">Brightcove Publish Integration for Eloqua (Audience Insights)</a>
+    <p></p>
+    <a href="https://cloudmarketplace.oracle.com/marketplace/en_US/listing/155597122  ">Brightcove Publish Integration for Eloqua (Videocloud)</a>
+    <p></p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Both applications are identical, with the exception of where you will be redirected after installing the application and granting authorization.</aside>
+  </section>
+<section class="bcls-section">
+  <h2 id="Adding_integration" >Adding the integration</h2>
+  <ol class="bcls-tasklist">
+    <li>Log in to <strong>Video Cloud Studio.</strong></li>
+    <p></p>
+    <li>Open the <strong>Integrations</strong> module.</li>
+    <p></p>
+    <li>
+      Click <strong>Customer Data Platforms</strong>
+      <p></p>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/eloqua/customer-data-platforms.webp" alt="customer-data-platforms">
+      </figure>
+    </li>
+    <p></p>
+    
+    <li>On the <strong>Viewing Data Integration</strong> section, click <span class="button-blue">Add Integration</span></li>
+    <p></p>
+    <li>
+      Select <strong>Eloqua</strong> from the Destination dropdown.
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-campaign-img/integrations/eloqua/viewing-data/selecting-eloqua.webp" alt="add-integration-eloqua">
+      </figure>
+    </li>
+    <p></p>
+    <li>
+      Select <strong>Customer Id</strong> or <strong>Viewer token</strong> from the Viewer ID property dropdown, and then click <span class="button-blue">Save</span>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-campaign-img/integrations/eloqua/viewing-data/viewer-property-dropdown.webp" alt="form">
+      </figure>
+      <!-- <aside class="bcls-aside bcls-aside--information">Note: When you click save you will be redirected to eloqua.com and once you authorize the integration you will return to the integrations screen.</aside> -->
+      <!-- <aside class="bcls-aside bcls-aside--information">Note: When using a <em>Lead</em> Form for <strong>Eloqua</strong>, the tracking script assigns a unique identifier that Eloqua calls a <em>visitor GUID</em> to the <em>Lead</em>. This is different from the identifier required to sync data to the integration. In <em>Audience Insights</em>, we call this a <strong>Viewer Token</strong>, and we can use this to find the actual identifier for the <em>Lead</em> and sync the data correctly. If using a <strong>Lead Form</strong>, please use <strong>Viewer Token</strong> to sync the data. See <a href="https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-2.0-data-visitors-post.html">Eloqua’s documentation</a> for more details regarding visitor GUIDs.</aside> -->
+    </li>
+    <p></p>
+    <li>Login to your Eloqua account.
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-campaign-img/integrations/eloqua/viewing-data/oracle-eloqua.webp" alt="eloqua-login">
+          </figure>
+    </li>
+    <p></p>
+    <li>
+      Accept the Login to your Eloqua account.
+      <p></p>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-campaign-img/integrations/eloqua/viewing-data/accept-login.webp" alt="accept-login">
+      </figure>
+    </li>
+    <li>Once finished, you will see the following:
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-campaign-img/integrations/eloqua/viewing-data/final-step.webp" alt="accept-login">
+        </figure>
+    </li>
+  </ol>
+  <aside class="bcls-aside bcls-aside--information"><p>Notes: 
+    <ul>
+        <li>You can edit the integration details later by returning the Customer Data Platforms screen and clicking the <img src="/assets/images/s-integrations-img/customer-data-playforms/s3/edit-icon.webp" alt="Edit Icon">.</li>
+        <li>You can also delete integration by clicking <img src="/assets/images/s-campaign-img/integrations/eloqua/viewing-data/trash.webp" alt="Delete Icon">.</li>
+    </ul>
+</p></aside>
+</section>
+<!-- <section class="bcls-section">
+  <h2>Viewing the updated contact fields in Eloqua</h2>
+  <p></p>
+  <aside class="bcls-aside bcls-aside--information language-editable">The Audience Insights publish integration will send values to Eloqua as custom fields on the Contact object. These custom fields will be automatically created by the Audience Insights publish integration. <br><br>To follow this process, you need an Eloqua user with permissions to view Fields &amp; Views.</aside>
+  <p></p>
+  <ol class="bcls-tasklist-restart">
+    <p></p>
+    <li>On your Eloqua application, Click the settings icon in the main navigation bar.</li>
+    <p></p>
+    <li>
+       Click on Fields &amp; Views. 
+      <p></p>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/eloqua/view-fields.webp" alt="view-fields">
+      </figure>
+    </li>
+    <p></p>
+    <li>
+      Expand the Contact Fields group; you can select any available fields for more information. 
+     <p></p>
+     <figure class="bcls-figure">
+       <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/eloqua/field-groups.webp" alt="field-groups">
+     </figure>
+     <p></p>
+     <aside class="bcls-aside bcls-aside--information language-editable">When viewing a specific Contact, select <strong>All Contact Fields</strong> in the select box to display all fields.</aside>
+     <figure class="bcls-figure">
+       <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/eloqua/all-contact-fields.webp" alt="all-contact-fields">
+      </figure>
+    </li>
+   </ol>
+</section> -->
+<!-- <section class="bcls-section">
+  <h2 id="Additional Notes" >Additional Notes</h2>
+  <ul>
+    <li>Eloqua supports two string data types: a small text field (100 characters) and a large text field (32,000 characters).</li>
+    <li>All the string fields supported by the Eloqua integration are small text fields except for Segment Ids and Segment Names, which are large text fields.</li>
+  </ul>
+  <p></p>
+  <aside class="bcls-aside bcls-aside--information language-editable">Eloqua only allows at most five contact fields to be large text fields. <br>If you activate one or both of these integration properties and use five large text fields for other uses, you need to delete or change the existing data types to grant enough large text fields to be used by the Eloqua integration.</aside>
+</section> -->
+
+</article>

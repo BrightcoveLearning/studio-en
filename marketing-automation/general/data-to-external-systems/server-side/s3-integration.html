@@ -1,0 +1,88 @@
+---
+title: 'Viewing Data Integration: S3'
+description: 'In this topic, you will learn how to set up the S3 integration in the Viewing Data Integration section'
+parent: Integration
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
+    <p>When you set up an integration with S3, data reports are automatically exported to an S3 bucket called <code translate="No">reports.wicketlabs.com</code> and available to be viewed or downloaded from there.</p>
+    <p>Setting up the S3 integration using the Viewing Data Integration section exports additional granular (event-based) data. This viewing data is bound to a custom object and appended, not overwritten, on each contact sync.</p>
+    <aside class="bcls-aside bcls-aside--information">For more information on the Contact Integration setup, see <a href="https://studio.support.brightcove.com/integrations/integrations-module/customer-data-platforms/integration-s3.html">Contact Integration: S3</a>.</aside>
+
+  </section>
+  <section class="bcls-section">
+    <h2 id="Requirements" >Requirements</h2>
+    <ul>
+        <li>You must have an AWS account</li>
+        <li>You must be an admin on a full Audience Insights account to set up the integration in Audience Insights</li>
+    </ul>
+  </section>
+
+  <!-- <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
+    <p>When you set up an integration with S3, data reports are automatically exported to an S3 bucket called <code translate="No">reports.wicketlabs.com</code> and available to be viewed or downloaded from there.</p>
+  
+    {% if site.product_name == 'Audience Insights' %}
+    <p>From Audience Insights, you can manually generate reports. If an S3 integration is set up, they can publish any of these reports to S3. You can also add users who can view/download the reports by applying the policy described below to other AWS users.</p>
+    {% endif %}
+    <p>The reports will be exported to S3 on a daily or weekly basis, according to the schedule you set up, and will be available to those you given access by an admin on your AWS account (steps are shown below).</p>
+    <h3>Requirements</h3>
+    <ul>
+      <li>You must have an AWS account</li>
+      {% if site.product_name == 'Audience Insights' %}
+      <li>You must be an admin on a full Audience Insights account to set up the integration in Audience Insights</li>
+      {% endif %}
+    </ul>
+  </section> -->
+  
+  <section class="bcls-section">
+    <h2 id="integration_setup">Integration setup</h2>
+    <p>Follow the steps below to set up the integration to S3.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Login to Studio.</li>
+      <li>Open the <strong>Integrations</strong> module.</li>
+      <p></p>
+      <li>
+        Click <strong>Customer Data Platforms</strong>
+        <p></p>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/eloqua/customer-data-platforms.webp" alt="customer-data-platforms">
+        </figure>
+      </li>
+      <li>On the <strong>Viewing Data Integration</strong> section, click <span class="button-blue">Add Integration</span>
+    
+    </li>
+      <li>
+        Select <strong>S3</strong> from the Destination dropdown:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-campaign-img/integrations/s3/select-s3.webp" alt="Destination Dropdown">
+          <figcaption class="bcls-caption--image">Destination Dropdown</figcaption>
+        </figure>
+      </li>
+      <li>
+        Enter your AWS account ID, click <span class="button-blue">Save</span>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-campaign-img/integrations/s3/aws-id.webp" alt="AWS ID">
+          <figcaption class="bcls-caption--image">Add Integration Dialog</figcaption>
+        </figure>
+      </li>
+      <li>Once finished, you will see the following:
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-campaign-img/integrations/s3/final-step.webp" alt="integration">
+        </figure>
+    </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information"><p>Notes: 
+        <ul>
+            <li>You can edit the integration details later by returning the Customer Data Platforms screen and clicking the <img src="/assets/images/s-integrations-img/customer-data-playforms/s3/edit-icon.webp" alt="Edit Icon">.</li>
+            <li>You can also delete integration by clicking <img src="/assets/images/s-campaign-img/integrations/eloqua/viewing-data/trash.webp" alt="Delete Icon">.</li>
+        </ul>
+    </p></aside>
+  </section>
+  
+
+  
+  </article>
