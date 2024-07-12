@@ -790,8 +790,10 @@
         docs:
           - name: Client-Side Data Properties
             url: /marketing-automation/general/data-fields/client-data.html
-          - name: Server-Side Data Properties
+          - name: 'Server-Side: Viewing Data Integration Properties'
             url: /marketing-automation/general/data-fields/viewing-data-integration-properties.html
+          - name: 'Server-Side: Contact Object Integration Properties'
+            url: /marketing-automation/general/data-fields/contact-integration-properties.html
       - name: Troubleshooting
         url: /marketing-automation/general/troubleshooting/index.html
         docs:
