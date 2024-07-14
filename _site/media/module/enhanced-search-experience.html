@@ -3578,11 +3578,155 @@
     <section class="bcls-section">
       <h2 id="ui-updates">UI-Based Updates</h2>
       <p>The updated user interface for Video Cloud search includes several significant changes aimed at improving usability and efficiency:</p>
-      <ul><p><strong>Layout Changes</strong></p>
+      <p><strong>Layout Changes</strong></p>
+      <ul>
         <li><strong>Tabs for Search</strong>: Switch between Videos Search and Playlist Search using dedicated tabs.</li>
         <li><strong>Search Bar and Add Button</strong>: The search bar has been moved to the left for better accessibility, while <span class="button-blue"><i class="fa-solid fa-plus"></i> Add</span> has been relocated to the right, streamlining the overall layout.</li>
       </ul>
-
+      <p><strong>Card View of Results</strong></p>
+      <ul>
+        <li><strong>Sort Fields</strong>: Users can sort results by Created, Modified, or Name in both ascending and descending order.</li>
+        <li><strong>Larger Thumbnails</strong>: Thumbnails are now larger, making it easier to identify videos at a glance.</li>
+        <li><strong>Key Information on Hover</strong>: Hovering over a video thumbnail reveals key information, such as Date, ID and Tags.</li>
+      </ul>
+      <p><strong>Table View of Results</strong></p>
+      <ul>
+        <li><strong>Metadata Column Selection</strong>: Users can choose which metadata columns to display, customizing their view to suit their needs.</li>
+        <li><strong>Sortable Column Headers</strong>: Sorting is available directly from the column headers, allowing for quick reorganization of the displayed data.</li>
+      </ul>
+      <p>These updates aim to enhance the user experience, making it more intuitive and efficient to search and manage video content within the Video Cloud Studio.</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="search-filters">Search Filters</h2>
+      <p>The updated search functionality in Video Cloud includes several advanced filtering options to refine search results effectively.</p>
+      <p><strong>Partial String Matching</strong></p>
+      <ul>
+        <li><p><strong>Partial Matches</strong>: Results match any part of the entered string in <strong>Name</strong> or <strong>ID</strong>.</p>
+          <ul>
+            <li><p>Example: Typing <strong>est</strong> will return videos with <strong>test</strong> or <strong>festival</strong> in their names.</p></li>
+          </ul>
+        </li>
+        <li><p><strong>Keyboard Trigger</strong>: Searches initiate upon keyboard entry.</p></li>
+      </ul>
+      <p><strong>Search Filters</strong></p>
+      <p>Adding filters helps refine the search. The following search filters are supported:</p>
+      <ul>
+        <li><p><strong>String</strong>: Text-based search.</p></li>
+        <li><p><strong>List</strong>: Choose from predefined lists.</p></li>
+        <li><p><strong>Tag</strong>: Filter by specific tags.</p></li>
+        <li><p><strong>Date</strong>: True/False conditions.</p></li>
+        <li><p><strong>Boolean</strong>: Text-based search.</p></li>
+        <li><p><strong>Duration</strong>: Filter by video duration.</p></li>
+      </ul>
+      <p><strong>Logic and Appearance</strong></p>
+      <ul>
+        <li><p><strong>AND Logic</strong>: The logic between each filter is an <strong>AND</strong> operation, meaning all conditions must be met.</p></li>
+        <li><p><strong>Color Coding</strong>: excludes are shown in a different color/state.</p></li>
+        <li><p><strong>Quick Identification</strong>: As the number of filters grow, a search to quickly identify the filter is available.</p></li>
+      </ul>
+    </section>
+    <section class="bcls-section">
+      <h2 id="search-filters">Search Parameters</h2>
+      <p>The updated search functionality in Video Cloud includes various parameters that allow you to refine your search results effectively. These enhancements provide a comprehensive and flexible search experience.</p>
+      <div class="table-responsive">
+        <table class="bcls-table">
+          <caption class="bcls-caption--table">Search Parameters Table</caption>
+          <thead class="bcls-table__head">
+              <tr>
+                  <th>Search Parameter</th>
+                  <th>Description</th>
+                  <th>Match Type</th>
+              </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+              <tr>
+                  <td><strong>Tags</strong></td>
+                  <td>Includes or excludes specific tags</td>
+                  <td>Exact Match</td>
+              </tr>
+              <tr>
+                  <td><strong>Name</strong></td>
+                  <td>Includes or excludes specific names (supports stemming)</td>
+                  <td>Exact Match</td>
+              </tr>
+              <tr>
+                  <td><strong>Reference ID</strong></td>
+                  <td>Includes or excludes specific reference IDs</td>
+                  <td>Exact Match</td>
+              </tr>
+              <tr>
+                  <td><strong>Playable</strong></td>
+                  <td>Filters by playable or not playable status</td>
+                  <td>Boolean</td>
+              </tr>
+              <tr>
+                  <td><strong>Short/Long Description</strong></td>
+                  <td>Includes or excludes specific descriptions (supports stemming)</td>
+                  <td>Exact Match</td>
+              </tr>
+              <tr>
+                  <td><strong>Date Created</strong></td>
+                  <td>Filters by date ranges</td>
+                  <td>Date Range</td>
+              </tr>
+              <tr>
+                  <td><strong>Date Modified</strong></td>
+                  <td>Filters by date ranges</td>
+                  <td>Date Range</td>
+              </tr>
+              <tr>
+                  <td><strong>Schedule Start/End</strong></td>
+                  <td>Filters by date ranges</td>
+                  <td>Date Range</td>
+              </tr>
+              <tr>
+                  <td><strong>Custom Field - Text</strong></td>
+                  <td>Includes or excludes specific text in custom fields (supports stemming)</td>
+                  <td>Exact Match</td>
+              </tr>
+              <tr>
+                  <td><strong>Custom Field - List</strong></td>
+                  <td>Includes or excludes specific list items</td>
+                  <td>List</td>
+              </tr>
+              <tr>
+                  <td><strong>Duration</strong></td>
+                  <td>Filters by duration (less than, greater than, or in a specific range)</td>
+                  <td>Range</td>
+              </tr>
+              <tr>
+                  <td><strong>ID</strong></td>
+                  <td>Includes or excludes specific IDs</td>
+                  <td>Exact Match</td>
+              </tr>
+              <tr>
+                  <td><strong>Created By</strong></td>
+                  <td>Filters by creator's email</td>
+                  <td>Exact Match</td>
+              </tr>
+              <tr>
+                  <td><strong>Updated By</strong></td>
+                  <td>Filters by updater's email</td>
+                  <td>Exact Match</td>
+              </tr>
+              <tr>
+                  <td><strong>Status</strong></td>
+                  <td>Filters by active or inactive status</td>
+                  <td>Boolean</td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+    </section>
+    <section class="bcls-section">
+      <h2 id="search-filters">Working with Results</h2>
+      <p>The updated search experience in Video Cloud provides several new functionalities for managing search results effectively:</p>
+      <u>
+        <li><p><strong>Checkbox Selection</strong>: Selecting a checkbox now presents a new component at the bottom of the results for batch actions.</p></li>
+        <li><p><strong>Single Preview and Metadata Edit</strong>: Users can preview and edit metadata for individual videos directly from the search results.</p></li>
+        <li><p><strong>Bulk Metadata Selection</strong>: Allows batch editing of metadata for multiple videos at once.</p></li>
+        <li><p><strong>Export Functionality</strong>: The export button continues to work as before, enabling users to export search results with their metadata.</p></li>
+      </u>
     </section>
     
   </article>
