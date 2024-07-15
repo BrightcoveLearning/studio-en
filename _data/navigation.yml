@@ -761,6 +761,8 @@
           - name: Server-side Connections
             url: /marketing-automation/general/data-to-external-systems/server-side/index.html
             docs: 
+              - name: 'Overview: Server-side Connections'
+                url: /marketing-automation/general/data-to-external-systems/server-side/overview-server-side.html
               - name: 'Eloqua'
                 url: /marketing-automation/general/data-to-external-systems/server-side/eloqua-integration.html
               - name: 'S3'
