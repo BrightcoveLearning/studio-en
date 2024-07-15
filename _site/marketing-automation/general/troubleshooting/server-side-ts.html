@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Server-side Connections</title>
+        <title>Server-Side Troubleshooting</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Passing data through server-side connection.">
+        <meta name="description" content="This guide outlines comprehensive troubleshooting steps for client-side connections with Marketing Automation Platforms (MAPs). To ensure seamless integration of your Brightcove Player with MAPs such as Marketo Munchkin and HubSpot, follow these steps.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -15,10 +16,8 @@
         <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
         
         <!-- FontAwesome JS-->
-        
         <!-- <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>   -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
         <!-- Plugins CSS -->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
         <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
@@ -45,7 +44,7 @@
     </head> 
 
     <body class="docs-page">
-        
+
 
 <header class="header fixed-top">
   <div class="branding docs-branding">
@@ -3547,11 +3546,11 @@
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/marketing-automation/general/data-to-external-systems/">Data to external systems</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/marketing-automation/general/troubleshooting/">Troubleshooting</a></li>
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Server-side Connections</li>
+            <li class="breadcrumb-item active" aria-current="page">Server-Side Troubleshooting</li>
             
             
           </ol>
@@ -3564,68 +3563,173 @@
   <div class="container">
     <div class="docs-overview py-5">
       
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br>
       
-<article>
-    <h1 class=""></i> Server-side Connections</h1>
-    <article class="bcls-article">
-        <summary>Passing data through server-side connection.</summary>
-        <div class="row">
-        
-
-            <div class="col-12 col-lg-4 py-3">
-                <div class="card shadow-sm" style="background: white" onclick="window.location.href = ''">
-                    <div class="card-body">
-                        <h5 class="card-title text-center m-2">Getting Started</h5>
-                        <section class="flex-container">
-                            <div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><a href="/marketing-automation/general/data-to-external-systems/server-side/overview-server-side.html" style="text-decoration: none;">Overview: Server-side Connections</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        <div class="col-12 col-lg-4 py-3">
-            <div class="card shadow-sm" style="background: white" onclick="window.location.href = ''">
-                <div class="card-body">
-                    <h5 class="card-title text-center m-2">Viewing Data Integration</h5>
-                    <section class="flex-container">
-                        <div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><a href="/marketing-automation/general/data-to-external-systems/server-side/eloqua-integration.html" style="text-decoration: none;">Eloqua</a></li>
-                                <li class="list-group-item"><a href="/marketing-automation/general/data-to-external-systems/server-side/s3-integration.html" style="text-decoration: none;">S3</a></li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-lg-4 py-3">
-            <div class="card shadow-sm" style="background: white" onclick="window.location.href = ''">
-                <div class="card-body">
-                    <h5 class="card-title text-center m-2">Contact Object Integration</h5>
-                    <section class="flex-container">
-                        <div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/salesforce-sales-cloud/index.html" style="text-decoration: none;">Salesforce Sales Cloud</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_marketo.html" style="text-decoration: none;">Marketo</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_spotlight_hubspot.html" style="text-decoration: none;">Hubspot</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_eloqua.html">Eloqua</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_spotlight_braze.html">Braze</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_spotlight_blueshift.html" style="text-decoration: none;">Blueshift</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration-s3.html" style="text-decoration: none;">S3</a></li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-        </div>
-    </article>
+      <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
+<h1>Server-Side Troubleshooting</h1>
+<article class="bcls-article">
+    <summary>This guide outlines comprehensive troubleshooting steps for client-side connections with Marketing Automation Platforms (MAPs). To ensure seamless integration of your Brightcove Player with MAPs such as Marketo Munchkin and HubSpot, follow these steps.</summary>
+    <section class="bcls-section">
+        <h2 id="general-troubleshooting">General Network Troubleshooting Steps</h2>
+        <ol class="bcls-tasklist">
+            <li><p><strong>Open Browser Console:</strong></p>
+            <ul>
+                <li><p><strong>Right-click</strong> on a page and select <strong>Inspect</strong> or press <strong>F12</strong> to open the browser console.</p>
+                    <figure class="bcls-figure">
+                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/right-click.jpg">
+                    </figure>        
+                </li>
+                <li><p>Click on the <strong>Network</strong> tab.</p>
+                    <figure class="bcls-figure">
+                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/networktab.jpg">
+                    </figure> 
+                </li>
+            </ul>
+            </li>
+            <li><p><strong>Filter Network Requests:</strong></p>
+            <ul>
+                <li><p>In the <strong>Filter text field</strong>, enter the <strong>specific query term</strong> (for Marketo and HubSpot detailed below ).</p></li>
+                <li><p>Refresh the page or playback the video to see the network request appear.</p></li>
+            </ul>
+            </li>
+        </ol>
+    </section>
+    <section class="bcls-section">
+        <h2 id="marketo">Verifying Marketo Script</h2>
+        <ol class="bcls-tasklist">
+            <li><p><strong>Confirm Script Loading</strong>:</p>
+            <ul>
+                <li><p>Using the <a href="#general-troubleshooting">General Network Troubleshooting</a> steps, filter by <code translate="no">munchkin</code></p>
+                    <figure class="bcls-figure">
+                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/munchkin.jpg">
+                    </figure> 
+                </li>
+                </li>
+                <li><p>Load or refresh the page where your Brightcove Player is published.</p></li>
+                <li><p>Ensure at least one call to the Marketo.com-hosted munchkin.js file is present.</p>
+                    <figure class="bcls-figure">
+                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/marketo-response.jpg">
+                    </figure> 
+                </li>
+                <li><p>A <code translate="no">200 OK</code> response indicates that your player has successfully been set up with a connection to Marketo.</p></li>
+            </ul>
+            </li>
+            <li><p><strong>Confirm Playback Events</strong>:</p>
+            <ul>
+                <li><p>Filter by <code translate="no">visitWebPage</code>.</p></li>
+                <li><p>Begin video playback.</p></li>
+                <li><p>Check for network requests at the following video percentiles: 25%, 50%, 75%, 95%.</p>
+                    
+                    
+                </li>
+                
+                <li><p>Select a network request and click on the <strong>Payload</strong> tab.</p></li>
+                <li><p>Verify data in the <code translate="no">_mchQp</code> property, which should include:</p>
+                <ul>
+                    <li><p><code translate="no">provider=brightcove</code></p></li>
+                    <li><p><code translate="no">videoId=&#123;VIDEO_ID&#125;</code></p></li>
+                    <li><p><code translate="no">videoName=&#123;URL_ENCODED_VIDEO_NAME&#125;</code></p></li>
+                    <li><p><code translate="no">account=&#123;BC_ACCOUNT_ID&#125;</code></p></li>
+                    <li><p><code translate="no">player=&#123;BC_PLAYER_ID&#125;</code></p></li>
+                    <li><p><code translate="no">timeWatched=&#123;SECONDS_WATCHED&#125;</code></p></li>
+                    <li><p><code translate="no">percentile=[25|50|75|95]</code></p></li>
+                </ul>
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/playback-events.jpg">
+                </figure> 
+                <aside class="bcls-aside bcls-aside--information"><p>Note: If you skip ahead in the video and skip past any of these ‘milestones’ then this will also trigger the network request for the percentile that you’ve skipped. (for example, skipping 30% into a video will trigger the 25% network request)</p>
+                    <p>These network requests only trigger once per view. Once a video completes, then you can replay the video to trigger them again.</p>
+                    </aside>
+                </li>
+            </ul>
+            </li>
+        </ol>
+    </section>
+    <section class="bcls-section">
+        <h2 id="marketo">Verifying HubSpot Script</h2>
+        <ol class="bcls-tasklist-restart">
+            <li><p><strong>Confirm Script Loading</strong>:</p>
+            <ul>
+                <li><p>Using the <a href="#general-troubleshooting">General Network Troubleshooting</a> steps, filter by <code translate="no">hs-scripts</code></p>
+                    <figure class="bcls-figure">
+                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/hs-scripts.jpg">
+                    </figure>
+                </li>
+                <li><p>Load or refresh the page where your Brightcove Player is published.</p></li>
+                <li><p>Ensure network requests to HubSpot are appearing.</p>
+                    <figure class="bcls-figure">
+                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/0o-response.jpg">
+                    </figure>
+                </li>
+                <li><p>A <code translate="no">200 OK</code> response indicates that your player has successfully been set up with a connection to HubSpot.</p></li>
+            </ul>
+            </li>
+            <li><p><strong>Confirm Playback Events</strong>:</p>
+            <ul>
+                <li><p>Using the <a href="#general-troubleshooting">General Network Troubleshooting</a> steps, filter by <code translate="no">ptq.gif</code></p></li>
+                <li><p>Begin video playback.</p></li>
+                <li><p>Check for network requests at the following video percentiles: 25%, 50%, 75%, 95%.</p></li>
+                <li><p>Skipping ahead will trigger the network request for the corresponding skipped percentile.</p></li>
+                <li><p>Replay the video to trigger events again if needed.</p></li>
+           
+                    <li><p>Select a network request and click on the <strong>Payload</strong> tab.</p></li>
+                    <li><p>Verify data in the <code translate="no">_mchQp</code> property, which should include:</p>
+                    <ul>
+                        <li><p><code translate="no">provider=brightcove</code></p></li>
+                        <li><p><code translate="no">videoId=&#123;VIDEO_ID&#125;</code></p></li>
+                        <li><p><code translate="no">videoName=&#123;URL_ENCODED_VIDEO_NAME&#125;</code></p></li>
+                        <li><p><code translate="no">account=&#123;BC_ACCOUNT_ID&#125;</code></p></li>
+                        <li><p><code translate="no">player=&#123;BC_PLAYER_ID&#125;</code></p></li>
+                        <li><p><code translate="no">timeWatched=&#123;SECONDS_WATCHED&#125;</code></p></li>
+                        <li><p><code translate="no">percentile=[25|50|75|95]</code></p></li>
+                    </ul>
+                    </li>
+                </ul>
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/verify-request.jpg">
+                </figure> 
+                <aside class="bcls-aside bcls-aside--information"><p>Note: If you skip ahead in the video and skip past any of these ‘milestones’ then this will also trigger the network request for the percentile that you’ve skipped. (for example, skipping 30% into a video will trigger the 25% network request)</p>
+                    <p>These network requests only trigger once per view. Once a video completes, then you can replay the video to trigger them again.</p>
+                    </aside>
+                </li>
+        </ol>
+    </section>
+    <section class="bcls-section">
+        <h2 id="marketo">Considerations for Campaign-Enabled Players</h2>
+        <ul>
+            <li><p><strong>Minimum Player Version</strong></p>
+                <ul>
+                    <li><p>The plugin requires a minimum player version of <strong>v7.13.4</strong></p></li>
+                </ul>
+            </li>
+            <li><p><strong>Compatibility</strong></p>
+                <ul>
+                    <li><p>MAPs cannot be enabled simultaneously with the Campaign plugin.</p></li>
+                    <li><p>You must disable the Campaign plugin before enabling MAPs to avoid conflicts.</p></li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Enabling MAPs on a Campaign-enabled Player</h3>
+        <p>A warning prompt users to disable the Campaign plugin before enabling MAPs.</p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/warning.jpg">
+        </figure> 
+    </section>
 </article>
-  
+
+
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">Page Contents</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
   
 <!-- </div> -->
 </div>
