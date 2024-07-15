@@ -8,5 +8,150 @@ layout: staging
 <h1>{{ page.title }}</h1>
 <article class="bcls-article">
   <summary>{{ page.description }}</summary>
-  {% include s-audience-insights/integration/properties.html %}
+  <section class="bcls-section">
+    <h2 id="overview">Overview</h2>
+    <p>
+      This document details the properties used by the Server-Side connection for the contact object integration.
+    </p>
+    
+</section>
+  <section class="bcls-section">
+    <h2 id="registered-user">Registered User Export Properties</h2>
+    <div class="table-responsive">
+        <table class="bcls-table">
+              <caption class="bcls-caption--table">Registered User Export Properties</caption>
+              <thead class="bcls-table__head">
+                  <tr>
+                      <th>Label</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                  </tr>
+              </thead>
+              <tbody class="bcls-table__body">
+                  <tr>
+                      <td>CustomerId</td>
+                      <td>String</td>
+                      <td>Customer Id field. What this represents may differ depending on how account was configured.</td>
+                  </tr>
+                  <tr>
+                      <td>firstViewDate</td>
+                      <td>Date</td>
+                      <td>Date of first view in the last 2 years.</td>
+                  </tr>
+                  <tr>
+                      <td>lastViewDate</td>
+                      <td>Date</td>
+                      <td>Date of most recent view in the last 2 years.</td>
+                  </tr>
+                  <tr>
+                      <td>daysSinceLastEngagement</td>
+                      <td>Number</td>
+                      <td>Date of most recent view in the last 2 years.</td>
+                  </tr>
+                  <tr>
+                      <td>tenure</td>
+                      <td>Number</td>
+                      <td>Days since the first view in the last 2 years.</td>
+                  </tr>
+                  <tr>
+                      <td>engagementStatus</td>
+                      <td>String</td>
+                      <td>The current engagement status of viewer. In-depth explanation of how this is calculated is illustrated in UI.</td>
+                  </tr>
+                  <tr>
+                      <td>primaryDeviceLast2Years</td>
+                      <td>String</td>
+                      <td>Device with highest view count in last 2 years.</td>
+                  </tr>
+                  <tr>
+                      <td>primaryDeviceLast3Months</td>
+                      <td>String</td>
+                      <td>Device with highest view count in last 3 months.</td>
+                  </tr>
+                  <tr>
+                      <td>devicesUsedLast3Months</td>
+                      <td>String</td>
+                      <td>All devices used in last 3 months.</td>
+                  </tr>
+                  <tr>
+                      <td>primaryLocationLast2Years</td>
+                      <td>String</td>
+                      <td>Location with highest view count in last 2 years.</td>
+                  </tr>
+                  <tr>
+                      <td>primaryLocationLast3Months</td>
+                      <td>String</td>
+                      <td>Location with highest view count in last 3 months.</td>
+                  </tr>
+                  <tr>
+                      <td>fanOfSeries</td>
+                      <td>String</td>
+                      <td>Series where, in the last 2 years, the viewer has watched either 10 episodes or half the episodes available.</td>
+                  </tr>
+                  <tr>
+                      <td>hoursViewedLast3Months</td>
+                      <td>Number</td>
+                      <td>Sum of duration of all views in the last 3 months.</td>
+                  </tr>
+                  <tr>
+                      <td>hoursViewedLast2Years</td>
+                      <td>Number</td>
+                      <td>Sum of duration of all views in the last 2 years.</td>
+                  </tr>
+                  <tr>
+                      <td>mostRecentVideos</td>
+                      <td>String</td>
+                      <td>The 10 titles that were watched most recently.</td>
+                  </tr>
+                  <tr>
+                      <td>mostRecentEntertainingVideos</td>
+                      <td>String</td>
+                      <td>The most recently watched 10 titles that watched at least 75% of the video.</td>
+                  </tr>
+                  <tr>
+                      <td>firstWatchedVideos</td>
+                      <td>String</td>
+                      <td>The first 10 titles that were watched in the last 2 years.</td>
+                  </tr>
+                  <tr>
+                      <td>genreTop3Last3Months</td>
+                      <td>String</td>
+                      <td>Top 3 genres watched in the last 3 months by view count.</td>
+                  </tr>
+                  <tr>
+                      <td>genreTop3Last2Years</td>
+                      <td>String</td>
+                      <td>Top 3 genres watched in the last 2 years by view count.</td>
+                  </tr>
+                  <tr>
+                      <td>entertainmentIndexLast3Months</td>
+                      <td>Number</td>
+                      <td><p>Entertainment Index for views in the last 3 months.</p>
+                    <p>( Satisfied views (>= 75% watched) - Dissatisfied views (<=10% watched) ) / number of videos watched</p></td>
+                  </tr>
+                  <tr>
+                      <td>entertainmentIndexLast2Years</td>
+                      <td>Number</td>
+                      <td><p>Entertainment Index for views in the last 2 years.</p>
+                    <p>( Satisfied views (>= 75% watched) - Dissatisfied views (<=10% watched) ) / number of videos watched</p></td>
+                  </tr>
+                  <tr>
+                      <td>exportContext</td>
+                      <td>String</td>
+                      <td>Set based on where the report was generated from.</td>
+                  </tr>
+                  <tr>
+                      <td>segmentNames</td>
+                      <td>String</td>
+                      <td>Segments names for the segments the viewer is a part of.</td>
+                  </tr>
+                  <tr>
+                      <td>segmentIds</td>
+                      <td>String</td>
+                      <td>Segments ids for the segments the viewer is a part of.</td>
+                  </tr>
+              </tbody>
+        </table>
+    </div>
+</section>
 </article>
