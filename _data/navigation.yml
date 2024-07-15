@@ -802,7 +802,7 @@
           - name: Client-Side Troubleshooting for Marketo Munchkin and HubSpot
             url: /marketing-automation/general/troubleshooting/client-side-ts.html
 - section:
-  name: Marketing Automation
+  name: Marketing Automation 1.0
   url: /campaign/index.html
   icon: fa-solid fa-ranking-star
   docs:
