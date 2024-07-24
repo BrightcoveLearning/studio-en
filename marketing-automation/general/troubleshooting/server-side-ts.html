@@ -1,6 +1,6 @@
 ---
 title: Server-Side Troubleshooting
-description: This guide outlines comprehensive troubleshooting steps for client-side connections with Marketing Automation Platforms (MAPs). To ensure seamless integration of your Brightcove Player with MAPs such as Marketo Munchkin and HubSpot, follow these steps.
+description: This guide outlines comprehensive troubleshooting steps for server-side connections with Eloqua.
 parent: General Information
 grandparent: Marketing Automation 2.0
 ---
@@ -9,150 +9,75 @@ grandparent: Marketing Automation 2.0
 <article class="bcls-article">
     <summary>{{ page.description }}</summary>
     <section class="bcls-section">
-        <h2 id="general-troubleshooting">General Network Troubleshooting Steps</h2>
+        <h2 id="general-troubleshooting">General Troubleshooting Steps</h2>
         <ol class="bcls-tasklist">
-            <li><p><strong>Open Browser Console:</strong></p>
+            <li><p><strong>Confirm that the integration is set up in Brightcove:</strong></p>
             <ul>
-                <li><p><strong>Right-click</strong> on a page and select <strong>Inspect</strong> or press <strong>F12</strong> to open the browser console.</p>
+                <li><p>Log in into <a href="https://signin.brightcove.com/?redirect=https%3A%2F%2Fstudio.brightcove.com%2F">Brightcove Login</a>.</p></li>
+                <li><p>In the left navigation panel, click <strong>Integrations</strong>.</p>
                     <figure class="bcls-figure">
-                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/right-click.jpg">
-                    </figure>        
-                </li>
-                <li><p>Click on the <strong>Network</strong> tab.</p>
-                    <figure class="bcls-figure">
-                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/networktab.jpg">
+                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/integrations.png" style="width: 875px;">
                     </figure> 
                 </li>
-            </ul>
-            </li>
-            <li><p><strong>Filter Network Requests:</strong></p>
-            <ul>
-                <li><p>In the <strong>Filter text field</strong>, enter the <strong>specific query term</strong> (for Marketo and HubSpot detailed below ).</p></li>
-                <li><p>Refresh the page or playback the video to see the network request appear.</p></li>
-            </ul>
-            </li>
-        </ol>
-    </section>
-    <section class="bcls-section">
-        <h2 id="marketo">Verifying Marketo Script</h2>
-        <ol class="bcls-tasklist">
-            <li><p><strong>Confirm Script Loading</strong>:</p>
-            <ul>
-                <li><p>Using the <a href="#general-troubleshooting">General Network Troubleshooting</a> steps, filter by <code translate="no">munchkin</code></p>
-                    <figure class="bcls-figure">
-                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/munchkin.jpg">
-                    </figure> 
-                </li>
-                </li>
-                <li><p>Load or refresh the page where your Brightcove Player is published.</p></li>
-                <li><p>Ensure at least one call to the Marketo.com-hosted munchkin.js file is present.</p>
-                    <figure class="bcls-figure">
-                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/marketo-response.jpg">
-                    </figure> 
-                </li>
-                <li><p>A <code translate="no">200 OK</code> response indicates that your player has successfully been set up with a connection to Marketo.</p></li>
-            </ul>
-            </li>
-            <li><p><strong>Confirm Playback Events</strong>:</p>
-            <ul>
-                <li><p>Filter by <code translate="no">visitWebPage</code>.</p></li>
-                <li><p>Begin video playback.</p></li>
-                <li><p>Check for network requests at the following video percentiles: 25%, 50%, 75%, 95%.</p>
-                    
-                    
-                </li>
-                
-                <li><p>Select a network request and click on the <strong>Payload</strong> tab.</p></li>
-                <li><p>Verify data in the <code translate="no">_mchQp</code> property, which should include:</p>
-                <ul>
-                    <li><p><code translate="no">provider=brightcove</code></p></li>
-                    <li><p><code translate="no">videoId=&#123;VIDEO_ID&#125;</code></p></li>
-                    <li><p><code translate="no">videoName=&#123;URL_ENCODED_VIDEO_NAME&#125;</code></p></li>
-                    <li><p><code translate="no">account=&#123;BC_ACCOUNT_ID&#125;</code></p></li>
-                    <li><p><code translate="no">player=&#123;BC_PLAYER_ID&#125;</code></p></li>
-                    <li><p><code translate="no">timeWatched=&#123;SECONDS_WATCHED&#125;</code></p></li>
-                    <li><p><code translate="no">percentile=[25|50|75|95]</code></p></li>
-                </ul>
+                <li>Click <strong>Customer Data Platforms</strong>.</li>
                 <figure class="bcls-figure">
-                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/playback-events.jpg">
+                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/data-platforms.png" style="width: 875px;">
                 </figure> 
-                <aside class="bcls-aside bcls-aside--information"><p>Note: If you skip ahead in the video and skip past any of these ‘milestones’ then this will also trigger the network request for the percentile that you’ve skipped. (for example, skipping 30% into a video will trigger the 25% network request)</p>
-                    <p>These network requests only trigger once per view. Once a video completes, then you can replay the video to trigger them again.</p>
-                    </aside>
-                </li>
+                <li>Confirm that Eloqua exists in the Viewing Data Integrations section.</li>
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/eloqua.png" style="width: 875px;">
+                </figure> 
+                <p>If an Eloqua integration does not exist, please create an Eloqua integration by clicking on  <span class="button-blue"><i class="button-icon" data-feather="plus"></i>New Integration</span></p>
             </ul>
             </li>
-        </ol>
-    </section>
-    <section class="bcls-section">
-        <h2 id="marketo">Verifying HubSpot Script</h2>
-        <ol class="bcls-tasklist-restart">
-            <li><p><strong>Confirm Script Loading</strong>:</p>
+            <li><p><strong>Confirm that views are being generated in Brightcove:</strong></p>
             <ul>
-                <li><p>Using the <a href="#general-troubleshooting">General Network Troubleshooting</a> steps, filter by <code translate="no">hs-scripts</code></p>
-                    <figure class="bcls-figure">
-                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/hs-scripts.jpg">
-                    </figure>
-                </li>
-                <li><p>Load or refresh the page where your Brightcove Player is published.</p></li>
-                <li><p>Ensure network requests to HubSpot are appearing.</p>
-                    <figure class="bcls-figure">
-                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/0o-response.jpg">
-                    </figure>
-                </li>
-                <li><p>A <code translate="no">200 OK</code> response indicates that your player has successfully been set up with a connection to HubSpot.</p></li>
+                <li><p>In the left navigation panel, click <strong>Analytics</strong>, then click <strong>Performance</strong>.</p></li>
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/performance.png" style="width: 875px;">
+                </figure> 
+                <li><p>Group by Viewer.</p></li>
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/viewer.png" style="width: 875px;">
+                </figure> 
+                <li><p>Confirm that the data in the <strong>Viewer column</strong> conforms to the Viewer ID property set for the integration.</p></li>
+                <ul>
+                    <li>For Customer ID, viewer IDs should be of the form <code translate="no">CTCPB00000000XXXX</code></li>
+                    <li>For Viewer Token, viewer IDs should be of the form <code translate="no">XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</code></li>
+                    <li>If the data does not conform to the expected format, please check your Player configuration to ensure the correct viewer ID is being set.</li>
+                    <li>You may need to wait 24-48 hours for the data in Analytics to be synced to Eloqua.</li>
+                </ul>
             </ul>
             </li>
-            <li><p><strong>Confirm Playback Events</strong>:</p>
-            <ul>
-                <li><p>Using the <a href="#general-troubleshooting">General Network Troubleshooting</a> steps, filter by <code translate="no">ptq.gif</code></p></li>
-                <li><p>Begin video playback.</p></li>
-                <li><p>Check for network requests at the following video percentiles: 25%, 50%, 75%, 95%.</p></li>
-                <li><p>Skipping ahead will trigger the network request for the corresponding skipped percentile.</p></li>
-                <li><p>Replay the video to trigger events again if needed.</p></li>
-           
-                    <li><p>Select a network request and click on the <strong>Payload</strong> tab.</p></li>
-                    <li><p>Verify data in the <code translate="no">_mchQp</code> property, which should include:</p>
-                    <ul>
-                        <li><p><code translate="no">provider=brightcove</code></p></li>
-                        <li><p><code translate="no">videoId=&#123;VIDEO_ID&#125;</code></p></li>
-                        <li><p><code translate="no">videoName=&#123;URL_ENCODED_VIDEO_NAME&#125;</code></p></li>
-                        <li><p><code translate="no">account=&#123;BC_ACCOUNT_ID&#125;</code></p></li>
-                        <li><p><code translate="no">player=&#123;BC_PLAYER_ID&#125;</code></p></li>
-                        <li><p><code translate="no">timeWatched=&#123;SECONDS_WATCHED&#125;</code></p></li>
-                        <li><p><code translate="no">percentile=[25|50|75|95]</code></p></li>
-                    </ul>
+            <li><p><strong>Confirm that Contacts exist in Eloqua:</strong></p>
+                <ul>
+                    <li><p>Log into your Eloqua instance.</p></li>
+                    <li><p>Hover over the ID icon in the top navigation panel and click Contacts.</p>
+                        <figure class="bcls-figure">
+                            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/contacts.png" style="width: 875px;">
+                        </figure> 
                     </li>
+                    <li>Search for expected contacts.</li>
+                    <figure class="bcls-figure">
+                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/expected-contacts.png" style="width: 875px;">
+                    </figure> 
+                    <p>If the contacts do not exist, please check your Lead Form configuration to ensure contacts are being created correctly.</p>
                 </ul>
-                <figure class="bcls-figure">
-                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/verify-request.jpg">
-                </figure> 
-                <aside class="bcls-aside bcls-aside--information"><p>Note: If you skip ahead in the video and skip past any of these ‘milestones’ then this will also trigger the network request for the percentile that you’ve skipped. (for example, skipping 30% into a video will trigger the 25% network request)</p>
-                    <p>These network requests only trigger once per view. Once a video completes, then you can replay the video to trigger them again.</p>
-                    </aside>
-                </li>
+                <li><p><strong>Confirm that the custom object exists in Eloqua:</strong></p>
+                    <ul>
+                        <li><p>Hover over the ID icon in the top navigation panel and click Custom Objects.</p>
+                            <figure class="bcls-figure">
+                                <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/custom-objects.png" style="width: 875px;">
+                            </figure> 
+                        </li>
+                        <li>In the left navigation panel, there should be a <strong>BrightcoveViewEvent</strong> custom object.</li>
+                        <figure class="bcls-figure">
+                            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/view-event.png" style="width: 875px;">
+                        </figure> 
+                        <p>If there is no custom object, please try to delete the Eloqua integration in Brightcove and recreate it.</p>
+                    </ul>
+                <li>If there are still issues, please contact <a href="https://supportportal.brightcove.com/s/login/?language=en_US&ec=302&startURL=%2Fs%2F">support@brightcove.com</a>.</li>
         </ol>
-    </section>
-    <section class="bcls-section">
-        <h2 id="marketo">Considerations for Campaign-Enabled Players</h2>
-        <ul>
-            <li><p><strong>Minimum Player Version</strong></p>
-                <ul>
-                    <li><p>The plugin requires a minimum player version of <strong>v7.13.4</strong></p></li>
-                </ul>
-            </li>
-            <li><p><strong>Compatibility</strong></p>
-                <ul>
-                    <li><p>MAPs cannot be enabled simultaneously with the Campaign plugin.</p></li>
-                    <li><p>You must disable the Campaign plugin before enabling MAPs to avoid conflicts.</p></li>
-                </ul>
-            </li>
-        </ul>
-        <h3>Enabling MAPs on a Campaign-enabled Player</h3>
-        <p>A warning prompt users to disable the Campaign plugin before enabling MAPs.</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/warning.jpg">
-        </figure> 
     </section>
 </article>
 
