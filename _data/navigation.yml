@@ -1118,6 +1118,12 @@
     docs:
     - name: Brightcove Ad Monetization
       url: /general/advertising/bc-ad-monetization.html
+  - name: Community
+    url: /general/community/index.html
+    icon: fa-solid fa-cubes
+    docs:
+    - name: 'Bright Spot: Community Access'
+      url: /general/community/bright-spot-redirect.html
 - section:
   name: Release Notes
   url: /release-notes/index.html
