@@ -3715,10 +3715,11 @@
       <p></p>
       <aside class="bcls-aside bcls-aside--information language-editable"> When choosing <strong>Salesforce</strong>, the integration will expect you to supply the player with the Salesforce Contact ID in one of two ways: <br><br>
         <ul>
-          <li>The <strong>bcsfid</strong> URL parameter</li>
-          <li>The <strong>data-bc-sfid</strong> HTML attribute</li>
-        </ul><br>   
-        You can find more information about these options <a href="https://studio.support.brightcove.com/campaign/general/how-campaign-module-identifies-viewers.html#sfurl">here.</a></aside>
+          <li>The <strong>bcsfid</strong> URL parameter: <br>The plugin checks the URL for the "bcsfid" parameter to identify viewers. This allows Salesforce users to send personalized email campaigns with unique landing page URLs containing the lead's Salesforce ID.</li>
+          <p></p>
+          <li>The <strong>data-bc-sfid</strong> HTML attribute: <br>If the "bcsfid" URL parameter is not found, the plugin looks for the "data-bc-sfid" attribute on the &lt;video&gt; element in the HTML embed code. If present, this value is used as the lead's Salesforce ID.</li>
+        </ul>
+      </aside>
       <p></p>
       <aside class="bcls-aside bcls-aside--information language-editable">You can review these changes in your player's JSON editor. Under <strong>"viewer_id_source"</strong>.</aside>
       <p></p>
