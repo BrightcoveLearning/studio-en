@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Server-Side Troubleshooting</title>
+        <title>Viewing Data Integration: Salesforce</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This guide outlines comprehensive troubleshooting steps for server-side connections with Eloqua.">
+        <meta name="description" content="In this topic, you will learn how to set up the Salesfprce integration in the Viewing Data Integration section.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -2550,8 +2550,8 @@
                       
                       
                       
-                      <li class="nav-item">
-                        <a class="nav-link" href="/marketing-automation/general/troubleshooting/server-side-ts.html" aria-current="page">Server-Side Troubleshooting</a>
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/marketing-automation/general/troubleshooting/server-side-ts.html">Server-Side Troubleshooting</a>
                       </li>
                       
                       
@@ -3573,11 +3573,15 @@
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/marketing-automation/general/troubleshooting/">Troubleshooting</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/marketing-automation/general/data-to-external-systems/">Data to external systems</a></li>
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Server-Side Troubleshooting</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/marketing-automation/general/data-to-external-systems/server-side/">Server side</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Viewing Data Integration: Salesforce</li>
             
             
           </ol>
@@ -3598,84 +3602,83 @@
       <br>
       
       
-<h1>Server-Side Troubleshooting</h1>
+<h1>Viewing Data Integration: Salesforce</h1>
 <article class="bcls-article">
-    <summary>This guide outlines comprehensive troubleshooting steps for server-side connections with Eloqua.</summary>
-    <section class="bcls-section">
-        <h2 id="general-troubleshooting">General Troubleshooting Steps</h2>
-        <ol class="bcls-tasklist">
-            <li><p><strong>Confirm that the integration is set up in Video Cloud Studio:</strong></p>
-            <ul>
-                <li><p>Log in into <a href="https://signin.brightcove.com/?redirect=https%3A%2F%2Fstudio.brightcove.com%2F">Video Cloud Studio</a>.</p></li>
-                <li><p>In the left navigation panel, click <strong>Integrations</strong>.</p>
-                    <figure class="bcls-figure">
-                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/integrations.png" style="width: 875px;">
-                    </figure> 
-                </li>
-                <li>Click <strong>Customer Data Platforms</strong>.</li>
-                <figure class="bcls-figure">
-                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/data-platforms.png" style="width: 875px;">
-                </figure> 
-                <li>Confirm that Eloqua exists in the Viewing Data Integrations section.</li>
-                <figure class="bcls-figure">
-                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/eloqua.png" style="width: 875px;">
-                </figure> 
-                <p>If an Eloqua integration does not exist, please create an Eloqua integration by clicking on  <span class="button-blue"><i class="button-icon" data-feather="plus"></i>New Integration</span></p>
-            </ul>
-            </li>
-            <li><p><strong>Confirm that views are being generated in Brightcove:</strong></p>
-            <ul>
-                <li><p>In the left navigation panel, click <strong>Analytics</strong>, then click <strong>Performance</strong>.</p></li>
-                <figure class="bcls-figure">
-                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/performance.png" style="width: 875px;">
-                </figure> 
-                <li><p>Group by Viewer.</p></li>
-                <figure class="bcls-figure">
-                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/viewer.png" style="width: 875px;">
-                </figure> 
-                <li><p>Confirm that the data in the <strong>Viewer column</strong> conforms to the Viewer ID property set for the integration.</p></li>
-                <ul>
-                    <li>For Customer ID, viewer IDs should be of the form <code translate="no">CTCPB00000000XXXX</code></li>
-                    <li>For Viewer Token, viewer IDs should be of the form <code translate="no">XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</code></li>
-                    <li>If the data does not conform to the expected format, please check your Player configuration to ensure the correct viewer ID is being set.</li>
-                    <li>You may need to wait 24-48 hours for the data in Analytics to be synced to Eloqua.</li>
-                </ul>
-            </ul>
-            </li>
-            <li><p><strong>Confirm that Contacts exist in Eloqua:</strong></p>
-                <ul>
-                    <li><p>Log into your Eloqua instance.</p></li>
-                    <li><p>Hover over the ID icon in the top navigation panel and click Contacts.</p>
-                        <figure class="bcls-figure">
-                            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/contacts.png" style="width: 875px;">
-                        </figure> 
-                    </li>
-                    <li>Search for expected contacts.</li>
-                    <figure class="bcls-figure">
-                        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/expected-contacts.png" style="width: 875px;">
-                    </figure> 
-                    <p>If the contacts do not exist, please check your Lead Form configuration to ensure contacts are being created correctly.</p>
-                </ul>
-                <li><p><strong>Confirm that the custom object exists in Eloqua:</strong></p>
-                    <ul>
-                        <li><p>Hover over the ID icon in the top navigation panel and click Custom Objects.</p>
-                            <figure class="bcls-figure">
-                                <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/custom-objects.png" style="width: 875px;">
-                            </figure> 
-                        </li>
-                        <li>In the left navigation panel, there should be a <strong>BrightcoveViewEvent</strong> custom object.</li>
-                        <figure class="bcls-figure">
-                            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/view-event.png" style="width: 875px;">
-                        </figure> 
-                        <p>If there is no custom object, please try to delete the Eloqua integration in Brightcove and recreate it.</p>
-                    </ul>
-                <li>If there are still issues, please contact <a href="https://supportportal.brightcove.com/s/login/?language=en_US&ec=302&startURL=%2Fs%2F">support@brightcove.com</a>.</li>
-        </ol>
+  <summary>In this topic, you will learn how to set up the Salesfprce integration in the Viewing Data Integration section.</summary>
+
+  <section class="bcls-section">
+    <h2 id="Overview" >Overview</h2>
+   <p>Setting up the Salesforce integration using the Viewing Data Integration section exports additional granular (event-based) data. This viewing data is bound to a custom object and appended, not overwritten, on each contact sync.</p>
+    <aside class="bcls-aside bcls-aside--information">For more information on the Contact Integration setup, see <a href="https://studio.support.brightcove.com/integrations/salesforce-sales-cloud/overview-sfsc-integration.html">Contact Integration: Salesforce</a>.</aside>
+
+</section>
+<section class="bcls-section">
+  <h2 id="Requirements" >Requirements</h2>
+  <ul>
+    <li>Must have a Video Cloud account</li>
+    <ul>
+        <li>Must have Admin access to create integrations.</li>
+        <li>Must have Viewer Analytics and Audience Insights enabled.</li>
+        <li>Must have a Marketing Studio Essentials or Premium account to access MAP connections.</li>
+    </ul>
+    <li>Must have a Salesforce account</li>
+    <ul>
+        <li>Must have API access enabled.</li>
+        <li>Must be able to install apps from the Salesforce AppExchange Marketplace.</li>
+        <li>Must be able to read and write custom objects.</li>
+    </ul>
+  </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="VideoID">Video ID Tracking</h2>
+    <p>The Salesforce integration will only send data for Contacts that exist in both systems. It will not create new Contacts in Salesforce. This integration identifies users through a Salesforce Contact ID, which serves as the Viewer ID and must be set in the Brightcove Player to be registered in our system. For more details, see <a href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/viewer-id-tracking.html">how to configure Viewer ID Tracking</a> for Salesforce in the Player.
+    </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="install">Install App</h2>
+    <p><a href="https://appexchange.salesforce.com/appxListingDetail?listingId=8c0eeaa0-9822-4f51-9dde-6446013ddb90.">Install the Brightcove Audience Insights app</a> from the Salesforce AppExchange Marketplace to allow Brightcove to integrate with your Salesforce account.</p>
+  </section>
+<section class="bcls-section">
+  <h2 id="Adding_integration" >Create the integration</h2>
+  <ol class="bcls-tasklist">
+    <li><p>Log in into <a href="https://signin.brightcove.com/?redirect=https%3A%2F%2Fstudio.brightcove.com%2F">Video Cloud Studio</a>.</p></li>
+    <li>Open the <strong>Integrations</strong> module.</li>
+    <li>
+      Click <strong>Customer Data Platforms</strong>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/eloqua/customer-data-platforms.webp" alt="customer-data-platforms">
+      </figure>
+    </li>
+    <li>On the <strong>Viewing Data Integration</strong> section, click <span class="button-blue">New Integration</span></li>
+    <li>
+      Select <strong>Salesforce</strong> from the Destination dropdown.
+    </li>
+    <li>Click <span class="button-blue">Save</span></li>
+    <li>You will be redirected to Salesforce to authorize access for the application.</li>
+    <li>If you accept, you will be redirected to Video Cloud Studio, where the integration will complete the setup.</li>
+    <li>The integration will create a Salesforce custom object named <code translate="No">BrightcoveViewEvent</code> with default settings.</li>
+    <li>Viewing data will be sent to Salesforce as the above custom objects.</li>
+  </ol>
+</section>
+<section class="bcls-section">
+    <h2 id="Troubleshooting" >Troubleshooting</h2>
+    <ul>
+      <li><h3>Cannot Create Integration</h3></li>
+      <ul>
+          <li>Please contact <a href="https://supportportal.brightcove.com/">Brightcove Support</a>.</li>
+      </ul>
+      <li><h3>Data is Not Appearing in Salesforce</h3></li>
+      <ul>
+        <li>It may take a few days for views to be registered in our system.</li>
+        <li>Ensure that Salesforce Contacts exist for the expected users.</li>
+        <li>Ensure that the Salesforce Contact IDs for the expected users are being set in the Brightcove Player.</li>
+        
+        <li>If the issue persists, please contact <a href="https://supportportal.brightcove.com/">Brightcove Support</a>.</li>
+      </ul>
+    </ul>
     </section>
+
 </article>
-
-
-
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
