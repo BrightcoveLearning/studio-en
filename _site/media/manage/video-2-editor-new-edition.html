@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Viewing Data Integration: Salesforce</title>
+        <title>Brightcove Video Editor</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic, you will learn how to set up the Salesfprce integration in the Viewing Data Integration section.">
+        <meta name="description" content="In this topic, you will learn how to edit and transform your media content using the Brightcove Video Editor. This editor is ideal for a variety of short form use cases.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -15,10 +16,8 @@
         <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
         
         <!-- FontAwesome JS-->
-        
         <!-- <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>   -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
         <!-- Plugins CSS -->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
         <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
@@ -45,7 +44,7 @@
     </head> 
 
     <body class="docs-page">
-        
+
 
 <header class="header fixed-top">
   <div class="branding docs-branding">
@@ -3565,23 +3564,15 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/marketing-automation/">Marketing automation</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/media/">Media</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/marketing-automation/general/">General</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/media/manage/">Manage</a></li>
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/marketing-automation/general/data-to-external-systems/">Data to external systems</a></li>
-            
-            
-            
-            <li class="breadcrumb-item"><a class="theme-link" href="/marketing-automation/general/data-to-external-systems/server-side/">Server side</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Viewing Data Integration: Salesforce</li>
+            <li class="breadcrumb-item active" aria-current="page">Brightcove Video Editor</li>
             
             
           </ol>
@@ -3601,108 +3592,386 @@
       </div>
       <br>
       
-      
-<h1>Viewing Data Integration: Salesforce</h1>
+      <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
+
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to set up the Salesfprce integration in the Viewing Data Integration section.</summary>
+    <h1>Brightcove Video Editor</h1>
+    <summary>In this topic, you will learn how to edit and transform your media content using the Brightcove Video Editor. <br>This editor is ideal for a variety of short form use cases.</summary>
 
-  <section class="bcls-section">
-    <h2 id="Overview" >Overview</h2>
-   <p>Setting up the Salesforce integration using the Viewing Data Integration section exports additional granular (event-based) data. This viewing data is bound to a custom object and appended, not overwritten, on each contact sync.</p>
-    <aside class="bcls-aside bcls-aside--information">For more information on the Contact Integration setup, see <a href="https://studio.support.brightcove.com/integrations/salesforce-sales-cloud/overview-sfsc-integration.html">Contact Integration: Salesforce</a>.</aside>
+    <section class="bcls-section">
+    <h2 id="welcome">Welcome to the Editor</h2>
+    <p></p>
+    <div style="max-width: 960px;">
+        <style>
+        video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode) {
+          padding-top: 56.25%;
+        }
+        </style><video-js
+          data-account="1752604059001"
+          data-player="default"
+          data-embed="default"
+          controls=""
+          data-video-id="1793345684832719666"
+          data-playlist-id=""
+          data-application-id=""
+          class="vjs-fluid"></video-js>
+      </div>
+      <script
+        src="https://players.brightcove.net/1752604059001/default_default/index.min.js">
+      </script>
+    <p></p>
+    </section>
 
-</section>
-<section class="bcls-section">
-  <h2 id="Requirements" >Requirements</h2>
-  <ul>
-    <li>Must have a Video Cloud account</li>
-    <ul>
-        <li>Must have Admin access to create integrations.</li>
-        <li>Must have Viewer Analytics and Audience Insights enabled.</li>
-        <li>Must have a Marketing Studio Essentials or Premium account to access MAP connections.</li>
-    </ul>
-    <li>Must have a Salesforce account</li>
-    <ul>
-        <li>Must have API access enabled.</li>
-        <li>Must be able to install apps from the Salesforce AppExchange Marketplace.</li>
-        <li>Must be able to read and write custom objects.</li>
-    </ul>
-  </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="VideoID">Video ID Tracking</h2>
-    <p>The Salesforce integration will only send data to Contacts that exist in both systems. It will not create new Contacts in Salesforce. This integration identifies users through a Salesforce Contact ID, which serves as the Viewer ID and must be set in the Brightcove Player to be registered in our system. For more details, see <a href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/viewer-id-tracking.html">how to configure Viewer ID Tracking</a> for Salesforce in the Player.
-    </p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="install">Install App</h2>
-    <p><a href="https://appexchange.salesforce.com/appxListingDetail?listingId=8c0eeaa0-9822-4f51-9dde-6446013ddb90.">Install the Brightcove Audience Insights app</a> from the Salesforce AppExchange Marketplace to allow Brightcove to integrate with your Salesforce account.</p>
-  </section>
-<section class="bcls-section">
-  <h2 id="Adding_integration" >Create the integration</h2>
-  <ol class="bcls-tasklist">
-    <li><p>Log in into <a href="https://signin.brightcove.com/?redirect=https%3A%2F%2Fstudio.brightcove.com%2F">Video Cloud Studio</a>.</p></li>
-    <li>Open the <strong>Integrations</strong> module.</li>
-    <li>
-      Click <strong>Customer Data Platforms</strong>
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/eloqua/customer-data-platforms.webp" alt="customer-data-platforms">
-      </figure>
-    </li>
-    <li>On the <strong>Viewing Data Integration</strong> section, click <span class="button-blue">New Integration</span></li>
-    <li>
-      Select <strong>Salesforce</strong> from the Destination dropdown.
-    </li>
-    <li>Click <span class="button-blue">Save</span></li>
-    <li>You will be redirected to Salesforce to authorize access for the application.</li>
-    <li>If you accept, you will be redirected to Video Cloud Studio, where the integration will complete the setup.</li>
-    <li>The integration will create a Salesforce custom object named <code translate="No">BrightcoveViewEvent</code> with default settings.</li>
-    <li>Viewing data will be sent to Salesforce as the above custom objects.</li>
-  </ol>
-</section>
+    <section class="bcls-section">
+        <h2 id="permissions">Video Editor Permissions</h2>
+        <p>You can <a href="https://studio.support.brightcove.com/admin/managing-users.html#edit">edit a standard user</a> and grant or remove their access by following the next process:</p>
+        <ol class="bcls-tasklist">
+            <li>Navigate to the <strong>Admin Module</strong></li>
+            <li>Select the user in question</li>
+            <li>Check the Video Editor feature
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/enable-editor.webp" /></figure>
+                <p></p>
+            </li>
+            <li>Click <span class="button-blue">Save</span></li>
+        </ol>
+        <p></p>
+        <aside class="bcls-aside bcls-aside--information language-editable">This process requires administrative privileges.</aside>
+    </section>
 
-<section class="bcls-section">
-  <h2 id="Viewing-data" >Validating data within Salesforce</h2>
-  <p>The following steps will give one way to view custom object data in Salesforce as a report. An admin user must do steps 1-8. This assumes Salesforce has Lightning Experience enabled. These steps may be different for Classic.</p>
-  <ol class="bcls-tasklist-restart">
-    <li>From Salesforce, at the top right, click the cog wheel.</li>
-    <li>Click <strong>Setup</strong>.</li>
-    <li>Click <strong>Object Manager</strong>.</li>
-    <li>In the Quick Search box, type in <code translate="No">BrightcoveViewEvent</code>.</li>
-    <li>Click the custom object with the API Name <code translate="No">BrightcoveViewEvent__c</code>.</li>
-    <li>In the Details tab, click <strong>Edit</strong>.</li>
-    <li>In the Optional Features section, make sure the <strong>Allow Reports</strong> checkbox is enabled.</li>
-    <li>Click Save.</li>
-    <li>Go to the Salesforce home page.</li>
-    <li>Click <strong>Reports</strong>.</li>
-    <li>Click <strong>New Report</strong>.</li>
-    <li>In the search box, type <code translate="No">BrightcoveViewEvent</code>.</li>
-    <li>Click on the <code translate="No">BrightcoveViewEvent</code> report type.</li>
-    <li>Click <strong>Start Report</strong>.</li>
-    <li>In the left pane, click <strong>Add column</strong> and add the desired columns to the report.</li>
-    <li>Click <strong>Run</strong> to view the custom object data.</li>
-    <aside class="bcls-aside bcls-aside--information">You can save the report for future use.</aside>
-  </ol>
-</section>
+    <section class="bcls-section">
+      <h2 id="ingest_profile">Using the Correct Ingest Profile</h2>
+      <p>To use the Brightcove Video Editor, your video should have MP4 renditions. <br> There are multiple ways to achieve this:</p>
+      <p></p>
+      <aside class="bcls-aside bcls-aside--information language-editable">MP4 renditions are needed to use the video editor. <br>"Video Editing-MP4" renditions are specifically optimized to perform better with the video editor.</aside>
+      <p></p>
+      <h3>A. Upload a video with the Video Editing-MP4 Ingest profile:</h3>
+      <p>When <a href="https://studio.support.brightcove.com/media/manage/uploading-videos-using-upload-module.html">uploading your video</a>, select the <strong>Video Editing-MP4</strong> ingest profile.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/upload-profile.webp" /></figure>
+      
+      <h3>B. Adding MP4 renditions to existing ones:</h3>
+      <p>To add the necessary MP4 renditions needed to work with the editor for an existing asset, please use the Create MP4 button.</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Navigate to the <strong>Media</strong> module.</li>
+        <li>Select the video you would like to work with.</li>
+        <li>Scroll down to the <strong>Video Files</strong> section and click <span class="button-blue-text-bordered">Create MP4</span>
+            <p></p>
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/create-mp4.webp" /></figure>
+            <p></p>
+        </li>
+        <li>Select <strong>Video Editing-MP4</strong> as your ingest profile
+            <p></p>
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/select-mp4.webp" /></figure>
+            <p></p>
+        </li>
+        <li>Click <span class="button-blue">Create</span></li>
+      </ol>
 
-<section class="bcls-section">
-    <h2 id="Troubleshooting" >Troubleshooting</h2>
-    <ul>
-      <li><h3>Cannot Create Integration</h3></li>
-      <ul>
-          <li>Please contact <a href="https://supportportal.brightcove.com/">Brightcove Support</a>.</li>
-      </ul>
-      <li><h3>Data is Not Appearing in Salesforce</h3></li>
-      <ul>
-        <li>It may take from 24 to 48 hours for views to be registered in our system.</li>
-        <li>Ensure that Salesforce Contacts exist for the expected users.</li>
-        <li>Ensure that the Salesforce Contact IDs for the expected users are being set in the Brightcove Player.</li>
+      <h3>C. Retranscoding your video:</h3>
+      <p>You can <a href="https://studio.support.brightcove.com/media/manage/retranscoding-videos-using-media-module.html">retranscode an existing video</a> with a profile that generates MP4 renditions. <strong>Video Editing-MP4</strong> is our recommended profile for editing purposes.</p>
+      <p></p>
+      <p>However, this will wipe out any existing renditions and create new ones, which may impact videos that are already published live on your site with HLS/Dash. Learn more about re-transcoding <a href="https://studio.support.brightcove.com/media/manage/retranscoding-videos-using-media-module.html">here</a>.</p>
+      <aside class="bcls-aside bcls-aside--information language-editable">If you don't see options to retranscode or create MP4s, please talk to your Admin and/or to our <a href="https://supportportal.brightcove.com/">support team</a>.</aside>
+    </section>
+
+    <section class="bcls-section">
+        <h2 id="draft">Opening a draft</h2>
+        <p>If you are the author of a video edited with the video editor. You can reopen the draft by:</p>
+        <p></p>
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/edit-draft-list.webp" /></figure>
+        <p></p>
+        <p></p>
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/open-draft-card.webp" /></figure>
+        <p></p>
+        <aside class="bcls-aside bcls-aside--warning language-editable">Only the draft's original author will be able to open said draft.</aside>
+    </section>
+
+    <section class="bcls-section">
+        <h2 id="template">Using a template</h2>
+        <p></p>
+        <div style="max-width: 960px;">
+            <style>
+            video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode) {
+              padding-top: 56.25%;
+            }
+            </style><video-js
+              data-account="1752604059001"
+              data-player="default"
+              data-embed="default"
+              controls=""
+              data-video-id="1793345692188394880"
+              data-playlist-id=""
+              data-application-id=""
+              class="vjs-fluid"></video-js>
+          </div>
+          <script
+            src="https://players.brightcove.net/1752604059001/default_default/index.min.js">
+          </script>
+          <p></p>
+
+        <p>You may create new videos from scratch or use one of the numerous templates available. You can use templates for horizontal, vertical, and square aspect ratios.</p>
+        <p></p>
+        <p>To create a new video, follow the next steps:</p>
+        <ol class="bcls-tasklist-restart">
+            <li>Navigate to the <strong>Media</strong> module.</li>
+            <li>Open the <span class="button-blue-text-bordered">Add video</span> dropdown menu.
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/dropdown.webp" /></figure>
+                <p></p>
+            </li>
+            <li>Select <strong>Create with Editor</strong>
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/create-w-editor.webp" /></figure>
+                <p></p>
+            </li>
+            <li>Select the template you want to use. <p></p>If you want to create a video from scratch, select the blank template. If you prefer to use an existing template, Select one of the other existing templates instead.
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/select.webp" /></figure>
+                <p></p>
+            </li>
+
+            <li>Once you have made your <a href="https://studio.support.brightcove.com/media/manage/video-editor.html#navigating"> desired changes</a>, click <span class="button-blue">Process &amp; add to library</span>
+                <p></p>
+                <aside class="bcls-aside bcls-aside--information language-editable">After clicking this button, there will be no visual confirmation; videos will be sent to processing immediately.</aside>
+                <p></p>
+            </li>
+
+        </ol>
+      
+    </section>
+
+    <section class="bcls-section">
+        <h2 id="existing_video">Editing an existing video</h2>
+        <p></p>
+        <div style="max-width: 960px;">
+            <style>
+            video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode) {
+              padding-top: 56.25%;
+            }
+            </style><video-js
+              data-account="1752604059001"
+              data-player="default"
+              data-embed="default"
+              controls=""
+              data-video-id="1793345697875916467"
+              data-playlist-id=""
+              data-application-id=""
+              class="vjs-fluid"></video-js>
+          </div>
+          <script
+            src="https://players.brightcove.net/1752604059001/default_default/index.min.js">
+          </script>
+          <p></p>
+
+        <aside class="bcls-aside bcls-aside--information language-editable">When you edit an existing video, the system will create a new asset in your media library after you publish it and leave the original one untouched.</aside>
+        <p></p>
+        <p>To start editing an existing video, follow the next steps: </p>
+        <ol class="bcls-tasklist-restart">
+            <li>Navigate to the <strong>Media</strong> module.</li>
+            <li>Select the video you would like to work with.</li>
+            <li>Click <span class="button-blue-text-bordered">Open in Editor</span>
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/open-editor.webp" /></figure>
+                <p></p>
+            </li>
+            <li>Click <span class="button-blue">Continue</span></li>
+            <li>
+                By following this process, you'll be able to interact with the video editor.
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/video-editor.webp" /></figure>
+                <p></p>
+            </li>
+            <li>Once you have made your <a href="https://studio.support.brightcove.com/media/manage/video-editor.html#navigating"> desired changes</a>, click <span class="button-blue">Process &amp; add to library</span>
+                <p></p>
+                <aside class="bcls-aside bcls-aside--information language-editable">After clicking this button, there will be no visual confirmation; videos will be sent to processing immediately.</aside>
+                <p></p>
+                <aside class="bcls-aside bcls-aside--information language-editable">Processing times will vary depending on the length of the video you have created. If you don't see your new video in the media library yet, you may have to wait a few minutes and refresh the page.</aside>
+                <p></p>
+                <p></p>
+                <aside class="bcls-aside bcls-aside--warning language-editable">If the 'Process &amp; add to library' button is grayed out, the videos you are using in your scenes are being processed. Once processed, the "Process &amp; add to library' button will become available, and you will be able to click on that button to publish your final composition. <br><br>If you use very long videos in your scenes, the "Process &amp; add to library' button will take more time to become available.</aside>
+                <p></p>
+            </li>
+
+        </ol>
+      
+    </section>
+
+    
+
+
+    <section class="bcls-section">
+        <h2 id="navigating">Navigating and using the video editor</h2>
+        <p>Some of the features that have been added to the Brightcove video Editor are:</p>
+        <ul>
+            <li>
+                <h4>Add an image or video asset</h4>
+                <p>This process will let you add a video or image asset to a Scene</p>
+                <ul>
+                    <li> Click the <strong>Replace</strong> Button
+                        <p></p>
+                        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/upload-img-vid.webp" /></figure>
+                        <p></p>
+                        <aside class="bcls-aside bcls-aside--information language-editable">You can also submit a file of your own by clicking the <i class="fa-solid fa-arrow-up-from-bracket"></i> icon.</aside>
+                        <p></p>
+                    </li>
+                    <li>In the <strong>Videos library</strong> tab, you can upload assets from your video library. <br>Search the <strong>Creative</strong> tab for stock images and videos, or submit your files from the <strong>Uploads</strong> tab.
+                        <table>
+                            <tr>
+                                <td><figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/upload-library.webp" /></figure></td>
+                                <td><figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/upload-stock.webp" /></figure></td>
+                                <td><figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/upload-upload.webp" /></figure></td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>Crop the added video to match your desired length, and click <span class="button-blue">Apply</span></li>
+                    <p></p>
+                    <li>Once you have a video asset uploaded, you can click the <i class="fa-solid fa-volume-high"></i> icon to mute the audio or the  <i class="fa-solid fa-scissors"></i> icon to <a href="https://studio.support.brightcove.com/media/manage/video-editor.html#crop">crop</a> the video
+                        <p></p>
+                        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/mute-cut.webp" /></figure>
+                        <p></p>
+                    </li>
+                </ul>
+            </li>
         
-        <li>If the issue persists, please contact <a href="https://supportportal.brightcove.com/">Brightcove Support</a>.</li>
-      </ul>
+        <li>
+
+        <h4 id="crop">Crop a video</h4>
+        <p>This process will let you display only a selected part of a video asset</p>
+        <ul>
+            <li> Click the <i class="fa-solid fa-scissors"></i> Icon
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/crop-icons-n.webp" /></figure>
+                <p></p>
+            </li>
+            <li>Select the video section that you desire in your timeline, and click <span class="button-blue">Apply</span>
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/crop-video-n.webp" /></figure>
+                <p></p>
+            </li>
+        </ul>
+
+        <p></p>
+        <aside class="bcls-aside bcls-aside--information language-editable">Watermarks will not appear on your final video.</aside>
+        <p></p>
+
+        <h4>Record a voiceover</h4>
+        <p>With this feature, you will be able to add a voiceover recording to your video.</p>
+        <ol class="bcls-tasklist-restart">
+            <li>Click <strong>Record</strong>
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/record-voice.webp" /></figure>
+                <p></p>
+                <aside class="bcls-aside bcls-aside--information language-editable">You can also submit a file of your own by clicking the <i class="fa-solid fa-arrow-up-from-bracket"></i> icon.</aside>
+            </li>
+            <li>Select your microphone and Click <span class="button-blue">Start Recording</span>
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/start-recording.webp" /></figure>
+                <p></p>
+            </li>
+            <li>Once you are done, Click <span class="button-red">Stop Recording</span>
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/stop-recording.webp" /></figure>
+                <p></p>
+            </li>
+            <li>Enter a name and Click <span class="button-blue">Save</span>
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/save-voice.webp" /></figure>
+                <p></p>
+            </li>
+        </ol>
+    </li>
+
+    <li>
+        <h4>Change layout</h4>
+        <p>These layouts allow you to show different types of overlays on the screen and modify the text that you want to present with them.</p>
+        <ul>
+            <li>Click the <strong>Layout</strong> Button to select a different layout for your scene.</li>
+            <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/change-layout.webp" /></figure>
+            <p></p>
+        </ul>
+
+    </li>
+
+    <li>
+        <h4>Add Scenes</h4>
+        <p>Here, you can add multiple additional scenes to your video.</p>
+        <ul>
+            <li>Click the <strong>+</strong> sign to add a new scene.</li>
+            <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/add-scene.webp" /></figure>
+            <p></p>
+        </ul>
+    </li>
+
+    <li>
+        <h4>Change aspect ratio</h4>
+        <p>Here, you can change the aspect ratio of your video.</p>
+        <ul>
+            <li>Click your <strong>desired view</strong> to change the aspect ratio.</li>
+            <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/aspect-ratio.webp" /></figure>
+            <p></p>
+        </ul>
+    </li>
+
+    <li>
+        <h4>Change styling</h4>
+        <p>In this section, you can customize the look and feel of your video to match your brand.</p>
+        <ul>
+            <li>Click the <strong>Video Style</strong> button to change the look of your video.
+            <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/video-style.webp" /></figure>
+            <p></p>
+            </li>
+
+            <li>You'll be able to change both the font and the color scheme.
+                <p></p>
+                    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/font-color.webp" /></figure>
+                <p></p>
+            </li>
+        </ul>
+        <aside class="bcls-aside bcls-aside--information language-editable">The Video Style you select applies to all the scenes in the video.</aside>
+    </li>
+
+    <li>
+        <h4>Crop and change color</h4>
+        <p>Click <i class="fa-solid fa-palette"></i> to apply another color combination to a particular scene.</p>
+        <p>Click <i class="fa-solid fa-crop-simple"></i> to crop and select what you would like to showcase in your scene.</p>
+        <p></p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/crop-style.webp" /></figure>
+        <p></p>
+   </li>
+
+    <li>
+         <h4>Add Music</h4>
+         <p>Here, you can add music to your video.</p>
+        <ul>
+            <li>Click <strong>Music</strong>
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/music.webp" /></figure>
+                <p></p>
+            </li>
+            <li>Search for the music you would like to add and click <span class="button-blue-text-bordered">Select</span>
+                <p></p>
+                <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/manage/video-editor/music-select.webp" /></figure>
+                <p></p>
+            </li>
+        </ul>
+        <aside class="bcls-aside bcls-aside--information language-editable">The system will automatically adjust the different audio levels.</aside>
+    </li>
     </ul>
     </section>
 
+    <section class="bcls-section">
+        <h2 id="notes">Additional Notes</h2>
+        <ul>
+            <li>When you leave an editing session, the system will save a draft for you, which you may recover from Video Cloud.</li>
+            <li>If you were editing an existing video, you would see that asset in Draft status. When you publish it, a new asset will be created, and the original will remain the same.</li>
+            <li>If you were editing from a template, your draft will lack complete Video Cloud functionality until the final video is published.</li>
+            <li>A first user must publish or discard a draft before a second user can edit that same asset.</li>
+        </ul>
+    </section>
 </article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
