@@ -32,7 +32,7 @@ parent: Integration
   </section>
   <section class="bcls-section">
     <h2 id="VideoID">Video ID Tracking</h2>
-    <p>The Salesforce integration will only send data for Contacts that exist in both systems. It will not create new Contacts in Salesforce. This integration identifies users through a Salesforce Contact ID, which serves as the Viewer ID and must be set in the Brightcove Player to be registered in our system. For more details, see <a href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/viewer-id-tracking.html">how to configure Viewer ID Tracking</a> for Salesforce in the Player.
+    <p>The Salesforce integration will only send data to Contacts that exist in both systems. It will not create new Contacts in Salesforce. This integration identifies users through a Salesforce Contact ID, which serves as the Viewer ID and must be set in the Brightcove Player to be registered in our system. For more details, see <a href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/viewer-id-tracking.html">how to configure Viewer ID Tracking</a> for Salesforce in the Player.
     </p>
   </section>
   <section class="bcls-section">
@@ -61,6 +61,31 @@ parent: Integration
     <li>Viewing data will be sent to Salesforce as the above custom objects.</li>
   </ol>
 </section>
+
+<section class="bcls-section">
+  <h2 id="Viewing-data" >Validating data within Salesforce</h2>
+  <p>The following steps will give one way to view custom object data in Salesforce as a report. An admin user must do steps 1-8. This assumes Salesforce has Lightning Experience enabled. These steps may be different for Classic.</p>
+  <ol class="bcls-tasklist-restart">
+    <li>From Salesforce, at the top right, click the cog wheel.</li>
+    <li>Click <strong>Setup</strong>.</li>
+    <li>Click <strong>Object Manager</strong>.</li>
+    <li>In the Quick Search box, type in <code translate="No">BrightcoveViewEvent</code>.</li>
+    <li>Click the custom object with the API Name <code translate="No">BrightcoveViewEvent__c</code>.</li>
+    <li>In the Details tab, click <strong>Edit</strong>.</li>
+    <li>In the Optional Features section, make sure the <strong>Allow Reports</strong> checkbox is enabled.</li>
+    <li>Click Save.</li>
+    <li>Go to the Salesforce home page.</li>
+    <li>Click <strong>Reports</strong>.</li>
+    <li>Click <strong>New Report</strong>.</li>
+    <li>In the search box, type <code translate="No">BrightcoveViewEvent</code>.</li>
+    <li>Click on the <code translate="No">BrightcoveViewEvent</code> report type.</li>
+    <li>Click <strong>Start Report</strong>.</li>
+    <li>In the left pane, click <strong>Add column</strong> and add the desired columns to the report.</li>
+    <li>Click <strong>Run</strong> to view the custom object data.</li>
+    <aside class="bcls-aside bcls-aside--information">You can save the report for future use.</aside>
+  </ol>
+</section>
+
 <section class="bcls-section">
     <h2 id="Troubleshooting" >Troubleshooting</h2>
     <ul>
@@ -70,7 +95,7 @@ parent: Integration
       </ul>
       <li><h3>Data is Not Appearing in Salesforce</h3></li>
       <ul>
-        <li>It may take a few days for views to be registered in our system.</li>
+        <li>It may take from 24 to 48 hours for views to be registered in our system.</li>
         <li>Ensure that Salesforce Contacts exist for the expected users.</li>
         <li>Ensure that the Salesforce Contact IDs for the expected users are being set in the Brightcove Player.</li>
         
