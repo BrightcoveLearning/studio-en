@@ -767,6 +767,8 @@
                 url: /marketing-automation/general/data-to-external-systems/server-side/eloqua-integration.html
               - name: 'S3'
                 url: /marketing-automation/general/data-to-external-systems/server-side/s3-integration.html
+              - name: 'Salesforce'
+                url: /marketing-automation/general/data-to-external-systems/server-side/salesforce-integration.html
               - name: 'Salesforce Sales Cloud'
                 url: https://audience-insights.support.brightcove.com/integrations/salesforce-sales-cloud/index.html
               - name: 'Marketo'
