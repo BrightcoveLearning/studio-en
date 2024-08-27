@@ -1,0 +1,388 @@
+---
+title: Campaign 2.0 Setup and Integration Manual
+description: "This document outlines the process for integrating Brightcove Campaign 2.0 with leading third-party platforms such as Marketo, HubSpot, Salesforce, and Eloqua."
+parent: Getting Started
+grandparent: Marketing Automation
+---
+
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="overview">Overview</h2>
+    <p>The Campaign 2.0 migration involves updating existing video marketing campaigns to leverage the enhanced capabilities of the latest Brightcove features.</p>
+
+    <aside class="bcls-aside bcls-aside--tip">
+      <strong>Note:</strong> The features and integrations discussed in this document apply only to Video On Demand (VOD) content. They are not available for live-streaming events within the Brightcove platform.
+  </aside>
+  
+  </section>
+  <section class="bcls-section">
+    <h2 id="supported_platforms">Supported third-party platforms</h2>
+    <p>The following third-party platforms are currently supported for this workflow:</p>
+    <ul>
+      <li>client-side data capture
+        <ul>
+          <li><strong>Marketo</strong></li>
+          <li><strong>Hubspot</strong></li>
+        </ul>
+      </li>
+      <li>server-side data capture
+        <ul>
+          <li><strong>Marketo</strong></li>
+          <li><strong>Hubspot</strong></li>
+          <li><strong>Salesforce</strong></li>
+          <li><strong>Eloqua</strong></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- <aside class="bcls-aside bcls-aside--information">
+      <strong>Note:</strong> There are multiple methods to collect <strong>viewer ID</strong> and viewer's <em>data</em> within the Brightcove ecosystem. For instance, the <strong>setUser function</strong> or set the <strong>Player Plugin</strong>. In this documentation, we will concentrate on the <strong>Player Plugin</strong> in conjunction with <strong>Interactive Lead forms</strong>.
+  </aside> -->
+  </section>
+  <section class="bcls-section">
+    <h2 id="tracking-methods">Tracking Methods</h2>
+    <p>When working with Brightcove Campaign 2.0, you have three primary methods for tracking user interactions and campaign performance.</p>
+    <p><strong><a href="#map-tracking">MAP Tracking</a> (Client-Side) Setup</strong>: This setup allows you to collect real-time viewing data directly from the Brightcove player to your Marketing Automation Platform (MAP) via the browser. Since no campaign data is stored on Brightcove servers, there's no need to enable Insights, making this a direct and efficient connection between the player and your MAP. <br>
+    Use Case: Real-time data collection, immediate marketing actions, easy setup.</p>
+    
+    <p><strong><a href="#id-viewer">Viewer ID</a> (Server-Side) Setup</strong>: This setup involves assigning a unique identifier to each viewer for server-side tracking. To enable this, you need to set up Insights Integration through the Integrations Module, which synchronizes data from Brightcove servers to your Marketing Automation Platform (MAP) servers, such as Marketo, HubSpot, Salesforce, or Eloqua. <br>
+    Use CAse: Used for dropping a cookie onto the page that will allow Brightcove to recognize known users.</p>
+    
+    <p><strong><a href="#custom">Custom Setup</a></strong>: The Analytics API offers an alternative way to identify your users, ideal for first-party cookie tracking with Eloqua or highly customized integrations. If you’re using it with a service like Eloqua that supports data synchronization via the Integrations Module, you can also enable it through the Integrations Module for seamless data handling. <br>
+    Use Case: Handling large-scale data, use in environments with client-side limitations, prioritizing data reliability.</p>
+    
+
+    <aside class="bcls-aside bcls-aside--information">Note: Before starting with any of the methods mentioned, make sure to <a href="#disable-campaign">disable the Campaign plugin</a> on all the players you plan to use, as Campaign 2.0 is not compatible with players that have the Campaign plugin enabled.</aside>
+  </section>
+    <section class="bcls-section">
+      <h2 id="disable-campaign">Disable Campaign</h2>
+      <p>If you are editing an existing Campaign player, you have to remove the existing <strong>Campaign</strong> plugin since <strong>Campaign 2.0</strong> doesn’t work with <em>Campaign Enabled players</em>.</p>
+      <p>Follow these steps to disable your <em>Campaign Enabled players</em>:</p>
+      <ol class="bcls-tasklist">
+        <li>Login to Video Cloud Studio.</li>
+        <li>Open the <strong>Players</strong> module.</li>
+        <li>Click the link for the <strong>Player</strong> you want to open the player properties page.</li>
+        <li>Click <strong>Campaign</strong> in the left navigation menu.
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/campaign.webp">
+          </figure>
+        </li>
+        <li>Disable the <strong>Enable Campaign</strong> checkbox.
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/disable-campaign.webp">
+          </figure>
+        </li>
+        <li><span class="button-blue">Save</span></li>
+        <li><span class="button-blue">Publish</span></li>
+      </ol>
+    </section>
+
+    <section class="bcls-section">
+        <h2 id="map-tracking">MAP Tracking (Client-Side) Setup</h2>
+        <ol class="bcls-tasklist-restart">
+            <li>
+                <strong><a href="#disable-campaign">Disable Campaign </a>on Existing Players</strong>
+            </li>
+            <li>
+                <p><strong>Enable MAPs Tracking</strong></p>
+                <p>To Setup MAPs (Marketo & Hubspot Client-Side Only) from the player details view, follow these steps:</p>
+                <ul>
+                    <li>On Video Cloud, open the <strong>Players</strong> module.</li>
+                    <li>Click the link for the <strong>Player</strong> you want to open the player properties page.</li>
+                    <li>Click the <strong>MAPs</strong> in the left navigation menu.
+                        <figure class="bcls-figure">
+                          <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/maps.webp">
+                        </figure>
+                      </li>
+                      <li><ol type="a">
+                        <li>On the MAPs page, select the <strong>Enable MAPs</strong> checkbox.</li>
+                        <li>Select your Service.</li>
+                        <li>Provide your respective <strong>Account ID</strong>.</li>
+                        <figure class="bcls-figure">
+                          <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/maps-steps.webp">
+                        </figure>
+                      </ol></li>
+                      
+                      <li><span class="button-blue">Save</span></li>
+                      <li><span class="button-blue">Publish</span></li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Interactivity Player Set Up</strong></p>
+                <p>To Set Up your Player to automatically create <strong>Interactive Projects</strong> from the player details view, follow these steps:</p>
+                <ul>
+                    <li>On the player properties page, click <strong>Interactivity</strong> in the left navigation menu.
+                        <figure class="bcls-figure">
+                          <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/interactivity.webp">
+                        </figure>
+                      </li>
+                      <li><ol type="a">
+                        <li>Check <strong>Enable Interactivity</strong>.</li>
+                        <li>Check <strong>Options (JSON)</strong> to enable Interactivity projects auto-creation. This reveals a textarea where you can insert a JSON configuration.</li>
+                        <li>Inside the textarea, insert the following JSON.
+                          <pre class="line-numbers"><code class="language-json" translate="No">{
+  "create": true
+ }
+                           </code></pre>
+                        </li>
+                        <figure class="bcls-figure">
+                          <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/interactivity-steps.webp">
+                        </figure>
+                      </ol></li>
+                      
+                      <li><span class="button-blue">Save</span></li>
+                      <li><span class="button-blue">Publish</span></li>
+                </ul>
+                
+            </li>
+            <li>
+                <p><strong><a target="_blank" href="https://studio.support.brightcove.com/interactivity/annotations/adding-lead-form.html#Adding_a_Lead_Form_Template">Create Lead form</a> in Interactivity Module</strong></p>
+            </li>
+        </ol>
+    </section>
+    <section class="bcls-section">
+        <h2 id="id-viewer">Viewer ID (Server-Side) Setup</h2>
+        <ol class="bcls-tasklist-restart">
+            <li>
+                <strong><a href="#disable-campaign">Disable Campaign </a>on Existing Players</strong>
+            </li>
+            <li>
+                <p><strong>Enable the Viewer ID</strong></p>
+                <p>Follow these steps to enable the Viewer ID Tracking:</p>
+                <ul>
+                    <li>On Video Cloud, open the <strong>Players</strong> module.</li>
+                    <li>Click the link for the <strong>Player</strong> you want to open the player properties page.</li>
+                    <li>Click the <strong>Viewer ID Tracking</strong> in the left navigation menu.
+                        <figure class="bcls-figure">
+                          <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/viewer-id.webp">
+                        </figure>
+                      </li>
+                      <li><ol type="a">
+                        <li>Click the <strong>Enable Viewer ID Tracking</strong> checkbox.</li>
+                        <li>Choose the 3rd Party Service from the <strong>Service</strong> dropdown (Hubspot, Marketo).</li>
+                        <li>Provide your respective <strong>Account ID</strong>.</li>
+                        <figure class="bcls-figure">
+                          <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/viewer-id-steps.webp">
+                        </figure>
+                      </ol></li>
+                      
+                      <li><span class="button-blue">Save</span></li>
+                      <li><span class="button-blue">Publish</span></li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Interactivity Player Set Up</strong></p>
+                <p>To Set Up your Player to automatically create <strong>Interactive Projects</strong> from the player details view, follow these steps:</p>
+                <ul>
+                    <li>On the player properties page, click <strong>Interactivity</strong> in the left navigation menu.
+                        <figure class="bcls-figure">
+                          <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/interactivity.webp">
+                        </figure>
+                      </li>
+                      <li><ol type="a">
+                        <li>Check <strong>Enable Interactivity</strong>.</li>
+                        <li>Check <strong>Options (JSON)</strong> to enable Interactivity projects auto-creation. This reveals a textarea where you can insert a JSON configuration.</li>
+                        <li>Inside the textarea, insert the following JSON.
+                          <pre class="line-numbers"><code class="language-json" translate="No">{
+                     "create": true
+                    }
+                           </code></pre>
+                        </li>
+                        <figure class="bcls-figure">
+                          <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/interactivity-steps.webp">
+                        </figure>
+                      </ol></li>
+                      
+                      <li><span class="button-blue">Save</span></li>
+                      <li><span class="button-blue">Publish</span></li>
+                </ul>
+                
+            </li>
+            <li>
+                <p><strong><a target="_blank" href="https://studio.support.brightcove.com/interactivity/annotations/adding-lead-form.html#Adding_a_Lead_Form_Template">Create Lead form</a> in Interactivity Module</strong></p>
+            </li>
+            <li>
+                <p><strong>Integration Set Up</strong></p>
+                <p>Setting up an integration is straightforward. However, you will need some information from the third-party vendor - exactly what you need will vary for different services, but will be clearly indicated by input fields in the setup dialog. Typical requirements are "Account id", "API key", and/or "Secret key". If you are unsure how to find or obtain a required piece of information, consult the vendor's documentation or support service.</p>
+                <ul>
+                    <li>Login to Studio</li>
+    <li>
+      Click the Integrations icon in the left-side navigation to open the Integrations module:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integrations-module-home.webp" alt="Integrations Module">
+        <figcaption class="bcls-caption--image">Integrations Module</figcaption>
+      </figure>
+    </li>
+    <li>
+      Click <strong>Customer Data Platforms</strong> to go to the data platform integrations:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/add-or-modify-integration.webp" alt="Customer Data Platform Integrations">
+        <figcaption class="bcls-caption--image">Customer Data Platform Integrations</figcaption>
+      </figure>
+    </li>
+    <li>As you see in the screenshot above, any existing integrations will be shown as a list and can be modified (see the next section). Here we will click <span class="button-blue">Add Integration</span> to create a new integration.</li>
+    <li>
+      In the <strong>Add Integration</strong> dialog, first select the service you want to integrate:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/add-integration.webp" alt="Add Integration Dialog">
+        <figcaption class="bcls-caption--image">Add Integration Dialog</figcaption>
+      </figure>
+    </li>
+    <li>
+      Next, fill in the required information according to the service you are integrating:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integration-setup-screen.webp" alt="Add Information for Integration Sample">
+        <figcaption class="bcls-caption--image">Add Information for Integration Sample</figcaption>
+      </figure>
+    </li>
+    <li>
+      Click <span class="button-blue">Save</span> to complete the setup.
+    </li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Modify an integration</strong></p>
+                <p>
+                    As shown above, in the list of existing integrations, there are three icons that allow you to:
+                    <ul>
+                      <li>Edit the integration</li>
+                      <li>Test the integration</li>
+                      <li>Delete the integration</li>
+                    </ul>
+                    <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/modify-integration.webp" alt="Modify an Integration">
+                      <figcaption class="bcls-caption--image">Modify an Integration</figcaption>
+                    </figure>
+                  </p>
+                  <aside class="bcls-aside bcls-aside--information language-editable">In some cases the Test icon will be grayed out, indicating that this functionality is not available for that particular integration.</aside>
+                  <p>If you click the <strong>Edit</strong> icon, a dialog similar to the Add Integration dialog will appear:</p>
+                  <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integration-edit-screen.webp" alt="Edit Integration Sample">
+                    <figcaption class="bcls-caption--image">Edit Integration Sample</figcaption>
+                  </figure>
+                  <p>Note the additional <strong>Integrations Properties</strong> tab. For some services, there will be additional properties you can set here; for others there are no additional properties.</p>
+                  
+            </li>
+        </ol>
+    </section>
+    <section class="bcls-section">
+        <h2 id="custom">Custom Setup</h2>
+        <ol class="bcls-tasklist-restart">
+            <li>
+                <strong><a href="#disable-campaign">Disable Campaign </a>on Existing Players</strong>
+            </li>
+            <li>
+                <strong><a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/analytics-api-unique-users.html">SetUser API</a></strong>
+            </li>
+            <li>
+                <p><strong>Interactivity Player Set Up</strong></p>
+                <p>To Set Up your Player to automatically create <strong>Interactive Projects</strong> from the player details view, follow these steps:</p>
+                <ul>
+                    <li>On the player properties page, click <strong>Interactivity</strong> in the left navigation menu.
+                        <figure class="bcls-figure">
+                          <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/interactivity.webp">
+                        </figure>
+                      </li>
+                      <li><ol type="a">
+                        <li>Check <strong>Enable Interactivity</strong>.</li>
+                        <li>Check <strong>Options (JSON)</strong> to enable Interactivity projects auto-creation. This reveals a textarea where you can insert a JSON configuration.</li>
+                        <li>Inside the textarea, insert the following JSON.
+                          <pre class="line-numbers"><code class="language-json" translate="No">{
+                     "create": true
+                    }
+                           </code></pre>
+                        </li>
+                        <figure class="bcls-figure">
+                          <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/interactivity-steps.webp">
+                        </figure>
+                      </ol></li>
+                      
+                      <li><span class="button-blue">Save</span></li>
+                      <li><span class="button-blue">Publish</span></li>
+                </ul>
+                
+            </li>
+            <li>
+                <p><strong><a target="_blank" href="https://studio.support.brightcove.com/interactivity/annotations/adding-lead-form.html#Adding_a_Lead_Form_Template">Create Lead form</a> in Interactivity Module</strong></p>
+            </li>
+            <li>
+                <p><strong>Integration Set Up</strong></p>
+                <p>Setting up an integration is straightforward. However, you will need some information from the third-party vendor - exactly what you need will vary for different services, but will be clearly indicated by input fields in the setup dialog. Typical requirements are "Account id", "API key", and/or "Secret key". If you are unsure how to find or obtain a required piece of information, consult the vendor's documentation or support service.</p>
+                <ul>
+                    <li>Login to Studio</li>
+    <li>
+      Click the Integrations icon in the left-side navigation to open the Integrations module:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integrations-module-home.webp" alt="Integrations Module">
+        <figcaption class="bcls-caption--image">Integrations Module</figcaption>
+      </figure>
+    </li>
+    <li>
+      Click <strong>Customer Data Platforms</strong> to go to the data platform integrations:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/add-or-modify-integration.webp" alt="Customer Data Platform Integrations">
+        <figcaption class="bcls-caption--image">Customer Data Platform Integrations</figcaption>
+      </figure>
+    </li>
+    <li>As you see in the screenshot above, any existing integrations will be shown as a list and can be modified (see the next section). Here we will click <span class="button-blue">Add Integration</span> to create a new integration.</li>
+    <li>
+      In the <strong>Add Integration</strong> dialog, first select the service you want to integrate:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/add-integration.webp" alt="Add Integration Dialog">
+        <figcaption class="bcls-caption--image">Add Integration Dialog</figcaption>
+      </figure>
+    </li>
+    <li>
+      Next, fill in the required information according to the service you are integrating:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integration-setup-screen.webp" alt="Add Information for Integration Sample">
+        <figcaption class="bcls-caption--image">Add Information for Integration Sample</figcaption>
+      </figure>
+    </li>
+    <li>
+      Click <span class="button-blue">Save</span> to complete the setup.
+    </li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Modify an integration</strong></p>
+                <p>
+                    As shown above, in the list of existing integrations, there are three icons that allow you to:
+                    <ul>
+                      <li>Edit the integration</li>
+                      <li>Test the integration</li>
+                      <li>Delete the integration</li>
+                    </ul>
+                    <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/modify-integration.webp" alt="Modify an Integration">
+                      <figcaption class="bcls-caption--image">Modify an Integration</figcaption>
+                    </figure>
+                  </p>
+                  <aside class="bcls-aside bcls-aside--information language-editable">In some cases the Test icon will be grayed out, indicating that this functionality is not available for that particular integration.</aside>
+                  <p>If you click the <strong>Edit</strong> icon, a dialog similar to the Add Integration dialog will appear:</p>
+                  <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integration-edit-screen.webp" alt="Edit Integration Sample">
+                    <figcaption class="bcls-caption--image">Edit Integration Sample</figcaption>
+                  </figure>
+                  <p>Note the additional <strong>Integrations Properties</strong> tab. For some services, there will be additional properties you can set here; for others there are no additional properties.</p>
+                  
+            </li>
+        </ol>
+    </section>
+
+  </section>
+  <section class="bcls-section">
+    <h2 id="related">Related documentation</h2>
+    <ul>
+      <li><p><a target="_blank" href="https://studio.support.brightcove.com/publish/general/step-step-using-players-module-create-and-publish-player.html">Create and Publish a Player</a></p></li>
+      
+        <li><p><a target="_blank" href="https://studio.support.brightcove.com/interactivity/annotations/adding-lead-form.html">Adding a Lead Form to a video</a></p></li>
+        <li><p><a target="_blank" href="https://studio.support.brightcove.com/interactivity/templates/applying-templates-projects.html">Applying Templates to Projects</a></p></li>
+      
+    </ul>
+
+  </section>
+
+</article>
