@@ -3626,8 +3626,8 @@
   <section class="bcls-section">
     <h2 id="limitations">Limitations</h2>
     <ul>
-      <!-- <li>Just-in-time user provisioning for SAML is supported. The first time users log in via IDP, their accounts will be automatically created in Video Cloud Studio. Permissions and module access control can be configured through the Admin Module in Video Cloud Studio.</li> -->
-      <li>Just-in-time user provisioning for SAML isn't currently supported. Users will still need to be added to accounts through the Studio, and permissions/module access control will be configured through the Studio User Administration UI. When new users are added to an account, they will inherit the SSO setup of the user who is adding them.</li>
+      <li>Just-in-time user provisioning for SAML is supported. The first time users log in via IDP, their accounts will be automatically created in Video Cloud Studio. Permissions and module access control can be configured through the Admin Module in Video Cloud Studio.</li>
+      <!-- <li>Just-in-time user provisioning for SAML isn't currently supported. Users will still need to be added to accounts through the Studio, and permissions/module access control will be configured through the Studio User Administration UI. When new users are added to an account, they will inherit the SSO setup of the user who is adding them.</li> -->
       <li>SSO cannot be enabled for trial accounts.</li>
       <li>The welcome email is <strong>not</strong> sent to new users if their Studio user accounts are configured for Studio SSO.</li>
     </ul>
@@ -3661,8 +3661,8 @@
       <ul>
         <li>SP-initiated login is supported via a special direct domain login URL that will look like this:<br />
           <code translate="No">https://signin.brightcove.com/login/ext/saml?behavior=xxxxxxxxx</code></li>
-        <li>It is also possible for users to go to the <code translate="No">signin.brightcove.com</code> page. When they type in username/password on the Brightcove signin page, they will be redirected to your IdP to login (if you are not already signed in). Note the password field gets ignored on the Brightcove login page - we only inspect the email address to see if the user is enabled for SSO.</li>
-        <!-- <li>Additionally, you can also visit <code translate="no">signin.brightcove.com</code> to log in. Upon entering the username on the Brightcove sign-in page, it will be checked, and if the user is SSO-enabled and not already signed in, the user will be redirected to your IDP for authentication.</li> -->
+        <!-- <li>It is also possible for users to go to the <code translate="No">signin.brightcove.com</code> page. When they type in username/password on the Brightcove signin page, they will be redirected to your IdP to login (if you are not already signed in). Note the password field gets ignored on the Brightcove login page - we only inspect the email address to see if the user is enabled for SSO.</li> -->
+        <li>Additionally, you can also visit <code translate="no">signin.brightcove.com</code> to log in. Upon entering the username on the Brightcove sign-in page, it will be checked, and if the user is SSO-enabled and not already signed in, the user will be redirected to your IDP for authentication.</li>
       </ul>
     </dd>
     <dd><details>
