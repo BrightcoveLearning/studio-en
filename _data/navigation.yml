@@ -742,7 +742,7 @@
         docs: 
           - name: Configuring Viewer ID Tracking
             url: /marketing-automation/general/viewer-id/viewer-id-tracking.html
-          - name: 'Utilizing <code>setUser</code>'
+          - name: 'Utilizing <code>user</code>'
             url: /marketing-automation/general/viewer-id/analytics-api-unique-users.html
       - name: External Systems
         url: /marketing-automation/general/data-to-external-systems/index.html
