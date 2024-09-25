@@ -144,6 +144,7 @@ grandparent: Marketing Automation
 </section>
 <section class="bcls-section">
   <h2 id="Set_up_an_integration">Integration Set Up</h2>
+  <aside class="bcls-aside bcls-aside--information">Note: Integrations can only be created by admin users in Video Cloud Studio.</aside>
   <aside class="bcls-aside bcls-aside--information">Note: Follow the <strong>Integration Set Up</strong> steps only if you are implementing <strong>server-side</strong> connections.</aside>
   <p>Setting up an integration is straightforward. However, you will need some information from the third-party vendor - exactly what you need will vary for different services, but will be clearly indicated by input fields in the setup dialog. Typical requirements are "Account id", "API key", and/or "Secret key". If you are unsure how to find or obtain a required piece of information, consult the vendor's documentation or support service.</p>
   <h3>Steps</h3>
@@ -204,6 +205,56 @@ grandparent: Marketing Automation
     <figcaption class="bcls-caption--image">Edit Integration Sample</figcaption>
   </figure>
   <p>Note the additional <strong>Integrations Properties</strong> tab. For some services, there will be additional properties you can set here; for others there are no additional properties.</p>
+</section>
+<section class="bcls-section">
+  <h2 id="Contact-vs-Viewing-Data-Integrations">Contact vs Viewing Data Integrations</h2>
+  <p>
+    Two different types of integrations are available: Contact and Viewing Data. The following table shows the differences between the two:
+  </p>
+  <table class="bcls-table">
+    <thead class="bcls-table__head">
+    <tr>
+    <th></th>
+    <th><strong>Contact</strong></th>
+    <th><strong>Viewing Data</strong></th>
+    </tr>
+    </thead>
+    <tbody class="bcls-table__body">
+    <tr>
+    <td><strong>Granularity</strong></td>
+    <td>Viewer level</td>
+    <td>Video view level</td>
+    </tr>
+    <tr>
+    <td><strong>Supported Targets</strong></td>
+    <td width ="">Blueshift, Braze, Custom S3, Eloqua,
+        HubSpot, Marketo, S3, 
+        Salesforce, Segment NodeJS
+      </td>
+    <td>Eloqua, S3, Salesforce</td>
+    </tr>
+    <tr>
+      <td><strong>Data Location in Map Instances</strong></td>
+      <td>Contact objects</td>
+      <td>Custom objects</td>
+    </tr>
+    <tr>
+      <td><strong>Data Overwritten or Appended</strong></td>
+      <td>Contact objects are overwritten on each update</td>
+      <td>Custom objects are appended on each update</td>
+    </tr>
+    <tr>
+      <td><strong>Schedule</strong></td>
+      <td>Daily or weekly</td>
+      <td>Daily</td>
+    </tr>
+    <tr>
+      <td><strong>Customizability</strong></td>
+      <td>Fields can be customized for certain integrations</td>
+      <td>Fields are fixed</td>
+    </tr>
+    </tbody>
+    </table>
 </section>
   </section>
   <section class="bcls-section">
