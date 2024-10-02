@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Server-side Connections</title>
+        <title>Finding your customer ID</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Passing data through server-side connection.">
+        <meta name="description" content="In this topic, you will learn how to find your customer ID across different platforms.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3583,7 +3583,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Server-side Connections</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/marketing-automation/general/data-to-external-systems/server-side/">Server side</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Finding your customer ID</li>
             
             
           </ol>
@@ -3596,70 +3600,120 @@
   <div class="container">
     <div class="docs-overview py-5">
       
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br>
       
-<article>
-    <h1 class=""></i> Server-side Connections</h1>
-    <article class="bcls-article">
-        <summary>Passing data through server-side connection.</summary>
-        <div class="row">
-        
-
-            <div class="col-12 col-lg-4 py-3">
-                <div class="card shadow-sm" style="background: white" onclick="window.location.href = ''">
-                    <div class="card-body">
-                        <h5 class="card-title text-center m-2">Getting Started</h5>
-                        <section class="flex-container">
-                            <div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><a href="/marketing-automation/general/data-to-external-systems/server-side/overview-server-side.html" style="text-decoration: none;">Overview: Server-side Connections</a></li>
-                                    <li class="list-group-item"><a href="/marketing-automation/general/data-to-external-systems/server-side/finding-your-customer-id.html" style="text-decoration: none;">Finding your customer ID</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        <div class="col-12 col-lg-4 py-3">
-            <div class="card shadow-sm" style="background: white" onclick="window.location.href = ''">
-                <div class="card-body">
-                    <h5 class="card-title text-center m-2">Viewing Data Integration</h5>
-                    <section class="flex-container">
-                        <div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><a href="/marketing-automation/general/data-to-external-systems/server-side/eloqua-integration.html" style="text-decoration: none;">Eloqua</a></li>
-                                <li class="list-group-item"><a href="/marketing-automation/general/data-to-external-systems/server-side/s3-integration.html" style="text-decoration: none;">S3</a></li>
-                                <li class="list-group-item"><a href="/marketing-automation/general/data-to-external-systems/server-side/salesforce-integration.html" style="text-decoration: none;">Salesforce</a></li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-lg-4 py-3">
-            <div class="card shadow-sm" style="background: white" onclick="window.location.href = ''">
-                <div class="card-body">
-                    <h5 class="card-title text-center m-2">Contact Object Integration</h5>
-                    <section class="flex-container">
-                        <div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/salesforce-sales-cloud/index.html" style="text-decoration: none;">Salesforce Sales Cloud</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_marketo.html" style="text-decoration: none;">Marketo</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_spotlight_hubspot.html" style="text-decoration: none;">Hubspot</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_eloqua.html">Eloqua</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_spotlight_braze.html">Braze</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration_spotlight_blueshift.html" style="text-decoration: none;">Blueshift</a></li>
-                                <li class="list-group-item"><a href="https://audience-insights.support.brightcove.com/integrations/integration-s3.html" style="text-decoration: none;">S3</a></li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-        </div>
-    </article>
-</article>
+      
+<h1>Finding your customer ID</h1>
+<article class="bcls-article">
+  <summary>In this topic, you will learn how to find your customer ID across different platforms.</summary>
   
+
+    <section class="bcls-section"></section>
+        <h2 id="braze">Braze</h2>
+        <br>
+        <ol class="bcls-tasklist">
+            <li>Log into Braze.</li>
+            <li>In the left side bar, hover over Audience.</li>
+            <li>Click Search Users.</li>
+            <li>Search for a user by email, alias, external ID, etc.</li>
+            <li>The Contact ID will be the User ID be on the top card.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/brazeid.webp">
+                </figure>
+            </li>
+        </ol>
+
+        <br>
+        <h2 id="eloqua">Eloqua</h2>
+        <br>
+        <ol class="bcls-tasklist-restart">
+            <li>Log into Eloqua.</li>
+            <li>Hover over the ID card icon in the top navigation bar.</li>
+            <li>Click Contacts.</li>
+            <li>In the search bar, search for a contact, e.g, by email.</li>
+            <li>Double-click on the contact in the table.</li>
+            <li>Click Field Details.</li>
+            <li>In the dropdown box, select All Contact Fields.</li>
+            <li>The Contact ID will be the Eloqua Contact ID.
+                <figure class="bcls-figure"></figure>
+                    <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/eloquaid.webp">
+                </figure>
+            </li>
+        </ol>
+
+        <br>
+        <h2 id="hubspot">Hubspot</h2>
+        <br>
+        <ol class="bcls-tasklist-restart">
+            <li>Log into Hubspot.</li>
+            <li>In the right navigation bar, hover over CRM.</li>
+            <li>Click Contacts.</li>
+            <li>In the search bar, search for a contact, e.g, by email.</li>
+            <li>The Contact ID will be at the end of the URL.
+                <figure class="bcls-figure"></figure>
+                    <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/hubspot-id.webp">
+                </figure>
+            </li>
+        </ol>
+
+        <br>
+        <h2 id="marketo">Marketo</h2>
+        <br>
+        <ol class="bcls-tasklist-restart">
+            <li>Log into Marketo.</li>
+            <li>In the top navigation bar, click Database.</li>
+            <li>In the search bar, search for a contact, e.g, by email.</li>
+            <li>In the search bar, search for a contact, e.g, by email.</li>
+            <li>The Contact ID will be in the ID column of the Leads table.
+                <figure class="bcls-figure"></figure>
+                    <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/marketo-id.webp">
+                </figure>
+            </li>
+            <aside class="bcls-aside bcls-aside--tip language-editable">Also, note the Created date.</aside>
+        </ol>
+
+        <br>
+        <h2 id="s3">S3</h2>
+        <br>
+        <ol class="bcls-tasklist-restart">
+            <li>Log into Brightcove Video Cloud.</li>
+            <li>In the left navigation bar, click the Analytics module.</li>
+            <li>In the left navigation bar, click Performance.</li>
+            <li>Group by Viewer.</li>
+            <li>Pick a Contact ID from the Viewer column.
+                <figure class="bcls-figure"></figure>
+                    <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/s3-id.webp">
+                </figure>
+            </li>
+        </ol>
+
+        <br>
+        <h2 id="salesforce">Salesforce</h2>
+        <br>
+        <ol class="bcls-tasklist-restart">
+            <li>Log into Salesforce.</li>
+            <li>In the top navigation bar, click Contacts.</li>
+            <li>Click a contact in the table.</li>
+            <li>The Contact ID will be in the URL after "/Contact/"
+                <figure class="bcls-figure"></figure>
+                    <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/test-integration/salesforce-id.webp">
+                </figure>
+            </li>
+        </ol>
+    </section>
+</article>
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">Page Contents</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
   
 <!-- </div> -->
 </div>
