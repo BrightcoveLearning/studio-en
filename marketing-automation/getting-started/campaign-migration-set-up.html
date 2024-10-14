@@ -255,8 +255,49 @@ grandparent: Marketing Automation
     </tr>
     </tbody>
     </table>
-</section>
+    <p>For more details on how to set up a specific integration, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/data-to-external-systems/server-side/">Server-side Connections</a></p>
   </section>
+  <section class="bcls-section">
+  <h2 id="custumer-id-vs-viewer-token">Customer ID vs Viewer Token</h2>
+  <h3>Customer ID</h3>
+  <p>All MAP integrations support syncing data by the Customer ID. The Customer ID is the identifier for a Contact in a MAP instance. It is used to attribute a video view to a specific Customer, and it differs with each MAP. To push data to a MAP, the Customer ID must be known and set in the Player as the User.</p>
+  <p>For more details on how to find the Customer ID in your MAP, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/data-to-external-systems/server-side/finding-your-customer-id.html">Finding your customer ID</a>.</p>
+  <p>For more details on how to set a User in the Player, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/analytics-api-unique-users.html">Using user</a></p>
+
+  <h3>Viewer Token</h3>
+  <p>For certain MAP integrations, instead of using a Customer ID, customers can drop a cookie containing a viewer token from their MAP and track this value into Insights using the Brightcove Viewer ID plugin. The integrations that currently support viewer token syncing are:</p>
+  <div class="table-responsive">
+    <table class="bcls-table">
+          <thead class="bcls-table__head">
+              <tr>
+                  <th>Viewing Data</th>
+                  <th>Contact</th>
+              </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+              <tr>
+                  <td>Eloqua</td>
+                  <td>Eloqua</td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td>Marketo</td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td>Hubspot</td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+    <p>For more details on how to configure Viewer ID Tracking in the Player, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/viewer-id-tracking.html">Configuring Viewer ID Tracking</a></p>
+
+    <p>Since viewer tokens are not stored permanently in browsers (as they can be cleared when a cache is reset or when cookies expire), it is recommended to use this integration alongside a Lead Form. Lead forms will allow viewers to create Contacts in a MAP while directly associating these Contacts with any viewer tokens that are tracked into Insights. Before data is pushed to the MAP, these viewer tokens are translated to a Customer ID, ensuring the data is correctly attributed to the Contact created by the Lead Form. This eliminates the need to manually set the User in the Player.</p>
+    <p>For more details on how to add a Lead Form to the Player, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/lead-forms/adding-lead-form.html">Adding a Lead Form</a></p>
+    
+
+  </section>
+
   <section class="bcls-section">
     <h2 id="related">Related documentation</h2>
     <ul>
