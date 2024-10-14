@@ -3606,7 +3606,8 @@
       <li>Video Cloud Studio supports the SAML 2.0 SSO protocol</li>
       <li>Identity mapping is based on the username (full email address) rather than just a single email domain. This provides more flexibility for publishers who want some users enabled for SSO and others to go through the regular Video Cloud Studio login.</li>
       <li>Once an account and its existing users are configured for SSO, new users who are added to the account through the Video Cloud Studio UI will inherit the SSO setup of the user who is adding them</li>
-      <li>Video Cloud Studio supports Service Provider initiated login for SSO. We do not support direct IdP initiated at this time but can provide a URL to bypass the Video Cloud Studio login screen that can be linked to from your Identity Provider portal.</li>
+      <li>Just-in-time user provisioning for SAML is supported. The first time users log in via IDP, their accounts will be automatically created in Video Cloud Studio. Permissions and module access control can be configured through the Admin Module in Video Cloud Studio.</li>
+      <!-- <li>Video Cloud Studio supports Service Provider initiated login for SSO. We do not support direct IdP initiated at this time but can provide a URL to bypass the Video Cloud Studio login screen that can be linked to from your Identity Provider portal.</li> -->
     </ul>
     <p>For more information on having your account enabled for SSO, contact your Customer Success Manager.</p>
   </section>
@@ -3622,7 +3623,7 @@
   <section class="bcls-section">
     <h2 id="limitations">Limitations</h2>
     <ul>
-      <li>Just-in-time user provisioning for SAML is supported. The first time users log in via IDP, their accounts will be automatically created in Video Cloud Studio. Permissions and module access control can be configured through the Admin Module in Video Cloud Studio.</li>
+      <!-- <li>Just-in-time user provisioning for SAML is supported. The first time users log in via IDP, their accounts will be automatically created in Video Cloud Studio. Permissions and module access control can be configured through the Admin Module in Video Cloud Studio.</li> -->
       <!-- <li>Just-in-time user provisioning for SAML isn't currently supported. Users will still need to be added to accounts through the Studio, and permissions/module access control will be configured through the Studio User Administration UI. When new users are added to an account, they will inherit the SSO setup of the user who is adding them.</li> -->
       <li>SSO cannot be enabled for trial accounts.</li>
       <li>The welcome email is <strong>not</strong> sent to new users if their Studio user accounts are configured for Studio SSO.</li>
