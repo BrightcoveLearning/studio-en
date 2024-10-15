@@ -320,7 +320,7 @@
     - name: Publisher Insights
       url: /analytics/reports/publisher-insights.html
     - name: Marketing Insights
-      url: /analytics/reports/marketing-insights.html
+      url: /analytics/reports/marketing-comms-insights.html
     - name: Managing Scheduled Reports
       url: /analytics/reports/managing-scheduled-reports.html
     - name: Performance Report Reference
