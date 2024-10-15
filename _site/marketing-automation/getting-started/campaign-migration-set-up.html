@@ -3622,13 +3622,13 @@
     <h2 id="supported_platforms">Supported third-party platforms</h2>
     <p>The following third-party platforms are currently supported for this workflow:</p>
     <ul>
-      <li>client-side data capture (<a href="#maps">MAPs Tracking</a>)
+      <li>client-side data capture
         <ul>
           <li><strong>Marketo</strong></li>
           <li><strong>Hubspot</strong></li>
         </ul>
       </li>
-      <li>server-side data capture (<a href="#Set_up_an_integration">Integration Set Up</a>)
+      <li>server-side data capture
         <ul>
           <li><strong>Marketo</strong></li>
           <li><strong>Hubspot</strong></li>
@@ -3638,10 +3638,123 @@
       </li>
     </ul>
 
-    <aside class="bcls-aside bcls-aside--information">
+    <!-- <aside class="bcls-aside bcls-aside--information">
       <strong>Note:</strong> There are multiple methods to collect <strong>viewer ID</strong> and viewer's <em>data</em> within the Brightcove ecosystem. For instance, the <strong>setUser function</strong> or set the <strong>Player Plugin</strong>. In this documentation, we will concentrate on the <strong>Player Plugin</strong> in conjunction with <strong>Interactive Lead forms</strong>.
-  </aside>
+  </aside> -->
   </section>
+  <section class="bcls-section">
+    <h2 id="tracking-methods">Tracking Methods</h2>
+    <p>When working with Brightcove Campaign 2.0, you have three primary methods for tracking user interactions and campaign performance.</p>
+    <p><strong><a href="#map-tracking">MAP Tracking</a> (Client-Side) Setup</strong>: This setup allows you to collect real-time viewing data directly from the Brightcove player to your Marketing Automation Platform (MAP) via the browser. Since no campaign data is stored on Brightcove servers, there's no need to enable Insights, making this a direct and efficient connection between the player and your MAP. <br>
+    Use Case: Real-time data collection, immediate marketing actions, easy setup.</p>
+    
+    <p><strong><a href="#id-viewer">Viewer ID</a> (Server-Side) Setup</strong>: This setup involves assigning a unique identifier to each viewer for server-side tracking. To enable this, you need to set up Insights Integration through the Integrations Module, which synchronizes data from Brightcove servers to your Marketing Automation Platform (MAP) servers, such as Marketo, HubSpot, Salesforce, or Eloqua. <br>
+    Use Case: Used for dropping a cookie onto the page that will allow Brightcove to recognize known users.</p>
+    
+    <p><strong><a href="#custom">Custom Setup</a></strong>: The Analytics API offers an alternative way to identify your users, ideal for highly customized integrations.<br>
+    Use Case: Handling large-scale data, use in environments with client-side limitations, prioritizing data reliability.</p>
+    
+
+    <aside class="bcls-aside bcls-aside--information">Note: Before starting with any of the methods mentioned, make sure to <a href="#disable-campaign">disable the Campaign plugin</a> on all the players you plan to use, as Campaign 2.0 is not compatible with players that have the Campaign plugin enabled.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="map-tracking">MAP Tracking (Client-Side) Setup</h2>
+    <ol class="bcls-tasklist-restart">
+        <li>
+            <strong><a href="#disable-campaign">Disable Campaign </a>on Existing Players</strong>
+        </li>
+        <li>
+            <p><strong>Enable MAPs Tracking</strong></p>
+            <p>To Setup MAPs (Marketo & Hubspot Client-Side Only) from the player details view, follow these steps:</p>
+            <ul>
+                <li>On Video Cloud, open the <strong>Players</strong> module.</li>
+                <li>Click the link for the <strong>Player</strong> you want to open the player properties page.</li>
+                <li>Click the <strong>MAPs</strong> in the left navigation menu.
+                    <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/maps.webp">
+                    </figure>
+                  </li>
+                  <li><ol type="a">
+                    <li>On the MAPs page, select the <strong>Enable MAPs</strong> checkbox.</li>
+                    <li>Select your Service.</li>
+                    <li>Provide your respective <strong>Account ID</strong>.</li>
+                    <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/maps-steps.webp">
+                    </figure>
+                  </ol></li>
+                  
+                  <li><p><span class="button-blue">Save</span></p></li>
+                  <li><p><span class="button-blue">Publish</span></p></li>
+            </ul>
+        </li>
+        <li><strong><a href="#interactivity-player">Set Up Interactivity Player</a></strong>
+        </li>
+        <li>
+            <p><strong><a target="_blank" href="https://studio.support.brightcove.com/interactivity/annotations/adding-lead-form.html#Adding_a_Lead_Form_Template">Create Lead form</a> in Interactivity Module</strong></p>
+        </li>
+    </ol>
+</section>
+<section class="bcls-section">
+    <h2 id="id-viewer">Viewer ID (Server-Side) Setup</h2>
+    <ol class="bcls-tasklist-restart">
+        <li>
+            <strong><a href="#disable-campaign">Disable Campaign </a>on Existing Players</strong>
+        </li>
+        <li>
+            <p><strong>Enable the Viewer ID</strong></p>
+            <p>Follow these steps to enable the Viewer ID Tracking:</p>
+            <ul>
+                <li>On Video Cloud, open the <strong>Players</strong> module.</li>
+                <li>Click the link for the <strong>Player</strong> you want to open the player properties page.</li>
+                <li>Click the <strong>Viewer ID Tracking</strong> in the left navigation menu.
+                    <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/viewer-id.webp">
+                    </figure>
+                  </li>
+                  <li><ol type="a">
+                    <li>Click the <strong>Enable Viewer ID Tracking</strong> checkbox.</li>
+                    <li>Choose the 3rd Party Service from the <strong>Service</strong> dropdown (Hubspot, Marketo).</li>
+                    <li>Provide your respective <strong>Account ID</strong>.</li>
+                    <figure class="bcls-figure">
+                      <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/viewer-id-steps.webp">
+                    </figure>
+                  </ol></li>
+                  
+                  <li><p><span class="button-blue">Save</span></p></li>
+                  <li><p><span class="button-blue">Publish</span></p></li>
+            </ul>
+        </li>
+        <li><strong><a href="#interactivity-player">Set Up Interactivity Player</a></strong>
+        </li>
+        <li>
+            <p><strong><a target="_blank" href="https://studio.support.brightcove.com/interactivity/annotations/adding-lead-form.html#Adding_a_Lead_Form_Template">Create Lead form</a> in Interactivity Module</strong></p>
+        </li>
+        <li><strong><a href="#integration-set-up">Set Up Integration</a></strong>
+        </li>
+        <li><strong><a href="#modify-integration">Modify an integration</a></strong>
+        </li>
+    </ol>
+</section>
+<section class="bcls-section">
+    <h2 id="custom">Custom Setup</h2>
+    <ol class="bcls-tasklist-restart">
+        <li>
+            <strong><a href="#disable-campaign">Disable Campaign </a>on Existing Players</strong>
+        </li>
+        <li>
+            <strong><a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/analytics-api-unique-users.html">SetUser API</a></strong>
+        </li>
+        <li><strong><a href="#interactivity-player">Set Up Interactivity Player</a></strong>
+        </li>
+        <li>
+            <p><strong><a target="_blank" href="https://studio.support.brightcove.com/interactivity/annotations/adding-lead-form.html#Adding_a_Lead_Form_Template">Create Lead form</a> in Interactivity Module</strong></p>
+        </li>
+        <li><strong><a href="#integration-set-up">Set Up Integration</a></strong>
+        </li>
+        <li><strong><a href="#modify-integration">Modify an Integration</a></strong>
+        </li>
+    </ol>
+</section>
     <section class="bcls-section">
       <h2 id="disable-campaign">Disable Campaign</h2>
       <p>If you are editing an existing Campaign player, you have to remove the existing <strong>Campaign</strong> plugin since <strong>Campaign 2.0</strong> doesn’t work with <em>Campaign Enabled players</em>.</p>
@@ -3664,93 +3777,39 @@
         <li><span class="button-blue">Publish</span></li>
       </ol>
     </section>
-
     <section class="bcls-section">
-      <h2 id="viewer-id">Enable the Viewer ID Tracking</h2>
-      <p>Follow these steps to enable the <strong>Viewer ID Tracking</strong> plugin from the player details view:</p>
-      <ol class="bcls-tasklist">
-        <li>Click the <strong>Viewer ID Tracking</strong> in the left navigation menu.
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/viewer-id.webp">
-          </figure>
-        </li>
-        <li><ol type="a">
-          <li>Click the <strong>Enable Viewer ID Tracking</strong> checkbox.</li>
-          <li>Choose the 3rd Party Service from the <strong>Service</strong> dropdown (Hubspot, Marketo).</li>
-          <li>Provide your respective <strong>Account ID</strong>.</li>
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/viewer-id-steps.webp">
-          </figure>
-        </ol></li>
-        
-        <li><span class="button-blue">Save</span></li>
-        <li><span class="button-blue">Publish</span></li>
-      </ol>
+      <h2 id="interactivity-player">Interactivity Player Set Up</h2>
+      <p>To Set Up your Player to automatically create <strong>Interactive Projects</strong> from the player details view, follow these steps:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>On the player properties page, click <strong>Interactivity</strong> in the left navigation menu.
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/interactivity.webp">
+            </figure>
+          </li>
+          <li><ol type="a">
+            <li>Check <strong>Enable Interactivity</strong>.</li>
+            <li>Check <strong>Options (JSON)</strong> to enable Interactivity projects auto-creation. This reveals a textarea where you can insert a JSON configuration.</li>
+            <li>Inside the textarea, insert the following JSON.
+              <pre class="line-numbers"><code class="language-json" translate="No">{
+"create": true
+}
+               </code></pre>
+            </li>
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/interactivity-steps.webp">
+            </figure>
+          </ol></li>
+          
+          <li><span class="button-blue">Save</span></li>
+          <li><span class="button-blue">Publish</span></li>
+    </ol>
     </section>
-
-<section class="bcls-section">
-  <h2 id="interactivity-player">Interactivity Player Set Up</h2>
-  <p>To Set Up your <strong>Player</strong> to automatically create <strong>Interactive Projects</strong> that can receive <strong><a target="_blank" href="https://studio.support.brightcove.com/interactivity/annotations/adding-lead-form.html">Lead Forms</a></strong>, from the player details view, follow these steps:</p>
-  <ol class="bcls-tasklist">
-    <li>Click <strong>Interactivity</strong> in the left navigation menu.
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/interactivity.webp">
-      </figure>
-    </li>
-    <li><ol type="a">
-      <li>Check <strong>Enable Interactivity</strong>.</li>
-      <li>Check <strong>Options (JSON)</strong> to enable Interactivity projects auto-creation. This reveals a textarea where you can insert a JSON configuration.</li>
-      <li>Inside the textarea, insert the following JSON.
-        <pre class="line-numbers"><code class="language-json" translate="No">{
-   "create": true
-  }
-         </code></pre>
-      </li>
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/interactivity-steps.webp">
-      </figure>
-    </ol></li>
-    
-    <li><span class="button-blue">Save</span></li>
-    <li><span class="button-blue">Publish</span></li>
-  </ol>
-  <aside class="bcls-aside bcls-aside--information"><p><strong>Note</strong>: Once the changes have taken effect, any video played within this Player will have a Project created automatically.</p>
-  <p>When creating Projects from videos, any existing tags in the Media Module are copied to the Project. To better manage videos with lead forms, consider assigning them a unique tag in the Media Module.</p>
-  </aside>
-
-</section>
-
-<section class="bcls-section">
-  <h2 id="maps">Set up MAPs Tracking</h2>
-  <aside class="bcls-aside bcls-aside--information">Note: <strong>MAPs tracking</strong> is required solely for <strong>client-side integrations</strong>. This tracking enables the capture and analysis of viewer interactions directly through the video player.</aside>
-   <p>To Setup MAPs (Marketo & Hubspot Client-Side Only) from the player details view, follow these steps:</p>
-   <ol class="bcls-tasklist">
-     <li>Click the <strong>MAPs</strong> in the left navigation menu.
-       <figure class="bcls-figure">
-         <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/maps.webp">
-       </figure>
-     </li>
-     <li><ol type="a">
-       <li>On the MAPs page, select the <strong>Enable MAPs</strong> checkbox.</li>
-       <li>Select your Service.</li>
-       <li>Provide your respective <strong>Account ID</strong>.</li>
-       <figure class="bcls-figure">
-         <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/maps-steps.webp">
-       </figure>
-     </ol></li>
-     
-     <li><span class="button-blue">Save</span></li>
-     <li><span class="button-blue">Publish</span></li>
-   </ol>
-</section>
-<section class="bcls-section">
-  <h2 id="Set_up_an_integration">Integration Set Up</h2>
-  <aside class="bcls-aside bcls-aside--information">Note: Integrations can only be created by admin users in Video Cloud Studio.</aside>
-  <aside class="bcls-aside bcls-aside--information">Note: Follow the <strong>Integration Set Up</strong> steps only if you are implementing <strong>server-side</strong> connections.</aside>
-  <p>Setting up an integration is straightforward. However, you will need some information from the third-party vendor - exactly what you need will vary for different services, but will be clearly indicated by input fields in the setup dialog. Typical requirements are "Account id", "API key", and/or "Secret key". If you are unsure how to find or obtain a required piece of information, consult the vendor's documentation or support service.</p>
-  <h3>Steps</h3>
-  <ol class="bcls-tasklist-restart">
-    <li>Login to Studio</li>
+    <section class="bcls-section">
+      <h2 id="integration-set-up">Integration Set Up</h2>
+      <aside class="bcls-aside bcls-aside--information">Note: Integrations can only be created by admin users in Video Cloud Studio.</aside>
+      <p>Setting up an integration is straightforward. However, you will need some information from the third-party vendor - exactly what you need will vary for different services, but will be clearly indicated by input fields in the setup dialog. Typical requirements are "Account id", "API key", and/or "Secret key". If you are unsure how to find or obtain a required piece of information, consult the vendor's documentation or support service.</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Login to Studio</li>
     <li>
       Click the Integrations icon in the left-side navigation to open the Integrations module:
       <figure class="bcls-figure">
@@ -3783,122 +3842,122 @@
     <li>
       Click <span class="button-blue">Save</span> to complete the setup.
     </li>
-  </ol>
-</section>
-<section class="bcls-section">
-  <h2 id="Modify-an-integration">Modify an integration</h2>
-  <p>
-    As shown above, in the list of existing integrations, there are three icons that allow you to:
-    <ul>
-      <li>Edit the integration</li>
-      <li>Test the integration</li>
-      <li>Delete the integration</li>
-    </ul>
+    </ol>
+    </section>
+    <section class="bcls-section">
+      <h2 id="modify-integration">Modify an integration</h2>
+      <p>In the list of existing integrations, there are three icons that allow you to:</p>
+      <ul>
+        <li>Edit the integration</li>
+        <li>Test the integration</li>
+        <li>Delete the integration</li>
+      </ul>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/modify-integration.webp" alt="Modify an Integration">
+        <figcaption class="bcls-caption--image">Modify an Integration</figcaption>
+      </figure>
+    </p>
+    <aside class="bcls-aside bcls-aside--information language-editable">In some cases the Test icon will be grayed out, indicating that this functionality is not available for that particular integration.</aside>
+    <p>If you click the <strong>Edit</strong> icon, a dialog similar to the Add Integration dialog will appear:</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/modify-integration.webp" alt="Modify an Integration">
-      <figcaption class="bcls-caption--image">Modify an Integration</figcaption>
+      <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integration-edit-screen.webp" alt="Edit Integration Sample">
+      <figcaption class="bcls-caption--image">Edit Integration Sample</figcaption>
     </figure>
-  </p>
-  <aside class="bcls-aside bcls-aside--information language-editable">In some cases the Test icon will be grayed out, indicating that this functionality is not available for that particular integration.</aside>
-  <p>If you click the <strong>Edit</strong> icon, a dialog similar to the Add Integration dialog will appear:</p>
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/s-integrations-img/customer-data-playforms/user-sync-configuration/integration-edit-screen.webp" alt="Edit Integration Sample">
-    <figcaption class="bcls-caption--image">Edit Integration Sample</figcaption>
-  </figure>
-  <p>Note the additional <strong>Integrations Properties</strong> tab. For some services, there will be additional properties you can set here; for others there are no additional properties.</p>
-</section>
-<section class="bcls-section">
-  <h2 id="Contact-vs-Viewing-Data-Integrations">Contact vs Viewing Data Integrations</h2>
-  <p>
-    Two different types of integrations are available: Contact and Viewing Data. The following table shows the differences between the two:
-  </p>
-  <table class="bcls-table">
-    <thead class="bcls-table__head">
-    <tr>
-    <th></th>
-    <th><strong>Contact</strong></th>
-    <th><strong>Viewing Data</strong></th>
-    </tr>
-    </thead>
-    <tbody class="bcls-table__body">
-    <tr>
-    <td><strong>Granularity</strong></td>
-    <td>Viewer level</td>
-    <td>Video view level</td>
-    </tr>
-    <tr>
-    <td><strong>Supported Targets</strong></td>
-    <td width ="">Blueshift, Braze, Custom S3, Eloqua,
-        HubSpot, Marketo, S3, 
-        Salesforce, Segment NodeJS
-      </td>
-    <td>Eloqua, S3, Salesforce</td>
-    </tr>
-    <tr>
-      <td><strong>Data Location in Map Instances</strong></td>
-      <td>Contact objects</td>
-      <td>Custom objects</td>
-    </tr>
-    <tr>
-      <td><strong>Data Overwritten or Appended</strong></td>
-      <td>Contact objects are overwritten on each update</td>
-      <td>Custom objects are appended on each update</td>
-    </tr>
-    <tr>
-      <td><strong>Schedule</strong></td>
-      <td>Daily or weekly</td>
-      <td>Daily</td>
-    </tr>
-    <tr>
-      <td><strong>Customizability</strong></td>
-      <td>Fields can be customized for certain integrations</td>
-      <td>Fields are fixed</td>
-    </tr>
-    </tbody>
-    </table>
-    <p>For more details on how to set up a specific integration, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/data-to-external-systems/server-side/">Server-side Connections</a></p>
-  </section>
-  <section class="bcls-section">
-  <h2 id="custumer-id-vs-viewer-token">Customer ID vs Viewer Token</h2>
-  <h3>Customer ID</h3>
-  <p>All MAP integrations support syncing data by the Customer ID. The Customer ID is the identifier for a Contact in a MAP instance. It is used to attribute a video view to a specific Customer, and it differs with each MAP. To push data to a MAP, the Customer ID must be known and set in the Player as the User.</p>
-  <p>For more details on how to find the Customer ID in your MAP, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/data-to-external-systems/server-side/finding-your-customer-id.html">Finding your customer ID</a>.</p>
-  <p>For more details on how to set a User in the Player, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/analytics-api-unique-users.html">Using user</a></p>
-
-  <h3>Viewer Token</h3>
-  <p>For certain MAP integrations, instead of using a Customer ID, customers can drop a cookie containing a viewer token from their MAP and track this value into Insights using the Brightcove Viewer ID plugin. The integrations that currently support viewer token syncing are:</p>
-  <div class="table-responsive">
-    <table class="bcls-table">
-          <thead class="bcls-table__head">
-              <tr>
-                  <th>Viewing Data</th>
-                  <th>Contact</th>
-              </tr>
-          </thead>
-          <tbody class="bcls-table__body">
-              <tr>
-                  <td>Eloqua</td>
-                  <td>Eloqua</td>
-              </tr>
-              <tr>
-                  <td></td>
-                  <td>Marketo</td>
-              </tr>
-              <tr>
-                  <td></td>
-                  <td>Hubspot</td>
-              </tr>
-          </tbody>
-      </table>
-    </div>
-    <p>For more details on how to configure Viewer ID Tracking in the Player, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/viewer-id-tracking.html">Configuring Viewer ID Tracking</a></p>
-
-    <p>Since viewer tokens are not stored permanently in browsers (as they can be cleared when a cache is reset or when cookies expire), it is recommended to use this integration alongside a Lead Form. Lead forms will allow viewers to create Contacts in a MAP while directly associating these Contacts with any viewer tokens that are tracked into Insights. Before data is pushed to the MAP, these viewer tokens are translated to a Customer ID, ensuring the data is correctly attributed to the Contact created by the Lead Form. This eliminates the need to manually set the User in the Player.</p>
-    <p>For more details on how to add a Lead Form to the Player, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/lead-forms/adding-lead-form.html">Adding a Lead Form</a></p>
+    <p>Note the additional <strong>Integrations Properties</strong> tab. For some services, there will be additional properties you can set here; for others there are no additional properties.</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="Contact-vs-Viewing-Data-Integrations">Contact vs Viewing Data Integrations</h2>
+      <p>
+        Two different types of integrations are available: Contact and Viewing Data. The following table shows the differences between the two:
+      </p>
+      <table class="bcls-table">
+        <thead class="bcls-table__head">
+        <tr>
+        <th></th>
+        <th><strong>Contact</strong></th>
+        <th><strong>Viewing Data</strong></th>
+        </tr>
+        </thead>
+        <tbody class="bcls-table__body">
+        <tr>
+        <td><strong>Granularity</strong></td>
+        <td>Viewer level</td>
+        <td>Video view level</td>
+        </tr>
+        <tr>
+        <td><strong>Supported Targets</strong></td>
+        <td width ="">Blueshift, Braze, Custom S3, Eloqua,
+            HubSpot, Marketo, S3, 
+            Salesforce, Segment NodeJS
+          </td>
+        <td>Eloqua, S3, Salesforce</td>
+        </tr>
+        <tr>
+          <td><strong>Data Location in Map Instances</strong></td>
+          <td>Contact objects</td>
+          <td>Custom objects</td>
+        </tr>
+        <tr>
+          <td><strong>Data Overwritten or Appended</strong></td>
+          <td>Contact objects are overwritten on each update</td>
+          <td>Custom objects are appended on each update</td>
+        </tr>
+        <tr>
+          <td><strong>Schedule</strong></td>
+          <td>Daily or weekly</td>
+          <td>Daily</td>
+        </tr>
+        <tr>
+          <td><strong>Customizability</strong></td>
+          <td>Fields can be customized for certain integrations</td>
+          <td>Fields are fixed</td>
+        </tr>
+        </tbody>
+        </table>
+        <p>For more details on how to set up a specific integration, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/data-to-external-systems/server-side/">Server-side Connections</a></p>
+      </section>
+      <section class="bcls-section">
+      <h2 id="custumer-id-vs-viewer-token">Customer ID vs Viewer Token</h2>
+      <h3>Customer ID</h3>
+      <p>All MAP integrations support syncing data by the Customer ID. The Customer ID is the identifier for a Contact in a MAP instance. It is used to attribute a video view to a specific Customer, and it differs with each MAP. To push data to a MAP, the Customer ID must be known and set in the Player as the User.</p>
+      <p>For more details on how to find the Customer ID in your MAP, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/data-to-external-systems/server-side/finding-your-customer-id.html">Finding your customer ID</a>.</p>
+      <p>For more details on how to set a User in the Player, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/analytics-api-unique-users.html">Using user</a></p>
     
+      <h3>Viewer Token</h3>
+      <p>For certain MAP integrations, instead of using a Customer ID, customers can drop a cookie containing a viewer token from their MAP and track this value into Insights using the Brightcove Viewer ID plugin. The integrations that currently support viewer token syncing are:</p>
+      <div class="table-responsive">
+        <table class="bcls-table">
+              <thead class="bcls-table__head">
+                  <tr>
+                      <th>Viewing Data</th>
+                      <th>Contact</th>
+                  </tr>
+              </thead>
+              <tbody class="bcls-table__body">
+                  <tr>
+                      <td>Eloqua</td>
+                      <td>Eloqua</td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>Marketo</td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>Hubspot</td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+        <p>For more details on how to configure Viewer ID Tracking in the Player, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/viewer-id/viewer-id-tracking.html">Configuring Viewer ID Tracking</a></p>
+    
+        <p>Since viewer tokens are not stored permanently in browsers (as they can be cleared when a cache is reset or when cookies expire), it is recommended to use this integration alongside a Lead Form. Lead forms will allow viewers to create Contacts in a MAP while directly associating these Contacts with any viewer tokens that are tracked into Insights. Before data is pushed to the MAP, these viewer tokens are translated to a Customer ID, ensuring the data is correctly attributed to the Contact created by the Lead Form. This eliminates the need to manually set the User in the Player.</p>
+        <p>For more details on how to add a Lead Form to the Player, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/lead-forms/adding-lead-form.html">Adding a Lead Form</a></p>
+        
+    
+      </section>
 
-  </section>
-
+    
   <section class="bcls-section">
     <h2 id="related">Related documentation</h2>
     <ul>
