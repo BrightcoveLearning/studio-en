@@ -10,6 +10,16 @@ parent: Managing Video Files
     <section class="bcls-section">
         <p>When users use other AI tools, like MidJourney for synthetic images or Runway for 4-second synthetic videos, how they submit the prompt has an impact. It's like a new skill that creators need to have. Without that prompt, the AI tool will give them an asset that does not fit the purpose.</p>
         <p>The same applies to Video Cloud, AI, and Enterprise use cases. If Video Cloud users add a prompt in Wochit AI that says, 'Make me a video of a dolphin wearing a Santa hat,' it will not work because Wochit does not produce synthetic video and will have to search for those images or clips in licensed content libraries. So, the result will be a generic, simple video that lacks storytelling skills to captivate the audience.</p>
+        <aside class="bcls-aside bcls-aside--tip language-editable">
+            This Wochit feature will be enabled for Customers at their election, who will receive access to Brightcove-created web-based documents that outline best practices/limitations provided by Wochit, including:
+            <ul>
+                <li>A prompt contains the entire script for the intended video, up to 450,000 characters per prompt, or 83,000 words. Prompts should include any descriptions of the types of music that should apply to the resulting video.</li>
+                <li>The more superficial the prompt, the better.</li>
+                <li>Using a URL (or multiple URLs) for an article, product, marketing page, etc. A user can create use conditions: use the article from this URL and these stats from this other URL.</li>
+                <li>Only copy and paste functionality is available (documents are not imported in other formats, like PDFs or Google Docs).</li>
+                <li>A disclaimer about copyrightable output may be needed.</li>
+            </ul>
+          </aside>
     </section>
     <section class="bcls-section">
       <h2 id="why-how">Why AI & How it Works</h2>
@@ -64,37 +74,71 @@ parent: Managing Video Files
         </details>
     </section>
     <section class="bcls-section">
-      <h2 id="general">General topics</h2>
-      
-      <details><summary>Which embed code should I use? Iframe or in-page?</summary>
-       For Campaign to work, it is required that the Advanced embed code is used.  If the Standard (iframe) embed code is used, then the player is isolated from the page, which means the Campaign plugin cannot see the unique identifier, and thus, all users will be seen as “unknown”.</details>
-       <details><summary>What is marketing automation?</summary>
-       Marketing automation is a technology that tracks lead/user interaction with different online marketing channels (email, web, forms, content, video, social, etc.). Marketing automation helps marketers market more effectively across these channels and automates repetitive marketing tasks (such as email communications). Marketing automation allows the marketer to set up automated and personalized tasks based on predefined variables. 
-          For example, if a user watches 75% of a specific video, send them an email on that specific subject, but if they only watch 12%, send them something else. </details>
-        <details><summary>Is Brightcove a marketing automation company?</summary>
-        No, Brightcove provides a complete solution for video marketing. With our solution, you can get your videos online, organize your content, create players, create video portals, track analytics, and integrate with your own existing marketing automation platform. Brightcove integrates video analytics into marketing automation platforms.</details>
-        <details><summary> How can I check to see if a Marketo custom activity is set up correctly?</summary>
-        Campaign has a hidden URL which offers some debugging tools for certain kinds of integrations, Marketo REST being one. <a href="https://studio.brightcove.com/products/videocloud/campaign/debug">https://studio.brightcove.com/products/videocloud/campaign/debug</a>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Campaign settings " src="/assets/images/s-campaign-img/general/faq-debug.png" /></figure> </details>
-          <details><summary>What needs to be done to configure a custom integration?</summary>
-        Three things need to be done:
-          <ol>
-            <li>You need to expose a unique identifier in the URL or code of the page that Campaign can capture.</li>
-            <li> Create a script that makes use of the Audience API's to retrieve the data as a JSON file (Brightcove Global Services can help with this).</li>
-            <li> Map the data to fields  in your destination database (think spreadsheet merge).</li>
-          </ol>
-          The following support documentation covers these tasks:
-          <ul>
-            <li><a href="/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html">Creating Custom Integrations with the Campaign Module</a> - Covers how to provide a unique identifier that Campaign can capture</li>
-            <li> <a href="/campaign/develop/overview-audience-api.html">Audience API</a> -  Covers how to programmatically retrieve all the data as a JSON file which you can then import into your data processing system of choice</li>
-          </ul>
-          </details>
-          <details><summary>How does Campaign push CDO data to Eloqua?</summary>
-        We use the custom object bulk API. <a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/api-bulk-2.0-customobjects.html">https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/api-bulk-2.0-customobjects.html </a></details>
-        <details><summary>How does Campaign push the external asset activity? How can I control the Campaign, External Asset, and Activity Types used?</summary>
-        We using the external activity API (<a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/op-api-rest-2.0-data-activity-post.html">https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAC/op-api-rest-2.0-data-activity-post.html</a>). There's no control over the name of the campaign, asset name or type. We simply create a campaign on our own (named BrightcoveVideoPlay) and then proceed to create activities, also named BrightcoveVideoPlay. </details>
-        <details><summary>What IP addresses can I whitelist so that Campaign can talk to service X?</summary>
-        Campaign has established a set of IP addresses that should be used for IP whitelisting. To see the list, edit an Eloqua connection and click the <a ng-click="showInfo()" ng-if="::!ctrl.hideWhitelistInfo && ctrl.isEloqua(ctrl.integration)" context="troubleSeeing"><strong>Unable to see Campaign data in Eloqua?</strong></a> link to see the list of IP addresses.</details>
+      <h2 id="good-prompt">What is then a good prompt?</h2>
+      <p>Let's run an example with this prompt:</p>
+      <p><strong>“Summarize the article from this URL into a video. Add ten scenes. Each scene must have a background video. Add one text overlay per scene to summarize the scene. One of the overlays should be a word-by-word quote from the article. In one of the scenes, put an overlay with statistics. Highlight essential words and phrases by surrounding them with double asterisks (**). The music for the video needs to represent happiness and summer. <a href="https://www.brightcove.com/en/resources/blog/5-types-video-marketing/">5 Types of Marketing Videos Throughout the Buyer Journey</a>”</strong></p>
+      <p>With Brightcove's AI, simple is better, but there are some things we can tune. For example:</p>    
+      <ol>
+        <li><strong><i>Summarize the article from this URL into a video.</i></strong> — Mainly to summarize, there is no need to go in this direction. The engine is tuned to create short-form videos. Instead, write, “Create a video for this article: {URL}.”</li>
+        <li><strong><i>Add ten scenes.</i></strong> — This is also not needed. The engine will create as many scenes as needed. Forcing it to a finite number is doable but not ideal.</li>
+        <li><strong><i>Each scene must have a background video.</i></strong> — It is unnecessary. In any event, the engine will try to match a media element to every scene, favoring videos over images. Also, you have no control over whether this will be a video or image, so this just adds clutter.</li>
+        <li><strong><i>Add one text overlay per scene to summarize the scene.</i></strong> - It is unnecessary; for the same reason, the engine starts by building a script and breaking it into scenes. Each scene's text will be seeded on the scene with the appropriate overlay type.</li>
+        <li><strong><i>One of the overlays should be a word-by-word quote from the article.</i></strong> - This is good; however, it could be better phrased as “One of the scenes should be a word-by-word quote from the article.”</li>
+        <li><strong><i>In one of the scenes, put an overlay with statistics.</i></strong> - Also good. Again, I'd phrase it as “One of the scenes should include some statistics from the article”.</li>
+        <li><strong><i>Highlight essential words and phrases by surrounding them with double asterisks (**).</i></strong> - Good.</li>
+        <li><strong><i>The music for the video needs to represent happiness and summer.</i></strong> - It is unnecessary and cannot be dictated through the prompt anyway. The engine automatically selects a suitable track.</li>
+      </ol>
+      <p>Below, your prompt should have looked like these two options:</p>
+      <ol>
+        <li>
+            <p>== Just the URL===</p>
+            <p><a href="https://www.brightcove.com/en/resources/blog/5-types-video-marketing/">5 Types of Marketing Videos Throughout the Buyer Journey</a></p>
+        </li>
+        <li><p>== URL + details ===</p></li>
+        <p>“Create a video about this article:
+            <a href="https://www.brightcove.com/en/resources/blog/5-types-video-marketing/">5 Types of Marketing Videos Throughout the Buyer Journey</a>. 
+            Highlight important words and phrases by surrounding them with double asterisks (**).
+            One of the scenes should be a word by word quote from the article.
+            One of the scenes should include some stats from the article.”.</p>
+      </ol>
+      <aside class="bcls-aside bcls-aside--information language-editable">Notes:
+        <ul>
+            <li>The video produced may not be perfect, but it will be a good starting point.</li>
+            <li>The article includes no statistics; hence, the engine did not follow our request for a statistics scene.</li>
+            <li>These types of articles are probably the hardest to turn into a video. To simplify, imagine any article you would want to turn into a video and whether it would be difficult for a human to articulate the story in visuals. If the answer is that the story is abstract and harder for a human to create, so will it be for AI.</li>
+        </ul>
+      </aside>
     </section>
+    <section class="bcls-section">
+        <h2>Test following indications:</h2>
+        <p>Prompt:</p>
+        <p>Create a video about this article:
+            <a href="https://www.brightcove.com/en/resources/blog/5-types-video-marketing/">5 Types of Marketing Videos Throughout the Buyer Journey</a>. 
+            Highlight important words and phrases by surrounding them with double asterisks (**).
+            One of the scenes should be a word by word quote from the article.
+            One of the scenes should include some stats from the article.”.</p>
+        <p>Video produced via AI (untouched/not-edited) → <a href="https://share.wochit.com/66e1b8a1a729843fd72c6e66">Master Your Marketing Strategy with 5 Essential Video Types</a>.</p>
+    </section>
+    <section class="bcls-section">
+        <h2>Other Examples</h2>
+        <p>Below are some other examples:</p>
+        <ul>
+            <li>4 Health benefits of Avocado.</li>
+            <li>Explain the benefits of Yoga, then follow with three common Yoga poses.</li>
+            <li>Create a video with tips for hiking the mountains safely. List up to 5 tips. Then, separately, add a list of 3 global mountains known for hiking.</li>
+            <li>Create a video about the three most tourist cities in the world. For each city, mention its size, population, and the number of tourists visiting it yearly.</li>
+            <li>Create a video about Lebron James and the teams he played for. For each team, show statistics such as average points per match and championships won.</li>
+            <ul>
+                <li>Video produced via AI (untouched/not-edited) → <a href="https://share.wochit.com/66e1c521bc7ebb6ed28273eb">Lebron James: A Legendary Journey Across Teams.</a></li>
+            </ul>
+            <li>Tell the story of the landing of the men to the moon.</li>
+            <li>Create a video with three famous quotes from Albert Einstein.</li>
+        </ul>
+        <aside class="bcls-aside bcls-aside--tip language-editable">
+            You can add the following instruction for each above: "Highlight essential words and phrases by surrounding them with double asterisks (**)." This will automatically highlight important words with color.
+          </aside>
+    </section>
+
+
   </article>
   
