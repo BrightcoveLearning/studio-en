@@ -3628,30 +3628,32 @@
           <ul>
             <li><p><strong>Upload</strong>: Allows you to upload new videos from your local storage.</p></li>
             <li><p><strong>Add remote video</strong>: Enables you to add videos <strong>from remote locations</strong> or <strong>URLs</strong> and access the <strong>Video Editor</strong> to create new videos.</p></li>
+            <li><p><strong>Create with Editor</strong>: <a href="https://studio.support.brightcove.com/media/manage/video-editor.html">Editor</a> tool allows you to edit and transform your media content.</p></li>
             <li><p><strong>Screen and Camera Recorder</strong>: Provides options to record your screen or camera directly and upload the recording.</p></li>
           </ul>
         </li>
       </ul>
       <p><strong>Content Management: List and Card Views</strong></p>
-      <p>Our platform now includes two distinct views for exploring and managing your resources:</p>
+      <p>Our platform now includes two distinct views which you can switch easily for exploring and managing your resources:</p>
       <ul>
         <li><strong>List View:</strong> Displays your resources in a detailed table format, providing a comprehensive view of information.</li>
         <li><strong>Card View:</strong> Shows your resources in a card format, providing a more visual and organized layout.</li>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/module/searchv2/list-card-view.png" width="875px" /></figure>
       </ul>
       <p><strong>List View summary</strong></p>
       <ul>
         <li><strong>Sort Fields</strong>: Sort results by selecting various columns to display the most relevant information for you.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/module/searchv2/listsort.webp" /></figure>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/module/searchv2/list-options.png" width="875px" /></figure>
         </li>
       </ul>
       <p><strong>Card View summary</strong></p>
       <ul>
         <li><strong>Sort Fields</strong>: Sort results by <strong>Date Created</strong>, <strong>Date Modified</strong>, or <strong>Video Name</strong> in both ascending and descending order.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/module/searchv2/sorted.webp" /></figure>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/module/searchv2/card-view.png" width="875px" /></figure>
         </li>
         <li><strong>Larger Thumbnails</strong>: Thumbnails are now larger, making it easier to identify videos at a glance.</li>
         <li><strong>Key Information on Hover</strong>: Hovering over a video thumbnail reveals key information, such as ID and Tags.
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/module/searchv2/hover.webp" /></figure>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/module/searchv2/card-detail.png" width="275px" /></figure>
         </li>
       </ul>
       <!-- <p><strong>Table View of Results</strong></p>
@@ -3678,16 +3680,16 @@
         <li><p><strong>String</strong>: Text-based search.</p>
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/module/searchv2/stringfilter.png" /></figure>
         </li>
-        <li><p><strong>List</strong>: Choose from predefined lists.</p>
+        <!-- <li><p><strong>List</strong>: Choose from predefined lists.</p>
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/module/searchv2/listexample.webp" /></figure>
-        </li>
+        </li> -->
         <li><p><strong>Tag</strong>: Filter by specific tags.</p>
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/module/searchv2/tagsearch.png" /></figure>
         </li>
         <li><p><strong>Date</strong>: Filter by date.</p>
           <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/module/searchv2/dateexample.webp" /></figure>
         </li>
-        <li><p><strong>Boolean</strong>: True/False conditions.</p>
+        <!-- <li><p><strong>Boolean</strong>: True/False conditions.</p> -->
           
         </li>
         <li><p><strong>Folder</strong>: Filter videos based on folder membership.</p>
@@ -3754,10 +3756,20 @@
                   <td>Includes or excludes specific names (supports stemming)</td>
               </tr>
               <tr>
+                <td><strong>ID</strong></td>
+                <td>Exact Match</td>
+                <td>Includes or excludes specific IDs</td>
+            </tr>
+              <tr>
                   <td><strong>Reference ID</strong></td>
                   <td>Exact Match</td>
                   <td>Includes or excludes specific reference IDs</td>
               </tr>
+              <tr>
+                <td><strong>Duration</strong></td>
+                <td>Range</td>
+                <td>Filters by duration (less than, greater than, or in a specific range)</td>
+            </tr>
               <tr>
                   <td><strong>Playable</strong></td>
                   <td>Boolean</td>
@@ -3796,16 +3808,6 @@
               <tr class="bcls-table__head text-center">
                 <td colspan="3"><strong>Expanded Search Filters</strong></td>
             </tr>
-              <tr>
-                  <td><strong>Duration</strong></td>
-                  <td>Range</td>
-                  <td>Filters by duration (less than, greater than, or in a specific range)</td>
-              </tr>
-              <tr>
-                  <td><strong>ID</strong></td>
-                  <td>Exact Match</td>
-                  <td>Includes or excludes specific IDs</td>
-              </tr>
               <tr>
                   <td><strong>Created By</strong></td>
                   <td>Exact Match</td>
