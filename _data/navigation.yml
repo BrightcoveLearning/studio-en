@@ -70,8 +70,8 @@
     docs:
     - name: Getting Started with the Media Module
       url: /media/module/getting-started-media-module.html
-    - name: How to Search for Videos and Playlists
-      url: /media/module/how-search-videos-and-playlists-media-module.html
+    #- name: How to Search for Videos and Playlists
+      #url: /media/module/how-search-videos-and-playlists-media-module.html
     - name: Latest Video Cloud Search
       url: /media/module/video-cloud-search.html
   - name: Managing Video Files
