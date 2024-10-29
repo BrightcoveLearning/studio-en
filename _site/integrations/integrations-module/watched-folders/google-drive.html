@@ -3725,10 +3725,20 @@
           <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/dialog-access-window.webp" alt="dialogo access"> </figure>
         </p>
       </li>
-      <li>Select the folder where the videos you want to work on are located. Click <strong>Select</strong>.
+      <li>Select the folder or folders where the videos you want to work on are located. Click <strong>Select</strong>.
         <p>
-          <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/select-video.webp" alt="select video"> </figure>
+          <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/multiple-folders.webp" alt="select video"> </figure>
         </p>
+      </li>
+      <li>Configure your metadata settings and Click <span class="button-blue">Connect folders.</span>
+          <p>
+              <figure class="bcls-figure"> <img class="bcls-image" alt="" src="/assets/images/s-integrations-img/integrations-module/watched-folders/google-drive/ingest-settings.webp" </figure>
+          </p>
+          <p></p>
+          <aside class="bcls-aside bcls-aside--information language-editable">All of your videos ingested using these folders will follow your folder's Ingestion Settings.</aside>
+          <p></p>
+          <aside class="bcls-aside bcls-aside--information language-editable">This connection offers Metadata Support: If your folders have a title and description, they will be ingested as metadata along with your video.</aside>
+          <p></p>
       </li>
       <li>A dialog confirms that the folder has been successfully ingested, and the files are now available in the <strong>Media</strong> module.
         <p>
@@ -3801,6 +3811,40 @@
       </li>
     </ol>
     <aside class="bcls-aside bcls-aside--information language-editable">Any user can reconnect the Google Drive account or a different one.</aside>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="troubleshooting">Troubleshooting</h2>
+    <p>If you encounter any of the next issues, please follow the corresponding troubleshooting process:</p>
+    
+    <p></p>
+
+    <h3>Unauthorized</h3>
+    <p></p>
+    <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/dropbox/unauthorized-c.webp">
+    </figure>
+    <p></p>
+    <p>This error is likely due to the third-party connection from your Google Drive account being removed; please try the next process:</p>
+        <ol class="bcls-tasklist-restart">
+            <li>Click <strong>'Click here to reconnect.'</strong></li>
+            <li>Grant permission to access your Google Drive account.</li>
+            <li>The error message should disappear in approximately five minutes.</li>
+        </ol>
+
+        <h3>Folder not found</h3>
+        <p></p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-integrations-img/integrations-module/watched-folders/dropbox/not-found-c.webp">
+        </figure>
+        <p></p>
+        <p>This is likely caused by the folder being deleted or renamed; please try one of these options: </p>
+            <ul>
+                <li>Restore or rename the Google Drive folder to its original name; The error message should disappear after approximately five minutes.</li>
+                <li>Click <strong>'Click here to reconnect'</strong> and select the folder with the updated name.</li>
+                <li>Remove the folder from Studio and repeat the <a href="https://studio.support.brightcove.com/integrations/integrations-module/watched-folders/google-drive.html#Setting_title">connection process</a>.</li>
+            </ul>
+            <aside class="bcls-aside bcls-aside--information language-editable">If you're still encountering any issues, please <a href="https://supportportal.brightcove.com/">Contact Brightcove Support.</a></aside>
   </section>
 </article>
 
