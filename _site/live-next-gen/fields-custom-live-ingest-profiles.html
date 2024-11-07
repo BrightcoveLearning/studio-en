@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Managing API Authentication Credentials</title>
+        <title>Fields for Custom Live Ingest Profiles</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="This topic provides an overview of creating and managing API authentication credentials.">
+        <meta name="description" content="This topic provides an overview of ...">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -3574,11 +3574,7 @@
             
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/live-next-gen/jc/">Jc</a></li>
-            
-            
-            
-            <li class="breadcrumb-item active" aria-current="page">Managing API Authentication Credentials</li>
+            <li class="breadcrumb-item active" aria-current="page">Fields for Custom Live Ingest Profiles</li>
             
             
           </ol>
@@ -3599,87 +3595,180 @@
       <br>
       
       <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
-<h1>Managing API Authentication Credentials</h1>
 <article class="bcls-article">
-  <summary>This topic provides an overview of creating and managing API authentication credentials.</summary>
-  <section class="bcls-section">
-    
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4097165379001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js">
-  </script>
-        
-    <p>When you use the Brightcove APIs, your method calls will require access tokens unless you enable basic authentication in the Player Service Settings. 
-        
-    For more information on enabling basic authentication, see <a href="/admin/general/managing-account-settings.html">Managing Account Settings</a>.
-      
-      </p>
-    <aside class="bcls-aside bcls-aside--information">Note: This feature is only available for Professional and Enterprise accounts.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Creating_client_registrations">Creating client registrations</h2>
-    <p>The API Authentication page is used to create new client registrations. When creating registrations, you can select the service and the roles that will be enabled with the registration.</p>
-    <p>To create a new client registration for your account:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Admin</strong> module.</li>
-      <li>Click  <strong>API Authentication</strong>. The API Authentication page opens, displaying your current client registrations.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14056-registered-apps.webp" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: Only the client registrations for the account you are logged into will display.</aside>
-      </li>
-      <li>Click <span class="button-blue">+ Add application</span></li>
-      <li>Enter a <strong>Name</strong> and <strong> Description</strong> for the client registration.</li>
-      <li>Select one or more of your accounts for authorization.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14056-select-accounts.png" /></figure>
-      </li>
-      <li>Select the API(s) and permission(s) to enable for this registration.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14056-select-apis.webp" /></figure>
-      <aside class="bcls-aside bcls-aside--information"> Notes:
-        <li>For GAM/Google Ad Manager inegration, the API permissions needed are <strong>CMS Video Read</strong>.</li>
-        <li>Selecting a large number of accounts and APIs may cause the HTTP header size to become large and invalid. The maximum header size that our server accepts is 8K, which means that you must select 30 accounts or less to apply the credentials to. For security reasons, we recommend that you limit the scope of permissions for a set of credentials to the smallest set of accounts and operations necessary.</li>
-      </aside>
-      </li>
-      <li>Click<span class="button-blue">Save</span>.</li>
-      <li>A <strong>Client ID</strong> and <strong>Client Secret</strong> will be returned.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14056-client-id-secret.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information">Note: Copy the client secret and store it in a secure location as the client secret <strong>will not</strong> be displayed again.</aside>
-      </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Managing_client_registrations">Managing client registrations</h2>
-    <p>The API Authentication page can be used to view and manage client registrations. Click the <strong>ADMIN</strong> link in the Studio header and then click <strong>API Authentication</strong>. A list of your current registrations will display.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/general/node14056-registered-apps.webp" /></figure>
-    <p>To view the registration details, click the on the name. From here, you can:</p>
-    <ul>
-      <li>Modify the name</li>
-      <li>Copy the client ID</li>
-      <li>Add accounts for authorization</li>
-      <li>Select additional APIs to enable</li>
-      <li>Delete the credential</li>
-    </ul>
-    <p>Click <span class="button-blue">Save</span> to save your changes.</p>
-    <p>Note that if a credential is created for multiple accounts, users will only see that credential if they have access to all of those accounts. For example, User 1 creates a credential for accounts A &amp; B. User 2 logs in and only has access to account A. User 2 will not see the credential as they do not have access to account B.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Updating_client_registrations">Updating client registrations</h2>
-    <p>Although you cannot retrieve the client secret for existing credentials, you can click on an existing credential name and then add or remove both permissions and accounts.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Delete_client_registrations">Deleting client registrations</h2>
-    <p>To delete a client registration, click the delete icon(<img alt="" src="/assets/images/s-admin-img/general/node1050-delete-icon.png" />) next to the registration or edit the registration and click <strong>Delete Registration</strong>. <strong>Deleting a registration permanently disables it and cannot be undone.</strong></p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="OAuth" src="/assets/images/s-admin-img/general/node14056-delete.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="GAM">Working with GAM</h2>
-    <p>If you currently have multiple Video Cloud accounts set up as content sources in GAM, you have two options:</p>
-    <ol>
-      <li>You can create a unique Client ID and Client Secret for each Video Cloud account that’s set up as a content source in GAM. For example, if you have 10 Video Cloud accounts, you'd have 10 applications named GAM in your API Authentication settings in Video Cloud.</li>
-      <li>You can create a single Client ID and Client Secret for all Video Cloud accounts that have been set up as content sources in GAM. For example, if you have 10 Video Cloud accounts, you'd have 1 application named GAM in your API Authentication settings in Video Cloud.</li>
-    </ol>
-    <p>Regardless of whether you chose option #1 or #2, for each content source that you set up in GAM, you need to provide a unique Account ID. So, you are not reducing the number of content sources that are currently set up in GAM; you're just replacing the read token with the Client ID and Client Secret, which can either be the same across content sources or unique for each.</p>
-    <p>Option #1 takes more time up front. However, if the Client ID and Client Secret are the same across all content sources (as with option #2), it will be a burden to add a new content source because you will need to generate a new Client ID and Client Secret and update all of content sources in GAM. So, Brightcove recommends option #1.</p>
-  </section>
-</article>
-
+    <h1>Fields for Custom Live Ingest Profiles</h1>
+    <summary>This topic provides a reference for the fields used in Live ingest profiles.</summary>
+    <section class="bcls-section">
+      <h2 id="primaryFields">Profile fields</h2>
+      <table class="bcls-table">
+        <thead class="bcls-table__head">
+          <tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body">
+          <tr id="account_id">
+            <td><code translate="No">account_id</code></td>
+            <td>integer</td>
+            <td>The <span translate="No">Video Cloud</span> account id</td>
+            <td>none</td>
+          </tr>
+          <tr id="name">
+            <td><code translate="No">name</code></td>
+            <td>string</td>
+            <td>The profile name - must be unique within the account</td>
+            <td>none</td>
+          </tr>
+          <tr id="name">
+            <td><code translate="No">display_name</code></td>
+            <td>string</td>
+            <td>The a display name for the profile to appear in the Studio Admin page - may be the same as <code translate="No">name</code>, but should be descriptive to help users understand the intended use for the profile</td>
+            <td>none</td>
+          </tr>
+          <tr id="description">
+            <td><code translate="No">description</code></td>
+            <td>string</td>
+            <td>The profile description</td>
+            <td>none</td>
+          </tr>
+          <tr id="description">
+            <td><code translate="No">model_version</code></td>
+            <td>integer</td>
+            <td>Set this to <code translate="No">1</code> to make the profile show up in the Live Module</td>
+            <td>none</td>
+          </tr>
+          <tr id="renditions">
+            <td><a href="#rendition_fields"><code translate="No">renditions</code></a></td>
+            <td>array</td>
+            <td>Array of rendition objects</td>
+            <td>[]</td>
+          </tr>
+          <tr id="packages">
+            <td><code translate="No">packages</code></td>
+            <td>array</td>
+            <td>Array of DRM packages - currently, DRM is not supported, so this should always be an empty array</td>
+            <td>[]</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="bcls-section">
+      <h2 id="rendition_fields">Rendition fields</h2>
+      <p>The tables below show fields that can be used in the request body for updating live ingest profiles.</p>
+      <table class="bcls-table">
+        <thead class="bcls-table__head">
+          <tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body">
+          <tr id="audio_bitrate">
+            <td><code translate="No">audio_bitrate</code></td>
+            <td>integer</td>
+            <td>audio bitrate in kbps (min: 16, max: 1024)</td>
+            <td>match source</td>
+          </tr>
+          <tr id="audio_codec">
+            <td><code translate="No">audio_codec</code></td>
+            <td>string</td>
+            <td>Audio codec - <code translate="No">aac</code> | <code translate="No">mp3</code></td>
+            <td>Determined by the format or profile, in most cases, <code translate="No">aac</code> will be best</td>
+          </tr>
+          <tr id="decoder_bitrate_cap">
+            <td><code translate="No">decoder_bitrate_cap</code></td>
+            <td>integer</td>
+            <td>in kbps, the max bitrate fed to the decoder via a buffer</td>
+            <td>none</td>
+          </tr>
+          <tr id="decoder_buffer_size">
+            <td><code translate="No">decoder_buffer_size</code></td>
+            <td>integer</td>
+            <td>in kbps, the size of the buffer fed to the decoder when using a <code translate="No">bitrate_cap</code></td>
+            <td>none</td>
+          </tr>
+          <tr id="format">
+            <td><code translate="No">format</code></td>
+            <td>string</td>
+            <td>Video format - <code translate="No">ts</code>, <code translate="No">mp4</code>, <code translate="No">flv</code></td>
+            <td>none</td>
+          </tr>
+          <tr id="h264_profile">
+            <td><code translate="No">h264_profile</code></td>
+            <td>string</td>
+            <td>H.264 has three commonly-used profiles: <code translate="No">Baseline</code> (lowest), <code translate="No">Main</code>, and <code translate="No">High</code>.</td>
+            <td><code translate="No">baseline</code></td>
+          </tr>
+          <tr id="keyframe_interval">
+            <td><code translate="No">keyframe_interval</code></td>
+            <td>integer</td>
+            <td>Maximum number of frames between keyframes</td>
+            <td><code translate="No">250</code></td>
+          </tr>
+          <tr id="label">
+            <td><code translate="No">label</code></td>
+            <td>string</td>
+            <td>Image type for image renditions - <code translate="No">poster</code> or <code translate="No">thumbnail</code></td>
+            <td>none</td>
+          </tr>
+          <tr id="live_stream">
+            <td><code translate="No">live_stream</code></td>
+            <td>boolean</td>
+            <td>whether this will be live video stream</td>
+            <td>none</td>
+          </tr>
+          <tr id="live_dvr_sliding_window_duration"> 
+            <td><code translate="No">live_dvr_sliding_window_duration</code>          <aside class="bcls-aside bcls-aside--information language-editable">Note: <code>live_sliding_window_duration</code> is a legacy alias for <code>live_dvr_sliding_window_duration</code>.</aside></td>
+            <td>integer</td>
+            <td>Duration of stream to keep available for Live DVR delivery in seconds</td>
+            <td><code translate="No">300</code></td>
+          </tr>
+          <tr id="max_video_bitrate">
+            <td><code translate="No">max_video_bitrate</code></td>
+            <td>integer</td>
+            <td>in kbps, 123 = 123kbps - h264 only</td>
+            <td>none</td>
+          </tr>
+          <tr id="media_type">
+            <td><code translate="No">media_type</code></td>
+            <td>string</td>
+            <td><code translate="No">video</code> or <code translate="No">audio</code></td>
+            <td>none</td>
+          </tr>
+          <tr id="video_bitrate">
+            <td><code translate="No">video_bitrate</code></td>
+            <td>integer</td>
+            <td>in kbps, 123 = 123kbps (min: 64, max: 20000)</td>
+            <td>none</td>
+          </tr>
+          <tr id="video_codec">
+            <td><code translate="No">video_codec</code></td>
+            <td>string</td>
+            <td>e.g. h264, ts</td>
+            <td>Determined by the format or profile</td>
+          </tr>
+          <tr id="width">
+            <td><code translate="No">width</code></td>
+            <td>integer</td>
+            <td>frame width in pixels</td>
+            <td>none</td>
+          </tr>
+          <tr id="height">
+            <td><code translate="No">height</code></td>
+            <td>integer</td>
+            <td>frame height in pixels</td>
+            <td>none</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </article>
+  
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
