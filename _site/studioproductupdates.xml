@@ -16,7 +16,22 @@
     <rating></rating>
     <pubDate>Thu, 15 Jun 2017 15:53:15 GMT</pubDate>
     <lastBuildDate>Tue, 14 Jul 2021 11:29:57 GMT</lastBuildDate>
-            <item>
+    <item>
+      <title>Marketing Insights</title>
+      <link>https://studio.support.brightcove.com/analytics/reports/marketing-comms-insights.html</link>
+      <description>Learn how to include Marketing Insights to measure and optimize the impact of your video content.</description>
+      <author>author</author>
+      <source url="https://studio.support.brightcove.com/analytics/reports/marketing-comms-insights.html">Marketing Insights</source>
+    </item>
+        <item>
+      <title>Publisher Insights</title>
+      <link>https://studio.support.brightcove.com/analytics/reports/publisher-insights.html</link>
+      <description>Learn how to include Publisher Insights to gather real-time information about your content.</description>
+      <author>author</author>
+      <source url="https://studio.support.brightcove.com/analytics/reports/publisher-insights.html">Publisher Insights</source>
+    </item>
+
+    <item>
       <title>Brightcove Video Editor</title>
       <link>https://studio.support.brightcove.com/media/manage/video-editor.html</link>
       <description>Learn how to edit and transform your media content using the Brightcove Video Editor.</description>
