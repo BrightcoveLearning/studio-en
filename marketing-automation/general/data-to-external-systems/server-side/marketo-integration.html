@@ -1,0 +1,99 @@
+---
+title: 'Viewing Data Integration: Marketo'
+description: 'In this topic, you will learn how to set up the Marketo integration in the Viewing Data Integration section.'
+parent: Integration
+layout: staging
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+<section class="bcls-section">
+    <h2 id="Overview" >Overview</h2>
+    <p></p>
+    <p>Setting up the Marketo integration using the Viewing Data Integration section exports additional granular (event-based) data. This viewing data is bound to a custom object and appended, not overwritten, on each contact sync.</p>
+    <p></p>
+    <aside class="bcls-aside bcls-aside--information">For more information on the Contact Integration setup, see <a href="https://audience-insights.support.brightcove.com/integrations/integration_marketo.html">Contact Integration: Marketo</a>.</aside>
+
+</section>
+
+<section class="bcls-section">
+    <h2 id="requirements" >Requirements</h2>
+    <ul>
+        <li>Video Cloud account with:</li>
+        <ul>
+            <li>Admin access to create integrations.</li>
+            <li>Viewer Analytics and Audience Insights enabled.</li>
+            <li>Marketing Studio Essentials or Premium account to access MAP connections.</li> 
+        </ul>
+        <li>Marketo account with Admin access to create an API service</li>
+    </ul>
+</section>
+
+<section class="bcls-section">
+    <h2 id="tracking" >Viewer ID Tracking</h2>
+    <p>This integration will not create new Leads, they must already exist in Marketo. This integration identifies viewers through a Customer ID or Viewer Token, which serves as the Viewer ID and must be set in the Brightcove Player to be registered in Video Cloud. </p>
+    <aside class="bcls-aside bcls-aside--warning language-editable">The Marketo integration will only send data for viewers that exist in both Video Cloud and Marketo.</aside>
+    <p>For more details, see the <a href="https://studio.support.brightcove.com/marketing-automation/getting-started/campaign-migration-set-up.html#custumer-id-vs-viewer-token">Customer ID vs Viewer Token</a> section.</p>
+</section>
+
+<section class="bcls-section">
+    <h2 id="api-service" >Create Marketo API Service</h2>
+    <p>To use the Marketo REST API, an API role, user, and service must be created with the correct permissions. <br>Visit the <a href="https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/rest-api">Marketo documentation</a> for further instructions:</p>
+    <p>When creating the API role, the following permissions are required for this integration:</p>
+    <ul>
+        <li>Read-Only Assets</li>
+        <li>Read-Only Lead</li>
+        <li>Read-Write Activity</li>
+        <li>Read-Write Activity Metadata</li>
+    </ul>
+
+    <p></p>
+    <p>The following information will be necessary to create the integration:</p>
+    <ul>
+        <li>Client ID</li>
+        <li>Client Secret</li>
+        <li>API Endpoint URL</li>
+        <li>API Identity URL</li>
+    </ul>
+</section>
+
+<section class="bcls-section">
+    <h2 id="create" >Create Integration</h2>
+    <p>To create an integration follow the next steps:</p>
+    <ol class="bcls-tasklist">
+        <li>Log into <strong>Video Cloud</strong>.</li>
+        <li>Click the <strong>Integrations</strong> tab.</li>
+        <li>Click <strong>Customer Data Platforms</strong>.</li>
+        <li>In the <strong>Viewing Data Integrations</strong> section, click <strong>New Integration</strong>.</li>
+        <li>For <strong>Destination</strong>, select <strong>Marketo</strong>.</li>
+        <li>Fill out the form with the information from the preceding section.</li>
+        <li>Click <span class="button-blue">Save</span></li>
+      </ol>
+</section>
+
+<section class="bcls-section">
+    <h2 id="view" >View data integrations</h2>
+    <p>...</p>
+    <ol class="bcls-tasklist-restart">
+        <li>Log into <strong>Marketo</strong>.</li>
+        <li>Click <strong>Lead Database</strong>.</li>
+        <li>Under <strong>System Smart Lists</strong>, click <strong>All People</strong>.</li>
+        <li>Click the <strong>Leads</strong> tab.</li>
+        <li>Select a <strong>Lead</strong>.</li>
+        <li>Click the <strong>Activity Log</strong> tab.</li>
+        <li>The data will have the <strong>Brightcove View Event</strong> Activity Type.</li>
+      </ol>
+</section>
+
+<section class="bcls-section">
+    <h2 id="limitations" >Limitations</h2>
+    <p>The Marketo REST API is subject to the following limitations, which may be adjusted by speaking with your Marketo account manager. Exceeding these limits can cause scheduled jobs to fail.</p>
+    <ul>
+        <li><a href="https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/rest-api">50,000 API calls per day</a></li>
+        <li><a href="https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/bulk-extract/bulk-extract#file_size">500MB bulk export allocations per day</a></li>
+        <li><a href="https://developers.marketo.com/blog/guest-post-deep-dive-custom-object-vs-custom-activities-vs-custom-fields/">10 Custom Activity types per instance, with 20 secondary attributes per type</a></li>
+    </ul>
+</section>
+
+</article>
