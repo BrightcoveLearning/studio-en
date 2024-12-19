@@ -66,6 +66,8 @@ grandparent: Managing Videos
   </section>
   <section class="bcls-section">
     <h2 id="delete">Deleting videos</h2>
+    <aside class="bcls-aside bcls-aside--information"><p>If you delete a video, the deleted video's name will not be displayed in the Analytics report.</p>
+      <p>Technical Background: Once a video is deleted, it is permanently removed from the CMS. As a result, the API returns no associated metadata, and the Analytics report cannot display the video's name or related information.</p></aside>
     <p>To delete videos, click the checkboxes next to the video thumbnails of the videos to delete and then click the delete button (<img alt="" src="/assets/images/media/node14464-delete-icon.png" />). Confirm the delete by clicking <span class="button-red-text">Delete</span>.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-confirm-delete.png" /></figure>
     <aside class="bcls-aside bcls-aside--information">Note: When videos are deleted, they are removed from the Media module but Brightcove will keep the files for 12-14 days (for Dynamic Delivery). For more information on how deleted videos are processed, see the information on <a href="/admin/general/viewing-billing-information.html#deleted_videos">deleted videos and digital masters</a>.</aside>
