@@ -775,6 +775,8 @@
                 url: /marketing-automation/general/data-to-external-systems/server-side/s3-integration.html
               - name: 'Salesforce'
                 url: /marketing-automation/general/data-to-external-systems/server-side/salesforce-integration.html
+              - name: 'Marketo'
+                url: /marketing-automation/general/data-to-external-systems/server-side/marketo-integration.html
               - name: 'Salesforce Sales Cloud'
                 url: https://audience-insights.support.brightcove.com/integrations/salesforce-sales-cloud/index.html
               - name: 'Marketo'
