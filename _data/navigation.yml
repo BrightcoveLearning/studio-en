@@ -476,6 +476,12 @@
       url: /live/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html
     - name: "Brightcove Live - Zoom Integration"
       url: /live/live-module/zoom-live-integration.html
+  - name: Live 2.0
+    url: /live-2-0/index.html
+    icon: fa-solid fa-circle-info
+    docs:
+    - name: Quick Start from Live 1.0 to Live 2.0
+      url: /live-2-0/migrating-2-0.html
   - name: General Information
     url: /live/general/index.html
     icon: fa-solid fa-circle-info
