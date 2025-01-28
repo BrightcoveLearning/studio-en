@@ -3643,7 +3643,7 @@
         <table class="bcls-table">
             <thead class="bcls-table__head">
                 <tr>
-                    <th>Integration Property</th>
+                    <th>Integration Properties</th>
                     <th>Description</th>
                 </tr>
             </thead>
@@ -3666,7 +3666,10 @@
                 </tr>
                 <tr>
                     <td>VideoDuration</td>
-                    <td>Total length of the video in seconds.</td>
+                    <td>
+                      <p>Total length of the video in seconds.</p>
+                      <p>Note: This may not always be set for live events.</p>
+                    </td>
                 </tr>
                 <tr>
                     <td>player</td>
@@ -3678,19 +3681,27 @@
                 </tr>
                 <tr>
                     <td>MaxPercentagewatched</td>
-                    <td>Highest completion percent for this video by this user on a particular day.</td>
+                    <td><li>For 'onDemand' views, the highest completion percent for this video by a viewer on a particular day.</li>
+                        <li>For 'live' views, the completion percent of a viewer's longest viewed section of the live event.
+                          <ul>
+                            <li>Note: This value may be 0 if the live event has no set video duration. (e.g., there is no VOD asset for the live event).</li>
+                          </ul>
+                        </li>
+                    </td>
                 </tr>
                 <tr>
                     <td>TotalWatchDuration</td>
-                    <td>User's total watch time for this video on this day in Seconds.</td>
+                    <td><li>For 'onDemand' views, the user's total watch time for this video is in Seconds on this day.</li>
+                    <li>For 'live' views, the user's total watch time of all viewed sections of the live event in Seconds.</li></td>
                 </tr>
                 <tr>
                     <td>WatchCount</td>
-                    <td>Number of times a user started this video on this day.</td>
+                    <td><li>For 'onDemand' views, the number of times a user started this video on this day.</li>
+                    <li>For 'live' views, the number of sections of the live event a user has seen.</li></td>
                 </tr>
                 <tr>
                     <td>utmSource</td>
-                    <td>User-provided UTM source (e.g., source of traffic).</td>
+                    <td>User-provided UTM source (e.g., source of traffic such as YouTube, Facebook, and Google).</td>
                   </tr>
                   <tr>
                     <td>utmMedium</td>
@@ -3702,32 +3713,47 @@
                   </tr>
                   <tr>
                     <td>utmTerm</td>
-                    <td>User-provided UTM term (e.g., keywords used).</td>
+                    <td>User-provided UTM term (e.g., keywords used to search that particular title/content).</td>
                   </tr>
                   <tr>
                     <td>utmContent</td>
                     <td>User-provided UTM content.</td>
                   </tr>
-                  <!-- <tr>
+                  <tr>
+                    <td>contentOwner</td>
+                    <td><p>User-provided content owner for video.</p>
+                      <p>Note: Use insights_content_owner as a reference when creating custom video fields.<strong>*</strong></p></td>
+                  </tr>
+                  <tr>
                     <td>customField1</td>
-                    <td>User-provided custom field 1 for additional tracking data.</td>
+                    <td><p>User-provided custom field for video.</p>
+                        <p>Note: Use insights_marketing_custom1 as a reference when creating custom video fields.<strong>*</strong></p>
+                    </td>
                   </tr>
                   <tr>
                     <td>customField2</td>
-                    <td>User-provided custom field 2 for additional tracking data.</td>
+                    <td><p>User-provided custom field for video.</p>
+                      <p>Note: Use insights_marketing_custom2 as a reference when creating custom video fields.<strong>*</strong></p></td>
                   </tr>
                   <tr>
                     <td>customField3</td>
-                    <td>User-provided custom field 3 for additional tracking data.</td>
+                    <td><p>User-provided custom field for video.</p>
+                      <p>Note: Use insights_marketing_custom3 as a reference when creating custom video fields.<strong>*</strong></p></td>
                   </tr>
                   <tr>
-                    <td>contentOwner</td>
-                    <td>Owner of the content (e.g., organization or creator).</td>
-                  </tr> -->
+                    <td>presentation</td>
+                    <td>The video presentation type can be 'live' or 'onDemand'.</td>
+                  </tr>
+                  <tr>
+                    <td>sections</td>
+                    <td><li>For 'onDemand' views, this is null.</li>
+                    <li>This is a list of start/end timestamp pairs for' live' views. Each pair denotes a section of a live event that the viewer has seen. The list is limited to the top 10 sections by length, ordered by the start timestamp.</li></td>
+                  </tr>
             </tbody>
         </table>
         <aside class="bcls-aside bcls-aside--information language-editable"> If a user replays or rewinds the video, the viewing time is added to the total watch duration. However, it is not recorded as a new watch count.</aside>
-
+        <aside class="bcls-aside bcls-aside--information language-editable"> Note: If the custom object in your MAP instance does not have some fields, please update your integration in Video Cloud to add the missing fields.</aside>
+        <aside class="bcls-aside bcls-aside--information language-editable"><strong>*</strong>For additional info on creating custom fields in Video Cloud, see <a href="https://studio.support.brightcove.com/admin/general/creating-custom-metadata-fields.html">here</a>.</aside>
 
   </section>
 
