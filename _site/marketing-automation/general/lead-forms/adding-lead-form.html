@@ -3647,7 +3647,7 @@
   
   <section class="bcls-section">
     <p>The Interactivity module allows adding different types of interactive annotations to videos. The Lead Form Annotation will enable you to embed a form from systems like Eloqua, Salesforce, Marketo, and HubSpot.</p>
-    <aside class="bcls-aside bcls-aside--information"><strong>Note:</strong> Google and Microsoft Forms cannot be added as Lead Forms. You must use a custom form to add Google Forms and Microsoft Forms. For more information, see <a href="https://studio.support.brightcove.com/interactivity/widgets/embedding-form-video.html#custom-form">Adding a custom form widget</a>.</aside>
+    <!-- <aside class="bcls-aside bcls-aside--information"><strong>Note:</strong> Google and Microsoft Forms cannot be added as Lead Forms. You must use a custom form to add Google Forms and Microsoft Forms. For more information, see <a href="https://studio.support.brightcove.com/interactivity/widgets/embedding-form-video.html#custom-form">Adding a custom form widget</a>.</aside> -->
   
     <!-- <div style="width: 960px;"><video-js data-account="1752604059001" data-player="NjP2CDaWFx" data-embed="default" controls="" data-video-id="70723291243113" data-application-id="" class="vjs-16-9"></video-js></div><script src="https://bc-players-qa.s3.amazonaws.com/1752604059001/NjP2CDaWFx_default/index.min.js"></script> -->
   </section>
@@ -3655,6 +3655,14 @@
   <section class="bcls-section">
     <h2 id="configure-player">Before you get started</h2>
     <p>Before you can add interactivity to a player, you need an Interactivity-enabled Brightcove Player and you need to make sure an Interactivity project has been created. See <a href="/interactivity/getting-started/getting-started-interactivity-module.html">Getting Started with the Interactivity Module</a> and <a href="/interactivity/getting-started/configuring-player-plugin.html">Configuring a Brightcove Player with the Interactivity Plugin</a> for more information.</p>
+    <aside class="bcls-aside bcls-aside--warning language-editable">IMPORTANT: Before you start, in the Players module > Interactivity, you must enable the <strong>Version 2</strong> of the plugin on the <em>Options(JSON)</em>:
+      <p></p>
+      <code> "enablePluginV2": true</code>
+      <p></p>
+      You should see something similar to this:
+      <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/v2.webp"> </figure>
+
+      </aside>
   </section>
   
   <section class="bcls-section">
@@ -3663,7 +3671,7 @@
     <ol class="bcls-tasklist">
       <li>Login to Video Cloud Studio.</li>
       <li>Open the <strong>Interactivity</strong> module.</li>
-      <li>Click <span class="button-blue">New project</span>.</li>
+      <li>Click <span class="button-blue">New project</span>.  Or you can click on a project already created. </li>
       <li>Enter a <strong>Project Title</strong>.</li>
       <li>Select a video to use.</li>
       <li> Click <span class="button-blue">Create</span>.</li>
@@ -3672,10 +3680,14 @@
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/add-lead-form.webp"> </figure>
       </li>
       <li>Click on the <strong>Edit</strong> link in the menu.
-        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/lead-form-edit-dialog .webp"> </figure>
+        <!-- <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/lead-form-edit-dialog .webp"> </figure> -->
       </li>
       <li>Click on the <strong>Form source</strong> tab to add the Lead Form Code. On this screen, you can also click on the options <strong>Require submission</strong> and <strong>Show form everytime</strong>. You should see something similar to this:
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/edit-lead-form.webp"> </figure>
+      <p>In the case where you are working with Microsoft or Google Forms, you should see something like this:
+        <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/forms.webp"> </figure>
+        <aside class="bcls-aside bcls-aside--warning language-editable"><STRONG>IMPORTANT:</STRONG> Notice that in Google and Microsoft Forms,  the options <strong>Require submission</strong> and <strong>Show form everytime </strong> are NOT available. You need to click the <strong>X</strong> to exit.</aside>
+      </p>
       </li>
       <li>Click on the <strong>Time</strong>  tab to enter the start time.
         <figure class="bcls-figure"> <img src="/assets/images/s-brightcove-interactivity-img/annotations/start-time-edition.webp"> </figure>
