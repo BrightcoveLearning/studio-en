@@ -61,6 +61,16 @@ parent: Integration
         <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/salesforce/salesforce-dropdown.png" alt="salesforce-dropdown" style="width: 675px; height: 600px;">
       </figure>
     </li>
+    <li>Select your target environment:
+      <ul>
+        <li>If you want to test in a sandbox environment, choose <strong>Sandbox</strong> (see <a href="https://www.salesforce.com/platform/sandboxes-environments/">Salesforce Sandboxes: Sandbox Development Environment</a> for details about Salesforce sandboxes).
+          <aside class="bcls-aside bcls-aside--information">Note: Delete any existing sandbox integrations when connecting to the Production instance and create an integration with the <strong>Production</strong> environment. Follow <a href="https://studio.support.brightcove.com/marketing-automation/general/data-to-external-systems/server-side/salesforce-integration.html#Delete-integration">these steps</a> to delete your integration.</aside>
+        </li>
+        <li>Choose <strong>Production</strong> if you want to connect to your production instance.
+          <aside class="bcls-aside bcls-aside--information">Note: You can only connect to <strong>one</strong> of the environments at a time. If you need to connect to a different instance or re-establish a connection, please <a href="https://studio.support.brightcove.com/marketing-automation/general/data-to-external-systems/server-side/salesforce-integration.html#Delete-integration">delete the existing instance</a> and try again.</aside>
+        </li>
+      </ul>
+    </li>
     <li>Click <span class="button-blue">Save</span></li>
     <li>You will be redirected to Salesforce to authorize access for the application.</li>
     <li>If you accept, you will be redirected to Video Cloud Studio, where the integration will complete the setup.</li>
@@ -105,6 +115,23 @@ parent: Integration
 </section>
 
 <section class="bcls-section">
+  <h2 id="Delete-integration" >Delete Integration</h2>
+  <ol class="bcls-tasklist">
+    <li><p>Log in to <a href="https://signin.brightcove.com/?redirect=https%3A%2F%2Fstudio.brightcove.com%2F">Video Cloud Studio</a>.</p></li>
+    <li>Open the <strong>Integrations</strong> module.</li>
+    <li>
+      Click <strong>Customer Data Platforms</strong>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-audience-insights-img/integrations/eloqua/customer-data-platforms.webp" alt="customer-data-platforms" style="width: 875px;">
+      </figure>
+    </li>
+    <li>On the <strong>Salesforce</strong> row, click the trash icon (<img alt="" src="/assets/images/s-admin-img/ingest-profiles/node15628-delete-icon.png" />).</li>
+    <li>Type DELETE (case sensitive) to confirm.</li>
+    <li>Click <span class="button-red">Delete</span>.</li>
+  </ol>
+  </section>
+
+<section class="bcls-section">
     <h2 id="Troubleshooting" >Troubleshooting</h2>
     <ul>
       <li><h3>Cannot Create Integration</h3></li>
@@ -114,6 +141,7 @@ parent: Integration
       <li><h3>Data is Not Appearing in Salesforce</h3></li>
       <ul>
         <li>It may take from 24 to 48 hours for views to be registered in our system.</li>
+        <li>If you have both a Viewing Data Integration and a Contact Integration for Salesforce, one of the integrations can invalidate the other's credentials. We currently do not support having both simultaneously, so if this is the case, please delete one of the integrations and reauthorize the remaining one.</li>
         <li>Ensure that Salesforce Contacts exist for the expected users.</li>
         <li>Ensure that the Salesforce Contact IDs for the expected users are being set in the Brightcove Player.</li>
         
