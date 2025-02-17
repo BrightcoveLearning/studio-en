@@ -1,0 +1,86 @@
+---
+title: 'Overview'
+description: 'In this topic, you will learn how to seamlessly integrate Brightcove Video Cloud with Oracle Eloqua.'
+parent: Integrations
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
+    <p>This integration enables you to capture valuable insights into how your audience engages with video content.</p>
+    <p>With two powerful data integration options, <strong>Viewing Data Integration</strong> and <strong>Contact Object Integration</strong>, you can choose between detailed, event-level tracking or high-level audience insights to enhance your Eloqua workflows.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="comparison">Viewing Data vs Contact Object Integration</h2>
+    <p>The table below outlines the key differences between <strong>Viewing Data Integration</strong> and <strong>Contact Object Integration</strong>.</p>
+
+    <div class="table-responsive">
+        <table class="bcls-table">
+              <thead class="bcls-table__head">
+                  <tr>
+                    <th>Feature</th>
+                    <th>Viewing Data Integration</th>
+                    <th>Contact Object Integration</th>
+                  </tr>
+              </thead>
+              <tbody class="bcls-table__body">
+                <tr>
+                    <td><strong>Granularity</strong></td>
+                    <td>Granular viewing data captured per individual event and tracked by day. Includes detailed engagement metrics.</td>
+                    <td>Aggregated data at the contact level, summarizing viewing activity over the past 3 months or 1 year.</td>
+                </tr>
+                <tr>
+                    <td><strong>Use Cases</strong></td>
+                    <td>Primarily used by <strong>Marketing & Enterprise Customers</strong> who need detailed insights into whether a specific video was watched on a specific date for lead scoring, segmentation, and personalized marketing.</td>
+                    <td>Primarily used by <strong>Media Customers</strong> who need a broad understanding of viewer consumption patterns to build targeted campaigns for a group of customers.</td>
+                </tr>
+                <tr>
+                    <td><strong>Sample Properties</strong></td>
+                    <td>
+                        <ul>
+                            <li>% Watched</li>
+                            <li>Minutes Watched</li>
+                            <li>View Date</li>
+                        </ul>
+                        <p>For a full list of properties, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/data-fields/viewing-data-integration-properties.html">here</a></p>.
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Primary Device for last 3 months</li>
+                            <li>Top 10 Titles Watched</li>
+                            <li>Top Genre Watched</li>
+                        </ul>
+                        <p>For a full list of properties, see <a target="_blank" href="https://studio.support.brightcove.com/marketing-automation/general/data-fields/contact-integration-properties.html">here</a></p>.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Data Storage</strong></td>
+                    <td>Data is <strong>written to a Custom Object</strong> within Eloqua, maintaining a historical log of video interactions per viewer.</td>
+                    <td>Data is <strong>written directly to the Contact Object</strong> in Eloqua, updating the record with the latest summarized insights.</td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+        
+
+  </section>
+  
+  <section class="bcls-section">
+    <h2 id="Viewing_Data_integration">Viewing Data integration</h2>
+    <p>The Viewing Data Integration feature in Brightcove enables granular, event-based tracking of viewer interactions with video content. This integration is designed to help marketing teams and enterprise customers analyze engagement patterns, optimize lead scoring, and personalize campaigns based on actual video consumption behavior.</p>
+    <p>Whether you're looking to improve marketing automation workflows, optimize content performance, or enhance audience segmentation, Viewing Data Integration provides actionable insights that help turn video engagement into measurable business outcomes.</p>
+    <a target="_blank" href="/marketing-automation/integrations/eloqua/viewing-data-integration.html">Set Up Viewing Data Integration</a>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Contact__Object_integration">Contact Object integration</h2>
+    <p>The Contact Object Integration in Brightcove provides a high-level summary of a viewer’s video engagement, offering aggregated insights.</p>
+    <p>This integration is particularly beneficial for media companies and marketers who need high-level video consumption insights to optimize their content strategy and campaign targeting.</p>
+    <a href="https://audience-insights.support.brightcove.com/integrations/integration_eloqua.html">Set Up Contact Object Integration</a>
+    <aside class="bcls-aside bcls-aside--information">Note: The system only updates users who exist in both systems. It will not create new contacts in your MAP/CRM system.
+        You can align users using their Contact ID.
+    </aside>
+    <p>Contact Integration data is bound to the contact and aggregates data at the user level. This export overwrites the existing data with the most updated records with each sync.</p>
+  </section>
+</article>
