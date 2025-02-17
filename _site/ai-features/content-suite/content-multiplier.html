@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>AI Metadata Optimizer</title>
+        <title>Content Multiplier</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
-        <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic, you will learn how to utilize the Brightcove AI Metadata Optimizer.">
+        <meta name="description" content="In this topic, you will learn how to utilize the Brightcove AI Content Multiplier.">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -16,8 +15,10 @@
         <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
         
         <!-- FontAwesome JS-->
+        
         <!-- <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>   -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
         <!-- Plugins CSS -->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
         <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
@@ -48,6 +49,7 @@
         <div id="teconsent"></div>
         <script async="async"
             src="https://url.us.m.mimecastprotect.com/s/5CgOCzpzDQU89lO9HgivF9GSgA?domain=consent.trustarc.com"></script>
+        
 
 <header class="header fixed-top">
   <div class="branding docs-branding">
@@ -2202,6 +2204,41 @@
             
             
             
+            <li class="nav-item section-title"><a class="nav-link" href="/ai-features/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Optimizing with AI</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/ai-features/content-suite/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Content suite</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item section-doc"><a class="nav-link" href="/ai-features/content-suite/content-multiplier.html" aria-current="page">Content Multiplier</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/ai-features/content-suite/metadata-enhancer.html">Metadata Optimizer</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
             <li class="nav-item section-title"><a class="nav-link" href="/channels/index.html"><span class="theme-icon-holder me-2">
               <i class="fa-solid fa-plus"></i></span>&nbsp;Managing Channels</a>
               <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
@@ -3609,7 +3646,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">AI Metadata Optimizer</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/ai-features/content-suite/">Content suite</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Content Multiplier</li>
             
             
           </ol>
@@ -3629,144 +3670,197 @@
       </div>
       <br>
       
-      <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
-<h1>AI Metadata Optimizer</h1>
+      
+<h1>Content Multiplier</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to utilize the Brightcove AI Metadata Optimizer.</summary>
+  <summary>In this topic, you will learn how to utilize the Brightcove AI Content Multiplier.</summary>
 
   <section class="bcls-section">
     <h2 id="intro">Introduction</h2>
-    <p>The Brightcove AI Metadata Optimizer can generate metadata based on your video's text tracks.<br> This feature will ensure that your metadata is effortlessly optimized to suit your content better.</p>
+    <p>The Brightcove AI Content Multiplier allows you to quickly transform long-form videos into engaging, shorter clips tailored for different platforms. Whether you want to highlight key moments, create summaries, or convert content into vertical formats, this tool simplifies the process while maintaining the essence of your original video.</p>
   </section>
   
   <section class="bcls-section">
-    <h2 id="use">Using the AI Metadata Optimizer</h2>
+    <h2 id="create">Creating new clips</h2>
     <ol class="bcls-tasklist">
-      <li>Navigate to the media module and select your video.
+      <li>Navigate to the media module and select <strong>your video</strong>.
         <p></p>
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/ai-features/metadata-enhancer/media-module.webp">
+          <img class="bcls-image" src="/assets/images/ai-features/content-multiplier/nav-content.webp">
         </figure>
         <p></p>
+        <aside class="bcls-aside bcls-aside--warning language-editable">To be clipped, source videos should be  at least 3 minutes and include spoken words.</aside>
       </li>
-      <li><a href="https://mstudio.support.brightcove.com/media/managing-text-tracks.html#add">Add text tracks</a> to your video if you do not have text tracks.
-        <aside class="bcls-aside bcls-aside--warning language-editable">If you do not have text tacks in your video, the autocaption process will start.</aside>
-      </li>
-      <li>In the Overview tab, Click <strong>Generate with AI</strong>
+      
+      <li>Click on the <strong>AI</strong> Button and select <strong>Clips</strong>.
         <p></p>
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/ai-features/metadata-enhancer/generate-original.webp">
+          <img class="bcls-image" src="/assets/images/ai-features/content-multiplier/ai-dropdown.webp">
         </figure>
         <p></p>
-        <aside class="bcls-aside bcls-aside--information language-editable">This process could take up to 20 seconds.</aside>
-        <p>Metadata you can generate with this process:</p>
+        <p>Content you can generate with this process:</p>
         <p>
           <ul>
-            <li>Name</li>
-            <li>Short description</li>
-            <li>Tags</li>
-            <li>Long description</li>
+            <li><strong>Key Moments & Reels:</strong> Ready-to-publish clips of the most engaging excerpts from the  video. <br>The number  of clips will be determined by the model.  Key Moments will also be converted to vertical video in the form of Insta Reels (under 90 seconds) and YouTube Shorts (under 60 seconds).</li>
+            <p></p>
+            <li><strong>Summaries:</strong>  A concise rendering of the source video consisting of all the Key Moments stitched together.</li>
+            <p></p>
+            <li><strong>Reels:</strong> Key moments in vertical format.</li>
+            <p></p>
+            <li><strong>Chapters:</strong> All content within the source video is organized and clipped by topic.</li>
+            <p></p>
+            <li><strong>Original + Metadata:</strong> Add a full-length version of the original clip with metadata and transcript.</li>
           </ul>
         </p>
         <p></p>
-      </li>
-      <li>Select and Edit your metadata
+        <aside class="bcls-aside bcls-aside--information language-editable">Key moments are selected based on relevant topics, audio intensity, and visual queues to predict your most engaging snippets.</aside>
+        <!-- <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/ai-features/clip-vertical.webp">
+        </figure> -->
+    </li>
+    <li>
+        Fill in your video's information, along with the output to generate, and click <span class="button-blue">Start</span>
+        <p></p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/ai-features/content-multiplier/gen-clips.webp">
+        </figure>
+        <p></p>
+        <aside class="bcls-aside bcls-aside--information language-editable">If your specific category is missing from the list, try to match the source video with the category that's closer in terms of structure.</aside>
+        <p></p>
+        <aside class="bcls-aside bcls-aside--warning language-editable">Please allow this process some time to complete.</aside>
+    </li>
+    <li>You will see this message letting you know this process has started.
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/ai-features/content-multiplier/status.webp">
+      </figure>
+      <aside class="bcls-aside bcls-aside--tip language-editable">You can monitor the Content Multiplier's process by looking at the custom fields section of the original video and the newly generated content. You will find this information in the (frammer_integration) custom field.<br><br>
+        These are the possible status values for the original video: 
         <ul>
-          <li>A. Select your preferred metadata from the available options.</li>
-          <li>B. You can manually edit your metadata as needed.</li>
+          <li>video_processed.inqueue</li>
+          <li>video_processed.partial-success: Several clips are being generated; some of them are done, and some of them are still being processed.</li>
+          <li>video_processed.success</li>
         </ul>
         <p></p>
+        <ul>In your newly generated clips, you will find the next statuses in the custom fields section:
+          <li>not started</li>
+          <li>in progress</li>
+          <li>done</li>
+        </ul>
+      
+      </aside>
+      <p></p>
+      <aside class="bcls-aside bcls-aside--warning language-editable">The custom field <strong>frammer_integration</strong> cannot be edited.</aside>
+    </li>
+
+    <li>
+        Once the process is completed, you will be able to see your <strong>new content</strong> as separate entities from your original video in your <strong>media module</strong>.<br><br> The generated content will contain the Title (Reels, Chapter, Summary, or Key Moment) plus ":" and the suggested title based on your clip's content.
+        <p></p>
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/ai-features/metadata-enhancer/edit.webp">
+            <img class="bcls-image" src="/assets/images/ai-features/content-multiplier/new-content.webp">
         </figure>
         <p></p>
-        <aside class="bcls-aside bcls-aside--information language-editable">You can generate up to 5 sets of suggestions per session.</aside>
+        <aside class="bcls-aside bcls-aside--information language-editable">If the video does not have enough information to determine a tittle, it will default the new asset's name to "content multiplier". <br><br> Metadata can be edited manually or generated with the Metadata Optimizer. To modify the Thumbnail, go to <a href="https://www.frammer.com/docs/…p.htm#making-changes"> Edit -> adjust clip</a>.</aside>
+    </li>
+    </section>
+
+    <section class="bcls-section">
+    <h2 id="vertical">Create a Vertical Video</h2>
+    <ol class="bcls-tasklist-restart">
+        <li>Click the <strong>AI</strong> Button and select <strong>Create vertical video.</strong>
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/ai-features/content-multiplier/crop.webp">
+            </figure>
+        </li>
         <p></p>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/ai-features/metadata-enhancer/generate.webp">
-        </figure>
+        <aside class="bcls-aside bcls-aside--warning language-editable">Original content should be shorter than 10 minutes to create a vertical video.</aside>
         <p></p>
-      </li>
-      <li>Click on the <strong>checkmark button</strong> to select the metadata in the textbox. Notice this change is not yet in production.
-        <p></p>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/ai-features/metadata-enhancer/select.webp">
-        </figure>
-        <p></p>
-        <aside class="bcls-aside bcls-aside--warning language-editable">Only the selected metadata will be saved to your video.</aside>
-      </li>
-      <li>Click <span class="button-blue">Save</span></li>
+        <li> Select your <strong>Video Category</strong> and click <span class="button-blue">Start</span>
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/ai-features/content-multiplier/clip-vertical.webp">
+            </figure>
+            <p></p>
+              <aside class="bcls-aside bcls-aside--information language-editable">If your specific category is missing from the list, try to match the source video with the category that's closer in terms of structure.</aside>
+            <p></p>
+        </li>
+        <li>
+            Once the process is completed, a <strong>vertical version</strong> of your content will appear as a separate entity in your media library.
+            <p></p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/ai-features/content-multiplier/vertical-vid.webp">
+            </figure>
+            <aside class="bcls-aside bcls-aside--information language-editable">The generated content will contain the Title "Vertical:" plus the suggested name based on your clip's content.</aside>
+            <aside class="bcls-aside bcls-aside--warning language-editable">Please allow this process some time to complete.</aside>
+            <p></p>
+        </li>
     </ol>
+    
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="edit">Editing a content Multiplier Asset</h2>
+    <p>This process can help you better align the output with your vision by:</p>
+    <ul>
+      <li>Emphasizing a missed phrase or idea to enhance clarity or impact.</li>
+      <li>Adjusting the layout or focus in a vertical video for better composition.</li>
+      <li>Shortening the video while keeping key messages for better viewer retention.</li>
+    </ul>
+    <p>Among other things</p>
+    <h4>To edit a generated video, follow the next steps:</h4>
+    <ol class="bcls-tasklist-restart">
+      <li>Navigate to the media module and select <strong>your video</strong>.
+        <p></p>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/ai-features/content-multiplier/select-video.webp">
+        </figure>
+      </li>
+      <li>Click <strong>Edit</strong> and <strong>Adjust Clip</strong>
+          <p></p>
+          <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/ai-features/content-multiplier/edit-gen-video.webp">
+          </figure>
+      </li>
+      <li> You will be redirected to a Frammer page where you can edit your content.<br>You can find more information in <a href="https://www.frammer.com/docs/help.htm#making-changes">Frammer's documentation</a>.
+          <p></p>
+          <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/ai-features/content-multiplier/frammer-redirect.webp">
+          </figure>
+      </li>
+      <li> After making your desired changes, click <strong>Publish to Brightcove</strong>
+        <p></p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/ai-features/content-multiplier/frammer--publish.webp">
+        </figure>
+    </li>
   </section>
 
   <section class="bcls-section">
     <h2 id="faq">FAQs</h2>
-    <!-- <h4>What metadata can I generate with this process?</h4>
-    <p>
-      <ul>
-        <li>Name</li>
-        <li>Short description</li>
-        <li>Tags</li>
-        <li>Long description</li>
-      </ul>
-    </p> -->
-    <!-- <h4>What are the limitations of this feature?</h4>
     <ul>
-      <li>Metadata is created only from text tracks; visual content is not analyzed.</li>
-      <p></p>
-      <li>If a video lacks captions, you can choose to generate them. If so, re-transcoding with current entitlements is required.</li>
-      <p></p>
-      <li>If a video has multiple language transcripts or audio tracks, the tool defaults to the English track or the most recently uploaded.</li>
-    </ul>
-    <h4>What languages are supported for this tool?</h4>
-    <ul>
-      <li>English (en)</li>
-      <li>German (de)</li>
-      <li>Spanish (es)</li>
-      <li>French (fr)</li>
-      <li>Hindi (hi)</li>
-      <li>Italian (it)</li>
-      <li>Japanese (ja)</li>
-      <li>Korean (ko)</li>
-      <li>Polish (pl)</li>
-      <li>Portuguese (pt)</li>
-      <li>Russian (ru)</li>
-      <li>Turkish (tr)</li>
-      <li>Chinese Simplified (zh)</li>
-    </ul>    
-    <h4>Is there a way to approve the content so it does not get automatically "pushed" to the public domain if it is tagged incorrectly?</h4>
-    <ul>
-      <li>Yes, all generated metadata requires your approval before it updates production values.</li>
-    </ul>
-    <h4>Can the Universal Translator be used to generate the text track for the metadata Optimizer?</h4>
-    <ul>
-      <li>Yes, Metadata optimizer can work with Universal Translator, Brightcove Autocaptions or text tracks generated by third party tools as long as they are in a standard captions format.</li>
-    </ul>
-    <h4>Will this tool work if I use captions generated from a tool outside Brightcove?</h4>
-    <ul>
-      <li>Yes, it supports captions generated by tools outside Brightcove.</li>
-    </ul> -->
-    <ul>
-      <li><strong>What are the limitations of this feature?</strong><br>
-          - Metadata is created only from text tracks; visual content is not analyzed.<br>
-          - If a video lacks captions, you can choose to generate them. If so, re-transcoding with current entitlements is required.<br>
-          - If a video has multiple language transcripts or audio tracks, the tool defaults to the English track or the most recently uploaded.
+      <li><strong>Is Content Multiplier learning from my data?</strong><br>
+          No, Brightcove does not train AI models using data from your videos or account.
       </li>
-      <li><strong>What languages are supported for this tool?</strong><br>
-          English (en), German (de), Spanish (es), French (fr), Hindi (hi), Italian (it), Japanese (ja), Korean (ko), 
-          Polish (pl), Portuguese (pt), Russian (ru), Turkish (tr), Chinese Simplified (zh).
+      <li><strong>How long will Content Multiplier store my videos after processing?</strong><br>
+          The videos will expire after one month. If the account is deactivated, Content Multiplier will expire videos after 15 days.
       </li>
-      <li><strong>Is there a way to approve the content so it does not get automatically "pushed" to the public domain if it is tagged incorrectly?</strong><br>
-          Yes, all generated metadata requires your approval before it updates production values.
+      <li><strong>If I edit a video in Content Multiplier and re-render it, will it be deducted in AI Credits?</strong><br>
+          No, only the clips generated by actions triggered in Video Cloud will deduct AI Credits.
       </li>
-      <li><strong>Can the Universal Translator be used to generate the text track for the metadata Optimizer?</strong><br>
-          Yes, Metadata Optimizer can work with Universal Translator, Brightcove Autocaptions, or text tracks generated by third-party tools as long as they are in a standard captions format.
+      <li><strong>What are the requisites for generating clips?</strong><br>
+          Ideally, the video should be longer than 3 minutes and should have spoken words. Music videos are not recommended.
       </li>
-      <li><strong>Will this tool work if I use captions generated from a tool outside Brightcove?</strong><br>
-          Yes, it supports captions generated by tools outside Brightcove.
+      <li><strong>What are the requisites for cropping vertically?</strong><br>
+          The video should be shorter than 10 minutes.
+      </li>
+      <li><strong>Does Content Multiplier analyze a video picture or text track to decide Summary or Key Moments?</strong><br>
+          Key moments prioritize text but leverage some visual cues as well.
+      </li>
+      <li><strong>Could loud background noise or music impact Content Multiplier?</strong><br>
+          Yes, it could be impacted. The Content Multiplier's auto-captioning system is intelligent enough to distinguish one from the other, but it could impact the accuracy in some cases. Please contact support if your content will need to be processed to remove noise.
       </li>
   </ul>
-  </section>
+</section>
  
 </article>
 

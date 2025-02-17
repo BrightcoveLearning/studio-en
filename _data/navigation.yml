@@ -667,6 +667,19 @@
         - name: 'Accessing Reporting Endpoints'
           url: 'https://apis.support.brightcove.com/interactivity/accessing-reporting-endpoints.html'
 - section:
+  name: Optimizing with AI
+  url: /ai-features/index.html
+  icon: fa-solid fa-robot
+  description: description.
+  docs:
+  - name: Content suite
+    url: /ai-features/content-suite/index.html
+    docs:
+      - name: Content Multiplier
+        url: /ai-features/content-suite/content-multiplier.html
+      - name: Metadata Optimizer
+        url: /ai-features/content-suite/metadata-enhancer.html     
+- section:
   name: Managing Channels
   url: /channels/index.html
   icon: fa-regular fa-calendar
