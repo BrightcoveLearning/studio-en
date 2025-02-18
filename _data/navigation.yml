@@ -672,7 +672,7 @@
   icon: fa-solid fa-robot
   description: description.
   docs:
-  - name: Content suite
+  - name: Content Suite
     url: /ai-features/content-suite/index.html
     docs:
       - name: Content Multiplier
