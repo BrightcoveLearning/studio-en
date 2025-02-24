@@ -1,0 +1,30 @@
+---
+title: Captions with Live Streams
+description: 'In this topic, you will learn about using captions with Brightcove live streams.'
+parent: General
+grandparent: Live Streaming
+---
+
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
+    <p>Closed captioning provides text for the audio component of a live stream. This extends the reach of your content by including viewers who are deaf or hard-of-hearing as well as viewers who are not proficient in the spoken language.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Details">Details</h2>
+    <p>Brightcove Live currently supports 608 captions in-band (inside h.264 headers). If captions are inside the h.264 input signal (correctly signaled in the user_data packet) those are passed through to the h.264 outputs.</p>
+    <p></p>
+    <aside class="bcls-aside bcls-aside--information language-editable">You can provide two 608 captions for two languages within the same live job. Brightcove players should show both languages as options, but some players may offer only one of the two.</aside>
+    <p></p>
+    <p>If you are using a broadcast Elemental live encoder you can get captions from SDI (EIA-608/CEA-608) or other sources (SCTE-20, SCC, Teletext, DVB-Sub, Ancillary, ARIB, TTML, SCTE-27, STL, SRT, SMI) and put them into the h.264 stream that you send to us. Other broadcast grade encoders probably can do the same, but we have not formally tested them. <br><br>WebVTT captions are not supported for Live streams.<br><br>The Brightcove Player has support for in-band captions.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: As a current limitation, Safari will display the CC controls for Live streams even when there are no captions to display.</aside>
+    <p></p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: The Chinese language is not supported by 608 captions.</aside>
+    <p></p>
+    <aside class="bcls-aside bcls-aside--warning language-editable">Players using version 7.12.0 and above take into account caption positioning metadata. <br>If you notice changes in the position of your captions compared to previous players, please review the captions settings on your encoder.</aside>
+  </section>
+</article>
