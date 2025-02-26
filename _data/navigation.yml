@@ -850,7 +850,7 @@
           - name: Contact Data Integration
             url: https://audience-insights.support.brightcove.com/integrations/integration_eloqua.html
           - name: Configuring Viewer ID Tracking
-            url: /marketing-automation/general/viewer-id/viewer-id-tracking.html
+            url: /marketing-automation/integrations/eloqua/configuring-viewer-id.html
           - name: Finding your customer ID
             url: /marketing-automation/general/data-to-external-systems/server-side/finding-your-customer-id.html#eloqua
           - name: Leadforms
