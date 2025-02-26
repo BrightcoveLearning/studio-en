@@ -87,4 +87,79 @@ parent: Reviewing Analytics
   <p>You can find more information about this tab <a href="../pi-content.html">here</a>.</p>
   </section>
 
+  <section class="bcls-section">
+    <h2 id="configuring-content-owner-metadata-field">Configuring the Content Owner video metadata field</h2>
+    <ol class="bcls-tasklist">
+      <li>Log in to <strong>Video Cloud Studio</strong>.</li>
+      <li>Open the <strong>Admin</strong> module and then click <strong>Video fields</strong>.
+        <p></p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="Concurrent Viewers by"
+          src="/assets/images/insights/publisher_insights/video-fields.png" width="175px"/>
+        </figure>
+        <aside class="bcls-aside bcls-aside--information language-editable">Note: You must be an account administrator to access the Admin module.</aside>
+      </li>
+      <li>The Video Fields page will display your custom and standard video metadata fields.</li>
+      <li>Click <span class="button-blue">Add Custom Field.</span></li>
+      <li>Enter <strong>Insights Content Owner</strong> as the Display Name.</li>
+      <li>Enter <strong>insights_content_owner</strong> as the Internal Name.</li>
+      <li>(Optional): Enter a Description. The description field will appear as a hint in the Studio interface.
+        <p></p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="Concurrent Viewers by"
+          src="/assets/images/insights/publisher_insights/add-custom-field.png" width="875px"/>
+        </figure>
+        <aside class="bcls-aside bcls-aside--information language-editable">Note: The internal name automatically changes when you change the display name. The internal <strong>must always be</strong> <i>insights_content_owner</i>.</aside>
+      </li>
+      <li>Select a <strong>Type</strong> for the field:
+        <ul>
+          <li>Text: The user can type anything into the field up to 1024 single-byte characters (or 512 double-byte characters).</li>
+          <li>List: The user will select from a list of values. The list can have no more than 150 possible values, and each value can be 100 characters long.</li>
+        </ul>
+      </li>
+      <li>If your field type is <i>List</i>, enter a comma-separated list of values and click <strong>Add to List</strong>.
+        <p></p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="Concurrent Viewers by"
+          src="/assets/images/insights/publisher_insights/list-example.png" width="875px"/>
+        </figure>
+        <aside class="bcls-aside bcls-aside--information language-editable">Requirement: You must include the value <strong>-MY_CONTENT-</strong> if the field is required.</aside>
+      </li>
+      <li>If the custom field will be required, check <i>Make this Field Required</i>.
+        <aside class="bcls-aside bcls-aside--information language-editable">Note: Content will be set to <i>Inactive</i> if Required Fields are not filled in.</aside>
+      </li>
+      <li>Click <span class="button-blue">Save Field</span> to save the changes.</li>
+    </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="updating-content-owner-metadata-field">Updating the Content Owner video metadata field</h2>
+    <ol class="bcls-tasklist">
+      <li>Log in to <strong>Video Cloud Studio</strong>.</li>
+      <li>Open the <strong>Media</strong> module.
+      <li>Click on the video you want to update.</li>
+      <li>Go to the <strong>Custom Fields</strong> section located at the bottom.</li>
+      <li>Click <span class="button-gray"><i class="button-icon" data-feather="edit-3"></i>Edit</span>
+        <p></p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="Concurrent Viewers by"
+          src="/assets/images/insights/publisher_insights/custom-fields.png" width="875px"/>
+        </figure></li>
+      <li>Go to <strong>Insights Content Owner</strong> custom field.
+        <p></p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="Concurrent Viewers by"
+          src="/assets/images/insights/publisher_insights/video-field-example.png" width="675px"/>
+        </figure></li>
+      <li>Type or select the value.
+        <p></p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="Concurrent Viewers by"
+          src="/assets/images/insights/publisher_insights/video-field-list-example.png" width="675px"/>
+        </figure>
+        <aside class="bcls-aside bcls-aside--information language-editable">If the field is required you must type or select: <strong>-MY_CONTENT-</strong> to denote your content.</aside>
+      </li>
+      <aside class="bcls-aside bcls-aside--information language-editable">See the steps outlined in <a href="https://studio.support.brightcove.com/analytics/reports/publisher-insights.html#configuring-content-owner-metadata-field">“Configuring the Content Owner video metadata field”</a> if you do not see the value.</aside>
+    </ol>
+  </section>
 </article>
