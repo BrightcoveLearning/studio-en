@@ -2640,6 +2640,76 @@
               </li>
               
               
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/marketing-automation/integrations/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Integrations</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/marketing-automation/integrations/eloqua/index.html"><span class="theme-icon-holder me-2">
+                      <i class="fa-solid fa-minus"></i><span>&nbsp;Eloqua</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/marketing-automation/general/data-to-external-systems/server-side/overview-server-side.html">Overview</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/marketing-automation/general/data-to-external-systems/server-side/eloqua-integration.html">Viewing Data Integration</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="https://audience-insights.support.brightcove.com/integrations/integration_eloqua.html">Contact Data Integration</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/marketing-automation/integrations/eloqua/configuring-viewer-id.html">Configuring Viewer ID Tracking</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/marketing-automation/integrations/eloqua/customer-id.html">Finding your customer ID</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/interactivity/annotations/adding-lead-form.html#Adding_a_Lead_Form_Template">Leadforms</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" href="/marketing-automation/general/troubleshooting/server-side-ts.html" aria-current="page">Troubleshooting</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                </ul>
+              </li>
+              
+              
             </ul>
             </li>
             
@@ -3702,15 +3772,27 @@
             </li>
             <li><p><strong>Confirm that views are being generated in Brightcove:</strong></p>
             <ul>
-                <li><p>In the left navigation panel, click <strong>Analytics</strong>, then click <strong>Performance</strong>.</p></li>
+                <li><p>In the left navigation panel, click <strong>Analytics</strong>, then click <strong>Quick Reports</strong>.</p></li>
                 <figure class="bcls-figure">
-                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/performance.png" style="width: 875px;">
-                </figure> 
-                <li><p>Group by Viewer.</p></li>
-                <figure class="bcls-figure">
-                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/viewer.png" style="width: 875px;">
-                </figure> 
-                <li><p>Confirm that the data in the <strong>Viewer column</strong> conforms to the Viewer ID property set for the integration.</p></li>
+                    <img class="bcls-image--no-border" alt="Concurrent Viewers by"
+                    src="/assets/images/insights/marketing-comms/nav-quick.webp" />
+                  </figure>
+                  <li><p>Set the <strong>Start Date</strong> and <strong>End Date</strong> using the date picker.</p></li>
+                  <li><p><span class="button-blue">Create Report</span></p></li>
+                  <li><p>Wait for the report to change status to <strong>Ready</strong>.</p></li>
+                  <li><p><strong>Download</strong> the CSV file to your local machine.</p>
+                    <figure class="bcls-figure">
+                        <img class="bcls-image--no-border" alt="Concurrent Viewers by"
+                        src="/assets/images/insights/marketing-comms/download-quick-report.png" />
+                      </figure>
+                </li>
+                  <li><p>Open the CSV file in a spreadsheet application (Excel, Google Sheets).</p></li>
+                <li><p>Confirm that the data in the <strong>customerId</strong> conforms to the Viewer ID property set for the integration.</p>
+                    <figure class="bcls-figure">
+                        <img class="bcls-image--no-border" alt="Concurrent Viewers by"
+                        src="/assets/images/insights/marketing-comms/quick-reports-ci.png" />
+                      </figure>
+                </li>
                 <ul>
                     <li>For Customer ID, viewer IDs should be of the form <code translate="no">CTCPB00000000XXXX</code></li>
                     <li>For Viewer Token, viewer IDs should be of the form <code translate="no">XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</code></li>

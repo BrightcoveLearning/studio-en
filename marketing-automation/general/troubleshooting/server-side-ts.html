@@ -32,15 +32,27 @@ grandparent: Marketing Automation 2.0
             </li>
             <li><p><strong>Confirm that views are being generated in Brightcove:</strong></p>
             <ul>
-                <li><p>In the left navigation panel, click <strong>Analytics</strong>, then click <strong>Performance</strong>.</p></li>
+                <li><p>In the left navigation panel, click <strong>Analytics</strong>, then click <strong>Quick Reports</strong>.</p></li>
                 <figure class="bcls-figure">
-                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/performance.png" style="width: 875px;">
-                </figure> 
-                <li><p>Group by Viewer.</p></li>
-                <figure class="bcls-figure">
-                    <img class="bcls-image" src="/assets/images/campaign-eol/general/campaign2/client-side-troubleshooting/viewer.png" style="width: 875px;">
-                </figure> 
-                <li><p>Confirm that the data in the <strong>Viewer column</strong> conforms to the Viewer ID property set for the integration.</p></li>
+                    <img class="bcls-image--no-border" alt="Concurrent Viewers by"
+                    src="/assets/images/insights/marketing-comms/nav-quick.webp" />
+                  </figure>
+                  <li><p>Set the <strong>Start Date</strong> and <strong>End Date</strong> using the date picker.</p></li>
+                  <li><p><span class="button-blue">Create Report</span></p></li>
+                  <li><p>Wait for the report to change status to <strong>Ready</strong>.</p></li>
+                  <li><p><strong>Download</strong> the CSV file to your local machine.</p>
+                    <figure class="bcls-figure">
+                        <img class="bcls-image--no-border" alt="Concurrent Viewers by"
+                        src="/assets/images/insights/marketing-comms/download-quick-report.png" />
+                      </figure>
+                </li>
+                  <li><p>Open the CSV file in a spreadsheet application (Excel, Google Sheets).</p></li>
+                <li><p>Confirm that the data in the <strong>customerId</strong> conforms to the Viewer ID property set for the integration.</p>
+                    <figure class="bcls-figure">
+                        <img class="bcls-image--no-border" alt="Concurrent Viewers by"
+                        src="/assets/images/insights/marketing-comms/quick-reports-ci.png" />
+                      </figure>
+                </li>
                 <ul>
                     <li>For Customer ID, viewer IDs should be of the form <code translate="no">CTCPB00000000XXXX</code></li>
                     <li>For Viewer Token, viewer IDs should be of the form <code translate="no">XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</code></li>

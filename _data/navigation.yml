@@ -836,29 +836,29 @@
             url: /marketing-automation/general/troubleshooting/client-side-ts.html
           - name: Server-Side Troubleshooting
             url: /marketing-automation/general/troubleshooting/server-side-ts.html
-  # - name: Integrations
-  #   url: /marketing-automation/integrations/index.html
-  #   docs:
-  #     - name: Eloqua
-  #       url: /marketing-automation/integrations/eloqua/index.html
-  #       icon: fa-solid fa-puzzle-piece-simple
-  #       docs:
-  #         - name: Overview
-  #           url: /marketing-automation/general/data-to-external-systems/server-side/overview-server-side.html
-  #         - name: Viewing Data Integration
-  #           url: /marketing-automation/general/data-to-external-systems/server-side/eloqua-integration.html
-  #         - name: Contact Data Integration
-  #           url: https://audience-insights.support.brightcove.com/integrations/integration_eloqua.html
-  #         - name: Configuring Viewer ID Tracking
-  #           url: /marketing-automation/integrations/eloqua/configuring-viewer-id.html
-  #         - name: Finding your customer ID
-  #           url: /marketing-automation/general/data-to-external-systems/server-side/finding-your-customer-id.html#eloqua
-  #         - name: Leadforms
-  #           url: /interactivity/annotations/adding-lead-form.html#Adding_a_Lead_Form_Template
-  #         - name: Troubleshooting
-  #           url: /marketing-automation/general/troubleshooting/server-side-ts.html
-  #         - name: Data Validation
-  #           url: /marketing-automation/general/troubleshooting/server-side-ts.html
+  - name: Integrations
+    url: /marketing-automation/integrations/index.html
+    docs:
+      - name: Eloqua
+        url: /marketing-automation/integrations/eloqua/index.html
+        icon: fa-solid fa-puzzle-piece-simple
+        docs:
+          - name: Overview
+            url: /marketing-automation/general/data-to-external-systems/server-side/overview-server-side.html
+          - name: Viewing Data Integration
+            url: /marketing-automation/general/data-to-external-systems/server-side/eloqua-integration.html
+          - name: Contact Data Integration
+            url: https://audience-insights.support.brightcove.com/integrations/integration_eloqua.html
+          - name: Configuring Viewer ID Tracking
+            url: /marketing-automation/integrations/eloqua/configuring-viewer-id.html
+          - name: Finding your customer ID
+            url: /marketing-automation/integrations/eloqua/customer-id.html
+          - name: Leadforms
+            url: /interactivity/annotations/adding-lead-form.html#Adding_a_Lead_Form_Template
+          - name: Troubleshooting
+            url: /marketing-automation/general/troubleshooting/server-side-ts.html
+          # - name: Data Validation
+          #   url: /marketing-automation/general/troubleshooting/server-side-ts.html
 - section:
   name: Marketing Automation 1.0
   url: /campaign/index.html
