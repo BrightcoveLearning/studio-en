@@ -486,10 +486,10 @@
       url: /live-2-0/reviewing-live-analytics.html
     - name: Creating Custom Live 2.0 Ingest Profiles
       url: /admin/creating-custom-live-2-0-ingest-profiles.html
-    - name: Live Video Glossary
-      url: /live-2-0/live-video-glossary.html
-    - name: Managing API Authentication Credentials
-      url: /live-2-0/managing-api-authentication-credentials.html
+    # - name: Live Video Glossary
+    #   url: /live-2-0/live-video-glossary.html
+    # - name: Managing API Authentication Credentials
+    #   url: /live-2-0/managing-api-authentication-credentials.html
   - name: General Information
     url: /live/general/index.html
     icon: fa-solid fa-circle-info

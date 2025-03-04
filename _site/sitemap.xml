@@ -1863,24 +1863,6 @@
             <priority>0.5</priority>
           </url>
         
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/live-2-0/live-video-glossary.html</loc>
-            
-            <lastmod>2025-03-04</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://studio.support.brightcove.com/live-2-0/managing-api-authentication-credentials.html</loc>
-            
-            <lastmod>2025-03-04</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
       
         <url>
           
