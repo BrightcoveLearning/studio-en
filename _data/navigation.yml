@@ -477,19 +477,19 @@
     - name: "Brightcove Live - Zoom Integration"
       url: /live/live-module/zoom-live-integration.html
   - name: Live 2.0
-    url: /live-2-0/index.html
+    url: /live/live-2-0/index.html
     icon: fa-solid fa-circle-info
     docs:
     - name: Quick Start from Live 1.0 to Live 2.0
-      url: /live-2-0/migrating-2-0.html
+      url: /live/live-2-0/migrating-2-0.html
     - name: Reviewing Live 2.0 Analytics
-      url: /live-2-0/reviewing-live-analytics.html
+      url: /live/live-2-0/reviewing-live-analytics.html
     - name: Creating Custom Live 2.0 Ingest Profiles
       url: /admin/creating-custom-live-2-0-ingest-profiles.html
     - name: Live Video Glossary
-      url: /live-2-0/live-video-glossary.html
+      url: /live/live-2-0/live-video-glossary.html
     - name: Managing API Authentication Credentials
-      url: /live-2-0/managing-api-authentication-credentials.html
+      url: /live/live-2-0/managing-api-authentication-credentials.html
   - name: General Information
     url: /live/general/index.html
     icon: fa-solid fa-circle-info

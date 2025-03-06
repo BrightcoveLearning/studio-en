@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Playback Restrictions with Live Events</title>
+        <title>Live Video Glossary</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
-        <meta name="robots" content="noindex,nofollow"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic, you will learn how to use the Live module to create a Live Event with Playback Restrictions.">
+        <meta name="description" content="">
         
         <!-- Google Font -->
         <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
@@ -16,8 +15,10 @@
         <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
         
         <!-- FontAwesome JS-->
+        
         <!-- <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>   -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
         <!-- Plugins CSS -->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
         <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
@@ -48,6 +49,7 @@
         <div id="teconsent"></div>
         <script async="async"
             src="https://url.us.m.mimecastprotect.com/s/5CgOCzpzDQU89lO9HgivF9GSgA?domain=consent.trustarc.com"></script>
+        
 
 <header class="header fixed-top">
   <div class="branding docs-branding">
@@ -1614,7 +1616,7 @@
 
               <li class="nav-item subsection-title">
                 
-                <a class="nav-link" href="/live-2-0/index.html">
+                <a class="nav-link" href="/live/live-2-0/index.html">
                   <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Live 2.0</a>
                 
 
@@ -1622,13 +1624,13 @@
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/live-2-0/migrating-2-0.html">Quick Start from Live 1.0 to Live 2.0</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/live/live-2-0/migrating-2-0.html">Quick Start from Live 1.0 to Live 2.0</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/live-2-0/reviewing-live-analytics.html">Reviewing Live 2.0 Analytics</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/live/live-2-0/reviewing-live-analytics.html">Reviewing Live 2.0 Analytics</a></li>
                   
                   
                   
@@ -1640,13 +1642,13 @@
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/live-2-0/live-video-glossary.html">Live Video Glossary</a></li>
+                  <li class="nav-item section-doc"><a class="nav-link" href="/live/live-2-0/live-video-glossary.html" aria-current="page">Live Video Glossary</a></li>
                   
                   
                   
                   
                   
-                  <li class="nav-item"><a class="nav-link" href="/live-2-0/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/live/live-2-0/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a></li>
                   
                   
                   
@@ -3722,11 +3724,15 @@
             <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
             
             
-            <li class="breadcrumb-item"><a class="theme-link" href="/live-2-0/">Live 2 0</a></li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/live/">Live</a></li>
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Playback Restrictions with Live Events</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/live/live-2-0/">Live 2 0</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Live Video Glossary</li>
             
             
           </ol>
@@ -3746,133 +3752,201 @@
       </div>
       <br>
       
-      <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
-<h1>Playback Restrictions with Live Events</h1>
+      
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to use the Live module to create a Live Event with Playback Restrictions.</summary>
+  <h1>Live Video Glossary</h1>
+  <summary></summary>
   <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p> By default, live streams talk to the Brightcove Live API to stream your event. A new system to manage Playback Rights and Restrictions sits in front of the Live API and provides playback authorization using DRM licenses or AES-128 (HLSe) encryption. </p>
-    <p>Live streams use <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html#Runtime_restrictions">runtime restrictions</a>, so you will need a JSON Web Token (JWT) with specific permissions (claims) for your stream request.</p>
-    <p>The token is used when requesting the video license, once the video has been loaded to the player and the source has been selected.</p>
-    <p>To use Playback Restrictions with live streams, your account must be enabled for either studio-grade DRM or AES-128 (HLSe) encryption.</p>
-    <aside class="bcls-aside bcls-aside--information">With HLSe content, when the player changes rendition, due to improved connectivity or after the first segment is loaded, a new license request is made.</aside>
-    <p>If you are not familiar with this feature, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.</p>
+    <p>
+      <style type="text/css">
+dt {font-weight: bold;}
+dd { padding-bottom: 10px; }
+</style>
+    </p>
+    <p>| <a href="#A">-A-</a> | <a href="#B">-B-</a> | <a href="#C">-C-</a> | <a href="#D">-D-</a> | <a href="#E">-E-</a> | <a href="#F" class="inactive">-F-</a> | <a href="#G">-G-</a> | <a href="#H">-H-</a> | <a href="#I">-I-</a> | <a href="#J" class="inactive">-J-</a> | <a href="#K" class="inactive">-K-</a> | <a href="#L">-L-</a> | <a href="#M" class="inactive">-M-</a> | <a href="#N" class="inactive">-N-</a> | <a href="#O" class="inactive">-O-</a> | <a href="#P" class="inactive">-P-</a> | <a href="#Q" class="inactive">-Q-</a> | <a href="#R">-R-</a> | <a href="#S">-S-</a> | <a href="#T">-T-</a> | <a href="#U" class="inactive">-U-</a> | <a href="#V">-V-</a> | <a href="#W" class="inactive">-W-</a> | <a href="#X" class="inactive">-X-</a> | <a href="#Y" class="inactive">-Y-</a> | <a href="#Z" class="inactive">-Z-</a> |</p>
   </section>
-  <section class="bcls-section">
-    <h2 id="Requirements">Requirements</h2>
-    <p>This feature is a paid add-on for your account. Contact your Customer Success Manager to enable the following:</p>
-    <ul>
-      <!-- <li>Enable your account for either DRM or AES-128 (HLSe) encryption.</li> -->
-      <li>
-        <p>Enable your account for Playback Rights (EPA).</p>
-        <aside class="bcls-aside bcls-aside--warning">Currently, enabling your account for Playback Rights (EPA) will impact your ability to do live clipping.</aside>
-      </li>
-    </ul>
+  <section class=“bcls-section" id="A">
+    <h2 id="A" >A</h2>
+    <dl>
+      <dt id="api">Adaptive Bitrate (ABR) Streaming</dt>
+      <dd>&nbsp;A method of video streaming over the Internet, primarily over HTTP, where the source content is encoded at multiple bitrates, then each bit rate streams are segmented into smaller chunks of data. Depending on the available bandwidth, the quality of the media delivered to the client can improve or degrade; thus the Adaptive part.</dd>
+      <dt id="api">Advanced Encryption Standard (AES)</dt>
+      <dd>This is a specification for the symmetric key encryption (where both communicating ends have the same encryption key) of electronic data established by the U.S. National Institute of Standards and Technology (NIST). It is part of Stream Security. AES is usually followed by a number, such as AES-128 or AES-256, which refer to the cipher block size in bits. The higher the number, the more secure the encryption is.</dd>
+    </dl>
   </section>
-  <section class="bcls-section">
-    <h2 id="Workflow">Workflow</h2>
-    <p>To use Playback Restrictions with a live event, follow these steps:</p>
-    <ol class="bcls-tasklist">
-      <li><a href="#Define_Playback_Rights">Define Playback Rights</a></li>
-      <li><a href="#Create_a_live_event_with_Playback_Restrictions">Create a live event with Playback Restrictions</a></li>
-      <li><a href="#Publish_the_live_event">Publish the live event</a></li>
-    </ol>
-    <p>Alternatively, you can use the Brightcove APis to create the live event and associate Playback Restrictions. For details, see the <a href="https://apis.support.brightcove.com/live-api/guides/live-playback-restrictions.html">Playback Restrictions with Live Streams</a> document.</p>
+  <section class=“bcls-section" id="B">
+    <h2 id="B">B</h2>
+    <dl>
+      <dt id="api">Bitrate</dt>
+      <dd>The number of bits that are conveyed or processed per unit of time.</dd>
+    </dl>
   </section>
-  <section class="bcls-section">
-    <h2 id="Define_Playback_Rights">Define Playback Rights</h2>
-    <p>Brightcove's Playback Rights Management Service allows you to manage video playback based on the following:</p>
-    <ul>
-      <li>Geography</li>
-      <li>Domain</li>
-      <li>Proxy</li>
-      <li>Schedule dates</li>
-    </ul>
-    <p>Here are the steps to define Playback Rights in Studio:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Review the validation diagrams for Playback Rights in the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/implementing-playback-rights.html">Implementing Playback Rights</a> document.</li>
-      <li>In  Studio, in the primary navigation click <strong>Admin &gt; Playback Rights</strong>. </li>
-      <li>To create a new right, click <span class="button-blue">New Playback Rights</span>.
-        <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="Manage playback rights" src="/assets/images/s-live-img/live-module/playback-restrictions/manage-playback-rights.png" /> </figure>
-      </li>
-      <li>Add a <strong>Playback Rights Name</strong> and click <span class="button-blue">Save</span>.</li>
-      <li>In the left navigation, select each category and edit changes.
-        <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="Playback rights detail" src="/assets/images/s-live-img/live-module/playback-restrictions/playback-rights-detail.png" /> </figure>
-      </li>
-      <li>Click <span class="button-blue">Save</span>.</li>
-      <li>To edit a Playback Right, click on the <strong>Name</strong> link.</li>
-      
-      <li>For details, see the <a href="/admin/general/managing-playback-rights.html">Managing Playback Rights</a> document.</li>
-                  
-      
-    </ol>
+  <section class=“bcls-section" id="C">
+    <h2 id="C">C</h2>
+    <dl>
+      <dt id="api">Cloud DVR</dt>
+      <dd>Saving of the live stream video in the Brightcove cloud for an identified period of time.</dd>
+      <dt id="api">Cloud Transcoding</dt>
+      <dd>Taking the process of transcoding (converting a video file from one format to another) through a SaaS platform.</dd>
+      <dt id="api">Content Delivery Network (CDN)</dt>
+      <dd>A system of distributed servers (sometimes referred to as edge servers) that deliver content to a user, based on the geographic location of the user, the origin and the content delivery server. CDNs save bandwidth at the core network while serving the content faster to users.</dd>
+      <dt id="api">Cuepoint</dt>
+      <dd>A Live Cuepoint resource starts an ad break in the broadcast video stream.</dd>
+    </dl>
   </section>
-  <section class="bcls-section">
-    <h2 id="Create_a_live_event_with_Playback_Restrictions">Create a live event with Playback Restrictions</h2>
-    <p>First, use the <strong>Live</strong> module to create a live event with Playback Restrictions. Then, associate a defined Playback Right with the live event using the <strong>Media</strong> module and the Video ID generated during the live job creation.</p>
-    <p>To create a Live Event, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Live</strong> module.</li>
-      <li>From the <strong>Manage Events</strong> page click <span class="button-blue">Create Event</span>.</li>
-      <li>Enter the event data as needed. For details, see the <a href="creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a> document.</li>
-      <li>Expand the <strong>Advanced Options</strong> section.</li>
-      <li>For <strong>Content Encryption</strong>, select either <strong>AES-128</strong> or <strong>Digital Rights Management (DRM)</strong>.
-        <ul>
-          <li><strong>AES-128</strong> - Secures the live HLS outputs using AES-128 encryption. If this option is selected, you must enter your <strong>Encryption Key</strong>. The key must be 32 hexadecimal characters. For best results, use a key generator of your choice, choosing the <code translate="No">128-bit</code> and <code translate="No">Hex</code> options.  The encryption key value is only entered in the Live module, it is not used as part of your encoder settings.
-            <aside class="bcls-aside bcls-aside--information">Note: When using this option, you should not send an encrypted stream to Brightcove. Configure your encoder as you normally would. Selecting this option will encrypt the HLS output streams sent from Brightcove Live.</aside>
-            <aside class="bcls-aside bcls-aside--information">Note: Clips can't be created from encrypted live streams.</aside>
-          </li>
-          <li><strong>Digital Rights Management (DRM)</strong> - Secure Premium content stream with Digital Rights Management technologies.
-            For details, see the <a href="/live/general/live-drm.html">Live DRM</a> document.
-            <ul>
-              <li>HLS + <a href="https://developer.apple.com/streaming/fps/">FairPlay</a></li>
-              <li>HLS (fMP4) + Widevine Modular</li>
-            </ul>
-            <aside class="bcls-aside bcls-aside--information"> Your Live account must be enabled first by Brightcove Support in order to use DRM. To publish a DRM-enabled event, it is necessary to create and use a DRM enabled player v6.37.1 or greater.</aside>
-          </li>
-        </ul>
-      </li>
-      <li>To use Playback Restrictions, select <strong>Enable Playback Restrictions</strong>. For details, see the <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Overview: Brightcove Playback Restrictions</a> document.
-        <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="Enable Playback Restrictions" src="/assets/images/s-live-img/live-module/playback-restrictions/enable-restrictions.png" /> </figure>
-      </li>
-      <li>Enter any additional event details.</li>
-      <li>Click <strong>Create Event</strong>.</li>
-      <li>In the Live <strong>Control Room</strong>, click the <strong>Video ID</strong> associated with the event.
-        <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="Event Video ID" src="/assets/images/s-live-img/live-module/playback-restrictions/event-video-id.png" /> </figure>
-      </li>
-      <li>You will be redirected to the <strong>Media</strong> module for this video ID.</li>
-      <li>In the <strong>Playback Restrictions</strong> section, select the Playback Restriction that you defined in the <a href="#Define_playback_rights">Define Playback Rights</a> section.
-        <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="Assign Playback Restriction" src="/assets/images/s-live-img/live-module/playback-restrictions/assign-playback-right.png" /> </figure>
-      </li>
-      <li>In the Admin module, you can edit the Playback Right after it has been assigned to an event.</li>
-      <li>Start streaming your live event. For details, see the <a href="/live/get-started/index.html">Getting Started</a> index page.</li>
-    </ol>
+  <section class=“bcls-section" id="D">
+    <h2 id="D">D</h2>
+    <dl>
+      <dt id="api">Digital Rights Management (DRM)</dt>
+      <dd>It is a technology that is used by content providers to control how video files are used and distributed, preventing unauthorized redistribution of digital media and restrict the ways consumers can copy content they've purchased.</dd>
+    </dl>
   </section>
-  <section class="bcls-section">
-    <h2 id="Publish_the_live_event">Publish the live event</h2>
-    <p>Live streams with Playback Restrictions require a JSON Web Token (JWT) with specific permissions (claims) for your stream request.</p>
-    <p>To publish a live stream with Playback Restrictions, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>
-        <p>Create a JSON Web Token (JWT) and register the public key with Brightcove.</p>
-        <p>For details, see the <a href="https://general.support.brightcove.com/developer/create-json-web-token.html">Creating a JSON Web Token (JWT)</a> document.</p>
-      </li>
-      <li>In  Studio, return to the <strong>Live</strong> module.</li>
-      <li>In the left navigation, select <strong>Publish and Embed</strong>.</li>
-      <li>In the <strong>Live Player Options</strong> section, select your player configured in the previous step. </li>
-      <li>
-        <p>Copy the <strong>Advanced Embed Code</strong> and paste it into your HTML page.</p>
-        <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="Player embed code" src="/assets/images/s-live-img/live-module/playback-restrictions/embed-code.png" /> </figure>
-      </li>
-      <li>Create a custom script with the Advanced embed code.
-        <p>The JWT token is passed with the playback request. If the token is invalid or expired, access to the content will be restricted. The player must be configured to use the token.</p>
-        <p> To configure the Brightcove web player, see the <a href="https://player.support.brightcove.com/playback/playback-restrictions-with-bcp.html#Using_Playback_Rights">Playback Restrictions with Brightcove Player</a> document. </p>
-      </li>
-      <li>Confirm playback in your web page.</li>
-      <li>Confirm that playback can be blocked by changing the settings for the Playback Right assigned to the video (live event).</li>
-    </ol>
+  <section class=“bcls-section" id="E">
+    <h2 id="E">E</h2>
+    <dl>
+      <dt id="api">Encoding</dt>
+      <dd>The process of converting a media source or format to a different format that suits different screen sizes and video quality.</dd>
+    </dl>
   </section>
+  
+  <!-- <section class=“bcls-section" id="F">
+<h2 id="F">F</h2>
+</section> -->
+  
+  <section class=“bcls-section" id="G">
+    <h2 id="G">G</h2>
+    <dl>
+      <dt id="api">Geo restriction</dt>
+      <dd>A form of technological protection measure where access to Internet content is restricted based upon the user's geographical location on the player or CDN level. It is part of Stream Security.</dd>
+    </dl>
+  </section>
+  <section class=“bcls-section" id="H">
+    <h2 id="H">H</h2>
+    <dl>
+      <dt id="api">Hardware Encoder</dt>
+      <dd>Hardware encoders are dedicated processors that use a designed algorithm to encode video and data into streamable content. These encoders can come in smaller, portable boxes or larger permanent fixtures. It is part of Encoding.</dd>
+      <dt id="api">HTTP Live Streaming (HLS)</dt>
+      <dd>Internet-based media adaptive streaming communication protocol implemented by Apple Inc as part of its QuickTime, Safari, OS X, and iOS software. HLS is similar to MPEG Dynamic Adaptive Streaming (DASH). In the Live module, the number that accompanies HLS (such as hls-720p) refers to the resolution (the higher the number the higher the resolution).</dd>
+    </dl>
+  </section>
+  <section class=“bcls-section" id="I">
+    <h2 id="I">I</h2>
+    <dl>
+      <dt id="api">Ingest Point</dt>
+      <dd>The act of consuming video that is sent from a broadcaster in the live backend.</dd>
+      <dt id="api">Ingest</dt>
+      <dd>The process of capturing, transferring, or importing video, audio, still images, and metadata to your computer's hard disk, which creates media files.</dd>
+    </dl>
+  </section>
+  
+  <!-- <section class=“bcls-section" id="J">
+<h2 id="J">J</h2>
+</section> --> 
+  
+  <!-- <section class=“bcls-section" id="K">
+<h2 id="K">K</h2>
+</section> -->
+  
+  <section class=“bcls-section" id="L">
+    <h2 id="L">L</h2>
+    <dl>
+      <dt id="api">Live Streaming</dt>
+      <dd>The Streaming of a Live video online to many viewers at one time.</dd>
+      <dt id="api">Latency</dt>
+      <dd>The delay between the camera capturing the event, and the event being displayed to the viewers. Some causes of delay are: Encoding, Segment size (the amount of time used to create a segment), Network latency, Ingest and Encryption.</dd>
+    </dl>
+  </section>
+  
+  <!-- <section class=“bcls-section" id="M">
+<h2 id="M">M</h2>
+</section> --> 
+  
+  <!-- <section class=“bcls-section" id="N">
+<h2 id="N">N</h2>
+</section> -->
+  
+  <section class=“bcls-section" id="O">
+    <h2 id="O">O</h2>
+    <dl>
+      <dt>OnFi</dt>
+      <dd> The Open NAND Flash Interface - creates compatibility and interoperability of NAND (the most popular kind of flash memory) devices from different vendors, allowing data to be transferred seamlessly from any flash memory component to other parts of the system or to a remote destination. </dd>
+    </dl>
+  </section>
+  
+  <!-- <section class=“bcls-section" id="P">
+<h2 id="P">P</h2>
+</section> --> 
+  
+  <!-- <section class=“bcls-section" id="Q">
+<h2 id="Q">Q</h2>
+</section> -->
+  
+  <section class=“bcls-section" id="R">
+    <h2 id="R">R</h2>
+    <dl>
+      <dt id="api">Redundancy</dt>
+      <dd>The process of having excess or duplicate video streams that can continue to perform in the event of malfunction of some of the parts.</dd>
+      <dt id="api">Real-Time Messaging Protocol (RTMP)</dt>
+      <dd>RTMP protocol was designed for high-performance transmission of audio, video, and data between Adobe Flash Platform technologies.</dd>
+      <dt id="api">Real-Time Transport Protocol (RTP)</dt>
+      <dd>It is a network protocol for delivering audio and video over IP networks. RTP is used in communication and entertainment systems that involve streaming media, such as telephony and video teleconference applications. RTP is designed for end-to-end, real-time transfer of streaming media.</dd>
+    </dl>
+  </section>
+  <section class=“bcls-section" id="S">
+    <h2 id="S">S</h2>
+    <dl>
+      <dt id="api">Software Encoder</dt>
+      <dd>Software encoders are programs that run on a computing device like your laptop or desktop computer. Unlike hardware encoders, these can be easily updated when a new version or upgrade is available. Even though these can lack overall latency speed that hardware encoders can have. It is part of Encoding.</dd>
+      <dt id="api">Single sign-on (SSO)</dt>
+      <dd>It is a session and user authentication service that permits a user to use one set of login credentials (e.g., name and password) to access multiple applications.</dd>
+      <dt id="api">Stream security</dt>
+      <dd>Precautions to ensure external parties can’t get access to the live stream.</dd>
+      <dt id="api">Slide Synchronization</dt>
+      <dd>Automatically record and sync slides with live stream video with no post-production required.</dd>
+      <dt id="api">Static Entry Point (SEP)</dt>
+      <dd>Allows for a long-running live job that can be activated and deactivated while keeping the entry point URLs and playback URLs static and re-usable. This feature allows customers to configure their encoder in their facilities or the field and allows the customer to create their own scheduling logic for live channels or programs.</dd>
+      <dt id="api">Secure Reliable Transport (SRT)</dt>
+      <dd>It is an open-source video transport protocol developed originally by Haivision that optimizes streaming performance across unpredictable networks, such as the Internet, by dynamically adapting to the real-time network conditions between transport endpoints.</dd>
+    </dl>
+  </section>
+  <section class=“bcls-section" id="T">
+    <h2 id="T">T</h2>
+    <dl>
+      <dt id="api">Transcoding</dt>
+      <dd>Converts a video file from one format to another, to make videos viewable across different platforms.</dd>
+    </dl>
+  </section>
+  
+  <!-- <section class=“bcls-section" id="U">
+<h2 id="U">U</h2>
+</section> -->
+  
+  <section class=“bcls-section" id="V">
+    <h2 id="V">V</h2>
+    <dl>
+      <dt id="api">Video Stream Compression</dt>
+      <dd>Video compression uses coding techniques to reduce redundancy in video data. Compressing a video increases processing efficiency and decreases the overall size of the video being streamed. The Industry standard is H.264 (better known as MPEG-4).</dd>
+      <dt id="api">Video on Demand (VOD)</dt>
+      <dd>It is a video media distribution system that allows users to access video entertainment without a traditional video entertainment device and without the constraints of a typical static broadcasting schedule.</dd>
+    </dl>
+  </section>
+  
+  <!-- <section class=“bcls-section" id="W">
+<h2 id="W">W</h2>
+</section> --> 
+  
+  <!-- <section class=“bcls-section" id="X">
+<h2 id="X">X</h2>
+</section> --> 
+  
+  <!-- <section class=“bcls-section" id="Y">
+<h2 id="Y">Y</h2>
+</section> --> 
+  
+  <!-- <section class=“bcls-section" id="Z">
+<h2 id="Z">Z</h2>
+</section> --> 
+  
 </article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
