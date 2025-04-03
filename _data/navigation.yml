@@ -490,6 +490,8 @@
       url: /live/live-2-0/live-video-glossary.html
     - name: Managing API Authentication Credentials
       url: /live/live-2-0/managing-api-authentication-credentials.html
+    - name: Redundant Channels
+      url: /live/live-2-0/redundancy.html
   - name: General Information
     url: /live/general/index.html
     icon: fa-solid fa-circle-info
