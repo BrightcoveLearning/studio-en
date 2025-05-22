@@ -3777,7 +3777,7 @@
 
 <section class="bcls-section">
     <h2 id="Overview" >Overview</h2>
-    <p>Live 2.0 is a new live streaming solution that is reliable, consistent and scalable.</p>
+    <p>Live 2.0 is a new live-streaming solution that is reliable, consistent, and scalable.</p>
     <p>The objectives for Live 2.0 are:
         <ul>
         <li>Improved System Reliability</li>
@@ -3812,7 +3812,7 @@
     <ol class="bcls-tasklist-restart">
         <li>Navigate to the <strong>Live Module</strong>.</li>
         <li>Click <span class="button-blue">Create Channel</span>.<p></p><figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-live-img/get-started/live-2-0/new-channel-complete.webp"></figure>
-        <p>Notice how a droplist with two options appears. Depending on your Live subscription, you may have the ability to create events channels, linear channels or both. Typically, events channels are created to stream shorter length, one time or recurring events. Linear channels are typically used when delivering 24/7 live events. Linear channels and events channels are billed differently - check with your Customer Success manager for details.
+        <p>Typically, event channels are created to stream shorter-length, one-time, or recurring events. Linear channels are typically used when delivering 24/7 live events. Linear channels and events channels are billed differently - check with your Customer Success manager for details.
            <!-- <p>
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/s-live-img/get-started/live-2-0/lineasr-event.webp" alt="Linear and Event">
@@ -3835,7 +3835,7 @@
         <li>Click <span class="button-blue">Save</span>.</li>
         <li>Click <span class="button-red">Start Streaming</span> to obtain the Input URL. The channel will start, and the URL will be generated. This may take more than a minute.</li>
         <li>Find your <strong>Encoder source URL</strong>.
-            <aside class="bcls-aside bcls-aside--information language-editable">Note: Notice that for the RTMP streams, the name/key for B live jobs is <strong>blive</strong>.</aside>
+            <aside class="bcls-aside bcls-aside--information language-editable">Note: Notice that for the RTMP streams, the Stream name/key for Live 2.0 channels is <strong>blive</strong>.</aside>
             <p></p>
             <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-live-img/get-started/live-2-0/source-url.webp"></figure>
             <p></p>
@@ -3851,14 +3851,34 @@
 </section>
 
 <section class="bcls-section">
+    <h2 id="edit">Editing a Channel</h2>
+    <ol class="bcls-tasklist-restart">
+    <li>Navigate to the <strong>Live Module</strong>.</li>
+    <li>Click <strong>(...)</strong> next to your live channel.</li>
+    <li>Click <strong>Edit</strong>.
+        <p></p>
+        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-live-img/get-started/live-2-0/edit-channel.webp"></figure></li>
+    </li>
+     <li>Edit your JSON file and click <span class="button-blue">Update Live Channel</span>
+        <p></p>
+        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-live-img/get-started/live-2-0/json-edit.webp"></figure></li>
+    </li>
+        
+    </ol>
+    <aside class="bcls-aside bcls-aside--information language-editable">When a channel is in active status, actions such as <strong>Edit and Delete</strong> will be greyed out and unavailabe untill streaming is stopped.</aside>
+
+</section>
+
+<section class="bcls-section">
     <h2 id="delete">Deleting a Channel</h2>
     <ol class="bcls-tasklist-restart">
     <li>Navigate to the <strong>Live Module</strong>.</li>
-    <li>Click the three dots next to the live channel name <strong>(...)</strong>.</li>
+    <li>Click <strong>(...)</strong> next to your live channel.</li>
     <li>Click <strong>Delete</strong>.
+        <p></p>
         <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-live-img/get-started/live-2-0/delete.webp"></figure></li>
     </ol>
-    <p>Note that when you click on the three dots on the left below delete, the following options also appear: 
+    <p>Note that when you click <strong>(...)</strong>, the following options also appear: 
         <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-live-img/get-started/live-2-0/2025-01-23_11-28-2-dots.webp"></figure>
     </p>
     <p>
@@ -3866,7 +3886,7 @@
             <li><strong>Duplicate</strong> - Duplicate makes it easy to create another channel with the same settings that were used.  </li>
             <li><strong>Start</strong> - Start makes to run the stream selected.</li>
             <li><strong>Stop</strong> -  Stop makes a stream stop when it is running.</li>
-            <li><strong> Edit</strong> - Click edit to view/edit the <strong>Channel Edit - JSON </strong> that will be made to create the live stream. </li>
+            <li><strong> Edit</strong> - Click edit to view/edit the <strong><a href="https://studio.support.brightcove.com/live/live-2-0/migrating-2-0.html#edit">Channel Edit - JSON</a></strong> (only available when streaming is stopped).</li>
             <li><strong>Live Media Asset</strong> - Click Live Media Asset to view the live event video properties. </li>
         </ul>
     </p>
